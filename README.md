@@ -1,7 +1,7 @@
 # Open Historical Map Styles
 This repository contains vector map styles that can be applied to OHM vector tiles. 
 
-**NEED TO UPDATE source to OSM-Seed Tegola when complete:** The tile source is https://vtiles.openhistoricalmap.org/.
+The tile source is https://vtiles.openhistoricalmap.org/.
 
 Here, you can save your worries about tile servers and data updates and instead just load a JSON file into https://maputnik.github.io/ and make some updates!
 
