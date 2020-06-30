@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Style demo, no timeslider</title>
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+		<link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+		<style>
+			body { margin: 0; padding: 0; }
+			#map { height: 90vh; bottom: 0; width: calc(100% - 350px); float: left; }
+			#map canvas {
+				cursor: crosshair;
+				}
+			.intro {margin: 10px; font-family: sans-serif}
+			#features {
+				top: 0;
+				left: 0;
+				float: right;
+				bottom: 0;
+				width: 350px;
+				overflow-y: scroll;
+				height: 90vh;
+				background: rgba(255, 255, 255, 0.8);
+				}
+		</style>
+	</head>
+	<body>
+		<div class="intro">
+			<h1>Style demo, no timeslider</h1>
+			<p>This is the simplest demo of a map style. Unlike the demo in the <a href="https://github.com/OpenHistoricalMap/mbgl-timeslider">Mapbox GL timeslider</a> and <a href="https://github.com/OpenHistoricalMap/mbgltimeslider-leaflet-control">Leaflet timeslider</a> repos, this will show you everything on the map regardless of strt and end dates. It is useful for initial testing of cartography without worrying about the completeness of data data or proper functioning of filters.</p>
+		</div>
+		<pre id="features">Click the map to see a readout of rendered features</pre>
+		<div id="map"></div>
+		<script>
+			var map = new mapboxgl.Map({
+			container: 'map', // container id
+			style: '../ohm_timeslider_tegola/tegola-ohm.json', // stylesheet location
+			center: [-121.73937,47.75410], // starting position [lng, lat]
+			zoom: 13 // starting zoom
+			});
+
+			// Add zoom and rotation controls to the map.
+			map.addControl(new mapboxgl.NavigationControl());
+
+			//show features rendered on the map
+			map.on('click', function(e) {
+				var features = map.queryRenderedFeatures(e.point);
+				 
+				// Limit the number of properties we're displaying for
+				// legibility and performance
+				var displayProperties = [
+				'type',
+				'properties',
+				'id',
+				'layer',
+				'source',
+				'sourceLayer',
+				'state'
+				];
+				 
+				var displayFeatures = features.map(function(feat) {
+				var displayFeat = {};
+				displayProperties.forEach(function(prop) {
+				displayFeat[prop] = feat[prop];
+				});
+				return displayFeat;
+				});
+				 
+				document.getElementById('features').innerHTML = JSON.stringify(
+				displayFeatures,
+				null,
+				2
+				);
+				});
+		</script>
+	 
+	</body>
+</html>
