@@ -19,4 +19,4 @@ If you make a new style, just change the URL for the style file with the new one
 
 Note that changes here do not publish automagically to the OHM website. the vector tiles on the AWS staging site are stored as Javascript [here](https://github.com/Open-Historical-Map-Labs/ohm-website/blob/staging/app/assets/javascripts/ohm.style.js)
 
-We also have a bare-bones, no timeslider demo of the style served on GH Pages at [openhistoricalmap.github.io/map-styles/](https://openhistoricalmap.github.io/map-styles/)
+We also have a bare-bones, no timeslider demo of the style served on GH Pages at [openhistoricalmap.github.io/map-styles/demo.html](https://openhistoricalmap.github.io/map-styles/demo.html)
