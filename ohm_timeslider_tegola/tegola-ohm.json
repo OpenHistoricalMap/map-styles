@@ -42,6 +42,23 @@
       "paint": {"fill-color": "rgba(221, 221, 221, 1)"}
     },
     {
+      "id": "landuse_areas_park_overlay",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": {
+          "property": "type",
+          "type": "categorical",
+          "default": "transparent",
+          "stops": [["park", "rgba(208, 220, 174, 1)"]]
+        }
+      }
+    },
+    {
       "id": "landuse_areas_z13",
       "type": "fill",
       "source": "osm",
@@ -55,6 +72,8 @@
           "type": "categorical",
           "default": "transparent",
           "stops": [
+            ["forest", "rgba(178, 194, 157, 1)"],
+            ["wood", "rgba(178, 194, 157, 1)"],
             ["wetland", "rgba(227, 233, 226, 1)"],
             ["salt_pond", "rgba(236, 240, 241, 1)"],
             ["basin", "rgba(144, 204, 203, 1)"],
@@ -89,8 +108,6 @@
             ["picnic_site", "rgba(208, 220, 174, 1)"],
             ["camp_site", "rgba(208, 220, 174, 1)"],
             ["playground", "rgba(208, 220, 174, 1)"],
-            ["forest", "rgba(178, 194, 157, 1)"],
-            ["wood", "rgba(178, 194, 157, 1)"],
             ["nature_reserve", "rgba(178, 194, 157, 0.2)"],
             ["commercial", "rgba(215,200,203,1)"],
             ["construction", "rgba(235, 235, 235, 1)"],
@@ -124,23 +141,6 @@
             ["nature_reserve", "rgba(178, 194, 157, 0.3)"],
             ["landfill", "rgba(194, 170, 175, 1)"]
           ]
-        }
-      }
-    },
-    {
-      "id": "landuse_areas_park_overlay",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "landuse_areas",
-      "minzoom": 10,
-      "maxzoom": 24,
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "fill-color": {
-          "property": "type",
-          "type": "categorical",
-          "default": "transparent",
-          "stops": [["park", "rgba(208, 220, 174, 1)"]]
         }
       }
     },
