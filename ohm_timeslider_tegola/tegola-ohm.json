@@ -5,9 +5,7 @@
   "sources": {
     "osm": {
       "type": "vector",
-      "tiles": [
-        "https://vtiles-staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
-      ]
+      "tiles": ["https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
     }
   },
   "sprite": "https://go-spatial.github.io/carto-assets/spritesets/osm_tegola_spritesheet",
@@ -336,13 +334,14 @@
       "paint": {"fill-color": "rgba(178, 194, 157, 1)"}
     },
     {
-      "id": "amenity_areas",
+      "id": "parking_lots",
       "type": "fill",
       "source": "osm",
       "source-layer": "amenity_areas",
-      "filter": ["all", ["in", "type", "school", "university"]],
-      "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(226, 214, 205, 1)"}
+      "paint": {
+        "fill-color": "rgba(236, 231, 231, 1)",
+        "fill-outline-color": "rgba(224, 217, 217, 1)"
+      }
     },
     {
       "id": "landuse_naturereserveoutline",
@@ -475,13 +474,13 @@
       }
     },
     {
-      "id": "buildings_flat",
+      "id": "historic_fort",
       "type": "fill",
       "source": "osm",
-      "source-layer": "buildings",
+      "source-layer": "other_areas",
       "minzoom": 14,
       "maxzoom": 24,
-      "filter": ["all"],
+      "filter": ["all", ["==", "class", "historic"], ["==", "type", "fort"]],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": "rgba(220, 215, 215, 1)",
@@ -1852,7 +1851,8 @@
             ["wood_fence", "rgba(241, 224, 200, 1)"],
             ["hedge", "rgba(204, 218, 190, 1)"],
             ["hedge_bank", "rgba(204, 218, 190, 1)"],
-            ["retaining_wall", "rgba(223, 223, 223, 1)"]
+            ["retaining_wall", "rgba(223, 223, 223, 1)"],
+            ["city_wall", "rgba(223, 223, 223, 1)"]
           ],
           "default": "transparent"
         },
