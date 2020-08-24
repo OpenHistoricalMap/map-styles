@@ -602,6 +602,13 @@
       }
     },
     {
+      "id": "roads_pedestrian_area",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "transport_areas",
+      "paint": {"fill-color": "rgba(230, 230, 230, 1)"}
+    },
+    {
       "id": "roads_trackfillcase",
       "type": "line",
       "source": "osm",
@@ -1370,13 +1377,6 @@
       "source-layer": "other_lines",
       "filter": ["all", ["==", "class", "man_made"], ["==", "type", "bridge"]],
       "paint": {"line-color": "rgba(233, 203, 176, 1)", "line-width": 3}
-    },
-    {
-      "id": "pedestrian_area",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "transport_areas",
-      "paint": {"fill-color": "rgba(230, 230, 230, 1)"}
     },
     {
       "id": "admin_admin3_z10",
