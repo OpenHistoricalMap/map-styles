@@ -344,6 +344,15 @@
       }
     },
     {
+      "id": "amenity_areas",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "amenity_areas",
+      "filter": ["all", ["in", "type", "school", "university"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(226, 214, 205, 1)"}
+    },
+    {
       "id": "landuse_naturereserveoutline",
       "type": "line",
       "source": "osm",
@@ -471,6 +480,20 @@
       "paint": {
         "line-color": "rgba(230, 222, 205, 1)",
         "line-width": {"stops": [[12, 2], [18, 7]]}
+      }
+    },
+    {
+      "id": "buildings_flat",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "buildings",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": ["all"],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(220, 215, 215, 1)",
+        "fill-outline-color": "rgba(195, 188, 188, 1)"
       }
     },
     {
