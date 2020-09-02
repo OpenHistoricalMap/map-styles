@@ -1477,8 +1477,7 @@
         "text-size": 7,
         "text-font": ["Open Sans Regular"],
         "symbol-placement": "point",
-        "text-transform": "uppercase",
-        "text-justify": "auto"
+        "text-transform": "uppercase"
       },
       "paint": {
         "text-color": "rgba(101, 108, 108, 1)",
