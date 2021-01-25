@@ -5,9 +5,7 @@ The tile source is https://vtiles.openhistoricalmap.org/.
 
 Here, you can save your worries about tile servers and data updates and instead just load a JSON file into https://maputnik.github.io/ and make some updates!
 
-**NOTE** Unfortunately, our style is not working with the latest 1.7.0 version of Maputnik. We have a 1.6 running locally and it works there, so we're making changes that way. Once we get through most urgent styling, we'll revisit and, fingers crossed, a point release of Maputnik might resolve the issue.
-
-Assuming either a 1.6.X version or a new point release that works, here's the file to load in Maputnik: [https://openhistoricalmap.github.io/map-styles/ohm_timeslider_tegola/tegola-ohm.json](https://openhistoricalmap.github.io/map-styles/ohm_timeslider_tegola/tegola-ohm.json)
+Here's the file to load in Maputnik: [https://openhistoricalmap.github.io/map-styles/ohm_timeslider_tegola/tegola-ohm.json](https://openhistoricalmap.github.io/map-styles/ohm_timeslider_tegola/tegola-ohm.json)
 
 If you make changes you want to commit back here:
 1. Clone the repo locally.
