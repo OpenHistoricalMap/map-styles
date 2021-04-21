@@ -5,10 +5,12 @@
   "sources": {
     "osm": {
       "type": "vector",
-      "tiles": ["https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
+      "tiles": [
+        "https://vtiles-staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
+      ]
     }
   },
-  "sprite": "https://go-spatial.github.io/carto-assets/spritesets/osm_tegola_spritesheet",
+  "sprite": "https://openhistoricalmap.github.io/map-styles/ohm_timeslider_tegola/osm_tegola_spritesheet",
   "glyphs": "https://go-spatial.github.io/carto-assets/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -2251,30 +2253,13 @@
       }
     },
     {
-      "id": "points_of_interest14",
+      "id": "points_of_interest_amenity_14",
       "type": "symbol",
       "source": "osm",
       "source-layer": "amenity_points",
       "minzoom": 14,
       "maxzoom": 16,
-      "filter": [
-        "all",
-        [
-          "in",
-          "type",
-          "fire_station",
-          "bank",
-          "border_control",
-          "embassy",
-          "government",
-          "hospital",
-          "police",
-          "school",
-          "taxi",
-          "townhall",
-          "university"
-        ]
-      ],
+      "filter": ["all"],
       "layout": {
         "icon-image": "{type}-12",
         "visibility": "visible",
@@ -2291,11 +2276,11 @@
       }
     },
     {
-      "id": "other_points",
+      "id": "points_of_interest_other",
       "type": "symbol",
       "source": "osm",
       "source-layer": "other_points",
-      "minzoom": 16,
+      "minzoom": 14,
       "maxzoom": 24,
       "filter": ["all"],
       "layout": {
@@ -2314,7 +2299,7 @@
       }
     },
     {
-      "id": "points_of_interest",
+      "id": "points_of_interest_amenity",
       "type": "symbol",
       "source": "osm",
       "source-layer": "amenity_points",
@@ -2344,7 +2329,7 @@
       "minzoom": 15,
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "tower"]],
-      "layout": {"icon-image": "power_tower-12"}
+      "layout": {"icon-image": "power_tower-12", "visibility": "visible"}
     },
     {
       "id": "points_airport",
