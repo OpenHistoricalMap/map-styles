@@ -1302,7 +1302,15 @@
     "width":17,
     "x":384,
     "y":150
-  }, 
+  },
+  
+  "tram-stop-18": {
+    "height":18,
+    "pixelRatio":1,
+    "width":14,
+    "x":129,
+    "y":242
+  },
 
   "tyres-18": {
     "height":18,
