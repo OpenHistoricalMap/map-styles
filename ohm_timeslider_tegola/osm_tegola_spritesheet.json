@@ -1304,6 +1304,14 @@
     "y":150
   },
   
+  "traffic_signals-18": {
+    "height":18,
+    "pixelRatio":1,
+    "width":8,
+    "x":145,
+    "y":242
+  },
+  
   "tram_stop-18": {
     "height":18,
     "pixelRatio":1,
