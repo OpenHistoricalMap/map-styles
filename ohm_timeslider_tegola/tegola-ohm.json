@@ -16,7 +16,7 @@
     {
       "id": "background",
       "type": "background",
-      "minzoom": 0,
+      "minzoom": 3,
       "maxzoom": 20,
       "layout": {"visibility": "visible"},
       "paint": {"background-color": "rgba(144, 204, 203, 1)"}
