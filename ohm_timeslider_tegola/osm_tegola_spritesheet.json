@@ -48,6 +48,14 @@
     "y":224
   }, 
 
+  "artwork-18": {
+    "height":18,
+    "pixelRatio":1,
+    "width":18,
+    "x":155,
+    "y":242
+  },
+
   "atm-18": {
     "height":16,
     "pixelRatio":1,
