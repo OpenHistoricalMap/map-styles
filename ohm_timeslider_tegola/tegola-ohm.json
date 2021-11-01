@@ -421,6 +421,16 @@
       "paint": {"fill-color": "rgba(230, 224, 212, 1)"}
     },
     {
+      "id": "water_areas",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "water_areas",
+      "minzoom": 3,
+      "maxzoom": 24,
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(144, 204, 203, 1)"}
+    },
+    {
       "id": "water_lines_stream",
       "type": "line",
       "source": "osm",
@@ -473,14 +483,17 @@
       }
     },
     {
-      "id": "water_areas",
-      "type": "fill",
+      "id": "water_lines_dam",
+      "type": "line",
       "source": "osm",
-      "source-layer": "water_areas",
-      "minzoom": 3,
+      "source-layer": "water_lines",
+      "minzoom": 13,
       "maxzoom": 24,
-      "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(144, 204, 203, 1)"}
+      "filter": ["all", ["==", "type", "dam"]],
+      "paint": {
+        "line-color": "rgba(133, 133, 133, 1)",
+        "line-width": {"stops": [[13, 0.5], [15, 0.8], [20, 2]]}
+      }
     },
     {
       "id": "pier",
@@ -1724,10 +1737,34 @@
       }
     },
     {
-      "id": "water_linesabels",
+      "id": "water_lineslabels-dam",
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_lines",
+      "filter": ["all", ["==", "type", "dam"]],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": ["Open Sans Italic"],
+        "symbol-placement": "line",
+        "symbol-spacing": 500,
+        "text-anchor": "bottom",
+        "text-pitch-alignment": "auto",
+        "text-rotation-alignment": "auto",
+        "text-size": {"stops": [[11, 11], [13, 13]]},
+        "text-letter-spacing": 0
+      },
+      "paint": {
+        "text-color": "rgba(77, 77, 77, 1)",
+        "text-halo-color": "rgba(207, 230, 230, 1)",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "water_lineslabels",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "water_lines",
+      "filter": ["all", ["!=", "type", "dam"]],
       "layout": {
         "text-field": "{name}",
         "text-font": ["Open Sans Italic"],
