@@ -200,6 +200,14 @@
     "y":165
   }, 
 
+  "capital-18": {
+    "height":6,
+    "pixelRatio":1,
+    "width":6,
+    "x":174,
+    "y":252
+  },
+
   "car-18": {
     "height":9,
     "pixelRatio":1,
@@ -255,6 +263,14 @@
     "x":364,
     "y":190
   }, 
+
+  "city-18": {
+    "height":6,
+    "pixelRatio":1,
+    "width":6,
+    "x":174,
+    "y":244
+  },
 
   "clothes-18": {
     "height":16,
