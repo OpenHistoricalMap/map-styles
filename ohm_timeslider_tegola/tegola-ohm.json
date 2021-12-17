@@ -531,6 +531,31 @@
       }
     },
     {
+      "id": "buildings_flat_ruins",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "other_areas",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": ["all"],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(220, 215, 215, 1)"}
+    },
+    {
+      "id": "buildings_ruins_outlines",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "other_areas",
+      "filter": ["all", ["==", "type", "ruins"]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(195, 188, 188, 1)",
+        "line-opacity": 1,
+        "line-width": {"stops": [[10, 1], [16, 2]]},
+        "line-dasharray": {"stops": [[10, [1, 1]], [16, [4, 2]]]}
+      }
+    },
+    {
       "id": "historic_fort",
       "type": "fill",
       "source": "osm",
