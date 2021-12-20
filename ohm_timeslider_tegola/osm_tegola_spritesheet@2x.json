@@ -40,13 +40,21 @@
     "y":218
   }, 
 
+  "archaeological_site-18": {
+    "height":18,
+    "pixelRatio":1,
+    "width":17,
+    "x":181,
+    "y":242
+  },
+
   "arts_centre-18": {
     "height":16,
     "pixelRatio":1,
     "width":18,
     "x":314,
     "y":224
-  }, 
+  },
 
   "artwork-18": {
     "height":18,
@@ -1463,5 +1471,4 @@
     "x":109,
     "y":242
   }
-  
 }
