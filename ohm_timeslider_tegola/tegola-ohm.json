@@ -1848,6 +1848,34 @@
       }
     },
     {
+      "id": "landuse_areaslabels_farming",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "farmland",
+          "farm",
+          "orchard",
+          "farmyard",
+          "vineyard",
+          "allotmets",
+          "garden"
+        ]
+      ],
+      "layout": {"text-field": "{name}", "text-size": 11},
+      "paint": {
+        "text-color": "rgba(107, 101, 71, 1)",
+        "text-halo-color": "rgba(213, 211, 190, 1)",
+        "text-halo-width": 1
+      }
+    },
+    {
       "id": "landuse_areaslabels_forest",
       "type": "symbol",
       "source": "osm",
