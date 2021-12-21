@@ -952,6 +952,14 @@
     "y":184
   }, 
 
+  "sculpture-18": {
+    "height":18,
+    "pixelRatio":1,
+    "width":8,
+    "x":199,
+    "y":242
+  }, 
+
   "seafood-18": {
     "height":13,
     "pixelRatio":1,
@@ -1470,5 +1478,5 @@
     "width":18,
     "x":109,
     "y":242
-  }
+  } 
 }
