@@ -16,6 +16,7 @@
       "type": "background",
       "minzoom": 0,
       "maxzoom": 20,
+      "filter": ["all"],
       "layout": {"visibility": "visible"},
       "paint": {"background-color": "rgba(144, 204, 203, 1)"}
     },
@@ -2401,29 +2402,6 @@
       }
     },
     {
-      "id": "points_of_interest_other",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "other_points",
-      "minzoom": 14,
-      "maxzoom": 24,
-      "filter": ["all"],
-      "layout": {
-        "icon-image": "{type}-18",
-        "visibility": "visible",
-        "text-field": "{name}",
-        "text-size": 8,
-        "text-anchor": "top",
-        "text-offset": [0, 1]
-      },
-      "paint": {
-        "text-color": "#505050",
-        "text-halo-color": "rgba(255, 255, 255, 1)",
-        "text-halo-width": 0.5,
-        "text-halo-blur": 1
-      }
-    },
-    {
       "id": "points_of_interest_amenity",
       "type": "symbol",
       "source": "osm",
@@ -2441,6 +2419,75 @@
       },
       "paint": {
         "text-color": "rgba(80, 80, 80, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5,
+        "text-halo-blur": 1
+      }
+    },
+    {
+      "id": "points_of_interest_other",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "other_points",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": ["all", ["!in", "type", "artwork"]],
+      "layout": {
+        "icon-image": "{type}-18",
+        "visibility": "visible",
+        "text-field": "{name}",
+        "text-size": 8,
+        "text-anchor": "top",
+        "text-offset": [0, 1]
+      },
+      "paint": {
+        "text-color": "#505050",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5,
+        "text-halo-blur": 1
+      }
+    },
+    {
+      "id": "points_of_interest_other_archaeology",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "other_points",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": ["all", ["==", "type", "archaeological_site"]],
+      "layout": {
+        "icon-image": "{site_type}-18",
+        "visibility": "visible",
+        "text-field": "{name}",
+        "text-size": 8,
+        "text-anchor": "top",
+        "text-offset": [0, 1]
+      },
+      "paint": {
+        "text-color": "#505050",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5,
+        "text-halo-blur": 1
+      }
+    },
+    {
+      "id": "points_of_interest_other_artwork",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "other_points",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": ["all", ["==", "type", "artwork"]],
+      "layout": {
+        "icon-image": "{artwork_type}-18",
+        "visibility": "visible",
+        "text-field": "{name}",
+        "text-size": 8,
+        "text-anchor": "top",
+        "text-offset": [0, 1]
+      },
+      "paint": {
+        "text-color": "#505050",
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 0.5,
         "text-halo-blur": 1

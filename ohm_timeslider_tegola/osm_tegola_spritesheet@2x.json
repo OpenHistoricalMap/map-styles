@@ -1,5 +1,4 @@
 {
-
   "acra-18": {
     "height":18,
     "pixelRatio":1,
@@ -38,7 +37,7 @@
     "width":17,
     "x":476,
     "y":218
-  }, 
+  },
 
   "archaeological_site-18": {
     "height":18,
@@ -958,7 +957,11 @@
     "width":8,
     "x":199,
     "y":242
+<<<<<<< Updated upstream
   }, 
+=======
+  },
+>>>>>>> Stashed changes
 
   "seafood-18": {
     "height":13,
@@ -998,6 +1001,14 @@
     "width":18,
     "x":187,
     "y":165
+  }, 
+
+  "statue-18": {
+    "height":18,
+    "pixelRatio":1,
+    "width":8,
+    "x":199,
+    "y":242
   }, 
 
   "storage_tank-18": {
@@ -1383,6 +1394,14 @@
     "x":476,
     "y":131
   }, 
+
+  "urn-18": {
+    "height":18,
+    "pixelRatio":1,
+    "width":17,
+    "x":181,
+    "y":242
+  },
 
   "viewpoint-18": {
     "height":18,
