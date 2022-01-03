@@ -2284,16 +2284,6 @@
       }
     },
     {
-      "id": "transport_points",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "transport_points",
-      "minzoom": 16,
-      "maxzoom": 24,
-      "layout": {"icon-image": "{type}-18"},
-      "paint": {"icon-color": "rgba(12, 9, 9, 1)"}
-    },
-    {
       "id": "points_of_interest_frombuildings",
       "type": "symbol",
       "source": "osm",
@@ -2512,6 +2502,30 @@
       "maxzoom": 14,
       "filter": ["all", ["==", "type", "aerodrome"]],
       "layout": {"icon-image": "airport-18"}
+    },
+    {
+      "id": "transport_points",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "transport_points",
+      "minzoom": 16,
+      "maxzoom": 24,
+      "filter": ["all"],
+      "layout": {
+        "icon-image": "{type}-18",
+        "visibility": "visible",
+        "text-field": "{name}",
+        "text-size": 8,
+        "text-anchor": "top",
+        "text-offset": [0, 1]
+      },
+      "paint": {
+        "icon-color": "#000000",
+        "text-color": "rgba(80, 80, 80, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5,
+        "text-halo-blur": 1
+      }
     },
     {
       "id": "points_placeofworshipother",
