@@ -353,6 +353,18 @@
       }
     },
     {
+      "id": "place_areas_plot",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "place_areas",
+      "filter": ["all", ["==", "type", "plot"]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(238, 236, 230, 0)",
+        "fill-outline-color": "rgba(226, 223, 215, 1)"
+      }
+    },
+    {
       "id": "place_areas_square",
       "type": "fill",
       "source": "osm",
@@ -2281,6 +2293,27 @@
           ]
         },
         "line-width": 2
+      }
+    },
+    {
+      "id": "points_of_interest_square_plot",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "place_areas",
+      "minzoom": 16,
+      "filter": ["all"],
+      "layout": {
+        "visibility": "visible",
+        "text-field": "{name}",
+        "text-size": 9,
+        "text-anchor": "center",
+        "text-offset": [0, 0]
+      },
+      "paint": {
+        "text-color": "rgba(108, 132, 137, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5,
+        "text-halo-blur": 1
       }
     },
     {
