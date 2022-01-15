@@ -9,6 +9,7 @@ FILES_TO_COPY = [
     ('osm_tegola_spritesheet.png', 'osm_tegola_spritesheet-production.png'),
     ('osm_tegola_spritesheet@2x.json', 'osm_tegola_spritesheet-production@2x.json'),
     ('osm_tegola_spritesheet@2x.png', 'osm_tegola_spritesheet-production@2x.png'),
+    ('tegola-ohm.json', 'tegola-ohm-production.json'),
 ]
 
 
