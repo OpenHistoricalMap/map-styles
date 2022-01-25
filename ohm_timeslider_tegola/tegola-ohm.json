@@ -686,7 +686,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 12,
+      "minzoom": 9,
       "filter": ["all", ["==", "type", "tertiary"], ["==", "tunnel", 1]],
       "layout": {
         "visibility": "visible",
@@ -699,7 +699,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
+          9,
           1,
           18,
           36
@@ -712,7 +712,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 11,
+      "minzoom": 8,
       "filter": ["all", ["==", "type", "secondary"], ["==", "tunnel", 1]],
       "layout": {
         "visibility": "visible",
@@ -725,7 +725,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
+          8,
           1,
           18,
           38
@@ -738,7 +738,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 11,
+      "minzoom": 6,
       "maxzoom": 20,
       "filter": ["all", ["in", "type", "primary"], ["==", "tunnel", 1]],
       "layout": {
@@ -752,7 +752,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
+          6,
           1,
           18,
           42
@@ -765,7 +765,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 11,
+      "minzoom": 5,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -783,7 +783,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
+          5,
           1,
           18,
           46
@@ -796,7 +796,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 12,
+      "minzoom": 9,
       "filter": ["all", ["==", "type", "tertiary"], ["==", "tunnel", 1]],
       "layout": {
         "visibility": "visible",
@@ -809,10 +809,10 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
+          9,
           0.8,
           18,
-          28
+          24
         ]
       }
     },
@@ -821,7 +821,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 11,
+      "minzoom": 8,
       "filter": ["all", ["==", "type", "secondary"], ["==", "tunnel", 1]],
       "layout": {
         "visibility": "visible",
@@ -834,8 +834,8 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
-          0.9,
+          8,
+          0.5,
           18,
           30
         ]
@@ -846,7 +846,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 11,
+      "minzoom": 6,
       "filter": ["all", ["==", "type", "primary"], ["==", "tunnel", 1]],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -855,7 +855,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
+          6,
           1,
           18,
           32
@@ -1278,10 +1278,10 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
-          0.75,
+          13,
+          3,
           18,
-          14
+          15
         ]
       }
     },
@@ -1290,7 +1290,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 11,
+      "minzoom": 10.01,
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "tertiary"], ["!=", "tunnel", 1]],
       "layout": {
@@ -1304,8 +1304,8 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
-          1,
+          10,
+          2.2,
           18,
           28
         ]
@@ -1316,7 +1316,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 9,
+      "minzoom": 10.01,
       "filter": ["all", ["==", "type", "secondary"], ["!=", "tunnel", 1]],
       "layout": {
         "visibility": "visible",
@@ -1329,8 +1329,8 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
-          1.2,
+          10,
+          2.4,
           18,
           35
         ]
@@ -1341,7 +1341,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 9,
+      "minzoom": 10.01,
       "filter": ["all", ["in", "type", "primary_link"], ["!=", "tunnel", 1]],
       "layout": {
         "visibility": "visible",
@@ -1354,8 +1354,8 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
-          1.5,
+          10,
+          2.6,
           18,
           36
         ]
@@ -1366,7 +1366,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 10,
+      "minzoom": 10.01,
       "filter": [
         "all",
         ["in", "type", "primary"],
@@ -1385,7 +1385,7 @@
           ["exponential", 1.5],
           ["zoom"],
           10,
-          1,
+          2.6,
           18,
           36
         ]
@@ -1396,7 +1396,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 11,
+      "minzoom": 10.01,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -1416,10 +1416,10 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          9,
-          1,
+          10,
+          3,
           18,
-          42
+          40
         ]
       }
     },
@@ -1428,7 +1428,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 10,
+      "minzoom": 10.01,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -1447,7 +1447,7 @@
           ["exponential", 1.5],
           ["zoom"],
           10,
-          1.5,
+          3,
           18,
           40
         ]
@@ -1488,7 +1488,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 12,
+      "minzoom": 9,
       "filter": ["all", ["==", "type", "tertiary"], ["==", "bridge", 1]],
       "layout": {
         "visibility": "visible",
@@ -1502,7 +1502,7 @@
           ["exponential", 1.5],
           ["zoom"],
           11,
-          3,
+          4,
           18,
           48
         ]
@@ -1513,7 +1513,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 9,
+      "minzoom": 8,
       "filter": ["all", ["==", "type", "secondary"], ["==", "bridge", 1]],
       "layout": {
         "visibility": "visible",
@@ -1526,7 +1526,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
+          8,
           3.2,
           18,
           50
@@ -1538,7 +1538,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 9,
+      "minzoom": 6,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -1556,7 +1556,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
+          6,
           3.5,
           18,
           52
@@ -1568,7 +1568,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 11,
+      "minzoom": 5,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -1586,10 +1586,10 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
-          4,
+          5,
+          3,
           18,
-          55
+          65
         ]
       }
     },
@@ -1598,7 +1598,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 9,
+      "minzoom": 8,
       "filter": ["all", ["==", "type", "secondary_link"], ["!=", "tunnel", 1]],
       "layout": {
         "visibility": "visible",
@@ -1611,7 +1611,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
+          8,
           0.9,
           18,
           30
@@ -1623,7 +1623,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 7,
+      "minzoom": 6,
       "filter": ["all", ["in", "type", "primary_link"], ["!=", "tunnel", 1]],
       "layout": {
         "visibility": "visible",
@@ -1636,7 +1636,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
+          6,
           1,
           18,
           32
@@ -1648,7 +1648,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 6,
+      "minzoom": 5,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -1661,13 +1661,15 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": {"stops": [[10, "#D5D5D5"], [11, "#ffffff"]]},
+        "line-color": {
+          "stops": [[10, "rgba(204, 204, 204, 1)"], [11, "#ffffff"]]
+        },
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
-          1.5,
+          5,
+          1,
           18,
           36
         ]
@@ -1678,7 +1680,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 13,
+      "minzoom": 12,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -1695,8 +1697,8 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
-          0.5,
+          12,
+          1.5,
           18,
           12
         ]
@@ -1707,7 +1709,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 11,
+      "minzoom": 9,
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "tertiary"], ["!=", "tunnel", 1]],
       "layout": {
@@ -1716,12 +1718,14 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": {
+          "stops": [[10, "rgba(217, 217, 217, 1)"], [11, "#ffffff"]]
+        },
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
+          9,
           0.8,
           18,
           24
@@ -1733,7 +1737,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 9,
+      "minzoom": 8,
       "filter": ["all", ["==", "type", "secondary"], ["!=", "tunnel", 1]],
       "layout": {
         "visibility": "visible",
@@ -1741,13 +1745,15 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": {
+          "stops": [[10, "rgba(217, 217, 217, 1)"], [11, "#ffffff"]]
+        },
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
-          0.9,
+          8,
+          0.5,
           18,
           30
         ]
@@ -1758,7 +1764,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 7,
+      "minzoom": 6,
       "filter": [
         "all",
         ["in", "type", "primary"],
@@ -1771,15 +1777,49 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": {"stops": [[10, "#D5D5D5"], [11, "#ffffff"]]},
+        "line-color": {
+          "stops": [[10, "rgba(217, 217, 217, 1)"], [11, "#ffffff"]]
+        },
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
+          6,
           0.75,
           18,
           32
+        ]
+      }
+    },
+    {
+      "id": "roads_motorway",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 5,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        ["in", "type", "motorway", "trunk"],
+        ["!=", "tunnel", 1]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": {
+          "stops": [[10, "rgba(204, 204, 204, 1)"], [11, "#ffffff"]]
+        },
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.5],
+          ["zoom"],
+          5,
+          1,
+          18,
+          36
         ]
       }
     },
@@ -1806,41 +1846,11 @@
       }
     },
     {
-      "id": "roads_motorway",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines",
-      "minzoom": 6,
-      "maxzoom": 20,
-      "filter": [
-        "all",
-        ["in", "type", "motorway", "trunk"],
-        ["!=", "tunnel", 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": {"stops": [[10, "#D5D5D5"], [11, "#ffffff"]]},
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          11,
-          1,
-          18,
-          36
-        ]
-      }
-    },
-    {
       "id": "roads_residential_bridgetop_z13",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 13,
+      "minzoom": 12,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -1849,12 +1859,12 @@
       ],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(247, 246, 241, 1)",
+        "line-color": "#ffffff",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
+          12,
           0.5,
           18,
           12
@@ -1866,20 +1876,22 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 11,
+      "minzoom": 9,
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "tertiary"], ["==", "bridge", 1]],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": {
+          "stops": [[10, "rgba(217, 217, 217, 1)"], [11, "#ffffff"]]
+        },
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
+          9,
           0.8,
           18,
-          28
+          24
         ]
       }
     },
@@ -1888,17 +1900,19 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 9,
+      "minzoom": 8,
       "filter": ["all", ["==", "type", "secondary"], ["==", "bridge", 1]],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": {
+          "stops": [[10, "rgba(217, 217, 217, 1)"], [11, "#ffffff"]]
+        },
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
-          0.9,
+          8,
+          0.5,
           18,
           30
         ]
@@ -1909,17 +1923,19 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 9,
+      "minzoom": 6,
       "filter": ["all", ["in", "type", "primary"], ["==", "bridge", 1]],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": {
+          "stops": [[10, "rgba(217, 217, 217, 1)"], [11, "#ffffff"]]
+        },
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
-          1,
+          6,
+          0.75,
           18,
           32
         ]
@@ -1930,7 +1946,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 11,
+      "minzoom": 5,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -1943,13 +1959,15 @@
         "line-join": "miter"
       },
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": {
+          "stops": [[10, "rgba(204, 204, 204, 1)"], [11, "#ffffff"]]
+        },
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
-          1.5,
+          5,
+          1,
           18,
           36
         ]
