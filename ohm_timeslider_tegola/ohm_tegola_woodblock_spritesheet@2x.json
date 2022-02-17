@@ -1511,7 +1511,39 @@
     "x":0,
     "y":589
   },
-
+  
+  "woodblock-3-tiered-house-small": {
+    "height":30,
+    "pixelRatio":1,
+    "width":45,
+    "x":464,
+    "y":458
+  },
+  
+  "woodblock-3-tiered-house-small-2": {
+    "height":25,
+    "pixelRatio":1,
+    "width":30,
+    "x":509,
+    "y":458
+  },
+  
+  "woodblock-mapmonster-smaller": {
+    "height":85,
+    "pixelRatio":1,
+    "width":136,
+    "x":326,
+    "y":458
+  },
+  
+  "woodblock-waterdragon2": {
+    "height":194,
+    "pixelRatio":1,
+    "width":210,
+    "x":326,
+    "y":263
+  },
+  
   "works-18": {
     "height":18,
     "pixelRatio":1,
