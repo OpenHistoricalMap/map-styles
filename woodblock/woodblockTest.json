@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "ohmbasemap",
+  "name": "ohm-woodblock-map",
   "metadata": {"maputnik:renderer": "mbgljs"},
   "sources": {
     "osm": {
