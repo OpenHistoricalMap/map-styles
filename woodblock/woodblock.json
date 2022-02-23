@@ -15,7 +15,7 @@
       "id": "background-pattern",
       "type": "background",
       "minzoom": 0,
-      "maxzoom": 20,
+      "maxzoom": 24,
       "filter": ["all"],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -27,7 +27,7 @@
       "id": "background",
       "type": "background",
       "minzoom": 0,
-      "maxzoom": 20,
+      "maxzoom": 24,
       "filter": ["all"],
       "layout": {"visibility": "visible"},
       "paint": {
