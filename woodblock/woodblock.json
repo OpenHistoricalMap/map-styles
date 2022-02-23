@@ -623,7 +623,6 @@
       "source": "osm",
       "source-layer": "buildings",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": ["all"],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -2015,7 +2014,7 @@
       "minzoom": 9,
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "tertiary"], ["==", "bridge", 1]],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "line-color": {
           "stops": [[10, "rgba(217, 217, 217, 1)"], [11, "#ffffff"]]
