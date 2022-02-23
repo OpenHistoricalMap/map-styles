@@ -1527,6 +1527,14 @@
     "x":509,
     "y":458
   },
+
+  "woodblock-trees": {
+    "height":33,
+    "pixelRatio":1,
+    "width":38,
+    "x":460,
+    "y":452
+  },
   
   "woodblock-mapmonster-smaller": {
     "height":85,
