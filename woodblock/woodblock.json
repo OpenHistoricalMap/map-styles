@@ -2867,7 +2867,7 @@
       "minzoom": 16,
       "filter": ["all"],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "text-field": "{name}",
         "text-size": 9,
         "text-anchor": "center",
@@ -2889,7 +2889,7 @@
       "filter": ["all"],
       "layout": {
         "icon-image": "{tourism}-18",
-        "visibility": "visible",
+        "visibility": "none",
         "text-field": "{name}",
         "text-size": 9,
         "text-anchor": "center",
@@ -2929,7 +2929,7 @@
       ],
       "layout": {
         "icon-image": "{type}-12",
-        "visibility": "visible",
+        "visibility": "none",
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
@@ -2952,7 +2952,7 @@
       "filter": ["all"],
       "layout": {
         "icon-image": "{type}-18",
-        "visibility": "visible",
+        "visibility": "none",
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
@@ -2975,7 +2975,7 @@
       "filter": ["all"],
       "layout": {
         "icon-image": "{type}-12",
-        "visibility": "visible",
+        "visibility": "none",
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
@@ -2998,7 +2998,7 @@
       "filter": ["all"],
       "layout": {
         "icon-image": "{type}-18",
-        "visibility": "visible",
+        "visibility": "none",
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
@@ -3021,7 +3021,7 @@
       "filter": ["all", ["!in", "type", "artwork"]],
       "layout": {
         "icon-image": "{type}-18",
-        "visibility": "visible",
+        "visibility": "none",
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
@@ -3044,7 +3044,7 @@
       "filter": ["all", ["==", "type", "archaeological_site"]],
       "layout": {
         "icon-image": "{site_type}-18",
-        "visibility": "visible",
+        "visibility": "none",
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
@@ -3067,7 +3067,7 @@
       "filter": ["all", ["==", "type", "artwork"]],
       "layout": {
         "icon-image": "{artwork_type}-18",
-        "visibility": "visible",
+        "visibility": "none",
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
@@ -3088,7 +3088,7 @@
       "minzoom": 15,
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "tower"]],
-      "layout": {"icon-image": "power_tower-12", "visibility": "visible"}
+      "layout": {"icon-image": "power_tower-12", "visibility": "none"}
     },
     {
       "id": "points_airport",
@@ -3098,7 +3098,7 @@
       "minzoom": 10,
       "maxzoom": 14,
       "filter": ["all", ["==", "type", "aerodrome"]],
-      "layout": {"icon-image": "airport-18"}
+      "layout": {"icon-image": "airport-18", "visibility": "none"}
     },
     {
       "id": "transport_points",
