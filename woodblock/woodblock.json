@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "ohmbasemap",
+  "name": "ohm-woodblock-map",
   "metadata": {"maputnik:renderer": "mbgljs"},
   "sources": {
     "osm": {
@@ -8,7 +8,7 @@
       "tiles": ["https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
     }
   },
-  "sprite": "https://openhistoricalmap.github.io/map-styles/ohm_timeslider_tegola/ohm_tegola_woodblock_spritesheet",
+  "sprite": "https://openhistoricalmap.github.io/map-styles/woodblock/woodblock_spritesheet",
   "glyphs": "https://openhistoricalmap.github.io/map-styles/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -589,11 +589,8 @@
       "minzoom": 14,
       "maxzoom": 24,
       "filter": ["all"],
-      "layout": {"visibility": "none"},
-      "paint": {
-        "fill-color": "rgba(220, 215, 215, 1)",
-        "fill-outline-color": "rgba(195, 188, 188, 1)"
-      }
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(182, 143, 53, 1)", "fill-opacity": 0.1}
     },
     {
       "id": "buildings_flat_ruins",
@@ -602,22 +599,46 @@
       "source-layer": "other_areas",
       "minzoom": 14,
       "maxzoom": 24,
-      "filter": ["all"],
+      "filter": ["all", ["==", "type", ""]],
       "layout": {"visibility": "none"},
-      "paint": {"fill-color": "rgba(220, 215, 215, 1)"}
+      "paint": {"fill-color": "rgba(182, 143, 53, 1)", "fill-opacity": 0.1}
     },
     {
-      "id": "buildings_ruins_outlines",
+      "id": "t_outlines",
       "type": "line",
       "source": "osm",
       "source-layer": "other_areas",
       "filter": ["all", ["==", "type", "ruins"]],
       "layout": {"visibility": "none"},
       "paint": {
-        "line-color": "rgba(195, 188, 188, 1)",
+        "line-color": "rgba(170, 44, 44, 1)",
         "line-opacity": 1,
-        "line-width": {"stops": [[10, 1], [16, 2]]},
-        "line-dasharray": {"stops": [[10, [1, 1]], [16, [4, 2]]]}
+        "line-width": 6,
+        "line-dasharray": []
+      }
+    },
+    {
+      "id": "buildings_flat_outlines",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "buildings",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": ["all"],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-opacity": 1,
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.5],
+          ["zoom"],
+          15,
+          6,
+          18,
+          9
+        ],
+        "line-pattern": "woodblock-splotchBeige"
       }
     },
     {
@@ -727,7 +748,7 @@
       "minzoom": 9,
       "filter": ["all", ["==", "type", "tertiary"], ["==", "tunnel", 1]],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -753,7 +774,7 @@
       "minzoom": 8,
       "filter": ["all", ["==", "type", "secondary"], ["==", "tunnel", 1]],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -780,7 +801,7 @@
       "maxzoom": 20,
       "filter": ["all", ["in", "type", "primary"], ["==", "tunnel", 1]],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -811,7 +832,7 @@
         ["==", "tunnel", 1]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -837,7 +858,7 @@
       "minzoom": 9,
       "filter": ["all", ["==", "type", "tertiary"], ["==", "tunnel", 1]],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -862,7 +883,7 @@
       "minzoom": 8,
       "filter": ["all", ["==", "type", "secondary"], ["==", "tunnel", 1]],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -886,7 +907,7 @@
       "source-layer": "transport_lines",
       "minzoom": 6,
       "filter": ["all", ["==", "type", "primary"], ["==", "tunnel", 1]],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "line-color": "#f5f5f5",
         "line-width": [
@@ -913,7 +934,7 @@
         ["==", "tunnel", 1]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "butt",
         "line-join": "miter"
       },
@@ -2508,10 +2529,11 @@
       "maxzoom": 20,
       "filter": ["all", ["in", "type", "town"]],
       "layout": {
-        "text-field": "{name}",
-        "text-font": ["Eadui"],
+        "text-field": "",
+        "text-font": [],
         "text-size": {"stops": [[6, 6], [10, 12], [16, 14]]},
-        "visibility": "none"
+        "visibility": "visible",
+        "icon-image": "woodblock-forestSmlst"
       },
       "paint": {
         "text-color": "rgba(34, 34, 34, 1)",
