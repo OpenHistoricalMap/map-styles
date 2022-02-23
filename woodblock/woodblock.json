@@ -2398,7 +2398,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_areas",
-      "minzoom": 14,
+      "minzoom": 12,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -2420,12 +2420,14 @@
         [">", "area", 12000]
       ],
       "layout": {
-        "text-field": "{name}",
+        "text-field": "",
         "text-size": {"stops": [[14, 11], [20, 14]]},
-        "visibility": "none",
+        "visibility": "visible",
         "icon-text-fit": "none",
         "text-allow-overlap": false,
-        "text-ignore-placement": false
+        "text-ignore-placement": false,
+        "text-font": ["Open Sans Regular"],
+        "icon-image": "woodblock-forestSmlst"
       },
       "paint": {
         "text-color": "rgba(122, 143, 61, 1)",
@@ -2467,10 +2469,16 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_areas",
-      "minzoom": 14,
+      "minzoom": 7,
       "maxzoom": 24,
       "filter": ["all", ["in", "type", "forest", "wood", "nature_reserve"]],
-      "layout": {"text-field": "{name}", "text-size": 11, "visibility": "none"},
+      "layout": {
+        "text-field": "",
+        "text-size": 11,
+        "visibility": "visible",
+        "text-font": ["Open Sans Regular"],
+        "icon-image": "woodblock-forestSmlst"
+      },
       "paint": {
         "text-color": "rgba(95, 107, 71, 1)",
         "text-halo-color": "rgba(201, 213, 190, 1)",
@@ -2531,7 +2539,7 @@
         "text-field": "",
         "text-font": [],
         "text-size": {"stops": [[6, 6], [10, 12], [16, 14]]},
-        "visibility": "visible",
+        "visibility": "none",
         "icon-image": "woodblock-forestSmlst"
       },
       "paint": {
