@@ -8,11 +8,11 @@
   },
   
   "woodblock-splotching-light": {
-    "height":17,
+    "height":16,
     "pixelRatio":1,
-    "width":354,
+    "width":353,
     "x":0,
-    "y":268
+    "y":269
   },
   
   "woodblock-roadTest1c": {
@@ -24,11 +24,11 @@
   },
   
   "woodblock-splotchBeige": {
-    "height":17,
+    "height":16,
     "pixelRatio":1,
-    "width":354,
+    "width":353,
     "x":0,
-    "y":289
+    "y":290
   },
 
   "woodblock-3-tiered-house-small": {
@@ -42,9 +42,9 @@
   "woodblock-3-tiered-house-small-2": {
     "height":25,
     "pixelRatio":1,
-    "width":30,
-    "x":509,
-    "y":194
+    "width":29,
+    "x":268,
+    "y":236
   },
   
   "woodblock-mapmonster-smaller": {
@@ -56,10 +56,10 @@
   },
   
   "woodblock-waterdragon2": {
-    "height":194,
+    "height":193,
     "pixelRatio":1,
     "width":210,
-    "x":282,
+    "x":283,
     "y":1
   },
 
@@ -67,7 +67,7 @@
     "height":33,
     "pixelRatio":1,
     "width":38,
-    "x":315,
+    "x":316,
     "y":196
   }
 }
