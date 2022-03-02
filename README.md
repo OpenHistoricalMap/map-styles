@@ -11,6 +11,8 @@ Style file to load in Maputnik:
 
 - Woodblock style:  [https://github.com/OpenHistoricalMap/map-styles/blob/staging/woodblock/woodblock.json](https://raw.githubusercontent.com/OpenHistoricalMap/map-styles/staging/woodblock/woodblock.json)
 
+Copy the vector-based style to Mapbox [here](https://api.mapbox.com/styles/v1/vanessa-gin/ckz5r3zdy001215ofoeq1k7wm.html?title=copy&access_token=pk.eyJ1IjoidmFuZXNzYS1naW4iLCJhIjoiY2t3d2dzYXhxMDNtZDJ1bGFsY2c5dXV3ciJ9.jJ1Ujxks-kpcwSiiNdemfA&zoomwheel=true&fresh=true#12.63/40.68942/-74.02352).
+
 If you make changes you want to commit back here:
 1. Clone the repo locally.
 2. Load the style file.
