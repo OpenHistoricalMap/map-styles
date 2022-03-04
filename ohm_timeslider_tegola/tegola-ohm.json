@@ -308,9 +308,19 @@
       "source-layer": "landuse_areas",
       "minzoom": 7,
       "maxzoom": 10,
-      "filter": ["all", ["in", "type", "forest", "wood", "nature_reserve"]],
+      "filter": [
+        "all",
+        ["in", "type", "forest", "wood", "nature_reserve", "park"]
+      ],
       "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(178, 194, 157, 1)"}
+      "paint": {
+        "fill-color": {
+          "stops": [
+            [6, "rgba(178, 194, 157, 0.2)"],
+            [9, "rgba(178, 194, 157, 0.3)"]
+          ]
+        }
+      }
     },
     {
       "id": "landuse_areas_z5",
