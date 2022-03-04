@@ -748,7 +748,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 6,
+      "minzoom": 7,
       "maxzoom": 20,
       "filter": ["all", ["in", "type", "primary"], ["==", "tunnel", 1]],
       "layout": {
@@ -762,7 +762,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          6,
+          7,
           1,
           18,
           42
@@ -856,7 +856,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 5,
+      "minzoom": 6,
       "filter": ["all", ["==", "type", "primary"], ["==", "tunnel", 1]],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -865,7 +865,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          5,
+          6,
           0.75,
           18,
           32
@@ -877,7 +877,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 4,
+      "minzoom": 5,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -895,7 +895,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          4,
+          5,
           1,
           18,
           36
@@ -1351,7 +1351,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 6,
+      "minzoom": 7,
       "filter": ["all", ["in", "type", "primary_link"], ["!=", "tunnel", 1]],
       "layout": {
         "visibility": "visible",
@@ -1364,7 +1364,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          5,
+          7,
           2,
           18,
           40
@@ -1376,7 +1376,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 6,
+      "minzoom": 7,
       "filter": [
         "all",
         ["in", "type", "primary"],
@@ -1394,7 +1394,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          5,
+          7,
           2,
           18,
           40
@@ -1426,7 +1426,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          5,
+          6,
           2,
           18,
           46
@@ -1456,7 +1456,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          5,
+          6,
           2,
           18,
           46
@@ -1548,7 +1548,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 6,
+      "minzoom": 7,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -1566,7 +1566,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          6,
+          7,
           3.5,
           18,
           52
@@ -1662,7 +1662,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 5,
+      "minzoom": 6,
       "filter": ["all", ["in", "type", "primary_link"], ["!=", "tunnel", 1]],
       "layout": {
         "visibility": "visible",
@@ -1675,7 +1675,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          5,
+          6,
           0.75,
           18,
           32
@@ -1687,7 +1687,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 4,
+      "minzoom": 5,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -1707,7 +1707,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          4,
+          5,
           1,
           18,
           36
@@ -1774,7 +1774,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 5,
+      "minzoom": 6,
       "filter": [
         "all",
         ["in", "type", "primary"],
@@ -1792,7 +1792,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          5,
+          6,
           0.75,
           18,
           32
@@ -1804,7 +1804,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 4,
+      "minzoom": 5,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -1822,7 +1822,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          4,
+          5,
           1,
           18,
           36
@@ -1929,7 +1929,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 5,
+      "minzoom": 6,
       "filter": ["all", ["in", "type", "primary"], ["==", "bridge", 1]],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -1938,7 +1938,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          5,
+          6,
           0.75,
           18,
           32
@@ -1950,7 +1950,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 4,
+      "minzoom": 5,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -1968,7 +1968,7 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          4,
+          5,
           1,
           18,
           36
