@@ -1661,6 +1661,22 @@
       }
     },
     {
+      "id": "admin_countrylines_z10",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "land_ohm",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "filter": ["all", ["in", "admin_level", 1, 2]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(157, 169, 174, 1)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 0, 4, 8, 6],
+        "line-pattern": "woodblock-splotching-light",
+        "line-opacity": 1
+      }
+    },
+    {
       "id": "man_made_bridge_area",
       "type": "fill",
       "source": "osm",
@@ -1677,22 +1693,6 @@
       "filter": ["all", ["==", "class", "man_made"], ["==", "type", "bridge"]],
       "layout": {"visibility": "none"},
       "paint": {"line-color": "rgba(255, 255, 255, 1)", "line-width": 3}
-    },
-    {
-      "id": "admin_countrylines_z10",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "land_ohm",
-      "minzoom": 0,
-      "maxzoom": 20,
-      "filter": ["all", ["in", "admin_level", 1, 2]],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "line-color": "rgba(157, 169, 174, 1)",
-        "line-width": {"stops": [[0, 4], [6, 6]]},
-        "line-pattern": "woodblock-splotching-light",
-        "line-opacity": 0.5
-      }
     },
     {
       "id": "landuse_areaslabels_park",
