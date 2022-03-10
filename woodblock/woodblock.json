@@ -1277,7 +1277,7 @@
         ["in", "type", "residential", "service", "unclassified"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1287,11 +1287,18 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
+          8,
+          0,
           12,
-          1.5,
+          2,
+          14,
+          3,
+          17,
+          8,
           18,
-          12
-        ]
+          10
+        ],
+        "line-pattern": "woodblock-roadTest1c"
       }
     },
     {
