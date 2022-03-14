@@ -673,6 +673,22 @@
       }
     },
     {
+      "id": "man_made_bridge_area",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "other_areas",
+      "filter": ["all", ["==", "class", "man_made"], ["==", "type", "bridge"]],
+      "paint": {"fill-color": "rgba(255, 255, 255, 1)"}
+    },
+    {
+      "id": "man_made_bridge_line",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "other_lines",
+      "filter": ["all", ["==", "class", "man_made"], ["==", "type", "bridge"]],
+      "paint": {"line-color": "rgba(255, 255, 255, 1)", "line-width": 3}
+    },
+    {
       "id": "roads_subways",
       "type": "line",
       "source": "osm",
@@ -2043,22 +2059,6 @@
           1.5
         ]
       }
-    },
-    {
-      "id": "man_made_bridge_area",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "other_areas",
-      "filter": ["all", ["==", "class", "man_made"], ["==", "type", "bridge"]],
-      "paint": {"fill-color": "rgba(255, 255, 255, 1)"}
-    },
-    {
-      "id": "man_made_bridge_line",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "other_lines",
-      "filter": ["all", ["==", "class", "man_made"], ["==", "type", "bridge"]],
-      "paint": {"line-color": "rgba(255, 255, 255, 1)", "line-width": 3}
     },
     {
       "id": "admin_admin3",
