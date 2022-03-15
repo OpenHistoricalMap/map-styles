@@ -1753,7 +1753,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "round",
+        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
@@ -1778,7 +1778,7 @@
       "filter": ["all", ["==", "type", "tertiary"], ["==", "bridge", 1]],
       "layout": {
         "visibility": "visible",
-        "line-cap": "round",
+        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
@@ -1803,7 +1803,7 @@
       "filter": ["all", ["==", "type", "secondary"], ["==", "bridge", 1]],
       "layout": {
         "visibility": "visible",
-        "line-cap": "round",
+        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
@@ -1832,7 +1832,7 @@
         ["==", "bridge", 1]
       ],
       "layout": {
-        "line-cap": "round",
+        "line-cap": "butt",
         "visibility": "visible",
         "line-join": "round"
       },
@@ -1863,7 +1863,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "round",
+        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
