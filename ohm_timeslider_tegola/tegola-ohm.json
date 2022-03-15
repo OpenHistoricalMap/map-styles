@@ -446,6 +446,17 @@
       "paint": {"fill-color": "rgba(230, 224, 212, 1)"}
     },
     {
+      "id": "landuse_areas_z12_natural",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 12,
+      "maxzoom": 24,
+      "filter": ["all", ["in", "type", "scree", "peak", "rock", "bare_rock"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(255, 255, 255, 1)", "fill-pattern": "rock"}
+    },
+    {
       "id": "water_areas",
       "type": "fill",
       "source": "osm",
