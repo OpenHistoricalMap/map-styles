@@ -934,7 +934,15 @@
     "width":13,
     "x":329,
     "y":204
-  }, 
+  },
+  
+  "rock": {
+    "height":60,
+    "pixelRatio":1,
+    "width":60,
+    "x":460,
+    "y":240
+  },
 
   "school-12": {
     "height":12,
