@@ -933,172 +933,6 @@
       }
     },
     {
-      "id": "roads_rail_tram",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines",
-      "minzoom": 7,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        ["in", "type", "tram", "funicular", "monorail"],
-        ["!in", "service", "yard", "siding"]
-      ],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "line-color": "rgba(197, 197, 197, 1)",
-        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
-      }
-    },
-    {
-      "id": "roads_rail_mini",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines",
-      "minzoom": 7,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        ["in", "type", "miniature", "narrow_gauge"],
-        ["!in", "service", "yard", "siding"]
-      ],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "line-color": "rgba(179, 179, 179, 1)",
-        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
-      }
-    },
-    {
-      "id": "roads_rail_mini_cross",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines",
-      "minzoom": 7,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        ["in", "type", "miniature", "narrow_gauge"],
-        ["!in", "service", "yard", "siding"]
-      ],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "line-color": "rgba(179, 179, 179, 1)",
-        "line-width": 4,
-        "line-dasharray": [0.2, 2]
-      }
-    },
-    {
-      "id": "roads_rail_old",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines",
-      "minzoom": 7,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        ["in", "type", "dismantled", "abandoned", "disused", "razed"],
-        ["!in", "service", "yard", "siding"]
-      ],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "line-color": "rgba(210, 190, 190, 1)",
-        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
-      }
-    },
-    {
-      "id": "roads_rail_old_cross",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines",
-      "minzoom": 7,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        ["in", "type", "dismantled", "abandoned", "disused", "razed"],
-        ["!in", "service", "yard", "siding"]
-      ],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "line-color": "rgba(210, 190, 190, 1)",
-        "line-width": 6,
-        "line-dasharray": [0.2, 2]
-      }
-    },
-    {
-      "id": "roads_rail",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines",
-      "minzoom": 7,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"]
-      ],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "line-color": "rgba(179, 179, 179, 1)",
-        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
-      }
-    },
-    {
-      "id": "roads_rail_cross",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines",
-      "minzoom": 7,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"]
-      ],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "line-color": "rgba(179, 179, 179, 1)",
-        "line-width": {"stops": [[6, 2], [7, 3], [8, 4], [9, 5], [10, 6]]},
-        "line-dasharray": [0.2, 2]
-      }
-    },
-    {
-      "id": "roads_rail_construction",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines",
-      "minzoom": 9,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        ["in", "type", "construction", "proposed"],
-        ["in", "class", "railway"]
-      ],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "line-color": "rgba(215, 215, 215, 1)",
-        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
-      }
-    },
-    {
-      "id": "roads_rail_construction_cross",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines",
-      "minzoom": 9,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        ["in", "type", "construction", "proposed"],
-        ["in", "class", "railway"]
-      ],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "line-color": "rgba(215, 215, 215, 1)",
-        "line-width": 6,
-        "line-dasharray": [0.2, 2]
-      }
-    },
-    {
       "id": "roads_raceways",
       "type": "line",
       "source": "osm",
@@ -1489,6 +1323,172 @@
           18,
           46
         ]
+      }
+    },
+    {
+      "id": "roads_rail_tram",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "tram", "funicular", "monorail"],
+        ["!in", "service", "yard", "siding"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(197, 197, 197, 1)",
+        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
+      }
+    },
+    {
+      "id": "roads_rail_mini",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "miniature", "narrow_gauge"],
+        ["!in", "service", "yard", "siding"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(179, 179, 179, 1)",
+        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
+      }
+    },
+    {
+      "id": "roads_rail_mini_cross",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "miniature", "narrow_gauge"],
+        ["!in", "service", "yard", "siding"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(179, 179, 179, 1)",
+        "line-width": 4,
+        "line-dasharray": [0.2, 2]
+      }
+    },
+    {
+      "id": "roads_rail_old",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "dismantled", "abandoned", "disused", "razed"],
+        ["!in", "service", "yard", "siding"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(210, 190, 190, 1)",
+        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
+      }
+    },
+    {
+      "id": "roads_rail_old_cross",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "dismantled", "abandoned", "disused", "razed"],
+        ["!in", "service", "yard", "siding"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(210, 190, 190, 1)",
+        "line-width": 6,
+        "line-dasharray": [0.2, 2]
+      }
+    },
+    {
+      "id": "roads_rail",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "rail", "light_rail", "preserved"],
+        ["!in", "service", "yard", "siding"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(179, 179, 179, 1)",
+        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
+      }
+    },
+    {
+      "id": "roads_rail_cross",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "rail", "light_rail", "preserved"],
+        ["!in", "service", "yard", "siding"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(179, 179, 179, 1)",
+        "line-width": {"stops": [[6, 2], [7, 3], [8, 4], [9, 5], [10, 6]]},
+        "line-dasharray": [0.2, 2]
+      }
+    },
+    {
+      "id": "roads_rail_construction",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 9,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "construction", "proposed"],
+        ["in", "class", "railway"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(215, 215, 215, 1)",
+        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
+      }
+    },
+    {
+      "id": "roads_rail_construction_cross",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 9,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "construction", "proposed"],
+        ["in", "class", "railway"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(215, 215, 215, 1)",
+        "line-width": 6,
+        "line-dasharray": [0.2, 2]
       }
     },
     {
