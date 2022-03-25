@@ -800,6 +800,14 @@
     "y":185
   }, 
 
+  "peak-12": {
+    "height":11,
+    "pixelRatio":1,
+    "width":12,
+    "x":228,
+    "y":243
+  },
+
   "peak-18": {
     "height":17,
     "pixelRatio":1,
