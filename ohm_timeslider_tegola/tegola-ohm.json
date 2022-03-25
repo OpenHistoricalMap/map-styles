@@ -3114,11 +3114,53 @@
       }
     },
     {
+      "id": "points_fromlanduse-z14",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_points",
+      "minzoom": 14,
+      "filter": ["all", ["in", "type", "peak"]],
+      "layout": {
+        "icon-image": "{type}-12",
+        "text-font": ["Open Sans Regular"],
+        "text-field": "{name}",
+        "text-size": 8,
+        "text-anchor": "top",
+        "text-offset": [0, 0.8]
+      },
+      "paint": {
+        "text-color": "rgba(80, 80, 80, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5
+      }
+    },
+    {
+      "id": "points_fromlanduse",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_points",
+      "minzoom": 16,
+      "layout": {
+        "icon-image": "{type}-18",
+        "text-font": ["Open Sans Regular"],
+        "text-field": "{name}",
+        "text-size": 8,
+        "text-anchor": "top",
+        "text-offset": [0, 1]
+      },
+      "paint": {
+        "text-color": "rgba(80, 80, 80, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5
+      }
+    },
+    {
       "id": "points_fromlanduseareas",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_areas",
       "minzoom": 16,
+      "filter": ["all", ["!=", "type", "peak"]],
       "layout": {"icon-image": "{type}-18", "text-font": ["Open Sans Regular"]}
     },
     {
