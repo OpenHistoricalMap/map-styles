@@ -800,6 +800,22 @@
     "y":185
   }, 
 
+  "peak-12": {
+    "height":11,
+    "pixelRatio":1,
+    "width":12,
+    "x":228,
+    "y":243
+  },
+
+  "peak-18": {
+    "height":17,
+    "pixelRatio":1,
+    "width":18,
+    "x":209,
+    "y":243
+  },
+
   "pharmacy-18": {
     "height":18,
     "pixelRatio":1,
@@ -934,7 +950,15 @@
     "width":13,
     "x":329,
     "y":204
-  }, 
+  },
+  
+  "rock": {
+    "height":60,
+    "pixelRatio":1,
+    "width":60,
+    "x":460,
+    "y":240
+  },
 
   "school-12": {
     "height":12,
