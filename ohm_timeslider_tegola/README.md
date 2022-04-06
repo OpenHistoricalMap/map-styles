@@ -34,5 +34,4 @@ For convenience, the **make_production_version.py** can do this as well. Usage i
 
 The style file **tegola-ohm.json** is not directly used by https://www.openhistoricalmap.org
 
-Instead, the website code has executable JavaScript code so we can apply various transforms to it at runtime, e.g. changing the vector tile URL and the sprite set depending whether staging or production was requested. For further details, see https://github.com/OpenHistoricalMap/ohm-website/blob/staging/app/assets/javascripts/ohm.style.js
-
+Instead, the website code has executable JavaScript code so we can apply various transforms to it at runtime, e.g. changing the vector tile URL and the sprite set depending whether staging or production was requested.
