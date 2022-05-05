@@ -42,13 +42,24 @@
       "paint": {"fill-color": "rgba(230, 224, 212, 1)"}
     },
     {
+      "id": "military-landusehigh",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "filter": ["all", ["==", "type", "military"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(244, 244, 235, 1)"}
+    },
+    {
       "id": "military",
       "type": "fill",
       "source": "osm",
       "source-layer": "other_areas",
       "filter": ["all", ["==", "class", "military"]],
       "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(230, 224, 212, 1)"}
+      "paint": {"fill-color": "rgba(244, 244, 235, 1)"}
     },
     {
       "id": "landuse_areas_military_overlay",
@@ -60,8 +71,9 @@
       "filter": ["all", ["==", "type", "military"]],
       "layout": {"visibility": "visible"},
       "paint": {
+        "fill-pattern": "military-fill",
         "fill-color": "rgba(178, 194, 157, 1)",
-        "fill-pattern": "military-fill"
+        "fill-antialias": false
       }
     },
     {
