@@ -31,6 +31,40 @@
       "paint": {"fill-color": "rgba(248, 247, 242, 1)"}
     },
     {
+      "id": "military_landuselow",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 4,
+      "maxzoom": 10,
+      "filter": ["all", ["==", "type", "military"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(230, 224, 212, 1)"}
+    },
+    {
+      "id": "military",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "other_areas",
+      "filter": ["all", ["==", "class", "military"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(230, 224, 212, 1)"}
+    },
+    {
+      "id": "landuse_areas_military_overlay",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "filter": ["all", ["==", "type", "military"]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(178, 194, 157, 1)",
+        "fill-pattern": "military-fill"
+      }
+    },
+    {
       "id": "airports",
       "type": "fill",
       "source": "osm",
@@ -285,40 +319,6 @@
           ],
           "default": "transparent"
         }
-      }
-    },
-    {
-      "id": "military_landuselow",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "landuse_areas",
-      "minzoom": 4,
-      "maxzoom": 10,
-      "filter": ["all", ["==", "type", "military"]],
-      "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(230, 224, 212, 1)"}
-    },
-    {
-      "id": "military",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "other_areas",
-      "filter": ["all", ["==", "class", "military"]],
-      "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(230, 224, 212, 1)"}
-    },
-    {
-      "id": "landuse_areas_military_overlay",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "landuse_areas",
-      "minzoom": 10,
-      "maxzoom": 24,
-      "filter": ["all", ["==", "type", "military"]],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "fill-color": "rgba(178, 194, 157, 1)",
-        "fill-pattern": "military-fill"
       }
     },
     {
