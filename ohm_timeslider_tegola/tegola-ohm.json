@@ -288,6 +288,26 @@
       }
     },
     {
+      "id": "military_landuselow",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 4,
+      "maxzoom": 10,
+      "filter": ["all", ["==", "type", "military"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(230, 224, 212, 1)"}
+    },
+    {
+      "id": "military",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "other_areas",
+      "filter": ["all", ["==", "class", "military"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(230, 224, 212, 1)"}
+    },
+    {
       "id": "landuse_areas_military_overlay",
       "type": "fill",
       "source": "osm",
@@ -424,26 +444,6 @@
         "line-dasharray": [2.5, 1.5],
         "line-color": "rgba(195, 203, 179, 1)"
       }
-    },
-    {
-      "id": "military_landuselow",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "landuse_areas",
-      "minzoom": 4,
-      "maxzoom": 10,
-      "filter": ["all", ["==", "type", "military"]],
-      "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(230, 224, 212, 1)"}
-    },
-    {
-      "id": "military",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "other_areas",
-      "filter": ["all", ["==", "class", "military"]],
-      "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(230, 224, 212, 1)"}
     },
     {
       "id": "landuse_areas_z12_natural",
