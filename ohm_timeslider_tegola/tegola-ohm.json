@@ -192,7 +192,8 @@
             [{"zoom": 0, "value": "desert"}, "rgba(238, 229, 178, 1)"],
             [{"zoom": 0, "value": "basin"}, "rgba(144, 204, 203, 1)"],
             [{"zoom": 0, "value": "wetland"}, "rgba(227, 233, 226, 1)"],
-            [{"zoom": 0, "value": "salt_pond"}, "rgba(236, 240, 241, 1)"]
+            [{"zoom": 0, "value": "salt_pond"}, "rgba(236, 240, 241, 1)"],
+            [{"zoom": 1, "value": "mud"}, "rgba(230, 223, 215, 1)"]
           ],
           "default": "transparent"
         }
