@@ -1527,6 +1527,14 @@
     "x":1,
     "y":131
   },
+  
+  "wetland": {
+    "height":17,
+    "pixelRatio":1,
+    "width":29,
+    "x":256,
+    "y":243
+  },
 
   "works-18": {
     "height":18,
