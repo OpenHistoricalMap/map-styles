@@ -1529,9 +1529,9 @@
   },
   
   "wetland-18": {
-    "height":18,
+    "height":32,
     "pixelRatio":1,
-    "width":30,
+    "width":32,
     "x":256,
     "y":243
   },
