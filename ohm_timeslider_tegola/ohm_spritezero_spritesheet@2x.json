@@ -52,7 +52,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 226,
+    "x": 183,
     "y": 372
   },
   "bank-18": {
@@ -101,7 +101,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 250,
+    "x": 207,
     "y": 372
   },
   "border_control-18": {
@@ -304,7 +304,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 274,
+    "x": 231,
     "y": 372
   },
   "embassy-18": {
@@ -332,7 +332,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 298,
+    "x": 255,
     "y": 372
   },
   "fire_station-18": {
@@ -357,10 +357,10 @@
     "y": 0
   },
   "furniture-18": {
-    "height": 27,
+    "height": 24,
     "pixelRatio": 2,
-    "width": 43,
-    "x": 183,
+    "width": 38,
+    "x": 279,
     "y": 372
   },
   "gambling-18": {
@@ -402,7 +402,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 322,
+    "x": 317,
     "y": 372
   },
   "government-18": {
@@ -444,7 +444,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 346,
+    "x": 341,
     "y": 372
   },
   "hospital-18": {
@@ -591,7 +591,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 370,
+    "x": 365,
     "y": 372
   },
   "police-18": {
@@ -612,7 +612,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 394,
+    "x": 389,
     "y": 372
   },
   "prison-18": {
@@ -668,7 +668,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 418,
+    "x": 413,
     "y": 372
   },
   "school-18": {
@@ -759,7 +759,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 442,
+    "x": 437,
     "y": 372
   },
   "taxi-18": {
