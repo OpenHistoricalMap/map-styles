@@ -157,7 +157,7 @@
     "height": 14,
     "pixelRatio": 2,
     "width": 14,
-    "x": 129,
+    "x": 149,
     "y": 439
   },
   "car-18": {
@@ -213,7 +213,7 @@
     "height": 14,
     "pixelRatio": 2,
     "width": 14,
-    "x": 143,
+    "x": 163,
     "y": 439
   },
   "city_gate-18": {
@@ -227,7 +227,7 @@
     "height": 6,
     "pixelRatio": 2,
     "width": 28,
-    "x": 157,
+    "x": 177,
     "y": 439
   },
   "clinic-18": {
@@ -626,7 +626,7 @@
     "height": 18,
     "pixelRatio": 2,
     "width": 22,
-    "x": 107,
+    "x": 127,
     "y": 439
   },
   "peak-18": {
@@ -796,6 +796,13 @@
     "width": 36,
     "x": 144,
     "y": 336
+  },
+  "station-18": {
+    "height": 20,
+    "pixelRatio": 2,
+    "width": 20,
+    "x": 107,
+    "y": 439
   },
   "statue-18": {
     "height": 36,
@@ -969,7 +976,7 @@
     "height": 6,
     "pixelRatio": 2,
     "width": 40,
-    "x": 185,
+    "x": 205,
     "y": 439
   },
   "watermill-18": {
