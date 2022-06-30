@@ -8,7 +8,7 @@
       "tiles": ["https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
     }
   },
-  "sprite": "https://openhistoricalmap.github.io/map-styles/ohm_timeslider_tegola/osm_tegola_spritesheet",
+  "sprite": "https://openhistoricalmap.github.io/map-styles/ohm_timeslider_tegola/ohm_spritezero_spritesheet",
   "glyphs": "https://openhistoricalmap.github.io/map-styles/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -71,9 +71,9 @@
       "filter": ["all", ["==", "type", "military"]],
       "layout": {"visibility": "visible"},
       "paint": {
-        "fill-pattern": "military-fill",
         "fill-color": "rgba(178, 194, 157, 1)",
-        "fill-antialias": false
+        "fill-antialias": false,
+        "fill-pattern": "military-fill"
       }
     },
     {
@@ -393,6 +393,20 @@
       "paint": {
         "fill-color": "rgba(236, 231, 231, 1)",
         "fill-outline-color": "rgba(224, 217, 217, 1)"
+      }
+    },
+    {
+      "id": "wetlands_z12",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 12,
+      "maxzoom": 24,
+      "filter": ["all", ["==", "type", "wetland"]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(255, 255, 255, 1)",
+        "fill-pattern": "wetland-18"
       }
     },
     {
@@ -3147,10 +3161,7 @@
       "source": "osm",
       "source-layer": "buildings",
       "filter": ["all"],
-      "layout": {
-        "icon-image": "{religion}-18",
-        "text-font": ["OpenHistorical"]
-      }
+      "layout": {"icon-image": "{religion}-18", "text-font": ["OpenHistorical"]}
     },
     {
       "id": "points_fromlanduse-z14",
@@ -3199,7 +3210,7 @@
       "source": "osm",
       "source-layer": "landuse_areas",
       "minzoom": 16,
-      "filter": ["all", ["!=", "type", "peak"]],
+      "filter": ["all", ["!in", "type", "peak", "wetland"]],
       "layout": {"icon-image": "{type}-18", "text-font": ["OpenHistorical"]}
     },
     {
