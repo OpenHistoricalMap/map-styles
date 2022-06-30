@@ -20,6 +20,13 @@
     "x": 18,
     "y": 60
   },
+  "apartment-18": {
+    "height": 17,
+    "pixelRatio": 1,
+    "width": 18,
+    "x": 185,
+    "y": 186
+  },
   "arts_centre-18": {
     "height": 18,
     "pixelRatio": 1,
@@ -52,7 +59,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 107,
+    "x": 123,
     "y": 204
   },
   "bank-18": {
@@ -73,7 +80,7 @@
     "height": 17,
     "pixelRatio": 1,
     "width": 16,
-    "x": 185,
+    "x": 203,
     "y": 186
   },
   "beach_resort-18": {
@@ -108,7 +115,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 119,
+    "x": 135,
     "y": 204
   },
   "border_control-18": {
@@ -164,14 +171,14 @@
     "height": 7,
     "pixelRatio": 1,
     "width": 7,
-    "x": 112,
+    "x": 124,
     "y": 221
   },
   "car-18": {
     "height": 11,
     "pixelRatio": 1,
     "width": 24,
-    "x": 60,
+    "x": 72,
     "y": 221
   },
   "car_parts-18": {
@@ -220,7 +227,7 @@
     "height": 7,
     "pixelRatio": 1,
     "width": 7,
-    "x": 119,
+    "x": 131,
     "y": 221
   },
   "city_gate-18": {
@@ -234,7 +241,7 @@
     "height": 3,
     "pixelRatio": 1,
     "width": 14,
-    "x": 133,
+    "x": 145,
     "y": 221
   },
   "clinic-18": {
@@ -255,7 +262,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 131,
+    "x": 147,
     "y": 204
   },
   "college-18": {
@@ -304,7 +311,7 @@
     "height": 17,
     "pixelRatio": 1,
     "width": 12,
-    "x": 201,
+    "x": 219,
     "y": 186
   },
   "dentist-18": {
@@ -346,7 +353,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 143,
+    "x": 159,
     "y": 204
   },
   "embassy-18": {
@@ -374,7 +381,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 155,
+    "x": 171,
     "y": 204
   },
   "fire_station-18": {
@@ -416,14 +423,14 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 19,
-    "x": 167,
+    "x": 183,
     "y": 204
   },
   "gallery-18": {
     "height": 15,
     "pixelRatio": 1,
     "width": 18,
-    "x": 51,
+    "x": 67,
     "y": 204
   },
   "gambling-18": {
@@ -472,7 +479,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 186,
+    "x": 202,
     "y": 204
   },
   "government-18": {
@@ -493,8 +500,8 @@
     "height": 17,
     "pixelRatio": 1,
     "width": 16,
-    "x": 213,
-    "y": 186
+    "x": 0,
+    "y": 204
   },
   "hardware-18": {
     "height": 18,
@@ -514,7 +521,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 198,
+    "x": 214,
     "y": 204
   },
   "hospital-18": {
@@ -528,7 +535,7 @@
     "height": 17,
     "pixelRatio": 1,
     "width": 18,
-    "x": 0,
+    "x": 16,
     "y": 204
   },
   "hotel-18": {
@@ -584,7 +591,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 210,
+    "x": 226,
     "y": 204
   },
   "mobile_phone-18": {
@@ -640,14 +647,14 @@
     "height": 9,
     "pixelRatio": 1,
     "width": 11,
-    "x": 101,
+    "x": 113,
     "y": 221
   },
   "peak-18": {
     "height": 15,
     "pixelRatio": 1,
     "width": 18,
-    "x": 69,
+    "x": 85,
     "y": 204
   },
   "pharmacy-18": {
@@ -682,8 +689,8 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 222,
-    "y": 204
+    "x": 0,
+    "y": 221
   },
   "police-18": {
     "height": 18,
@@ -703,14 +710,14 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 0,
+    "x": 12,
     "y": 221
   },
   "prison-18": {
     "height": 14,
     "pixelRatio": 1,
     "width": 20,
-    "x": 87,
+    "x": 103,
     "y": 204
   },
   "pub-18": {
@@ -759,14 +766,14 @@
     "height": 17,
     "pixelRatio": 1,
     "width": 16,
-    "x": 18,
+    "x": 34,
     "y": 204
   },
   "school-12": {
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 12,
+    "x": 24,
     "y": 221
   },
   "school-18": {
@@ -822,7 +829,7 @@
     "height": 7,
     "pixelRatio": 1,
     "width": 7,
-    "x": 126,
+    "x": 138,
     "y": 221
   },
   "statue-18": {
@@ -871,7 +878,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 24,
+    "x": 36,
     "y": 221
   },
   "taxi-18": {
@@ -885,7 +892,7 @@
     "height": 10,
     "pixelRatio": 1,
     "width": 17,
-    "x": 84,
+    "x": 96,
     "y": 221
   },
   "telephone-18": {
@@ -920,7 +927,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 36,
+    "x": 48,
     "y": 221
   },
   "townhall-18": {
@@ -955,7 +962,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 48,
+    "x": 60,
     "y": 221
   },
   "university-18": {
@@ -997,7 +1004,7 @@
     "height": 3,
     "pixelRatio": 1,
     "width": 20,
-    "x": 147,
+    "x": 159,
     "y": 221
   },
   "watermill-18": {
@@ -1018,7 +1025,7 @@
     "height": 17,
     "pixelRatio": 1,
     "width": 17,
-    "x": 34,
+    "x": 50,
     "y": 204
   }
 }
