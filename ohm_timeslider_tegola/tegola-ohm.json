@@ -3210,7 +3210,7 @@
       "source": "osm",
       "source-layer": "landuse_areas",
       "minzoom": 16,
-      "filter": ["all", ["!in", "type", "peak", "wetland"]],
+      "filter": ["all", ["!in", "type", "peak", "wetland", "garden"]],
       "layout": {"icon-image": "{type}-18", "text-font": ["OpenHistorical"]}
     },
     {
