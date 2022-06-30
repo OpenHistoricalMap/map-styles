@@ -157,8 +157,8 @@
     "height": 14,
     "pixelRatio": 2,
     "width": 14,
-    "x": 465,
-    "y": 372
+    "x": 22,
+    "y": 436
   },
   "car-18": {
     "height": 22,
@@ -213,8 +213,8 @@
     "height": 14,
     "pixelRatio": 2,
     "width": 14,
-    "x": 463,
-    "y": 0
+    "x": 36,
+    "y": 436
   },
   "city_gate-18": {
     "height": 36,
@@ -227,7 +227,7 @@
     "height": 6,
     "pixelRatio": 2,
     "width": 28,
-    "x": 0,
+    "x": 50,
     "y": 436
   },
   "clinic-18": {
@@ -395,7 +395,7 @@
     "height": 31,
     "pixelRatio": 2,
     "width": 36,
-    "x": 371,
+    "x": 407,
     "y": 372
   },
   "gambling-18": {
@@ -488,6 +488,13 @@
     "width": 36,
     "x": 360,
     "y": 228
+  },
+  "hostel-18": {
+    "height": 35,
+    "pixelRatio": 2,
+    "width": 36,
+    "x": 336,
+    "y": 372
   },
   "hotel-18": {
     "height": 36,
@@ -598,14 +605,14 @@
     "height": 18,
     "pixelRatio": 2,
     "width": 22,
-    "x": 443,
-    "y": 372
+    "x": 0,
+    "y": 436
   },
   "peak-18": {
     "height": 30,
     "pixelRatio": 2,
     "width": 36,
-    "x": 407,
+    "x": 443,
     "y": 372
   },
   "pharmacy-18": {
@@ -941,7 +948,7 @@
     "height": 6,
     "pixelRatio": 2,
     "width": 40,
-    "x": 28,
+    "x": 78,
     "y": 436
   },
   "watermill-18": {
@@ -962,7 +969,7 @@
     "height": 35,
     "pixelRatio": 2,
     "width": 35,
-    "x": 336,
+    "x": 372,
     "y": 372
   }
 }
