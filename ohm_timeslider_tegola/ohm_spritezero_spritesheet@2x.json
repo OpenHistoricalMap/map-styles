@@ -741,6 +741,13 @@
     "x": 0,
     "y": 336
   },
+  "statue-18": {
+    "height": 36,
+    "pixelRatio": 2,
+    "width": 16,
+    "x": 448,
+    "y": 300
+  },
   "storage_tank-18": {
     "height": 36,
     "pixelRatio": 2,
@@ -836,7 +843,7 @@
     "height": 36,
     "pixelRatio": 2,
     "width": 15,
-    "x": 448,
+    "x": 464,
     "y": 300
   },
   "tram_stop-18": {
