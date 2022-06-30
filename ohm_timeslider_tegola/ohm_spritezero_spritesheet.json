@@ -157,14 +157,14 @@
     "height": 7,
     "pixelRatio": 1,
     "width": 7,
-    "x": 88,
+    "x": 100,
     "y": 204
   },
   "car-18": {
     "height": 11,
     "pixelRatio": 1,
     "width": 24,
-    "x": 36,
+    "x": 48,
     "y": 204
   },
   "car_parts-18": {
@@ -213,14 +213,14 @@
     "height": 7,
     "pixelRatio": 1,
     "width": 7,
-    "x": 95,
+    "x": 107,
     "y": 204
   },
   "cliff-18": {
     "height": 3,
     "pixelRatio": 1,
     "width": 14,
-    "x": 102,
+    "x": 114,
     "y": 204
   },
   "clinic-18": {
@@ -510,6 +510,13 @@
     "x": 216,
     "y": 114
   },
+  "military-fill": {
+    "height": 12,
+    "pixelRatio": 1,
+    "width": 12,
+    "x": 200,
+    "y": 186
+  },
   "mobile_phone-18": {
     "height": 18,
     "pixelRatio": 1,
@@ -563,7 +570,7 @@
     "height": 9,
     "pixelRatio": 1,
     "width": 11,
-    "x": 77,
+    "x": 89,
     "y": 204
   },
   "peak-18": {
@@ -605,7 +612,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 200,
+    "x": 212,
     "y": 186
   },
   "police-18": {
@@ -626,7 +633,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 212,
+    "x": 224,
     "y": 186
   },
   "prison-18": {
@@ -682,8 +689,8 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 224,
-    "y": 186
+    "x": 0,
+    "y": 204
   },
   "school-18": {
     "height": 18,
@@ -773,7 +780,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 0,
+    "x": 12,
     "y": 204
   },
   "taxi-18": {
@@ -787,7 +794,7 @@
     "height": 10,
     "pixelRatio": 1,
     "width": 17,
-    "x": 60,
+    "x": 72,
     "y": 204
   },
   "telephone-18": {
@@ -815,7 +822,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 12,
+    "x": 24,
     "y": 204
   },
   "townhall-18": {
@@ -850,7 +857,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 24,
+    "x": 36,
     "y": 204
   },
   "university-18": {
@@ -892,7 +899,7 @@
     "height": 3,
     "pixelRatio": 1,
     "width": 20,
-    "x": 116,
+    "x": 128,
     "y": 204
   },
   "watermill-18": {

@@ -157,14 +157,14 @@
     "height": 14,
     "pixelRatio": 2,
     "width": 14,
-    "x": 177,
+    "x": 201,
     "y": 408
   },
   "car-18": {
     "height": 22,
     "pixelRatio": 2,
     "width": 49,
-    "x": 72,
+    "x": 96,
     "y": 408
   },
   "car_parts-18": {
@@ -213,14 +213,14 @@
     "height": 14,
     "pixelRatio": 2,
     "width": 14,
-    "x": 191,
+    "x": 215,
     "y": 408
   },
   "cliff-18": {
     "height": 6,
     "pixelRatio": 2,
     "width": 28,
-    "x": 205,
+    "x": 229,
     "y": 408
   },
   "clinic-18": {
@@ -510,6 +510,13 @@
     "x": 432,
     "y": 228
   },
+  "military-fill": {
+    "height": 24,
+    "pixelRatio": 2,
+    "width": 24,
+    "x": 401,
+    "y": 372
+  },
   "mobile_phone-18": {
     "height": 36,
     "pixelRatio": 2,
@@ -563,7 +570,7 @@
     "height": 18,
     "pixelRatio": 2,
     "width": 22,
-    "x": 155,
+    "x": 179,
     "y": 408
   },
   "peak-18": {
@@ -605,7 +612,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 401,
+    "x": 425,
     "y": 372
   },
   "police-18": {
@@ -626,7 +633,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 425,
+    "x": 449,
     "y": 372
   },
   "prison-18": {
@@ -682,8 +689,8 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 449,
-    "y": 372
+    "x": 0,
+    "y": 408
   },
   "school-18": {
     "height": 36,
@@ -773,7 +780,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 0,
+    "x": 24,
     "y": 408
   },
   "taxi-18": {
@@ -787,7 +794,7 @@
     "height": 21,
     "pixelRatio": 2,
     "width": 34,
-    "x": 121,
+    "x": 145,
     "y": 408
   },
   "telephone-18": {
@@ -815,7 +822,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 24,
+    "x": 48,
     "y": 408
   },
   "townhall-18": {
@@ -850,7 +857,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 48,
+    "x": 72,
     "y": 408
   },
   "university-18": {
@@ -892,7 +899,7 @@
     "height": 6,
     "pixelRatio": 2,
     "width": 40,
-    "x": 233,
+    "x": 257,
     "y": 408
   },
   "watermill-18": {
