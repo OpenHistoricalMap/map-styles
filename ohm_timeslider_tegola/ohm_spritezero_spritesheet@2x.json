@@ -59,7 +59,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 340,
+    "x": 370,
     "y": 408
   },
   "bank-18": {
@@ -115,14 +115,14 @@
     "height": 20,
     "pixelRatio": 2,
     "width": 36,
-    "x": 337,
+    "x": 361,
     "y": 443
   },
   "border_control-12": {
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 364,
+    "x": 394,
     "y": 408
   },
   "border_control-18": {
@@ -178,14 +178,14 @@
     "height": 14,
     "pixelRatio": 2,
     "width": 14,
-    "x": 447,
-    "y": 443
+    "x": 466,
+    "y": 408
   },
   "car-18": {
     "height": 22,
     "pixelRatio": 2,
     "width": 49,
-    "x": 254,
+    "x": 278,
     "y": 443
   },
   "car_parts-18": {
@@ -235,7 +235,7 @@
     "pixelRatio": 2,
     "width": 14,
     "x": 461,
-    "y": 443
+    "y": 0
   },
   "city_gate-18": {
     "height": 36,
@@ -269,7 +269,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 388,
+    "x": 418,
     "y": 408
   },
   "college-18": {
@@ -360,7 +360,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 412,
+    "x": 442,
     "y": 408
   },
   "embassy-18": {
@@ -388,8 +388,8 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 436,
-    "y": 408
+    "x": 0,
+    "y": 443
   },
   "fire_station-18": {
     "height": 36,
@@ -430,14 +430,14 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 38,
-    "x": 0,
+    "x": 24,
     "y": 443
   },
   "gallery-18": {
     "height": 31,
     "pixelRatio": 2,
     "width": 36,
-    "x": 228,
+    "x": 258,
     "y": 408
   },
   "gambling-18": {
@@ -486,7 +486,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 38,
+    "x": 62,
     "y": 443
   },
   "government-18": {
@@ -535,7 +535,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 62,
+    "x": 86,
     "y": 443
   },
   "hospital-18": {
@@ -565,6 +565,13 @@
     "width": 36,
     "x": 36,
     "y": 264
+  },
+  "jewelry-18": {
+    "height": 34,
+    "pixelRatio": 2,
+    "width": 30,
+    "x": 196,
+    "y": 408
   },
   "jewish-18": {
     "height": 36,
@@ -605,7 +612,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 86,
+    "x": 110,
     "y": 443
   },
   "mobile_phone-18": {
@@ -661,14 +668,14 @@
     "height": 18,
     "pixelRatio": 2,
     "width": 22,
-    "x": 373,
+    "x": 397,
     "y": 443
   },
   "peak-18": {
     "height": 30,
     "pixelRatio": 2,
     "width": 36,
-    "x": 264,
+    "x": 294,
     "y": 408
   },
   "pharmacy-18": {
@@ -710,7 +717,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 110,
+    "x": 134,
     "y": 443
   },
   "police-18": {
@@ -731,14 +738,14 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 134,
+    "x": 158,
     "y": 443
   },
   "prison-18": {
     "height": 28,
     "pixelRatio": 2,
     "width": 40,
-    "x": 300,
+    "x": 330,
     "y": 408
   },
   "pub-18": {
@@ -787,7 +794,7 @@
     "height": 34,
     "pixelRatio": 2,
     "width": 32,
-    "x": 196,
+    "x": 226,
     "y": 408
   },
   "saloon-18": {
@@ -801,7 +808,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 158,
+    "x": 182,
     "y": 443
   },
   "school-18": {
@@ -836,7 +843,7 @@
     "height": 17,
     "pixelRatio": 2,
     "width": 37,
-    "x": 395,
+    "x": 419,
     "y": 443
   },
   "shop-18": {
@@ -864,7 +871,7 @@
     "height": 15,
     "pixelRatio": 2,
     "width": 15,
-    "x": 432,
+    "x": 456,
     "y": 443
   },
   "statue-18": {
@@ -913,7 +920,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 182,
+    "x": 206,
     "y": 443
   },
   "taxi-18": {
@@ -927,7 +934,7 @@
     "height": 21,
     "pixelRatio": 2,
     "width": 34,
-    "x": 303,
+    "x": 327,
     "y": 443
   },
   "telephone-18": {
@@ -962,7 +969,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 206,
+    "x": 230,
     "y": 443
   },
   "townhall-18": {
@@ -997,7 +1004,7 @@
     "height": 24,
     "pixelRatio": 2,
     "width": 24,
-    "x": 230,
+    "x": 254,
     "y": 443
   },
   "university-18": {
