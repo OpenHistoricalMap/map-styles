@@ -143,7 +143,7 @@
     "height": 9,
     "pixelRatio": 1,
     "width": 17,
-    "x": 198,
+    "x": 216,
     "y": 221
   },
   "bureau_de_change-18": {
@@ -185,7 +185,7 @@
     "height": 7,
     "pixelRatio": 1,
     "width": 7,
-    "x": 244,
+    "x": 262,
     "y": 221
   },
   "car-18": {
@@ -241,7 +241,7 @@
     "height": 7,
     "pixelRatio": 1,
     "width": 7,
-    "x": 251,
+    "x": 269,
     "y": 221
   },
   "city_gate-18": {
@@ -252,10 +252,10 @@
     "y": 78
   },
   "cliff-18": {
-    "height": 3,
+    "height": 10,
     "pixelRatio": 1,
-    "width": 14,
-    "x": 265,
+    "width": 18,
+    "x": 181,
     "y": 221
   },
   "clinic-18": {
@@ -675,7 +675,7 @@
     "height": 9,
     "pixelRatio": 1,
     "width": 11,
-    "x": 215,
+    "x": 233,
     "y": 221
   },
   "peak-18": {
@@ -850,7 +850,7 @@
     "height": 8,
     "pixelRatio": 1,
     "width": 18,
-    "x": 226,
+    "x": 244,
     "y": 221
   },
   "shop-18": {
@@ -878,7 +878,7 @@
     "height": 7,
     "pixelRatio": 1,
     "width": 7,
-    "x": 258,
+    "x": 276,
     "y": 221
   },
   "statue-18": {
@@ -941,7 +941,7 @@
     "height": 10,
     "pixelRatio": 1,
     "width": 17,
-    "x": 181,
+    "x": 199,
     "y": 221
   },
   "telephone-18": {
@@ -1053,7 +1053,7 @@
     "height": 3,
     "pixelRatio": 1,
     "width": 20,
-    "x": 279,
+    "x": 283,
     "y": 221
   },
   "watermill-18": {
