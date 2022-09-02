@@ -115,7 +115,7 @@
     "height": 20,
     "pixelRatio": 2,
     "width": 36,
-    "x": 457,
+    "x": 577,
     "y": 448
   },
   "border_control-12": {
@@ -192,7 +192,7 @@
     "height": 22,
     "pixelRatio": 2,
     "width": 49,
-    "x": 374,
+    "x": 494,
     "y": 448
   },
   "car_parts-18": {
@@ -250,6 +250,13 @@
     "width": 36,
     "x": 360,
     "y": 196
+  },
+  "cliff-18": {
+    "height": 13,
+    "pixelRatio": 2,
+    "width": 24,
+    "x": 749,
+    "y": 448
   },
   "cliff-line-18": {
     "height": 40,
@@ -941,7 +948,7 @@
     "height": 21,
     "pixelRatio": 2,
     "width": 34,
-    "x": 423,
+    "x": 543,
     "y": 448
   },
   "telephone-18": {
@@ -1053,14 +1060,14 @@
     "height": 6,
     "pixelRatio": 2,
     "width": 40,
-    "x": 749,
+    "x": 773,
     "y": 448
   },
   "waterfall-line-18": {
-    "height": 20,
+    "height": 24,
     "pixelRatio": 2,
     "width": 120,
-    "x": 493,
+    "x": 374,
     "y": 448
   },
   "watermill-18": {
