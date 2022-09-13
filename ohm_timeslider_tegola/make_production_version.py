@@ -1,14 +1,14 @@
 #!/bin/env python
 """
-Copy the sprite files to their prudction names. Could do it manually but this is even simpler.
+Copy the sprite files to their production names. Could do it manually but this is even simpler.
 """
 
 # files to copy with a new name; each row is (fromname, toname)
 FILES_TO_COPY = [
-    ('osm_tegola_spritesheet.json', 'osm_tegola_spritesheet-production.json'),
-    ('osm_tegola_spritesheet.png', 'osm_tegola_spritesheet-production.png'),
-    ('osm_tegola_spritesheet@2x.json', 'osm_tegola_spritesheet-production@2x.json'),
-    ('osm_tegola_spritesheet@2x.png', 'osm_tegola_spritesheet-production@2x.png'),
+    ('ohm_spritezero_spritesheet.json', 'ohm_spritezero_spritesheet-production.json'),
+    ('ohm_spritezero_spritesheet.png', 'ohm_spritezero_spritesheet-production.png'),
+    ('ohm_spritezero_spritesheet@2x.json', 'ohm_spritezero_spritesheet-production@2x.json'),
+    ('ohm_spritezero_spritesheet@2x.png', 'ohm_spritezero_spritesheet-production@2x.png'),
     ('tegola-ohm.json', 'tegola-ohm-production.json'),
 ]
 
