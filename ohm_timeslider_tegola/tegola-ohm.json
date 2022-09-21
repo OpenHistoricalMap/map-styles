@@ -1291,6 +1291,54 @@
       }
     },
     {
+      "id": "water_lines_aqueduct",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "water_lines",
+      "minzoom": 8,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "canal"
+        ],
+        [
+          "==",
+          "bridge",
+          "aqueduct"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgba(108, 178, 176, 1)",
+        "line-width": {
+          "stops": [
+            [
+              8,
+              0.5
+            ],
+            [
+              13,
+              0.5
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              20,
+              3
+            ]
+          ]
+        },
+        "line-dasharray": [
+          2,
+          2
+        ]
+      }
+    },
+    {
       "id": "water_lines_river",
       "type": "line",
       "source": "osm",
