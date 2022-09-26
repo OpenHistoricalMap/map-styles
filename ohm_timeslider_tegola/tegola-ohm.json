@@ -1056,6 +1056,27 @@
       }
     },
     {
+      "id": "place_areas_islet",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "place_areas",
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "islet"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(248, 247, 242, 1)",
+        "fill-outline-color": "rgba(226, 223, 215, 1)"
+      }
+    },
+    {
       "id": "water_lines_stream",
       "type": "line",
       "source": "osm",
@@ -5031,7 +5052,8 @@
           "village",
           "suburb",
           "locality",
-          "hamlet"
+          "hamlet",
+          "islet"
         ]
       ],
       "layout": {
