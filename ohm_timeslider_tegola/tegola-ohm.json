@@ -5848,7 +5848,7 @@
       }
     },
     {
-      "id": "points_of_interest_square_plot",
+      "id": "points_of_interest_place_areas",
       "type": "symbol",
       "source": "osm",
       "source-layer": "place_areas",
@@ -5870,7 +5870,7 @@
         ]
       },
       "paint": {
-        "text-color": "rgba(108, 132, 137, 1)",
+        "text-color": "rgba(80, 80, 80, 1)",
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 0.5,
         "text-halo-blur": 1
@@ -5995,7 +5995,7 @@
       ],
       "layout": {
         "icon-image": "{type}-12",
-        "visibility": "visible",
+        "visibility": "none",
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
