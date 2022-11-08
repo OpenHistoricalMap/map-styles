@@ -5215,25 +5215,29 @@
         },
         "visibility": "visible",
         "icon-image": "capital-18",
-        "icon-offset": {
+        "icon-offset": [
+          0,
+          0
+        ],
+        "icon-size": 1,
+        "text-offset": {
           "stops": [
             [
               6,
               [
                 0,
-                -9
+                1.2
               ]
             ],
             [
               10,
               [
                 0,
-                -10
+                1
               ]
             ]
           ]
-        },
-        "icon-size": 1
+        }
       },
       "paint": {
         "text-color": "rgba(34, 34, 34, 1)",
@@ -5281,25 +5285,29 @@
         },
         "visibility": "visible",
         "icon-image": "city-18",
-        "icon-offset": {
+        "icon-offset": [
+          0,
+          0
+        ],
+        "icon-size": 1,
+        "text-offset": {
           "stops": [
             [
               6,
               [
                 0,
-                -9
+                1.2
               ]
             ],
             [
               10,
               [
                 0,
-                -10
+                1
               ]
             ]
           ]
-        },
-        "icon-size": 1
+        }
       },
       "paint": {
         "text-color": "rgba(34, 34, 34, 1)",
