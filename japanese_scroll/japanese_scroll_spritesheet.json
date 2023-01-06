@@ -9,7 +9,7 @@
   "jp-water": {
     "height":182,
     "pixelRatio":1,
-    "width":259,
+    "width":250,
     "x":274,
     "y":0
   },
@@ -35,45 +35,5 @@
     "width":100,
     "x":274,
     "y":199
-  },
-
-  "woodblock-3-tiered-house-small": {
-    "height":30,
-    "pixelRatio":1,
-    "width":45,
-    "x":268,
-    "y":196
-  },
-  
-  "woodblock-3-tiered-house-small-2": {
-    "height":25,
-    "pixelRatio":1,
-    "width":29,
-    "x":268,
-    "y":236
-  },
-  
-  "woodblock-mapmonster-smaller": {
-    "height":85,
-    "pixelRatio":1,
-    "width":136,
-    "x":360,
-    "y":200
-  },
-  
-  "woodblock-waterdragon2": {
-    "height":193,
-    "pixelRatio":1,
-    "width":210,
-    "x":283,
-    "y":1
-  },
-
-  "woodblock-forestSmlst": {
-    "height":33,
-    "pixelRatio":1,
-    "width":38,
-    "x":316,
-    "y":196
   }
 }
