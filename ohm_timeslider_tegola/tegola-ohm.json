@@ -8367,13 +8367,39 @@
         "text-field": "{name}",
         "text-size": 9,
         "text-anchor": "center",
-        "text-offset": [
-          0,
-          0
-        ],
+        "text-offset": {
+          "stops": [
+            [
+              16,
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              20,
+              [
+                0,
+                1.8
+              ]
+            ]
+          ]
+        },
         "text-font": [
           "OpenHistorical"
-        ]
+        ],
+        "icon-size": {
+          "stops": [
+            [
+              16,
+              1
+            ],
+            [
+              20,
+              1.6
+            ]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(108, 132, 137, 1)",
@@ -8413,13 +8439,39 @@
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
-        "text-offset": [
-          0,
-          1
-        ],
+        "text-offset": {
+          "stops": [
+            [
+              16,
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              20,
+              [
+                0,
+                1.8
+              ]
+            ]
+          ]
+        },
         "text-font": [
           "OpenHistorical"
-        ]
+        ],
+        "icon-size": {
+          "stops": [
+            [
+              16,
+              1
+            ],
+            [
+              20,
+              1.6
+            ]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(108, 132, 137, 1)",
@@ -8444,13 +8496,39 @@
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
-        "text-offset": [
-          0,
-          1
-        ],
+        "text-offset": {
+          "stops": [
+            [
+              16,
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              20,
+              [
+                0,
+                1.8
+              ]
+            ]
+          ]
+        },
         "text-font": [
           "OpenHistorical"
-        ]
+        ],
+        "icon-size": {
+          "stops": [
+            [
+              16,
+              1
+            ],
+            [
+              20,
+              1.6
+            ]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(108, 132, 137, 1)",
@@ -8471,7 +8549,7 @@
       ],
       "layout": {
         "icon-image": "{type}-12",
-        "visibility": "visible",
+        "visibility": "none",
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
@@ -8495,7 +8573,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "amenity_points",
-      "minzoom": 16,
+      "minzoom": 14,
       "maxzoom": 24,
       "filter": [
         "all"
@@ -8506,13 +8584,39 @@
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
-        "text-offset": [
-          0,
-          1
-        ],
+        "text-offset": {
+          "stops": [
+            [
+              16,
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              20,
+              [
+                0,
+                1.8
+              ]
+            ]
+          ]
+        },
         "text-font": [
           "OpenHistorical"
-        ]
+        ],
+        "icon-size": {
+          "stops": [
+            [
+              16,
+              1
+            ],
+            [
+              20,
+              1.6
+            ]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(80, 80, 80, 1)",
@@ -8542,13 +8646,39 @@
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
-        "text-offset": [
-          0,
-          1
-        ],
+        "text-offset": {
+          "stops": [
+            [
+              16,
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              20,
+              [
+                0,
+                1.8
+              ]
+            ]
+          ]
+        },
         "text-font": [
           "OpenHistorical"
-        ]
+        ],
+        "icon-size": {
+          "stops": [
+            [
+              16,
+              1
+            ],
+            [
+              20,
+              1.6
+            ]
+          ]
+        }
       },
       "paint": {
         "text-color": "#505050",
@@ -8578,13 +8708,39 @@
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
-        "text-offset": [
-          0,
-          1
-        ],
+        "text-offset": {
+          "stops": [
+            [
+              16,
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              20,
+              [
+                0,
+                1.8
+              ]
+            ]
+          ]
+        },
         "text-font": [
           "OpenHistorical"
-        ]
+        ],
+        "icon-size": {
+          "stops": [
+            [
+              16,
+              1
+            ],
+            [
+              20,
+              1.6
+            ]
+          ]
+        }
       },
       "paint": {
         "text-color": "#505050",
@@ -8614,13 +8770,39 @@
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
-        "text-offset": [
-          0,
-          1
-        ],
+        "text-offset": {
+          "stops": [
+            [
+              16,
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              20,
+              [
+                0,
+                1.8
+              ]
+            ]
+          ]
+        },
         "text-font": [
           "OpenHistorical"
-        ]
+        ],
+        "icon-size": {
+          "stops": [
+            [
+              16,
+              1
+            ],
+            [
+              20,
+              1.6
+            ]
+          ]
+        }
       },
       "paint": {
         "text-color": "#505050",
@@ -8773,7 +8955,8 @@
         "text-offset": [
           0,
           0.8
-        ]
+        ],
+        "visibility": "none"
       },
       "paint": {
         "text-color": "rgba(80, 80, 80, 1)",
@@ -8786,20 +8969,46 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points",
-      "minzoom": 16,
+      "minzoom": 14,
       "layout": {
         "icon-image": "{type}-18",
-        "text-font": [
-          "OpenHistorical"
-        ],
+        "visibility": "visible",
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
-        "text-offset": [
-          0,
-          1
+        "text-offset": {
+          "stops": [
+            [
+              16,
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              20,
+              [
+                0,
+                1.8
+              ]
+            ]
+          ]
+        },
+        "text-font": [
+          "OpenHistorical"
         ],
-        "visibility": "visible"
+        "icon-size": {
+          "stops": [
+            [
+              16,
+              1
+            ],
+            [
+              20,
+              1.6
+            ]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(80, 80, 80, 1)",
