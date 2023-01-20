@@ -26,7 +26,7 @@
       "minzoom": 0,
       "maxzoom": 24,
       "filter": ["all"],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "background-color": "rgba(239, 229, 210, 1)",
         "background-pattern": "jp-water"
@@ -1952,6 +1952,13 @@
         "text-opacity": 1,
         "text-translate-anchor": "map"
       }
+    },
+    {
+      "id": "mountains",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_points",
+      "layout": {"visibility": "visible", "icon-image": "mountain"}
     }
   ],
   "id": "io6r61fxt"
