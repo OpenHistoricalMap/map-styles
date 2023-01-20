@@ -63,7 +63,21 @@
       "minzoom": 3,
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(207, 179, 125, 1)", "fill-opacity": 0.29}
+      "paint": {"fill-color": "rgba(239, 229, 210, 1)", "fill-opacity": 0.29}
+    },
+    {
+      "id": "water_areas-copy",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "water_areas",
+      "minzoom": 3,
+      "maxzoom": 24,
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(207, 179, 125, 1)",
+        "fill-opacity": 1,
+        "fill-pattern": "jp-water"
+      }
     },
     {
       "id": "water_lines_stream",
@@ -1713,7 +1727,7 @@
       "filter": ["all", ["==", "type", "city"], ["!=", "capital", "yes"]],
       "layout": {
         "text-field": "{name}",
-        "text-font": ["Eadui"],
+        "text-font": ["BernerBasisschrift"],
         "text-size": {"stops": [[6, 13], [10, 15]]},
         "visibility": "visible",
         "icon-image": "woodblock-3-tiered-house-small-2",
@@ -1740,7 +1754,7 @@
       "filter": ["all", ["==", "type", "city"], ["==", "capital", "yes"]],
       "layout": {
         "text-field": "{name}",
-        "text-font": ["Eadui"],
+        "text-font": ["BernerBasisschrift"],
         "text-size": {"stops": [[6, 16], [10, 20]]},
         "visibility": "visible",
         "icon-image": "woodblock-3-tiered-house-small",
@@ -1789,7 +1803,7 @@
       "layout": {
         "visibility": "visible",
         "text-field": "{name}",
-        "text-font": ["Eadui"],
+        "text-font": ["BernerBasisschrift"],
         "text-size": {"stops": [[6, 15], [10, 18]]},
         "text-line-height": 1,
         "text-transform": "none",
@@ -1937,7 +1951,7 @@
         "visibility": "visible",
         "text-field": "{name}",
         "text-size": {"stops": [[2, 11], [4, 15], [6, 14], [8, 16]]},
-        "text-font": ["Eadui"],
+        "text-font": ["BernerBasisschrift"],
         "symbol-placement": "point",
         "text-justify": "center",
         "symbol-avoid-edges": false,
