@@ -1755,6 +1755,7 @@
       "layout": {
         "text-field": "{name}",
         "text-font": ["BernerBasisschrift"],
+        "text-transform": "uppercase",
         "text-size": {"stops": [[6, 16], [10, 20]]},
         "visibility": "visible",
         "icon-image": "woodblock-3-tiered-house-small",
@@ -1765,8 +1766,8 @@
         "text-max-width": 10
       },
       "paint": {
-        "text-color": "rgba(19, 19, 16, 1)",
-        "text-halo-color": "rgba(241, 233, 218, 1)",
+        "text-color": "rgba(13, 13, 13, 1)",
+        "text-halo-color": "rgba(212, 186, 115, 1)",
         "text-halo-blur": 2,
         "text-halo-width": 12
       }
@@ -1782,6 +1783,7 @@
       "layout": {
         "text-field": "{name}",
         "text-font": ["Open Sans Regular"],
+        "text-transform": "uppercase",
         "text-size": {"stops": [[4, 7], [10, 16]]},
         "visibility": "none"
       },
@@ -1806,17 +1808,17 @@
         "text-font": ["BernerBasisschrift"],
         "text-size": {"stops": [[6, 15], [10, 18]]},
         "text-line-height": 1,
-        "text-transform": "none",
+        "text-transform": "uppercase",
         "symbol-spacing": 25,
         "symbol-avoid-edges": true,
         "symbol-placement": "point",
         "text-letter-spacing": 0.1
       },
       "paint": {
-        "text-color": "rgba(146, 143, 129, 1)",
+        "text-color": "rgba(0, 0, 0, 1)",
         "text-halo-width": 12,
         "text-halo-blur": 2,
-        "text-halo-color": "rgba(241, 233, 218, 1)"
+        "text-halo-color": "rgba(222, 115, 115, 1)"
       }
     },
     {
@@ -1956,12 +1958,14 @@
         "text-justify": "center",
         "symbol-avoid-edges": false,
         "text-transform": "uppercase",
-        "text-letter-spacing": 0.05
+        "text-letter-spacing": 0.02,
+        "text-max-width": 7,
+        "text-line-height": 0.7
       },
       "paint": {
-        "text-color": "rgba(113, 110, 99, 1)",
+        "text-color": "rgba(18, 17, 17, 1)",
         "text-halo-width": 13,
-        "text-halo-color": "rgba(241, 233, 218, 1)",
+        "text-halo-color": "rgba(228, 114, 114, 1)",
         "text-halo-blur": 2,
         "text-opacity": 1,
         "text-translate-anchor": "map"
