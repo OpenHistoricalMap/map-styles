@@ -1728,6 +1728,7 @@
       "layout": {
         "text-field": "{name}",
         "text-font": ["BernerBasisschrift"],
+        "text-transform": "uppercase",
         "text-size": {"stops": [[6, 13], [10, 15]]},
         "visibility": "visible",
         "icon-image": "woodblock-3-tiered-house-small-2",
@@ -1738,8 +1739,8 @@
         "text-max-width": 10
       },
       "paint": {
-        "text-color": "rgba(19, 19, 16, 1)",
-        "text-halo-color": "rgba(241, 233, 218, 1)",
+        "text-color": "rgba(13, 13, 13, 1)",
+        "text-halo-color": "rgba(212, 186, 115, 1)",
         "text-halo-blur": 2,
         "text-halo-width": 12
       }
