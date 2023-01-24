@@ -66,7 +66,7 @@
       "paint": {"fill-color": "rgba(239, 229, 210, 1)", "fill-opacity": 0.29}
     },
     {
-      "id": "water_areas-copy",
+      "id": "water_areas-pattern",
       "type": "fill",
       "source": "osm",
       "source-layer": "water_areas",
@@ -1654,70 +1654,6 @@
       "paint": {"line-color": "rgba(255, 255, 255, 1)", "line-width": 3}
     },
     {
-      "id": "landuse_areaslabels_park",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "landuse_areas",
-      "minzoom": 12,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        [
-          "in",
-          "type",
-          "park",
-          "sports_centre",
-          "stadium",
-          "grass",
-          "grassland",
-          "garden",
-          "village_green",
-          "recreation_ground",
-          "picnic_site",
-          "camp_site",
-          "playground"
-        ],
-        [">", "area", 12000]
-      ],
-      "layout": {
-        "text-field": "",
-        "text-size": {"stops": [[14, 11], [20, 14]]},
-        "visibility": "visible",
-        "icon-text-fit": "none",
-        "text-allow-overlap": false,
-        "text-ignore-placement": false,
-        "text-font": ["Open Sans Regular"],
-        "icon-image": "woodblock-forestSmlst"
-      },
-      "paint": {
-        "text-color": "rgba(122, 143, 61, 1)",
-        "text-halo-color": "rgba(228, 235, 209, 1)",
-        "text-halo-width": 1,
-        "icon-translate-anchor": "map"
-      }
-    },
-    {
-      "id": "landuse_areaslabels_forest",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "landuse_areas",
-      "minzoom": 7,
-      "maxzoom": 24,
-      "filter": ["all", ["in", "type", "forest", "wood", "nature_reserve"]],
-      "layout": {
-        "text-field": "",
-        "text-size": 11,
-        "visibility": "visible",
-        "text-font": ["Open Sans Regular"],
-        "icon-image": "woodblock-forestSmlst"
-      },
-      "paint": {
-        "text-color": "rgba(95, 107, 71, 1)",
-        "text-halo-color": "rgba(201, 213, 190, 1)",
-        "text-halo-width": 1
-      }
-    },
-    {
       "id": "city_labels_z6",
       "type": "symbol",
       "source": "osm",
@@ -1953,7 +1889,7 @@
       "layout": {
         "visibility": "visible",
         "text-field": "{name}",
-        "text-size": {"stops": [[2, 11], [4, 15], [6, 14], [8, 16]]},
+        "text-size": {"stops": [[1, 11], [4, 15], [6, 14], [8, 16]]},
         "text-font": ["BernerBasisschrift"],
         "symbol-placement": "point",
         "text-justify": "center",
@@ -1961,7 +1897,7 @@
         "text-transform": "uppercase",
         "text-letter-spacing": 0.02,
         "text-max-width": 7,
-        "text-line-height": 0.7
+        "text-line-height": 0.9
       },
       "paint": {
         "text-color": "rgba(18, 17, 17, 1)",
