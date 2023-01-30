@@ -1,11 +1,1 @@
-<svg id="svg5369" width="18" height="18" version="1.1" xmlns="http://www.w3.org/2000/svg">
- <g id="layer1" transform="translate(-36 -920.36)">
-  <g id="airport-18" transform="translate(-72 -130)">
-   <g id="g21737">
-    <path id="path14268" d="m124.5 1060.4v1l-5.5-1v3l2 1.2222v0.7778h-6v-0.7778l2-1.2222v-3l-5.5 1v-1l5.5-3v-3c0-0.7777 0.22222-2 1-2 0.77777 0 1 1.2223 1 2v3z" color="#000000" fill="none" opacity=".3" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-    <path id="path7712-0" d="m124.5 1060.4v1l-5.5-1v3l2 1.2222v0.7778h-6v-0.7778l2-1.2222v-3l-5.5 1v-1l5.5-3v-3c0-0.7777 0.22222-2 1-2 0.77777 0 1 1.2223 1 2v3z" fill="#747474"/>
-   </g>
-   <rect id="rect22077-6" x="108" y="1050.4" width="18" height="18" color="#000000" fill="none" opacity=".5"/>
-  </g>
- </g>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.6571 17.6571"><g id="svg5369"><g id="layer1"><g id="airport-18"><g id="g21737"><path id="path14268" d="m16.6571,10.6351v1.2044l-6.6241-1.2044v3.6132l2.4088,1.472v.9368h-7.2263v-.9368l2.4088-1.472v-3.6132l-6.6241,1.2044v-1.2044l6.6241-3.6132v-3.6132c0-.9367.2676-2.4088,1.2044-2.4088s1.2044,1.4721,1.2044,2.4088v3.6132l6.6241,3.6132Z" fill="none" isolation="isolate" opacity=".3" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path id="path7712-0" d="m16.6571,10.6351v1.2044l-6.6241-1.2044v3.6132l2.4088,1.472v.9368h-7.2263v-.9368l2.4088-1.472v-3.6132l-6.6241,1.2044v-1.2044l6.6241-3.6132v-3.6132c0-.9367.2676-2.4088,1.2044-2.4088s1.2044,1.4721,1.2044,2.4088v3.6132l6.6241,3.6132Z" fill="#747474"/></g></g></g></g></svg>

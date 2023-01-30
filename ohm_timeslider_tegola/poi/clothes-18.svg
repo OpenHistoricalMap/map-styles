@@ -1,4 +1,1 @@
-<svg id="svg6" width="18" height="18" version="1.1" xmlns="http://www.w3.org/2000/svg">
- <path id="path2" d="m5.0625 3-4.0625 2 1 4 3-2v8h8v-8l3 2 1-4-3.9375-2h-1.125c-0.01609 1.6976-1.3304 3.0625-2.9375 3.0625-1.6071 0-2.9214-1.3649-2.9375-3.0625z" fill="#fff" opacity=".3" stroke="#fff" stroke-linejoin="round" stroke-width="2"/>
- <path id="path4" d="m5.0625 3-4.0625 2 1 4 3-2v8h8v-8l3 2 1-4-3.9375-2h-1.125c-0.01609 1.6976-1.3304 3.0625-2.9375 3.0625s-2.9214-1.3649-2.9375-3.0625z" fill="#747474"/>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14"><g id="svg6"><path id="path2" d="m5.0625,1L1,3l1,4,3-2v8h8V5l3,2,1-4-3.9375-2h-1.125c-.0161,1.6976-1.3304,3.0625-2.9375,3.0625s-2.9214-1.3649-2.9375-3.0625h-1Z" fill="#fff" isolation="isolate" opacity=".3" stroke="#fff" stroke-linejoin="round" stroke-width="2"/><path id="path4" d="m5.0625,1L1,3l1,4,3-2v8h8V5l3,2,1-4-3.9375-2h-1.125c-.0161,1.6976-1.3304,3.0625-2.9375,3.0625s-2.9214-1.3649-2.9375-3.0625h-1Z" fill="#747474"/></g></svg>
