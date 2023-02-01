@@ -10,6 +10,14 @@
       "tiles": [
         "https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
       ]
+    },
+    "ohm_landcover_hillshade": {
+      "type": "raster",
+      "tiles": [
+        "https://storage.googleapis.com/ee-layers/ohm_hs_lc/{z}/{x}/{y}.png"
+      ],
+      "minzoom": 0,
+      "maxzoom": 8
     }
   },
   "sprite": "https://openhistoricalmap.github.io/map-styles/ohm_timeslider_tegola/ohm_spritezero_spritesheet",
@@ -42,6 +50,33 @@
       },
       "paint": {
         "fill-color": "rgba(248, 247, 242, 1)"
+      }
+    },
+    {
+      "id": "ohm_landcover_hillshade",
+      "type": "raster",
+      "source": "ohm_landcover_hillshade",
+      "maxzoom": 24,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "raster-opacity": {
+          "stops": [
+            [
+              0,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              8,
+              0
+            ]
+          ]
+        }
       }
     },
     {
@@ -1746,15 +1781,29 @@
       },
       "paint": {
         "line-color": "rgba(179, 179, 179, 1)",
-        "line-dasharray": [
-          2,
-          2
-        ],
+        "line-dasharray": {
+          "stops": [
+            [
+              6,
+              [
+                1,
+                1
+              ]
+            ],
+            [
+              10,
+              [
+                2,
+                2
+              ]
+            ]
+          ]
+        },
         "line-width": {
           "stops": [
             [
               6,
-              0.5
+              0.25
             ],
             [
               10,
@@ -1790,17 +1839,20 @@
       "paint": {
         "line-color": "rgba(202, 196, 196, 1)",
         "line-dasharray": [
-          3,
-          2
+          3
         ],
         "line-width": {
           "stops": [
             [
               2,
-              0.25
+              0.1
             ],
             [
-              14,
+              12,
+              1
+            ],
+            [
+              15,
               2
             ]
           ]
@@ -4269,20 +4321,26 @@
       },
       "paint": {
         "line-color": "rgba(153, 153, 153, 1)",
-        "line-width": [
-          "interpolate",
-          [
-            "exponential",
-            1.5
-          ],
-          [
-            "zoom"
-          ],
-          11,
-          0.5,
-          18,
-          4
-        ],
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1.25
+            ],
+            [
+              20,
+              2.25
+            ]
+          ]
+        },
         "line-dasharray": [
           4,
           1
@@ -5460,11 +5518,6 @@
           "residential",
           "service",
           "unclassified"
-        ],
-        [
-          "==",
-          "name",
-          ""
         ]
       ],
       "layout": {
@@ -6160,22 +6213,18 @@
               3
             ],
             [
-              8,
-              4
-            ],
-            [
               9,
-              5
+              3
             ],
             [
               10,
-              6
+              5
             ]
           ]
         },
         "line-dasharray": [
           0.2,
-          2
+          1
         ]
       }
     },
@@ -7080,9 +7129,9 @@
         }
       },
       "paint": {
-        "text-color": "rgba(68, 136, 136, 1)",
+        "text-color": "rgba(41, 84, 84, 1)",
         "text-halo-width": 1,
-        "text-halo-color": "rgba(178, 220, 220, 1)"
+        "text-halo-color": "rgba(209, 230, 230, 1)"
       }
     },
     {
@@ -7345,8 +7394,30 @@
         "visibility": "visible"
       },
       "paint": {
-        "text-color": "rgba(109, 146, 146, 1)",
-        "text-halo-color": "rgba(233, 244, 244, 1)",
+        "text-color": {
+          "stops": [
+            [
+              10,
+              "rgba(83, 147, 147, 1)"
+            ],
+            [
+              15,
+              "rgba(41, 84, 84, 1)"
+            ]
+          ]
+        },
+        "text-halo-color": {
+          "stops": [
+            [
+              10,
+              "rgba(255, 255, 255, 1)"
+            ],
+            [
+              12,
+              "rgba(207, 230, 230, 1)"
+            ]
+          ]
+        },
         "text-halo-width": 1
       }
     },
@@ -7403,7 +7474,7 @@
         ]
       },
       "paint": {
-        "text-color": "rgba(122, 143, 61, 1)",
+        "text-color": "rgba(85, 104, 42, 1)",
         "text-halo-color": "rgba(228, 235, 209, 1)",
         "text-halo-width": 1,
         "icon-translate-anchor": "map"
@@ -7439,7 +7510,7 @@
       },
       "paint": {
         "text-color": "rgba(107, 101, 71, 1)",
-        "text-halo-color": "rgba(213, 211, 190, 1)",
+        "text-halo-color": "rgba(255, 254, 249, 1)",
         "text-halo-width": 1
       }
     },
@@ -7578,7 +7649,7 @@
           "stops": [
             [
               6,
-              6
+              7
             ],
             [
               10,
@@ -7627,7 +7698,7 @@
             ],
             [
               10,
-              14
+              15
             ],
             [
               16,
@@ -7673,11 +7744,11 @@
           "stops": [
             [
               6,
-              8
+              12
             ],
             [
               10,
-              14
+              15
             ]
           ]
         },
@@ -7688,24 +7759,11 @@
           0
         ],
         "icon-size": 1,
-        "text-offset": {
-          "stops": [
-            [
-              6,
-              [
-                0,
-                1.2
-              ]
-            ],
-            [
-              10,
-              [
-                0,
-                1
-              ]
-            ]
-          ]
-        }
+        "text-offset": [
+          0,
+          0.25
+        ],
+        "text-anchor": "top"
       },
       "paint": {
         "text-color": "rgba(34, 34, 34, 1)",
@@ -7743,11 +7801,11 @@
           "stops": [
             [
               6,
-              8
+              12
             ],
             [
               10,
-              14
+              15
             ]
           ]
         },
@@ -7758,24 +7816,11 @@
           0
         ],
         "icon-size": 1,
-        "text-offset": {
-          "stops": [
-            [
-              6,
-              [
-                0,
-                1.2
-              ]
-            ],
-            [
-              10,
-              [
-                0,
-                1
-              ]
-            ]
-          ]
-        }
+        "text-offset": [
+          0,
+          0.25
+        ],
+        "text-anchor": "top"
       },
       "paint": {
         "text-color": "rgba(34, 34, 34, 1)",
@@ -7850,12 +7895,16 @@
         "text-size": {
           "stops": [
             [
+              3,
+              8
+            ],
+            [
               6,
-              10
+              13
             ],
             [
               10,
-              14
+              17
             ]
           ]
         },
@@ -7869,7 +7918,9 @@
         "text-color": "rgba(101, 108, 108, 1)",
         "text-halo-width": 1,
         "text-halo-blur": 2,
-        "text-halo-color": "rgba(220, 231, 232, 1)"
+        "text-halo-color": "rgba(220, 231, 232, 1)",
+        "text-translate-anchor": "map",
+        "icon-translate-anchor": "map"
       }
     },
     {
@@ -8129,16 +8180,16 @@
         "text-size": {
           "stops": [
             [
-              4,
+              3,
               12
             ],
             [
               6,
-              14
+              15
             ],
             [
-              8,
-              16
+              10,
+              18
             ]
           ]
         },
@@ -8330,7 +8381,14 @@
       "source-layer": "place_areas",
       "minzoom": 16,
       "filter": [
-        "all"
+        "all",
+        [
+          "!in",
+          "type",
+          "country",
+          "state",
+          "territory"
+        ]
       ],
       "layout": {
         "visibility": "visible",
@@ -8365,47 +8423,45 @@
         "icon-image": "{tourism}-18",
         "visibility": "visible",
         "text-field": "{name}",
-        "text-size": 9,
-        "text-anchor": "center",
-        "text-offset": {
+        "text-size": {
           "stops": [
             [
               16,
-              [
-                0,
-                1
-              ]
+              10
             ],
             [
               20,
-              [
-                0,
-                1.8
-              ]
+              12
             ]
           ]
         },
+        "text-anchor": "center",
+        "text-offset": [
+          0,
+          0
+        ],
         "text-font": [
           "OpenHistorical"
         ],
         "icon-size": {
           "stops": [
             [
-              16,
-              1
+              15,
+              0.7
             ],
             [
               20,
-              1.6
+              1.4
             ]
           ]
         }
       },
       "paint": {
-        "text-color": "rgba(108, 132, 137, 1)",
+        "text-color": "rgba(80, 80, 80, 1)",
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 0.5,
-        "text-halo-blur": 1
+        "text-halo-blur": 1,
+        "text-opacity": 1
       }
     },
     {
@@ -8439,45 +8495,20 @@
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
-        "text-offset": {
-          "stops": [
-            [
-              16,
-              [
-                0,
-                1
-              ]
-            ],
-            [
-              20,
-              [
-                0,
-                1.8
-              ]
-            ]
-          ]
-        },
+        "text-offset": [
+          0,
+          1
+        ],
         "text-font": [
           "OpenHistorical"
-        ],
-        "icon-size": {
-          "stops": [
-            [
-              16,
-              1
-            ],
-            [
-              20,
-              1.6
-            ]
-          ]
-        }
+        ]
       },
       "paint": {
-        "text-color": "rgba(108, 132, 137, 1)",
+        "text-color": "#505050",
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 0.5,
-        "text-halo-blur": 1
+        "text-halo-blur": 1,
+        "text-opacity": 0
       }
     },
     {
@@ -8494,47 +8525,60 @@
         "icon-image": "{type}-18",
         "visibility": "visible",
         "text-field": "{name}",
-        "text-size": 8,
-        "text-anchor": "top",
-        "text-offset": {
+        "text-size": {
           "stops": [
             [
+              15.99,
+              0
+            ],
+            [
               16,
-              [
-                0,
-                1
-              ]
+              10
             ],
             [
               20,
-              [
-                0,
-                1.8
-              ]
+              12
             ]
           ]
         },
+        "text-anchor": "top",
+        "text-offset": [
+          0,
+          1
+        ],
         "text-font": [
           "OpenHistorical"
         ],
         "icon-size": {
           "stops": [
             [
-              16,
-              1
+              15,
+              0.7
             ],
             [
               20,
-              1.6
+              1.4
             ]
           ]
         }
       },
       "paint": {
-        "text-color": "rgba(108, 132, 137, 1)",
+        "text-color": "rgba(80, 80, 80, 1)",
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 0.5,
-        "text-halo-blur": 1
+        "text-halo-blur": 1,
+        "text-opacity": {
+          "stops": [
+            [
+              16.99,
+              0
+            ],
+            [
+              17,
+              1
+            ]
+          ]
+        }
       }
     },
     {
@@ -8548,7 +8592,7 @@
         "all"
       ],
       "layout": {
-        "icon-image": "{type}-12",
+        "icon-image": "{type}-18",
         "visibility": "none",
         "text-field": "{name}",
         "text-size": 8,
@@ -8573,7 +8617,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "amenity_points",
-      "minzoom": 14,
+      "minzoom": 15,
       "maxzoom": 24,
       "filter": [
         "all"
@@ -8582,47 +8626,61 @@
         "icon-image": "{type}-18",
         "visibility": "visible",
         "text-field": "{name}",
-        "text-size": 8,
-        "text-anchor": "top",
-        "text-offset": {
+        "text-size": {
           "stops": [
             [
+              15.99,
+              0
+            ],
+            [
               16,
-              [
-                0,
-                1
-              ]
+              10
             ],
             [
               20,
-              [
-                0,
-                1.8
-              ]
+              12
             ]
           ]
         },
+        "text-anchor": "top",
+        "text-offset": [
+          0,
+          1
+        ],
         "text-font": [
           "OpenHistorical"
         ],
         "icon-size": {
           "stops": [
             [
-              16,
-              1
+              15,
+              0.7
             ],
             [
               20,
-              1.6
+              1.4
             ]
           ]
-        }
+        },
+        "text-line-height": 1.2
       },
       "paint": {
         "text-color": "rgba(80, 80, 80, 1)",
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 0.5,
-        "text-halo-blur": 1
+        "text-halo-blur": 1,
+        "text-opacity": {
+          "stops": [
+            [
+              16.9,
+              0
+            ],
+            [
+              17,
+              1
+            ]
+          ]
+        }
       }
     },
     {
@@ -8630,7 +8688,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "other_points",
-      "minzoom": 14,
+      "minzoom": 15,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -8644,47 +8702,68 @@
         "icon-image": "{type}-18",
         "visibility": "visible",
         "text-field": "{name}",
-        "text-size": 8,
-        "text-anchor": "top",
-        "text-offset": {
+        "text-size": {
           "stops": [
             [
+              15.99,
+              0
+            ],
+            [
               16,
-              [
-                0,
-                1
-              ]
+              10
             ],
             [
               20,
-              [
-                0,
-                1.8
-              ]
+              12
             ]
           ]
         },
+        "text-offset": [
+          0,
+          1
+        ],
         "text-font": [
           "OpenHistorical"
         ],
         "icon-size": {
           "stops": [
             [
-              16,
-              1
+              15,
+              0.7
             ],
             [
               20,
-              1.6
+              1.4
             ]
           ]
-        }
+        },
+        "icon-keep-upright": false,
+        "text-anchor": "top",
+        "icon-text-fit": "none",
+        "icon-optional": false,
+        "icon-ignore-placement": false,
+        "icon-allow-overlap": false,
+        "text-max-width": 10
       },
       "paint": {
         "text-color": "#505050",
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 0.5,
-        "text-halo-blur": 1
+        "text-halo-blur": 1,
+        "text-translate-anchor": "viewport",
+        "icon-translate-anchor": "viewport",
+        "text-opacity": {
+          "stops": [
+            [
+              16.99,
+              0
+            ],
+            [
+              17,
+              1
+            ]
+          ]
+        }
       }
     },
     {
@@ -8706,38 +8785,39 @@
         "icon-image": "{site_type}-18",
         "visibility": "visible",
         "text-field": "{name}",
-        "text-size": 8,
-        "text-anchor": "top",
-        "text-offset": {
+        "text-size": {
           "stops": [
             [
+              15.99,
+              0
+            ],
+            [
               16,
-              [
-                0,
-                1
-              ]
+              10
             ],
             [
               20,
-              [
-                0,
-                1.8
-              ]
+              12
             ]
           ]
         },
+        "text-anchor": "top",
+        "text-offset": [
+          0,
+          1
+        ],
         "text-font": [
           "OpenHistorical"
         ],
         "icon-size": {
           "stops": [
             [
-              16,
-              1
+              15,
+              0.7
             ],
             [
               20,
-              1.6
+              1.4
             ]
           ]
         }
@@ -8746,7 +8826,19 @@
         "text-color": "#505050",
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 0.5,
-        "text-halo-blur": 1
+        "text-halo-blur": 1,
+        "text-opacity": {
+          "stops": [
+            [
+              16.99,
+              0
+            ],
+            [
+              17,
+              1
+            ]
+          ]
+        }
       }
     },
     {
@@ -8754,7 +8846,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "other_points",
-      "minzoom": 14,
+      "minzoom": 15,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -8768,38 +8860,39 @@
         "icon-image": "{artwork_type}-18",
         "visibility": "visible",
         "text-field": "{name}",
-        "text-size": 8,
-        "text-anchor": "top",
-        "text-offset": {
+        "text-size": {
           "stops": [
             [
+              15.99,
+              0
+            ],
+            [
               16,
-              [
-                0,
-                1
-              ]
+              10
             ],
             [
               20,
-              [
-                0,
-                1.8
-              ]
+              12
             ]
           ]
         },
+        "text-anchor": "top",
+        "text-offset": [
+          0,
+          1
+        ],
         "text-font": [
           "OpenHistorical"
         ],
         "icon-size": {
           "stops": [
             [
-              16,
-              1
+              15,
+              0.7
             ],
             [
               20,
-              1.6
+              1.4
             ]
           ]
         }
@@ -8808,7 +8901,19 @@
         "text-color": "#505050",
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 0.5,
-        "text-halo-blur": 1
+        "text-halo-blur": 1,
+        "text-opacity": {
+          "stops": [
+            [
+              16.99,
+              0
+            ],
+            [
+              17,
+              1
+            ]
+          ]
+        }
       }
     },
     {
@@ -8870,7 +8975,22 @@
         "icon-image": "{type}-18",
         "visibility": "visible",
         "text-field": "{name}",
-        "text-size": 8,
+        "text-size": {
+          "stops": [
+            [
+              15.99,
+              0
+            ],
+            [
+              16,
+              8
+            ],
+            [
+              20,
+              10
+            ]
+          ]
+        },
         "text-anchor": "top",
         "text-offset": [
           0,
@@ -8878,14 +8998,38 @@
         ],
         "text-font": [
           "OpenHistorical"
-        ]
+        ],
+        "icon-size": {
+          "stops": [
+            [
+              16,
+              1
+            ],
+            [
+              20,
+              1.4
+            ]
+          ]
+        }
       },
       "paint": {
         "icon-color": "#000000",
         "text-color": "rgba(80, 80, 80, 1)",
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 0.5,
-        "text-halo-blur": 1
+        "text-halo-blur": 1,
+        "text-opacity": {
+          "stops": [
+            [
+              16.99,
+              0
+            ],
+            [
+              17,
+              1
+            ]
+          ]
+        }
       }
     },
     {
@@ -8912,7 +9056,8 @@
         "icon-image": "place_of_worship-18",
         "text-font": [
           "OpenHistorical"
-        ]
+        ],
+        "visibility": "visible"
       }
     },
     {
@@ -8927,7 +9072,8 @@
         "icon-image": "{religion}-18",
         "text-font": [
           "OpenHistorical"
-        ]
+        ],
+        "visibility": "visible"
       }
     },
     {
@@ -8955,13 +9101,13 @@
         "text-offset": [
           0,
           0.8
-        ],
-        "visibility": "none"
+        ]
       },
       "paint": {
         "text-color": "rgba(80, 80, 80, 1)",
         "text-halo-color": "rgba(255, 255, 255, 1)",
-        "text-halo-width": 0.5
+        "text-halo-width": 0.5,
+        "text-opacity": 1
       }
     },
     {
@@ -8969,43 +9115,44 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points",
-      "minzoom": 14,
+      "minzoom": 16,
       "layout": {
         "icon-image": "{type}-18",
-        "visibility": "visible",
-        "text-field": "{name}",
-        "text-size": 8,
-        "text-anchor": "top",
-        "text-offset": {
-          "stops": [
-            [
-              16,
-              [
-                0,
-                1
-              ]
-            ],
-            [
-              20,
-              [
-                0,
-                1.8
-              ]
-            ]
-          ]
-        },
         "text-font": [
           "OpenHistorical"
         ],
-        "icon-size": {
+        "text-field": "{name}",
+        "text-size": {
           "stops": [
             [
+              6,
+              8
+            ],
+            [
               16,
-              1
+              10
             ],
             [
               20,
-              1.6
+              12
+            ]
+          ]
+        },
+        "text-anchor": "top",
+        "text-offset": [
+          0,
+          1
+        ],
+        "visibility": "visible",
+        "icon-size": {
+          "stops": [
+            [
+              15,
+              0.7
+            ],
+            [
+              20,
+              1.4
             ]
           ]
         }
@@ -9036,7 +9183,8 @@
         "icon-image": "{type}-18",
         "text-font": [
           "OpenHistorical"
-        ]
+        ],
+        "visibility": "visible"
       }
     },
     {
@@ -9057,7 +9205,8 @@
         "icon-image": "acra-18",
         "text-font": [
           "OpenHistorical"
-        ]
+        ],
+        "visibility": "visible"
       }
     },
     {
@@ -9102,7 +9251,8 @@
         "icon-image": "oxfam-18",
         "text-font": [
           "OpenHistorical"
-        ]
+        ],
+        "visibility": "visible"
       }
     },
     {
