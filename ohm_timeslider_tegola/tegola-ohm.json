@@ -14,7 +14,7 @@
     "ohm_landcover_hillshade": {
       "type": "raster",
       "tiles": [
-        "https://storage.googleapis.com/ee-layers/ohm_hs_lc/{z}/{x}/{y}.png"
+        "https://storage.googleapis.com/ee-layers/ohm_hs_lclu/{z}/{x}/{y}.png"
       ],
       "minzoom": 0,
       "maxzoom": 8,
