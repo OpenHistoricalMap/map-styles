@@ -17,7 +17,8 @@
         "https://storage.googleapis.com/ee-layers/ohm_hs_lc/{z}/{x}/{y}.png"
       ],
       "minzoom": 0,
-      "maxzoom": 8
+      "maxzoom": 8,
+      "tileSize": 256
     }
   },
   "sprite": "https://openhistoricalmap.github.io/map-styles/ohm_timeslider_tegola/ohm_spritezero_spritesheet",
