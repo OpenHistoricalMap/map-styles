@@ -6,6 +6,14 @@
     "osm": {
       "type": "vector",
       "tiles": ["https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
+    },
+    "qoqrpm0jb": {
+      "type": "vector",
+      "url": "https://localhost:3000/tilejson.json"
+    },
+    "08u5kkm1b": {
+      "type": "vector",
+      "url": "https://localhost:3000/tilejson.json"
     }
   },
   "sprite": "https://openhistoricalmap.github.io/map-styles/japanese_scroll/jp_spritesheet_template",
@@ -150,6 +158,42 @@
         "line-color": "rgba(207, 179, 125, 1)",
         "line-width": {"stops": [[13, 0.5], [15, 0.8], [20, 2]]},
         "line-opacity": 0.29
+      }
+    },
+    {
+      "id": "state_lines_admin4",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "land_ohm",
+      "minzoom": 5,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        ["==", "admin_level", 4],
+        ["==", "type", "administrative"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(202, 196, 196, 1)",
+        "line-dasharray": [3, 2],
+        "line-width": 3,
+        "line-pattern": "adminbound"
+      }
+    },
+    {
+      "id": "admin_countrylines_z10",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "land_ohm",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "filter": ["all", ["in", "admin_level", 1, 2]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(157, 169, 174, 1)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 0, 4, 8, 6],
+        "line-pattern": "adminbound",
+        "line-opacity": 1
       }
     },
     {
@@ -1620,22 +1664,6 @@
       }
     },
     {
-      "id": "admin_countrylines_z10",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "land_ohm",
-      "minzoom": 0,
-      "maxzoom": 20,
-      "filter": ["all", ["in", "admin_level", 1, 2]],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "line-color": "rgba(157, 169, 174, 1)",
-        "line-width": ["interpolate", ["linear"], ["zoom"], 0, 4, 8, 6],
-        "line-pattern": "adminbound",
-        "line-opacity": 1
-      }
-    },
-    {
       "id": "man_made_bridge_area",
       "type": "fill",
       "source": "osm",
@@ -1676,7 +1704,7 @@
       },
       "paint": {
         "text-color": "rgba(13, 13, 13, 1)",
-        "text-halo-color": "rgba(212, 186, 115, 1)",
+        "text-halo-color": "rgba(222, 191, 111, 1)",
         "text-halo-blur": 2,
         "text-halo-width": 12
       }
@@ -1700,11 +1728,12 @@
         "icon-size": 1,
         "icon-anchor": "bottom",
         "text-letter-spacing": 0.1,
-        "text-max-width": 10
+        "text-max-width": 7,
+        "text-line-height": 0.8
       },
       "paint": {
         "text-color": "rgba(13, 13, 13, 1)",
-        "text-halo-color": "rgba(212, 186, 115, 1)",
+        "text-halo-color": "rgba(226, 189, 93, 1)",
         "text-halo-blur": 2,
         "text-halo-width": 12
       }
@@ -1736,7 +1765,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "place_points",
-      "minzoom": 4,
+      "minzoom": 5,
       "maxzoom": 20,
       "filter": ["all", ["in", "type", "state", "territory"]],
       "layout": {
@@ -1744,12 +1773,13 @@
         "text-field": "{name}",
         "text-font": ["BernerBasisschrift"],
         "text-size": {"stops": [[6, 15], [10, 18]]},
-        "text-line-height": 1,
+        "text-line-height": 0.8,
         "text-transform": "uppercase",
         "symbol-spacing": 25,
         "symbol-avoid-edges": true,
         "symbol-placement": "point",
-        "text-letter-spacing": 0.1
+        "text-letter-spacing": 0.1,
+        "text-max-width": 7
       },
       "paint": {
         "text-color": "rgba(0, 0, 0, 1)",
@@ -1884,25 +1914,25 @@
       "source": "osm",
       "source-layer": "place_points",
       "minzoom": 0,
-      "maxzoom": 14,
+      "maxzoom": 10,
       "filter": ["all", ["==", "type", "country"]],
       "layout": {
         "visibility": "visible",
         "text-field": "{name}",
-        "text-size": {"stops": [[1, 11], [4, 15], [6, 14], [8, 16]]},
+        "text-size": {"stops": [[4, 16], [6, 15]]},
         "text-font": ["BernerBasisschrift"],
         "symbol-placement": "point",
         "text-justify": "center",
         "symbol-avoid-edges": false,
         "text-transform": "uppercase",
-        "text-letter-spacing": 0.02,
+        "text-letter-spacing": 0.07,
         "text-max-width": 7,
-        "text-line-height": 0.9
+        "text-line-height": 0.8
       },
       "paint": {
-        "text-color": "rgba(18, 17, 17, 1)",
-        "text-halo-width": 13,
-        "text-halo-color": "rgba(228, 114, 114, 1)",
+        "text-color": "rgba(14, 5, 5, 1)",
+        "text-halo-width": 15,
+        "text-halo-color": "rgba(236, 106, 106, 1)",
         "text-halo-blur": 2,
         "text-opacity": 1,
         "text-translate-anchor": "map"
@@ -1913,6 +1943,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points",
+      "minzoom": 7,
       "layout": {"visibility": "visible", "icon-image": "mountain"}
     }
   ],
