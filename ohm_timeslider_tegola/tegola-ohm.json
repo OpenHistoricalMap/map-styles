@@ -54,6 +54,28 @@
       }
     },
     {
+      "id": "landuse_areas_earth",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 0,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "earth"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(248, 247, 242, 1)"
+      }
+    },
+    {
       "id": "ohm_landcover_hillshade",
       "type": "raster",
       "source": "ohm_landcover_hillshade",
