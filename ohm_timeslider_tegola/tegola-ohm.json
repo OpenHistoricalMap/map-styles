@@ -1777,155 +1777,6 @@
       }
     },
     {
-      "id": "city_county_lines_admin7_8",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "land_ohm",
-      "minzoom": 10,
-      "maxzoom": 20,
-      "filter": [
-        "all",
-        [
-          "in",
-          "admin_level",
-          7,
-          8
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "rgba(210, 210, 210, 1)",
-        "line-dasharray": [
-          2,
-          2
-        ],
-        "line-width": {
-          "stops": [
-            [
-              10,
-              1
-            ],
-            [
-              12,
-              1.5
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "admin_admin5_6",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "land_ohm",
-      "minzoom": 7,
-      "maxzoom": 20,
-      "filter": [
-        "all",
-        [
-          "in",
-          "admin_level",
-          5,
-          6
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "rgba(179, 179, 179, 1)",
-        "line-dasharray": {
-          "stops": [
-            [
-              6,
-              [
-                1,
-                1
-              ]
-            ],
-            [
-              10,
-              [
-                2,
-                2
-              ]
-            ]
-          ]
-        },
-        "line-width": {
-          "stops": [
-            [
-              6,
-              0.25
-            ],
-            [
-              10,
-              1.5
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "state_lines_admin4",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "land_ohm",
-      "minzoom": 3,
-      "maxzoom": 20,
-      "filter": [
-        "all",
-        [
-          "==",
-          "admin_level",
-          4
-        ],
-        [
-          "==",
-          "type",
-          "administrative"
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": {
-          "stops": [
-            [
-              4,
-              "rgba(169, 163, 163, 1)"
-            ],
-            [
-              7,
-              "rgba(200, 198, 198, 1)"
-            ]
-          ]
-        },
-        "line-dasharray": [
-          3
-        ],
-        "line-width": {
-          "stops": [
-            [
-              2,
-              0.2
-            ],
-            [
-              12,
-              1
-            ],
-            [
-              15,
-              2
-            ]
-          ]
-        }
-      }
-    },
-    {
       "id": "man_made_bridge_area",
       "type": "fill",
       "source": "osm",
@@ -7027,6 +6878,206 @@
       }
     },
     {
+      "id": "city_county_lines_admin7_8",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "land_ohm",
+      "minzoom": 10,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "in",
+          "admin_level",
+          7,
+          8
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(210, 210, 210, 1)",
+        "line-dasharray": [
+          2,
+          2
+        ],
+        "line-width": {
+          "stops": [
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              1.5
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "admin_admin5_6",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "land_ohm",
+      "minzoom": 7,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "in",
+          "admin_level",
+          5,
+          6
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(179, 179, 179, 1)",
+        "line-dasharray": {
+          "stops": [
+            [
+              6,
+              [
+                1,
+                1
+              ]
+            ],
+            [
+              10,
+              [
+                2,
+                2
+              ]
+            ]
+          ]
+        },
+        "line-width": {
+          "stops": [
+            [
+              6,
+              0.25
+            ],
+            [
+              10,
+              1.5
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "state_lines_admin4-case",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "land_ohm",
+      "minzoom": 3,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "==",
+          "admin_level",
+          4
+        ],
+        [
+          "==",
+          "type",
+          "administrative"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": {
+          "stops": [
+            [
+              4,
+              "rgba(169, 163, 163, 0.05)"
+            ],
+            [
+              7,
+              "rgba(200, 198, 198, 0.1)"
+            ]
+          ]
+        },
+        "line-width": {
+          "stops": [
+            [
+              2,
+              2
+            ],
+            [
+              12,
+              8
+            ],
+            [
+              15,
+              12
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "state_lines_admin4",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "land_ohm",
+      "minzoom": 3,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "==",
+          "admin_level",
+          4
+        ],
+        [
+          "==",
+          "type",
+          "administrative"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": {
+          "stops": [
+            [
+              4,
+              "rgba(169, 163, 163, 1)"
+            ],
+            [
+              7,
+              "rgba(200, 198, 198, 1)"
+            ]
+          ]
+        },
+        "line-width": {
+          "stops": [
+            [
+              2,
+              0.8
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              15,
+              4
+            ]
+          ]
+        }
+      }
+    },
+    {
       "id": "admin_admin3",
       "type": "line",
       "source": "osm",
@@ -7055,6 +7106,56 @@
             [
               7,
               2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "admin_countrylines_z10_case",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "land_ohm",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "in",
+          "admin_level",
+          1,
+          2
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": {
+          "stops": [
+            [
+              4,
+              "rgba(133, 147, 156, 0.1)"
+            ],
+            [
+              7,
+              "rgba(157, 169, 174, 0.1)"
+            ]
+          ]
+        },
+        "line-width": {
+          "stops": [
+            [
+              2,
+              3
+            ],
+            [
+              12,
+              10
+            ],
+            [
+              15,
+              14
             ]
           ]
         }
@@ -7096,7 +7197,7 @@
           "stops": [
             [
               2,
-              0.5
+              1
             ],
             [
               12,
@@ -7981,11 +8082,11 @@
             ],
             [
               6,
-              13
+              15
             ],
             [
               10,
-              17
+              18
             ]
           ]
         },
@@ -8266,15 +8367,15 @@
             ],
             [
               3,
-              14
-            ],
-            [
-              6,
               16
             ],
             [
+              6,
+              20
+            ],
+            [
               10,
-              18
+              22
             ]
           ]
         },
