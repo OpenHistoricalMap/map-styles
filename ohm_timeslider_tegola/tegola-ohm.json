@@ -8097,7 +8097,7 @@
         "symbol-placement": "point"
       },
       "paint": {
-        "text-color": "rgba(104, 93, 93, 1)",
+        "text-color": "rgba(82, 74, 74, 1)",
         "text-halo-width": 1,
         "text-halo-blur": 2,
         "text-halo-color": "rgba(220, 231, 232, 1)",
