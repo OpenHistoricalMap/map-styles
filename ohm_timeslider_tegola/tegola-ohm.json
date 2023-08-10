@@ -557,7 +557,7 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
-      "minzoom": 12,
+      "minzoom": 9,
       "maxzoom": 24,
       "layout": {
         "visibility": "visible"
@@ -1147,11 +1147,11 @@
       }
     },
     {
-      "id": "water_lines_stream",
+      "id": "water_lines_stream_no_name",
       "type": "line",
       "source": "osm",
       "source-layer": "water_lines",
-      "minzoom": 13,
+      "minzoom": 12,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -1159,12 +1159,65 @@
           "==",
           "type",
           "stream"
+        ],
+        [
+          "in",
+          "name",
+          ""
         ]
       ],
       "paint": {
         "line-color": "rgba(144, 204, 203, 1)",
         "line-width": {
           "stops": [
+            [
+              10,
+              0.25
+            ],
+            [
+              13,
+              1.5
+            ],
+            [
+              15,
+              3
+            ],
+            [
+              20,
+              5
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "water_lines_stream_name",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "water_lines",
+      "minzoom": 0,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "stream"
+        ],
+        [
+          "!in",
+          "name",
+          ""
+        ]
+      ],
+      "paint": {
+        "line-color": "rgba(144, 204, 203, 1)",
+        "line-width": {
+          "stops": [
+            [
+              10,
+              0.25
+            ],
             [
               13,
               1.5
@@ -8658,6 +8711,54 @@
       }
     },
     {
+      "id": "county_labels_z11",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "place_points",
+      "minzoom": 9,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "county"
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "OpenHistorical"
+        ],
+        "text-size": {
+          "stops": [
+            [
+              6,
+              5
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              16,
+              13
+            ]
+          ]
+        },
+        "visibility": "visible",
+        "text-transform": "uppercase",
+        "symbol-spacing": 250,
+        "text-letter-spacing": 0
+      },
+      "paint": {
+        "text-color": "rgba(128, 128, 128, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-blur": 2,
+        "text-halo-width": 1
+      }
+    },
+    {
       "id": "city_labels_other_z11",
       "type": "symbol",
       "source": "osm",
@@ -8673,7 +8774,8 @@
           "suburb",
           "locality",
           "hamlet",
-          "islet"
+          "islet",
+          "neighborhood"
         ]
       ],
       "layout": {
