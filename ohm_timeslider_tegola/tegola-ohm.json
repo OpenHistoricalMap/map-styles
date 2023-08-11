@@ -1151,7 +1151,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "water_lines",
-      "minzoom": 12,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -1171,20 +1171,16 @@
         "line-width": {
           "stops": [
             [
-              10,
-              0.25
-            ],
-            [
               13,
-              1.5
+              1
             ],
             [
               15,
-              3
+              2
             ],
             [
               20,
-              5
+              4
             ]
           ]
         }
@@ -1195,7 +1191,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "water_lines",
-      "minzoom": 0,
+      "minzoom": 11,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -1215,8 +1211,8 @@
         "line-width": {
           "stops": [
             [
-              10,
-              0.25
+              12,
+              0.75
             ],
             [
               13,
@@ -7577,6 +7573,8 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_lines",
+      "minzoom": 11,
+      "maxzoom": 24,
       "filter": [
         "all",
         [
