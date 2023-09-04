@@ -2602,28 +2602,6 @@
       }
     },
     {
-      "id": "roads_pedestrian_street",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines",
-      "minzoom": 14,
-      "maxzoom": 24,
-      "filter": ["all", ["in", "type", "pedestrian"]],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "line-color": "#ffffff",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          12,
-          2,
-          18,
-          12
-        ]
-      }
-    },
-    {
       "id": "roads_footway",
       "type": "line",
       "source": "osm",
