@@ -1365,7 +1365,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#E6E6E6",
+        "line-color": "rgba(210, 210, 213, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1396,15 +1396,15 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#E6E6E6",
+        "line-color": "rgba(210, 210, 213, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
           13,
-          3,
+          4,
           18,
-          15
+          18
         ]
       }
     },
@@ -2695,7 +2695,7 @@
           13,
           4,
           18,
-          17
+          18
         ]
       }
     },
@@ -2748,7 +2748,7 @@
           10,
           2.5,
           18,
-          28
+          30
         ]
       }
     },
@@ -2780,7 +2780,7 @@
           11,
           3,
           18,
-          35
+          39
         ]
       }
     },
@@ -2819,7 +2819,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 7,
+      "minzoom": 10,
       "filter": [
         "all",
         ["in", "type", "primary"],
@@ -2833,13 +2833,15 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(255, 255, 255, 1)",
+        "line-color": "rgba(240, 193, 144, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          7,
-          2,
+          9,
+          1,
+          11,
+          3,
           18,
           40
         ]
@@ -2881,8 +2883,8 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 6,
-      "maxzoom": 20,
+      "minzoom": 9,
+      "maxzoom": 24,
       "filter": [
         "all",
         ["in", "type", "motorway", "trunk"],
@@ -2895,13 +2897,13 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": "rgba(230, 143, 124, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          6,
-          2,
+          10,
+          3,
           18,
           46
         ]
@@ -3166,7 +3168,15 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(241, 218, 187, 1)",
+        "line-color": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          0,
+          "rgba(242, 175, 4, 1)",
+          12,
+          "rgba(255, 236, 211, 1)"
+        ],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3184,7 +3194,7 @@
       "source": "osm",
       "source-layer": "transport_lines",
       "minzoom": 5,
-      "maxzoom": 20,
+      "maxzoom": 24,
       "filter": [
         "all",
         ["in", "type", "motorway", "trunk"],
@@ -3197,7 +3207,13 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(240, 197, 188, 1)",
+        "line-color": [
+          "step",
+          ["zoom"],
+          "rgba(252, 194, 182, 1)",
+          9,
+          "rgba(254, 224, 217, 1)"
+        ],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
