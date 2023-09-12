@@ -645,7 +645,7 @@
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "canal"]],
       "paint": {
-        "line-color": "rgba(144, 204, 203, 1)",
+        "line-color": "rgba(192, 234, 234, 1)",
         "line-width": {"stops": [[8, 0.5], [13, 0.5], [14, 1], [20, 3]]}
       }
     },
@@ -3934,7 +3934,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(210, 210, 210, 1)",
+        "line-color": "rgba(193, 193, 193, 1)",
         "line-dasharray": [2, 2],
         "line-width": {"stops": [[10, 1], [12, 1.5]]}
       }
@@ -3979,7 +3979,7 @@
         "line-color": {
           "stops": [
             [4, "rgba(163, 169, 163, 0.05)"],
-            [7, "rgba(198, 200, 198, 0.1)"]
+            [7, "rgba(234, 236, 234, 0.1)"]
           ]
         },
         "line-width": {"stops": [[6, 0], [12, 8], [15, 12]]}
@@ -4006,7 +4006,7 @@
         "line-color": {
           "stops": [
             [4, "rgba(142, 170, 148, 1)"],
-            [7, "rgba(195, 203, 196, 1)"]
+            [7, "rgba(191, 191, 191, 1)"]
           ]
         },
         "line-width": {"stops": [[2, 0.4], [12, 2], [15, 4]]}
