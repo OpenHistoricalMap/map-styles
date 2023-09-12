@@ -27,7 +27,7 @@
       "maxzoom": 20,
       "filter": ["all"],
       "layout": {"visibility": "visible"},
-      "paint": {"background-color": "rgba(174, 234, 234, 1)"}
+      "paint": {"background-color": "rgba(192, 234, 234, 1)"}
     },
     {
       "id": "land",
@@ -522,7 +522,7 @@
       "minzoom": 3,
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(174, 234, 234, 1)"}
+      "paint": {"fill-color": "rgba(192, 234, 234, 1)"}
     },
     {
       "id": "place_areas_islet",
@@ -545,7 +545,7 @@
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "stream"], ["in", "name", ""]],
       "paint": {
-        "line-color": "rgba(174, 234, 234, 1)",
+        "line-color": "rgba(192, 234, 234, 1)",
         "line-width": {"stops": [[14, 1], [15, 2], [20, 4]]}
       }
     },
@@ -672,7 +672,7 @@
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "river"]],
       "paint": {
-        "line-color": "rgba(174, 234, 234, 1)",
+        "line-color": "rgba(192, 234, 234, 1)",
         "line-width": {"stops": [[8, 1], [12, 1.5], [13, 2], [14, 5], [20, 12]]}
       }
     },
@@ -2282,16 +2282,16 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 7,
+      "minzoom": 11,
       "maxzoom": 24,
       "filter": [
         "all",
         ["in", "type", "tram", "funicular", "monorail"],
         ["!in", "service", "yard", "siding"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "visible", "line-cap": "square"},
       "paint": {
-        "line-color": "rgba(197, 197, 197, 1)",
+        "line-color": "rgba(192, 198, 207, 1)",
         "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]},
         "line-dasharray": [3, 1.5]
       }
@@ -2305,7 +2305,7 @@
       "filter": ["all", ["in", "type", "subway"]],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(153, 153, 153, 1)",
+        "line-color": "rgba(166, 170, 187, 1)",
         "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]},
         "line-dasharray": [4, 1]
       }
@@ -3297,8 +3297,20 @@
       ],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(179, 179, 179, 1)",
-        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
+        "line-color": "rgba(128, 153, 184, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          0.5,
+          13,
+          0.75,
+          14,
+          1,
+          20,
+          1.5
+        ]
       }
     },
     {
@@ -3306,18 +3318,18 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 7,
+      "minzoom": 12,
       "maxzoom": 24,
       "filter": [
         "all",
         ["in", "type", "miniature", "narrow_gauge"],
         ["!in", "service", "yard", "siding"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "visible", "line-cap": "square"},
       "paint": {
-        "line-color": "rgba(179, 179, 179, 1)",
-        "line-width": {"stops": [[7, 0], [9, 2], [12, 4]]},
-        "line-dasharray": {"stops": [[7, [0.2, 1]], [12, [0.2, 2]]]}
+        "line-color": "rgba(128, 153, 184, 1)",
+        "line-width": {"stops": [[7, 0], [11, 1.5], [15, 4]]},
+        "line-dasharray": {"stops": [[7, [0.2, 2]], [12, [0.2, 4]]]}
       }
     },
     {
@@ -3335,7 +3347,19 @@
       "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(210, 190, 190, 1)",
-        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          0.5,
+          13,
+          0.75,
+          14,
+          1,
+          20,
+          1.5
+        ]
       }
     },
     {
@@ -3343,7 +3367,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 7,
+      "minzoom": 12,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -3353,8 +3377,32 @@
       "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(210, 190, 190, 1)",
-        "line-width": {"stops": [[7, 0], [9, 3], [12, 5]]},
-        "line-dasharray": {"stops": [[7, [0.2, 1]], [12, [0.2, 2]]]}
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          7,
+          0,
+          9,
+          0.5,
+          12,
+          3,
+          15,
+          5,
+          17,
+          6
+        ],
+        "line-dasharray": [
+          "step",
+          ["zoom"],
+          ["literal", [0.2, 2.5]],
+          12,
+          ["literal", [0.2, 4]],
+          13,
+          ["literal", [0.2, 6]],
+          14,
+          ["literal", [0.2, 8]]
+        ]
       }
     },
     {
@@ -3375,8 +3423,20 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(179, 179, 179, 1)",
-        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
+        "line-color": "rgba(194, 210, 222, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          0.5,
+          13,
+          0.75,
+          14,
+          1,
+          20,
+          1.5
+        ]
       }
     },
     {
@@ -3384,18 +3444,42 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 7,
+      "minzoom": 12,
       "maxzoom": 24,
       "filter": [
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
         ["!in", "service", "yard", "siding"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "visible", "line-cap": "square"},
       "paint": {
-        "line-color": "rgba(199, 202, 215, 1)",
-        "line-width": {"stops": [[7, 0], [9, 3], [12, 5]]},
-        "line-dasharray": {"stops": [[7, [0.2, 1]], [12, [0.2, 2]]]}
+        "line-color": "rgba(194, 210, 222, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          7,
+          0,
+          9,
+          0.5,
+          12,
+          3,
+          15,
+          5,
+          17,
+          6
+        ],
+        "line-dasharray": [
+          "step",
+          ["zoom"],
+          ["literal", [0.2, 2.5]],
+          12,
+          ["literal", [0.2, 4]],
+          13,
+          ["literal", [0.2, 6]],
+          14,
+          ["literal", [0.2, 8]]
+        ]
       }
     },
     {
@@ -3416,8 +3500,20 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(215, 215, 215, 1)",
-        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
+        "line-color": "rgba(199, 204, 213, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          0.5,
+          13,
+          0.75,
+          14,
+          1,
+          20,
+          1.5
+        ]
       }
     },
     {
@@ -3425,7 +3521,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 7,
+      "minzoom": 12,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -3434,9 +3530,33 @@
       ],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(215, 215, 215, 1)",
-        "line-width": {"stops": [[7, 0], [9, 3], [12, 5]]},
-        "line-dasharray": {"stops": [[7, [0.2, 1]], [12, [0.2, 2]]]}
+        "line-color": "rgba(199, 204, 213, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          7,
+          0,
+          9,
+          0.5,
+          12,
+          3,
+          15,
+          5,
+          17,
+          6
+        ],
+        "line-dasharray": [
+          "step",
+          ["zoom"],
+          ["literal", [0.2, 2.5]],
+          12,
+          ["literal", [0.2, 4]],
+          13,
+          ["literal", [0.2, 6]],
+          14,
+          ["literal", [0.2, 8]]
+        ]
       }
     },
     {
@@ -3738,16 +3858,20 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 7,
+      "minzoom": 11,
       "maxzoom": 24,
       "filter": [
         "all",
         ["in", "type", "tram", "funicular", "monorail"],
         ["!in", "service", "yard", "siding"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "miter"
+      },
       "paint": {
-        "line-color": "rgba(197, 197, 197, 1)",
+        "line-color": "rgba(177, 186, 203, 1)",
         "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
       }
     },
@@ -4040,7 +4164,7 @@
         "symbol-placement": "point"
       },
       "paint": {
-        "text-color": "rgba(43, 102, 102, 1)",
+        "text-color": "rgba(83, 147, 147, 1)",
         "text-halo-width": 1,
         "text-halo-color": "rgba(207, 230, 230, 1)"
       }
@@ -4083,7 +4207,7 @@
         "text-size": {"stops": [[8, 10], [11, 11], [13, 13]]}
       },
       "paint": {
-        "text-color": "rgba(43, 102, 102, 1)",
+        "text-color": "rgba(68, 135, 135, 1)",
         "text-halo-width": 1,
         "text-halo-color": "rgba(207, 230, 230, 1)"
       }
@@ -4156,7 +4280,10 @@
       },
       "paint": {
         "text-color": {
-          "stops": [[10, "rgba(83, 147, 147, 1)"], [15, "rgba(41, 84, 84, 1)"]]
+          "stops": [
+            [10, "rgba(83, 147, 147, 1)"],
+            [15, "rgba(37, 123, 123, 1)"]
+          ]
         },
         "text-halo-color": {
           "stops": [
