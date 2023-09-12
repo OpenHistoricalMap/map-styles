@@ -1511,7 +1511,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 7,
+      "minzoom": 10,
       "filter": [
         "all",
         ["in", "type", "construction"],
@@ -1575,7 +1575,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 6,
+      "minzoom": 9,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -1878,7 +1878,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 5,
+      "minzoom": 6,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -2030,7 +2030,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 7,
+      "minzoom": 10,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -2061,7 +2061,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 5,
+      "minzoom": 9,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -2131,7 +2131,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 9,
+      "minzoom": 6,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -2237,7 +2237,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 5,
+      "minzoom": 6,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -2394,7 +2394,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 5,
+      "minzoom": 9,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -3094,7 +3094,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 5,
+      "minzoom": 6,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -3229,7 +3229,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 5,
+      "minzoom": 6,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -3619,7 +3619,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 8,
+      "minzoom": 10,
       "filter": ["all", ["==", "type", "secondary"], ["==", "bridge", 1]],
       "layout": {
         "visibility": "visible",
@@ -3644,7 +3644,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 7,
+      "minzoom": 10,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -3674,7 +3674,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 5,
+      "minzoom": 9,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -3734,7 +3734,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 9,
+      "minzoom": 6,
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "tertiary"], ["==", "bridge", 1]],
       "layout": {
@@ -3822,7 +3822,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 5,
+      "minzoom": 6,
       "maxzoom": 20,
       "filter": [
         "all",
