@@ -4284,12 +4284,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "text-color": {
-          "stops": [
-            [10, "rgba(83, 147, 147, 1)"],
-            [15, "rgba(37, 123, 123, 1)"]
-          ]
-        },
+        "text-color": "rgba(83, 147, 147, 1)",
         "text-halo-color": {
           "stops": [
             [10, "rgba(255, 255, 255, 1)"],
