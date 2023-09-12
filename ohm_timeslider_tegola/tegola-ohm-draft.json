@@ -27,7 +27,7 @@
       "maxzoom": 20,
       "filter": ["all"],
       "layout": {"visibility": "visible"},
-      "paint": {"background-color": "rgba(144, 204, 203, 1)"}
+      "paint": {"background-color": "rgba(174, 234, 234, 1)"}
     },
     {
       "id": "land",
@@ -522,7 +522,7 @@
       "minzoom": 3,
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(144, 204, 203, 1)"}
+      "paint": {"fill-color": "rgba(174, 234, 234, 1)"}
     },
     {
       "id": "place_areas_islet",
@@ -545,7 +545,7 @@
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "stream"], ["in", "name", ""]],
       "paint": {
-        "line-color": "rgba(144, 204, 203, 1)",
+        "line-color": "rgba(174, 234, 234, 1)",
         "line-width": {"stops": [[14, 1], [15, 2], [20, 4]]}
       }
     },
@@ -672,7 +672,7 @@
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "river"]],
       "paint": {
-        "line-color": "rgba(144, 204, 203, 1)",
+        "line-color": "rgba(174, 234, 234, 1)",
         "line-width": {"stops": [[8, 1], [12, 1.5], [13, 2], [14, 5], [20, 12]]}
       }
     },
