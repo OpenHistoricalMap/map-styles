@@ -148,15 +148,15 @@
         "fill-color": {
           "property": "type",
           "type": "categorical",
-          "default": "transparent",
           "stops": [
             [{"zoom": 0, "value": "park"}, "rgba(208, 220, 174, 1)"],
             [
               {"zoom": 0, "value": "nature_reserve"},
-              "rgba(178, 194, 157, 0.2)"
+              "rgba(212, 225, 211, 0.3)"
             ],
             [{"zoom": 0, "value": "pitch"}, "rgba(69, 150, 7, 0.39)"]
-          ]
+          ],
+          "default": "transparent"
         }
       }
     },
@@ -357,7 +357,7 @@
             [{"zoom": 0, "value": "wood"}, "rgba(193, 208, 158, 1)"],
             [
               {"zoom": 0, "value": "nature_reserve"},
-              "rgba(178, 194, 157, 0.3)"
+              "rgba(212, 225, 211, 0.3)"
             ],
             [{"zoom": 0, "value": "landfill"}, "rgba(194, 170, 175, 1)"]
           ],
@@ -381,7 +381,7 @@
         "fill-color": {
           "stops": [
             [6, "rgba(178, 194, 157, 0.2)"],
-            [9, "rgba(178, 194, 157, 0.3)"]
+            [9, "rgba(212, 225, 211, 0.3)"]
           ]
         }
       }
@@ -673,7 +673,7 @@
       "filter": ["all", ["==", "type", "river"]],
       "paint": {
         "line-color": "rgba(192, 234, 234, 1)",
-        "line-width": {"stops": [[8, 1], [12, 1.5], [13, 2], [14, 5], [20, 12]]}
+        "line-width": {"stops": [[8, 1], [13, 2], [14, 5], [20, 12]]}
       }
     },
     {
