@@ -1979,7 +1979,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "butt",
+        "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
@@ -2477,7 +2477,11 @@
       "source-layer": "transport_lines",
       "minzoom": 6,
       "filter": ["all", ["==", "type", "primary"], ["==", "tunnel", 1]],
-      "layout": {"visibility": "visible"},
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(241, 218, 187, 1)",
         "line-width": [
@@ -2772,7 +2776,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "butt",
+        "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
@@ -2865,7 +2869,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "butt",
+        "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
@@ -2931,7 +2935,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "butt",
+        "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
@@ -3137,7 +3141,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "butt",
+        "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
@@ -3202,7 +3206,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "butt",
+        "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
@@ -3243,7 +3247,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "butt",
+        "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
@@ -3797,7 +3801,7 @@
       "filter": ["all", ["in", "type", "primary"], ["==", "bridge", 1]],
       "layout": {
         "visibility": "visible",
-        "line-cap": "butt",
+        "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
@@ -3835,7 +3839,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "butt",
+        "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
