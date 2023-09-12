@@ -519,7 +519,7 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "water_areas",
-      "minzoom": 3,
+      "minzoom": 0,
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
       "paint": {"fill-color": "rgba(192, 234, 234, 1)"}
@@ -3978,8 +3978,8 @@
       "paint": {
         "line-color": {
           "stops": [
-            [4, "rgba(169, 163, 163, 0.05)"],
-            [7, "rgba(200, 198, 198, 0.1)"]
+            [4, "rgba(163, 169, 163, 0.05)"],
+            [7, "rgba(198, 200, 198, 0.1)"]
           ]
         },
         "line-width": {"stops": [[6, 0], [12, 8], [15, 12]]}
@@ -4005,8 +4005,8 @@
       "paint": {
         "line-color": {
           "stops": [
-            [4, "rgba(149, 144, 144, 1)"],
-            [7, "rgba(200, 198, 198, 1)"]
+            [4, "rgba(142, 170, 148, 1)"],
+            [7, "rgba(195, 203, 196, 1)"]
           ]
         },
         "line-width": {"stops": [[2, 0.4], [12, 2], [15, 4]]}
@@ -4067,12 +4067,17 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": {
-          "stops": [
-            [4, "rgba(133, 147, 156, 1)"],
-            [7, "rgba(157, 169, 174, 1)"]
-          ]
-        },
+        "line-color": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          4,
+          "rgba(163, 173, 164, 1)",
+          8,
+          "rgba(181, 186, 181, 1)",
+          11,
+          "rgba(203, 212, 203, 1)"
+        ],
         "line-width": {"stops": [[2, 1.5], [12, 2.5], [15, 4]]}
       }
     },
@@ -5098,7 +5103,7 @@
       "paint": {
         "text-color": "rgba(101, 108, 108, 1)",
         "text-halo-width": 1,
-        "text-halo-color": "rgba(220, 231, 232, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-blur": 2,
         "text-opacity": 1,
         "text-translate-anchor": "map"
