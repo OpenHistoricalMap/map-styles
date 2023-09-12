@@ -1432,7 +1432,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#E6E6E6",
+        "line-color": "rgba(210, 210, 213, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -2039,7 +2039,7 @@
         ["in", "construction", "primary", "primary_link"]
       ],
       "layout": {
-        "line-cap": "butt",
+        "line-cap": "round",
         "visibility": "visible",
         "line-join": "round"
       },
@@ -2052,7 +2052,7 @@
           7,
           3.5,
           18,
-          50
+          48
         ]
       }
     },
@@ -2078,7 +2078,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "butt",
+        "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
@@ -2349,7 +2349,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": "rgba(210, 210, 213, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -2772,7 +2772,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "round",
+        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
@@ -2802,7 +2802,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "round",
+        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
@@ -2865,7 +2865,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "round",
+        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
@@ -2929,7 +2929,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "round",
+        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
@@ -3135,7 +3135,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "round",
+        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
@@ -3167,7 +3167,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "round",
+        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
@@ -3200,7 +3200,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "round",
+        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
@@ -3239,7 +3239,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "round",
+        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
@@ -3635,7 +3635,7 @@
           8,
           3.2,
           18,
-          48
+          44
         ]
       }
     },
@@ -3665,7 +3665,7 @@
           7,
           3.5,
           18,
-          50
+          48
         ]
       }
     },
@@ -3739,7 +3739,7 @@
       "filter": ["all", ["==", "type", "tertiary"], ["==", "bridge", 1]],
       "layout": {
         "visibility": "visible",
-        "line-cap": "round",
+        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
@@ -3793,7 +3793,7 @@
       "filter": ["all", ["in", "type", "primary"], ["==", "bridge", 1]],
       "layout": {
         "visibility": "visible",
-        "line-cap": "round",
+        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
@@ -3813,7 +3813,7 @@
           6,
           0.75,
           18,
-          36
+          32
         ]
       }
     },
@@ -3831,7 +3831,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "round",
+        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
