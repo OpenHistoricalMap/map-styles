@@ -1278,7 +1278,11 @@
         ["in", "type", "construction"],
         ["in", "construction", "footway", "cycleway", "path"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(225, 225, 225, 1)",
         "line-width": [
@@ -1459,7 +1463,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(230, 230, 230, 1)",
+        "line-color": "rgba(210, 210, 213, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1522,7 +1526,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(255, 255, 255, 1)",
+        "line-color": "rgba(240, 193, 144, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1586,7 +1590,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": "rgba(230, 143, 124, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1848,7 +1852,15 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(241, 218, 187, 1)",
+        "line-color": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          0,
+          "rgba(242, 175, 4, 1)",
+          12,
+          "rgba(255, 236, 211, 1)"
+        ],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1881,7 +1893,13 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(240, 197, 188, 1)",
+        "line-color": [
+          "step",
+          ["zoom"],
+          "rgba(252, 194, 182, 1)",
+          9,
+          "rgba(254, 224, 217, 1)"
+        ],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1973,7 +1991,7 @@
           11,
           4,
           18,
-          48
+          44
         ]
       }
     },
@@ -2003,7 +2021,7 @@
           8,
           3.2,
           18,
-          50
+          48
         ]
       }
     },
@@ -2034,7 +2052,7 @@
           7,
           3.5,
           18,
-          52
+          50
         ]
       }
     },
@@ -2072,7 +2090,7 @@
           5,
           3,
           18,
-          58
+          50
         ]
       }
     },
@@ -2193,7 +2211,15 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(241, 218, 187, 1)",
+        "line-color": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          0,
+          "rgba(242, 175, 4, 1)",
+          12,
+          "rgba(255, 236, 211, 1)"
+        ],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -2232,7 +2258,13 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(240, 197, 188, 1)",
+        "line-color": [
+          "step",
+          ["zoom"],
+          "rgba(252, 194, 182, 1)",
+          9,
+          "rgba(254, 224, 217, 1)"
+        ],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -2609,7 +2641,11 @@
       "minzoom": 14,
       "maxzoom": 24,
       "filter": ["all", ["in", "type", "footway", "cycleway", "path"]],
-      "layout": {"visibility": "visible"},
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "#b3b3b3",
         "line-width": [
@@ -3333,7 +3369,11 @@
         ["in", "type", "rail", "light_rail", "preserved"],
         ["!in", "service", "yard", "siding"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(179, 179, 179, 1)",
         "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
@@ -3370,7 +3410,11 @@
         ["in", "type", "construction", "proposed"],
         ["in", "class", "railway"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(215, 215, 215, 1)",
         "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
@@ -3446,7 +3490,7 @@
           11,
           4,
           18,
-          48
+          44
         ]
       }
     },
@@ -3471,7 +3515,7 @@
           8,
           3.2,
           18,
-          50
+          48
         ]
       }
     },
@@ -3501,7 +3545,7 @@
           7,
           3.5,
           18,
-          52
+          50
         ]
       }
     },
@@ -3531,7 +3575,7 @@
           5,
           3,
           18,
-          58
+          50
         ]
       }
     },
@@ -3633,7 +3677,15 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(241, 218, 187, 1)",
+        "line-color": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          0,
+          "rgba(242, 175, 4, 1)",
+          12,
+          "rgba(255, 236, 211, 1)"
+        ],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3641,7 +3693,7 @@
           6,
           0.75,
           18,
-          32
+          36
         ]
       }
     },
@@ -3663,7 +3715,13 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(240, 197, 188, 1)",
+        "line-color": [
+          "step",
+          ["zoom"],
+          "rgba(252, 194, 182, 1)",
+          9,
+          "rgba(254, 224, 217, 1)"
+        ],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3746,7 +3804,11 @@
       "minzoom": 10,
       "maxzoom": 20,
       "filter": ["all", ["in", "admin_level", 7, 8]],
-      "layout": {"visibility": "visible"},
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(210, 210, 210, 1)",
         "line-dasharray": [2, 2],
@@ -3761,7 +3823,11 @@
       "minzoom": 7,
       "maxzoom": 20,
       "filter": ["all", ["in", "admin_level", 5, 6]],
-      "layout": {"visibility": "visible"},
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(179, 179, 179, 1)",
         "line-dasharray": {"stops": [[6, [1, 1]], [10, [2, 2]]]},
@@ -3780,7 +3846,11 @@
         ["==", "admin_level", 4],
         ["==", "type", "administrative"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": {
           "stops": [
@@ -3803,7 +3873,11 @@
         ["==", "admin_level", 4],
         ["==", "type", "administrative"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": {
           "stops": [
@@ -3822,7 +3896,11 @@
       "minzoom": 3,
       "maxzoom": 20,
       "filter": ["all", ["==", "admin_level", 3]],
-      "layout": {"visibility": "visible"},
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(181, 195, 199, 1)",
         "line-width": {"stops": [[2, 0.25], [7, 2]]}
@@ -3836,7 +3914,11 @@
       "minzoom": 0,
       "maxzoom": 20,
       "filter": ["all", ["in", "admin_level", 1, 2]],
-      "layout": {"visibility": "visible"},
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": {
           "stops": [
@@ -3855,7 +3937,11 @@
       "minzoom": 0,
       "maxzoom": 20,
       "filter": ["all", ["in", "admin_level", 1, 2]],
-      "layout": {"visibility": "visible"},
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": {
           "stops": [
