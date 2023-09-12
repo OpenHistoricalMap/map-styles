@@ -2855,7 +2855,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 10,
+      "minzoom": 8,
       "filter": [
         "all",
         ["in", "type", "primary"],
@@ -2874,8 +2874,10 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          9,
+          8,
           1,
+          9,
+          2,
           11,
           3,
           18,
@@ -3210,15 +3212,17 @@
           ["zoom"],
           0,
           "rgba(242, 175, 4, 1)",
-          12,
+          9,
           "rgba(255, 236, 211, 1)"
         ],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          6,
+          5,
           0.75,
+          7,
+          1,
           18,
           32
         ]
