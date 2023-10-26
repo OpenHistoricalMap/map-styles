@@ -4138,7 +4138,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(151, 57, 138, 0.3)",
+        "line-color": "rgba(184, 78, 170, 1)",
         "line-width": {"stops": [[6, 1], [10, 2]]},
         "line-offset": 0,
         "line-dasharray": {"stops": [[0, [5, 5]], [10, [7, 7]]]}
