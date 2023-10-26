@@ -4134,14 +4134,14 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "square",
+        "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(233, 95, 225, 1)",
-        "line-width": {"stops": [[6, 1], [10, 2]]},
+        "line-color": "rgba(73, 110, 91, 1)",
+        "line-width": {"stops": [[0, 0.5], [10, 1]]},
         "line-offset": 0,
-        "line-dasharray": {"stops": [[0, [7, 7]], [10, [10, 10]]]}
+        "line-dasharray": {"stops": [[0, [2, 5]], [10, [3, 4]]]}
       }
     },
     {
