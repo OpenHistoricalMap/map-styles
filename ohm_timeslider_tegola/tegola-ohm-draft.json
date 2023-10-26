@@ -4138,8 +4138,8 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(233, 195, 246, 1)",
-        "line-width": 0.25,
+        "line-color": "rgba(182, 51, 227, 1)",
+        "line-width": 2,
         "line-offset": 0,
         "line-dasharray": [2, 2]
       }
