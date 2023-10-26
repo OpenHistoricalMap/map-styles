@@ -4137,12 +4137,13 @@
       "paint": {
         "line-color": {
           "stops": [
-            [6, "rgba(206, 127, 181, 0.2)"],
-            [10, "rgba(189, 152, 181, 0.2)"],
-            [14, "rgba(174, 151, 168, 0.2)"]
+            [6, "rgba(206, 127, 181, 0.7)"],
+            [10, "rgba(189, 152, 181, 0.7)"],
+            [14, "rgba(174, 151, 168, 0.7)"]
           ]
         },
-        "line-width": 2
+        "line-width": 2,
+        "line-dasharray": [4, 5]
       }
     },
     {
@@ -4184,7 +4185,7 @@
         ["==", "name", ""]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "square",
         "line-join": "round"
       },
