@@ -4139,10 +4139,64 @@
       },
       "paint": {
         "line-color": "rgba(73, 110, 91, 1)",
-        "line-width": {"stops": [[0, 0.5], [10, 1]]},
+        "line-width": {"stops": [[0, 0.75], [10, 1.5]]},
         "line-offset": 0,
         "line-dasharray": {"stops": [[0, [2, 5]], [10, [3, 4]]]}
       }
+    },
+    {
+      "id": "Empire_Admin2-labels",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "land_ohm",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "any",
+          ["==", "name", "Imperium Romanum (106-270)"],
+          ["==", "name", "دولتْ علیّه عثمانیّه (1832-1856)"],
+          ["==", "name", "Russian Empire (1867-1878)"],
+          ["==", "name", "دولتْ علیّه عثمانیّه (1683-1718)"],
+          ["==", "name", "دولتْ علیّه عثمانیّه (1898-1908)"],
+          ["==", "name", "Československá republika (1936-1938)"],
+          ["==", "name", "Roman Empire (27BCE-105)"],
+          ["==", "name", "Parthian Empire (247BCE-224)"],
+          ["==", "name", "Russian Empire (1795-1807)"],
+          ["==", "name", "Russian Empire (1807-1809)"],
+          ["==", "name", "Kaisertum Österreich (1859-1866)"],
+          ["==", "name", "دولتْ علیّه عثمانیّه (1878-1897)"],
+          ["==", "name", "دولتْ علیّه عثمانیّه (1878 03-07)"],
+          ["==", "name", "Kaisertum Österreich (1866-1867)"],
+          ["==", "name", "Kaisertum Österreich (1850-1859)"],
+          ["==", "name", "Russian Empire (1815-1830)"],
+          ["==", "name", "Russian Empire (1809-1812)"],
+          ["==", "name", "دولتْ علیّه عثمانیّه (1908-1913)"],
+          ["==", "name", "دولتْ علیّه عثمانیّه (1812-1832)"],
+          ["==", "name", "Russian Empire (1812-1815)"],
+          ["==", "name", "دولتْ علیّه عثمانیّه (1792-1832)"],
+          ["==", "name", "دولتْ علیّه عثمانیّه (1774-1792)"],
+          ["==", "name", "دولتْ علیّه عثمانیّه (1718-1774)"],
+          ["==", "name", "دولتْ علیّه عثمانیّه (1856-1878)"],
+          ["==", "name", "Kaisertum Österreich (1846-1850)"],
+          ["==", "name", "(1500-1683) دولتْ علیّه عثمانیّه"],
+          ["==", "name", "دولتْ علیّه عثمانیّه (1683-1718)"],
+          ["==", "name", ""]
+        ]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "text-font": ["OpenHistorical"],
+        "text-field": "{name}",
+        "symbol-placement": "line",
+        "symbol-spacing": 500,
+        "icon-offset": [0, 0],
+        "icon-padding": 0,
+        "text-offset": [0, -0.6],
+        "text-size": 12
+      },
+      "paint": {"text-color": "rgba(63, 97, 81, 1)"}
     },
     {
       "id": "roadlabels_z14",
