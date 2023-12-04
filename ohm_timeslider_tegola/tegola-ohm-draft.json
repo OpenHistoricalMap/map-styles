@@ -4191,7 +4191,7 @@
         "symbol-spacing": 500,
         "icon-offset": [0, 0],
         "icon-padding": 0,
-        "text-offset": [0, -0.6],
+        "text-offset": [0, 0.6],
         "text-size": 12
       },
       "paint": {"text-color": "rgba(63, 97, 81, 1)"}
