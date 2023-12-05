@@ -3353,7 +3353,7 @@
       ],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(128, 153, 184, 1)",
+        "line-color": "rgba(162, 175, 191, 1)",
         "line-width": [
           "interpolate",
           ["linear"],
@@ -3362,10 +3362,8 @@
           0.5,
           13,
           0.75,
-          14,
-          1,
           20,
-          1.5
+          1
         ]
       }
     },
@@ -3383,7 +3381,7 @@
       ],
       "layout": {"visibility": "visible", "line-cap": "square"},
       "paint": {
-        "line-color": "rgba(128, 153, 184, 1)",
+        "line-color": "#A2AFBF",
         "line-width": {"stops": [[7, 0], [11, 1.5], [15, 4]]},
         "line-dasharray": {"stops": [[7, [0.2, 2]], [12, [0.2, 4]]]}
       }
@@ -3480,7 +3478,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(167, 179, 188, 1)",
+        "line-color": "rgba(148, 159, 168, 1)",
         "line-width": [
           "interpolate",
           ["linear"],
@@ -3516,19 +3514,7 @@
       },
       "paint": {
         "line-color": "rgba(167, 179, 188, 1)",
-        "line-width": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          12,
-          0.5,
-          13,
-          0.75,
-          14,
-          1,
-          20,
-          1.5
-        ]
+        "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1, 20, 1.5]
       }
     },
     {
@@ -3546,7 +3532,7 @@
       ],
       "layout": {"visibility": "visible", "line-cap": "square"},
       "paint": {
-        "line-color": "rgba(167, 179, 188, 1)",
+        "line-color": "#949FA8",
         "line-width": [
           "interpolate",
           ["linear"],
@@ -4071,7 +4057,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(193, 193, 193, 1)",
+        "line-color": "rgba(181, 177, 177, 1)",
         "line-dasharray": [2, 2],
         "line-width": {"stops": [[10, 1], [12, 1.5]]}
       }
