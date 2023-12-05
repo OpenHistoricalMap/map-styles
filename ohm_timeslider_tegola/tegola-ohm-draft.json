@@ -672,12 +672,7 @@
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "river"]],
       "paint": {
-        "line-color": {
-          "stops": [
-            [6, "rgba(117, 222, 222, 1)"],
-            [8, "rgba(181, 226, 226, 1)"]
-          ]
-        },
+        "line-color": "rgba(117, 222, 222, 1)",
         "line-width": {"stops": [[8, 1], [13, 2], [14, 5], [20, 12]]}
       }
     },
