@@ -3495,6 +3495,42 @@
       }
     },
     {
+      "id": "roads_rail-main-dash",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "rail", "light_rail", "preserved"],
+        ["!in", "service", "yard", "siding"],
+        ["==", "name", "usage=main"]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          1,
+          13,
+          1.5,
+          14,
+          2,
+          20,
+          3
+        ],
+        "line-dasharray": [2, 2]
+      }
+    },
+    {
       "id": "roads_rail",
       "type": "line",
       "source": "osm",
@@ -3518,6 +3554,30 @@
       }
     },
     {
+      "id": "roads_rail-dash",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "rail", "light_rail", "preserved"],
+        ["!in", "service", "yard", "siding"],
+        ["!=", "name", "usage=main"]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1, 20, 1.5],
+        "line-dasharray": [3, 2]
+      }
+    },
+    {
       "id": "roads_rail_cross-main",
       "type": "line",
       "source": "osm",
@@ -3530,7 +3590,7 @@
         ["!in", "service", "yard", "siding"],
         ["==", "name", "usage=main"]
       ],
-      "layout": {"visibility": "visible", "line-cap": "square"},
+      "layout": {"visibility": "none", "line-cap": "square"},
       "paint": {
         "line-color": "#949FA8",
         "line-width": [
@@ -3574,7 +3634,7 @@
         ["!in", "service", "yard", "siding"],
         ["!=", "name", "usage=main"]
       ],
-      "layout": {"visibility": "visible", "line-cap": "square"},
+      "layout": {"visibility": "none", "line-cap": "square"},
       "paint": {
         "line-color": "rgba(167, 179, 188, 1)",
         "line-width": [
@@ -4057,7 +4117,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(181, 177, 177, 1)",
+        "line-color": "rgba(181, 179, 177, 1)",
         "line-dasharray": [2, 2],
         "line-width": {"stops": [[10, 1], [12, 1.5]]}
       }
