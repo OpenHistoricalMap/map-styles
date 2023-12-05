@@ -31,7 +31,7 @@
         "background-color": {
           "stops": [
             [0, "rgba(185, 228, 228, 1)"],
-            [10, "rgba(117, 222, 222, 1)"]
+            [10, "rgba(126, 218, 218, 1)"]
           ]
         }
       }
@@ -533,7 +533,7 @@
         "fill-color": {
           "stops": [
             [0, "rgba(185, 228, 228, 1)"],
-            [10, "rgba(117, 222, 222, 1)"]
+            [10, "rgba(126, 218, 218, 1)"]
           ]
         }
       }
@@ -687,7 +687,7 @@
       "filter": ["all", ["==", "type", "river"]],
       "paint": {
         "line-color": {
-          "stops": [[0, "#B9E4E4"], [10, "rgba(117, 222, 222, 1)"]]
+          "stops": [[0, "#B9E4E4"], [10, "rgba(126, 218, 218, 1)"]]
         },
         "line-width": {"stops": [[8, 1], [13, 2], [14, 5], [20, 12]]}
       }
@@ -4413,7 +4413,7 @@
       "paint": {
         "text-color": "rgba(83, 147, 147, 1)",
         "text-halo-width": 1,
-        "text-halo-color": "rgba(207, 230, 230, 1)"
+        "text-halo-color": "rgba(136, 164, 164, 1)"
       }
     },
     {
@@ -4456,7 +4456,7 @@
       "paint": {
         "text-color": "rgba(68, 135, 135, 1)",
         "text-halo-width": 1,
-        "text-halo-color": "rgba(207, 230, 230, 1)"
+        "text-halo-color": "rgba(126, 218, 218, 1)"
       }
     },
     {
@@ -4530,7 +4530,7 @@
         "text-halo-color": {
           "stops": [
             [10, "rgba(255, 255, 255, 1)"],
-            [12, "rgba(207, 230, 230, 1)"]
+            [12, "rgba(255, 255, 255, 1)"]
           ]
         },
         "text-halo-width": 1
