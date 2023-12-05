@@ -4413,7 +4413,7 @@
       "paint": {
         "text-color": "rgba(83, 147, 147, 1)",
         "text-halo-width": 1,
-        "text-halo-color": "rgba(136, 164, 164, 1)"
+        "text-halo-color": "rgba(158, 240, 240, 1)"
       }
     },
     {
@@ -4456,7 +4456,7 @@
       "paint": {
         "text-color": "rgba(68, 135, 135, 1)",
         "text-halo-width": 1,
-        "text-halo-color": "rgba(126, 218, 218, 1)"
+        "text-halo-color": "rgba(173, 244, 244, 1)"
       }
     },
     {
@@ -4527,12 +4527,7 @@
       },
       "paint": {
         "text-color": "rgba(83, 147, 147, 1)",
-        "text-halo-color": {
-          "stops": [
-            [10, "rgba(255, 255, 255, 1)"],
-            [12, "rgba(255, 255, 255, 1)"]
-          ]
-        },
+        "text-halo-color": "rgba(231, 251, 251, 1)",
         "text-halo-width": 1
       }
     },
