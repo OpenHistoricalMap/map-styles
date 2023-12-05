@@ -37,7 +37,7 @@
       "minzoom": 0,
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(248, 247, 242, 1)"}
+      "paint": {"fill-color": "rgba(255, 255, 255, 1)"}
     },
     {
       "id": "landuse_areas_earth",
@@ -3446,6 +3446,41 @@
       }
     },
     {
+      "id": "roads_rail-main",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "rail", "light_rail", "preserved"],
+        ["!in", "service", "yard", "siding"],
+        ["==", "name", "usage=main"]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(167, 179, 188, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          1,
+          13,
+          1.5,
+          14,
+          2,
+          20,
+          3
+        ]
+      }
+    },
+    {
       "id": "roads_rail",
       "type": "line",
       "source": "osm",
@@ -3455,7 +3490,8 @@
       "filter": [
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"]
+        ["!in", "service", "yard", "siding"],
+        ["!=", "name", "usage=main"]
       ],
       "layout": {
         "visibility": "visible",
@@ -3463,7 +3499,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(194, 210, 222, 1)",
+        "line-color": "rgba(167, 179, 188, 1)",
         "line-width": [
           "interpolate",
           ["linear"],
@@ -3480,6 +3516,50 @@
       }
     },
     {
+      "id": "roads_rail_cross-main",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "rail", "light_rail", "preserved"],
+        ["!in", "service", "yard", "siding"],
+        ["==", "name", "usage=main"]
+      ],
+      "layout": {"visibility": "visible", "line-cap": "square"},
+      "paint": {
+        "line-color": "rgba(167, 179, 188, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          7,
+          1,
+          9,
+          1,
+          12,
+          4,
+          15,
+          6,
+          17,
+          7
+        ],
+        "line-dasharray": [
+          "step",
+          ["zoom"],
+          ["literal", [0.2, 2.5]],
+          12,
+          ["literal", [0.2, 4]],
+          13,
+          ["literal", [0.2, 6]],
+          14,
+          ["literal", [0.2, 8]]
+        ]
+      }
+    },
+    {
       "id": "roads_rail_cross",
       "type": "line",
       "source": "osm",
@@ -3489,11 +3569,12 @@
       "filter": [
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"]
+        ["!in", "service", "yard", "siding"],
+        ["!=", "name", "usage=main"]
       ],
       "layout": {"visibility": "visible", "line-cap": "square"},
       "paint": {
-        "line-color": "rgba(194, 210, 222, 1)",
+        "line-color": "rgba(167, 179, 188, 1)",
         "line-width": [
           "interpolate",
           ["linear"],
@@ -3911,7 +3992,7 @@
         "line-join": "miter"
       },
       "paint": {
-        "line-color": "rgba(177, 186, 203, 1)",
+        "line-color": "rgba(167, 179, 188, 1)",
         "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
       }
     },
