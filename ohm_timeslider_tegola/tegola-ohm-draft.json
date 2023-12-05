@@ -3368,6 +3368,35 @@
       }
     },
     {
+      "id": "roads_rail_mini-dash",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "miniature", "narrow_gauge"],
+        ["!in", "service", "yard", "siding"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          0.5,
+          13,
+          0.75,
+          20,
+          1
+        ],
+        "line-dasharray": [2, 2]
+      }
+    },
+    {
       "id": "roads_rail_mini_cross",
       "type": "line",
       "source": "osm",
@@ -3379,7 +3408,7 @@
         ["in", "type", "miniature", "narrow_gauge"],
         ["!in", "service", "yard", "siding"]
       ],
-      "layout": {"visibility": "visible", "line-cap": "square"},
+      "layout": {"visibility": "none", "line-cap": "square"},
       "paint": {
         "line-color": "#A2AFBF",
         "line-width": {"stops": [[7, 0], [11, 1.5], [15, 4]]},
@@ -3417,6 +3446,37 @@
       }
     },
     {
+      "id": "roads_rail_old-dash",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "dismantled", "abandoned", "disused", "razed"],
+        ["!in", "service", "yard", "siding"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          0.5,
+          13,
+          0.75,
+          14,
+          1,
+          20,
+          1.5
+        ],
+        "line-dasharray": [2, 2]
+      }
+    },
+    {
       "id": "roads_rail_old_cross",
       "type": "line",
       "source": "osm",
@@ -3428,7 +3488,7 @@
         ["in", "type", "dismantled", "abandoned", "disused", "razed"],
         ["!in", "service", "yard", "siding"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "line-color": "rgba(210, 190, 190, 1)",
         "line-width": [
@@ -3700,6 +3760,41 @@
       }
     },
     {
+      "id": "roads_rail_construction-dash",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "construction", "proposed"],
+        ["in", "class", "railway"]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          0.5,
+          13,
+          0.75,
+          14,
+          1,
+          20,
+          1.5
+        ],
+        "line-dasharray": [2, 2]
+      }
+    },
+    {
       "id": "roads_rail_construction_cross",
       "type": "line",
       "source": "osm",
@@ -3711,7 +3806,7 @@
         ["in", "type", "construction", "proposed"],
         ["in", "class", "railway"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "line-color": "rgba(199, 204, 213, 1)",
         "line-width": [
