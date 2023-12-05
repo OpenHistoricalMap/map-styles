@@ -2908,13 +2908,13 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": "rgba(230, 143, 124, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          6,
-          2,
+          10,
+          3,
           18,
           46
         ]
@@ -3114,13 +3114,15 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(240, 197, 188, 1)",
+        "line-color": "rgba(254, 224, 217, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          5,
-          1,
+          6,
+          1.5,
+          7,
+          2.5,
           18,
           36
         ]
