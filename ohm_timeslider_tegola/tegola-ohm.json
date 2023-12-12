@@ -2778,6 +2778,39 @@
       }
     },
     {
+      "id": "roads_tertiarylink-case",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 10.01,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["==", "type", "tertiary_link"],
+        ["!=", "tunnel", 1],
+        ["!=", "bridge", 1]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#D2D2D5",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.5],
+          ["zoom"],
+          10,
+          0.5,
+          11,
+          2.5,
+          18,
+          36
+        ]
+      }
+    },
+    {
       "id": "roads_tertiary-case",
       "type": "line",
       "source": "osm",
@@ -2802,9 +2835,11 @@
           ["exponential", 1.5],
           ["zoom"],
           10,
+          0.5,
+          11,
           2.5,
           18,
-          30
+          36
         ]
       }
     },
@@ -3112,6 +3147,38 @@
       }
     },
     {
+      "id": "roads_tertiarylink",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 6,
+      "filter": [
+        "all",
+        ["in", "type", "tertiary_link"],
+        ["!=", "tunnel", 1],
+        ["!=", "bridge", 1]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.5],
+          ["zoom"],
+          8,
+          0.5,
+          18,
+          30
+        ],
+        "line-color": {
+          "stops": [[10, "rgba(240, 240, 240, 1)"], [12, "#ffffff"]]
+        }
+      }
+    },
+    {
       "id": "roads_primarylink",
       "type": "line",
       "source": "osm",
@@ -3203,7 +3270,7 @@
           9,
           0.8,
           18,
-          24
+          28
         ]
       }
     },
