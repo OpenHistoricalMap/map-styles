@@ -3589,7 +3589,44 @@
           20,
           3
         ],
-        "line-dasharray": [2, 2]
+        "line-dasharray": [4, 4]
+      }
+    },
+    {
+      "id": "roads_rail-yard-siding",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": ["all", ["in", "service", "yard", "siding"]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(167, 179, 188, 1)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 12, 0.75, 20, 1.25]
+      }
+    },
+    {
+      "id": "roads_rail-yard-siding-dash",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": ["all", ["in", "service", "yard", "siding"]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(237, 237, 238, 1)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 12, 0.75, 20, 1.25],
+        "line-dasharray": [3, 3]
       }
     },
     {
@@ -3636,7 +3673,7 @@
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1, 20, 1.5],
-        "line-dasharray": [3, 2]
+        "line-dasharray": [4, 4]
       }
     },
     {
