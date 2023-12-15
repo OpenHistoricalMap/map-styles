@@ -3932,8 +3932,18 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(167, 179, 188, 1)",
-        "line-width": ["interpolate", ["linear"], ["zoom"], 6, 2, 7, 3, 20, 4]
+        "line-color": "rgba(109, 111, 113, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          0.75,
+          14,
+          2,
+          20,
+          4
+        ]
       }
     },
     {
@@ -3950,20 +3960,20 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(167, 179, 188, 1)",
+        "line-color": "rgba(109, 111, 113, 1)",
         "line-width": [
           "interpolate",
           ["linear"],
           ["zoom"],
           6,
           1.5,
-          7,
-          2,
+          12,
+          3,
           20,
           10
         ],
         "line-dasharray": {
-          "stops": [[6, [0.5, 2]], [11, [0.75, 2.5]], [14, [0.15, 2]]]
+          "stops": [[6, [0.5, 2]], [12, [0.25, 1]], [16, [0.15, 2]]]
         }
       }
     },
@@ -4030,8 +4040,18 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(215, 180, 221, 1)",
-        "line-width": ["interpolate", ["linear"], ["zoom"], 6, 3, 7, 3.5, 20, 6]
+        "line-color": "rgba(148, 149, 153, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          0.75,
+          14,
+          2,
+          20,
+          4
+        ]
       }
     },
     {
@@ -4053,20 +4073,20 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(215, 180, 221, 1)",
+        "line-color": "#949599",
         "line-width": [
           "interpolate",
           ["linear"],
           ["zoom"],
           6,
           1.5,
-          7,
-          2,
+          12,
+          3,
           20,
-          15
+          10
         ],
         "line-dasharray": {
-          "stops": [[6, [0.5, 2]], [11, [0.75, 2.5]], [14, [0.25, 1]]]
+          "stops": [[6, [0.5, 2]], [12, [0.25, 1]], [16, [0.15, 2]]]
         }
       }
     },
