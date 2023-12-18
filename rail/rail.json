@@ -4735,7 +4735,7 @@
         "text-pitch-alignment": "auto",
         "text-rotation-alignment": "auto",
         "text-font": ["OpenHistorical"],
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "text-color": "rgba(82, 82, 82, 1)",
@@ -4760,12 +4760,40 @@
         "text-allow-overlap": false,
         "text-pitch-alignment": "auto",
         "text-rotation-alignment": "auto",
-        "text-font": ["OpenHistorical"]
+        "text-font": ["OpenHistorical"],
+        "visibility": "none"
       },
       "paint": {
         "text-color": "rgba(82, 82, 82, 1)",
         "text-halo-width": 1,
         "text-halo-color": "rgba(255, 255, 255, 0.8)"
+      }
+    },
+    {
+      "id": "raillabels_z14",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 6,
+      "filter": ["all", ["==", "class", "railway"]],
+      "layout": {
+        "text-field": "{name}",
+        "symbol-placement": "line",
+        "symbol-spacing": 250,
+        "symbol-avoid-edges": false,
+        "text-size": {"stops": [[11, 9], [14, 11]]},
+        "text-padding": 2,
+        "text-allow-overlap": false,
+        "text-pitch-alignment": "auto",
+        "text-rotation-alignment": "auto",
+        "text-font": ["OpenHistorical"],
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(78, 78, 78, 1)",
+        "text-halo-width": 12,
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-opacity": 0.85
       }
     },
     {
@@ -4824,7 +4852,7 @@
         "text-font": ["OpenHistorical Italic"],
         "text-padding": 2,
         "text-allow-overlap": false,
-        "text-size": {"stops": [[8, 12], [11, 13], [13, 14]]},
+        "text-size": {"stops": [[8, 10], [11, 13], [13, 14]]},
         "visibility": "visible"
       },
       "paint": {
