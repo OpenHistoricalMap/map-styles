@@ -786,9 +786,9 @@
       "minzoom": 12,
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "taxiway"]],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
-        "line-color": "rgba(220, 220, 220, 1)",
+        "line-color": "rgba(216, 201, 201, 1)",
         "line-width": {"stops": [[12, 1], [13, 1.5], [18, 4]]}
       }
     },
@@ -800,9 +800,9 @@
       "minzoom": 12,
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "runway"]],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
-        "line-color": "rgba(220, 220, 220, 1)",
+        "line-color": "rgba(203, 198, 198, 1)",
         "line-width": {"stops": [[12, 1.5], [18, 25]]}
       }
     },
@@ -3732,7 +3732,7 @@
       ],
       "layout": {"visibility": "visible", "line-cap": "square"},
       "paint": {
-        "line-color": "rgba(192, 198, 207, 1)",
+        "line-color": "rgba(214, 181, 220, 1)",
         "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]},
         "line-dasharray": [3, 1.5]
       }
@@ -3765,7 +3765,7 @@
       ],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(162, 175, 191, 1)",
+        "line-color": "rgba(125, 164, 121, 1)",
         "line-width": [
           "interpolate",
           ["linear"],
@@ -3791,7 +3791,7 @@
         ["in", "type", "miniature", "narrow_gauge"],
         ["!in", "service", "yard", "siding"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-width": [
@@ -3932,13 +3932,18 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(109, 111, 113, 1)",
+        "line-color": {
+          "stops": [
+            [13, "rgba(168, 168, 168, 1)"],
+            [14, "rgba(109, 111, 113, 1)"]
+          ]
+        },
         "line-width": [
           "interpolate",
           ["linear"],
           ["zoom"],
           12,
-          0.75,
+          0.5,
           14,
           2,
           20,
@@ -3951,7 +3956,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 7,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": ["all", ["in", "service", "yard", "siding"]],
       "layout": {
@@ -3960,7 +3965,12 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(109, 111, 113, 1)",
+        "line-color": {
+          "stops": [
+            [13, "rgba(174, 175, 176, 1)"],
+            [14, "rgba(109, 111, 113, 1)"]
+          ]
+        },
         "line-width": [
           "interpolate",
           ["linear"],
@@ -3973,7 +3983,7 @@
           10
         ],
         "line-dasharray": {
-          "stops": [[6, [0.5, 2]], [12, [0.25, 1]], [16, [0.15, 2]]]
+          "stops": [[6, [0.5, 2]], [12, [0.15, 3]], [16, [0.15, 2]]]
         }
       }
     },
@@ -4040,13 +4050,18 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(148, 149, 153, 1)",
+        "line-color": {
+          "stops": [
+            [13, "rgba(168, 168, 168, 1)"],
+            [14, "rgba(148, 149, 153, 1)"]
+          ]
+        },
         "line-width": [
           "interpolate",
           ["linear"],
           ["zoom"],
           12,
-          0.75,
+          0.5,
           14,
           2,
           20,
@@ -4059,7 +4074,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 0,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -4073,7 +4088,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#949599",
+        "line-color": {"stops": [[13, "#DBDBDB"], [14, "#949599"]]},
         "line-width": [
           "interpolate",
           ["linear"],
@@ -4086,7 +4101,7 @@
           10
         ],
         "line-dasharray": {
-          "stops": [[6, [0.5, 2]], [12, [0.25, 1]], [16, [0.15, 2]]]
+          "stops": [[6, [0.5, 2]], [12, [0.15, 3]], [16, [0.15, 2]]]
         }
       }
     },
@@ -4399,7 +4414,8 @@
         ["!=", "name", "usage=industrial"],
         ["!=", "name", "usage=branch"],
         ["!=", "name", "usage=tourism"],
-        ["!=", "service", "spur"]
+        ["!=", "service", "spur"],
+        ["!=", "service", "siding"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4511,7 +4527,7 @@
         "line-join": "miter"
       },
       "paint": {
-        "line-color": "rgba(167, 179, 188, 1)",
+        "line-color": "rgba(188, 150, 195, 1)",
         "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
       }
     },
@@ -4687,8 +4703,8 @@
       "paint": {
         "line-color": {
           "stops": [
-            [4, "rgba(133, 147, 156, 0.1)"],
-            [7, "rgba(157, 169, 174, 0.1)"]
+            [4, "rgba(242, 242, 242, 0.28)"],
+            [7, "rgba(255, 255, 255, 0.24)"]
           ]
         },
         "line-width": {"stops": [[6, 0], [12, 10], [15, 14]]}
