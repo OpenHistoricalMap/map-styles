@@ -4806,9 +4806,9 @@
         "symbol-placement": "point"
       },
       "paint": {
-        "text-color": "rgba(83, 147, 147, 1)",
+        "text-color": "rgba(125, 158, 158, 1)",
         "text-halo-width": 1,
-        "text-halo-color": "rgba(158, 240, 240, 1)"
+        "text-halo-color": "rgba(231, 251, 251, 1)"
       }
     },
     {
@@ -4849,9 +4849,9 @@
         "text-size": {"stops": [[8, 10], [11, 11], [13, 13]]}
       },
       "paint": {
-        "text-color": "rgba(68, 135, 135, 1)",
+        "text-color": "rgba(125, 158, 158, 1)",
         "text-halo-width": 1,
-        "text-halo-color": "rgba(173, 244, 244, 1)"
+        "text-halo-color": "rgba(231, 251, 251, 1)"
       }
     },
     {
@@ -4921,7 +4921,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "text-color": "rgba(83, 147, 147, 1)",
+        "text-color": "rgba(125, 158, 158, 1)",
         "text-halo-color": "rgba(231, 251, 251, 1)",
         "text-halo-width": 1
       }
