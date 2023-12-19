@@ -3850,7 +3850,7 @@
         ["in", "type", "dismantled", "abandoned", "disused", "razed"],
         ["!in", "service", "yard", "siding"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-width": [
@@ -4458,20 +4458,24 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(199, 204, 213, 1)",
+        "line-color": {
+          "stops": [
+            [13, "rgba(166, 169, 175, 1)"],
+            [14, "rgba(199, 204, 213, 1)"]
+          ]
+        },
         "line-width": [
           "interpolate",
           ["linear"],
           ["zoom"],
-          12,
-          0.5,
           13,
-          0.75,
+          3,
           14,
-          1,
+          5,
           20,
-          1.5
-        ]
+          9
+        ],
+        "line-dasharray": {"stops": [[13, [0.2, 1]], [14, [0.2, 0.75]]]}
       }
     },
     {
@@ -4487,7 +4491,7 @@
         ["in", "class", "railway"]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "square",
         "line-join": "round"
       },
@@ -4528,7 +4532,8 @@
       },
       "paint": {
         "line-color": "rgba(188, 150, 195, 1)",
-        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]}
+        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]},
+        "line-dasharray": [2, 2]
       }
     },
     {
