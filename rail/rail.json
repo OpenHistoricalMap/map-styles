@@ -3732,9 +3732,9 @@
       ],
       "layout": {"visibility": "visible", "line-cap": "square"},
       "paint": {
-        "line-color": "rgba(214, 181, 220, 1)",
+        "line-color": "rgba(243, 49, 237, 1)",
         "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]},
-        "line-dasharray": [3, 1.5]
+        "line-dasharray": [0.15, 1.5]
       }
     },
     {
