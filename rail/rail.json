@@ -5711,7 +5711,7 @@
         "text-color": "rgba(34, 34, 34, 1)",
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-blur": 2,
-        "text-halo-width": 1
+        "text-halo-width": 3
       }
     },
     {
@@ -5734,10 +5734,10 @@
         "symbol-placement": "point"
       },
       "paint": {
-        "text-color": "rgba(82, 74, 74, 1)",
-        "text-halo-width": 1.5,
+        "text-color": "rgba(69, 72, 84, 1)",
+        "text-halo-width": 3,
         "text-halo-blur": 2,
-        "text-halo-color": "rgba(255, 255, 255, 0.75)",
+        "text-halo-color": "rgba(255, 255, 255, 0.97)",
         "text-translate-anchor": "map",
         "icon-translate-anchor": "map"
       }
@@ -5782,8 +5782,8 @@
         "symbol-avoid-edges": false
       },
       "paint": {
-        "text-color": "rgba(77, 82, 82, 1)",
-        "text-halo-width": 2,
+        "text-color": "rgba(74, 92, 92, 1)",
+        "text-halo-width": 3,
         "text-halo-color": "rgba(255, 255, 255, 0.88)",
         "text-halo-blur": 1,
         "text-opacity": 1,
