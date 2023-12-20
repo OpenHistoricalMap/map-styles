@@ -3723,7 +3723,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 11,
+      "minzoom": 7,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -3992,7 +3992,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 7,
+      "minzoom": 11,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -4005,8 +4005,8 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(164, 164, 164, 1)",
-        "line-width": {"stops": [[9, 0.75], [12, 3], [14, 4]]}
+        "line-color": "rgba(46, 46, 46, 1)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 9, 5, 11, 8, 20, 14]
       }
     },
     {
@@ -4014,7 +4014,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 7,
+      "minzoom": 11,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -4027,8 +4027,51 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(138, 138, 145, 1)",
-        "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1.5, 20, 2]
+        "line-color": {
+          "stops": [[10.5, "#5A6064"], [15, "rgba(224, 224, 224, 1)"]]
+        },
+        "line-width": ["interpolate", ["linear"], ["zoom"], 6, 3.5, 7, 4, 20, 9]
+      }
+    },
+    {
+      "id": "roads_rail-tunnel-dash",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "rail", "light_rail", "preserved"],
+        ["==", "tunnel", 1]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": {
+          "stops": [
+            [10.5, "rgba(255, 255, 255, 1)"],
+            [14, "rgba(207, 207, 207, 1)"],
+            [15, "rgba(184, 184, 184, 1)"]
+          ]
+        },
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          6,
+          2,
+          7,
+          2.5,
+          20,
+          7
+        ],
+        "line-dasharray": {
+          "stops": [[6, [0.75, 2]], [11, [0.75, 2.5]], [14, [0.75, 3]]]
+        }
       }
     },
     {
@@ -4387,7 +4430,9 @@
         ["!=", "name", "usage=branch"],
         ["!=", "name", "usage=military"],
         ["!=", "name", "usage=tourism"],
-        ["!=", "service", "spur"]
+        ["!=", "service", "spur"],
+        ["!=", "tunnel", 1],
+        ["!=", "service", "siding"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4415,7 +4460,9 @@
         ["!=", "name", "usage=branch"],
         ["!=", "name", "usage=tourism"],
         ["!=", "service", "spur"],
-        ["!=", "service", "siding"]
+        ["!=", "service", "siding"],
+        ["!=", "tunnel", 1],
+        ["!=", "name", "usage=military"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4518,7 +4565,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 11,
+      "minzoom": 7,
       "maxzoom": 24,
       "filter": [
         "all",
