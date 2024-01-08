@@ -4363,9 +4363,8 @@
         "line-miter-limit": 2
       },
       "paint": {
-        "line-color": "rgba(179, 179, 179, 1)",
-        "line-dasharray": [],
-        "line-width": {"stops": [[6, 0.25], [10, 2]]}
+        "line-color": "rgba(202, 202, 203, 1)",
+        "line-width": {"stops": [[6, 0.25], [10, 1.75]]}
       }
     },
     {
