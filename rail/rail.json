@@ -422,7 +422,7 @@
       "source": "osm",
       "source-layer": "amenity_areas",
       "paint": {
-        "fill-color": "rgba(236, 231, 231, 1)",
+        "fill-color": "rgba(229, 230, 226, 1)",
         "fill-outline-color": "rgba(224, 217, 217, 1)"
       }
     },
@@ -735,8 +735,8 @@
       "filter": ["all"],
       "layout": {"visibility": "visible"},
       "paint": {
-        "fill-color": "rgba(224, 224, 224, 1)",
-        "fill-outline-color": "rgba(208, 200, 200, 1)"
+        "fill-color": "rgba(241, 241, 241, 1)",
+        "fill-outline-color": "rgba(206, 206, 206, 1)"
       }
     },
     {
@@ -835,7 +835,7 @@
         ["==", "construction", "tertiary"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -866,7 +866,7 @@
         ["==", "construction", "secondary"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -898,12 +898,12 @@
         ["==", "construction", "primary"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(250, 178, 107, 1)",
+        "line-color": "rgba(176, 175, 173, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -937,12 +937,12 @@
         ]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(230, 143, 124, 1)",
+        "line-color": "rgba(180, 176, 176, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -968,7 +968,7 @@
         ["==", "construction", "tertiary"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -998,7 +998,7 @@
         ["==", "construction", "secondary"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1028,12 +1028,12 @@
         ["==", "construction", "primary"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(241, 218, 187, 0.6)",
+        "line-color": "rgba(222, 222, 222, 0.6)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1066,12 +1066,12 @@
         ]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(240, 197, 188, 0.6)",
+        "line-color": "rgba(197, 197, 197, 0.6)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1095,7 +1095,7 @@
         ["in", "type", "construction"],
         ["==", "construction", "raceway"]
       ],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(255, 249, 241, 1)",
         "line-width": [
@@ -1201,7 +1201,7 @@
         ["in", "type", "construction"],
         ["in", "construction", "living_street"]
       ],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-width": [
@@ -1227,7 +1227,7 @@
         ["in", "type", "construction"],
         ["==", "construction", "pedestrian"]
       ],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "#ffffff",
         "line-width": [
@@ -1254,7 +1254,7 @@
         ["in", "construction", "footway", "cycleway", "path"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "square",
         "line-join": "round"
       },
@@ -1284,7 +1284,7 @@
         ["==", "type", "construction"],
         ["==", "construction", "pier"]
       ],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "#ffffff",
         "line-width": [
@@ -1310,7 +1310,7 @@
         ["in", "type", "construction"],
         ["in", "construction", "steps"]
       ],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "#b3b3b3",
         "line-width": [
@@ -1339,7 +1339,7 @@
         ["in", "construction", "road"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1370,7 +1370,7 @@
         ["in", "construction", "residential", "service", "unclassified"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1402,7 +1402,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1433,7 +1433,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1464,7 +1464,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1496,12 +1496,12 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(250, 178, 107, 1)",
+        "line-color": "rgba(176, 175, 173, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1528,7 +1528,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1560,12 +1560,12 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(230, 143, 124, 1)",
+        "line-color": "rgba(180, 176, 176, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1590,7 +1590,7 @@
         ["in", "construction", "road"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1621,7 +1621,7 @@
         ["in", "construction", "residential", "service", "unclassified"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1652,7 +1652,7 @@
         ["in", "construction", "residential", "service", "unclassified"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1684,7 +1684,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1718,7 +1718,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1751,7 +1751,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1784,7 +1784,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1818,7 +1818,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1853,20 +1853,12 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          0,
-          "rgba(242, 175, 4, 1)",
-          12,
-          "rgba(255, 236, 211, 1)"
-        ],
+        "line-color": "rgba(240, 239, 238, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1894,18 +1886,12 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": [
-          "step",
-          ["zoom"],
-          "rgba(252, 194, 182, 1)",
-          9,
-          "rgba(254, 224, 217, 1)"
-        ],
+        "line-color": "rgba(211, 211, 211, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1925,7 +1911,7 @@
       "source-layer": "transport_lines",
       "minzoom": 9,
       "filter": ["all", ["==", "ford", "yes"]],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "#ffffff",
         "line-width": [
@@ -1954,7 +1940,7 @@
         ["in", "construction", "residential", "service", "unclassified"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "butt",
         "line-join": "round"
       },
@@ -1984,7 +1970,7 @@
         ["==", "construction", "tertiary"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2014,7 +2000,7 @@
         ["==", "construction", "secondary"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "butt",
         "line-join": "round"
       },
@@ -2046,11 +2032,11 @@
       ],
       "layout": {
         "line-cap": "round",
-        "visibility": "none",
+        "visibility": "visible",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(248, 187, 127, 1)",
+        "line-color": "rgba(176, 175, 173, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -2083,12 +2069,12 @@
         ]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(232, 159, 143, 1)",
+        "line-color": "rgba(180, 176, 176, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -2114,7 +2100,7 @@
         ["in", "construction", "residential", "service", "unclassified"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2146,7 +2132,7 @@
         ["==", "construction", "tertiary"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2179,7 +2165,7 @@
         ["==", "construction", "secondary"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2212,20 +2198,12 @@
         ["in", "construction", "primary"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          0,
-          "rgba(242, 175, 4, 1)",
-          12,
-          "rgba(255, 236, 211, 1)"
-        ],
+        "line-color": "rgba(240, 239, 238, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -2259,18 +2237,12 @@
         ]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": [
-          "step",
-          ["zoom"],
-          "rgba(252, 194, 182, 1)",
-          9,
-          "rgba(254, 224, 217, 1)"
-        ],
+        "line-color": "rgba(211, 211, 211, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -2291,7 +2263,7 @@
       "minzoom": 9,
       "filter": ["all", ["==", "type", "tertiary"], ["==", "tunnel", 1]],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2317,7 +2289,7 @@
       "minzoom": 8,
       "filter": ["all", ["==", "type", "secondary"], ["==", "tunnel", 1]],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2344,12 +2316,12 @@
       "maxzoom": 20,
       "filter": ["all", ["in", "type", "primary"], ["==", "tunnel", 1]],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(250, 178, 107, 1)",
+        "line-color": "rgba(176, 175, 173, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -2375,12 +2347,12 @@
         ["==", "tunnel", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(230, 143, 124, 1)",
+        "line-color": "rgba(180, 176, 176, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -2401,7 +2373,7 @@
       "minzoom": 9,
       "filter": ["all", ["==", "type", "tertiary"], ["==", "tunnel", 1]],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2426,7 +2398,7 @@
       "minzoom": 9,
       "filter": ["all", ["==", "type", "tertiary"], ["==", "tunnel", 1]],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2451,7 +2423,7 @@
       "minzoom": 8,
       "filter": ["all", ["==", "type", "secondary"], ["==", "tunnel", 1]],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2476,12 +2448,12 @@
       "minzoom": 6,
       "filter": ["all", ["==", "type", "primary"], ["==", "tunnel", 1]],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(241, 218, 187, 1)",
+        "line-color": "rgba(222, 222, 222, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -2506,12 +2478,12 @@
         ["==", "tunnel", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "butt",
         "line-join": "miter"
       },
       "paint": {
-        "line-color": "rgba(240, 197, 188, 1)",
+        "line-color": "rgba(197, 197, 197, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -2531,7 +2503,7 @@
       "minzoom": 12,
       "maxzoom": 24,
       "filter": ["in", "type", "raceway"],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(255, 249, 241, 1)",
         "line-width": [
@@ -2554,7 +2526,7 @@
       "minzoom": 14,
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "track"]],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "#b3b3b3",
         "line-width": [
@@ -2576,7 +2548,7 @@
       "minzoom": 14,
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "track"]],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(251, 247, 245, 1)",
         "line-width": [
@@ -2598,7 +2570,7 @@
       "minzoom": 14,
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "track"]],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "#b3b3b3",
         "line-dasharray": [0.3, 1],
@@ -2621,7 +2593,7 @@
       "minzoom": 14,
       "maxzoom": 24,
       "filter": ["all", ["in", "type", "living_street"]],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-width": [
@@ -2644,7 +2616,7 @@
       "maxzoom": 24,
       "filter": ["all", ["in", "type", "footway", "cycleway", "path"]],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "square",
         "line-join": "round"
       },
@@ -2670,7 +2642,7 @@
       "minzoom": 14,
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "pier"]],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "#ffffff",
         "line-width": [
@@ -2692,7 +2664,7 @@
       "minzoom": 14,
       "maxzoom": 24,
       "filter": ["all", ["in", "type", "steps"]],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "#b3b3b3",
         "line-width": [
@@ -2720,7 +2692,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2745,7 +2717,7 @@
       "minzoom": 14,
       "maxzoom": 24,
       "filter": ["all", ["in", "type", "pedestrian"]],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "#D2D2D5",
         "line-width": [
@@ -2773,7 +2745,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2808,7 +2780,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2842,7 +2814,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "butt",
         "line-join": "round"
       },
@@ -2874,7 +2846,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2906,7 +2878,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2937,12 +2909,12 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(250, 178, 107, 1)",
+        "line-color": "rgba(176, 175, 173, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -2972,12 +2944,12 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(230, 143, 124, 1)",
+        "line-color": "rgba(180, 176, 176, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3003,12 +2975,12 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(230, 143, 124, 1)",
+        "line-color": "rgba(180, 176, 176, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3033,7 +3005,7 @@
         ["!in", "class", "railway"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -3063,7 +3035,7 @@
         ["in", "type", "residential", "service", "unclassified"]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -3088,7 +3060,7 @@
       "minzoom": 14,
       "maxzoom": 24,
       "filter": ["all", ["in", "type", "pedestrian"]],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "#ffffff",
         "line-width": [
@@ -3115,7 +3087,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -3145,7 +3117,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -3179,12 +3151,12 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(241, 218, 187, 1)",
+        "line-color": "rgba(240, 239, 238, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3210,12 +3182,12 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(254, 224, 217, 1)",
+        "line-color": "#D3D3D3",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3243,7 +3215,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -3277,7 +3249,7 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "butt",
         "line-join": "round"
       },
@@ -3308,20 +3280,12 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          0,
-          "rgba(242, 167, 4, 1)",
-          9,
-          "rgba(255, 236, 211, 1)"
-        ],
+        "line-color": "rgba(240, 239, 238, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3349,18 +3313,12 @@
         ["!=", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": [
-          "step",
-          ["zoom"],
-          "rgba(254, 194, 182, 1)",
-          9,
-          "rgba(254, 224, 217, 1)"
-        ],
+        "line-color": "rgba(211, 211, 211, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3383,7 +3341,7 @@
       "source-layer": "transport_lines",
       "minzoom": 9,
       "filter": ["all", ["==", "ford", "yes"]],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "#ffffff",
         "line-width": [
@@ -3411,7 +3369,7 @@
         ["==", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "butt",
         "line-join": "round"
       },
@@ -3436,7 +3394,7 @@
       "minzoom": 9,
       "filter": ["all", ["==", "type", "tertiary"], ["==", "bridge", 1]],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "butt",
         "line-join": "round"
       },
@@ -3461,7 +3419,7 @@
       "minzoom": 10,
       "filter": ["all", ["==", "type", "secondary"], ["==", "bridge", 1]],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "butt",
         "line-join": "round"
       },
@@ -3492,11 +3450,11 @@
       ],
       "layout": {
         "line-cap": "butt",
-        "visibility": "none",
+        "visibility": "visible",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(248, 187, 127, 1)",
+        "line-color": "rgba(176, 175, 173, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3521,12 +3479,12 @@
         ["==", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(232, 159, 143, 1)",
+        "line-color": "rgba(180, 176, 176, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3551,7 +3509,7 @@
         ["==", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -3577,7 +3535,7 @@
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "tertiary"], ["==", "bridge", 1]],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "butt",
         "line-join": "round"
       },
@@ -3604,7 +3562,7 @@
       "minzoom": 8,
       "filter": ["all", ["==", "type", "secondary"], ["==", "bridge", 1]],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -3631,20 +3589,12 @@
       "minzoom": 6,
       "filter": ["all", ["in", "type", "primary"], ["==", "bridge", 1]],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          0,
-          "rgba(242, 175, 4, 1)",
-          12,
-          "rgba(255, 236, 211, 1)"
-        ],
+        "line-color": "rgba(240, 239, 238, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3669,18 +3619,12 @@
         ["==", "bridge", 1]
       ],
       "layout": {
-        "visibility": "none",
+        "visibility": "visible",
         "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
-        "line-color": [
-          "step",
-          ["zoom"],
-          "rgba(252, 194, 182, 1)",
-          9,
-          "rgba(254, 224, 217, 1)"
-        ],
+        "line-color": "rgba(211, 211, 211, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3791,7 +3735,7 @@
         ["in", "type", "miniature", "narrow_gauge"],
         ["!in", "service", "yard", "siding"]
       ],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-width": [
@@ -3850,7 +3794,7 @@
         ["in", "type", "dismantled", "abandoned", "disused", "razed"],
         ["!in", "service", "yard", "siding"]
       ],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-width": [
@@ -4523,41 +4467,6 @@
           9
         ],
         "line-dasharray": {"stops": [[13, [0.2, 1]], [14, [0.2, 0.75]]]}
-      }
-    },
-    {
-      "id": "roads_rail_construction-dash",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines",
-      "minzoom": 7,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        ["in", "type", "construction", "proposed"],
-        ["in", "class", "railway"]
-      ],
-      "layout": {
-        "visibility": "none",
-        "line-cap": "square",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "rgba(255, 255, 255, 1)",
-        "line-width": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          12,
-          0.5,
-          13,
-          0.75,
-          14,
-          1,
-          20,
-          1.5
-        ],
-        "line-dasharray": [2, 2]
       }
     },
     {
