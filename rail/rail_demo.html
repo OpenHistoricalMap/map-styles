@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>OpenHistoricalMap :: Leaflet MBGL TimeSlider Control Demo</title>
+
+    <!-- Leaflet and Mapbox GL JS API, the the adapter for using MB within L -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css" rel="stylesheet" />
+
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css" rel="stylesheet" />
+
+    <script src="https://unpkg.com/mapbox-gl-leaflet@0.0.15/leaflet-mapbox-gl.js"></script>
+
+    <!-- the timeslider control and suporting DecimalDate library -->
+    <!-- pick either the minified or full-length version -->
+    <script src="https://openhistoricalmap.github.io/leaflet-ohm-timeslider-v2/decimaldate.js"></script>
+    <script src="https://openhistoricalmap.github.io/leaflet-ohm-timeslider-v2/leaflet-ohm-timeslider.js"></script>
+    <link href="https://openhistoricalmap.github.io/leaflet-ohm-timeslider-v2/leaflet-ohm-timeslider.css" rel="stylesheet" />
+    <!--
+    <script src="decimaldate.min.js"></script>
+    <script src="leaflet-ohm-timeslider.min.js"></script>
+    <link href="leaflet-ohm-timeslider.min.css" rel="stylesheet" />
+    -->
+
+    <script src="rail.js"></script>
+
+
+</head>
+<body>
+
+
+    <div id="map"></div>
+
+
+    <div id="languagepicker"></div>
+
+
+    <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      background-color: #ccc;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #languagepicker {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-bottom-left-radius: 5px;
+        background: white;
+        color: black;
+
+        z-index: 1000;
+
+        padding: 0 0 0.5em 0.5em;
+    }
+    #languagepicker label {
+        display: block;
+    }
+    </style>
+
+
+    <script>
+    const START_ZOOM = 7.0;
+    const START_CENTER = [ 42.423457,-87.110596 ];
+
+    let MAP, TIMESLIDER, OHMLAYER;
+
+    document.addEventListener('DOMContentLoaded', function () {
+        MAP = L.map('map', {
+            zoomSnap: 0.1,
+        })
+        .setView(START_CENTER, START_ZOOM);
+
+        L.control.scale().addTo(MAP);
+
+        OHMLAYER = new L.MapboxGL({
+            attribution: "<a href='http://wiki.openstreetmap.org/wiki/OHM'>OHM</a>",
+            style: OHM_RAIL_STYLE,
+            accessToken: "no-token",
+        });
+        OHMLAYER.addTo(MAP);
+
+        const tsoptions = {
+            vectorLayer: OHMLAYER,
+            vectorSourceName: 'osm',
+            range: ['1850-01-01', '2020-12-31'],
+            date: '1900-01-01',
+            stepInterval: 1,
+            stepAmount: '10year',
+            onDateChange: function (date) {
+                console.debug(['timeslider.js onDateChange', date, this]);
+            },
+            onRangeChange: function (range) {
+                console.debug(['timeslider.js onRangeChange', range, this]);
+            },
+            onReady: function () {
+                console.debug(['timeslider.js onReady', this]);
+            },
+        };
+        const selectedlanguage = (new URLSearchParams(document.location.search)).get('lang');
+        if (selectedlanguage) {
+            tsoptions.language = selectedlanguage;
+        }
+        TIMESLIDER = new L.Control.OHMTimeSlider(tsoptions).addTo(MAP);
+
+        // add the list of languages to the language picker display
+        const languageoptions = TIMESLIDER.listLanguages().slice();
+        languageoptions.splice(0, 0, 'auto');
+
+        languageoptions.forEach(function (language) {
+            const div = document.createElement('label');
+
+            const txt = document.createElement('span');
+            txt.innerText = language;
+
+            const cb = document.createElement('input');
+            cb.type = 'radio';
+            cb.name = 'language';
+            cb.value = language;
+            if (language == selectedlanguage || (!selectedlanguage && language == 'auto')) cb.checked = true;
+
+            div.appendChild(txt);
+            div.appendChild(cb);
+            document.getElementById('languagepicker').appendChild(div);
+
+            cb.addEventListener('change', function () {
+                const newlanguage = this.value;
+                document.location.search = '?lang=' + newlanguage;
+            });
+        });
+    });
+    </script>
+
+</body>
+</html>
