@@ -3940,7 +3940,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
+        ["in", "type", "rail", "light_rail", "subway", "preserved"],
         ["==", "bridge", 1]
       ],
       "layout": {
