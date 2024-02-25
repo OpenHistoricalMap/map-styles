@@ -3954,6 +3954,61 @@
       }
     },
     {
+      "id": "roads_subway-tunnel",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": ["all", ["in", "type", "subway"], ["==", "tunnel", 1]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(134, 167, 229, 1)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 6, 3.5, 7, 4, 20, 9]
+      }
+    },
+    {
+      "id": "roads_subway-tunnel-dash",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": ["all", ["in", "type", "subway"], ["==", "tunnel", 1]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": {
+          "stops": [
+            [10.5, "rgba(255, 255, 255, 1)"],
+            [14, "rgba(207, 207, 207, 1)"],
+            [15, "rgba(184, 184, 184, 1)"]
+          ]
+        },
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          6,
+          2,
+          7,
+          2.5,
+          20,
+          7
+        ],
+        "line-dasharray": {
+          "stops": [[6, [0.75, 2]], [11, [0.75, 2.5]], [14, [0.75, 3]]]
+        }
+      }
+    },
+    {
       "id": "roads_rail-tunnel",
       "type": "line",
       "source": "osm",
@@ -4231,6 +4286,104 @@
       }
     },
     {
+      "id": "roads_light_rail",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7.5,
+      "maxzoom": 24,
+      "filter": ["all", ["in", "type", "light_rail"]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(0, 160, 13, 0.86)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 6, 3, 7, 4, 20, 10]
+      }
+    },
+    {
+      "id": "roads_light_rail-dash",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7.5,
+      "maxzoom": 24,
+      "filter": ["all", ["in", "type", "light_rail"]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          6,
+          1.5,
+          7,
+          2.5,
+          20,
+          7
+        ],
+        "line-dasharray": {
+          "stops": [[6, [0.5, 2]], [11, [0.75, 2.5]], [14, [0.75, 3]]]
+        }
+      }
+    },
+    {
+      "id": "roads_subway",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": ["all", ["in", "type", "subway"], ["!=", "tunnel", 1]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(10, 19, 226, 0.81)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 6, 3, 7, 4, 20, 10]
+      }
+    },
+    {
+      "id": "roads_subway-dash",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": ["all", ["in", "type", "subway"], ["!=", "tunnel", 1]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          6,
+          1.5,
+          7,
+          2.5,
+          20,
+          7
+        ],
+        "line-dasharray": {
+          "stops": [[6, [0.5, 2]], [11, [0.75, 2.5]], [14, [0.75, 3]]]
+        }
+      }
+    },
+    {
       "id": "roads_rail-branch",
       "type": "line",
       "source": "osm",
@@ -4367,7 +4520,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
+        ["in", "type", "rail", "preserved"],
         ["!in", "service", "yard", "siding"],
         ["!=", "name", "usage=main"],
         ["!=", "name", "usage=industrial"],
@@ -4397,7 +4550,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
+        ["in", "type", "rail", "preserved"],
         ["!in", "service", "yard", "siding"],
         ["!=", "name", "usage=main"],
         ["!=", "name", "usage=industrial"],
