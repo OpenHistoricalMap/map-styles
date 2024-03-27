@@ -5062,7 +5062,7 @@
       "filter": ["all"],
       "layout": {
         "icon-image": "{tourism}-18",
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": "{name}",
         "text-size": {"stops": [[16, 10], [20, 12]]},
         "text-anchor": "center",
@@ -5105,7 +5105,7 @@
       ],
       "layout": {
         "icon-image": "{type}-12",
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
@@ -5130,7 +5130,7 @@
       "filter": ["all"],
       "layout": {
         "icon-image": "{type}-18",
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": "{name}",
         "text-size": {"stops": [[15.99, 0], [16, 10], [20, 12]]},
         "text-anchor": "top",
@@ -5156,7 +5156,7 @@
       "filter": ["all"],
       "layout": {
         "icon-image": "{type}-18",
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
@@ -5180,7 +5180,7 @@
       "filter": ["all"],
       "layout": {
         "icon-image": "{type}-18",
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": "{name}",
         "text-size": {"stops": [[15.99, 0], [16, 10], [20, 12]]},
         "text-anchor": "top",
@@ -5207,7 +5207,7 @@
       "filter": ["all", ["!in", "type", "artwork"]],
       "layout": {
         "icon-image": "{type}-18",
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": "{name}",
         "text-size": {"stops": [[15.99, 0], [16, 10], [20, 12]]},
         "text-offset": [0, 1],
@@ -5267,7 +5267,7 @@
       "filter": ["all", ["==", "type", "artwork"]],
       "layout": {
         "icon-image": "{artwork_type}-18",
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": "{name}",
         "text-size": {"stops": [[15.99, 0], [16, 10], [20, 12]]},
         "text-anchor": "top",
