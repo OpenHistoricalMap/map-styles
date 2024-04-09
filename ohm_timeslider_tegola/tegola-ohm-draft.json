@@ -3692,10 +3692,10 @@
       }
     },
     {
-      "id": "transport-line-relations",
+      "id": "transport-line-relation",
       "type": "line",
       "source": "osm",
-      "source-layer": "transport_lines_relations",
+      "source-layer": "transport_lines_relation",
       "minzoom": 7,
       "maxzoom": 24,
       "filter": ["any"],
