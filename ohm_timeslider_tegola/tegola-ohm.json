@@ -539,6 +539,26 @@
       }
     },
     {
+      "id": "ferry_lines",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "filter": ["all", ["==", "type", "ferry"]],
+      "paint": {
+        "line-color": "rgba(115, 191, 191, 1)",
+        "line-width": {"stops": [[10, 1], [20, 3]]},
+        "line-dasharray": {
+          "stops": [
+            [14, [2, 1]],
+            [15, [4, 1.25]],
+            [16, [6, 1.5]],
+            [17, [10, 1.75]],
+            [18, [16, 2]]
+          ]
+        }
+      }
+    },
+    {
       "id": "place_areas_islet",
       "type": "fill",
       "source": "osm",
