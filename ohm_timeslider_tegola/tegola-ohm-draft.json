@@ -539,6 +539,26 @@
       }
     },
     {
+      "id": "ferry_lines",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "filter": ["all", ["==", "type", "ferry"]],
+      "paint": {
+        "line-color": "rgba(115, 191, 191, 1)",
+        "line-width": {"stops": [[10, 1], [20, 3]]},
+        "line-dasharray": {
+          "stops": [
+            [14, [2, 1]],
+            [15, [4, 1.25]],
+            [16, [6, 1.5]],
+            [17, [10, 1.75]],
+            [18, [16, 2]]
+          ]
+        }
+      }
+    },
+    {
       "id": "place_areas_islet",
       "type": "fill",
       "source": "osm",
@@ -3692,21 +3712,6 @@
       }
     },
     {
-      "id": "transport-line-relation",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines_relation",
-      "minzoom": 7,
-      "maxzoom": 24,
-      "filter": ["any"],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "square",
-        "line-join": "round"
-      },
-      "paint": {"line-color": "rgba(255, 11, 63, 1)", "line-width": 3}
-    },
-    {
       "id": "roads_rail",
       "type": "line",
       "source": "osm",
@@ -5099,18 +5104,18 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "transport_points",
-      "minzoom": 16,
+      "minzoom": 14,
       "maxzoom": 24,
       "filter": ["all"],
       "layout": {
         "icon-image": "{type}-18",
         "visibility": "visible",
         "text-field": "{name}",
-        "text-size": {"stops": [[15.99, 0], [16, 8], [20, 10]]},
+        "text-size": {"stops": [[14, 8], [18, 10]]},
         "text-anchor": "top",
-        "text-offset": [0, 1],
+        "text-offset": [0, 0.75],
         "text-font": ["OpenHistorical"],
-        "icon-size": {"stops": [[16, 1], [20, 1.4]]}
+        "icon-size": {"stops": [[14, 0.75], [20, 1.4]]}
       },
       "paint": {
         "icon-color": "#000000",
@@ -5118,7 +5123,7 @@
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 0.5,
         "text-halo-blur": 1,
-        "text-opacity": {"stops": [[16.99, 0], [17, 1]]}
+        "text-opacity": {"stops": [[13.99, 0], [14, 1]]}
       }
     },
     {

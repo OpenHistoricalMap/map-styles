@@ -5104,18 +5104,18 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "transport_points",
-      "minzoom": 16,
+      "minzoom": 14,
       "maxzoom": 24,
       "filter": ["all"],
       "layout": {
         "icon-image": "{type}-18",
         "visibility": "visible",
         "text-field": "{name}",
-        "text-size": {"stops": [[15.99, 0], [16, 8], [20, 10]]},
+        "text-size": {"stops": [[14, 8], [18, 10]]},
         "text-anchor": "top",
-        "text-offset": [0, 1],
+        "text-offset": [0, 0.75],
         "text-font": ["OpenHistorical"],
-        "icon-size": {"stops": [[16, 1], [20, 1.4]]}
+        "icon-size": {"stops": [[14, 0.75], [20, 1.4]]}
       },
       "paint": {
         "icon-color": "#000000",
@@ -5123,7 +5123,7 @@
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 0.5,
         "text-halo-blur": 1,
-        "text-opacity": {"stops": [[16.99, 0], [17, 1]]}
+        "text-opacity": {"stops": [[13.99, 0], [14, 1]]}
       }
     },
     {
