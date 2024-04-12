@@ -3712,6 +3712,21 @@
       }
     },
     {
+      "id": "transport-lines-relation",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines_relation",
+      "minzoom": 0,
+      "maxzoom": 24,
+      "filter": ["all"],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {"line-color": "rgba(216, 25, 80, 1)", "line-width": 3}
+    },
+    {
       "id": "roads_rail",
       "type": "line",
       "source": "osm",
