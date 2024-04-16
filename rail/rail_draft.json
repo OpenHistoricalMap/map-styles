@@ -3663,20 +3663,56 @@
       }
     },
     {
-      "id": "roads_rail_tram_construction",
+      "id": "roads_subway-tunnels-halo",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        ["in", "type", "tram", "funicular", "monorail"],
-        ["!in", "service", "yard", "siding"]
-      ],
-      "layout": {"visibility": "visible", "line-cap": "square"},
+      "filter": ["all", ["in", "type", "subway"], ["==", "tunnel", 1]],
+      "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(207, 153, 235, 1)",
+        "line-color": "rgba(170, 180, 211, 1)",
+        "line-width": {"stops": [[12, 3], [13, 3], [14, 3.5], [20, 4.5]]}
+      }
+    },
+    {
+      "id": "roads_subways-tunnel-tick",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 10,
+      "filter": ["all", ["in", "type", "subway"], ["==", "tunnel", 1]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(244, 255, 255, 1)",
+        "line-width": {"stops": [[13, 4], [14, 5], [20, 9]]},
+        "line-dasharray": [0.15, 3]
+      }
+    },
+    {
+      "id": "roads_subway-tunnels",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "filter": ["all", ["in", "type", "subway"], ["==", "tunnel", 1]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(244, 255, 255, 1)",
+        "line-width": {"stops": [[13, 1], [14, 0.5], [20, 2.25]]},
+        "line-dasharray": {"stops": [[13, [3, 2]], [14, [3, 2]]]}
+      }
+    },
+    {
+      "id": "roads_subways-tick",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 10,
+      "filter": ["all", ["in", "type", "subway"], ["!=", "tunnel", 1]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(138, 156, 234, 1)",
         "line-width": {"stops": [[13, 4], [14, 5], [20, 9]]},
         "line-dasharray": {"stops": [[13, [0.15, 3]], [14, [0.15, 4]]]}
       }
@@ -3686,13 +3722,13 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 14,
-      "filter": ["all", ["in", "type", "subway"]],
+      "minzoom": 7,
+      "filter": ["all", ["in", "type", "subway"], ["!=", "tunnel", 1]],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(166, 170, 187, 1)",
-        "line-width": {"stops": [[12, 1], [13, 1], [14, 1.25], [20, 2.25]]},
-        "line-dasharray": [4, 1]
+        "line-color": "rgba(138, 156, 234, 1)",
+        "line-width": {"stops": [[13, 1], [14, 0.5], [20, 2.25]]},
+        "line-dasharray": {"stops": [[13, [3, 2]], [14, [3, 2]]]}
       }
     },
     {
@@ -4450,6 +4486,25 @@
       }
     },
     {
+      "id": "roads_rail_tram_tick",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "tram", "funicular", "monorail"],
+        ["!in", "service", "yard", "siding"]
+      ],
+      "layout": {"visibility": "visible", "line-cap": "square"},
+      "paint": {
+        "line-color": "rgba(192, 123, 236, 1)",
+        "line-width": {"stops": [[13, 4], [14, 5], [20, 9]]},
+        "line-dasharray": {"stops": [[13, [0.15, 3]], [14, [0.15, 4]]]}
+      }
+    },
+    {
       "id": "roads_rail_tram",
       "type": "line",
       "source": "osm",
@@ -4467,7 +4522,7 @@
         "line-join": "miter"
       },
       "paint": {
-        "line-color": "rgba(214, 124, 229, 1)",
+        "line-color": "rgba(192, 123, 236, 1)",
         "line-width": {"stops": [[13, 1], [14, 0.5], [20, 2.25]]},
         "line-dasharray": {"stops": [[13, [3, 2]], [14, [3, 2]]]}
       }
@@ -5062,7 +5117,7 @@
       "filter": ["all"],
       "layout": {
         "icon-image": "{tourism}-18",
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": "{name}",
         "text-size": {"stops": [[16, 10], [20, 12]]},
         "text-anchor": "center",
@@ -5105,7 +5160,7 @@
       ],
       "layout": {
         "icon-image": "{type}-12",
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
@@ -5130,7 +5185,7 @@
       "filter": ["all"],
       "layout": {
         "icon-image": "{type}-18",
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": "{name}",
         "text-size": {"stops": [[15.99, 0], [16, 10], [20, 12]]},
         "text-anchor": "top",
@@ -5156,7 +5211,7 @@
       "filter": ["all"],
       "layout": {
         "icon-image": "{type}-18",
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": "{name}",
         "text-size": 8,
         "text-anchor": "top",
@@ -5180,7 +5235,7 @@
       "filter": ["all"],
       "layout": {
         "icon-image": "{type}-18",
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": "{name}",
         "text-size": {"stops": [[15.99, 0], [16, 10], [20, 12]]},
         "text-anchor": "top",
@@ -5207,7 +5262,7 @@
       "filter": ["all", ["!in", "type", "artwork"]],
       "layout": {
         "icon-image": "{type}-18",
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": "{name}",
         "text-size": {"stops": [[15.99, 0], [16, 10], [20, 12]]},
         "text-offset": [0, 1],
@@ -5267,7 +5322,7 @@
       "filter": ["all", ["==", "type", "artwork"]],
       "layout": {
         "icon-image": "{artwork_type}-18",
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": "{name}",
         "text-size": {"stops": [[15.99, 0], [16, 10], [20, 12]]},
         "text-anchor": "top",
