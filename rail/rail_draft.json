@@ -3741,7 +3741,7 @@
       "filter": [
         "all",
         ["in", "type", "miniature", "narrow_gauge"],
-        ["!in", "service", "yard", "siding"]
+        ["!in", "service", "yard", "siding", "spur"]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -3759,7 +3759,7 @@
       "filter": [
         "all",
         ["in", "type", "miniature", "narrow_gauge"],
-        ["!in", "service", "yard", "siding"]
+        ["!in", "service", "yard", "siding", "spur"]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -3815,7 +3815,7 @@
       "filter": [
         "all",
         ["==", "usage", "main"],
-        ["!in", "service", "yard", "siding"],
+        ["!in", "service", "yard", "siding", "spur"],
         ["in", "type", "rail", "light_rail", "preserved"]
       ],
       "layout": {
@@ -3839,7 +3839,7 @@
         "all",
         ["==", "usage", "main"],
         ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"]
+        ["!in", "service", "yard", "siding", "spur"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4094,7 +4094,7 @@
       "filter": [
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"],
+        ["!in", "service", "yard", "siding", "spur"],
         ["==", "usage", "tourism"]
       ],
       "layout": {
@@ -4127,7 +4127,7 @@
       "filter": [
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"],
+        ["!in", "service", "yard", "siding", "spur"],
         ["==", "usage", "tourism"]
       ],
       "layout": {
@@ -4163,7 +4163,7 @@
       "filter": [
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"],
+        ["!in", "service", "yard", "siding", "spur"],
         ["==", "usage", "military"]
       ],
       "layout": {
@@ -4196,7 +4196,7 @@
       "filter": [
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"],
+        ["!in", "service", "yard", "siding", "spur"],
         ["==", "usage", "military"]
       ],
       "layout": {
@@ -4232,7 +4232,7 @@
       "filter": [
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"],
+        ["!in", "service", "yard", "siding", "spur"],
         ["==", "usage", "branch"]
       ],
       "layout": {
@@ -4255,7 +4255,7 @@
       "filter": [
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"],
+        ["!in", "service", "yard", "siding", "spur"],
         ["==", "usage", "branch"]
       ],
       "layout": {
@@ -4291,7 +4291,7 @@
       "filter": [
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"],
+        ["!in", "service", "yard", "siding", "spur"],
         ["==", "usage", "industrial"]
       ],
       "layout": {
@@ -4324,7 +4324,7 @@
       "filter": [
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"],
+        ["!in", "service", "yard", "siding", "spur"],
         ["==", "usage", "industrial"]
       ],
       "layout": {
@@ -4360,7 +4360,7 @@
       "filter": [
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"],
+        ["!in", "service", "yard", "siding", "spur"],
         ["!=", "usage", "main"],
         ["!=", "usage", "industrial"],
         ["!=", "usage", "branch"],
@@ -4390,7 +4390,7 @@
       "filter": [
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"],
+        ["!in", "service", "yard", "siding", "spur"],
         ["!=", "usage", "main"],
         ["!=", "usage", "ndustrial"],
         ["!=", "usage", "branch"],
@@ -4461,7 +4461,7 @@
       "filter": [
         "all",
         ["in", "type", "tram", "funicular", "monorail"],
-        ["!in", "service", "yard", "siding"]
+        ["!in", "service", "yard", "siding", "spur"]
       ],
       "layout": {
         "visibility": "visible",
