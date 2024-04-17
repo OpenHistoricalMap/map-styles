@@ -3881,14 +3881,14 @@
           12,
           0.5,
           14,
-          2,
+          0.75,
           20,
           4
         ]
       }
     },
     {
-      "id": "roads_rail-yard-siding-dash",
+      "id": "roads_rail-yard-siding-tick",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -3907,20 +3907,8 @@
             [14, "rgba(109, 111, 113, 1)"]
           ]
         },
-        "line-width": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          6,
-          1.5,
-          12,
-          3,
-          20,
-          10
-        ],
-        "line-dasharray": {
-          "stops": [[6, [0.5, 2]], [12, [0.15, 3]], [16, [0.15, 2]]]
-        }
+        "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1, 20, 10],
+        "line-dasharray": {"stops": [[12, [0.15, 3]], [16, [0.15, 2]]]}
       }
     },
     {
@@ -4042,14 +4030,14 @@
           12,
           0.5,
           14,
-          2,
+          0.75,
           20,
           4
         ]
       }
     },
     {
-      "id": "roads_rail-spur-dash",
+      "id": "roads_rail-spur-tick",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -4068,20 +4056,8 @@
       },
       "paint": {
         "line-color": {"stops": [[13, "#DBDBDB"], [14, "#949599"]]},
-        "line-width": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          6,
-          1.5,
-          12,
-          3,
-          20,
-          10
-        ],
-        "line-dasharray": {
-          "stops": [[6, [0.5, 2]], [12, [0.15, 3]], [16, [0.15, 2]]]
-        }
+        "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1, 20, 10],
+        "line-dasharray": {"stops": [[12, [0.15, 3]], [16, [0.15, 2]]]}
       }
     },
     {
