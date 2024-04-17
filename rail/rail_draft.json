@@ -3782,20 +3782,8 @@
       ],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(210, 190, 190, 1)",
-        "line-width": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          12,
-          0.5,
-          13,
-          0.75,
-          14,
-          1,
-          20,
-          1.5
-        ]
+        "line-color": "rgba(209, 192, 192, 1)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 6, 2, 7, 3, 20, 7]
       }
     },
     {
@@ -3813,20 +3801,8 @@
       "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
-        "line-width": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          12,
-          0.5,
-          13,
-          0.75,
-          14,
-          1,
-          20,
-          1.5
-        ],
-        "line-dasharray": [2, 2]
+        "line-width": ["interpolate", ["linear"], ["zoom"], 6, 1, 20, 5],
+        "line-dasharray": {"stops": [[6, [1.15, 3]], [10, [1.25, 4]]]}
       }
     },
     {
@@ -4324,7 +4300,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(136, 195, 234, 1)",
+        "line-color": "rgba(155, 221, 174, 1)",
         "line-width": [
           "interpolate",
           ["linear"],
@@ -4471,18 +4447,8 @@
             [14, "rgba(199, 204, 213, 1)"]
           ]
         },
-        "line-width": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          13,
-          3,
-          14,
-          5,
-          20,
-          9
-        ],
-        "line-dasharray": {"stops": [[13, [0.2, 1]], [14, [0.2, 0.75]]]}
+        "line-width": ["interpolate", ["linear"], ["zoom"], 6, 1, 20, 5],
+        "line-dasharray": {"stops": [[6, [1.15, 2]], [10, [1.25, 2]]]}
       }
     },
     {
