@@ -2265,7 +2265,17 @@
       "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(204, 217, 242, 1)",
-        "line-width": {"stops": [[12, 2.5], [14, 4.5], [20, 7]]}
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          2.5,
+          14,
+          4.5,
+          20,
+          7
+        ]
       }
     },
     {
@@ -2278,7 +2288,7 @@
       "layout": {"visibility": "none"},
       "paint": {
         "line-color": "rgba(156, 164, 197, 1)",
-        "line-width": {"stops": [[16, 3], [20, 9]]},
+        "line-width": ["interpolate", ["linear"], ["zoom"], 16, 3, 20, 9],
         "line-dasharray": {"stops": [[14, [0.3, 3]], [18, [0.15, 3]]]}
       }
     },
@@ -2294,6 +2304,53 @@
         "line-color": "rgba(91, 107, 217, 1)",
         "line-width": {"stops": [[14, 1], [20, 3]]},
         "line-dasharray": [3, 2]
+      }
+    },
+    {
+      "id": "roads_light_rail-tunnel-halo",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "type", "light_rail"],
+        ["==", "tunnel", 1],
+        ["!=", "bridge", 1]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(252, 241, 216, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          2.5,
+          14,
+          4.5,
+          20,
+          7
+        ]
+      }
+    },
+    {
+      "id": "roads_light_rail-tunnel",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "type", "light_rail"],
+        ["==", "tunnel", 1],
+        ["!=", "bridge", 1]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(246, 183, 64, 1)",
+        "line-width": {"stops": [[14, 1], [20, 3]]},
+        "line-dasharray": [6, 4]
       }
     },
     {
@@ -2545,7 +2602,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
+        ["in", "type", "rail", "preserved"],
         ["==", "tunnel", 1]
       ],
       "layout": {
@@ -2569,7 +2626,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
+        ["in", "type", "rail", "preserved"],
         ["==", "tunnel", 1]
       ],
       "layout": {
@@ -3463,6 +3520,130 @@
       }
     },
     {
+      "id": "roads_rail-subway-bridge-case",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": ["all", ["in", "type", "subway"], ["==", "bridge", 1]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(73, 85, 158, 1)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 11, 1, 20, 2],
+        "line-gap-width": 5
+      }
+    },
+    {
+      "id": "roads_rail-bridge-case",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "rail", "preserved"],
+        ["==", "bridge", 1]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(46, 46, 46, 1)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 9, 5, 11, 8, 20, 14]
+      }
+    },
+    {
+      "id": "roads_subways_construction",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "type", "construction"],
+        ["in", "construction", "subway"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(153, 153, 153, 1)",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.5],
+          ["zoom"],
+          11,
+          0.5,
+          18,
+          4
+        ],
+        "line-dasharray": [4, 1]
+      }
+    },
+    {
+      "id": "roads_subways-bridge",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "type", "subway"],
+        ["!=", "tunnel", 1],
+        ["==", "bridge", 1]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(121, 145, 248, 1)",
+        "line-width": {"stops": [[14, 1], [20, 3]]},
+        "line-dasharray": [3, 2]
+      }
+    },
+    {
+      "id": "roads_light-rail-bridge-case",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "type", "light_rail"],
+        ["!=", "tunnel", 1],
+        ["==", "bridge", 1]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(201, 139, 25, 1)",
+        "line-width": {"stops": [[14, 1], [20, 2]]},
+        "line-gap-width": 6
+      }
+    },
+    {
+      "id": "roads_light-rail-bridge",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "type", "light_rail"],
+        ["!=", "tunnel", 1],
+        ["==", "bridge", 1]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(246, 183, 64, 1)",
+        "line-width": {"stops": [[14, 1], [20, 3]]},
+        "line-dasharray": [6, 4]
+      }
+    },
+    {
       "id": "roads_residential_bridge_z13-case",
       "type": "line",
       "source": "osm",
@@ -3743,51 +3924,6 @@
       }
     },
     {
-      "id": "roads_subways_construction",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        ["in", "type", "construction"],
-        ["in", "construction", "subway"]
-      ],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "line-color": "rgba(153, 153, 153, 1)",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          11,
-          0.5,
-          18,
-          4
-        ],
-        "line-dasharray": [4, 1]
-      }
-    },
-    {
-      "id": "roads_rail-subway-bridge-case",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines",
-      "minzoom": 11,
-      "maxzoom": 24,
-      "filter": ["all", ["in", "type", "subway"], ["==", "bridge", 1]],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "square",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "rgba(73, 85, 158, 1)",
-        "line-width": ["interpolate", ["linear"], ["zoom"], 11, 1, 20, 2],
-        "line-gap-width": 5
-      }
-    },
-    {
       "id": "roads_subways-tick",
       "type": "line",
       "source": "osm",
@@ -3799,6 +3935,25 @@
         "line-color": "rgba(138, 156, 234, 1)",
         "line-width": {"stops": [[13, 4], [14, 5], [20, 9]]},
         "line-dasharray": {"stops": [[13, [0.15, 3]], [14, [0.15, 4]]]}
+      }
+    },
+    {
+      "id": "roads_light_rail",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "type", "light_rail"],
+        ["!=", "tunnel", 1],
+        ["!=", "bridge", 1]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(246, 183, 64, 1)",
+        "line-width": {"stops": [[14, 1], [20, 3]]},
+        "line-dasharray": [6, 4]
       }
     },
     {
@@ -3905,7 +4060,7 @@
         "all",
         ["==", "usage", "main"],
         ["!in", "service", "yard", "siding", "spur"],
-        ["in", "type", "rail", "light_rail", "preserved"]
+        ["in", "type", "rail", "preserved"]
       ],
       "layout": {
         "visibility": "visible",
@@ -3927,7 +4082,7 @@
       "filter": [
         "all",
         ["==", "usage", "main"],
-        ["in", "type", "rail", "light_rail", "preserved"],
+        ["in", "type", "rail", "preserved"],
         ["!in", "service", "yard", "siding", "spur"]
       ],
       "layout": {
@@ -4061,7 +4216,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
+        ["in", "type", "rail", "preserved"],
         ["!in", "service", "yard", "siding", "spur"],
         ["==", "usage", "tourism"]
       ],
@@ -4094,7 +4249,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
+        ["in", "type", "rail", "preserved"],
         ["!in", "service", "yard", "siding", "spur"],
         ["==", "usage", "tourism"]
       ],
@@ -4130,7 +4285,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
+        ["in", "type", "rail", "preserved"],
         ["!in", "service", "yard", "siding", "spur"],
         ["==", "usage", "military"]
       ],
@@ -4163,7 +4318,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
+        ["in", "type", "rail", "preserved"],
         ["!in", "service", "yard", "siding", "spur"],
         ["==", "usage", "military"]
       ],
@@ -4199,7 +4354,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
+        ["in", "type", "rail", "preserved"],
         ["!in", "service", "yard", "siding", "spur"],
         ["==", "usage", "branch"]
       ],
@@ -4222,7 +4377,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
+        ["in", "type", "rail", "preserved"],
         ["!in", "service", "yard", "siding", "spur"],
         ["==", "usage", "branch"]
       ],
@@ -4258,7 +4413,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
+        ["in", "type", "rail", "preserved"],
         ["!in", "service", "yard", "siding", "spur"],
         ["==", "usage", "industrial"]
       ],
@@ -4291,7 +4446,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
+        ["in", "type", "rail", "preserved"],
         ["!in", "service", "yard", "siding", "spur"],
         ["==", "usage", "industrial"]
       ],
@@ -4327,7 +4482,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
+        ["in", "type", "rail", "preserved"],
         ["!in", "service", "yard", "siding", "spur"],
         ["!=", "usage", "main"],
         ["!=", "usage", "industrial"],
@@ -4336,7 +4491,8 @@
         ["!=", "usage", "tourism"],
         ["!=", "service", "spur"],
         ["!=", "tunnel", 1],
-        ["!=", "service", "siding"]
+        ["!=", "service", "siding"],
+        ["!=", "bridge", 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -4349,6 +4505,37 @@
       }
     },
     {
+      "id": "roads_rail-bridge",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 0,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", "type", "rail", "preserved"],
+        ["!in", "service", "yard", "siding", "spur"],
+        ["!=", "usage", "main"],
+        ["!=", "usage", "industrial"],
+        ["!=", "usage", "branch"],
+        ["!=", "usage", "military"],
+        ["!=", "usage", "tourism"],
+        ["!=", "service", "spur"],
+        ["!=", "tunnel", 1],
+        ["!=", "service", "siding"],
+        ["==", "bridge", 1]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#5A6064",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 6, 3.5, 7, 4, 20, 9]
+      }
+    },
+    {
       "id": "roads_rail-dash",
       "type": "line",
       "source": "osm",
@@ -4357,7 +4544,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
+        ["in", "type", "rail", "preserved"],
         ["!in", "service", "yard", "siding", "spur"],
         ["!=", "usage", "main"],
         ["!=", "usage", "ndustrial"],
@@ -4440,47 +4627,6 @@
         "line-color": "rgba(192, 123, 236, 1)",
         "line-width": {"stops": [[13, 1], [14, 0.5], [20, 2.25]]},
         "line-dasharray": {"stops": [[13, [3, 2]], [14, [3, 2]]]}
-      }
-    },
-    {
-      "id": "roads_subways-bridge",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines",
-      "minzoom": 7,
-      "filter": [
-        "all",
-        ["in", "type", "subway"],
-        ["!=", "tunnel", 1],
-        ["==", "bridge", 1]
-      ],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "line-color": "rgba(121, 145, 248, 1)",
-        "line-width": {"stops": [[14, 1], [20, 3]]},
-        "line-dasharray": [3, 2]
-      }
-    },
-    {
-      "id": "roads_rail-bridge-case",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines",
-      "minzoom": 11,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
-        ["==", "bridge", 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "square",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "rgba(46, 46, 46, 1)",
-        "line-width": ["interpolate", ["linear"], ["zoom"], 9, 5, 11, 8, 20, 14]
       }
     },
     {
