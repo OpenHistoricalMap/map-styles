@@ -5318,7 +5318,8 @@
         "text-size": 8,
         "text-anchor": "top",
         "text-offset": [0, 1],
-        "text-font": ["OpenHistorical"]
+        "text-font": ["OpenHistorical"],
+        "icon-size": 0.9
       },
       "paint": {
         "text-color": "rgba(80, 80, 80, 1)",
