@@ -3671,8 +3671,8 @@
       "filter": ["all", ["in", "type", "subway"], ["==", "tunnel", 1]],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(170, 180, 211, 1)",
-        "line-width": {"stops": [[12, 3], [13, 3], [14, 3.5], [20, 4.5]]}
+        "line-color": "rgba(204, 217, 242, 1)",
+        "line-width": {"stops": [[12, 2.5], [14, 4.5], [20, 7]]}
       }
     },
     {
@@ -3682,11 +3682,11 @@
       "source-layer": "transport_lines",
       "minzoom": 10,
       "filter": ["all", ["in", "type", "subway"], ["==", "tunnel", 1]],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
-        "line-color": "rgba(244, 255, 255, 1)",
-        "line-width": {"stops": [[13, 4], [14, 5], [20, 9]]},
-        "line-dasharray": [0.15, 3]
+        "line-color": "rgba(156, 164, 197, 1)",
+        "line-width": {"stops": [[16, 3], [20, 9]]},
+        "line-dasharray": {"stops": [[14, [0.3, 3]], [18, [0.15, 3]]]}
       }
     },
     {
@@ -3698,9 +3698,9 @@
       "filter": ["all", ["in", "type", "subway"], ["==", "tunnel", 1]],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(244, 255, 255, 1)",
-        "line-width": {"stops": [[13, 1], [14, 0.5], [20, 2.25]]},
-        "line-dasharray": {"stops": [[13, [3, 2]], [14, [3, 2]]]}
+        "line-color": "rgba(91, 107, 217, 1)",
+        "line-width": {"stops": [[14, 1], [20, 3]]},
+        "line-dasharray": [3, 2]
       }
     },
     {
@@ -3710,7 +3710,7 @@
       "source-layer": "transport_lines",
       "minzoom": 10,
       "filter": ["all", ["in", "type", "subway"], ["!=", "tunnel", 1]],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "line-color": "rgba(138, 156, 234, 1)",
         "line-width": {"stops": [[13, 4], [14, 5], [20, 9]]},
@@ -3726,9 +3726,9 @@
       "filter": ["all", ["in", "type", "subway"], ["!=", "tunnel", 1]],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(138, 156, 234, 1)",
-        "line-width": {"stops": [[13, 1], [14, 0.5], [20, 2.25]]},
-        "line-dasharray": {"stops": [[13, [3, 2]], [14, [3, 2]]]}
+        "line-color": "rgba(121, 145, 248, 1)",
+        "line-width": {"stops": [[14, 1], [20, 3]]},
+        "line-dasharray": [3, 2]
       }
     },
     {
@@ -4497,10 +4497,10 @@
         ["in", "type", "tram", "funicular", "monorail"],
         ["!in", "service", "yard", "siding"]
       ],
-      "layout": {"visibility": "visible", "line-cap": "square"},
+      "layout": {"visibility": "none", "line-cap": "square"},
       "paint": {
         "line-color": "rgba(192, 123, 236, 1)",
-        "line-width": {"stops": [[13, 4], [14, 5], [20, 9]]},
+        "line-width": {"stops": [[13, 3], [14, 4], [20, 9]]},
         "line-dasharray": {"stops": [[13, [0.15, 3]], [14, [0.15, 4]]]}
       }
     },
