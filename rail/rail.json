@@ -17,7 +17,7 @@
       "tileSize": 256
     }
   },
-  "sprite": "https://openhistoricalmap.github.io/map-styles/ohm_timeslider_tegola/ohm_spritezero_spritesheet",
+  "sprite": "https://openhistoricalmap.github.io/map-styles/rail/rail_spritesheet",
   "glyphs": "https://openhistoricalmap.github.io/map-styles/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
