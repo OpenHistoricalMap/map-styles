@@ -671,6 +671,22 @@
       }
     },
     {
+      "id": "water_lines_canal-casing",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "water_lines",
+      "minzoom": 12,
+      "maxzoom": 24,
+      "filter": ["all", ["==", "type", "canal"]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(111, 145, 160, 1)",
+        "line-width": {"stops": [[13, 0.5], [14, 2], [20, 3]]},
+        "line-gap-width": 4,
+        "line-dasharray": [1, 1]
+      }
+    },
+    {
       "id": "water_lines_canal",
       "type": "line",
       "source": "osm",
@@ -678,9 +694,10 @@
       "minzoom": 8,
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "canal"]],
+      "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(192, 234, 234, 1)",
-        "line-width": {"stops": [[8, 0.5], [13, 0.5], [14, 1], [20, 3]]}
+        "line-color": "rgba(153, 201, 222, 1)",
+        "line-width": {"stops": [[8, 1], [13, 2], [14, 3], [20, 4]]}
       }
     },
     {
@@ -3617,7 +3634,7 @@
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
         ["!in", "service", "yard", "siding"],
-        ["==", "name", "usage=main"]
+        ["==", "usage", "main"]
       ],
       "layout": {
         "visibility": "visible",
@@ -3640,7 +3657,7 @@
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
         ["!in", "service", "yard", "siding"],
-        ["==", "name", "usage=main"]
+        ["==", "usage", "main"]
       ],
       "layout": {
         "visibility": "visible",
@@ -3712,21 +3729,6 @@
       }
     },
     {
-      "id": "transport-lines-relation",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "transport_lines_relation",
-      "minzoom": 0,
-      "maxzoom": 24,
-      "filter": ["all"],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "square",
-        "line-join": "round"
-      },
-      "paint": {"line-color": "rgba(216, 25, 80, 1)", "line-width": 3}
-    },
-    {
       "id": "roads_rail",
       "type": "line",
       "source": "osm",
@@ -3737,7 +3739,7 @@
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
         ["!in", "service", "yard", "siding"],
-        ["!=", "name", "usage=main"]
+        ["!=", "usage", "main"]
       ],
       "layout": {
         "visibility": "visible",
@@ -3765,7 +3767,7 @@
         "all",
         ["in", "type", "rail", "light_rail", "preserved"],
         ["!in", "service", "yard", "siding"],
-        ["!=", "name", "usage=main"]
+        ["!=", "usage", "main"]
       ],
       "layout": {
         "visibility": "visible",
