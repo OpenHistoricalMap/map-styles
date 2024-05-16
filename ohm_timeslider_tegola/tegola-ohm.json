@@ -342,12 +342,27 @@
             "salt_pond",
             "rgba(236, 240, 241, 1)",
             "glacier",
-            "rgba(255, 255, 255, 1)",
+            "rgba(219, 244, 249, 1)",
             "reservoir",
             "rgba(144, 204, 203, 1)",
             "transparent"
           ]
         ]
+      }
+    },
+    {
+      "id": "landuse_areas_z12_glacier-outline",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 9,
+      "maxzoom": 24,
+      "filter": ["all", ["==", "type", "glacier"]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(180, 211, 218, 1)",
+        "line-dasharray": [2, 2],
+        "line-width": {"stops": [[9, 1], [14, 1.5]]}
       }
     },
     {
