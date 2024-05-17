@@ -5,7 +5,9 @@
   "sources": {
     "osm": {
       "type": "vector",
-      "tiles": ["https://vtiles.staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
+      "tiles": [
+        "https://vtiles.staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
+      ]
     },
     "ohm_landcover_hillshade": {
       "type": "raster",
@@ -5838,6 +5840,46 @@
       }
     },
     {
+      "id": "state_points_labels",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "place_points",
+      "minzoom": 3,
+      "maxzoom": 20,
+      "filter": ["all", ["in", "type", "state", "territory"]],
+      "layout": {
+        "visibility": "visible",
+        "text-field": "{name}",
+        "text-font": ["OpenHistorical"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 3, 9, 6, 15, 10, 18],
+        "text-line-height": 1,
+        "text-transform": "uppercase",
+        "symbol-spacing": 25,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point"
+      },
+      "paint": {
+        "text-color": "rgba(51, 63, 59, 1)",
+        "text-halo-width": 1.5,
+        "text-halo-blur": 2,
+        "text-halo-color": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          0,
+          "rgba(252, 255, 254, 0.75)",
+          3,
+          "rgba(240, 244, 216, 1)",
+          5,
+          "rgba(246,247,227, 1)",
+          7,
+          "rgba(255, 255, 255, 1)"
+        ],
+        "text-translate-anchor": "map",
+        "icon-translate-anchor": "map"
+      }
+    },
+    {
       "id": "city_labels_other_z11",
       "type": "symbol",
       "source": "osm",
@@ -5995,46 +6037,6 @@
       }
     },
     {
-      "id": "state_points_labels",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "place_points",
-      "minzoom": 3,
-      "maxzoom": 20,
-      "filter": ["all", ["in", "type", "state", "territory"]],
-      "layout": {
-        "visibility": "visible",
-        "text-field": "{name}",
-        "text-font": ["OpenHistorical"],
-        "text-size": ["interpolate", ["linear"], ["zoom"], 3, 9, 6, 15, 10, 18],
-        "text-line-height": 1,
-        "text-transform": "uppercase",
-        "symbol-spacing": 25,
-        "symbol-avoid-edges": true,
-        "symbol-placement": "point"
-      },
-      "paint": {
-        "text-color": "rgba(51, 63, 59, 1)",
-        "text-halo-width": 1.5,
-        "text-halo-blur": 2,
-        "text-halo-color": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          0,
-          "rgba(252, 255, 254, 0.75)",
-          3,
-          "rgba(240, 244, 216, 1)",
-          5,
-          "rgba(246,247,227, 1)",
-          7,
-          "rgba(255, 255, 255, 1)"
-        ],
-        "text-translate-anchor": "map",
-        "icon-translate-anchor": "map"
-      }
-    },
-    {
       "id": "statecapital_labels_z10",
       "type": "symbol",
       "source": "osm",
@@ -6114,6 +6116,58 @@
         "text-halo-blur": 1,
         "text-opacity": 1,
         "text-translate-anchor": "map"
+      }
+    },
+    {
+      "id": "TESTING",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "land_ohm_centroids",
+      "minzoom": 0,
+      "maxzoom": 24,
+      "filter": ["all"],
+      "layout": {
+        "visibility": "visible",
+        "text-field": "{name}",
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          0,
+          8,
+          3,
+          12,
+          6,
+          20,
+          10,
+          22
+        ],
+        "text-font": ["OpenHistorical Bold"],
+        "symbol-placement": "point",
+        "text-justify": "center",
+        "symbol-avoid-edges": false,
+        "text-max-width": 7,
+        "text-line-height": 1
+      },
+      "paint": {
+        "text-halo-width": 1.5,
+        "text-halo-color": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          0,
+          "rgba(252, 255, 254, 0.75)",
+          3,
+          "rgba(240, 244, 216, 1)",
+          5,
+          "rgba(246,247,227, 1)",
+          7,
+          "rgba(255, 255, 255, 1)"
+        ],
+        "text-halo-blur": 1,
+        "text-opacity": 1,
+        "text-translate-anchor": "map",
+        "text-color": "rgba(255, 0, 0, 1)"
       }
     }
   ],
