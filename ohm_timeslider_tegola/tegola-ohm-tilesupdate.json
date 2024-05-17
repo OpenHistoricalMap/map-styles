@@ -5827,7 +5827,7 @@
           16,
           13
         ],
-        "visibility": "visible",
+        "visibility": "none",
         "text-transform": "uppercase",
         "symbol-spacing": 250,
         "text-letter-spacing": 0
@@ -5848,7 +5848,7 @@
       "maxzoom": 20,
       "filter": ["all", ["in", "type", "state", "territory"]],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "text-field": "{name}",
         "text-font": ["OpenHistorical"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 3, 9, 6, 15, 10, 18],
@@ -6049,7 +6049,7 @@
         "text-font": ["OpenHistorical Bold"],
         "text-size": 10,
         "text-transform": "uppercase",
-        "visibility": "visible"
+        "visibility": "none"
       },
       "paint": {
         "text-color": "rgba(68, 51, 85, 1)",
@@ -6067,7 +6067,7 @@
       "maxzoom": 12,
       "filter": ["all", ["==", "type", "country"]],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "text-field": "{name}",
         "text-size": [
           "interpolate",
