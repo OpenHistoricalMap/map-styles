@@ -1834,6 +1834,37 @@
       }
     },
     {
+      "id": "state_points_labels-centroids",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "land_ohm_centroids",
+      "minzoom": 4,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        ["==", "type", "administrative"],
+        ["==", "admin_level", 1]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "text-field": "{name}",
+        "text-font": ["Eadui"],
+        "text-size": {"stops": [[6, 15], [10, 18]]},
+        "text-line-height": 1,
+        "text-transform": "none",
+        "symbol-spacing": 25,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point",
+        "text-letter-spacing": 0.1
+      },
+      "paint": {
+        "text-color": "rgba(146, 143, 129, 1)",
+        "text-halo-width": 12,
+        "text-halo-blur": 2,
+        "text-halo-color": "rgba(241, 233, 218, 1)"
+      }
+    },
+    {
       "id": "state_points_labels",
       "type": "symbol",
       "source": "osm",
@@ -1858,6 +1889,38 @@
         "text-halo-width": 12,
         "text-halo-blur": 2,
         "text-halo-color": "rgba(241, 233, 218, 1)"
+      }
+    },
+    {
+      "id": "country_points_labels-centroids",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "land_ohm_centroids",
+      "minzoom": 0,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        ["==", "type", "administrative"],
+        ["==", "admin_level", 0]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "text-field": "{name}",
+        "text-size": {"stops": [[2, 11], [4, 15], [6, 14], [8, 16]]},
+        "text-font": ["Eadui"],
+        "symbol-placement": "point",
+        "text-justify": "center",
+        "symbol-avoid-edges": false,
+        "text-transform": "uppercase",
+        "text-letter-spacing": 0.05
+      },
+      "paint": {
+        "text-color": "rgba(113, 110, 99, 1)",
+        "text-halo-width": 13,
+        "text-halo-color": "rgba(241, 233, 218, 1)",
+        "text-halo-blur": 2,
+        "text-opacity": 1,
+        "text-translate-anchor": "map"
       }
     },
     {
