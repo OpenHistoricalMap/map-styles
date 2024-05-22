@@ -5,11 +5,11 @@
   "sources": {
     "osm": {
       "type": "vector",
-      "tiles": ["https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://vtiles.staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
     },
     "ne": {
       "type": "vector",
-      "tiles": ["https://vtiles.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://vtiles.staging.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"]
     }
   },
   "sprite": "https://openhistoricalmap.github.io/map-styles/japanese_scroll/jp_spritesheet_template",
