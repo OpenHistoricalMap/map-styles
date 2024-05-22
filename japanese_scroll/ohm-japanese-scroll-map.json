@@ -7,13 +7,9 @@
       "type": "vector",
       "tiles": ["https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
     },
-    "qoqrpm0jb": {
+    "ne": {
       "type": "vector",
-      "url": "https://localhost:3000/tilejson.json"
-    },
-    "08u5kkm1b": {
-      "type": "vector",
-      "url": "https://localhost:3000/tilejson.json"
+      "tiles": ["https://vtiles.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"]
     }
   },
   "sprite": "https://openhistoricalmap.github.io/map-styles/japanese_scroll/jp_spritesheet_template",
@@ -74,9 +70,33 @@
       "paint": {"fill-color": "rgba(239, 229, 210, 1)", "fill-opacity": 0.29}
     },
     {
+      "id": "water_areas-ne",
+      "type": "fill",
+      "source": "ne",
+      "source-layer": "water_areas",
+      "minzoom": 3,
+      "maxzoom": 24,
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(239, 229, 210, 1)", "fill-opacity": 0.29}
+    },
+    {
       "id": "water_areas-pattern",
       "type": "fill",
       "source": "osm",
+      "source-layer": "water_areas",
+      "minzoom": 3,
+      "maxzoom": 24,
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(207, 179, 125, 1)",
+        "fill-opacity": 1,
+        "fill-pattern": "jp-water"
+      }
+    },
+    {
+      "id": "water_areas-pattern-ne",
+      "type": "fill",
+      "source": "ne",
       "source-layer": "water_areas",
       "minzoom": 3,
       "maxzoom": 24,
