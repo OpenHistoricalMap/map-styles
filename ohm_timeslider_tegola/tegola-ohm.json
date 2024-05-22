@@ -5,7 +5,7 @@
   "sources": {
     "osm": {
       "type": "vector",
-      "tiles": ["https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://vtiles.staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
     },
     "ohm_landcover_hillshade": {
       "type": "raster",
@@ -4752,7 +4752,7 @@
       "id": "city_county_lines_admin7_8",
       "type": "line",
       "source": "osm",
-      "source-layer": "land_ohm",
+      "source-layer": "land_ohm_lines",
       "minzoom": 10,
       "maxzoom": 20,
       "filter": ["all", ["in", "admin_level", 7, 8]],
@@ -4771,7 +4771,7 @@
       "id": "admin_admin5_6",
       "type": "line",
       "source": "osm",
-      "source-layer": "land_ohm",
+      "source-layer": "land_ohm_lines",
       "minzoom": 8,
       "maxzoom": 20,
       "filter": ["all", ["in", "admin_level", 5, 6]],
@@ -4798,7 +4798,7 @@
       "id": "state_lines_admin4-case",
       "type": "line",
       "source": "osm",
-      "source-layer": "land_ohm",
+      "source-layer": "land_ohm_lines",
       "minzoom": 3,
       "maxzoom": 20,
       "filter": [
@@ -4828,7 +4828,7 @@
       "id": "state_lines_admin4",
       "type": "line",
       "source": "osm",
-      "source-layer": "land_ohm",
+      "source-layer": "land_ohm_lines",
       "minzoom": 3,
       "maxzoom": 20,
       "filter": [
@@ -4868,7 +4868,7 @@
       "id": "admin_admin3",
       "type": "line",
       "source": "osm",
-      "source-layer": "land_ohm",
+      "source-layer": "land_ohm_lines",
       "minzoom": 3,
       "maxzoom": 20,
       "filter": ["all", ["==", "admin_level", 3]],
@@ -4886,7 +4886,7 @@
       "id": "admin_countrylines_z10_case",
       "type": "line",
       "source": "osm",
-      "source-layer": "land_ohm",
+      "source-layer": "land_ohm_lines",
       "minzoom": 0,
       "maxzoom": 20,
       "filter": ["all", ["in", "admin_level", 1, 2]],
@@ -4922,7 +4922,7 @@
       "id": "admin_countrylines_z10",
       "type": "line",
       "source": "osm",
-      "source-layer": "land_ohm",
+      "source-layer": "lland_ohm_lines",
       "minzoom": 0,
       "maxzoom": 20,
       "filter": ["all", ["in", "admin_level", 1, 2]],
