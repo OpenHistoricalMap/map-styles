@@ -5,7 +5,9 @@
   "sources": {
     "osm": {
       "type": "vector",
-      "tiles": ["https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
+      "tiles": [
+        "https://vtiles.staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
+      ]
     },
     "ohm_landcover_hillshade": {
       "type": "raster",
@@ -15,6 +17,10 @@
       "minzoom": 0,
       "maxzoom": 8,
       "tileSize": 256
+    },
+    "ne": {
+      "type": "vector",
+      "tiles": ["https://vtiles.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"]
     }
   },
   "sprite": "https://openhistoricalmap.github.io/map-styles/rail/rail_spritesheet",
@@ -519,6 +525,16 @@
       "id": "water_areas",
       "type": "fill",
       "source": "osm",
+      "source-layer": "water_areas",
+      "minzoom": 0,
+      "maxzoom": 24,
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(213, 234, 234, 1)"}
+    },
+    {
+      "id": "water_areas-ne",
+      "type": "fill",
+      "source": "ne",
       "source-layer": "water_areas",
       "minzoom": 0,
       "maxzoom": 24,
@@ -4678,7 +4694,7 @@
       "id": "city_county_lines_admin7_8",
       "type": "line",
       "source": "osm",
-      "source-layer": "land_ohm",
+      "source-layer": "land_ohm_lines",
       "minzoom": 10,
       "maxzoom": 20,
       "filter": ["all", ["in", "admin_level", 7, 8]],
@@ -4697,7 +4713,7 @@
       "id": "admin_admin5_6",
       "type": "line",
       "source": "osm",
-      "source-layer": "land_ohm",
+      "source-layer": "land_ohm_lines",
       "minzoom": 7,
       "maxzoom": 20,
       "filter": ["all", ["in", "admin_level", 5, 6]],
@@ -4717,7 +4733,7 @@
       "id": "state_lines_admin4-case",
       "type": "line",
       "source": "osm",
-      "source-layer": "land_ohm",
+      "source-layer": "land_ohm_lines",
       "minzoom": 3,
       "maxzoom": 20,
       "filter": [
@@ -4744,7 +4760,7 @@
       "id": "state_lines_admin4",
       "type": "line",
       "source": "osm",
-      "source-layer": "land_ohm",
+      "source-layer": "land_ohm_lines",
       "minzoom": 5,
       "maxzoom": 20,
       "filter": [
@@ -4771,7 +4787,7 @@
       "id": "admin_admin3",
       "type": "line",
       "source": "osm",
-      "source-layer": "land_ohm",
+      "source-layer": "land_ohm_lines",
       "minzoom": 3,
       "maxzoom": 20,
       "filter": ["all", ["==", "admin_level", 3]],
@@ -4789,7 +4805,7 @@
       "id": "admin_countrylines_z10_case",
       "type": "line",
       "source": "osm",
-      "source-layer": "land_ohm",
+      "source-layer": "land_ohm_lines",
       "minzoom": 0,
       "maxzoom": 20,
       "filter": ["all", ["in", "admin_level", 1, 2]],
@@ -4812,7 +4828,7 @@
       "id": "admin_countrylines_z10",
       "type": "line",
       "source": "osm",
-      "source-layer": "land_ohm",
+      "source-layer": "land_ohm_lines",
       "minzoom": 0,
       "maxzoom": 20,
       "filter": ["all", ["in", "admin_level", 1, 2]],
@@ -5685,6 +5701,34 @@
       }
     },
     {
+      "id": "county_labels_z11-centroids",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "land_ohm_centroids",
+      "minzoom": 9,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        ["==", "type", "administrative"],
+        ["==", "admin_level", 2]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": ["OpenHistorical"],
+        "text-size": {"stops": [[6, 5], [10, 11], [16, 13]]},
+        "visibility": "visible",
+        "text-transform": "uppercase",
+        "symbol-spacing": 250,
+        "text-letter-spacing": 0
+      },
+      "paint": {
+        "text-color": "rgba(128, 128, 128, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-blur": 2,
+        "text-halo-width": 1
+      }
+    },
+    {
       "id": "county_labels_z11",
       "type": "symbol",
       "source": "osm",
@@ -5836,6 +5880,38 @@
       }
     },
     {
+      "id": "state_points_labels-centroids",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "land_ohm_centroids",
+      "minzoom": 5,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        ["==", "type", "administrative"],
+        ["==", "admin_level", 1]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "text-field": "{name}",
+        "text-font": ["OpenHistorical"],
+        "text-size": {"stops": [[3, 9], [6, 15], [10, 18]]},
+        "text-line-height": 1,
+        "text-transform": "uppercase",
+        "symbol-spacing": 25,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "point"
+      },
+      "paint": {
+        "text-color": "rgba(69, 72, 84, 1)",
+        "text-halo-width": 3,
+        "text-halo-blur": 2,
+        "text-halo-color": "rgba(255, 255, 255, 0.97)",
+        "text-translate-anchor": "map",
+        "icon-translate-anchor": "map"
+      }
+    },
+    {
       "id": "state_points_labels",
       "type": "symbol",
       "source": "osm",
@@ -5883,6 +5959,36 @@
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 1,
         "text-halo-blur": 1
+      }
+    },
+    {
+      "id": "country_points_labels-centroids",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "land_ohm_centroids",
+      "minzoom": 0,
+      "maxzoom": 12,
+      "filter": [
+        "all",
+        ["==", "type", "administrative"],
+        ["==", "admin_level", 0]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "text-field": "{name}",
+        "text-size": {"stops": [[0, 8], [3, 10], [5, 12], [6, 20], [10, 22]]},
+        "text-font": ["OpenHistorical Bold"],
+        "symbol-placement": "point",
+        "text-justify": "center",
+        "symbol-avoid-edges": false
+      },
+      "paint": {
+        "text-color": "rgba(74, 92, 92, 1)",
+        "text-halo-width": 3,
+        "text-halo-color": "rgba(255, 255, 255, 0.88)",
+        "text-halo-blur": 1,
+        "text-opacity": 1,
+        "text-translate-anchor": "map"
       }
     },
     {
