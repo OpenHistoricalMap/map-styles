@@ -5,7 +5,7 @@ const OHM_RAIL_STYLE= {
   "sources": {
     "osm": {
       "type": "vector",
-      "tiles": ["https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://vtiles.staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
     },
     "ohm_landcover_hillshade": {
       "type": "raster",
