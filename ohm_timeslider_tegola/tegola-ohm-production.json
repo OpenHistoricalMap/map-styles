@@ -20,7 +20,9 @@
     },
     "ne": {
       "type": "vector",
-      "tiles": ["https://vtiles.staging.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"]
+      "tiles": [
+        "https://vtiles.staging.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
+      ]
     }
   },
   "sprite": "https://openhistoricalmap.github.io/map-styles/ohm_timeslider_tegola/ohm_spritezero_spritesheet",
@@ -4924,7 +4926,7 @@
       "id": "admin_countrylines_z10",
       "type": "line",
       "source": "osm",
-      "source-layer": "lland_ohm_lines",
+      "source-layer": "land_ohm_lines",
       "minzoom": 0,
       "maxzoom": 20,
       "filter": ["all", ["in", "admin_level", 1, 2]],
