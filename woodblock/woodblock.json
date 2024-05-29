@@ -1847,7 +1847,7 @@
       "filter": [
         "all",
         ["==", "type", "administrative"],
-        ["==", "admin_level", 1]
+        ["==", "admin_level", 4]
       ],
       "layout": {
         "visibility": "visible",
@@ -1905,7 +1905,7 @@
       "filter": [
         "all",
         ["==", "type", "administrative"],
-        ["==", "admin_level", 0]
+        ["==", "admin_level", 2]
       ],
       "layout": {
         "visibility": "visible",
