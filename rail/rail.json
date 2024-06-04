@@ -20,7 +20,9 @@
     },
     "ne": {
       "type": "vector",
-      "tiles": ["https://vtiles.staging.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"]
+      "tiles": [
+        "https://vtiles.staging.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
+      ]
     }
   },
   "sprite": "https://openhistoricalmap.github.io/map-styles/rail/rail_spritesheet",
@@ -526,7 +528,7 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "water_areas",
-      "minzoom": 0,
+      "minzoom": 8,
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
       "paint": {"fill-color": "rgba(213, 234, 234, 1)"}
@@ -537,7 +539,7 @@
       "source": "ne",
       "source-layer": "water_areas",
       "minzoom": 0,
-      "maxzoom": 24,
+      "maxzoom": 8,
       "layout": {"visibility": "visible"},
       "paint": {"fill-color": "rgba(213, 234, 234, 1)"}
     },
@@ -5710,7 +5712,7 @@
       "filter": [
         "all",
         ["==", "type", "administrative"],
-        ["==", "admin_level", 2]
+        ["==", "admin_level", 6]
       ],
       "layout": {
         "text-field": "{name}",
@@ -5889,7 +5891,7 @@
       "filter": [
         "all",
         ["==", "type", "administrative"],
-        ["==", "admin_level", 1]
+        ["==", "admin_level", 4]
       ],
       "layout": {
         "visibility": "visible",
@@ -5971,7 +5973,7 @@
       "filter": [
         "all",
         ["==", "type", "administrative"],
-        ["==", "admin_level", 0]
+        ["==", "admin_level", 2]
       ],
       "layout": {
         "visibility": "visible",

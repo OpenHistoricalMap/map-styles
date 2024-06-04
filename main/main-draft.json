@@ -655,7 +655,7 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "water_areas",
-      "minzoom": 0,
+      "minzoom": 9,
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
       "paint": {
@@ -676,7 +676,7 @@
       "source": "ne",
       "source-layer": "water_areas",
       "minzoom": 0,
-      "maxzoom": 24,
+      "maxzoom": 8,
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
@@ -5304,28 +5304,6 @@
       }
     },
     {
-      "id": "points_of_interest_place_areas",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "place_areas",
-      "minzoom": 16,
-      "filter": ["all", ["!in", "type", "country", "state", "territory"]],
-      "layout": {
-        "visibility": "visible",
-        "text-field": "{name}",
-        "text-size": 9,
-        "text-anchor": "center",
-        "text-offset": [0, 0],
-        "text-font": ["OpenHistorical"]
-      },
-      "paint": {
-        "text-color": "rgba(80, 80, 80, 1)",
-        "text-halo-color": "rgba(255, 255, 255, 1)",
-        "text-halo-width": 0.5,
-        "text-halo-blur": 1
-      }
-    },
-    {
       "id": "points_of_interest_frombuildings",
       "type": "symbol",
       "source": "osm",
@@ -5841,7 +5819,7 @@
       "filter": [
         "all",
         ["==", "type", "administrative"],
-        ["==", "admin_level", 2]
+        ["==", "admin_level", 6]
       ],
       "layout": {
         "text-field": "{name}",
@@ -6070,7 +6048,7 @@
       "filter": [
         "all",
         ["==", "type", "administrative"],
-        ["==", "admin_level", 1]
+        ["==", "admin_level", 4]
       ],
       "layout": {
         "visibility": "visible",
@@ -6175,7 +6153,7 @@
       "filter": [
         "all",
         ["==", "type", "administrative"],
-        ["==", "admin_level", 0]
+        ["==", "admin_level", 2]
       ],
       "layout": {
         "visibility": "visible",
