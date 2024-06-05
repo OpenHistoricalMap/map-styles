@@ -7,7 +7,7 @@ Here, you can save your worries about tile servers and data updates and instead 
 
 Style file to load in Maputnik:
 
-- OHM style: [https://openhistoricalmap.github.io/map-styles/ohm_timeslider_tegola/tegola-ohm.json](https://openhistoricalmap.github.io/map-styles/ohm_timeslider_tegola/tegola-ohm.json)
+- OHM style: https://openhistoricalmap.github.io/map-styles/main/main.json
 
 - Woodblock style:  [https://github.com/OpenHistoricalMap/map-styles/blob/staging/woodblock/woodblock.json](https://raw.githubusercontent.com/OpenHistoricalMap/map-styles/staging/woodblock/woodblock.json)
 
