@@ -3318,7 +3318,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 8,
+      "minzoom": 9,
       "maxzoom": 20,
       "filter": [
         "all",
