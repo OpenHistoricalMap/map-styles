@@ -3576,14 +3576,22 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(254, 224, 217, 1)",
+        "line-color": [
+          "step",
+          ["zoom"],
+          "rgba(254, 194, 182, 1)",
+          9,
+          "rgba(254, 224, 217, 1)"
+        ],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
           6,
-          1.5,
-          7,
+          1,
+          9,
+          2,
+          10,
           2.5,
           18,
           36
