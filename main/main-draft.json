@@ -4936,17 +4936,13 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          4,
-          "rgba(163, 173, 164, 1)",
-          8,
-          "rgba(181, 186, 181, 1)",
-          11,
-          "rgba(203, 212, 203, 1)"
-        ],
+        "line-color": {
+          "stops": [
+            [4, "rgba(126, 144, 127, 1)"],
+            [8, "rgba(155, 172, 156, 1)"],
+            [11, "rgba(203, 212, 203, 1)"]
+          ]
+        },
         "line-width": [
           "interpolate",
           ["linear"],
@@ -6062,7 +6058,13 @@
         "symbol-placement": "point"
       },
       "paint": {
-        "text-color": "rgba(51, 63, 59, 1)",
+        "text-color": {
+          "stops": [
+            [0, "rgba(32, 45, 32, 1)"],
+            [4, "rgba(87, 105, 87, 1)"],
+            [7, "rgba(143, 149, 143, 1)"]
+          ]
+        },
         "text-halo-width": 1.5,
         "text-halo-blur": 2,
         "text-halo-color": [
@@ -6102,7 +6104,13 @@
         "symbol-placement": "point"
       },
       "paint": {
-        "text-color": "rgba(51, 63, 59, 1)",
+        "text-color": {
+          "stops": [
+            [0, "rgba(32, 45, 32, 1)"],
+            [4, "rgba(87, 105, 87, 1)"],
+            [7, "rgba(143, 149, 143, 1)"]
+          ]
+        },
         "text-halo-width": 1.5,
         "text-halo-blur": 2,
         "text-halo-color": [
@@ -6116,7 +6124,7 @@
           5,
           "rgba(246,247,227, 1)",
           7,
-          "rgba(255, 255, 255, 1)"
+          "rgba(255,255,255, 1)"
         ],
         "text-translate-anchor": "map",
         "icon-translate-anchor": "map"
@@ -6184,9 +6192,9 @@
           ["linear"],
           ["zoom"],
           0,
-          "rgba(79, 86, 86, 1)",
-          10,
-          "rgba(101, 108, 108, 1)"
+          "#495049",
+          5,
+          "#6d786d"
         ],
         "text-halo-width": 1.5,
         "text-halo-color": [
@@ -6244,9 +6252,9 @@
           ["linear"],
           ["zoom"],
           0,
-          "rgba(79, 86, 86, 1)",
-          10,
-          "rgba(101, 108, 108, 1)"
+          "#495049",
+          5,
+          "#6d786d"
         ],
         "text-halo-width": 1.5,
         "text-halo-color": [
