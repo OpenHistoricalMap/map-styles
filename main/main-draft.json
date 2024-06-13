@@ -469,7 +469,7 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
-      "minzoom": 10,
+      "minzoom": 0,
       "maxzoom": 12,
       "layout": {"visibility": "visible"},
       "paint": {
@@ -493,7 +493,11 @@
             "rgba(194, 170, 175, 1)",
             "transparent"
           ]
-        ]
+        ],
+        "fill-antialias": true,
+        "fill-opacity": {
+          "stops": [[0, 0], [3, 0.1], [5, 0.2], [7, 0.5], [9, 0.75], [10, 1]]
+        }
       }
     },
     {
@@ -501,13 +505,13 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
-      "minzoom": 5,
+      "minzoom": 7,
       "maxzoom": 10,
       "filter": [
         "all",
         ["in", "type", "forest", "wood", "nature_reserve", "park"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "fill-color": [
           "interpolate",
@@ -530,7 +534,7 @@
             "transparent"
           ]
         ],
-        "fill-opacity": 0.85
+        "fill-opacity": 0.75
       }
     },
     {
@@ -542,7 +546,7 @@
       "maxzoom": 7,
       "filter": [
         "all",
-        ["in", "type", "forest", "wood"],
+        ["in", "type", "forest", "wood", "nature_reserve", "park"],
         [">", "area", 50000000]
       ],
       "layout": {"visibility": "none"},
@@ -568,7 +572,7 @@
             "transparent"
           ]
         ],
-        "fill-opacity": 0.65
+        "fill-opacity": 0.5
       }
     },
     {
@@ -583,7 +587,7 @@
         ["in", "type", "forest", "wood"],
         [">", "area", 500000000]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "fill-color": [
           "interpolate",
@@ -606,7 +610,7 @@
             "transparent"
           ]
         ],
-        "fill-opacity": 0.25
+        "fill-opacity": 0.1
       }
     },
     {
