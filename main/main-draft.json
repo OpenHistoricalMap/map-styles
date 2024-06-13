@@ -5,9 +5,7 @@
   "sources": {
     "osm": {
       "type": "vector",
-      "tiles": [
-        "https://vtiles.staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
-      ]
+      "tiles": ["https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
     },
     "ohm_landcover_hillshade": {
       "type": "raster",
@@ -490,7 +488,7 @@
             "wood",
             "rgba(193, 208, 158, 1)",
             "nature_reserve",
-            "rgba(212, 225, 211, 0.3)",
+            "rgba(212, 225, 211, 1)",
             "landfill",
             "rgba(194, 170, 175, 1)",
             "transparent"
@@ -503,7 +501,7 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
-      "minzoom": 7,
+      "minzoom": 5,
       "maxzoom": 10,
       "filter": [
         "all",
@@ -515,11 +513,24 @@
           "interpolate",
           ["linear"],
           ["zoom"],
-          6,
-          "rgba(178, 194, 157, 0.2)",
-          9,
-          "rgba(212, 225, 211, 0.3)"
-        ]
+          0,
+          [
+            "match",
+            ["get", "type"],
+            "park",
+            "#dce4ca",
+            "forest",
+            "#dce4ca",
+            "wood",
+            "#dce4ca",
+            "nature_reserve",
+            "#dce4ca",
+            "landfill",
+            "rgba(194, 170, 175, 1)",
+            "transparent"
+          ]
+        ],
+        "fill-opacity": 0.85
       }
     },
     {
@@ -534,8 +545,31 @@
         ["in", "type", "forest", "wood"],
         [">", "area", 50000000]
       ],
-      "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(178, 194, 157, 1)"}
+      "layout": {"visibility": "none"},
+      "paint": {
+        "fill-color": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          0,
+          [
+            "match",
+            ["get", "type"],
+            "park",
+            "#dce4ca",
+            "forest",
+            "#dce4ca",
+            "wood",
+            "#dce4ca",
+            "nature_reserve",
+            "#dce4ca",
+            "landfill",
+            "rgba(194, 170, 175, 1)",
+            "transparent"
+          ]
+        ],
+        "fill-opacity": 0.65
+      }
     },
     {
       "id": "landuse_areas_z3",
@@ -550,7 +584,30 @@
         [">", "area", 500000000]
       ],
       "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(178, 194, 157, 1)"}
+      "paint": {
+        "fill-color": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          0,
+          [
+            "match",
+            ["get", "type"],
+            "park",
+            "#dce4ca",
+            "forest",
+            "#dce4ca",
+            "wood",
+            "#dce4ca",
+            "nature_reserve",
+            "#dce4ca",
+            "landfill",
+            "rgba(194, 170, 175, 1)",
+            "transparent"
+          ]
+        ],
+        "fill-opacity": 0.25
+      }
     },
     {
       "id": "parking_lots",
