@@ -5,7 +5,9 @@
   "sources": {
     "osm": {
       "type": "vector",
-      "tiles": ["https://vtiles.staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
+      "tiles": [
+        "https://vtiles.staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
+      ]
     },
     "ohm_landcover_hillshade": {
       "type": "raster",
@@ -87,6 +89,21 @@
       }
     },
     {
+      "id": "landuse_areas_military_overlay",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "filter": ["all", ["==", "type", "military"]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(178, 194, 157, 1)",
+        "fill-antialias": false,
+        "fill-pattern": "military-fill"
+      }
+    },
+    {
       "id": "military_landuselow",
       "type": "fill",
       "source": "osm",
@@ -116,21 +133,6 @@
       "filter": ["all", ["==", "class", "military"]],
       "layout": {"visibility": "visible"},
       "paint": {"fill-color": "rgba(244, 244, 235, 1)"}
-    },
-    {
-      "id": "landuse_areas_military_overlay",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "landuse_areas",
-      "minzoom": 10,
-      "maxzoom": 24,
-      "filter": ["all", ["==", "type", "military"]],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "fill-color": "rgba(178, 194, 157, 1)",
-        "fill-antialias": false,
-        "fill-pattern": "military-fill"
-      }
     },
     {
       "id": "airports",
@@ -4947,7 +4949,7 @@
       "id": "water_areaslabels_z15",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "water_areas",
+      "source-layer": "water_areas_centroids",
       "minzoom": 15,
       "maxzoom": 24,
       "filter": ["all", [">", "area", 100000]],
@@ -4968,7 +4970,7 @@
       "id": "water_areaslabels_z12",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "water_areas",
+      "source-layer": "water_areas_centroids",
       "minzoom": 12,
       "maxzoom": 15,
       "filter": ["all", [">", "area", 1000000]],
@@ -5022,7 +5024,7 @@
       "id": "water_areaslabels_z8",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "water_areas",
+      "source-layer": "water_areas_centroids",
       "minzoom": 8,
       "maxzoom": 12,
       "filter": ["all", [">", "area", 10000000]],
@@ -5125,7 +5127,7 @@
       "id": "landuse_areaslabels_park",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "landuse_areas",
+      "source-layer": "landuse_areas_centroids",
       "minzoom": 14,
       "maxzoom": 24,
       "filter": [
@@ -5167,7 +5169,7 @@
       "id": "landuse_areaslabels_farming",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "landuse_areas",
+      "source-layer": "landuse_areas_centroids",
       "minzoom": 14,
       "maxzoom": 24,
       "filter": [
@@ -5199,7 +5201,7 @@
       "id": "landuse_areaslabels_forest",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "landuse_areas",
+      "source-layer": "landuse_areas_centroids",
       "minzoom": 14,
       "maxzoom": 24,
       "filter": ["all", ["in", "type", "forest", "wood", "nature_reserve"]],
@@ -5218,7 +5220,7 @@
       "id": "landuse_areaslabels_school",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "landuse_areas",
+      "source-layer": "landuse_areas_centroids",
       "minzoom": 14,
       "maxzoom": 24,
       "filter": [
@@ -5240,7 +5242,7 @@
       "id": "points_of_interest_frombuildings",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "buildings",
+      "source-layer": "buildings_centroids",
       "minzoom": 16,
       "filter": ["all"],
       "layout": {
@@ -5265,7 +5267,7 @@
       "id": "points_of_interest_fromareasz14",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "amenity_areas",
+      "source-layer": "amenity_areas_centroids",
       "minzoom": 14,
       "maxzoom": 16,
       "filter": [
@@ -5307,7 +5309,7 @@
       "id": "points_of_interest_fromareas",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "amenity_areas",
+      "source-layer": "amenity_areas_centroids",
       "minzoom": 16,
       "maxzoom": 24,
       "filter": ["all"],
@@ -5343,7 +5345,7 @@
       "id": "points_of_interest_amenity_14",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "amenity_points",
+      "source-layer": "amenity_points_centroids",
       "minzoom": 14,
       "maxzoom": 16,
       "filter": ["all"],
@@ -5367,7 +5369,7 @@
       "id": "points_of_interest_amenity",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "amenity_points",
+      "source-layer": "amenity_points_centroids",
       "minzoom": 15,
       "maxzoom": 24,
       "filter": ["all"],
