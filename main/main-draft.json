@@ -5241,7 +5241,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_areas_centroids",
-      "minzoom": 13,
+      "minzoom": 10,
       "maxzoom": 22,
       "filter": ["all", ["==", "type", "glacier"]],
       "layout": {
@@ -5253,9 +5253,9 @@
           "interpolate",
           ["linear"],
           ["zoom"],
-          8,
           10,
-          11,
+          10,
+          12,
           11,
           13,
           13
