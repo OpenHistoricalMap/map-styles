@@ -5,7 +5,9 @@
   "sources": {
     "osm": {
       "type": "vector",
-      "tiles": ["https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
+      "tiles": [
+        "https://vtiles.staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
+      ]
     },
     "ohm_landcover_hillshade": {
       "type": "raster",
@@ -4641,6 +4643,28 @@
       }
     },
     {
+      "id": "routes_buses",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "route_lines",
+      "minzoom": 12,
+      "filter": ["all", ["==", "route", "bus"]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(101, 74, 115, 1)",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.5],
+          ["zoom"],
+          11,
+          0.5,
+          18,
+          4
+        ],
+        "line-dasharray": [2, 3]
+      }
+    },
+    {
       "id": "barriers-dotted",
       "type": "line",
       "source": "osm",
@@ -4894,6 +4918,31 @@
       }
     },
     {
+      "id": "routelabels_busz14",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "route_lines",
+      "minzoom": 14,
+      "filter": ["all", ["==", "route", "bus"]],
+      "layout": {
+        "text-field": "{name}",
+        "symbol-placement": "line",
+        "symbol-spacing": 50,
+        "symbol-avoid-edges": false,
+        "text-size": 10,
+        "text-padding": 2,
+        "text-allow-overlap": false,
+        "text-pitch-alignment": "auto",
+        "text-rotation-alignment": "auto",
+        "text-font": ["OpenHistorical"]
+      },
+      "paint": {
+        "text-color": "rgba(94, 76, 113, 1)",
+        "text-halo-width": 1.6,
+        "text-halo-color": "rgba(255, 255, 255, 0.9)"
+      }
+    },
+    {
       "id": "roadlabels_z14",
       "type": "symbol",
       "source": "osm",
@@ -4914,8 +4963,8 @@
       },
       "paint": {
         "text-color": "rgba(82, 82, 82, 1)",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255, 255, 255, 0.8)"
+        "text-halo-width": 1.5,
+        "text-halo-color": "rgba(255, 255, 255, 0.9)"
       }
     },
     {
