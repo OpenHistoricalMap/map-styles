@@ -4651,7 +4651,7 @@
       "filter": ["all", ["==", "route", "tram"]],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(133, 124, 126, 1)",
+        "line-color": "rgba(115, 105, 107, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -4659,10 +4659,11 @@
           11,
           0.5,
           18,
-          2
+          1.5
         ],
-        "line-dasharray": [3, 5],
-        "line-opacity": {"stops": [[11, 0], [14, 1]]}
+        "line-dasharray": [3, 7],
+        "line-opacity": {"stops": [[11, 0], [14, 1]]},
+        "line-offset": 0
       }
     },
     {
@@ -4684,7 +4685,7 @@
           18,
           4
         ],
-        "line-dasharray": [5, 8],
+        "line-dasharray": [5, 10],
         "line-opacity": {"stops": [[11, 0], [14, 1]]}
       }
     },
@@ -4939,31 +4940,6 @@
           15,
           4
         ]
-      }
-    },
-    {
-      "id": "routelabels_busz14",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "route_lines",
-      "minzoom": 14,
-      "filter": ["all", ["==", "route", "bus"]],
-      "layout": {
-        "text-field": "{name}",
-        "symbol-placement": "line",
-        "symbol-spacing": 200,
-        "symbol-avoid-edges": false,
-        "text-size": 10,
-        "text-padding": 2,
-        "text-allow-overlap": false,
-        "text-pitch-alignment": "auto",
-        "text-rotation-alignment": "auto",
-        "text-font": ["OpenHistorical"]
-      },
-      "paint": {
-        "text-color": "rgba(94, 76, 113, 1)",
-        "text-halo-width": 1.6,
-        "text-halo-color": "rgba(255, 255, 255, 0.9)"
       }
     },
     {
