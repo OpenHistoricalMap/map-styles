@@ -4643,15 +4643,38 @@
       }
     },
     {
+      "id": "routes_tram",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "route_lines",
+      "minzoom": 11,
+      "filter": ["all", ["==", "route", "tram"]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(133, 124, 126, 1)",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.5],
+          ["zoom"],
+          11,
+          0.5,
+          18,
+          2
+        ],
+        "line-dasharray": [3, 5],
+        "line-opacity": {"stops": [[11, 0], [14, 1]]}
+      }
+    },
+    {
       "id": "routes_buses",
       "type": "line",
       "source": "osm",
       "source-layer": "route_lines",
-      "minzoom": 12,
+      "minzoom": 11,
       "filter": ["all", ["==", "route", "bus"]],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(101, 74, 115, 1)",
+        "line-color": "rgba(109, 103, 113, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -4661,7 +4684,8 @@
           18,
           4
         ],
-        "line-dasharray": [2, 3]
+        "line-dasharray": [5, 8],
+        "line-opacity": {"stops": [[11, 0], [14, 1]]}
       }
     },
     {
@@ -4927,7 +4951,7 @@
       "layout": {
         "text-field": "{name}",
         "symbol-placement": "line",
-        "symbol-spacing": 50,
+        "symbol-spacing": 200,
         "symbol-avoid-edges": false,
         "text-size": 10,
         "text-padding": 2,
