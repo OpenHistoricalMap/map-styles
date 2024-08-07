@@ -4922,7 +4922,7 @@
         "text-padding": 2,
         "text-rotation-alignment": "auto",
         "text-pitch-alignment": "auto",
-        "text-field": "{name}"
+        "text-field": ["get", "name"]
       },
       "paint": {
         "text-color": "rgba(82, 82, 82, 1)",
@@ -4947,7 +4947,7 @@
         "text-padding": 2,
         "text-rotation-alignment": "auto",
         "text-pitch-alignment": "auto",
-        "text-field": "{name}"
+        "text-field": ["get", "name"]
       },
       "paint": {
         "text-color": "rgba(82, 82, 82, 1)",
@@ -4964,7 +4964,7 @@
       "maxzoom": 24,
       "filter": ["all", [">", "area", 100000]],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-font": ["OpenHistorical Italic"],
         "text-padding": 2,
         "text-allow-overlap": false,
@@ -4985,7 +4985,7 @@
       "maxzoom": 15,
       "filter": ["all", [">", "area", 1000000]],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-font": ["OpenHistorical Italic"],
         "text-padding": 2,
         "text-allow-overlap": false,
@@ -5007,7 +5007,7 @@
       "maxzoom": 24,
       "filter": ["all", ["in", "type", "ocean", "sea"]],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-font": ["OpenHistorical Italic"],
         "text-padding": 2,
         "text-allow-overlap": false,
@@ -5039,7 +5039,7 @@
       "maxzoom": 12,
       "filter": ["all", [">", "area", 10000000]],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-font": ["OpenHistorical Italic"],
         "text-padding": 2,
         "text-allow-overlap": false,
@@ -5075,7 +5075,7 @@
         "text-rotation-alignment": "auto",
         "text-anchor": "bottom",
         "text-pitch-alignment": "auto",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-letter-spacing": 0
       },
       "paint": {
@@ -5098,7 +5098,7 @@
         "text-rotation-alignment": "auto",
         "text-anchor": "bottom",
         "text-pitch-alignment": "auto",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-letter-spacing": 0
       },
       "paint": {
@@ -5124,7 +5124,7 @@
         "text-rotation-alignment": "auto",
         "text-anchor": "bottom",
         "text-pitch-alignment": "auto",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-letter-spacing": 0
       },
       "paint": {
@@ -5160,7 +5160,7 @@
         [">", "area", 12000]
       ],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 14, 11, 20, 14],
         "visibility": "visible",
         "icon-text-fit": "none",
@@ -5197,7 +5197,7 @@
         ]
       ],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-size": 11,
         "text-font": ["OpenHistorical"]
       },
@@ -5216,7 +5216,7 @@
       "maxzoom": 24,
       "filter": ["all", ["in", "type", "forest", "wood", "nature_reserve"]],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-size": 11,
         "text-font": ["OpenHistorical"]
       },
@@ -5238,7 +5238,7 @@
         ["in", "type", "college", "school", "education", "university", ""]
       ],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-size": 11,
         "text-font": ["OpenHistorical"]
       },
@@ -5257,7 +5257,7 @@
       "maxzoom": 22,
       "filter": ["all", ["==", "type", "glacier"]],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-font": ["OpenHistorical Italic"],
         "text-padding": 2,
         "text-allow-overlap": false,
@@ -5289,7 +5289,7 @@
       "layout": {
         "icon-image": "{tourism}-18",
         "visibility": "visible",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 16, 10, 20, 12],
         "text-anchor": "center",
         "text-offset": [0, 0],
@@ -5332,7 +5332,7 @@
       "layout": {
         "icon-image": "{type}-12",
         "visibility": "visible",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-size": 8,
         "text-anchor": "top",
         "text-offset": [0, 1],
@@ -5357,7 +5357,7 @@
       "layout": {
         "icon-image": "{type}-18",
         "visibility": "visible",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-size": [
           "interpolate",
           ["linear"],
@@ -5393,7 +5393,7 @@
       "layout": {
         "icon-image": "{type}-18",
         "visibility": "visible",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-size": 8,
         "text-anchor": "top",
         "text-offset": [0, 1],
@@ -5433,7 +5433,7 @@
         "text-offset": [0, 1],
         "icon-size": ["interpolate", ["linear"], ["zoom"], 15, 0.7, 20, 1.4],
         "text-anchor": "top",
-        "text-field": "{name}"
+        "text-field": ["get", "name"]
       },
       "paint": {
         "text-color": "rgba(80, 80, 80, 1)",
@@ -5473,7 +5473,7 @@
         "icon-optional": false,
         "icon-size": ["interpolate", ["linear"], ["zoom"], 15, 0.7, 20, 1.4],
         "text-anchor": "top",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-max-width": 10,
         "icon-ignore-placement": false
       },
@@ -5498,7 +5498,7 @@
       "layout": {
         "icon-image": "{site_type}-18",
         "visibility": "visible",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-size": [
           "interpolate",
           ["linear"],
@@ -5534,7 +5534,7 @@
       "layout": {
         "icon-image": "{artwork_type}-18",
         "visibility": "visible",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-size": [
           "interpolate",
           ["linear"],
@@ -5594,7 +5594,7 @@
       "layout": {
         "icon-image": "{type}-18",
         "visibility": "visible",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 14, 8, 18, 10],
         "text-anchor": "top",
         "text-offset": [0, 0.75],
@@ -5648,7 +5648,7 @@
       "layout": {
         "icon-image": "{type}-12",
         "text-font": ["OpenHistorical"],
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-size": 8,
         "text-anchor": "top",
         "text-offset": [0, 0.8]
@@ -5669,7 +5669,7 @@
       "layout": {
         "icon-image": "{type}-18",
         "text-font": ["OpenHistorical"],
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-size": [
           "interpolate",
           ["linear"],
@@ -5772,7 +5772,7 @@
       "layout": {
         "icon-image": "{shop}-18",
         "visibility": "visible",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-size": 8,
         "text-anchor": "top",
         "text-offset": [0, 1],
@@ -5798,7 +5798,7 @@
         ["==", "admin_level", 6]
       ],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-font": ["OpenHistorical"],
         "text-size": [
           "interpolate",
@@ -5832,7 +5832,7 @@
       "maxzoom": 20,
       "filter": ["all", ["in", "type", "county"]],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-font": ["OpenHistorical"],
         "text-size": [
           "interpolate",
@@ -5878,7 +5878,7 @@
         ]
       ],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-font": ["OpenHistorical"],
         "text-size": [
           "interpolate",
@@ -5909,7 +5909,7 @@
       "maxzoom": 20,
       "filter": ["all", ["in", "type", "town"]],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-font": ["OpenHistorical"],
         "text-size": [
           "interpolate",
@@ -5940,7 +5940,7 @@
       "maxzoom": 20,
       "filter": ["all", ["in", "type", "city"]],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-font": ["OpenHistorical"],
         "text-size": [
           "interpolate",
@@ -5979,7 +5979,7 @@
         "text-offset": [0, 0.25],
         "icon-size": 1,
         "text-anchor": "top",
-        "text-field": "{name}"
+        "text-field": ["get", "name"]
       },
       "paint": {
         "text-color": "rgba(34, 34, 34, 1)",
@@ -6005,7 +6005,7 @@
         "text-offset": [0, 0.25],
         "icon-size": 1,
         "text-anchor": "top",
-        "text-field": "{name}"
+        "text-field": ["get", "name"]
       },
       "paint": {
         "text-color": "rgba(34, 34, 34, 1)",
@@ -6035,7 +6035,7 @@
         "text-font": ["OpenHistorical"],
         "symbol-placement": "point",
         "visibility": "visible",
-        "text-field": "{name}"
+        "text-field": ["get", "name"]
       },
       "paint": {
         "text-color": [
@@ -6085,7 +6085,7 @@
         "text-font": ["OpenHistorical"],
         "symbol-placement": "point",
         "visibility": "visible",
-        "text-field": "{name}"
+        "text-field": ["get", "name"]
       },
       "paint": {
         "text-color": [
@@ -6127,7 +6127,7 @@
       "maxzoom": 20,
       "filter": ["all", ["==", "featurecla", "Admin-1 capital"]],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-font": ["OpenHistorical Bold"],
         "text-size": 10,
         "text-transform": "uppercase",
@@ -6171,7 +6171,7 @@
         "symbol-placement": "point",
         "text-justify": "center",
         "visibility": "visible",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-max-width": 7
       },
       "paint": {
@@ -6231,7 +6231,7 @@
         "symbol-placement": "point",
         "text-justify": "center",
         "visibility": "visible",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-max-width": 7
       },
       "paint": {
