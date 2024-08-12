@@ -496,6 +496,20 @@
       }
     },
     {
+      "id": "wetlands_z12",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 9,
+      "maxzoom": 24,
+      "filter": ["all", ["==", "type", "wetland"]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(255, 255, 255, 1)",
+        "fill-pattern": "wetland-18"
+      }
+    },
+    {
       "id": "parking_lots",
       "type": "fill",
       "source": "osm",
@@ -503,20 +517,6 @@
       "paint": {
         "fill-color": "rgba(236, 231, 231, 1)",
         "fill-outline-color": "rgba(224, 217, 217, 1)"
-      }
-    },
-    {
-      "id": "wetlands_z12",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "landuse_areas",
-      "minzoom": 12,
-      "maxzoom": 24,
-      "filter": ["all", ["==", "type", "wetland"]],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "fill-color": "rgba(255, 255, 255, 1)",
-        "fill-pattern": "wetland-18"
       }
     },
     {
