@@ -4768,7 +4768,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
-      "minzoom": 3,
+      "minzoom": 5,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -4798,7 +4798,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
-      "minzoom": 3,
+      "minzoom": 5,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -4815,10 +4815,8 @@
           "interpolate",
           ["linear"],
           ["zoom"],
-          0,
-          "rgba(168, 193, 183, 1)",
           6,
-          "rgba(157, 164, 164, 1)"
+          "rgba(168, 193, 183, 1)"
         ],
         "line-width": [
           "interpolate",
@@ -4826,6 +4824,8 @@
           ["zoom"],
           2,
           0.4,
+          6,
+          0.75,
           12,
           2,
           15,
@@ -4838,7 +4838,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
-      "minzoom": 3,
+      "minzoom": 5,
       "maxzoom": 20,
       "filter": ["all", ["==", "admin_level", 3]],
       "layout": {
@@ -4847,8 +4847,8 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(181, 195, 199, 1)",
-        "line-width": ["interpolate", ["linear"], ["zoom"], 2, 0.25, 7, 2]
+        "line-color": "rgba(168, 193, 183, 1)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 6, 0.75, 12, 2]
       }
     },
     {
@@ -4900,7 +4900,7 @@
           4,
           "rgba(126, 144, 127, 1)",
           6,
-          "rgba(155, 172, 156, 1)",
+          "rgba(147, 171, 148, 1)",
           8,
           "rgba(177, 182, 177, 1)",
           12,
@@ -4911,7 +4911,7 @@
           ["linear"],
           ["zoom"],
           2,
-          1.5,
+          1,
           12,
           2.5,
           15,
@@ -6060,7 +6060,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "land_ohm_centroids",
-      "minzoom": 3,
+      "minzoom": 5,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -6114,7 +6114,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "place_points",
-      "minzoom": 3,
+      "minzoom": 5,
       "maxzoom": 20,
       "filter": ["all", ["in", "type", "state", "territory"]],
       "layout": {
@@ -6133,12 +6133,8 @@
           "interpolate",
           ["linear"],
           ["zoom"],
-          0,
-          "rgba(32, 45, 32, 1)",
-          4,
-          "rgba(87, 105, 87, 1)",
-          7,
-          "rgba(143, 149, 143, 1)"
+          6,
+          "rgba(110, 133, 123, 1)"
         ],
         "text-halo-width": 1.5,
         "text-halo-blur": 2,
