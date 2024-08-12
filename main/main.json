@@ -3155,7 +3155,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "butt",
+        "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
@@ -3610,7 +3610,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "butt",
+        "line-cap": "round",
         "line-join": "round"
       },
       "paint": {
