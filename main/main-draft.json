@@ -4731,9 +4731,9 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(177, 181, 176, 1)",
+        "line-color": "rgba(214, 218, 213, 1)",
         "line-dasharray": [3],
-        "line-width": ["interpolate", ["linear"], ["zoom"], 10, 0.3, 12, 0.5]
+        "line-width": ["interpolate", ["linear"], ["zoom"], 10, 0.75]
       }
     },
     {
