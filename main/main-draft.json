@@ -4628,6 +4628,36 @@
       }
     },
     {
+      "id": "tram_route_lines",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "route_lines",
+      "minzoom": 0,
+      "maxzoom": 24,
+      "filter": ["all", ["==", "route", "tram"]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "miter"
+      },
+      "paint": {
+        "line-color": "rgba(167, 179, 188, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          12,
+          1,
+          13,
+          1,
+          14,
+          1.25,
+          20,
+          2.25
+        ]
+      }
+    },
+    {
       "id": "roads_rail_tram",
       "type": "line",
       "source": "osm",
@@ -4660,6 +4690,59 @@
           2.25
         ]
       }
+    },
+    {
+      "id": "bus_case_route_lines",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "route_lines",
+      "minzoom": 0,
+      "maxzoom": 24,
+      "filter": ["all", ["==", "route", "bus"]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "miter"
+      },
+      "paint": {
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-width": 3,
+        "line-opacity": 0.7
+      }
+    },
+    {
+      "id": "bus_route_lines",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "route_lines",
+      "minzoom": 0,
+      "maxzoom": 24,
+      "filter": ["all", ["==", "route", "bus"]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "square",
+        "line-join": "miter"
+      },
+      "paint": {
+        "line-color": "rgba(230, 24, 34, 1)",
+        "line-width": 1,
+        "line-dasharray": [2, 2]
+      }
+    },
+    {
+      "id": "bus_route_lines-copy",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "route_lines",
+      "minzoom": 0,
+      "maxzoom": 24,
+      "filter": ["all"],
+      "layout": {
+        "visibility": "none",
+        "line-cap": "square",
+        "line-join": "miter"
+      },
+      "paint": {"line-color": "rgba(230, 24, 34, 1)", "line-width": 3}
     },
     {
       "id": "barriers-dotted",
