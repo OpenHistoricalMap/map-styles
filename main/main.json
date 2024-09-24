@@ -5979,6 +5979,37 @@
       }
     },
     {
+      "id": "city_labels_town_z8_centroids",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "land_ohm_centroids",
+      "minzoom": 8,
+      "maxzoom": 20,
+      "filter": ["all", ["in", "admin_level", 7, 8]],
+      "layout": {
+        "text-field": ["get", "name"],
+        "text-font": ["OpenHistorical"],
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          6,
+          7,
+          10,
+          12,
+          16,
+          14
+        ],
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(34, 34, 34, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-blur": 2,
+        "text-halo-width": 1
+      }
+    },
+    {
       "id": "city_labels_z11",
       "type": "symbol",
       "source": "osm",
