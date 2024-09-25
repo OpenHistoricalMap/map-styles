@@ -4696,7 +4696,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "route_lines",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": ["all", ["==", "route", "bus"]],
       "layout": {
@@ -4724,13 +4724,13 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(168, 168, 168, 1)",
+        "line-color": "rgba(115, 114, 114, 1)",
         "line-width": {"stops": [[13, 1], [18, 3]]},
-        "line-dasharray": [0.01, 2]
+        "line-dasharray": {"stops": [[13, [0.01, 3]], [18, [0.01, 4]]]}
       }
     },
     {
-      "id": "bus_route_lines-copy",
+      "id": "route_lines-copy",
       "type": "line",
       "source": "osm",
       "source-layer": "route_lines",
