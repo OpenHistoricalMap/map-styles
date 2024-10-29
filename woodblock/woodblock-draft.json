@@ -1072,7 +1072,11 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": {"stops": [[10, "#d5d5d5"], [11, "#b3b3b3"]]},
+        "line-color": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+        10, "#d5d5d5", 11, "#b3b3b3"],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1297,7 +1301,11 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": {"stops": [[10, "#D5D5D5"], [11, "#ffffff"]]},
+        "line-color":    
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+        10, "#D5D5D5", 11, "#ffffff"],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1334,9 +1342,11 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": {
-          "stops": [[10, "rgba(204, 204, 204, 1)"], [11, "#ffffff"]]
-        },
+        "line-color": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+          10, "rgba(204, 204, 204, 1)", 11, "#ffffff"],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1405,9 +1415,11 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": {
-          "stops": [[10, "rgba(217, 217, 217, 1)"], [11, "#ffffff"]]
-        },
+        "line-color": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+          10, "rgba(217, 217, 217, 1)", 11, "#ffffff"],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1439,9 +1451,11 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": {
-          "stops": [[10, "rgba(217, 217, 217, 1)"], [11, "#ffffff"]]
-        },
+        "line-color": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+            10, "rgba(217, 217, 217, 1)", 11, "#ffffff"],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1478,9 +1492,11 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": {
-          "stops": [[10, "rgba(217, 217, 217, 1)"], [11, "#ffffff"]]
-        },
+        "line-color":    
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+            10, "rgba(217, 217, 217, 1)", 11, "#ffffff"],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1517,9 +1533,11 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": {
-          "stops": [[10, "rgba(204, 204, 204, 1)"], [11, "#ffffff"]]
-        },
+        "line-color": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+            10, "rgba(204, 204, 204, 1)", 11, "#ffffff"],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1596,9 +1614,11 @@
       "filter": ["all", ["==", ["get", "type"], "tertiary"], ["==", ["get", "bridge"], 1]],
       "layout": {"visibility": "none"},
       "paint": {
-        "line-color": {
-          "stops": [[10, "rgba(217, 217, 217, 1)"], [11, "#ffffff"]]
-        },
+        "line-color":    
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+        10, "rgba(217, 217, 217, 1)", 11, "#ffffff"],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1619,9 +1639,11 @@
       "filter": ["all", ["==", ["get", "type"], "secondary"], ["==", ["get", "bridge"], 1]],
       "layout": {"visibility": "none"},
       "paint": {
-        "line-color": {
-          "stops": [[10, "rgba(217, 217, 217, 1)"], [11, "#ffffff"]]
-        },
+        "line-color": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+            10, "rgba(217, 217, 217, 1)", 11, "#ffffff"],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1642,9 +1664,11 @@
       "filter": ["all", ["match", ["get", "type"], ["primary"], true, false], ["==", ["get", "bridge"], 1]],
       "layout": {"visibility": "none"},
       "paint": {
-        "line-color": {
-          "stops": [[10, "rgba(217, 217, 217, 1)"], [11, "#ffffff"]]
-        },
+        "line-color":    
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+          10, "rgba(217, 217, 217, 1)", 11, "#ffffff"],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1674,9 +1698,11 @@
         "line-join": "miter"
       },
       "paint": {
-        "line-color": {
-          "stops": [[10, "rgba(204, 204, 204, 1)"], [11, "#ffffff"]]
-        },
+        "line-color": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+        10, "rgba(204, 204, 204, 1)", 11, "#ffffff"],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1698,9 +1724,11 @@
       "filter": ["match", ["get", "type"], ["secondary"], true, false],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": {
-          "stops": [[7, "#b3b3b3"], [8, "rgba(210, 210, 210, 1)"]]
-        },
+        "line-color":
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+            7, "#b3b3b3", 8, "rgba(210, 210, 210, 1)"],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1722,7 +1750,11 @@
       "filter": ["match", ["get", "type"], ["trunk", "primary"], true, false],
       "layout": {"visibility": "none"},
       "paint": {
-        "line-color": {"stops": [[7, "#b3b3b3"], [9, "#EAEAEA"]]},
+        "line-color": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+        7, "#b3b3b3", 9, "#EAEAEA"],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1744,7 +1776,11 @@
       "filter": ["==", ["get", "type"], "motorway"],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": {"stops": [[6, "#b3b3b3"], [9, "#EAEAEA"]]},
+        "line-color": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+        6, "#b3b3b3", 9, "#EAEAEA"],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -1817,7 +1853,11 @@
       ],
       "layout": {
         "text-field": "",
-        "text-size": {"stops": [[14, 11], [20, 14]]},
+        "text-size": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+        14, 11, 20, 14],
         "visibility": "visible",
         "icon-text-fit": "none",
         "text-allow-overlap": false,
@@ -1864,10 +1904,18 @@
       "layout": {
         "text-field": ["get", "name"],
         "text-font": ["Eadui"],
-        "text-size": {"stops": [[6, 13], [10, 15]]},
+        "text-size": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+            6, 13, 10, 15],
         "visibility": "visible",
         "icon-image": "woodblock-3-tiered-house-small-2",
-        "icon-offset": {"stops": [[6, [0, -12]], [10, [0, -15]]]},
+        "icon-offset": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+        6, [0, -12], 10, [0, -15]],
         "icon-size": 1,
         "icon-anchor": "bottom",
         "text-letter-spacing": 0.1,
@@ -1891,10 +1939,18 @@
       "layout": {
         "text-field": ["get", "name"],
         "text-font": ["Eadui"],
-        "text-size": {"stops": [[6, 16], [10, 20]]},
+        "text-size": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+            6, 16, 10, 20],
         "visibility": "visible",
         "icon-image": "woodblock-3-tiered-house-small",
-        "icon-offset": {"stops": [[6, [0, -16]], [10, [0, -16]]]},
+        "icon-offset": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"],  
+        6, [0, -16], 10, [0, -16]],
         "icon-size": 1,
         "icon-anchor": "bottom",
         "text-letter-spacing": 0.1,
@@ -1923,7 +1979,11 @@
         "visibility": "visible",
         "text-field": ["get", "name"],
         "text-font": ["Eadui"],
-        "text-size": {"stops": [[6, 15], [10, 18]]},
+        "text-size": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+            6, 15, 10, 18],
         "text-line-height": 1,
         "text-transform": "none",
         "symbol-spacing": 25,
@@ -1950,7 +2010,11 @@
         "visibility": "visible",
         "text-field": ["get", "name"],
         "text-font": ["Eadui"],
-        "text-size": {"stops": [[6, 15], [10, 18]]},
+        "text-size": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+            6, 15, 10, 18],
         "text-line-height": 1,
         "text-transform": "none",
         "symbol-spacing": 25,
@@ -1980,7 +2044,11 @@
       "layout": {
         "visibility": "visible",
         "text-field": ["get", "name"],
-        "text-size": {"stops": [[2, 11], [4, 15], [6, 14], [8, 16]]},
+        "text-size": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+            2, 11, 4, 15, 6, 14, 8, 16],
         "text-font": ["Eadui"],
         "symbol-placement": "point",
         "text-justify": "center",
@@ -2008,7 +2076,11 @@
       "layout": {
         "visibility": "visible",
         "text-field": ["get", "name"],
-        "text-size": {"stops": [[2, 11], [4, 15], [6, 14], [8, 16]]},
+        "text-size": 
+        ["interpolate",
+        ["linear"],
+        ["zoom"], 
+            2, 11, 4, 15, 6, 14, 8, 16],
         "text-font": ["Eadui"],
         "symbol-placement": "point",
         "text-justify": "center",
