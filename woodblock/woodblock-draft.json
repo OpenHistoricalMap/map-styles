@@ -1792,7 +1792,7 @@
       "maxzoom": 15,
       "filter": ["all", ["==", ["get", "type"], "city"], ["!=", ["get", "capital"], "yes"]],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-font": ["Eadui"],
         "text-size": {"stops": [[6, 13], [10, 15]]},
         "visibility": "visible",
@@ -1819,7 +1819,7 @@
       "maxzoom": 15,
       "filter": ["all", ["==", ["get", "type"], "city"], ["==", ["get", "capital"], "yes"]],
       "layout": {
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-font": ["Eadui"],
         "text-size": {"stops": [[6, 16], [10, 20]]},
         "visibility": "visible",
@@ -1851,7 +1851,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-font": ["Eadui"],
         "text-size": {"stops": [[6, 15], [10, 18]]},
         "text-line-height": 1,
@@ -1878,7 +1878,7 @@
       "filter": ["match", ["get", "type"], ["state", "territory"], true, false],
       "layout": {
         "visibility": "visible",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-font": ["Eadui"],
         "text-size": {"stops": [[6, 15], [10, 18]]},
         "text-line-height": 1,
@@ -1909,7 +1909,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-size": {"stops": [[2, 11], [4, 15], [6, 14], [8, 16]]},
         "text-font": ["Eadui"],
         "symbol-placement": "point",
@@ -1937,7 +1937,7 @@
       "filter": ["==", ["get", "type"], "country"],
       "layout": {
         "visibility": "visible",
-        "text-field": "{name}",
+        "text-field": ["get", "name"],
         "text-size": {"stops": [[2, 11], [4, 15], [6, 14], [8, 16]]},
         "text-font": ["Eadui"],
         "symbol-placement": "point",
