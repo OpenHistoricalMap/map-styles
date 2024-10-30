@@ -1908,10 +1908,15 @@
         "visibility": "visible",
         "icon-image": "woodblock-3-tiered-house-small-2",
         "icon-offset": 
-        ["interpolate",
-        ["linear"],
-        ["zoom"], 
-        6, [0, -12], 10, [0, -15]],
+        [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            6,
+            ["literal", [0, -12]],
+            10,
+            ["literal", [0, -15]]
+          ],
         "icon-size": 1,
         "icon-anchor": "bottom",
         "text-letter-spacing": 0.1,
@@ -1943,10 +1948,15 @@
         "visibility": "visible",
         "icon-image": "woodblock-3-tiered-house-small",
         "icon-offset": 
-        ["interpolate",
-        ["linear"],
-        ["zoom"],  
-        6, [0, -16], 10, [0, -16]],
+        [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            6,
+            ["literal", [0, -16]],
+            10,
+            ["literal", [0, -16]]
+          ],
         "icon-size": 1,
         "icon-anchor": "bottom",
         "text-letter-spacing": 0.1,
