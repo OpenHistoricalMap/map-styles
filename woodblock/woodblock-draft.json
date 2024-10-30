@@ -112,7 +112,7 @@
       "source-layer": "water_lines",
       "minzoom": 15,
       "maxzoom": 24,
-      "filter": ["match", ["get", "type"], "ditch", "drain"],
+      "filter": ["match", ["get", "type"], ["ditch", "drain"], true, false],
       "paint": {
         "line-color": "rgba(207, 179, 125, 1)",
         "line-width": ["interpolate",
@@ -130,7 +130,7 @@
       "source-layer": "water_lines",
       "minzoom": 8,
       "maxzoom": 24,
-      "filter": ["all", ["==", "type", "canal"]],
+      "filter": ["==", ["get", "type"], "canal"],
       "paint": {
         "line-color": "rgba(207, 179, 125, 1)",
         "line-width": ["interpolate",
@@ -203,7 +203,6 @@
       "source-layer": "other_areas",
       "minzoom": 14,
       "maxzoom": 24,
-      "filter": ["all", ["==", "type", ""]],
       "layout": {"visibility": "none"},
       "paint": {"fill-color": "rgba(182, 143, 53, 1)", "fill-opacity": 0.1}
     },
@@ -272,7 +271,7 @@
       "source": "osm",
       "source-layer": "transport_lines",
       "minzoom": 9,
-      "filter": ["all", ["==",["get", "type"], "tertiary"], ["==",["get", "tunnel"], 1]],
+      "filter": ["all", ["==",["get", "type"], "tertiary"], ["==", ["get", "tunnel"], 1]],
       "layout": {
         "visibility": "none",
         "line-cap": "round",
@@ -325,7 +324,7 @@
       "source-layer": "transport_lines",
       "minzoom": 6,
       "maxzoom": 20,
-      "filter": ["all", ["match",["get", "type"], "primary"], ["==", ["get", "tunnel"], 1]],
+      "filter": ["all", ["match", ["get", "type"], ["primary"], true, false], ["==", ["get", "tunnel"], 1]],
       "layout": {
         "visibility": "none",
         "line-cap": "round",
@@ -843,7 +842,7 @@
       "source-layer": "transport_lines",
       "minzoom": 14,
       "maxzoom": 24,
-      "filter": ["all", ["match", ["get", "type"], ["steps"], true, false]],
+      "filter": ["match", ["get", "type"], ["steps"], true, false],
       "layout": {"visibility": "none"},
       "paint": {
         "line-color": "#b3b3b3",
@@ -866,10 +865,7 @@
       "source-layer": "transport_lines",
       "minzoom": 14,
       "maxzoom": 24,
-      "filter": [
-        "all",
-        ["match", ["get", "type"], ["unclassified", "living_street", "raceway"], true, false]
-      ],
+      "filter": ["match", ["get", "type"], ["unclassified", "living_street", "raceway"], true, false],
       "layout": {"visibility": "none"},
       "paint": {
         "line-color": "rgba(255, 207, 0, 1)",
@@ -967,7 +963,8 @@
       "source": "osm",
       "source-layer": "transport_lines",
       "minzoom": 10.01,
-      "filter": ["all", ["match", ["get", "type"], ["primary_link"], true, false], ["!=", ["get", "tunnel"], 1]],
+      "filter": ["all", ["match", ["get", "type"], ["primary_link"], true, false], 
+      ["!=", ["get", "tunnel"], 1]],
       "layout": {
         "visibility": "none",
         "line-cap": "round",
@@ -1294,7 +1291,8 @@
       "source": "osm",
       "source-layer": "transport_lines",
       "minzoom": 6,
-      "filter": ["all", ["match", ["get", "type"], "primary_link"], ["!=", ["get", "tunnel"], 1]],
+      "filter": ["all", ["match", ["get", "type"], ["primary_link"], true, false], 
+      ["!=", ["get", "tunnel"], 1]],
       "layout": {
         "visibility": "visible",
         "line-cap": "round",
@@ -1372,10 +1370,7 @@
       "source-layer": "transport_lines",
       "minzoom": 12,
       "maxzoom": 24,
-      "filter": [
-        "all",
-        ["match", ["get", "type"], ["residential", "service", "unclassified"], true, false]
-      ],
+      "filter": ["match", ["get", "type"], ["residential", "service", "unclassified"], true, false],
       "layout": {
         "visibility": "visible",
         "line-cap": "round",
@@ -1661,7 +1656,8 @@
       "source": "osm",
       "source-layer": "transport_lines",
       "minzoom": 6,
-      "filter": ["all", ["match", ["get", "type"], ["primary"], true, false], ["==", ["get", "bridge"], 1]],
+      "filter": ["all", ["match", ["get", "type"], ["primary"], true, false], 
+      ["==", ["get", "bridge"], 1]],
       "layout": {"visibility": "none"},
       "paint": {
         "line-color":    
@@ -1823,7 +1819,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "other_lines",
-      "filter": ["all", ["==", ["ge", "class"], "man_made"], ["==", ["get", "type"], "bridge"]],
+      "filter": ["all", ["==", ["get", "class"], "man_made"], ["==", ["get", "type"], "bridge"]],
       "layout": {"visibility": "none"},
       "paint": {"line-color": "rgba(255, 255, 255, 1)", "line-width": 3}
     },
