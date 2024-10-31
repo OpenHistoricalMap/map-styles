@@ -984,9 +984,9 @@
       "minzoom": 9,
       "filter": [
         "all",
-        ["==", "type", "construction"],
-        ["==", "tunnel", 1],
-        ["==", "construction", "tertiary"]
+        ["==", ["get", "type"], "construction"],
+        ["==", ["get", "tunnel"], 1],
+        ["==", ["get", "construction"], "tertiary"]
       ],
       "layout": {
         "visibility": "visible",
@@ -1014,9 +1014,9 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", "type", "construction"],
-        ["==", "tunnel", 1],
-        ["==", "construction", "secondary"]
+        ["==", ["get", "type"], "construction"],
+        ["==", ["get", "tunnel"], 1],
+        ["==", ["get", "construction"], "secondary"]
       ],
       "layout": {
         "visibility": "visible",
@@ -1044,9 +1044,9 @@
       "minzoom": 6,
       "filter": [
         "all",
-        ["==", "type", "construction"],
-        ["==", "tunnel", 1],
-        ["==", "construction", "primary"]
+        ["==", ["get", "type"], "construction"],
+        ["==", ["get", "tunnel"], 1],
+        ["==", ["get", "construction"], "primary"]
       ],
       "layout": {
         "visibility": "visible",
@@ -1075,15 +1075,17 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["in", "type", "construction"],
-        ["==", "tunnel", 1],
+        ["match", ["get","type"], ["construction"], true, false],
+        ["==", ["get", "tunnel"], 1],
         [
-          "in",
-          "construction",
-          "motorway",
+          "match",
+          ["get", "construction"],
+          ["motorway",
           "motorway_link",
           "trunk",
-          "trunk_link"
+          "trunk_link"],
+          true,
+          false
         ]
       ],
       "layout": {
@@ -1113,8 +1115,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "construction"],
-        ["==", "construction", "raceway"]
+        ["match", ["get", "type"], ["construction"], true, false],
+        ["==", ["get", "construction"], "raceway"]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -1140,8 +1142,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", "type", "construction"],
-        ["==", "construction", "track"]
+        ["==", ["get", "type"], "construction"],
+        ["==", ["get", "construction"], "track"]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -1166,8 +1168,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", "type", "construction"],
-        ["==", "construction", "track"]
+        ["==", ["get", "type"], "construction"],
+        ["==", ["get", "construction"], "track"]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -1192,8 +1194,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", "type", "construction"],
-        ["==", "construction", "track"]
+        ["==", ["get", "type"], "construction"],
+        ["==", ["get", "construction"], "track"]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -1219,8 +1221,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "construction"],
-        ["in", "construction", "living_street"]
+        ["match", ["get", "type"], ["construction"], true, false],
+        ["match", ["get", "construction"], ["living_street"], true, false]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -1245,8 +1247,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "construction"],
-        ["==", "construction", "pedestrian"]
+        ["match", ["get", "type"], ["construction"], true, false],
+        ["==", ["get", "construction"], "pedestrian"]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -1271,8 +1273,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "construction"],
-        ["in", "construction", "footway", "cycleway", "path"]
+        ["match", ["get", "type"], ["construction"], true, false],
+        ["match", ["get", "construction"], ["footway", "cycleway", "path"], true, false]
       ],
       "layout": {
         "visibility": "visible",
@@ -1302,8 +1304,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", "type", "construction"],
-        ["==", "construction", "pier"]
+        ["==", ["get", "type"], "construction"],
+        ["==", ["get", "construction"], "pier"]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -1328,8 +1330,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "construction"],
-        ["in", "construction", "steps"]
+        ["match", ["get", "type"], ["construction"], true, false],
+        ["match", ["get", "construction"], ["steps"], true, false]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -1355,9 +1357,9 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "construction"],
+        ["match", ["get", "type"], ["construction"], true, false],
         ["==", "bridge", 0],
-        ["in", "construction", "road"]
+        ["match", ["get", "construction"], ["road"], true, false]
       ],
       "layout": {
         "visibility": "visible",
@@ -1386,9 +1388,9 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "construction"],
+        ["match", ["get", "type"], ["construction"], true, false],
         ["==", "bridge", 0],
-        ["in", "construction", "residential", "service", "unclassified"]
+        ["match", ["get", "construction"], ["residential", "service", "unclassified"], true, false]
       ],
       "layout": {
         "visibility": "visible",
@@ -1417,10 +1419,10 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", "type", "construction"],
-        ["!=", "tunnel", 1],
-        ["==", "construction", "tertiary"],
-        ["!=", "bridge", 1]
+        ["==", ["get", "type"], "construction"],
+        ["!=", ["get", "tunnel"], 1],
+        ["==", ["get", "construction"], "tertiary"],
+        ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1448,10 +1450,10 @@
       "minzoom": 10,
       "filter": [
         "all",
-        ["==", "type", "construction"],
-        ["!=", "tunnel", 1],
-        ["==", "construction", "secondary"],
-        ["!=", "bridge", 1]
+        ["==", ["get", "type"], "construction"],
+        ["!=", ["get", "tunnel"], 1],
+        ["==", ["get", "construction"], "secondary"],
+        ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1479,10 +1481,10 @@
       "minzoom": 7,
       "filter": [
         "all",
-        ["in", "type", "construction"],
-        ["!=", "tunnel", 1],
-        ["==", "construction", "primary_link"],
-        ["!=", "bridge", 1]
+        ["match", ["get", "type"], ["construction"], true, false],
+        ["match", ["get", "tunnel"], [1], false, true],
+        ["==", ["get", "construction"], "primary_link"],
+        ["match", ["get", "bridge"], [1], false, true]
       ],
       "layout": {
         "visibility": "visible",
@@ -1510,11 +1512,11 @@
       "minzoom": 10,
       "filter": [
         "all",
-        ["in", "type", "construction"],
-        ["!=", "tunnel", 1],
-        ["!=", "ford", "yes"],
-        ["in", "construction", "primary"],
-        ["!=", "bridge", 1]
+        ["match", ["get", "type"], ["construction"], true, false],
+        ["match", ["get", "tunnel"], [1], false, true],
+        ["match", ["get", "ford"], ["yes"], false, true],
+        ["match", ["get", "construction"], ["primary"], true, false],
+        ["match", ["get", "bridge"], [1], false, true]
       ],
       "layout": {
         "visibility": "visible",
@@ -1543,10 +1545,10 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["in", "type", "construction"],
-        ["!=", "tunnel", 1],
-        ["in", "construction", "motorway_link", "trunk_link"],
-        ["!=", "bridge", 1]
+        ["match", ["get", "type"], ["construction"], true, false],
+        ["match", ["get", "tunnel"], [1], false, true],
+        ["match", ["get", "construction"], ["motorway_link", "trunk_link"], true, false],
+        ["match", ["get", "bridge"], [1], false, true]
       ],
       "layout": {
         "visibility": "visible",
@@ -1575,10 +1577,10 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["in", "type", "construction"],
-        ["!=", "tunnel", 1],
-        ["in", "construction", "motorway", "trunk"],
-        ["!=", "bridge", 1]
+        ["match", ["get", "type"], ["construction"], true, false],
+        ["match", ["get", "tunnel"], [1], false, true],
+        ["match", ["get", "construction"], ["motorway", "trunk"], true, false],
+        ["match", ["get", "bridge"], [1], false, true]
       ],
       "layout": {
         "visibility": "visible",
@@ -1607,8 +1609,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "construction"],
-        ["in", "construction", "road"]
+        ["match", ["get", "type"], ["construction"], true, false],
+        ["match", ["get", "construction"], ["road"], true, false]
       ],
       "layout": {
         "visibility": "visible",
@@ -1638,8 +1640,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "construction"],
-        ["in", "construction", "residential", "service", "unclassified"]
+        ["match", ["get", "type"], ["construction"], true, false],
+        ["match", ["construction"], ["residential", "service", "unclassified"], true, false]
       ],
       "layout": {
         "visibility": "visible",
@@ -1669,8 +1671,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "construction"],
-        ["in", "construction", "residential", "service", "unclassified"]
+        ["match", ["get", "type"], ["construction"], true, false],
+        ["match", ["get", "construction"], ["residential", "service", "unclassified"], true, false]
       ],
       "layout": {
         "visibility": "visible",
@@ -1699,10 +1701,10 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", "type", "construction"],
-        ["!=", "tunnel", 1],
-        ["==", "construction", "secondary_link"],
-        ["!=", "bridge", 1]
+        ["==", ["get", "type"], "construction"],
+        ["!=", ["get", "tunnel"], 1],
+        ["==", ["get", "construction"], "secondary_link"],
+        ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1733,10 +1735,10 @@
       "minzoom": 6,
       "filter": [
         "all",
-        ["in", "type", "construction"],
-        ["!=", "tunnel", 1],
-        ["==", "construction", "primary_link"],
-        ["!=", "bridge", 1]
+        ["match", ["get", "type"], "construction"],
+        ["!=", ["get", "tunnel"], 1],
+        ["==", ["get", "construction"], "primary_link"],
+        ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1766,10 +1768,10 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["in", "type", "construction"],
-        ["!=", "tunnel", 1],
-        ["in", "construction", "motorway_link", "trunk_link"],
-        ["!=", "bridge", 1]
+        ["match", ["get", "type"], ["construction"], true, false],
+        ["match", ["get", "tunnel"], [1], false, true],
+        ["match", ["get", "construction"], ["motorway_link", "trunk_link"], true, false],
+        ["match", ["bridge"], [1], false, true]
       ],
       "layout": {
         "visibility": "visible",
@@ -1799,10 +1801,10 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", "type", "construction"],
-        ["!=", "tunnel", 1],
-        ["==", "construction", "tertiary"],
-        ["!=", "bridge", 1]
+        ["==", ["get", "type"], "construction"],
+        ["!=", ["get", "tunnel"], 1],
+        ["==", ["get", "construction"], "tertiary"],
+        ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1833,10 +1835,10 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", "type", "construction"],
-        ["!=", "tunnel", 1],
-        ["==", "construction", "secondary"],
-        ["!=", "bridge", 1]
+        ["==", ["get", "type"], "construction"],
+        ["!=", ["get", "tunnel"], 1],
+        ["==", ["get", "construction"], "secondary"],
+        ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1867,11 +1869,11 @@
       "minzoom": 6,
       "filter": [
         "all",
-        ["in", "type", "construction"],
-        ["!=", "tunnel", 1],
-        ["!=", "ford", "yes"],
-        ["==", "construction", "primary"],
-        ["!=", "bridge", 1]
+        ["match", ["get", "type"], ["construction"], true, false],
+        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["get", "ford"], "yes"],
+        ["==", ["get", "construction"], "primary"],
+        ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1901,9 +1903,9 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["in", "type", "construction"],
+        ["match", ["get", "type"], ["construction"], true, false],
         ["!=", "tunnel", 1],
-        ["in", "construction", "motorway", "trunk"],
+        ["match", ["get", "construction"], ["motorway", "trunk"], true, false],
         ["!=", "bridge", 1]
       ],
       "layout": {
