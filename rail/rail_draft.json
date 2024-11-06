@@ -3657,8 +3657,8 @@
       "filter": [
         "all",
         ["match", ["get", "type"], ["light_rail"], true, false],
-        ["!=", "tunnel", 1],
-        ["==", "bridge", 1]
+        ["!=", ["get", "tunnel"], 1],
+        ["==", ["get", "bridge"], 1]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -3676,8 +3676,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "residential", "service", "unclassified"],
-        ["==", "bridge", 1]
+        ["match", ["get", "type"], ["residential", "service", "unclassified"], true, false],
+        ["==", ["get", "bridge"], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3703,7 +3703,7 @@
       "source": "osm",
       "source-layer": "transport_lines",
       "minzoom": 9,
-      "filter": ["all", ["==", "type", "tertiary"], ["==", "bridge", 1]],
+      "filter": ["all", ["==", ["get", "type"], "tertiary"], ["==", ["get", "bridge"], 1]],
       "layout": {
         "visibility": "visible",
         "line-cap": "butt",
@@ -3728,7 +3728,7 @@
       "source": "osm",
       "source-layer": "transport_lines",
       "minzoom": 10,
-      "filter": ["all", ["==", "type", "secondary"], ["==", "bridge", 1]],
+      "filter": ["all", ["==", ["get", "type"], "secondary"], ["==", ["get", "bridge"], 1]],
       "layout": {
         "visibility": "visible",
         "line-cap": "butt",
@@ -3756,8 +3756,8 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["in", "type", "primary", "primary_link"],
-        ["==", "bridge", 1]
+        ["match", ["get", "type"], ["primary", "primary_link"], true, false],
+        ["==", ["get", "bridge"], 1]
       ],
       "layout": {
         "line-cap": "butt",
@@ -3786,8 +3786,8 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["in", "type", "motorway", "motorway_link", "trunk", "trunk_link"],
-        ["==", "bridge", 1]
+        ["match", ["get", "type"], ["motorway", "motorway_link", "trunk", "trunk_link"], true, false],
+        ["==", ["get", "bridge"], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3816,8 +3816,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "residential", "service", "unclassified"],
-        ["==", "bridge", 1]
+        ["match", ["get", "type"], ["residential", "service", "unclassified"], true, false],
+        ["==", ["get", "bridge"], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3844,7 +3844,7 @@
       "source-layer": "transport_lines",
       "minzoom": 6,
       "maxzoom": 24,
-      "filter": ["all", ["==", "type", "tertiary"], ["==", "bridge", 1]],
+      "filter": ["all", ["==", ["get", "type"], "tertiary"], ["==", ["get", "bridge"], 1]],
       "layout": {
         "visibility": "visible",
         "line-cap": "butt",
@@ -3871,7 +3871,7 @@
       "source": "osm",
       "source-layer": "transport_lines",
       "minzoom": 8,
-      "filter": ["all", ["==", "type", "secondary"], ["==", "bridge", 1]],
+      "filter": ["all", ["==", ["get", "type"], "secondary"], ["==", ["get", "bridge"], 1]],
       "layout": {
         "visibility": "visible",
         "line-cap": "round",
@@ -3898,7 +3898,7 @@
       "source": "osm",
       "source-layer": "transport_lines",
       "minzoom": 6,
-      "filter": ["all", ["in", "type", "primary"], ["==", "bridge", 1]],
+      "filter": ["all", ["match", ["get", "type"], "primary"], ["==", ["get", "bridge"], 1]],
       "layout": {
         "visibility": "visible",
         "line-cap": "round",
@@ -3926,8 +3926,8 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["in", "type", "motorway", "motorway_link", "trunk", "trunk_link"],
-        ["==", "bridge", 1]
+        ["match", ["get", "type"], ["motorway", "motorway_link", "trunk", "trunk_link"], true, false],
+        ["==", ["get", "bridge"], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3953,7 +3953,7 @@
       "source": "osm",
       "source-layer": "transport_lines",
       "minzoom": 10,
-      "filter": ["all", ["in", "type", "subway"], ["!=", "tunnel", 1]],
+      "filter": ["all", ["match", ["get", "type"], ["subway"], true, false], ["!=", ["get", "tunnel"], 1]],
       "layout": {"visibility": "none"},
       "paint": {
         "line-color": "rgba(138, 156, 234, 1)",
@@ -3969,9 +3969,9 @@
       "minzoom": 7,
       "filter": [
         "all",
-        ["in", "type", "light_rail"],
-        ["!=", "tunnel", 1],
-        ["!=", "bridge", 1]
+        ["match", ["get", "type"], ["light_rail"], true, false],
+        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["get", "bridge"], 1]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -3988,9 +3988,9 @@
       "minzoom": 7,
       "filter": [
         "all",
-        ["in", "type", "subway"],
-        ["!=", "tunnel", 1],
-        ["!=", "bridge", 1]
+        ["match", ["get", "type"], ["subway"], true, false],
+        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["get", "bridge"], 1]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -4008,8 +4008,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "miniature", "narrow_gauge"],
-        ["!in", "service", "yard", "siding", "spur"]
+        ["match", ["get", "type"], ["miniature", "narrow_gauge"], true, false],
+        ["match", ["get", "service"], ["yard", "siding", "spur"], false, true]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -4026,8 +4026,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "miniature", "narrow_gauge"],
-        ["!in", "service", "yard", "siding", "spur"]
+        ["match", ["get", "type"], ["miniature", "narrow_gauge"], true, false],
+        ["match", ["get", "service"], ["yard", "siding", "spur"], false, true]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -4045,8 +4045,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "dismantled", "abandoned", "disused", "razed"],
-        ["!in", "service", "yard", "siding"]
+        ["match", ["get", "type"], ["dismantled", "abandoned", "disused", "razed"], true, false],
+        ["match", ["get", "service"], ["yard", "siding"], false, true]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -4063,8 +4063,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "dismantled", "abandoned", "disused", "razed"],
-        ["!in", "service", "yard", "siding"]
+        ["match", ["get", "type"], ["dismantled", "abandoned", "disused", "razed"], true, false],
+        ["match", ["get", "service"], ["yard", "siding"], false, true]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -4082,9 +4082,9 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", "usage", "main"],
-        ["!in", "service", "yard", "siding", "spur"],
-        ["in", "type", "rail", "preserved"]
+        ["==", ["get", "usage"], "main"],
+        ["match", ["get", "service"], ["yard", "siding", "spur"], false, true],
+        ["match", ["get", "type"], ["rail", "preserved"], true, false]
       ],
       "layout": {
         "visibility": "visible",
@@ -4106,8 +4106,8 @@
       "filter": [
         "all",
         ["==", "usage", "main"],
-        ["in", "type", "rail", "preserved"],
-        ["!in", "service", "yard", "siding", "spur"]
+        ["match", ["get", "type"], ["rail", "preserved"], true, false],
+        ["match", ["get", "service"], ["yard", "siding", "spur"], false, true]
       ],
       "layout": {
         "visibility": "visible",
@@ -4129,7 +4129,7 @@
       "source-layer": "transport_lines",
       "minzoom": 7,
       "maxzoom": 24,
-      "filter": ["all", ["in", "service", "yard", "siding"]],
+      "filter": ["match", ["get"," service"], ["yard", "siding"], true, false],
       "layout": {
         "visibility": "visible",
         "line-cap": "square",
@@ -4157,7 +4157,7 @@
       "source-layer": "transport_lines",
       "minzoom": 13,
       "maxzoom": 24,
-      "filter": ["all", ["in", "service", "yard", "siding"]],
+      "filter": ["match", ["get", "service"], ["yard", "siding"], true, false],
       "layout": {
         "visibility": "visible",
         "line-cap": "square",
@@ -4178,9 +4178,9 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"],
-        ["==", "service", "spur"]
+        ["match", ["get", "type"], ["rail", "light_rail", "preserved"], true, false],
+        ["match", ["get", "service"], ["yard", "siding"], false, true],
+        ["==", ["get", "service"], "spur"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4216,9 +4216,9 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "light_rail", "preserved"],
-        ["!in", "service", "yard", "siding"],
-        ["==", "service", "spur"]
+        ["match", ["get", "type"], ["rail", "light_rail", "preserved"], true, false],
+        ["match", ["get", "service"], ["yard", "siding"], false, true],
+        ["==", ["get", "service"], "spur"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4240,9 +4240,9 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "preserved"],
-        ["!in", "service", "yard", "siding", "spur"],
-        ["==", "usage", "tourism"]
+        ["match", ["get", "type"], ["rail", "preserved"], true, false],
+        ["match", ["get", "service"], ["yard", "siding", "spur"], false, true],
+        ["==", ["get", "usage"], "tourism"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4273,9 +4273,9 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "preserved"],
-        ["!in", "service", "yard", "siding", "spur"],
-        ["==", "usage", "tourism"]
+        ["match", ["get", "type"], ["rail", "preserved"], true, false],
+        ["match", ["get", "service"], ["yard", "siding", "spur"], false, true],
+        ["==", ["get", "usage"], "tourism"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4309,9 +4309,9 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "preserved"],
-        ["!in", "service", "yard", "siding", "spur"],
-        ["==", "usage", "military"]
+        ["match", ["get", "type"], ["rail", "preserved"], true, false],
+        ["match", ["get", "service"], ["yard", "siding", "spur"], false, true],
+        ["==", ["get", "usage"], "military"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4342,9 +4342,9 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "preserved"],
-        ["!in", "service", "yard", "siding", "spur"],
-        ["==", "usage", "military"]
+        ["match", ["get", "type"], ["rail", "preserved"], true, false],
+        ["match", ["get", "service"], ["yard", "siding", "spur"], false, true],
+        ["==", ["get", "usage"], "military"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4378,9 +4378,9 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "preserved"],
-        ["!in", "service", "yard", "siding", "spur"],
-        ["==", "usage", "branch"]
+        ["match", ["get", "type"], ["rail", "preserved"], true, false],
+        ["match", ["get", "service"], ["yard", "siding", "spur"], false, true],
+        ["==", ["get", "usage"], "branch"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4401,9 +4401,9 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "preserved"],
-        ["!in", "service", "yard", "siding", "spur"],
-        ["==", "usage", "branch"]
+        ["match", ["get", "type"], ["rail", "preserved"], true, false],
+        ["match", ["get", "service"], ["yard", "siding", "spur"], false, true],
+        ["==", ["get", "usage"], "branch"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4437,9 +4437,9 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "preserved"],
-        ["!in", "service", "yard", "siding", "spur"],
-        ["==", "usage", "industrial"]
+        ["match", ["get", "type"], ["rail", "preserved"], true, false],
+        ["match", ["get", "service"], ["yard", "siding", "spur"], false, true],
+        ["==", ["get", "usage"], "industrial"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4470,9 +4470,9 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "preserved"],
-        ["!in", "service", "yard", "siding", "spur"],
-        ["==", "usage", "industrial"]
+        ["match", ["get", "type"], ["rail", "preserved"], true, false],
+        ["match", ["get", "service"], ["yard", "siding", "spur"], true, false],
+        ["==", ["get", "usage"], "industrial"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4506,17 +4506,17 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "preserved"],
-        ["!in", "service", "yard", "siding", "spur"],
-        ["!=", "usage", "main"],
-        ["!=", "usage", "industrial"],
-        ["!=", "usage", "branch"],
-        ["!=", "usage", "military"],
-        ["!=", "usage", "tourism"],
-        ["!=", "service", "spur"],
-        ["!=", "tunnel", 1],
-        ["!=", "service", "siding"],
-        ["!=", "bridge", 1]
+        ["match", ["get", "type"], ["rail", "preserved"], true, false],
+        ["!in", ["get","service"], "yard", "siding", "spur"],
+        ["!=", ["get", "usage"], "main"],
+        ["!=", ["get", "usage"], "industrial"],
+        ["!=", ["get", "usage"], "branch"],
+        ["!=", ["get", "usage"], "military"],
+        ["!=", ["get", "usage"], "tourism"],
+        ["!=", ["get", "service"], "spur"],
+        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["get", "service"], "siding"],
+        ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -4537,17 +4537,17 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "preserved"],
-        ["!in", "service", "yard", "siding", "spur"],
-        ["!=", "usage", "main"],
-        ["!=", "usage", "industrial"],
-        ["!=", "usage", "branch"],
-        ["!=", "usage", "military"],
-        ["!=", "usage", "tourism"],
-        ["!=", "service", "spur"],
-        ["!=", "tunnel", 1],
-        ["!=", "service", "siding"],
-        ["==", "bridge", 1]
+        ["match", ["get", "type"], ["rail", "preserved"], true, false],
+        ["match", ["get", "service"], ["yard", "siding", "spur"], false, true],
+        ["!=", ["get", "usage"], "main"],
+        ["!=", ["get", "usage"], "industrial"],
+        ["!=", ["get", "usage"], "branch"],
+        ["!=", ["get", "usage"], "military"],
+        ["!=", ["get", "usage"], "tourism"],
+        ["!=", ["get", "service"], "spur"],
+        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["get", "service"], "siding"],
+        ["==", ["get", "bridge"], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -4568,16 +4568,16 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "rail", "preserved"],
-        ["!in", "service", "yard", "siding", "spur"],
-        ["!=", "usage", "main"],
-        ["!=", "usage", "ndustrial"],
-        ["!=", "usage", "branch"],
-        ["!=", "usage", "tourism"],
-        ["!=", "service", "spur"],
-        ["!=", "service", "siding"],
-        ["!=", "tunnel", 1],
-        ["!=", "usage", "military"]
+        ["match", ["get", "type"], ["rail", "preserved"], true, false],
+        ["match", ["get", "service"], ["yard", "siding", "spur"], false, true],
+        ["!=", ["get", "usage"], "main"],
+        ["!=", ["get", "usage"], "ndustrial"],
+        ["!=", ["get", "usage"], "branch"],
+        ["!=", ["get", "usage"], "tourism"],
+        ["!=", ["get", "service"], "spur"],
+        ["!=", ["get", "service"], "siding"],
+        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["get", "usage"], "military"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4611,8 +4611,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "construction", "proposed"],
-        ["in", "class", "railway"]
+        ["match", ["get", "type"], ["construction", "proposed"], true, false],
+        ["match", ["get", "class"], ["railway"], true, false]
       ],
       "layout": {
         "visibility": "visible",
@@ -4639,8 +4639,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in", "type", "tram", "funicular", "monorail"],
-        ["!in", "service", "yard", "siding", "spur"]
+        ["match", ["get", "type"], ["tram", "funicular", "monorail"], true, false],
+        ["match", ["get", "service"], ["yard", "siding", "spur"], false, true]
       ],
       "layout": {
         "visibility": "visible",
@@ -4658,7 +4658,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "other_lines",
-      "filter": ["all", ["==", "type", "bollard"]],
+      "filter": ["match", ["get", "type"], "bollard"],
       "paint": {
         "line-color": "rgba(217, 217, 217, 1)",
         "line-width": 3,
@@ -4694,7 +4694,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "other_lines",
-      "filter": ["all", ["==", "class", "power"], ["==", "type", "line"]],
+      "filter": ["all", ["==", ["get", "class"], "power"], ["==", ["get", "type"], "line"]],
       "layout": {"visibility": "visible"},
       "paint": {"line-color": "rgba(164, 129, 136, 1)"}
     },
@@ -4705,7 +4705,7 @@
       "source-layer": "land_ohm_lines",
       "minzoom": 10,
       "maxzoom": 20,
-      "filter": ["all", ["in", "admin_level", 7, 8]],
+      "filter": ["match", ["get", "admin_level"], [7, 8], true, false],
       "layout": {
         "visibility": "visible",
         "line-cap": "round",
@@ -4724,7 +4724,7 @@
       "source-layer": "land_ohm_lines",
       "minzoom": 7,
       "maxzoom": 20,
-      "filter": ["all", ["in", "admin_level", 5, 6]],
+      "filter": ["match", ["get", "admin_level"], [5, 6], true, false],
       "layout": {
         "visibility": "visible",
         "line-cap": "round",
@@ -4746,8 +4746,8 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["==", "admin_level", 4],
-        ["==", "type", "administrative"]
+        ["==", ["get", "admin_level"], 4],
+        ["==", ["get", "type"], "administrative"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4773,8 +4773,8 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["==", "admin_level", 4],
-        ["==", "type", "administrative"]
+        ["==", ["get", "admin_level"], 4],
+        ["==", ["get", "type"], "administrative"]
       ],
       "layout": {
         "visibility": "visible",
@@ -4798,7 +4798,7 @@
       "source-layer": "land_ohm_lines",
       "minzoom": 3,
       "maxzoom": 20,
-      "filter": ["all", ["==", "admin_level", 3]],
+      "filter": ["==", ["get", "admin_level"], 3],
       "layout": {
         "visibility": "visible",
         "line-cap": "square",
@@ -4816,7 +4816,7 @@
       "source-layer": "land_ohm_lines",
       "minzoom": 0,
       "maxzoom": 20,
-      "filter": ["all", ["in", "admin_level", 1, 2]],
+      "filter": ["match", ["get", "admin_level"], [1, 2], true, false],
       "layout": {
         "visibility": "visible",
         "line-cap": "square",
@@ -4839,7 +4839,7 @@
       "source-layer": "land_ohm_lines",
       "minzoom": 0,
       "maxzoom": 20,
-      "filter": ["all", ["in", "admin_level", 1, 2]],
+      "filter": ["match", ["get", "admin_level"], [1, 2], true, false],
       "layout": {
         "visibility": "visible",
         "line-cap": "square",
@@ -4890,7 +4890,7 @@
       "source": "osm",
       "source-layer": "transport_lines",
       "minzoom": 11,
-      "filter": ["all", ["in", "type", "motorway", "trunk"]],
+      "filter": ["match", ["get", "type"], ["motorway", "trunk"], true, false],
       "layout": {
         "text-field": "{name}",
         "symbol-placement": "line",
@@ -4916,7 +4916,7 @@
       "source": "osm",
       "source-layer": "transport_lines",
       "minzoom": 6,
-      "filter": ["all", ["==", "class", "railway"]],
+      "filter": ["==", ["get", "class"], "railway"],
       "layout": {
         "text-field": "{name}",
         "symbol-placement": "line",
@@ -4944,7 +4944,7 @@
       "source-layer": "water_areas",
       "minzoom": 15,
       "maxzoom": 24,
-      "filter": ["all", [">", "area", 100000]],
+      "filter": [">", ["get", "area"], 100000],
       "layout": {
         "text-field": "{name}",
         "text-font": ["OpenHistorical Italic"],
@@ -4965,7 +4965,7 @@
       "source-layer": "water_areas",
       "minzoom": 12,
       "maxzoom": 15,
-      "filter": ["all", [">", "area", 1000000]],
+      "filter": [">", ["get", "area"], 1000000],
       "layout": {
         "text-field": "{name}",
         "text-font": ["OpenHistorical Italic"],
@@ -4987,7 +4987,7 @@
       "source-layer": "place_points",
       "minzoom": 0,
       "maxzoom": 24,
-      "filter": ["all", ["in", "type", "ocean", "sea"]],
+      "filter": ["match", ["get", "type"], ["ocean", "sea"], true, false],
       "layout": {
         "text-field": "{name}",
         "text-font": ["OpenHistorical Italic"],
@@ -5009,7 +5009,7 @@
       "source-layer": "water_areas",
       "minzoom": 8,
       "maxzoom": 12,
-      "filter": ["all", [">", "area", 10000000]],
+      "filter": [">", ["get", "area"], 10000000],
       "layout": {
         "text-field": "{name}",
         "text-font": ["OpenHistorical Italic"],
@@ -5028,7 +5028,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_lines",
-      "filter": ["all", ["in", "type", "cliff"]],
+      "filter": ["match", ["get", "type"], "cliff"],
       "layout": {
         "text-field": "{name}",
         "text-font": ["OpenHistorical Italic"],
@@ -5051,7 +5051,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_lines",
-      "filter": ["all", ["in", "type", "dam"]],
+      "filter": ["match", ["get", "type"], "dam"],
       "layout": {
         "text-field": "{name}",
         "text-font": ["OpenHistorical Italic"],
@@ -5076,7 +5076,7 @@
       "source-layer": "water_lines",
       "minzoom": 12,
       "maxzoom": 24,
-      "filter": ["all", ["!in", "type", "dam", "cliff"]],
+      "filter": ["match", ["get", "type"], ["dam", "cliff"], false, true],
       "layout": {
         "text-field": "{name}",
         "text-font": ["OpenHistorical Italic"],
@@ -5105,9 +5105,9 @@
       "filter": [
         "all",
         [
-          "in",
-          "type",
-          "park",
+          "match",
+          ["get", "type"],
+          ["park",
           "sports_centre",
           "stadium",
           "grass",
@@ -5117,9 +5117,10 @@
           "recreation_ground",
           "picnic_site",
           "camp_site",
-          "playground"
+          "playground"],
+          true, false
         ],
-        [">", "area", 12000]
+        [">", ["get", "area"], 12000]
       ],
       "layout": {
         "text-field": "{name}",
@@ -5145,19 +5146,17 @@
       "minzoom": 14,
       "maxzoom": 24,
       "filter": [
-        "all",
-        [
-          "in",
-          "type",
-          "farmland",
+          "match",
+          ["get", "type"],
+          ["farmland",
           "farm",
           "orchard",
           "farmyard",
           "vineyard",
           "allotmets",
-          "garden"
-        ]
-      ],
+          "garden"],
+          true, false
+        ],
       "layout": {
         "text-field": "{name}",
         "text-size": 11,
@@ -5177,7 +5176,7 @@
       "source-layer": "landuse_areas",
       "minzoom": 14,
       "maxzoom": 24,
-      "filter": ["all", ["in", "type", "forest", "wood", "nature_reserve"]],
+      "filter": ["match", ["get", "type"], ["forest", "wood", "nature_reserve"], true, false],
       "layout": {
         "text-field": "{name}",
         "text-size": 11,
@@ -5197,10 +5196,7 @@
       "source-layer": "landuse_areas",
       "minzoom": 14,
       "maxzoom": 24,
-      "filter": [
-        "all",
-        ["in", "type", "college", "school", "education", "university", ""]
-      ],
+      "filter": ["match", ["get", "type"], ["college", "school", "education", "university", ""], true, false],
       "layout": {
         "text-field": "{name}",
         "text-size": 11,
@@ -5218,7 +5214,7 @@
       "source": "osm",
       "source-layer": "place_areas",
       "minzoom": 16,
-      "filter": ["all", ["!in", "type", "country", "state", "territory"]],
+      "filter": ["match", ["get", "type"], ["country", "state", "territory"], false, true],
       "layout": {
         "visibility": "visible",
         "text-field": "{name}",
@@ -5267,11 +5263,9 @@
       "minzoom": 14,
       "maxzoom": 16,
       "filter": [
-        "all",
-        [
-          "in",
-          "type",
-          "fire_station",
+          "match",
+          ["get", "type"],
+          ["fire_station",
           "bank",
           "border_control",
           "embassy",
@@ -5281,9 +5275,9 @@
           "school",
           "taxi",
           "townhall",
-          "university"
-        ]
-      ],
+          "university"],
+          true, false
+        ],
       "layout": {
         "icon-image": "{type}-12",
         "visibility": "visible",
@@ -5386,7 +5380,7 @@
       "source-layer": "other_points",
       "minzoom": 15,
       "maxzoom": 24,
-      "filter": ["all", ["!in", "type", "artwork"]],
+      "filter": ["match", ["get", "type"], ["artwork"], false, true],
       "layout": {
         "icon-image": "{type}-18",
         "visibility": "visible",
@@ -5420,7 +5414,7 @@
       "source-layer": "other_points",
       "minzoom": 14,
       "maxzoom": 24,
-      "filter": ["all", ["==", "type", "archaeological_site"]],
+      "filter": ["==", ["get", "type"], "archaeological_site"],
       "layout": {
         "icon-image": "{site_type}-18",
         "visibility": "visible",
@@ -5446,7 +5440,7 @@
       "source-layer": "other_points",
       "minzoom": 15,
       "maxzoom": 24,
-      "filter": ["all", ["==", "type", "artwork"]],
+      "filter": ["==", ["get", "type"], "artwork"],
       "layout": {
         "icon-image": "{artwork_type}-18",
         "visibility": "visible",
@@ -5472,7 +5466,7 @@
       "source-layer": "other_points",
       "minzoom": 15,
       "maxzoom": 24,
-      "filter": ["all", ["==", "type", "tower"]],
+      "filter": ["==", ["get", "type"], "tower"],
       "layout": {
         "icon-image": "power_tower-12",
         "visibility": "visible",
@@ -5486,7 +5480,7 @@
       "source-layer": "transport_areas",
       "minzoom": 10,
       "maxzoom": 14,
-      "filter": ["all", ["==", "type", "aerodrome"]],
+      "filter": ["==", ["get", "type"], "aerodrome"],
       "layout": {"icon-image": "airport-18", "text-font": ["OpenHistorical"]}
     },
     {
@@ -5496,7 +5490,7 @@
       "source-layer": "transport_points",
       "minzoom": 14,
       "maxzoom": 24,
-      "filter": ["all", ["==", "class", "railway"], ["==", "type", "station"]],
+      "filter": ["all", ["==", ["get", "class"], "railway"], ["==", ["get", "type"], "station"]],
       "layout": {
         "icon-image": "railstation-18",
         "visibility": "visible",
@@ -5523,7 +5517,7 @@
       "source-layer": "transport_points",
       "minzoom": 14,
       "maxzoom": 24,
-      "filter": ["all", ["!=", "class", "railway"], ["==", "name", ""]],
+      "filter": ["all", ["!=", ["get", "class"], "railway"], ["==", ["get", "name"], ""]],
       "layout": {
         "icon-image": "{type}-18",
         "visibility": "visible",
