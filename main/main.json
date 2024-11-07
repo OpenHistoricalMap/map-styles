@@ -5642,10 +5642,53 @@
       }
     },
     {
-      "id": "points_of_interest_fromareasz14",
+      "id": "points_of_interest_fromareasz14-centroids",
       "type": "symbol",
       "source": "osm",
       "source-layer": "amenity_areas_centroids",
+      "minzoom": 14,
+      "maxzoom": 16,
+      "filter": [
+        "match",
+        ["get", "type"],
+        [
+          "bank",
+          "border_control",
+          "embassy",
+          "fire_station",
+          "government",
+          "hospital",
+          "police",
+          "school",
+          "taxi",
+          "townhall",
+          "university"
+        ],
+        true,
+        false
+      ],
+      "layout": {
+        "icon-image": "{type}-12",
+        "visibility": "visible",
+        "text-field": ["get", "name"],
+        "text-size": 8,
+        "text-anchor": "top",
+        "text-offset": [0, 1],
+        "text-font": ["OpenHistorical"]
+      },
+      "paint": {
+        "text-color": "#505050",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5,
+        "text-halo-blur": 1,
+        "text-opacity": 0
+      }
+    },
+    {
+      "id": "points_of_interest_fromareasz14",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "amenity_areas",
       "minzoom": 14,
       "maxzoom": 16,
       "filter": [
@@ -5721,6 +5764,43 @@
       }
     },
     {
+      "id": "points_of_interest_amenity-centroids",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "amenity_points_centroids",
+      "minzoom": 15,
+      "maxzoom": 24,
+      "filter": ["all"],
+      "layout": {
+        "text-line-height": 1.2,
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          15.99,
+          0,
+          16,
+          10,
+          20,
+          12
+        ],
+        "icon-image": "{type}-18",
+        "text-font": ["OpenHistorical"],
+        "visibility": "visible",
+        "text-offset": [0, 1],
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 15, 0.7, 20, 1.4],
+        "text-anchor": "top",
+        "text-field": ["get", "name"]
+      },
+      "paint": {
+        "text-color": "rgba(80, 80, 80, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5,
+        "text-halo-blur": 1,
+        "text-opacity": ["interpolate", ["linear"], ["zoom"], 16.9, 0, 17, 1]
+      }
+    },
+    {
       "id": "points_of_interest_amenity_14",
       "type": "symbol",
       "source": "osm",
@@ -5748,10 +5828,9 @@
       "id": "points_of_interest_amenity",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "amenity_points_centroids",
+      "source-layer": "amenity_points",
       "minzoom": 15,
       "maxzoom": 24,
-      "filter": ["all"],
       "layout": {
         "text-line-height": 1.2,
         "text-size": [
