@@ -5544,8 +5544,8 @@
       "source-layer": "buildings",
       "filter": [
         "all",
-        ["==", "type", "place_of_worship"],
-        ["!in", "religion", "christian", "muslim", "jewish"]
+        ["==", ["get", "type"], "place_of_worship"],
+        ["match", ["get", "religion"], ["christian", "muslim", "jewish"], false, true]
       ],
       "layout": {
         "icon-image": "place_of_worship-18",
@@ -5571,7 +5571,7 @@
       "source": "osm",
       "source-layer": "landuse_points",
       "minzoom": 14,
-      "filter": ["all", ["in", "type", "peak"]],
+      "filter": ["match", ["get", "type"], ["peak"], true, false],
       "layout": {
         "icon-image": "{type}-12",
         "text-font": ["OpenHistorical"],
@@ -5615,7 +5615,7 @@
       "source": "osm",
       "source-layer": "landuse_areas",
       "minzoom": 16,
-      "filter": ["all", ["!in", "type", "peak", "wetland", "garden"]],
+      "filter": ["match", ["get", "type"], ["peak", "wetland", "garden"], false, true],
       "layout": {
         "icon-image": "{type}-18",
         "text-font": ["OpenHistorical"],
@@ -5627,7 +5627,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "buildings",
-      "filter": ["all", ["in", "name", "ACRA", "Acra"]],
+      "filter": ["match", ["get", "name"], ["ACRA", "Acra"], true, false],
       "layout": {
         "icon-image": "acra-18",
         "text-font": ["OpenHistorical"],
@@ -5639,12 +5639,9 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "buildings",
-      "filter": [
-        "all",
-        [
-          "in",
-          "name",
-          "Oxfam Books & Music",
+      "filter": ["match",
+          ["get", "name"],
+          ["Oxfam Books & Music",
           "Oxfam",
           "Oxfam Boutique",
           "Oxfam Shop",
@@ -5669,9 +5666,9 @@
           "Oxfam Music",
           "Oxfam Novib",
           "OXFAM Water Tank",
-          "Oxfam books"
-        ]
-      ],
+          "Oxfam books"],
+          true, false
+        ],
       "layout": {
         "icon-image": "oxfam-18",
         "text-font": ["OpenHistorical"],
