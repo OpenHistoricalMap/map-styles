@@ -54,7 +54,7 @@
       "source-layer": "landuse_areas",
       "minzoom": 0,
       "maxzoom": 24,
-      "filter": ["all", ["==", "type", "earth"]],
+      "filter": ["==", ["get", "type"], "earth"],
       "layout": {"visibility": "visible"},
       "paint": {"fill-color": "rgba(248, 247, 242, 1)"}
     },
@@ -73,7 +73,7 @@
       "source-layer": "landuse_areas",
       "minzoom": 4,
       "maxzoom": 10,
-      "filter": ["all", ["==", "type", "military"]],
+      "filter": ["==", ["get", "type"], "military"],
       "layout": {"visibility": "none"},
       "paint": {"fill-color": "rgba(230, 224, 212, 1)"}
     },
@@ -84,7 +84,7 @@
       "source-layer": "landuse_areas",
       "minzoom": 10,
       "maxzoom": 24,
-      "filter": ["all", ["==", "type", "military"]],
+      "filter": ["==", ["get", "type"], "military"],
       "layout": {"visibility": "none"},
       "paint": {"fill-color": "rgba(244, 244, 235, 1)"}
     },
@@ -93,7 +93,7 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "other_areas",
-      "filter": ["all", ["==", "class", "military"]],
+      "filter": ["==", ["get", "class"], "military"],
       "layout": {"visibility": "none"},
       "paint": {"fill-color": "rgba(244, 244, 235, 1)"}
     },
@@ -104,7 +104,7 @@
       "source-layer": "landuse_areas",
       "minzoom": 10,
       "maxzoom": 24,
-      "filter": ["all", ["==", "type", "military"]],
+      "filter": ["==", ["get", "type"], "military"],
       "layout": {"visibility": "none"},
       "paint": {
         "fill-color": "rgba(178, 194, 157, 1)",
@@ -119,7 +119,7 @@
       "source-layer": "transport_areas",
       "minzoom": 12,
       "maxzoom": 24,
-      "filter": ["all", ["==", "type", "apron"]],
+      "filter": ["==", ["get", "type"], "apron"],
       "layout": {"visibility": "none"},
       "paint": {"fill-color": "rgba(221, 221, 221, 1)"}
     },
@@ -270,7 +270,7 @@
       "source-layer": "landuse_areas",
       "minzoom": 12,
       "maxzoom": 24,
-      "filter": ["all", ["==", "type", "park"]],
+      "filter": ["==", ["get", "type"], "park"],
       "layout": {"visibility": "none"},
       "paint": {
         "line-width": ["interpolate", ["linear"], ["zoom"], 12, 0.75, 16, 1.25],
@@ -462,10 +462,7 @@
       "source-layer": "landuse_areas",
       "minzoom": 7,
       "maxzoom": 10,
-      "filter": [
-        "all",
-        ["in", "type", "forest", "wood", "nature_reserve", "park"]
-      ],
+      "filter": ["match", ["get", "type"], ["forest", "wood", "nature_reserve", "park"], true, false],
       "layout": {"visibility": "none"},
       "paint": {
         "fill-color": [
@@ -488,8 +485,8 @@
       "maxzoom": 7,
       "filter": [
         "all",
-        ["in", "type", "forest", "wood"],
-        [">", "area", 50000000]
+        ["match", ["get", "type"], ["forest", "wood"], true, false],
+        [">", ["get", "area"], 50000000]
       ],
       "layout": {"visibility": "none"},
       "paint": {"fill-color": "rgba(178, 194, 157, 1)"}
@@ -503,8 +500,8 @@
       "maxzoom": 5,
       "filter": [
         "all",
-        ["in", "type", "forest", "wood"],
-        [">", "area", 500000000]
+        ["match", ["get", "type"], ["forest", "wood"], true, false],
+        [">", ["get", "area"], 500000000]
       ],
       "layout": {"visibility": "none"},
       "paint": {"fill-color": "rgba(178, 194, 157, 1)"}
@@ -526,7 +523,7 @@
       "source-layer": "landuse_areas",
       "minzoom": 12,
       "maxzoom": 24,
-      "filter": ["all", ["==", "type", "wetland"]],
+      "filter": ["==", ["get", "type"], "wetland"],
       "layout": {"visibility": "none"},
       "paint": {
         "fill-color": "rgba(255, 255, 255, 1)",
@@ -540,7 +537,7 @@
       "source-layer": "landuse_areas",
       "minzoom": 10,
       "maxzoom": 24,
-      "filter": ["all", ["==", "type", "nature_reserve"]],
+      "filter": ["==", ["get", "type"], "nature_reserve"],
       "layout": {"visibility": "visible"},
       "paint": {
         "line-width": ["interpolate", ["linear"], ["zoom"], 10, 2, 20, 3],
@@ -555,7 +552,7 @@
       "source-layer": "landuse_areas",
       "minzoom": 12,
       "maxzoom": 24,
-      "filter": ["all", ["in", "type", "scree", "peak", "rock", "bare_rock"]],
+      "filter": ["match", ["get", "type"], ["scree", "peak", "rock", "bare_rock"], true, false],
       "layout": {"visibility": "none"},
       "paint": {"fill-color": "rgba(255, 255, 255, 1)", "fill-pattern": "rock"}
     },
@@ -564,7 +561,7 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "place_areas",
-      "filter": ["all", ["==", "type", "plot"]],
+      "filter": ["==", ["get", "type"], "plot"],
       "layout": {"visibility": "none"},
       "paint": {
         "fill-color": "rgba(238, 236, 230, 0)",
@@ -576,7 +573,7 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "place_areas",
-      "filter": ["all", ["==", "type", "square"]],
+      "filter": ["==", ["get", "type"], "square"],
       "layout": {"visibility": "none"},
       "paint": {
         "fill-color": "rgba(238, 236, 230, 1)",
@@ -590,8 +587,8 @@
       "source-layer": "transport_areas",
       "filter": [
         "all",
-        ["in", "type", "pedestrian", "footway"],
-        ["==", "area", "yes"]
+        ["match", ["get", "type"], ["pedestrian", "footway"], true, false],
+        ["==", ["get", "area"], "yes"]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -604,7 +601,7 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "amenity_areas",
-      "filter": ["all", ["in", "type", "school", "university"]],
+      "filter": ["match", ["get", "type"], ["school", "university"], true, false],
       "layout": {"visibility": "none"},
       "paint": {"fill-color": "rgba(226, 214, 205, 1)"}
     },
@@ -633,7 +630,7 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "place_areas",
-      "filter": ["all", ["==", "type", "islet"]],
+      "filter": ["==", ["get", "type"], "islet"],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": "rgba(248, 247, 242, 1)",
@@ -647,7 +644,7 @@
       "source-layer": "water_lines",
       "minzoom": 14,
       "maxzoom": 24,
-      "filter": ["all", ["==", "type", "stream"], ["in", "name", ""]],
+      "filter": ["all", ["==", ["get", "type"], "stream"], ["match", ["get", "name"], [""], true, false]],
       "paint": {
         "line-color": "#7EDADA",
         "line-width": ["interpolate", ["linear"], ["zoom"], 14, 1, 15, 2, 20, 4]
@@ -660,7 +657,7 @@
       "source-layer": "water_lines",
       "minzoom": 12,
       "maxzoom": 24,
-      "filter": ["all", ["==", "type", "stream"], ["!in", "name", ""]],
+      "filter": ["all", ["==", ["get", "type"], "stream"], ["match", ["get", "name"], [""], false, true]],
       "paint": {
         "line-color": "#7EDADA",
         "line-width": [
@@ -685,7 +682,7 @@
       "source-layer": "water_lines",
       "minzoom": 15,
       "maxzoom": 24,
-      "filter": ["all", ["in", "type", "cliff"], ["!in", "surface", "water"]],
+      "filter": ["all", ["match", ["get", "type"], ["cliff"], true, false], ["match", ["get", "surface"], ["water"], false, true]],
       "layout": {
         "line-cap": "butt",
         "line-join": "miter",
@@ -704,7 +701,7 @@
       "source-layer": "water_lines",
       "minzoom": 15,
       "maxzoom": 24,
-      "filter": ["all", ["in", "type", "cliff"], ["!in", "surface", "water"]],
+      "filter": ["all", ["match", ["get", "type"], ["cliff"], true, false], ["match", ["get", "surface"], ["water"], false, true]],
       "layout": {
         "line-cap": "butt",
         "line-join": "miter",
@@ -725,7 +722,7 @@
       "source-layer": "water_lines",
       "minzoom": 15,
       "maxzoom": 24,
-      "filter": ["all", ["in", "type", "cliff"], ["in", "surface", "water"]],
+      "filter": ["all", ["match", ["get","type"], ["cliff"], true, false], ["match", ["get", "surface"], ["water"], true, false]],
       "layout": {
         "line-cap": "butt",
         "line-join": "miter",
@@ -746,7 +743,7 @@
       "source-layer": "water_lines",
       "minzoom": 15,
       "maxzoom": 24,
-      "filter": ["all", ["in", "type", "ditch", "drain"]],
+      "filter": ["match", ["get", "type"], ["ditch", "drain"], true, false],
       "paint": {
         "line-color": "rgba(144, 204, 203, 1)",
         "line-width": ["interpolate", ["linear"], ["zoom"], 15, 0.2, 20, 1.5]
@@ -759,7 +756,7 @@
       "source-layer": "water_lines",
       "minzoom": 8,
       "maxzoom": 24,
-      "filter": ["all", ["==", "type", "canal"]],
+      "filter": ["==", ["get", "type"], "canal"],
       "paint": {
         "line-color": "rgba(192, 234, 234, 1)",
         "line-width": [
