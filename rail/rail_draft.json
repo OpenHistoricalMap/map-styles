@@ -5396,9 +5396,9 @@
       "filter": [
         "all",
         [
-          "in",
-          "type",
-          "park",
+          "match",
+          ["get", "type"],
+          ["park",
           "sports_centre",
           "stadium",
           "grass",
@@ -5408,7 +5408,8 @@
           "recreation_ground",
           "picnic_site",
           "camp_site",
-          "playground"
+          "playground"], 
+          true, false
         ],
         [">", "area", 12000]
       ],
