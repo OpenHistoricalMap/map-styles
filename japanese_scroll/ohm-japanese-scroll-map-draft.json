@@ -142,7 +142,7 @@
       "source-layer": "water_lines",
       "minzoom": 15,
       "maxzoom": 24,
-      "filter": ["match", ["get", "type"], ["ditch", "drain"], true, false],
+      "filter": ["in", ["get", "type"], ["literal", ["ditch", "drain"]]],
       "paint": {
         "line-color": "rgba(207, 179, 125, 1)",
         "line-width": ["interpolate", ["linear"], ["zoom"], 15, 0.2, 20, 1.5],
@@ -254,7 +254,7 @@
       "source-layer": "land_ohm_lines",
       "minzoom": 0,
       "maxzoom": 20,
-      "filter": ["match", ["get", "admin_level"], [1, 2], true, false],
+      "filter": ["in", ["get", "admin_level"], ["literal", [1, 2]]],
       "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(157, 169, 174, 1)",
@@ -269,7 +269,7 @@
       "source": "osm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "filter": ["match", ["get", "type"], ["subway"], true, false],
+      "filter": ["in", ["get", "type"], ["literal", ["subway"]]],
       "layout": {"visibility": "none"},
       "paint": {
         "line-color": "rgba(153, 153, 153, 1)",
@@ -354,7 +354,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["match", ["get", "type"], ["primary"], true, false],
+        ["in", ["get", "type"], ["literal", ["primary"]]],
         ["==", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -386,11 +386,9 @@
       "filter": [
         "all",
         [
-          "match",
+          "in",
           ["get", "type"],
-          ["motorway", "motorway_link", "trunk", "trunk_link"],
-          true,
-          false
+          ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]
         ],
         ["==", ["get", "tunnel"], 1]
       ],
@@ -506,11 +504,9 @@
       "filter": [
         "all",
         [
-          "match",
+          "in",
           ["get", "type"],
-          ["motorway", "motorway_link", "trunk", "trunk_link"],
-          true,
-          false
+          ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]
         ],
         ["==", ["get", "tunnel"], 1]
       ],
@@ -542,13 +538,11 @@
       "filter": [
         "all",
         [
-          "match",
+          "in",
           ["get", "type"],
-          ["funicular", "monorail", "tram"],
-          true,
-          false
+          ["literal", ["funicular", "monorail", "tram"]]
         ],
-        ["match", ["get", "service"], ["siding", "yard"], false, true]
+        ["!in", ["get", "service"], ["literal", ["siding", "yard"]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -577,8 +571,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["match", ["get", "type"], ["miniature", "narrow_gauge"], true, false],
-        ["match", ["get", "service"], ["siding", "yard"], false, true]
+        ["in", ["get", "type"], ["literal", ["miniature", "narrow_gauge"]]],
+        ["!in", ["get", "service"], ["literal", ["siding", "yard"]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -607,8 +601,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["match", ["get", "type"], ["miniature", "narrow_gauge"], true, false],
-        ["match", ["get", "service"], ["siding", "yard"], false, true]
+        ["in", ["get", "type"], ["literal", ["miniature", "narrow_gauge"]]],
+        ["!in", ["get", "service"], ["literal", ["siding", "yard"]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -627,13 +621,11 @@
       "filter": [
         "all",
         [
-          "match",
+          "in",
           ["get", "type"],
-          ["abandoned", "dismantled", "disused", "razed"],
-          true,
-          false
+          ["literal", ["abandoned", "dismantled", "disused", "razed"]]
         ],
-        ["match", ["get", "service"], ["siding", "yard"], false, true]
+        ["!in", ["get", "service"], ["literal", ["siding", "yard"]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -663,13 +655,11 @@
       "filter": [
         "all",
         [
-          "match",
+          "in",
           ["get", "type"],
-          ["abandoned", "dismantled", "disused", "razed"],
-          true,
-          false
+          ["literal", ["abandoned", "dismantled", "disused", "razed"]]
         ],
-        ["match", ["get", "service"], ["siding", "yard"], false, true]
+        ["!in", ["get", "service"], ["literal", ["siding", "yard"]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -688,13 +678,11 @@
       "filter": [
         "all",
         [
-          "match",
+          "in",
           ["get", "type"],
-          ["light_rail", "preserved", "rail"],
-          true,
-          false
+          ["literal", ["light_rail", "preserved", "rail"]]
         ],
-        ["match", ["get", "service"], ["siding", "yard"], false, true]
+        ["!in", ["get", "service"], ["literal", ["siding", "yard"]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -724,13 +712,11 @@
       "filter": [
         "all",
         [
-          "match",
+          "in",
           ["get", "type"],
-          ["light_rail", "preserved", "rail"],
-          true,
-          false
+          ["literal", ["light_rail", "preserved", "rail"]]
         ],
-        ["match", ["get", "service"], ["siding", "yard"], false, true]
+        ["!in", ["get", "service"], ["literal", ["siding", "yard"]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -762,8 +748,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["match", ["get", "type"], ["construction", "proposed"], true, false],
-        ["match", ["get", "class"], ["railway"], true, false]
+        ["in", ["get", "type"], ["literal", ["construction", "proposed"]]],
+        ["in", ["get", "class"], ["literal", ["railway"]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -792,8 +778,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["match", ["get", "type"], ["construction", "proposed"], true, false],
-        ["match", ["get", "class"], ["railway"], true, false]
+        ["in", ["get", "type"], ["literal", ["construction", "proposed"]]],
+        ["in", ["get", "class"], ["literal", ["railway"]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -809,7 +795,7 @@
       "source-layer": "transport_lines",
       "minzoom": 12,
       "maxzoom": 24,
-      "filter": ["match", ["get", "type"], ["raceway"], true, false],
+      "filter": ["in", ["get", "type"], ["literal", ["raceway"]]],
       "layout": {"visibility": "none"},
       "paint": {
         "line-color": "rgba(255, 249, 241, 1)",
@@ -899,7 +885,7 @@
       "source-layer": "transport_lines",
       "minzoom": 14,
       "maxzoom": 24,
-      "filter": ["match", ["get", "type"], ["pedestrian"], true, false],
+      "filter": ["in", ["get", "type"], ["literal", ["pedestrian"]]],
       "layout": {"visibility": "none"},
       "paint": {
         "line-color": "#ffffff",
@@ -922,11 +908,9 @@
       "minzoom": 14,
       "maxzoom": 24,
       "filter": [
-        "match",
+        "in",
         ["get", "type"],
-        ["cycleway", "footway", "path"],
-        true,
-        false
+        ["literal", ["cycleway", "footway", "path"]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -972,7 +956,7 @@
       "source-layer": "transport_lines",
       "minzoom": 14,
       "maxzoom": 24,
-      "filter": ["match", ["get", "type"], ["steps"], true, false],
+      "filter": ["in", ["get", "type"], ["literal", ["steps"]]],
       "layout": {"visibility": "none"},
       "paint": {
         "line-color": "#b3b3b3",
@@ -996,11 +980,9 @@
       "minzoom": 14,
       "maxzoom": 24,
       "filter": [
-        "match",
+        "in",
         ["get", "type"],
-        ["living_street", "raceway", "unclassified"],
-        true,
-        false
+        ["literal", ["living_street", "raceway", "unclassified"]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -1018,11 +1000,9 @@
       "filter": [
         "all",
         [
-          "match",
+          "in",
           ["get", "type"],
-          ["residential", "service", "unclassified"],
-          true,
-          false
+          ["literal", ["residential", "service", "unclassified"]]
         ],
         ["==", ["get", "bridge"], 0]
       ],
@@ -1111,7 +1091,7 @@
       "minzoom": 10.01,
       "filter": [
         "all",
-        ["match", ["get", "type"], ["primary_link"], true, false],
+        ["in", ["get", "type"], ["literal", ["primary_link"]]],
         ["!=", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -1140,7 +1120,7 @@
       "minzoom": 10.01,
       "filter": [
         "all",
-        ["match", ["get", "type"], ["primary"], true, false],
+        ["in", ["get", "type"], ["literal", ["primary"]]],
         ["!=", ["get", "tunnel"], 1],
         ["!=", ["get", "ford"], "yes"]
       ],
@@ -1180,11 +1160,9 @@
       "filter": [
         "all",
         [
-          "match",
+          "in",
           ["get", "type"],
-          ["motorway_link", "trunk_link"],
-          true,
-          false
+          ["literal", ["motorway_link", "trunk_link"]]
         ],
         ["!=", ["get", "tunnel"], 1]
       ],
@@ -1223,7 +1201,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["match", ["get", "type"], ["motorway", "trunk"], true, false],
+        ["in", ["get", "type"], ["literal", ["motorway", "trunk"]]],
         ["!=", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -1262,11 +1240,9 @@
       "filter": [
         "all",
         [
-          "match",
+          "in",
           ["get", "type"],
-          ["residential", "service", "unclassified"],
-          true,
-          false
+          ["literal", ["residential", "service", "unclassified"]]
         ],
         ["==", ["get", "bridge"], 1]
       ],
@@ -1369,7 +1345,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["match", ["get", "type"], ["primary", "primary_link"], true, false],
+        ["in", ["get", "type"], ["literal", ["primary", "primary_link"]]],
         ["==", ["get", "bridge"], 1]
       ],
       "layout": {
@@ -1407,11 +1383,9 @@
       "filter": [
         "all",
         [
-          "match",
+          "in",
           ["get", "type"],
-          ["motorway", "motorway_link", "trunk", "trunk_link"],
-          true,
-          false
+          ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]
         ],
         ["==", ["get", "bridge"], 1]
       ],
@@ -1484,7 +1458,7 @@
       "minzoom": 6,
       "filter": [
         "all",
-        ["match", ["get", "type"], ["primary_link"], true, false],
+        ["in", ["get", "type"], ["literal", ["primary_link"]]],
         ["!=", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -1530,11 +1504,9 @@
       "filter": [
         "all",
         [
-          "match",
+          "in",
           ["get", "type"],
-          ["motorway_link", "trunk_link"],
-          true,
-          false
+          ["literal", ["motorway_link", "trunk_link"]]
         ],
         ["!=", ["get", "tunnel"], 1]
       ],
@@ -1579,11 +1551,9 @@
       "minzoom": 12,
       "maxzoom": 24,
       "filter": [
-        "match",
+        "in",
         ["get", "type"],
-        ["residential", "service", "unclassified"],
-        true,
-        false
+        ["literal", ["residential", "service", "unclassified"]]
       ],
       "layout": {
         "visibility": "visible",
@@ -1707,7 +1677,7 @@
       "minzoom": 6,
       "filter": [
         "all",
-        ["match", ["get", "type"], ["primary"], true, false],
+        ["in", ["get", "type"], ["literal", ["primary"]]],
         ["!=", ["get", "tunnel"], 1],
         ["!=", ["get", "ford"], "yes"]
       ],
@@ -1753,7 +1723,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["match", ["get", "type"], ["motorway", "trunk"], true, false],
+        ["in", ["get", "type"], ["literal", ["motorway", "trunk"]]],
         ["!=", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -1821,11 +1791,9 @@
       "filter": [
         "all",
         [
-          "match",
+          "in",
           ["get", "type"],
-          ["residential", "service", "unclassified"],
-          true,
-          false
+          ["literal", ["residential", "service", "unclassified"]]
         ],
         ["==", ["get", "bridge"], 1]
       ],
@@ -1918,7 +1886,7 @@
       "minzoom": 6,
       "filter": [
         "all",
-        ["match", ["get", "type"], ["primary"], true, false],
+        ["in", ["get", "type"], ["literal", ["primary"]]],
         ["==", ["get", "bridge"], 1]
       ],
       "layout": {"visibility": "none"},
@@ -1953,11 +1921,9 @@
       "filter": [
         "all",
         [
-          "match",
+          "in",
           ["get", "type"],
-          ["motorway", "motorway_link", "trunk", "trunk_link"],
-          true,
-          false
+          ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]
         ],
         ["==", ["get", "bridge"], 1]
       ],
@@ -1994,7 +1960,7 @@
       "source-layer": "transport_lines",
       "minzoom": 8,
       "maxzoom": 9,
-      "filter": ["match", ["get", "type"], ["secondary"], true, false],
+      "filter": ["in", ["get", "type"], ["literal", ["secondary"]]],
       "layout": {"visibility": "visible"},
       "paint": {
         "line-color": [
@@ -2024,7 +1990,7 @@
       "source-layer": "transport_lines",
       "minzoom": 7,
       "maxzoom": 9,
-      "filter": ["match", ["get", "type"], ["primary", "trunk"], true, false],
+      "filter": ["in", ["get", "type"], ["literal", ["primary", "trunk"]]],
       "layout": {"visibility": "none"},
       "paint": {
         "line-color": [
@@ -2224,7 +2190,7 @@
       "source-layer": "place_points",
       "minzoom": 5,
       "maxzoom": 20,
-      "filter": ["match", ["get", "type"], ["state", "territory"], true, false],
+      "filter": ["in", ["get", "type"], ["literal", ["state", "territory"]]],
       "layout": {
         "visibility": "visible",
         "text-field": ["to-string", ["get", "name"]],
