@@ -677,7 +677,7 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "stream"],
-        ["!in", ["get", "name"], ["literal", [""]]]
+        ["in", ["get", "name"], ["literal", [""]]]
       ],
       "paint": {
         "line-color": "#7EDADA",
