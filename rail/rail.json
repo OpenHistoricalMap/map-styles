@@ -677,7 +677,7 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "stream"],
-        ["in", ["get", "name"], ["literal", [""]]]
+        ["!in", ["get", "name"], ["literal", [""]]]
       ],
       "paint": {
         "line-color": "#7EDADA",
@@ -694,7 +694,7 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "stream"],
-        ["in", ["get", "name"], ["literal", [""]]]
+        ["!in", ["get", "name"], ["literal", [""]]]
       ],
       "paint": {
         "line-color": "#7EDADA",
@@ -4548,7 +4548,7 @@
       "filter": [
         "all",
         ["==", ["get", "usage"], "main"],
-        ["in", ["get", "service"], ["literal", ["siding", "spur", "yard"]]],
+        ["!in", ["get", "service"], ["literal", ["siding", "spur", "yard"]]],
         ["in", ["get", "type"], ["literal", ["preserved", "rail"]]]
       ],
       "layout": {
@@ -5856,7 +5856,7 @@
       "source-layer": "place_areas",
       "minzoom": 16,
       "filter": [
-        "in",
+        "!in",
         ["get", "type"],
         ["literal", ["country", "state", "territory"]]
       ],
