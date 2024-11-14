@@ -542,7 +542,7 @@
           ["get", "type"],
           ["literal", ["funicular", "monorail", "tram"]]
         ],
-        ["!in", ["get", "service"], ["literal", ["siding", "yard"]]]
+        ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -572,7 +572,7 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["miniature", "narrow_gauge"]]],
-        ["!in", ["get", "service"], ["literal", ["siding", "yard"]]]
+        ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -602,7 +602,7 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["miniature", "narrow_gauge"]]],
-        ["!in", ["get", "service"], ["literal", ["siding", "yard"]]]
+        ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -625,7 +625,7 @@
           ["get", "type"],
           ["literal", ["abandoned", "dismantled", "disused", "razed"]]
         ],
-        ["!in", ["get", "service"], ["literal", ["siding", "yard"]]]
+        ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -659,7 +659,7 @@
           ["get", "type"],
           ["literal", ["abandoned", "dismantled", "disused", "razed"]]
         ],
-        ["!in", ["get", "service"], ["literal", ["siding", "yard"]]]
+        ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -682,7 +682,7 @@
           ["get", "type"],
           ["literal", ["light_rail", "preserved", "rail"]]
         ],
-        ["!in", ["get", "service"], ["literal", ["siding", "yard"]]]
+        ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -716,7 +716,7 @@
           ["get", "type"],
           ["literal", ["light_rail", "preserved", "rail"]]
         ],
-        ["!in", ["get", "service"], ["literal", ["siding", "yard"]]]
+        ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
