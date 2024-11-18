@@ -4628,7 +4628,7 @@
       "source-layer": "transport_lines",
       "minzoom": 13,
       "maxzoom": 24,
-      "filter": ["match", ["get", "service"], ["literal", ["siding", "yard"]]],
+      "filter": ["in", ["get", "service"], ["literal", ["siding", "yard"]]],
       "layout": {
         "visibility": "visible",
         "line-cap": "square",
@@ -6272,7 +6272,7 @@
         [
           "!", ["in",
           ["get", "religion"],
-          ["in", ["christian", "jewish", "muslim"]]]
+          ["literal", ["christian", "jewish", "muslim"]]]
         ]
       ],
       "layout": {
@@ -6299,7 +6299,7 @@
       "source": "osm",
       "source-layer": "landuse_points",
       "minzoom": 14,
-      "filter": ["in", ["get", "type"], ["in", ["peak"]]],
+      "filter": ["in", ["get", "type"], ["literal", ["peak"]]],
       "layout": {
         "icon-image": ["concat", ["get", "type"], "-12"],
         "text-font": ["OpenHistorical"],
