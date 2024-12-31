@@ -6111,11 +6111,7 @@
       "source-layer": "land_ohm_centroids",
       "minzoom": 8,
       "maxzoom": 20,
-      "filter": [
-        "all",
-        ["==", ["get", "type"], "administrative"],
-        ["==", ["get", "admin_level"], 6]
-      ],
+      "filter": ["in", ["get", "admin_level"], ["literal", [6, 7, 8]]],
       "layout": {
         "text-field": ["get", "name"],
         "text-font": ["OpenHistorical"],
@@ -6150,40 +6146,6 @@
       "minzoom": 8,
       "maxzoom": 20,
       "filter": ["==", ["get", "type"], "county"],
-      "layout": {
-        "text-field": ["get", "name"],
-        "text-font": ["OpenHistorical"],
-        "text-size": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          6,
-          5,
-          10,
-          11,
-          16,
-          13
-        ],
-        "visibility": "visible",
-        "text-transform": "uppercase",
-        "symbol-spacing": 250,
-        "text-letter-spacing": 0
-      },
-      "paint": {
-        "text-color": "rgba(128, 128, 128, 1)",
-        "text-halo-color": "rgba(255, 255, 255, 1)",
-        "text-halo-blur": 2,
-        "text-halo-width": 1
-      }
-    },
-    {
-      "id": "admin7_8_z8_centroids",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "land_ohm_centroids",
-      "minzoom": 8,
-      "maxzoom": 20,
-      "filter": ["in", ["get", "admin_level"], ["literal", [7, 8]]],
       "layout": {
         "text-field": ["get", "name"],
         "text-font": ["OpenHistorical"],
