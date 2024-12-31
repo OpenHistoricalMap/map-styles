@@ -1047,6 +1047,20 @@
       }
     },
     {
+      "id": "aero_aerodrome_area",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "transport_areas",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": ["==", ["get", "type"], "aerodrome"],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(245, 245, 245, 1)",
+        "fill-outline-color": "rgba(214, 212, 212, 1)"
+      }
+    },
+    {
       "id": "aero_heliport_area",
       "type": "fill",
       "source": "osm",
@@ -5944,7 +5958,7 @@
       "source": "osm",
       "source-layer": "transport_areas",
       "minzoom": 10,
-      "maxzoom": 14,
+      "maxzoom": 16,
       "filter": ["==", ["get", "type"], "aerodrome"],
       "layout": {"icon-image": "airport-18", "text-font": ["OpenHistorical"]}
     },
