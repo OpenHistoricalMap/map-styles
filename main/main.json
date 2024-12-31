@@ -6246,7 +6246,7 @@
       }
     },
     {
-      "id": "city_labels_town_z8_centroids",
+      "id": "admin7_8_z8_centroids",
       "type": "symbol",
       "source": "osm",
       "source-layer": "land_ohm_centroids",
@@ -6261,16 +6261,19 @@
           ["linear"],
           ["zoom"],
           6,
-          7,
+          5,
           10,
-          12,
+          11,
           16,
-          14
+          13
         ],
-        "visibility": "visible"
+        "visibility": "visible",
+        "text-transform": "uppercase",
+        "symbol-spacing": 250,
+        "text-letter-spacing": 0
       },
       "paint": {
-        "text-color": "rgba(34, 34, 34, 1)",
+        "text-color": "rgba(128, 128, 128, 1)",
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-blur": 2,
         "text-halo-width": 1
