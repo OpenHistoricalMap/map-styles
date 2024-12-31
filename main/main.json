@@ -357,36 +357,6 @@
       }
     },
     {
-      "id": "landuse_areas_z12_watercover",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "landuse_areas",
-      "minzoom": 9,
-      "maxzoom": 24,
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "fill-color": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          0,
-          [
-            "match",
-            ["get", "type"],
-            "wetland",
-            "rgba(216, 229, 230, 1)",
-            "salt_pond",
-            "rgba(236, 240, 241, 1)",
-            "glacier",
-            "rgba(219, 244, 249, 1)",
-            "reservoir",
-            "rgba(144, 204, 203, 1)",
-            "transparent"
-          ]
-        ]
-      }
-    },
-    {
       "id": "landuse_areas_z12_glacier-outline",
       "type": "line",
       "source": "osm",
@@ -613,6 +583,38 @@
           "rgba(185, 228, 228, 1)",
           10,
           "rgba(126, 218, 218, 1)"
+        ]
+      }
+    },
+    {
+      "id": "landuse_areas_z12_watercover",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 9,
+      "maxzoom": 24,
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          0,
+          [
+            "match",
+            ["get", "type"],
+            "wetland",
+            "rgba(216, 229, 230, 1)",
+            "salt_pond",
+            "rgba(236, 240, 241, 1)",
+            "glacier",
+            "rgba(219, 244, 249, 1)",
+            "reservoir",
+            "rgba(144, 204, 203, 1)",
+            "swimming_pool",
+            "rgba(144, 204, 203, 1)",
+            "transparent"
+          ]
         ]
       }
     },
