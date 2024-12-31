@@ -6365,61 +6365,6 @@
       }
     },
     {
-      "id": "points_acra",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buildings",
-      "filter": ["match", ["get", "name"], ["ACRA", "Acra"], true, false],
-      "layout": {
-        "icon-image": "acra-18",
-        "text-font": ["OpenHistorical"],
-        "visibility": "visible"
-      }
-    },
-    {
-      "id": "points_oxfam",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buildings",
-      "filter": [
-        "in",
-        ["get", "name"],
-        ["literal", [
-          "Centro di accoglienza Oxfam Italia",
-          "Intermon Oxfam",
-          "Magasin du monde-Oxfam",
-          "OXFAM",
-          "OXFAM Latrines",
-          "OXFAM Water Tank",
-          "OXFAM Water point",
-          "Oxfam",
-          "Oxfam Book Shop",
-          "Oxfam Books",
-          "Oxfam Books & Music",
-          "Oxfam Bookshop",
-          "Oxfam Boutique",
-          "Oxfam Buchshop",
-          "Oxfam Charity Shop",
-          "Oxfam GB",
-          "Oxfam Ireland",
-          "Oxfam Magasins du monde",
-          "Oxfam Music",
-          "Oxfam Novib",
-          "Oxfam Shop",
-          "Oxfam Solidarité",
-          "Oxfam Wereldwinkel",
-          "Oxfam books",
-          "Oxfam wereldwinkel",
-          "oxfam"
-        ]]
-      ],
-      "layout": {
-        "icon-image": "oxfam-18",
-        "text-font": ["OpenHistorical"],
-        "visibility": "visible"
-      }
-    },
-    {
       "id": "points_of_interest_shop",
       "type": "symbol",
       "source": "osm",
