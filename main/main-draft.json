@@ -5,9 +5,7 @@
   "sources": {
     "osm": {
       "type": "vector",
-      "tiles": [
-        "https://vtiles.staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
-      ]
+      "tiles": ["https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
     },
     "ohm_landcover_hillshade": {
       "type": "raster",
@@ -359,36 +357,6 @@
       }
     },
     {
-      "id": "landuse_areas_z12_watercover",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "landuse_areas",
-      "minzoom": 9,
-      "maxzoom": 24,
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "fill-color": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          0,
-          [
-            "match",
-            ["get", "type"],
-            "wetland",
-            "rgba(216, 229, 230, 1)",
-            "salt_pond",
-            "rgba(236, 240, 241, 1)",
-            "glacier",
-            "rgba(219, 244, 249, 1)",
-            "reservoir",
-            "rgba(144, 204, 203, 1)",
-            "transparent"
-          ]
-        ]
-      }
-    },
-    {
       "id": "landuse_areas_z12_glacier-outline",
       "type": "line",
       "source": "osm",
@@ -615,6 +583,38 @@
           "rgba(185, 228, 228, 1)",
           10,
           "rgba(126, 218, 218, 1)"
+        ]
+      }
+    },
+    {
+      "id": "landuse_areas_z12_watercover",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 9,
+      "maxzoom": 24,
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          0,
+          [
+            "match",
+            ["get", "type"],
+            "wetland",
+            "rgba(216, 229, 230, 1)",
+            "salt_pond",
+            "rgba(236, 240, 241, 1)",
+            "glacier",
+            "rgba(219, 244, 249, 1)",
+            "reservoir",
+            "rgba(144, 204, 203, 1)",
+            "swimming_pool",
+            "rgba(144, 204, 203, 1)",
+            "transparent"
+          ]
         ]
       }
     },
@@ -4852,6 +4852,29 @@
       }
     },
     {
+      "id": "landuse_lines",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "landuse_lines",
+      "filter": ["all"],
+      "paint": {
+        "line-color": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          0,
+          [
+            "match",
+            ["get", "type"],
+            "tree_row",
+            "rgba(160, 178, 120, 1)",
+            "transparent"
+          ]
+        ],
+        "line-width": 2
+      }
+    },
+    {
       "id": "barriers",
       "type": "line",
       "source": "osm",
@@ -5726,6 +5749,50 @@
       }
     },
     {
+      "id": "points_of_interest_other",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "other_points",
+      "minzoom": 15,
+      "maxzoom": 24,
+      "filter": ["!", ["in", ["get", "type"], ["literal", ["artwork"]]]],
+      "layout": {
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          15.99,
+          0,
+          16,
+          10,
+          20,
+          12
+        ],
+        "icon-text-fit": "none",
+        "icon-image": "{type}-18",
+        "icon-keep-upright": false,
+        "text-font": ["OpenHistorical"],
+        "icon-allow-overlap": false,
+        "visibility": "visible",
+        "text-offset": [0, 1],
+        "icon-optional": false,
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 15, 0.7, 20, 1.4],
+        "text-anchor": "top",
+        "text-field": ["get", "name"],
+        "text-max-width": 10,
+        "icon-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#505050",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5,
+        "text-halo-blur": 1,
+        "text-translate-anchor": "viewport",
+        "icon-translate-anchor": "viewport",
+        "text-opacity": ["interpolate", ["linear"], ["zoom"], 16.99, 0, 17, 1]
+      }
+    },
+    {
       "id": "points_of_interest_amenity_14",
       "type": "symbol",
       "source": "osm",
@@ -5783,50 +5850,6 @@
         "text-halo-width": 0.5,
         "text-halo-blur": 1,
         "text-opacity": ["interpolate", ["linear"], ["zoom"], 16.9, 0, 17, 1]
-      }
-    },
-    {
-      "id": "points_of_interest_other",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "other_points",
-      "minzoom": 15,
-      "maxzoom": 24,
-      "filter": ["!", ["in", ["get", "type"], ["literal", ["artwork"]]]],
-      "layout": {
-        "text-size": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          15.99,
-          0,
-          16,
-          10,
-          20,
-          12
-        ],
-        "icon-text-fit": "none",
-        "icon-image": "{type}-18",
-        "icon-keep-upright": false,
-        "text-font": ["OpenHistorical"],
-        "icon-allow-overlap": false,
-        "visibility": "visible",
-        "text-offset": [0, 1],
-        "icon-optional": false,
-        "icon-size": ["interpolate", ["linear"], ["zoom"], 15, 0.7, 20, 1.4],
-        "text-anchor": "top",
-        "text-field": ["get", "name"],
-        "text-max-width": 10,
-        "icon-ignore-placement": false
-      },
-      "paint": {
-        "text-color": "#505050",
-        "text-halo-color": "rgba(255, 255, 255, 1)",
-        "text-halo-width": 0.5,
-        "text-halo-blur": 1,
-        "text-translate-anchor": "viewport",
-        "icon-translate-anchor": "viewport",
-        "text-opacity": ["interpolate", ["linear"], ["zoom"], 16.99, 0, 17, 1]
       }
     },
     {
