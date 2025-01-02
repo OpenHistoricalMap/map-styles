@@ -23,4 +23,8 @@ If you make a new style, just change the URL for the style file with the new one
 
 Note that changes here do not publish automagically to the OHM website. The latest styles get deployed to staging/openhistoricalmap.org by updating the Git commit sha on the `staging` branch here https://github.com/OpenHistoricalMap/ohm-deploy/blob/b71bc19d95f00fbb96ec33bd5149e0cd1b454935/images/web/Dockerfile#L117
 
-We also have a bare-bones, no timeslider demo of the style served on GH Pages at [openhistoricalmap.github.io/map-styles/demo.html](https://openhistoricalmap.github.io/map-styles/demo.html)
+To review the styles while there are in `staging` (before they are officially live), use the following URLS to review each style. Change the target year in the URL:
+- Main/Historical: https://embed.openhistoricalmap.org/#map=16/40.70486/-74.01313&date=1700&layer=O_staging
+- Rail style: https://embed.openhistoricalmap.org/#map=16/40.70486/-74.01313&date=1700&layer=R_staging
+- Woodblock: https://embed.openhistoricalmap.org/#map=16/40.70486/-74.01313&date=1700&layer=W_staging
+- Japanese scroll: https://embed.openhistoricalmap.org/#map=16/40.70486/-74.01313&date=1700&layer=J_staging
