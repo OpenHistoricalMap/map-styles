@@ -467,17 +467,19 @@
       }
     },
     {
-      "id": "wetlands_z12",
+      "id": "wetlands_z12-pattern",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
-      "minzoom": 9,
+      "minzoom": 12,
       "maxzoom": 24,
       "filter": ["==", ["get", "type"], "wetland"],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": "rgba(255, 255, 255, 1)",
-        "fill-pattern": "wetland-18"
+        "fill-pattern": {
+          "stops": [[12, "cattails_space_60px"], [14, "cattails_space_70px"]]
+        }
       }
     },
     {
@@ -606,7 +608,7 @@
             "match",
             ["get", "type"],
             "wetland",
-            "rgba(216, 229, 230, 1)",
+            "rgba(184, 222, 176, 1)",
             "salt_pond",
             "rgba(236, 240, 241, 1)",
             "glacier",
