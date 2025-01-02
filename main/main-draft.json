@@ -224,6 +224,8 @@
             "rgba(212, 225, 211, 0.3)",
             "pitch",
             "rgba(69, 150, 7, 0.39)",
+            "golf_course",
+            "rgba(236, 240, 198, 1)",
             "transparent"
           ]
         ]
@@ -323,7 +325,7 @@
       "filter": ["==", ["get", "type"], "park"],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-width": ["interpolate", ["linear"], ["zoom"], 12, 0.75, 16, 1.25],
+        "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1, 16, 3],
         "line-color": "rgba(200, 210, 163, 1)"
       }
     },
@@ -6119,13 +6121,47 @@
       }
     },
     {
-      "id": "county_labels_z11-centroids",
+      "id": "county_labels_z11-admin7_8-centroids",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "land_ohm_centroids",
+      "minzoom": 10,
+      "maxzoom": 20,
+      "filter": ["in", ["get", "admin_level"], ["literal", [7, 8]]],
+      "layout": {
+        "text-field": ["get", "name"],
+        "text-font": ["OpenHistorical"],
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          6,
+          5,
+          10,
+          11,
+          16,
+          13
+        ],
+        "visibility": "visible",
+        "text-transform": "uppercase",
+        "symbol-spacing": 250,
+        "text-letter-spacing": 0
+      },
+      "paint": {
+        "text-color": "rgba(128, 128, 128, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-blur": 2,
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "county_labels_z11-admin6-centroids",
       "type": "symbol",
       "source": "osm",
       "source-layer": "land_ohm_centroids",
       "minzoom": 8,
       "maxzoom": 20,
-      "filter": ["in", ["get", "admin_level"], ["literal", [6, 7, 8]]],
+      "filter": ["in", ["get", "admin_level"], ["literal", [6]]],
       "layout": {
         "text-field": ["get", "name"],
         "text-font": ["OpenHistorical"],
