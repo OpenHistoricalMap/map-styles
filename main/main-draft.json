@@ -587,26 +587,10 @@
           "interpolate",
           ["linear"],
           ["zoom"],
-          0,
-          [
-            "match",
-            ["get", "type"],
-            "salt_pond",
-            "rgba(236, 240, 241, 1)",
-            "glacier",
-            "rgba(219, 244, 249, 1)",
-            "reservoir",
-            "rgba(144, 204, 203, 1)",
-            "swimming_pool",
-            "rgba(144, 204, 203, 1)",
-            "transparent"
-          ],
           12,
           [
             "match",
             ["get", "type"],
-            "wetland",
-            "rgba(184, 222, 176, 1)",
             "salt_pond",
             "rgba(236, 240, 241, 1)",
             "glacier",
@@ -619,6 +603,17 @@
           ]
         ]
       }
+    },
+    {
+      "id": "landuse_areas_z11_wetland_watercover",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": ["all", ["==", "type", "wetland"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(184, 222, 176, 1)"}
     },
     {
       "id": "water_areas-ne",
@@ -677,7 +672,7 @@
       }
     },
     {
-      "id": "wetlands_z12-pattern",
+      "id": "wetlands_z11-pattern",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
