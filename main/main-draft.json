@@ -579,7 +579,7 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
-      "minzoom": 9,
+      "minzoom": 11,
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
       "paint": {
@@ -601,7 +601,7 @@
             "rgba(144, 204, 203, 1)",
             "transparent"
           ],
-          11,
+          12,
           [
             "match",
             ["get", "type"],
