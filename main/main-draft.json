@@ -467,22 +467,6 @@
       }
     },
     {
-      "id": "wetlands_z12-pattern",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "landuse_areas",
-      "minzoom": 12,
-      "maxzoom": 24,
-      "filter": ["==", ["get", "type"], "wetland"],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "fill-color": "rgba(255, 255, 255, 1)",
-        "fill-pattern": {
-          "stops": [[12, "cattails_space_60px"], [14, "cattails_space_70px"]]
-        }
-      }
-    },
-    {
       "id": "parking_lots",
       "type": "fill",
       "source": "osm",
@@ -607,6 +591,20 @@
           [
             "match",
             ["get", "type"],
+            "salt_pond",
+            "rgba(236, 240, 241, 1)",
+            "glacier",
+            "rgba(219, 244, 249, 1)",
+            "reservoir",
+            "rgba(144, 204, 203, 1)",
+            "swimming_pool",
+            "rgba(144, 204, 203, 1)",
+            "transparent"
+          ],
+          11,
+          [
+            "match",
+            ["get", "type"],
             "wetland",
             "rgba(184, 222, 176, 1)",
             "salt_pond",
@@ -676,6 +674,22 @@
       "paint": {
         "fill-color": "rgba(248, 247, 242, 1)",
         "fill-outline-color": "rgba(226, 223, 215, 1)"
+      }
+    },
+    {
+      "id": "wetlands_z12-pattern",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": ["==", ["get", "type"], "wetland"],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(255, 255, 255, 1)",
+        "fill-pattern": {
+          "stops": [[12, "cattails_space_60px"], [14, "cattails_space_70px"]]
+        }
       }
     },
     {
