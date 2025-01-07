@@ -613,7 +613,7 @@
       "maxzoom": 24,
       "filter": ["all", ["==", "type", "wetland"]],
       "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(230, 236, 229, 1)"}
+      "paint": {"fill-color": "rgba(228, 242, 227, 1)"}
     },
     {
       "id": "water_areas-ne",
