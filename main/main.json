@@ -5019,7 +5019,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
-      "minzoom": 5,
+      "minzoom": 3,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -5049,7 +5049,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
-      "minzoom": 5,
+      "minzoom": 3,
       "maxzoom": 20,
       "filter": [
         "all",
