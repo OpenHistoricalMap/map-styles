@@ -1,0 +1,72 @@
+[
+  {
+    "id": "roads_motorwaytunnel_construction",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 5,
+    "maxzoom": 20,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "construction"
+          ]
+        ]
+      ],
+      [
+        "==",
+        [
+          "get",
+          "tunnel"
+        ],
+        1
+      ],
+      [
+        "in",
+        [
+          "get",
+          "construction"
+        ],
+        [
+          "literal",
+          [
+            "motorway",
+            "motorway_link",
+            "trunk",
+            "trunk_link"
+          ]
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "round",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": "rgba(197, 197, 197, 0.6)",
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        5,
+        1,
+        18,
+        36
+      ]
+    }
+  }
+]

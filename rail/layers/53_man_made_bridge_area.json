@@ -1,0 +1,30 @@
+[
+  {
+    "id": "man_made_bridge_area",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "other_areas",
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "man_made"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "bridge"
+      ]
+    ],
+    "paint": {
+      "fill-color": "rgba(255, 255, 255, 1)"
+    }
+  }
+]

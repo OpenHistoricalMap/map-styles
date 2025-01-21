@@ -1,0 +1,73 @@
+[
+  {
+    "id": "roads_subways-tunnel-tick",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 10,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "subway"
+          ]
+        ]
+      ],
+      [
+        "==",
+        [
+          "get",
+          "tunnel"
+        ],
+        1
+      ]
+    ],
+    "layout": {
+      "visibility": "none"
+    },
+    "paint": {
+      "line-color": "rgba(156, 164, 197, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        16,
+        3,
+        20,
+        9
+      ],
+      "line-dasharray": [
+        "step",
+        [
+          "zoom"
+        ],
+        [
+          "literal",
+          [
+            0.3,
+            3
+          ]
+        ],
+        18,
+        [
+          "literal",
+          [
+            0.15,
+            3
+          ]
+        ]
+      ]
+    }
+  }
+]

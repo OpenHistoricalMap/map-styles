@@ -1,0 +1,44 @@
+[
+  {
+    "id": "water_lines_cliff_line",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "water_lines",
+    "minzoom": 15,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "cliff"
+          ]
+        ]
+      ],
+      [
+        "!",
+        [
+          "in",
+          "surface",
+          "water"
+        ]
+      ]
+    ],
+    "layout": {
+      "line-cap": "butt",
+      "line-join": "miter",
+      "visibility": "visible"
+    },
+    "paint": {
+      "line-color": "rgba(153, 153, 153, 1)",
+      "line-translate-anchor": "viewport",
+      "line-width": 2
+    }
+  }
+]

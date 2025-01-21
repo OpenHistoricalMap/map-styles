@@ -1,0 +1,36 @@
+[
+  {
+    "id": "historic_fort",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "other_areas",
+    "minzoom": 14,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "historic"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "fort"
+      ]
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": "rgba(220, 215, 215, 1)",
+      "fill-outline-color": "rgba(195, 188, 188, 1)"
+    }
+  }
+]

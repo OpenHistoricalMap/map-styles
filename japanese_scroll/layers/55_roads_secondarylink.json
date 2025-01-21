@@ -1,0 +1,57 @@
+[
+  {
+    "id": "roads_secondarylink",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 8,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "secondary_link"
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "tunnel"
+        ],
+        1
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "round",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": "#ffffff",
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        8,
+        0,
+        12,
+        2,
+        14,
+        4,
+        17,
+        10,
+        18,
+        13
+      ],
+      "line-pattern": "jproad"
+    }
+  }
+]

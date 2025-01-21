@@ -1,0 +1,39 @@
+[
+  {
+    "id": "landuse_areas_z12_underlying_land_designation",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 12,
+    "maxzoom": 24,
+    "layout": {
+      "visibility": "none"
+    },
+    "paint": {
+      "fill-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        [
+          "match",
+          [
+            "get",
+            "type"
+          ],
+          "park",
+          "rgba(226, 227, 220, 1)",
+          "nature_reserve",
+          "rgba(212, 225, 211, 0.3)",
+          "pitch",
+          "rgba(69, 143, 13, 0.39)",
+          "transparent"
+        ]
+      ]
+    }
+  }
+]

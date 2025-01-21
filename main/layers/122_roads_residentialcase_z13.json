@@ -1,0 +1,58 @@
+[
+  {
+    "id": "roads_residentialcase_z13",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 13,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "residential",
+            "service",
+            "unclassified"
+          ]
+        ]
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "bridge"
+        ],
+        1
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "round",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": "#D2D2D5",
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        13,
+        4,
+        18,
+        18
+      ]
+    }
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "roads_secondarybridgetop_construction",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 8,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "construction"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "bridge"
+        ],
+        1
+      ],
+      [
+        "==",
+        [
+          "get",
+          "construction"
+        ],
+        "secondary"
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "round",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        10,
+        "rgba(217, 217, 217, 1)",
+        11,
+        "#ffffff"
+      ],
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        8,
+        0.5,
+        18,
+        30
+      ],
+      "line-dasharray": [
+        3,
+        1.5
+      ]
+    }
+  }
+]

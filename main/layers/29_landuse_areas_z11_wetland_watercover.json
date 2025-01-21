@@ -1,0 +1,24 @@
+[
+  {
+    "id": "landuse_areas_z11_wetland_watercover",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 11,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "==",
+        "type",
+        "wetland"
+      ]
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": "rgba(228, 242, 227, 1)"
+    }
+  }
+]

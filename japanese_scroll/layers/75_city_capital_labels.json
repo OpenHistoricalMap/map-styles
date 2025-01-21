@@ -1,0 +1,93 @@
+[
+  {
+    "id": "city_capital_labels",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "place_points",
+    "minzoom": 4,
+    "maxzoom": 15,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "city"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "capital"
+        ],
+        "yes"
+      ]
+    ],
+    "layout": {
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "text-font": [
+        "BernerBasisschrift"
+      ],
+      "text-transform": "uppercase",
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        16,
+        10,
+        20
+      ],
+      "visibility": "visible",
+      "icon-image": "woodblock-3-tiered-house-small",
+      "icon-offset": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        [
+          "literal",
+          [
+            0,
+            -16
+          ]
+        ],
+        10,
+        [
+          "literal",
+          [
+            0,
+            -16
+          ]
+        ]
+      ],
+      "icon-size": 1,
+      "icon-anchor": "bottom",
+      "text-letter-spacing": 0.1,
+      "text-max-width": 7,
+      "text-line-height": 0.8
+    },
+    "paint": {
+      "text-color": "rgba(13, 13, 13, 1)",
+      "text-halo-color": "rgba(226, 189, 93, 1)",
+      "text-halo-blur": 2,
+      "text-halo-width": 12
+    }
+  }
+]

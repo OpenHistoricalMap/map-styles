@@ -1,0 +1,41 @@
+[
+  {
+    "id": "landuse_areas_z12_watercover",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 9,
+    "maxzoom": 24,
+    "layout": {
+      "visibility": "none"
+    },
+    "paint": {
+      "fill-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        [
+          "match",
+          [
+            "get",
+            "type"
+          ],
+          "wetland",
+          "rgba(216, 229, 230, 1)",
+          "salt_pond",
+          "rgba(236, 240, 241, 1)",
+          "glacier",
+          "rgba(255, 255, 255, 1)",
+          "reservoir",
+          "rgba(144, 204, 203, 1)",
+          "transparent"
+        ]
+      ]
+    }
+  }
+]

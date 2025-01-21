@@ -1,0 +1,41 @@
+[
+  {
+    "id": "landuse_naturereserveoutline",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 10,
+    "maxzoom": 24,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "nature_reserve"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        10,
+        2,
+        20,
+        3
+      ],
+      "line-dasharray": [
+        2.5,
+        1.5
+      ],
+      "line-color": "rgba(195, 203, 179, 1)"
+    }
+  }
+]

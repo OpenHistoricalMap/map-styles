@@ -1,0 +1,45 @@
+[
+  {
+    "id": "admin_countrylines_z10",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "land_ohm_lines",
+    "minzoom": 0,
+    "maxzoom": 20,
+    "filter": [
+      "in",
+      [
+        "get",
+        "admin_level"
+      ],
+      [
+        "literal",
+        [
+          1,
+          2
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "line-color": "rgba(157, 169, 174, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        4,
+        8,
+        6
+      ],
+      "line-pattern": "adminbound",
+      "line-opacity": 1
+    }
+  }
+]

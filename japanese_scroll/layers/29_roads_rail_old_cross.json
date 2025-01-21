@@ -1,0 +1,57 @@
+[
+  {
+    "id": "roads_rail_old_cross",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 7,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "abandoned",
+            "dismantled",
+            "disused",
+            "razed"
+          ]
+        ]
+      ],
+      [
+        "!",
+        [
+          "in",
+          [
+            "get",
+            "service"
+          ],
+          [
+            "literal",
+            [
+              "siding",
+              "yard"
+            ]
+          ]
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "none"
+    },
+    "paint": {
+      "line-color": "rgba(210, 190, 190, 1)",
+      "line-width": 6,
+      "line-dasharray": [
+        0.2,
+        2
+      ]
+    }
+  }
+]

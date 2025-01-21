@@ -1,0 +1,46 @@
+[
+  {
+    "id": "barriers",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "other_lines",
+    "filter": [
+      "all"
+    ],
+    "paint": {
+      "line-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        [
+          "match",
+          [
+            "get",
+            "type"
+          ],
+          "wall",
+          "rgba(223, 223, 223, 1)",
+          "fence",
+          "rgba(233, 228, 216, 1)",
+          "wood_fence",
+          "rgba(241, 224, 200, 1)",
+          "hedge",
+          "rgba(204, 218, 190, 1)",
+          "hedge_bank",
+          "rgba(204, 218, 190, 1)",
+          "retaining_wall",
+          "rgba(223, 223, 223, 1)",
+          "city_wall",
+          "rgba(223, 223, 223, 1)",
+          "transparent"
+        ]
+      ],
+      "line-width": 2
+    }
+  }
+]

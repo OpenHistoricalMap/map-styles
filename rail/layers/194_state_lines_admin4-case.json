@@ -1,0 +1,64 @@
+[
+  {
+    "id": "state_lines_admin4-case",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "land_ohm_lines",
+    "minzoom": 3,
+    "maxzoom": 20,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "admin_level"
+        ],
+        4
+      ],
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "administrative"
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "square",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        4,
+        "rgba(163, 165, 169, 0.05)",
+        7,
+        "rgba(234, 235, 236, 0.1)"
+      ],
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        0,
+        12,
+        8,
+        15,
+        7
+      ]
+    }
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "water_pointlabels_ocean_sea",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "place_points",
+    "minzoom": 0,
+    "maxzoom": 24,
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "ocean",
+          "sea"
+        ]
+      ]
+    ],
+    "layout": {
+      "text-field": [
+        "get",
+        "name"
+      ],
+      "text-font": [
+        "OpenHistorical Italic"
+      ],
+      "text-padding": 2,
+      "text-allow-overlap": false,
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        8,
+        12,
+        11,
+        13,
+        13,
+        14
+      ],
+      "visibility": "visible"
+    },
+    "paint": {
+      "text-color": "rgba(43, 102, 102, 1)",
+      "text-halo-width": 1,
+      "text-halo-color": "rgba(207, 230, 230, 1)"
+    }
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "water_lines_canal-casing",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "water_lines",
+    "minzoom": 12,
+    "maxzoom": 24,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "canal"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "line-color": "rgba(111, 145, 160, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        13,
+        0.5,
+        14,
+        2,
+        20,
+        3
+      ],
+      "line-gap-width": 4,
+      "line-dasharray": [
+        1,
+        1
+      ]
+    }
+  }
+]

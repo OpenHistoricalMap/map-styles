@@ -1,0 +1,67 @@
+[
+  {
+    "id": "roads_tertiary-case_construction",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 10.01,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "construction"
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "tunnel"
+        ],
+        1
+      ],
+      [
+        "==",
+        [
+          "get",
+          "construction"
+        ],
+        "tertiary"
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "bridge"
+        ],
+        1
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "round",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": "rgba(210, 210, 213, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        10,
+        2.2,
+        18,
+        28
+      ]
+    }
+  }
+]

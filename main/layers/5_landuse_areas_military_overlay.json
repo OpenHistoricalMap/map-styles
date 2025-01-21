@@ -1,0 +1,26 @@
+[
+  {
+    "id": "landuse_areas_military_overlay",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 10,
+    "maxzoom": 24,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "military"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": "rgba(178, 194, 157, 1)",
+      "fill-antialias": false,
+      "fill-pattern": "military-fill"
+    }
+  }
+]

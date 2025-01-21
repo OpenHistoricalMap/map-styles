@@ -1,0 +1,24 @@
+[
+  {
+    "id": "military_landuselow",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 4,
+    "maxzoom": 10,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "military"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": "rgba(230, 224, 212, 1)"
+    }
+  }
+]

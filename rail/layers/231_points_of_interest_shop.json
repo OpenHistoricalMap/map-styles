@@ -1,0 +1,50 @@
+[
+  {
+    "id": "points_of_interest_shop",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "buildings",
+    "minzoom": 16,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "has",
+        "shop"
+      ]
+    ],
+    "layout": {
+      "icon-image": [
+        "concat",
+        [
+          "get",
+          "shop"
+        ],
+        "-18"
+      ],
+      "visibility": "visible",
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "text-size": 8,
+      "text-anchor": "top",
+      "text-offset": [
+        0,
+        1
+      ],
+      "text-font": [
+        "OpenHistorical"
+      ]
+    },
+    "paint": {
+      "text-color": "rgba(108, 132, 137, 1)",
+      "text-halo-color": "rgba(255, 255, 255, 1)",
+      "text-halo-width": 0.5,
+      "text-halo-blur": 1
+    }
+  }
+]

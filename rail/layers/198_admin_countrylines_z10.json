@@ -1,0 +1,65 @@
+[
+  {
+    "id": "admin_countrylines_z10",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "land_ohm_lines",
+    "minzoom": 0,
+    "maxzoom": 20,
+    "filter": [
+      "in",
+      [
+        "get",
+        "admin_level"
+      ],
+      [
+        "literal",
+        [
+          1,
+          2
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "square",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        "rgba(180, 191, 191, 1)",
+        14,
+        "rgba(174, 185, 185, 1)",
+        15,
+        "rgba(131, 150, 150, 1)"
+      ],
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        0.25,
+        2,
+        0.75,
+        10,
+        1,
+        13,
+        2.5,
+        17,
+        1.5
+      ]
+    }
+  }
+]

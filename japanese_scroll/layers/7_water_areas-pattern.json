@@ -1,0 +1,18 @@
+[
+  {
+    "id": "water_areas-pattern",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "water_areas",
+    "minzoom": 8,
+    "maxzoom": 24,
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": "rgba(207, 179, 125, 1)",
+      "fill-opacity": 1,
+      "fill-pattern": "jp-water"
+    }
+  }
+]

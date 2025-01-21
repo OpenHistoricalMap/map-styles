@@ -1,0 +1,103 @@
+[
+  {
+    "id": "transport_points",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "transport_points",
+    "minzoom": 14,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "!=",
+        [
+          "get",
+          "class"
+        ],
+        "railway"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "name"
+        ],
+        ""
+      ]
+    ],
+    "layout": {
+      "icon-image": [
+        "concat",
+        [
+          "get",
+          "type"
+        ],
+        "-18"
+      ],
+      "visibility": "visible",
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        13.99,
+        0,
+        14,
+        8,
+        20,
+        10
+      ],
+      "text-anchor": "top",
+      "text-offset": [
+        0,
+        1
+      ],
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "icon-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        16,
+        1,
+        20,
+        1.4
+      ]
+    },
+    "paint": {
+      "icon-color": "#000000",
+      "text-color": "rgba(80, 80, 80, 1)",
+      "text-halo-color": "rgba(255, 255, 255, 1)",
+      "text-halo-width": 2,
+      "text-halo-blur": 1,
+      "text-opacity": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        13.99,
+        0,
+        14,
+        1
+      ]
+    }
+  }
+]

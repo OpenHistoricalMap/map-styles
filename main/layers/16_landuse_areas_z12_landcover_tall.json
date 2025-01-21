@@ -1,0 +1,42 @@
+[
+  {
+    "id": "landuse_areas_z12_landcover_tall",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 12,
+    "maxzoom": 24,
+    "filter": [
+      "all"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        [
+          "match",
+          [
+            "get",
+            "type"
+          ],
+          "forest",
+          "rgba(193, 208, 158, 1)",
+          "wood",
+          "#C1D09E",
+          "scrub",
+          "rgba(199, 222, 194, 1)",
+          "transparent"
+        ]
+      ]
+    }
+  }
+]

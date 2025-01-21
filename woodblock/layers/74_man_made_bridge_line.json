@@ -1,0 +1,34 @@
+[
+  {
+    "id": "man_made_bridge_line",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "other_lines",
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "man_made"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "bridge"
+      ]
+    ],
+    "layout": {
+      "visibility": "none"
+    },
+    "paint": {
+      "line-color": "rgba(255, 255, 255, 1)",
+      "line-width": 3
+    }
+  }
+]

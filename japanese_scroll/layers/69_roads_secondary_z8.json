@@ -1,0 +1,55 @@
+[
+  {
+    "id": "roads_secondary_z8",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 8,
+    "maxzoom": 9,
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "secondary"
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "line-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        7,
+        "#b3b3b3",
+        8,
+        "rgba(210, 210, 210, 1)"
+      ],
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        7,
+        0.1,
+        9,
+        0.6
+      ]
+    }
+  }
+]

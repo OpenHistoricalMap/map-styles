@@ -1,0 +1,52 @@
+[
+  {
+    "id": "county_labels_z11",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "place_points",
+    "minzoom": 8,
+    "maxzoom": 20,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "county"
+    ],
+    "layout": {
+      "text-field": [
+        "get",
+        "name"
+      ],
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        5,
+        10,
+        11,
+        16,
+        13
+      ],
+      "visibility": "visible",
+      "text-transform": "uppercase",
+      "symbol-spacing": 250,
+      "text-letter-spacing": 0
+    },
+    "paint": {
+      "text-color": "rgba(128, 128, 128, 1)",
+      "text-halo-color": "rgba(255, 255, 255, 1)",
+      "text-halo-blur": 2,
+      "text-halo-width": 1
+    }
+  }
+]

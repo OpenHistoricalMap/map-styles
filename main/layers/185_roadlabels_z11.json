@@ -1,0 +1,45 @@
+[
+  {
+    "id": "roadlabels_z11",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 11,
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "motorway",
+          "trunk"
+        ]
+      ]
+    ],
+    "layout": {
+      "text-size": 10,
+      "text-allow-overlap": false,
+      "symbol-avoid-edges": false,
+      "symbol-spacing": 250,
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "symbol-placement": "line",
+      "text-padding": 2,
+      "text-rotation-alignment": "auto",
+      "text-pitch-alignment": "auto",
+      "text-field": [
+        "get",
+        "name"
+      ]
+    },
+    "paint": {
+      "text-color": "rgba(82, 82, 82, 1)",
+      "text-halo-width": 1,
+      "text-halo-color": "rgba(255, 255, 255, 0.8)"
+    }
+  }
+]

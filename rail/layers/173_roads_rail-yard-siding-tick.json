@@ -1,0 +1,66 @@
+[
+  {
+    "id": "roads_rail-yard-siding-tick",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 13,
+    "maxzoom": 24,
+    "filter": [
+      "in",
+      [
+        "get",
+        "service"
+      ],
+      [
+        "literal",
+        [
+          "siding",
+          "yard"
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "square",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": "rgba(174, 175, 176, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        12,
+        1,
+        20,
+        6
+      ],
+      "line-dasharray": [
+        "step",
+        [
+          "zoom"
+        ],
+        [
+          "literal",
+          [
+            0.15,
+            3
+          ]
+        ],
+        16,
+        [
+          "literal",
+          [
+            0.15,
+            2
+          ]
+        ]
+      ]
+    }
+  }
+]

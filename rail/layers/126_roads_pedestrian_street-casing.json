@@ -1,0 +1,43 @@
+[
+  {
+    "id": "roads_pedestrian_street-casing",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 14,
+    "maxzoom": 24,
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "pedestrian"
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "line-color": "#D2D2D5",
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        13,
+        4,
+        18,
+        17
+      ]
+    }
+  }
+]

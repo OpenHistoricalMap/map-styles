@@ -1,0 +1,39 @@
+[
+  {
+    "id": "landuse_areas_z12_generalized_land_use",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 12,
+    "maxzoom": 24,
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        [
+          "match",
+          [
+            "get",
+            "type"
+          ],
+          "residential",
+          "rgba(241, 238, 238, 1)",
+          "retail",
+          "rgba(237, 236, 231, 1)",
+          "industrial",
+          "rgba(245, 230, 230, 1)",
+          "transparent"
+        ]
+      ]
+    }
+  }
+]

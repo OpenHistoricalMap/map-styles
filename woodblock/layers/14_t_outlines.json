@@ -1,0 +1,25 @@
+[
+  {
+    "id": "t_outlines",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "other_areas",
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "ruins"
+    ],
+    "layout": {
+      "visibility": "none"
+    },
+    "paint": {
+      "line-color": "rgba(170, 44, 44, 1)",
+      "line-opacity": 1,
+      "line-width": 6,
+      "line-dasharray": []
+    }
+  }
+]

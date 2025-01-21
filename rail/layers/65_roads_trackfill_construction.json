@@ -1,0 +1,49 @@
+[
+  {
+    "id": "roads_trackfill_construction",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 14,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "construction"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "construction"
+        ],
+        "track"
+      ]
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "line-color": "rgba(251, 247, 245, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        11,
+        0.5,
+        18,
+        4
+      ]
+    }
+  }
+]

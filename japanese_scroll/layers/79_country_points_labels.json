@@ -1,0 +1,59 @@
+[
+  {
+    "id": "country_points_labels",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "place_points",
+    "minzoom": 0,
+    "maxzoom": 10,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "country"
+    ],
+    "layout": {
+      "visibility": "visible",
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        4,
+        16,
+        6,
+        15
+      ],
+      "text-font": [
+        "BernerBasisschrift"
+      ],
+      "symbol-placement": "point",
+      "text-justify": "center",
+      "symbol-avoid-edges": false,
+      "text-transform": "uppercase",
+      "text-letter-spacing": 0.07,
+      "text-max-width": 7,
+      "text-line-height": 0.8
+    },
+    "paint": {
+      "text-color": "rgba(14, 5, 5, 1)",
+      "text-halo-width": 15,
+      "text-halo-color": "rgba(236, 106, 106, 1)",
+      "text-halo-blur": 2,
+      "text-opacity": 1,
+      "text-translate-anchor": "map"
+    }
+  }
+]

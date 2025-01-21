@@ -1,0 +1,52 @@
+[
+  {
+    "id": "water_areaslabels_z8",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "water_areas",
+    "minzoom": 8,
+    "maxzoom": 12,
+    "filter": [
+      ">",
+      [
+        "get",
+        "area"
+      ],
+      10000000
+    ],
+    "layout": {
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "text-font": [
+        "OpenHistorical Italic"
+      ],
+      "text-padding": 2,
+      "text-allow-overlap": false,
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        8,
+        10,
+        11,
+        11,
+        13,
+        13
+      ]
+    },
+    "paint": {
+      "text-color": "rgba(125, 158, 158, 1)",
+      "text-halo-width": 1,
+      "text-halo-color": "rgba(231, 251, 251, 1)"
+    }
+  }
+]

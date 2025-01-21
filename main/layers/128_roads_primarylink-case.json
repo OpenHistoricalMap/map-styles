@@ -1,0 +1,58 @@
+[
+  {
+    "id": "roads_primarylink-case",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 7,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "primary_link"
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "tunnel"
+        ],
+        1
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "bridge"
+        ],
+        1
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "round",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": "#ffffff",
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        7,
+        2,
+        18,
+        40
+      ]
+    }
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "id": "points_of_interest_other",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "other_points",
+    "minzoom": 15,
+    "maxzoom": 24,
+    "filter": [
+      "!",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "artwork"
+          ]
+        ]
+      ]
+    ],
+    "layout": {
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        15.99,
+        0,
+        16,
+        10,
+        20,
+        12
+      ],
+      "icon-text-fit": "none",
+      "icon-image": "{type}-18",
+      "icon-keep-upright": false,
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "icon-allow-overlap": false,
+      "visibility": "visible",
+      "text-offset": [
+        0,
+        1
+      ],
+      "icon-optional": false,
+      "icon-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        15,
+        0.7,
+        20,
+        1.4
+      ],
+      "text-anchor": "top",
+      "text-field": [
+        "get",
+        "name"
+      ],
+      "text-max-width": 10,
+      "icon-ignore-placement": false
+    },
+    "paint": {
+      "text-color": "#505050",
+      "text-halo-color": "rgba(255, 255, 255, 1)",
+      "text-halo-width": 0.5,
+      "text-halo-blur": 1,
+      "text-translate-anchor": "viewport",
+      "icon-translate-anchor": "viewport",
+      "text-opacity": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        16.99,
+        0,
+        17,
+        1
+      ]
+    }
+  }
+]

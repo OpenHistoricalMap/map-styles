@@ -1,0 +1,74 @@
+[
+  {
+    "id": "roads_primarylink",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 6,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "primary_link"
+          ]
+        ]
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "tunnel"
+        ],
+        1
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "round",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        10,
+        "#D5D5D5",
+        11,
+        "#ffffff"
+      ],
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        8,
+        2,
+        12,
+        3,
+        14,
+        8,
+        17,
+        13,
+        18,
+        16
+      ],
+      "line-pattern": "woodblock-roadTest1c"
+    }
+  }
+]

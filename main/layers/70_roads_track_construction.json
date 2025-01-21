@@ -1,0 +1,53 @@
+[
+  {
+    "id": "roads_track_construction",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 14,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "construction"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "construction"
+        ],
+        "track"
+      ]
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "line-color": "#b3b3b3",
+      "line-dasharray": [
+        0.3,
+        1
+      ],
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        11,
+        0.5,
+        18,
+        8
+      ]
+    }
+  }
+]

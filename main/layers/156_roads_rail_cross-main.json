@@ -1,0 +1,116 @@
+[
+  {
+    "id": "roads_rail_cross-main",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 7,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "light_rail",
+            "preserved",
+            "rail"
+          ]
+        ]
+      ],
+      [
+        "!",
+        [
+          "in",
+          [
+            "get",
+            "service"
+          ],
+          [
+            "literal",
+            [
+              "siding",
+              "yard"
+            ]
+          ]
+        ]
+      ],
+      [
+        "==",
+        [
+          "get",
+          "name"
+        ],
+        "usage=main"
+      ]
+    ],
+    "layout": {
+      "visibility": "none",
+      "line-cap": "square"
+    },
+    "paint": {
+      "line-color": "#949FA8",
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        7,
+        1,
+        9,
+        1,
+        12,
+        4,
+        15,
+        6,
+        17,
+        7
+      ],
+      "line-dasharray": [
+        "step",
+        [
+          "zoom"
+        ],
+        [
+          "literal",
+          [
+            0.2,
+            2.5
+          ]
+        ],
+        12,
+        [
+          "literal",
+          [
+            0.2,
+            4
+          ]
+        ],
+        13,
+        [
+          "literal",
+          [
+            0.2,
+            6
+          ]
+        ],
+        14,
+        [
+          "literal",
+          [
+            0.2,
+            8
+          ]
+        ]
+      ]
+    }
+  }
+]

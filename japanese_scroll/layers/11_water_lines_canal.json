@@ -1,0 +1,39 @@
+[
+  {
+    "id": "water_lines_canal",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "water_lines",
+    "minzoom": 8,
+    "maxzoom": 24,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "canal"
+    ],
+    "paint": {
+      "line-color": "rgba(207, 179, 125, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        8,
+        0.5,
+        13,
+        0.5,
+        14,
+        1,
+        20,
+        3
+      ],
+      "line-opacity": 0.29
+    }
+  }
+]

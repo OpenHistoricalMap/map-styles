@@ -1,0 +1,57 @@
+[
+  {
+    "id": "water_lineslabels-cliff",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "water_lines",
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "cliff"
+        ]
+      ]
+    ],
+    "layout": {
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "text-font": [
+        "OpenHistorical Italic"
+      ],
+      "symbol-placement": "line",
+      "symbol-spacing": 500,
+      "text-anchor": "bottom",
+      "text-pitch-alignment": "auto",
+      "text-rotation-alignment": "auto",
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        11,
+        9,
+        13,
+        11
+      ],
+      "text-letter-spacing": 0
+    },
+    "paint": {
+      "text-color": "rgba(77, 77, 77, 1)",
+      "text-halo-color": "rgba(255, 255, 255, 1)",
+      "text-halo-width": 1
+    }
+  }
+]

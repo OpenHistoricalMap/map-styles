@@ -1,0 +1,41 @@
+[
+  {
+    "id": "points_fromlanduseareas",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 16,
+    "filter": [
+      "!",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "garden",
+            "peak",
+            "wetland"
+          ]
+        ]
+      ]
+    ],
+    "layout": {
+      "icon-image": [
+        "concat",
+        [
+          "get",
+          "type"
+        ],
+        "-18"
+      ],
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "visibility": "visible"
+    }
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "landuse_areas_earth",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 0,
+    "maxzoom": 24,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "earth"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": "rgba(248, 247, 242, 1)"
+    }
+  }
+]

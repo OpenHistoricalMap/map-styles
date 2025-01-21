@@ -1,0 +1,68 @@
+[
+  {
+    "id": "points_fromlanduse",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "landuse_points",
+    "minzoom": 16,
+    "layout": {
+      "icon-image": [
+        "concat",
+        [
+          "get",
+          "type"
+        ],
+        "-18"
+      ],
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        8,
+        16,
+        10,
+        20,
+        12
+      ],
+      "text-anchor": "top",
+      "text-offset": [
+        0,
+        1
+      ],
+      "visibility": "visible",
+      "icon-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        15,
+        0.7,
+        20,
+        1.4
+      ]
+    },
+    "paint": {
+      "text-color": "rgba(80, 80, 80, 1)",
+      "text-halo-color": "rgba(255, 255, 255, 1)",
+      "text-halo-width": 0.5
+    }
+  }
+]

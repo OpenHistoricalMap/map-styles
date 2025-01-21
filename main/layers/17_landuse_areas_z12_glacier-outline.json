@@ -1,0 +1,41 @@
+[
+  {
+    "id": "landuse_areas_z12_glacier-outline",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 9,
+    "maxzoom": 24,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "glacier"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "line-color": "rgba(180, 211, 218, 1)",
+      "line-dasharray": [
+        2,
+        2
+      ],
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        9,
+        1,
+        14,
+        1.5
+      ]
+    }
+  }
+]

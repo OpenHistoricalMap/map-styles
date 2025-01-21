@@ -1,0 +1,64 @@
+[
+  {
+    "id": "roads_primarybridge",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 6,
+    "maxzoom": 20,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "primary",
+            "primary_link"
+          ]
+        ]
+      ],
+      [
+        "==",
+        [
+          "get",
+          "bridge"
+        ],
+        1
+      ]
+    ],
+    "layout": {
+      "line-cap": "round",
+      "visibility": "visible",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": "rgba(210, 210, 210, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        8,
+        2,
+        12,
+        3,
+        14,
+        8,
+        17,
+        13,
+        18,
+        16
+      ],
+      "line-pattern": "jproad"
+    }
+  }
+]

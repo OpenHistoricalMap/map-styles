@@ -1,0 +1,24 @@
+[
+  {
+    "id": "barriers-dotted",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "other_lines",
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "bollard"
+    ],
+    "paint": {
+      "line-color": "rgba(217, 217, 217, 1)",
+      "line-width": 3,
+      "line-dasharray": [
+        1,
+        1
+      ]
+    }
+  }
+]

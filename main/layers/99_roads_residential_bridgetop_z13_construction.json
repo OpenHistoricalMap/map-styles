@@ -1,0 +1,70 @@
+[
+  {
+    "id": "roads_residential_bridgetop_z13_construction",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 12,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "construction"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "bridge"
+        ],
+        1
+      ],
+      [
+        "in",
+        [
+          "get",
+          "construction"
+        ],
+        [
+          "literal",
+          [
+            "residential",
+            "service",
+            "unclassified"
+          ]
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "round",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": "#ffffff",
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        12,
+        0.5,
+        18,
+        12
+      ],
+      "line-dasharray": [
+        3,
+        1.5
+      ]
+    }
+  }
+]

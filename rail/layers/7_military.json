@@ -1,0 +1,22 @@
+[
+  {
+    "id": "military",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "other_areas",
+    "filter": [
+      "==",
+      [
+        "get",
+        "class"
+      ],
+      "military"
+    ],
+    "layout": {
+      "visibility": "none"
+    },
+    "paint": {
+      "fill-color": "rgba(244, 244, 235, 1)"
+    }
+  }
+]

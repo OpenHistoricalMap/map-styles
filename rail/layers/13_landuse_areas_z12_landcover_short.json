@@ -1,0 +1,53 @@
+[
+  {
+    "id": "landuse_areas_z12_landcover_short",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 12,
+    "maxzoom": 24,
+    "layout": {
+      "visibility": "none"
+    },
+    "paint": {
+      "fill-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        [
+          "match",
+          [
+            "get",
+            "type"
+          ],
+          "heath",
+          "rgba(225, 233, 214, 1)",
+          "meadow",
+          "rgba(225, 233, 214, 1)",
+          "grass",
+          "rgba(215, 220, 203, 1)",
+          "grassland",
+          "rgba(216, 222, 191, 0.81)",
+          "beach",
+          "rgba(236, 235, 180, 1)",
+          "desert",
+          "rgba(238, 229, 178, 1)",
+          "basin",
+          "rgba(144, 204, 203, 1)",
+          "wetland",
+          "rgba(227, 233, 226, 1)",
+          "salt_pond",
+          "rgba(236, 240, 241, 1)",
+          "mud",
+          "rgba(230, 223, 215, 1)",
+          "transparent"
+        ]
+      ]
+    }
+  }
+]

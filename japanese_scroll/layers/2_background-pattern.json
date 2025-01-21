@@ -1,0 +1,18 @@
+[
+  {
+    "id": "background-pattern",
+    "type": "background",
+    "minzoom": 0,
+    "maxzoom": 24,
+    "filter": [
+      "all"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "background-color": "rgba(239, 229, 210, 1)",
+      "background-pattern": "jp-water"
+    }
+  }
+]

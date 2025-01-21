@@ -1,0 +1,37 @@
+[
+  {
+    "id": "pedestrian_area",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "transport_areas",
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "footway",
+            "pedestrian"
+          ]
+        ]
+      ],
+      [
+        "==",
+        [
+          "get",
+          "area"
+        ],
+        "yes"
+      ]
+    ],
+    "paint": {
+      "fill-color": "rgba(234,234,234, 1)",
+      "fill-outline-color": "rgba(230,230,230, 1)"
+    }
+  }
+]

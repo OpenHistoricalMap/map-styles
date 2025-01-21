@@ -1,0 +1,37 @@
+[
+  {
+    "id": "map dragon",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "place_points",
+    "filter": [
+      "==",
+      [
+        "get",
+        "name"
+      ],
+      "Pacific Ocean"
+    ],
+    "layout": {
+      "icon-image": "woodblock-waterdragon2",
+      "icon-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        1,
+        0.2,
+        2.9,
+        0.5,
+        5,
+        0.9
+      ]
+    },
+    "paint": {
+      "text-opacity": 1
+    }
+  }
+]

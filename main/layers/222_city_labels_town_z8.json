@@ -1,0 +1,49 @@
+[
+  {
+    "id": "city_labels_town_z8",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "place_points",
+    "minzoom": 8,
+    "maxzoom": 20,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "town"
+    ],
+    "layout": {
+      "text-field": [
+        "get",
+        "name"
+      ],
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        7,
+        10,
+        12,
+        16,
+        14
+      ],
+      "visibility": "visible"
+    },
+    "paint": {
+      "text-color": "rgba(34, 34, 34, 1)",
+      "text-halo-color": "rgba(255, 255, 255, 1)",
+      "text-halo-blur": 2,
+      "text-halo-width": 1
+    }
+  }
+]

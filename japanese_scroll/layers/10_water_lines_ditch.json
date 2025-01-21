@@ -1,0 +1,41 @@
+[
+  {
+    "id": "water_lines_ditch",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "water_lines",
+    "minzoom": 15,
+    "maxzoom": 24,
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "ditch",
+          "drain"
+        ]
+      ]
+    ],
+    "paint": {
+      "line-color": "rgba(207, 179, 125, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        15,
+        0.2,
+        20,
+        1.5
+      ],
+      "line-opacity": 0.29
+    }
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "id": "water_areaslabels_z12",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "water_areas_centroids",
+    "minzoom": 12,
+    "maxzoom": 15,
+    "filter": [
+      ">",
+      [
+        "get",
+        "area"
+      ],
+      1000000
+    ],
+    "layout": {
+      "text-field": [
+        "get",
+        "name"
+      ],
+      "text-font": [
+        "OpenHistorical Italic"
+      ],
+      "text-padding": 2,
+      "text-allow-overlap": false,
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        11,
+        11,
+        13,
+        13
+      ],
+      "symbol-placement": "point"
+    },
+    "paint": {
+      "text-color": "rgba(83, 147, 147, 1)",
+      "text-halo-width": 1,
+      "text-halo-color": "rgba(158, 240, 240, 1)"
+    }
+  }
+]

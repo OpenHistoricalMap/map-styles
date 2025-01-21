@@ -1,0 +1,22 @@
+[
+  {
+    "id": "pier",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "other_areas",
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "pier"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": "rgba(240, 233, 219, 1)"
+    }
+  }
+]

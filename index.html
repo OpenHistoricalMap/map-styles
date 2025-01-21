@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Map Style Demo with Tabs</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .intro {
+        margin: 10px;
+      }
+
+      #map {
+        height: 90vh;
+        width: calc(100% - 370px);
+        float: left;
+      }
+
+      #features {
+        float: right;
+        width: 340px;
+        overflow-y: scroll;
+        height: 90vh;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .tabs {
+        display: flex;
+        background: #f4f4f4;
+        padding: 0px;
+        border-bottom: 2px solid #ccc;
+      }
+
+      .tab {
+        padding: 10px 20px;
+        cursor: pointer;
+        background: #ddd;
+        margin-right: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+
+      .tab:hover {
+        background: #ccc;
+      }
+
+      .tab.active {
+        background: #bbb;
+      }
+
+      #map canvas {
+        cursor: crosshair;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabs">
+      <div class="tab active" data-style="main/main.json">Main</div>
+      <div
+        class="tab"
+        data-style="japanese_scroll/ohm-japanese-scroll-map.json"
+      >
+        Japanese Scroll
+      </div>
+      <div class="tab" data-style="rail/rail.json">Rail</div>
+      <div class="tab" data-style="woodblock/woodblock.json">Woodblock</div>
+    </div>
+
+    <div id="map"></div>
+    <pre id="features">Click the map to see rendered features</pre>
+
+    <script>
+      // Function to get the style from the URL parameters
+      function getStyleFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get("style") || "main/main.json"; // Default style
+      }
+
+      // Function to update the URL without reloading the page
+      function updateUrl(styleUrl) {
+        const params = new URLSearchParams(window.location.search);
+        params.set("style", styleUrl);
+        window.history.replaceState(
+          {},
+          "",
+          `${window.location.pathname}?${params.toString()}${
+            window.location.hash
+          }`
+        );
+      }
+
+      // Initialize the map with the style from the URL
+      var currentStyle = getStyleFromUrl();
+      var map = new mapboxgl.Map({
+        container: "map",
+        style: currentStyle,
+        center: [-42.3115, 70.0012],
+        zoom: 13,
+        hash: true,
+      });
+
+      // Add zoom and rotation controls to the map.
+      map.addControl(new mapboxgl.NavigationControl());
+
+      // Function to display features when clicking the map
+      function displayFeatures(e) {
+        var features = map.queryRenderedFeatures(e.point);
+        var displayProperties = [
+          "type",
+          "properties",
+          "id",
+          "layer",
+          "source",
+          "sourceLayer",
+          "state",
+        ];
+        var displayFeatures = features.map(function (feat) {
+          var displayFeat = {};
+          displayProperties.forEach(function (prop) {
+            displayFeat[prop] = feat[prop];
+          });
+          return displayFeat;
+        });
+
+        document.getElementById("features").innerHTML = JSON.stringify(
+          displayFeatures,
+          null,
+          2
+        );
+      }
+
+      map.on("click", displayFeatures);
+
+      // Function to change map style and update the URL
+      function changeStyle(styleUrl) {
+        if (styleUrl === currentStyle) return; // Prevent unnecessary reloads
+
+        currentStyle = styleUrl;
+        map.setStyle(styleUrl);
+
+        // Ensure features display on click after style change
+        map.once("style.load", function () {
+          map.on("click", displayFeatures);
+        });
+
+        // Update the URL with the selected style
+        updateUrl(styleUrl);
+
+        // Update active tab styling
+        document
+          .querySelectorAll(".tab")
+          .forEach((tab) => tab.classList.remove("active"));
+        document
+          .querySelector(`[data-style='${styleUrl}']`)
+          .classList.add("active");
+      }
+
+      // Add click event listeners to tabs for style switching
+      document.querySelectorAll(".tab").forEach((tab) => {
+        tab.addEventListener("click", function () {
+          var styleUrl = this.getAttribute("data-style");
+          changeStyle(styleUrl);
+        });
+      });
+
+      // Set the active tab based on the loaded style
+      document
+        .querySelector(`[data-style='${currentStyle}']`)
+        ?.classList.add("active");
+    </script>
+  </body>
+</html>

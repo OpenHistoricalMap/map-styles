@@ -1,0 +1,24 @@
+[
+  {
+    "id": "points_airport",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "transport_areas",
+    "minzoom": 10,
+    "maxzoom": 14,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "aerodrome"
+    ],
+    "layout": {
+      "icon-image": "airport-18",
+      "text-font": [
+        "OpenHistorical"
+      ]
+    }
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "background",
+    "type": "background",
+    "minzoom": 0,
+    "maxzoom": 20,
+    "filter": [
+      "all"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "background-color": "#D5EAEA"
+    }
+  }
+]

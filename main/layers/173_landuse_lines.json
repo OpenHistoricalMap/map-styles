@@ -1,0 +1,34 @@
+[
+  {
+    "id": "landuse_lines",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "landuse_lines",
+    "filter": [
+      "all"
+    ],
+    "paint": {
+      "line-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        [
+          "match",
+          [
+            "get",
+            "type"
+          ],
+          "tree_row",
+          "rgba(160, 178, 120, 1)",
+          "transparent"
+        ]
+      ],
+      "line-width": 2
+    }
+  }
+]

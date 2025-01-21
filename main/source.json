@@ -1,0 +1,30 @@
+{
+    "version": 8,
+    "name": "ohmbasemap",
+    "metadata": {"maputnik:renderer": "mbgljs"},
+    "sources": {
+      "osm": {
+        "type": "vector",
+        "tiles": ["https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"]
+      },
+      "ohm_landcover_hillshade": {
+        "type": "raster",
+        "tiles": [
+          "https://static-tiles-lclu.s3.us-west-1.amazonaws.com/{z}/{x}/{y}.png"
+        ],
+        "minzoom": 0,
+        "maxzoom": 8,
+        "tileSize": 256
+      },
+      "ne": {
+        "type": "vector",
+        "tiles": [
+          "https://vtiles.staging.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
+        ]
+      }
+    },
+    "sprite": "https://openhistoricalmap.github.io/map-styles/main/main_spritesheet",
+    "glyphs": "https://openhistoricalmap.github.io/map-styles/fonts/{fontstack}/{range}.pbf",
+    "layers": [],
+    "id": "ab271ed3-6fe4-403a-b5ae-07113f8c57ab"
+  }

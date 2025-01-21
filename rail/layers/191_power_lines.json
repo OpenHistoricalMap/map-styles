@@ -1,0 +1,33 @@
+[
+  {
+    "id": "power_lines",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "other_lines",
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "power"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "line"
+      ]
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "line-color": "rgba(164, 129, 136, 1)"
+    }
+  }
+]

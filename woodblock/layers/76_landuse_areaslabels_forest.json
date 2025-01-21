@@ -1,0 +1,39 @@
+[
+  {
+    "id": "landuse_areaslabels_forest",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 7,
+    "maxzoom": 24,
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "forest",
+          "nature_reserve",
+          "wood"
+        ]
+      ]
+    ],
+    "layout": {
+      "text-field": "",
+      "text-size": 11,
+      "visibility": "visible",
+      "text-font": [
+        "Open Sans Regular"
+      ],
+      "icon-image": "woodblock-forestSmlst"
+    },
+    "paint": {
+      "text-color": "rgba(95, 107, 71, 1)",
+      "text-halo-color": "rgba(201, 213, 190, 1)",
+      "text-halo-width": 1
+    }
+  }
+]

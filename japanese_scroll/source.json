@@ -1,0 +1,23 @@
+{
+  "version": 8,
+  "name": "ohm-japanese-scroll-map",
+  "metadata": {"maputnik:renderer": "mbgljs"},
+  "sources": {
+    "osm": {
+      "type": "vector",
+      "tiles": [
+        "https://vtiles.staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
+      ]
+    },
+    "ne": {
+      "type": "vector",
+      "tiles": [
+        "https://vtiles.staging.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
+      ]
+    }
+  },
+  "sprite": "https://openhistoricalmap.github.io/map-styles/japanese_scroll/jp_spritesheet_template",
+  "glyphs": "https://openhistoricalmap.github.io/map-styles/fonts/{fontstack}/{range}.pbf",
+  "layers": [],
+  "id": "io6r61fxt"
+}

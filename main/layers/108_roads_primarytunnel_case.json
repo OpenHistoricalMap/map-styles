@@ -1,0 +1,55 @@
+[
+  {
+    "id": "roads_primarytunnel_case",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 7,
+    "maxzoom": 20,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "primary"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "tunnel"
+        ],
+        1
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "round",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": "rgba(250, 178, 107, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        7,
+        1,
+        18,
+        42
+      ],
+      "line-dasharray": [
+        0.5,
+        1.25
+      ]
+    }
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "id": "city_labels_other_z11",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "place_points",
+    "minzoom": 11,
+    "maxzoom": 20,
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "hamlet",
+          "islet",
+          "locality",
+          "neighborhood",
+          "suburb",
+          "village"
+        ]
+      ]
+    ],
+    "layout": {
+      "text-field": [
+        "get",
+        "name"
+      ],
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        4,
+        10,
+        10,
+        16,
+        12
+      ],
+      "visibility": "visible"
+    },
+    "paint": {
+      "text-color": "rgba(34, 34, 34, 1)",
+      "text-halo-color": "rgba(255, 255, 255, 1)",
+      "text-halo-blur": 2,
+      "text-halo-width": 1
+    }
+  }
+]

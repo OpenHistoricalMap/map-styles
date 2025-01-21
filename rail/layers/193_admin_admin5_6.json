@@ -1,0 +1,47 @@
+[
+  {
+    "id": "admin_admin5_6",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "land_ohm_lines",
+    "minzoom": 7,
+    "maxzoom": 20,
+    "filter": [
+      "in",
+      [
+        "get",
+        "admin_level"
+      ],
+      [
+        "literal",
+        [
+          5,
+          6
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "round",
+      "line-join": "round",
+      "line-miter-limit": 2
+    },
+    "paint": {
+      "line-color": "rgba(179, 179, 179, 1)",
+      "line-dasharray": [],
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        0.25,
+        10,
+        2
+      ]
+    }
+  }
+]

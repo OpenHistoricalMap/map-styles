@@ -1,0 +1,13 @@
+[
+  {
+    "id": "mountains",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "landuse_points",
+    "minzoom": 7,
+    "layout": {
+      "visibility": "visible",
+      "icon-image": "mountain"
+    }
+  }
+]

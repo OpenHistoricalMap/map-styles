@@ -1,0 +1,58 @@
+[
+  {
+    "id": "roads_secondarytunnel_construction",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 8,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "construction"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "tunnel"
+        ],
+        1
+      ],
+      [
+        "==",
+        [
+          "get",
+          "construction"
+        ],
+        "secondary"
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "round",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": "rgba(245, 245, 245, 0.6)",
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        8,
+        0.5,
+        18,
+        30
+      ]
+    }
+  }
+]

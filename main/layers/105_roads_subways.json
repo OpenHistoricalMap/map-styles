@@ -1,0 +1,44 @@
+[
+  {
+    "id": "roads_subways",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 14,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "subway"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "line-color": "rgba(166, 170, 187, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        12,
+        1,
+        13,
+        1,
+        14,
+        1.25,
+        20,
+        2.25
+      ],
+      "line-dasharray": [
+        4,
+        1
+      ]
+    }
+  }
+]

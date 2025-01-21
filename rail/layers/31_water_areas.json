@@ -1,0 +1,16 @@
+[
+  {
+    "id": "water_areas",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "water_areas",
+    "minzoom": 8,
+    "maxzoom": 24,
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": "rgba(213, 234, 234, 1)"
+    }
+  }
+]

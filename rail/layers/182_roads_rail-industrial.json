@@ -1,0 +1,76 @@
+[
+  {
+    "id": "roads_rail-industrial",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 0,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "preserved",
+            "rail"
+          ]
+        ]
+      ],
+      [
+        "!",
+        [
+          "in",
+          [
+            "get",
+            "service"
+          ],
+          [
+            "literal",
+            [
+              "siding",
+              "spur",
+              "yard"
+            ]
+          ]
+        ]
+      ],
+      [
+        "==",
+        [
+          "get",
+          "usage"
+        ],
+        "industrial"
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "square",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": "rgba(155, 221, 174, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        3,
+        7,
+        3.5,
+        20,
+        8.5
+      ]
+    }
+  }
+]

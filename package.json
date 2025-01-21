@@ -1,0 +1,17 @@
+{
+  "name": "map-styles",
+  "version": "1.0.0",
+  "description": "This repository contains vector map styles that can be applied to OHM vector tiles.",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js",
+    "serve": "npx http-server . -p 3000 -c-1",
+    "dev": "npx concurrently --kill-others \"npx nodemon --watch main/layers --watch rail/layers --watch woodblock/layers --watch japanese_scroll/layers --ext json --exec 'npm run build' --delay 300ms\" \"npm run serve\""
+  },
+  "author": "Rub21",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "http-server": "^14.1.1",
+    "nodemon": "^3.1.9"
+  }
+}

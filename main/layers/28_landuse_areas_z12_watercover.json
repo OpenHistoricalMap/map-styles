@@ -1,0 +1,41 @@
+[
+  {
+    "id": "landuse_areas_z12_watercover",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 11,
+    "maxzoom": 24,
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        12,
+        [
+          "match",
+          [
+            "get",
+            "type"
+          ],
+          "salt_pond",
+          "rgba(236, 240, 241, 1)",
+          "glacier",
+          "rgba(219, 244, 249, 1)",
+          "reservoir",
+          "rgba(144, 204, 203, 1)",
+          "swimming_pool",
+          "rgba(144, 204, 203, 1)",
+          "transparent"
+        ]
+      ]
+    }
+  }
+]

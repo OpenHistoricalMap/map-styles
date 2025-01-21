@@ -1,0 +1,51 @@
+[
+  {
+    "id": "water_lines_waterfall_triangle",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "water_lines",
+    "minzoom": 15,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "cliff"
+          ]
+        ]
+      ],
+      [
+        "in",
+        [
+          "get",
+          "surface"
+        ],
+        [
+          "literal",
+          [
+            "water"
+          ]
+        ]
+      ]
+    ],
+    "layout": {
+      "line-cap": "butt",
+      "line-join": "miter",
+      "visibility": "visible"
+    },
+    "paint": {
+      "line-color": "rgba(68, 136, 136, 1)",
+      "line-translate-anchor": "viewport",
+      "line-width": 5,
+      "line-offset": 0,
+      "line-pattern": "waterfall-8"
+    }
+  }
+]

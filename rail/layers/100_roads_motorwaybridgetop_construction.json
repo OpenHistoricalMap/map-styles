@@ -1,0 +1,76 @@
+[
+  {
+    "id": "roads_motorwaybridgetop_construction",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 6,
+    "maxzoom": 20,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "construction"
+          ]
+        ]
+      ],
+      [
+        "==",
+        [
+          "get",
+          "bridge"
+        ],
+        1
+      ],
+      [
+        "in",
+        [
+          "get",
+          "construction"
+        ],
+        [
+          "literal",
+          [
+            "motorway",
+            "motorway_link",
+            "trunk",
+            "trunk_link"
+          ]
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "round",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": "rgba(211, 211, 211, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        5,
+        1,
+        18,
+        36
+      ],
+      "line-dasharray": [
+        3,
+        1.5
+      ]
+    }
+  }
+]

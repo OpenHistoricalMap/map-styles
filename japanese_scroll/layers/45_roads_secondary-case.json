@@ -1,0 +1,50 @@
+[
+  {
+    "id": "roads_secondary-case",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 10.01,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "secondary"
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "tunnel"
+        ],
+        1
+      ]
+    ],
+    "layout": {
+      "visibility": "none",
+      "line-cap": "round",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": "#b3b3b3",
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        10,
+        2.4,
+        18,
+        35
+      ]
+    }
+  }
+]

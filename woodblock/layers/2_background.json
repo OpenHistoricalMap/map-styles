@@ -1,0 +1,18 @@
+[
+  {
+    "id": "background",
+    "type": "background",
+    "minzoom": 0,
+    "maxzoom": 24,
+    "filter": [
+      "all"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "background-color": "rgba(207, 179, 125, 1)",
+      "background-opacity": 0.29
+    }
+  }
+]

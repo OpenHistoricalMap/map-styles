@@ -1,0 +1,57 @@
+[
+  {
+    "id": "roads_primarybridge",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 10,
+    "maxzoom": 20,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "primary",
+            "primary_link"
+          ]
+        ]
+      ],
+      [
+        "==",
+        [
+          "get",
+          "bridge"
+        ],
+        1
+      ]
+    ],
+    "layout": {
+      "line-cap": "butt",
+      "visibility": "visible",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": "rgba(176, 175, 173, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        7,
+        3.5,
+        18,
+        48
+      ]
+    }
+  }
+]

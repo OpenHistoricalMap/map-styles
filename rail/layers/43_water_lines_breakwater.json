@@ -1,0 +1,40 @@
+[
+  {
+    "id": "water_lines_breakwater",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "other_lines",
+    "minzoom": 10,
+    "maxzoom": 24,
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "breakwater",
+          "quay"
+        ]
+      ]
+    ],
+    "paint": {
+      "line-color": "rgba(133, 133, 133, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        14,
+        1,
+        20,
+        4
+      ]
+    }
+  }
+]

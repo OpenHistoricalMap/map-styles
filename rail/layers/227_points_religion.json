@@ -1,0 +1,25 @@
+[
+  {
+    "id": "points_religion",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "buildings",
+    "filter": [
+      "all"
+    ],
+    "layout": {
+      "icon-image": [
+        "concat",
+        [
+          "get",
+          "religion"
+        ],
+        "-18"
+      ],
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "visibility": "visible"
+    }
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "ohm_landcover_hillshade",
+    "type": "raster",
+    "source": "ohm_landcover_hillshade",
+    "maxzoom": 24,
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "raster-opacity": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        1,
+        4,
+        1,
+        8,
+        0
+      ]
+    }
+  }
+]

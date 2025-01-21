@@ -1,0 +1,44 @@
+[
+  {
+    "id": "landuse_areaslabels_farming",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "landuse_areas_centroids",
+    "minzoom": 14,
+    "maxzoom": 24,
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "allotmets",
+          "farm",
+          "farmland",
+          "farmyard",
+          "garden",
+          "orchard",
+          "vineyard"
+        ]
+      ]
+    ],
+    "layout": {
+      "text-field": [
+        "get",
+        "name"
+      ],
+      "text-size": 11,
+      "text-font": [
+        "OpenHistorical"
+      ]
+    },
+    "paint": {
+      "text-color": "rgba(107, 101, 71, 1)",
+      "text-halo-color": "rgba(255, 254, 249, 1)",
+      "text-halo-width": 1
+    }
+  }
+]

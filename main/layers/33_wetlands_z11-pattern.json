@@ -1,0 +1,36 @@
+[
+  {
+    "id": "wetlands_z11-pattern",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 11,
+    "maxzoom": 24,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "wetland"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": "rgba(255, 255, 255, 1)",
+      "fill-pattern": {
+        "stops": [
+          [
+            12,
+            "cattails_space_60px"
+          ],
+          [
+            14,
+            "cattails_space_70px"
+          ]
+        ]
+      }
+    }
+  }
+]

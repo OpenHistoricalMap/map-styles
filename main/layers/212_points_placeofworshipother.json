@@ -1,0 +1,44 @@
+[
+  {
+    "id": "points_placeofworshipother",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "buildings",
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "place_of_worship"
+      ],
+      [
+        "!",
+        [
+          "in",
+          [
+            "get",
+            "religion"
+          ],
+          [
+            "literal",
+            [
+              "christian",
+              "jewish",
+              "muslim"
+            ]
+          ]
+        ]
+      ]
+    ],
+    "layout": {
+      "icon-image": "place_of_worship-18",
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "visibility": "visible"
+    }
+  }
+]

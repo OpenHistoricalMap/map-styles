@@ -1,0 +1,96 @@
+[
+  {
+    "id": "country_points_labels-cen",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "land_ohm_centroids",
+    "maxzoom": 12,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "administrative"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "admin_level"
+        ],
+        2
+      ]
+    ],
+    "layout": {
+      "text-line-height": 1,
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        8,
+        3,
+        12,
+        6,
+        20,
+        10,
+        22
+      ],
+      "symbol-avoid-edges": false,
+      "text-font": [
+        "OpenHistorical Bold"
+      ],
+      "symbol-placement": "point",
+      "text-justify": "center",
+      "visibility": "visible",
+      "text-field": [
+        "get",
+        "name"
+      ],
+      "text-max-width": 7
+    },
+    "paint": {
+      "text-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        "#495049",
+        5,
+        "#6d786d"
+      ],
+      "text-halo-width": 1.5,
+      "text-halo-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        "rgba(252, 255, 254, 0.75)",
+        3,
+        "rgba(240, 244, 216, 1)",
+        5,
+        "rgba(246,247,227, 1)",
+        7,
+        "rgba(255, 255, 255, 1)"
+      ],
+      "text-halo-blur": 1,
+      "text-opacity": 1,
+      "text-translate-anchor": "map"
+    }
+  }
+]

@@ -1,0 +1,91 @@
+[
+  {
+    "id": "points_of_interest_other_archaeology",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "other_points",
+    "minzoom": 14,
+    "maxzoom": 24,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "archaeological_site"
+    ],
+    "layout": {
+      "icon-image": [
+        "concat",
+        [
+          "get",
+          "site_type"
+        ],
+        "-18"
+      ],
+      "visibility": "visible",
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        15.99,
+        0,
+        16,
+        10,
+        20,
+        12
+      ],
+      "text-anchor": "top",
+      "text-offset": [
+        0,
+        1
+      ],
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "icon-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        15,
+        0.7,
+        20,
+        1.4
+      ]
+    },
+    "paint": {
+      "text-color": "#505050",
+      "text-halo-color": "rgba(255, 255, 255, 1)",
+      "text-halo-width": 0.5,
+      "text-halo-blur": 1,
+      "text-opacity": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        16.99,
+        0,
+        17,
+        1
+      ]
+    }
+  }
+]

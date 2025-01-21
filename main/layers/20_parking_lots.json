@@ -1,0 +1,12 @@
+[
+  {
+    "id": "parking_lots",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "amenity_areas",
+    "paint": {
+      "fill-color": "rgba(236, 231, 231, 1)",
+      "fill-outline-color": "rgba(224, 217, 217, 1)"
+    }
+  }
+]

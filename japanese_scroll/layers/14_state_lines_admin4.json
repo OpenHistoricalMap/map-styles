@@ -1,0 +1,37 @@
+[
+  {
+    "id": "state_lines_admin4",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "land_ohm_lines",
+    "minzoom": 5,
+    "maxzoom": 20,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "admin_level"
+        ],
+        4
+      ],
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "administrative"
+      ]
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "line-color": "rgba(202, 196, 196, 1)",
+      "line-width": 3,
+      "line-pattern": "adminbound"
+    }
+  }
+]

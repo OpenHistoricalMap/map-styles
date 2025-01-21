@@ -1,0 +1,76 @@
+[
+  {
+    "id": "points_of_interest_fromareas",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "amenity_areas_centroids",
+    "minzoom": 16,
+    "maxzoom": 24,
+    "filter": [
+      "all"
+    ],
+    "layout": {
+      "icon-image": "{type}-18",
+      "visibility": "visible",
+      "text-field": [
+        "get",
+        "name"
+      ],
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        15.99,
+        0,
+        16,
+        10,
+        20,
+        12
+      ],
+      "text-anchor": "top",
+      "text-offset": [
+        0,
+        1
+      ],
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "icon-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        15,
+        0.7,
+        20,
+        1.4
+      ]
+    },
+    "paint": {
+      "text-color": "rgba(80, 80, 80, 1)",
+      "text-halo-color": "rgba(255, 255, 255, 1)",
+      "text-halo-width": 0.5,
+      "text-halo-blur": 1,
+      "text-opacity": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        16.99,
+        0,
+        17,
+        1
+      ]
+    }
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "place_areas_square",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "place_areas",
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "square"
+    ],
+    "layout": {
+      "visibility": "none"
+    },
+    "paint": {
+      "fill-color": "rgba(238, 236, 230, 1)",
+      "fill-outline-color": "rgba(226, 223, 215, 1)"
+    }
+  }
+]

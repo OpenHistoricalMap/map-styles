@@ -1,0 +1,36 @@
+[
+  {
+    "id": "pier_line",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "other_lines",
+    "minzoom": 12,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "pier"
+    ],
+    "layout": {
+      "visibility": "none"
+    },
+    "paint": {
+      "line-color": "rgba(230, 222, 205, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        12,
+        2,
+        18,
+        7
+      ]
+    }
+  }
+]

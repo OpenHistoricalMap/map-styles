@@ -1,0 +1,117 @@
+[
+  {
+    "id": "roads_rail-main-dash",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 7,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "light_rail",
+            "preserved",
+            "rail"
+          ]
+        ]
+      ],
+      [
+        "!",
+        [
+          "in",
+          [
+            "get",
+            "service"
+          ],
+          [
+            "literal",
+            [
+              "siding",
+              "yard"
+            ]
+          ]
+        ]
+      ],
+      [
+        "==",
+        [
+          "get",
+          "usage"
+        ],
+        "main"
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "square",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        "rgba(223, 223, 223, 1)",
+        15,
+        "rgba(255, 255, 255, 1)"
+      ],
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        7,
+        1.5,
+        12,
+        2,
+        20,
+        3
+      ],
+      "line-dasharray": [
+        "step",
+        [
+          "zoom"
+        ],
+        [
+          "literal",
+          [
+            7,
+            7
+          ]
+        ],
+        12,
+        [
+          "literal",
+          [
+            5,
+            5
+          ]
+        ],
+        15,
+        [
+          "literal",
+          [
+            4,
+            4
+          ]
+        ]
+      ]
+    }
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "landuse_areas_z7",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 7,
+    "maxzoom": 10,
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "forest",
+          "nature_reserve",
+          "park",
+          "wood"
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "none"
+    },
+    "paint": {
+      "fill-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        "rgba(178, 194, 157, 0.2)",
+        9,
+        "rgba(212, 225, 211, 0.3)"
+      ]
+    }
+  }
+]

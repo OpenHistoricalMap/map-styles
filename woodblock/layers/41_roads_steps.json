@@ -1,0 +1,47 @@
+[
+  {
+    "id": "roads_steps",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 14,
+    "maxzoom": 24,
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "steps"
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "none"
+    },
+    "paint": {
+      "line-color": "#b3b3b3",
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        11,
+        0.5,
+        18,
+        6
+      ],
+      "line-dasharray": [
+        0.1,
+        0.3
+      ]
+    }
+  }
+]

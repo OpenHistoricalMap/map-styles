@@ -1,0 +1,28 @@
+[
+  {
+    "id": "water_areas-ne",
+    "type": "fill",
+    "source": "ne",
+    "source-layer": "water_areas",
+    "minzoom": 0,
+    "maxzoom": 8,
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        "rgba(185, 228, 228, 1)",
+        10,
+        "rgba(126, 218, 218, 1)"
+      ]
+    }
+  }
+]

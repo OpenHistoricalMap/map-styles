@@ -1,0 +1,39 @@
+[
+  {
+    "id": "admin_admin3",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "land_ohm_lines",
+    "minzoom": 3,
+    "maxzoom": 20,
+    "filter": [
+      "==",
+      [
+        "get",
+        "admin_level"
+      ],
+      3
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "square",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": "rgba(181, 195, 199, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        2,
+        0.25,
+        7,
+        2
+      ]
+    }
+  }
+]

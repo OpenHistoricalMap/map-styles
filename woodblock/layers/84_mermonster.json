@@ -1,0 +1,37 @@
+[
+  {
+    "id": "mermonster",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "place_points",
+    "filter": [
+      "==",
+      [
+        "get",
+        "name"
+      ],
+      "Atlantic Ocean"
+    ],
+    "layout": {
+      "icon-image": "woodblock-mapmonster-smaller",
+      "icon-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        1,
+        0.4,
+        2.9,
+        0.6,
+        5,
+        1
+      ]
+    },
+    "paint": {
+      "text-opacity": 1
+    }
+  }
+]

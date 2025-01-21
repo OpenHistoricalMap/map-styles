@@ -1,0 +1,35 @@
+[
+  {
+    "id": "buildings_flat_ruins",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "other_areas",
+    "minzoom": 14,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "historic"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "ruins"
+      ]
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": "rgba(224, 224, 224, 1)"
+    }
+  }
+]

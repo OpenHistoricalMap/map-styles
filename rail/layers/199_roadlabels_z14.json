@@ -1,0 +1,38 @@
+[
+  {
+    "id": "roadlabels_z14",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 14,
+    "filter": [
+      "all"
+    ],
+    "layout": {
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "symbol-placement": "line",
+      "symbol-spacing": 250,
+      "symbol-avoid-edges": false,
+      "text-size": 10,
+      "text-padding": 2,
+      "text-allow-overlap": false,
+      "text-pitch-alignment": "auto",
+      "text-rotation-alignment": "auto",
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "visibility": "none"
+    },
+    "paint": {
+      "text-color": "rgba(82, 82, 82, 1)",
+      "text-halo-width": 1,
+      "text-halo-color": "rgba(255, 255, 255, 0.8)"
+    }
+  }
+]

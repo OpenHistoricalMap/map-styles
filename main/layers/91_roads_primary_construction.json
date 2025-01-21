@@ -1,0 +1,90 @@
+[
+  {
+    "id": "roads_primary_construction",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 6,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "construction"
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "tunnel"
+        ],
+        1
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "ford"
+        ],
+        "yes"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "construction"
+        ],
+        "primary"
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "bridge"
+        ],
+        1
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "round",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        "rgba(242, 175, 4, 1)",
+        12,
+        "rgba(255, 236, 211, 1)"
+      ],
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        0.75,
+        18,
+        32
+      ],
+      "line-dasharray": [
+        3,
+        1.5
+      ]
+    }
+  }
+]

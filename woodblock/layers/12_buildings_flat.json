@@ -1,0 +1,20 @@
+[
+  {
+    "id": "buildings_flat",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "buildings",
+    "minzoom": 14,
+    "maxzoom": 24,
+    "filter": [
+      "all"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": "rgba(182, 143, 53, 1)",
+      "fill-opacity": 0.1
+    }
+  }
+]

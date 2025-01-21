@@ -1,0 +1,49 @@
+[
+  {
+    "id": "landuse_areaslabels_z8glacier",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "landuse_areas_centroids",
+    "minzoom": 10,
+    "maxzoom": 22,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "glacier"
+    ],
+    "layout": {
+      "text-field": [
+        "get",
+        "name"
+      ],
+      "text-font": [
+        "OpenHistorical Italic"
+      ],
+      "text-padding": 2,
+      "text-allow-overlap": false,
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        10,
+        10,
+        12,
+        11,
+        13,
+        13
+      ]
+    },
+    "paint": {
+      "text-color": "rgba(68, 135, 135, 1)",
+      "text-halo-width": 1,
+      "text-halo-color": "rgba(173, 244, 244, 1)"
+    }
+  }
+]

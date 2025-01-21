@@ -1,0 +1,56 @@
+[
+  {
+    "id": "raillabels_z14",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 6,
+    "filter": [
+      "==",
+      [
+        "get",
+        "class"
+      ],
+      "railway"
+    ],
+    "layout": {
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "symbol-placement": "line",
+      "symbol-spacing": 250,
+      "symbol-avoid-edges": false,
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        11,
+        9,
+        14,
+        11
+      ],
+      "text-padding": 2,
+      "text-allow-overlap": false,
+      "text-pitch-alignment": "auto",
+      "text-rotation-alignment": "auto",
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "visibility": "visible"
+    },
+    "paint": {
+      "text-color": "rgba(78, 78, 78, 1)",
+      "text-halo-width": 12,
+      "text-halo-color": "rgba(255, 255, 255, 1)",
+      "text-opacity": 0.85
+    }
+  }
+]

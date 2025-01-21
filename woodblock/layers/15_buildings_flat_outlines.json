@@ -1,0 +1,34 @@
+[
+  {
+    "id": "buildings_flat_outlines",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "buildings",
+    "minzoom": 14,
+    "filter": [
+      "all"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "line-color": "rgba(255, 255, 255, 1)",
+      "line-opacity": 1,
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        15,
+        6,
+        18,
+        9
+      ],
+      "line-pattern": "woodblock-splotchBeige"
+    }
+  }
+]

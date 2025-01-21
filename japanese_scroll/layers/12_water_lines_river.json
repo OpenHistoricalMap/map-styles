@@ -1,0 +1,44 @@
+[
+  {
+    "id": "water_lines_river",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "water_lines",
+    "minzoom": 8,
+    "maxzoom": 24,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "river"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "line-color": "rgba(235, 222, 196, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        8,
+        1,
+        12,
+        1.5,
+        13,
+        2,
+        14,
+        5,
+        20,
+        12
+      ],
+      "line-opacity": 1
+    }
+  }
+]

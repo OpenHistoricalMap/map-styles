@@ -1,0 +1,65 @@
+[
+  {
+    "id": "state_points_labels",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "place_points",
+    "minzoom": 5,
+    "maxzoom": 20,
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "state",
+          "territory"
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        3,
+        9,
+        6,
+        15,
+        10,
+        18
+      ],
+      "text-line-height": 1,
+      "text-transform": "uppercase",
+      "symbol-spacing": 25,
+      "symbol-avoid-edges": true,
+      "symbol-placement": "point"
+    },
+    "paint": {
+      "text-color": "rgba(69, 72, 84, 1)",
+      "text-halo-width": 3,
+      "text-halo-blur": 2,
+      "text-halo-color": "rgba(255, 255, 255, 0.97)",
+      "text-translate-anchor": "map",
+      "icon-translate-anchor": "map"
+    }
+  }
+]

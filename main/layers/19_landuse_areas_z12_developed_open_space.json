@@ -1,0 +1,75 @@
+[
+  {
+    "id": "landuse_areas_z12_developed_open_space",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 12,
+    "maxzoom": 24,
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        [
+          "match",
+          [
+            "get",
+            "type"
+          ],
+          "village_green",
+          "rgba(208, 220, 174, 1)",
+          "cemetery",
+          "rgba(214, 222, 210, 1)",
+          "grave_yard",
+          "rgba(214, 222, 210, 1)",
+          "sports_centre",
+          "rgba(208, 220, 174, 1)",
+          "stadium",
+          "rgba(208, 220, 174, 1)",
+          "recreation_ground",
+          "rgba(208, 220, 174, 1)",
+          "picnic_site",
+          "rgba(208, 220, 174, 1)",
+          "camp_site",
+          "rgba(208, 220, 174, 1)",
+          "playground",
+          "rgba(208, 220, 174, 1)",
+          "bleachers",
+          "rgba(220, 215, 215, 1)",
+          "transparent"
+        ]
+      ],
+      "fill-outline-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        [
+          "match",
+          [
+            "get",
+            "type"
+          ],
+          "bleachers",
+          "rgba(195, 188, 188, 1)",
+          "playground",
+          "rgba(208, 220, 174, 1)",
+          "transparent"
+        ]
+      ]
+    }
+  }
+]

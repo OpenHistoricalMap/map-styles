@@ -1,0 +1,51 @@
+[
+  {
+    "id": "roads_rail_construction_cross",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 9,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "construction",
+            "proposed"
+          ]
+        ]
+      ],
+      [
+        "in",
+        [
+          "get",
+          "class"
+        ],
+        [
+          "literal",
+          [
+            "railway"
+          ]
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "none"
+    },
+    "paint": {
+      "line-color": "rgba(215, 215, 215, 1)",
+      "line-width": 6,
+      "line-dasharray": [
+        0.2,
+        2
+      ]
+    }
+  }
+]

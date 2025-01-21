@@ -1,0 +1,17 @@
+[
+  {
+    "id": "land",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "land",
+    "minzoom": 0,
+    "maxzoom": 24,
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": "rgba(236, 225, 203, 1)",
+      "fill-opacity": 0
+    }
+  }
+]

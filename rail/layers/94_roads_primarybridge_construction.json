@@ -1,0 +1,70 @@
+[
+  {
+    "id": "roads_primarybridge_construction",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 10,
+    "maxzoom": 20,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "construction"
+          ]
+        ]
+      ],
+      [
+        "==",
+        [
+          "get",
+          "bridge"
+        ],
+        1
+      ],
+      [
+        "in",
+        [
+          "get",
+          "construction"
+        ],
+        [
+          "literal",
+          [
+            "primary",
+            "primary_link"
+          ]
+        ]
+      ]
+    ],
+    "layout": {
+      "line-cap": "round",
+      "visibility": "visible",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": "rgba(176, 175, 173, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "exponential",
+          1.5
+        ],
+        [
+          "zoom"
+        ],
+        7,
+        3.5,
+        18,
+        48
+      ]
+    }
+  }
+]

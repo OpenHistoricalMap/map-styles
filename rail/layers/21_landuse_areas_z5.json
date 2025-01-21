@@ -1,0 +1,41 @@
+[
+  {
+    "id": "landuse_areas_z5",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 5,
+    "maxzoom": 7,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "forest",
+            "wood"
+          ]
+        ]
+      ],
+      [
+        ">",
+        [
+          "get",
+          "area"
+        ],
+        50000000
+      ]
+    ],
+    "layout": {
+      "visibility": "none"
+    },
+    "paint": {
+      "fill-color": "rgba(178, 194, 157, 1)"
+    }
+  }
+]

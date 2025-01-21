@@ -1,0 +1,68 @@
+[
+  {
+    "id": "state_points_labels-centroids",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "land_ohm_centroids",
+    "minzoom": 5,
+    "maxzoom": 20,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "administrative"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "admin_level"
+        ],
+        4
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "text-font": [
+        "BernerBasisschrift"
+      ],
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        15,
+        10,
+        18
+      ],
+      "text-line-height": 0.8,
+      "text-transform": "uppercase",
+      "symbol-spacing": 25,
+      "symbol-avoid-edges": true,
+      "symbol-placement": "point",
+      "text-letter-spacing": 0.1,
+      "text-max-width": 7
+    },
+    "paint": {
+      "text-color": "rgba(0, 0, 0, 1)",
+      "text-halo-width": 12,
+      "text-halo-blur": 2,
+      "text-halo-color": "rgba(222, 115, 115, 1)"
+    }
+  }
+]

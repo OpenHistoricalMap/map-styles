@@ -1,0 +1,28 @@
+[
+  {
+    "id": "amenity_areas",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "amenity_areas",
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "school",
+          "university"
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "none"
+    },
+    "paint": {
+      "fill-color": "rgba(226, 214, 205, 1)"
+    }
+  }
+]

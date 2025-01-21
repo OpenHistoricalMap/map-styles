@@ -1,0 +1,72 @@
+[
+  {
+    "id": "city_capital_labels_z6",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "place_points",
+    "minzoom": 6,
+    "maxzoom": 11,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "city"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "capital"
+        ],
+        "yes"
+      ]
+    ],
+    "layout": {
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        12,
+        10,
+        15
+      ],
+      "visibility": "visible",
+      "icon-image": "capital-18",
+      "icon-offset": [
+        0,
+        0
+      ],
+      "icon-size": 1,
+      "text-offset": [
+        0,
+        0.25
+      ],
+      "text-anchor": "top"
+    },
+    "paint": {
+      "text-color": "rgba(34, 34, 34, 1)",
+      "text-halo-color": "rgba(255, 255, 255, 1)",
+      "text-halo-blur": 2,
+      "text-halo-width": 1
+    }
+  }
+]

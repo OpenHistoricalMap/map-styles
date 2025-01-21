@@ -1,0 +1,91 @@
+[
+  {
+    "id": "city_labels_z6",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "place_points",
+    "minzoom": 6,
+    "maxzoom": 15,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "city"
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "capital"
+        ],
+        "yes"
+      ]
+    ],
+    "layout": {
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "text-font": [
+        "Eadui"
+      ],
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        13,
+        10,
+        15
+      ],
+      "visibility": "visible",
+      "icon-image": "woodblock-3-tiered-house-small-2",
+      "icon-offset": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        [
+          "literal",
+          [
+            0,
+            -12
+          ]
+        ],
+        10,
+        [
+          "literal",
+          [
+            0,
+            -15
+          ]
+        ]
+      ],
+      "icon-size": 1,
+      "icon-anchor": "bottom",
+      "text-letter-spacing": 0.1,
+      "text-max-width": 10
+    },
+    "paint": {
+      "text-color": "rgba(19, 19, 16, 1)",
+      "text-halo-color": "rgba(241, 233, 218, 1)",
+      "text-halo-blur": 2,
+      "text-halo-width": 12
+    }
+  }
+]

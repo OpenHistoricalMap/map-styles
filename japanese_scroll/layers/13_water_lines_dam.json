@@ -1,0 +1,37 @@
+[
+  {
+    "id": "water_lines_dam",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "water_lines",
+    "minzoom": 13,
+    "maxzoom": 24,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "dam"
+    ],
+    "paint": {
+      "line-color": "rgba(207, 179, 125, 1)",
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        13,
+        0.5,
+        15,
+        0.8,
+        20,
+        2
+      ],
+      "line-opacity": 0.29
+    }
+  }
+]

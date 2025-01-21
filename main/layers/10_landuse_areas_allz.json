@@ -1,0 +1,49 @@
+[
+  {
+    "id": "landuse_areas_allz",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 0,
+    "maxzoom": 24,
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "forest",
+          "nature_reserve",
+          "park",
+          "wood"
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        "rgba(192, 201, 173, 1)",
+        4,
+        "rgba(188, 193, 179, 1)",
+        5,
+        "rgba(203, 214, 183, 1)",
+        7,
+        "rgba(220, 232, 194, 1)"
+      ],
+      "fill-opacity": 1
+    }
+  }
+]

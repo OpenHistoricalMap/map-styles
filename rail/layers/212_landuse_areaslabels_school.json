@@ -1,0 +1,45 @@
+[
+  {
+    "id": "landuse_areaslabels_school",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 14,
+    "maxzoom": 24,
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "",
+          "college",
+          "education",
+          "school",
+          "university"
+        ]
+      ]
+    ],
+    "layout": {
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "text-size": 11,
+      "text-font": [
+        "OpenHistorical"
+      ]
+    },
+    "paint": {
+      "text-color": "rgba(176, 130, 130, 1)",
+      "text-halo-color": "rgba(245, 239, 239, 1)",
+      "text-halo-width": 1
+    }
+  }
+]

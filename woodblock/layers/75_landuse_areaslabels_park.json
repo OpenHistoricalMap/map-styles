@@ -1,0 +1,74 @@
+[
+  {
+    "id": "landuse_areaslabels_park",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 12,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "camp_site",
+            "garden",
+            "grass",
+            "grassland",
+            "park",
+            "picnic_site",
+            "playground",
+            "recreation_ground",
+            "sports_centre",
+            "stadium",
+            "village_green"
+          ]
+        ]
+      ],
+      [
+        ">",
+        [
+          "get",
+          "area"
+        ],
+        12000
+      ]
+    ],
+    "layout": {
+      "text-field": "",
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        14,
+        11,
+        20,
+        14
+      ],
+      "visibility": "visible",
+      "icon-text-fit": "none",
+      "text-allow-overlap": false,
+      "text-ignore-placement": false,
+      "text-font": [
+        "Open Sans Regular"
+      ],
+      "icon-image": "woodblock-forestSmlst"
+    },
+    "paint": {
+      "text-color": "rgba(122, 143, 61, 1)",
+      "text-halo-color": "rgba(228, 235, 209, 1)",
+      "text-halo-width": 1,
+      "icon-translate-anchor": "map"
+    }
+  }
+]

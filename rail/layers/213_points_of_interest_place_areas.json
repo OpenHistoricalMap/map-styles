@@ -1,0 +1,52 @@
+[
+  {
+    "id": "points_of_interest_place_areas",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "place_areas",
+    "minzoom": 16,
+    "filter": [
+      "!",
+      [
+        "in",
+        [
+          "get",
+          "type"
+        ],
+        [
+          "literal",
+          [
+            "country",
+            "state",
+            "territory"
+          ]
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "text-size": 9,
+      "text-anchor": "center",
+      "text-offset": [
+        0,
+        0
+      ],
+      "text-font": [
+        "OpenHistorical"
+      ]
+    },
+    "paint": {
+      "text-color": "rgba(80, 80, 80, 1)",
+      "text-halo-color": "rgba(255, 255, 255, 1)",
+      "text-halo-width": 0.5,
+      "text-halo-blur": 1
+    }
+  }
+]

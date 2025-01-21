@@ -1,0 +1,25 @@
+[
+  {
+    "id": "points_powertower",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "other_points",
+    "minzoom": 15,
+    "maxzoom": 24,
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "tower"
+    ],
+    "layout": {
+      "icon-image": "power_tower-12",
+      "visibility": "visible",
+      "text-font": [
+        "OpenHistorical"
+      ]
+    }
+  }
+]

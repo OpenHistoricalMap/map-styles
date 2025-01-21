@@ -1,0 +1,49 @@
+[
+  {
+    "id": "water_lineslabels-dam",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "water_lines",
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "dam"
+    ],
+    "layout": {
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        11,
+        11,
+        13,
+        13
+      ],
+      "symbol-spacing": 500,
+      "text-font": [
+        "OpenHistorical Italic"
+      ],
+      "symbol-placement": "line",
+      "text-rotation-alignment": "auto",
+      "text-anchor": "bottom",
+      "text-pitch-alignment": "auto",
+      "text-field": [
+        "get",
+        "name"
+      ],
+      "text-letter-spacing": 0
+    },
+    "paint": {
+      "text-color": "rgba(77, 77, 77, 1)",
+      "text-halo-color": "rgba(207, 230, 230, 1)",
+      "text-halo-width": 1
+    }
+  }
+]

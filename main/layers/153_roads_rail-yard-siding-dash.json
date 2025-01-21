@@ -1,0 +1,80 @@
+[
+  {
+    "id": "roads_rail-yard-siding-dash",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "transport_lines",
+    "minzoom": 7,
+    "maxzoom": 24,
+    "filter": [
+      "in",
+      [
+        "get",
+        "service"
+      ],
+      [
+        "literal",
+        [
+          "siding",
+          "yard"
+        ]
+      ]
+    ],
+    "layout": {
+      "visibility": "visible",
+      "line-cap": "square",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        "rgba(196, 196, 197, 1)",
+        12,
+        "rgba(238, 238, 238, 1)",
+        15,
+        "rgba(244, 244, 244, 1)"
+      ],
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        12,
+        0.5,
+        20,
+        1.25
+      ],
+      "line-dasharray": [
+        "step",
+        [
+          "zoom"
+        ],
+        [
+          "literal",
+          [
+            7,
+            7
+          ]
+        ],
+        15,
+        [
+          "literal",
+          [
+            5,
+            5
+          ]
+        ]
+      ]
+    }
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "landuse_areas_z12_food_and_farming",
+    "type": "fill",
+    "source": "osm",
+    "source-layer": "landuse_areas",
+    "minzoom": 12,
+    "maxzoom": 24,
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        [
+          "match",
+          [
+            "get",
+            "type"
+          ],
+          "farmland",
+          "rgba(239, 234, 182, 0.61)",
+          "farm",
+          "rgba(239, 234, 182, 0.61)",
+          "orchard",
+          "rgba(218, 241, 184, 1)",
+          "farmyard",
+          "rgba(239, 234, 182, 0.61)",
+          "vineyard",
+          "rgba(180, 172, 199, 1)",
+          "allotments",
+          "rgba(222, 221, 190, 1)",
+          "garden",
+          "rgba(228, 244, 202, 1)",
+          "transparent"
+        ]
+      ]
+    }
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "id": "state_points_labels_centroids",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "land_ohm_centroids",
+    "minzoom": 5,
+    "maxzoom": 20,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "administrative"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "admin_level"
+        ],
+        4
+      ]
+    ],
+    "layout": {
+      "text-line-height": 1,
+      "text-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        3,
+        9,
+        6,
+        15,
+        10,
+        18
+      ],
+      "symbol-avoid-edges": true,
+      "text-transform": "uppercase",
+      "symbol-spacing": 25,
+      "text-font": [
+        "OpenHistorical"
+      ],
+      "symbol-placement": "point",
+      "visibility": "visible",
+      "text-field": [
+        "get",
+        "name"
+      ]
+    },
+    "paint": {
+      "text-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        6,
+        "rgba(110, 133, 123, 1)"
+      ],
+      "text-halo-width": 2,
+      "text-halo-blur": 1,
+      "text-halo-color": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        0,
+        "rgba(252, 255, 254, 0.75)",
+        3,
+        "rgba(240, 244, 216, 1)",
+        5,
+        "rgba(246,247,227, 1)",
+        7,
+        "rgba(255, 255, 255, 1)"
+      ],
+      "text-translate-anchor": "map",
+      "icon-translate-anchor": "map"
+    }
+  }
+]

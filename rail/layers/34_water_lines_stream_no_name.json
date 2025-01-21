@@ -1,0 +1,52 @@
+[
+  {
+    "id": "water_lines_stream_no_name",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "water_lines",
+    "minzoom": 14,
+    "maxzoom": 24,
+    "filter": [
+      "all",
+      [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "stream"
+      ],
+      [
+        "in",
+        [
+          "get",
+          "name"
+        ],
+        [
+          "literal",
+          [
+            ""
+          ]
+        ]
+      ]
+    ],
+    "paint": {
+      "line-color": "#7EDADA",
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        14,
+        1,
+        15,
+        2,
+        20,
+        4
+      ]
+    }
+  }
+]

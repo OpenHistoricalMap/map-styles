@@ -1,0 +1,57 @@
+[
+  {
+    "id": "buildings_ruins_outlines",
+    "type": "line",
+    "source": "osm",
+    "source-layer": "other_areas",
+    "filter": [
+      "==",
+      [
+        "get",
+        "type"
+      ],
+      "ruins"
+    ],
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "line-color": "rgba(195, 188, 188, 1)",
+      "line-opacity": 1,
+      "line-width": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        10,
+        1,
+        16,
+        2
+      ],
+      "line-dasharray": [
+        "step",
+        [
+          "zoom"
+        ],
+        [
+          "literal",
+          [
+            1,
+            1
+          ]
+        ],
+        16,
+        [
+          "literal",
+          [
+            4,
+            2
+          ]
+        ]
+      ]
+    }
+  }
+]

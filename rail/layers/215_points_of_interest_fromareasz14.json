@@ -1,0 +1,67 @@
+[
+  {
+    "id": "points_of_interest_fromareasz14",
+    "type": "symbol",
+    "source": "osm",
+    "source-layer": "amenity_areas",
+    "minzoom": 14,
+    "maxzoom": 16,
+    "filter": [
+      "in",
+      [
+        "get",
+        "type"
+      ],
+      [
+        "literal",
+        [
+          "bank",
+          "border_control",
+          "embassy",
+          "fire_station",
+          "government",
+          "hospital",
+          "police",
+          "school",
+          "taxi",
+          "townhall",
+          "university"
+        ]
+      ]
+    ],
+    "layout": {
+      "icon-image": [
+        "concat",
+        [
+          "get",
+          "type"
+        ],
+        "-12"
+      ],
+      "visibility": "visible",
+      "text-field": [
+        "to-string",
+        [
+          "get",
+          "name"
+        ]
+      ],
+      "text-size": 8,
+      "text-anchor": "top",
+      "text-offset": [
+        0,
+        1
+      ],
+      "text-font": [
+        "OpenHistorical"
+      ]
+    },
+    "paint": {
+      "text-color": "#505050",
+      "text-halo-color": "rgba(255, 255, 255, 1)",
+      "text-halo-width": 0.5,
+      "text-halo-blur": 1,
+      "text-opacity": 0
+    }
+  }
+]
