@@ -14,6 +14,12 @@
       "tiles": [
         "https://vtiles.staging.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
       ]
+    },
+    "osm_land": {
+      "type": "vector",
+      "tiles": [
+        "https://vtiles.staging.openhistoricalmap.org/maps/osm_land/{z}/{x}/{y}.pbf"
+      ]
     }
   },
   "sprite": "https://openhistoricalmap.github.io/map-styles/woodblock/woodblock_spritesheet",
