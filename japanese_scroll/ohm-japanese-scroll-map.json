@@ -14,6 +14,12 @@
       "tiles": [
         "https://vtiles.staging.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
       ]
+    },
+    "osm_land": {
+      "type": "vector",
+      "tiles": [
+        "https://vtiles.staging.openhistoricalmap.org/maps/osm_land/{z}/{x}/{y}.pbf"
+      ]
     }
   },
   "sprite": "https://openhistoricalmap.github.io/map-styles/japanese_scroll/jp_spritesheet_template",
@@ -43,7 +49,7 @@
     {
       "id": "land",
       "type": "fill",
-      "source": "osm",
+      "source": "osm_land",
       "source-layer": "land",
       "minzoom": 0,
       "maxzoom": 24,
@@ -53,7 +59,7 @@
     {
       "id": "land-pattern",
       "type": "fill",
-      "source": "osm",
+      "source": "osm_land",
       "source-layer": "land",
       "minzoom": 0,
       "maxzoom": 24,
