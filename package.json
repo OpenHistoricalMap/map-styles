@@ -1,0 +1,27 @@
+{
+  "name": "map-styles",
+  "version": "0.9.0",
+  "description": "A collection of map styles for OpenHistoricalMap",
+  "main": "''",
+  "type": "module",
+  "scripts": {
+    "prepare": "scripts/prepare.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/OpenHistoricalMap/map-styles.git"
+  },
+  "author": [
+    "tsinn <tim@greeninfo.org>",
+    "Vanessa Knoppke-Wetzel <run.for.funner@gmail.com>"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OpenHistoricalMap/map-styles/issues"
+  },
+  "homepage": "https://github.com/OpenHistoricalMap/map-styles#readme",
+  "dependencies": {
+    "camelcase": "^8.0.0"
+  }
+}
