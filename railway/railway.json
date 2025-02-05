@@ -25,8 +25,8 @@
       ]
     }
   },
-  "sprite": "https://openhistoricalmap.github.io/map-styles/rail/rail_spritesheet",
-  "glyphs": "https://openhistoricalmap.github.io/map-styles/fonts/{fontstack}/{range}.pbf",
+  "sprite": "https://www.openhistoricalmap.org/map-styles/rail/rail_spritesheet",
+  "glyphs": "https://www.openhistoricalmap.org/map-styles/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
