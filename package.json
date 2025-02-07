@@ -17,9 +17,9 @@
     "Vanessa Knoppke-Wetzel <run.for.funner@gmail.com>",
     "Eric Theise <erictheise@gmail.com>"
   ],
-  "license": "",
+  "license": "CC0 1.0 Universal",
   "bugs": {
-    "url": "https://github.com/OpenHistoricalMap/map-styles/issues"
+    "url": "https://github.com/OpenHistoricalMap/issues"
   },
   "homepage": "https://github.com/OpenHistoricalMap/map-styles#readme",
   "dependencies": {
