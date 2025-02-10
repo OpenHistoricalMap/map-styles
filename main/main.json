@@ -607,7 +607,7 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "water_areas",
-      "minzoom": 8,
+      "minzoom": 0,
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
       "paint": {
