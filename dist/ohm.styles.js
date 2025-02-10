@@ -533,6 +533,81 @@ ohmVectorStyles = {
         }
       },
       {
+        "id": "landuse_areas_z12_watercover",
+        "type": "fill",
+        "source": "osm",
+        "source-layer": "landuse_areas",
+        "minzoom": 11,
+        "maxzoom": 24,
+        "layout": {
+          "visibility": "visible"
+        },
+        "paint": {
+          "fill-color": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            12,
+            [
+              "match",
+              [
+                "get",
+                "type"
+              ],
+              "salt_pond",
+              "rgba(236, 240, 241, 1)",
+              "glacier",
+              "rgba(219, 244, 249, 1)",
+              "reservoir",
+              "rgba(144, 204, 203, 1)",
+              "swimming_pool",
+              "rgba(144, 204, 203, 1)",
+              "wetland",
+              "rgba(228, 242, 227, 1)",
+              "transparent"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "wetlands_z11-pattern",
+        "type": "fill",
+        "source": "osm",
+        "source-layer": "landuse_areas",
+        "minzoom": 11,
+        "maxzoom": 24,
+        "filter": [
+          "==",
+          [
+            "get",
+            "type"
+          ],
+          "wetland"
+        ],
+        "layout": {
+          "visibility": "visible"
+        },
+        "paint": {
+          "fill-color": "rgba(255, 255, 255, 1)",
+          "fill-pattern": {
+            "stops": [
+              [
+                12,
+                "cattails_space_60px"
+              ],
+              [
+                14,
+                "cattails_space_70px"
+              ]
+            ]
+          }
+        }
+      },
+      {
         "id": "landuse_areas_z12_glacier-outline",
         "type": "line",
         "source": "osm",
@@ -877,7 +952,7 @@ ohmVectorStyles = {
         "type": "fill",
         "source": "osm",
         "source-layer": "water_areas",
-        "minzoom": 8,
+        "minzoom": 0,
         "maxzoom": 24,
         "layout": {
           "visibility": "visible"
@@ -896,67 +971,6 @@ ohmVectorStyles = {
             10,
             "rgba(126, 218, 218, 1)"
           ]
-        }
-      },
-      {
-        "id": "landuse_areas_z12_watercover",
-        "type": "fill",
-        "source": "osm",
-        "source-layer": "landuse_areas",
-        "minzoom": 11,
-        "maxzoom": 24,
-        "layout": {
-          "visibility": "visible"
-        },
-        "paint": {
-          "fill-color": [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            12,
-            [
-              "match",
-              [
-                "get",
-                "type"
-              ],
-              "salt_pond",
-              "rgba(236, 240, 241, 1)",
-              "glacier",
-              "rgba(219, 244, 249, 1)",
-              "reservoir",
-              "rgba(144, 204, 203, 1)",
-              "swimming_pool",
-              "rgba(144, 204, 203, 1)",
-              "transparent"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "landuse_areas_z11_wetland_watercover",
-        "type": "fill",
-        "source": "osm",
-        "source-layer": "landuse_areas",
-        "minzoom": 11,
-        "maxzoom": 24,
-        "filter": [
-          "all",
-          [
-            "==",
-            "type",
-            "wetland"
-          ]
-        ],
-        "layout": {
-          "visibility": "visible"
-        },
-        "paint": {
-          "fill-color": "rgba(228, 242, 227, 1)"
         }
       },
       {
@@ -1079,40 +1093,6 @@ ohmVectorStyles = {
         "paint": {
           "fill-color": "rgba(248, 247, 242, 1)",
           "fill-outline-color": "rgba(226, 223, 215, 1)"
-        }
-      },
-      {
-        "id": "wetlands_z11-pattern",
-        "type": "fill",
-        "source": "osm",
-        "source-layer": "landuse_areas",
-        "minzoom": 11,
-        "maxzoom": 24,
-        "filter": [
-          "==",
-          [
-            "get",
-            "type"
-          ],
-          "wetland"
-        ],
-        "layout": {
-          "visibility": "visible"
-        },
-        "paint": {
-          "fill-color": "rgba(255, 255, 255, 1)",
-          "fill-pattern": {
-            "stops": [
-              [
-                12,
-                "cattails_space_60px"
-              ],
-              [
-                14,
-                "cattails_space_70px"
-              ]
-            ]
-          }
         }
       },
       {
