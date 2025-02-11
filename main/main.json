@@ -5586,7 +5586,7 @@
       "source": "osm",
       "source-layer": "buildings_centroids",
       "minzoom": 16,
-      "filter": ["all"],
+      "filter": ["!=", ["get", "type"], "parking"],
       "layout": {
         "icon-image": "{tourism}-18",
         "visibility": "visible",
