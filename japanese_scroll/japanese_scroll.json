@@ -16,8 +16,8 @@
       ]
     }
   },
-  "sprite": "https://www.openhistoricalmap.org/map-styles/japanese_scroll/jp_spritesheet_template",
-  "glyphs": "https://www.openhistoricalmap.org/map-styles/fonts/{fontstack}/{range}.pbf",
+  "sprite": "http://localhost:8888/japanese_scroll/jp_spritesheet_template",
+  "glyphs": "http://localhost:8888/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",

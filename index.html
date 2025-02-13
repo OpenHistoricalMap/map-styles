@@ -1,13 +1,50 @@
-<div id="map"></div>
+<html>
+<head>
+  <script src="./node_modules/maplibre-gl/dist/maplibre-gl.js"></script>
+  <link href="./node_modules/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
+</head>
+<body>
+<div id="map" style="width:100%;height:100%"></div>
 
 <script type="module">
-  import maplibregl from 'maplibre-gl';
-  import 'maplibre-gl/dist/maplibre-gl.css';
+  import StyleFlipperControl from "./node_modules/maplibre-gl-style-flipper/index.js";
+  const mapStyles = {
+    "historical": {
+      code: "historical",
+      url: "./historical/historical.json"
+    },
+    "japanese_scroll": {
+      code: "japanese_scroll",
+      url: "./japanese_scroll/japanese_scroll.json"
+    },
+    "railway": {
+      code: "railway",
+      url: "./railway/railway.json"
+    },
+    "woodblock": {
+      code: "woodblock",
+      url: "./woodblock/woodblock.json"
+    },
+  };
 
-  const map = new maplibregl.Map({
-    container: 'map', // container id
-    style: 'https://demotiles.maplibre.org/style.json', // style URL
-    center: [0, 0], // starting position [lng, lat]
-    zoom: 1 // starting zoom
-  });
+  var map = new maplibregl.Map({
+    container: 'map',
+    style: mapStyles["historical"].url,
+    center: [-74.033, 40.6259],
+    zoom: 11.73,
+    hash: true
+  })
+
+  // Create an instance of StyleFlipperControl
+  const styleFlipperControl = new StyleFlipperControl(mapStyles);
+
+  // Set the initial style code
+  styleFlipperControl.setCurrentStyleCode("historical");
+
+  // Add the control to the map
+  map.addControl(styleFlipperControl, "bottom-right");
+
 </script>
+
+</body>
+</html>

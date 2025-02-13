@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "prepare": "scripts/prepare.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "http-server --port 8888 --cors -o '#7.33/40.487/-73.554'"
   },
   "repository": {
     "type": "git",
@@ -24,8 +24,8 @@
   "homepage": "https://github.com/OpenHistoricalMap/map-styles#readme",
   "dependencies": {
     "camelcase": "^8.0.0",
-    "express": "^4.21.2",
+    "http-server": "^14.1.1",
     "maplibre-gl": "^5.1.0",
-    "pug": "^3.0.3"
+    "maplibre-gl-style-flipper": "^1.0.7"
   }
 }
