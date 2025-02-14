@@ -33,3 +33,8 @@ Symbology in old maps always a reason why they look old. Mountains were a consis
 ## Label Design
 ![image](https://user-images.githubusercontent.com/7087091/211070796-31b61a28-1f16-4ef4-a9d2-672b7709196c.png) <br>
 This felt really important as a few of the maps had this styling. I used block/square halos with red tones were common across various maps. Incorporated reds as well as mustard yellows, as this also was colors used across some of the inpsiration maps
+
+## Data Choices
+Like the Woodblock style, this map style intentionally removes quite a bit of OHM data from the map. Older maps had a lot less data in them. If this map were to grow over time and have more data added, there would need to be some consideration of how design elements change to ensure that there is an appropriate hierarchy and balance of contrast.
+
+For now, this style serves to highlight an older map aesthetic, in modern mapping technologies, alongside showing data over time.
