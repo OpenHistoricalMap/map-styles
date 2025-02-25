@@ -17,7 +17,7 @@ If you make changes you want to commit back here:
 1. Clone the repo locally.
 2. Load the style file.
 3. Use Export to write a new JSON over the top of the old one on your local copy (or save a new style).
-4. Commit and push the changes, which will then be avalaible at a GH Pages URL similar to the one above.
+4. Commit and push the changes, which will then be available at a GH Pages URL similar to the one above.
 
 If you make a new style, just change the URL for the style file with the new one you made.
 
