@@ -23,6 +23,16 @@ If you make a new style, just change the URL for the style file with the new one
 
 Note that changes here do not publish automagically to the OHM website. The latest styles get deployed to staging/openhistoricalmap.org by updating the Git commit sha on the `staging` branch here https://github.com/OpenHistoricalMap/ohm-deploy/blob/b71bc19d95f00fbb96ec33bd5149e0cd1b454935/images/web/Dockerfile#L117
 
+## Review styles locally
+With the move to npm packaging it's now possible to view and switch between map styles locally. The first time you `git clone` this repository be sure to run `npm install`. Afterward, running `npm test` will start the lightweight `http-server` and launch a new browser window on port 8888.
+
+Use `control-c` to end the browser session.
+
+This is a new feature, with three known issues/milestones:
+ * images for the style switcher are broken
+ * the OpenHistoricalMap `timeslider` is not yet incorporated; it, too, is being readied for npm packaging
+ * it would be better if the local port were configurable by individual users. This is complicated slightly as our staging and production deployment process searches-and-replaces `http://localhost:8888/` with urls suitable for those environments.
+
 ## Review styles while they are in staging
 To review the styles with the latest updates to the map-styles repo before they are live, use the below links. These are pulled from the `staging` branch. The `staging` branch will reflect 1) recently made updates before they are merged into `main` and occassionally 2) iterative cartography testing. 
 
