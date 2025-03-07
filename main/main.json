@@ -2691,7 +2691,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 14,
+      "minzoom": 12,
       "filter": ["==", ["get", "type"], "subway"],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -2701,7 +2701,7 @@
           ["linear"],
           ["zoom"],
           12,
-          1,
+          0.8,
           13,
           1,
           14,
