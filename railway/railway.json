@@ -25,7 +25,7 @@
       ]
     }
   },
-  "sprite": "http://localhost:8888/rail/rail_spritesheet",
+  "sprite": "http://localhost:8888/railway/railway_spritesheet",
   "glyphs": "http://localhost:8888/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {

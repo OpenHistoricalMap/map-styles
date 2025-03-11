@@ -30,7 +30,7 @@ ohmVectorStyles = {
         ]
       }
     },
-    "sprite": "https://www.openhistoricalmap.org/map-styles/main/main_spritesheet",
+    "sprite": "https://www.openhistoricalmap.org/map-styles/historical/historical_spritesheet",
     "glyphs": "https://www.openhistoricalmap.org/map-styles/fonts/{fontstack}/{range}.pbf",
     "layers": [
       {
@@ -12237,7 +12237,7 @@ ohmVectorStyles = {
         ]
       }
     },
-    "sprite": "https://www.openhistoricalmap.org/map-styles/japanese_scroll/jp_spritesheet_template",
+    "sprite": "https://www.openhistoricalmap.org/map-styles/japanese_scroll/japanese_scroll_spritesheet_template",
     "glyphs": "https://www.openhistoricalmap.org/map-styles/fonts/{fontstack}/{range}.pbf",
     "layers": [
       {
@@ -16300,7 +16300,7 @@ ohmVectorStyles = {
         ]
       }
     },
-    "sprite": "https://www.openhistoricalmap.org/map-styles/rail/rail_spritesheet",
+    "sprite": "https://www.openhistoricalmap.org/map-styles/railway/railway_spritesheet",
     "glyphs": "https://www.openhistoricalmap.org/map-styles/fonts/{fontstack}/{range}.pbf",
     "layers": [
       {
