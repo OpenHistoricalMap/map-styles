@@ -7,9 +7,11 @@ Here, you can save your worries about tile servers and data updates and instead 
 
 Style file to load in Maputnik:
 
-- OHM style: https://openhistoricalmap.github.io/map-styles/main/main.json
+- OHM style: https://openhistoricalmap.github.io/map-styles/historical/historical.json
 
 - Woodblock style:  [https://github.com/OpenHistoricalMap/map-styles/blob/staging/woodblock/woodblock.json](https://raw.githubusercontent.com/OpenHistoricalMap/map-styles/staging/woodblock/woodblock.json)
+
+Note that we may disable these Github.io links in the future, so do not reference them in external applications.
 
 Copy the vector-based style to your Mapbox account [here](https://api.mapbox.com/styles/v1/vanessa-gin/ckz5r3zdy001215ofoeq1k7wm.html?title=copy&access_token=pk.eyJ1IjoidmFuZXNzYS1naW4iLCJhIjoiY2t3d2dzYXhxMDNtZDJ1bGFsY2c5dXV3ciJ9.jJ1Ujxks-kpcwSiiNdemfA&zoomwheel=true&fresh=true#12.63/40.68942/-74.02352). Note: the data layers are a little different because Mapbox uses Streets v8 now, and OHM styles are on Streets v7, but the style elements are all there.
 
@@ -21,10 +23,10 @@ If you make changes you want to commit back here:
 
 If you make a new style, just change the URL for the style file with the new one you made.
 
-Note that changes here do not publish automagically to the OHM website. The latest styles get deployed to staging/openhistoricalmap.org by updating the Git commit sha on the `staging` branch here https://github.com/OpenHistoricalMap/ohm-deploy/blob/b71bc19d95f00fbb96ec33bd5149e0cd1b454935/images/web/Dockerfile#L117
+Note that changes here do not publish automagically to the OHM website. The styles are published via an NPM module, which is then consumed by the website.
 
 ## Review styles locally
-With the move to npm packaging it's now possible to view and switch between map styles locally. The first time you `git clone` this repository be sure to run `npm install`. Afterward, running `npm test` will start the lightweight `http-server` and launch a new browser window on port 8888.
+With the move to npm packaging it's now possible to view and switch between map styles locally. The first time you `git clone` this repository be sure to run `nvm use` (install Node version if needed) and then run `npm install`. Afterward, running `npm test` will start the lightweight `http-server` and launch a new browser window on port 8888.
 
 Use `control-c` to end the browser session.
 
