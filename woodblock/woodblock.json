@@ -14,10 +14,19 @@
       "tiles": [
         "https://vtiles.staging.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
       ]
+    },
+    "osm_land": {
+      "type": "vector",
+      "tiles": [
+        "https://vtiles.openhistoricalmap.org/maps/osm_land/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 0,
+      "maxzoom": 22,
+      "scheme": "xyz"
     }
   },
-  "sprite": "http://localhost:8888/woodblock/woodblock_spritesheet",
-  "glyphs": "http://localhost:8888/fonts/{fontstack}/{range}.pbf",
+  "sprite": "https://openhistoricalmap.github.io/map-styles/woodblock/woodblock_spritesheet",
+  "glyphs": "https://openhistoricalmap.github.io/map-styles/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background-pattern",
@@ -46,7 +55,7 @@
     {
       "id": "land-pattern",
       "type": "fill",
-      "source": "osm",
+      "source": "osm_land",
       "source-layer": "land",
       "minzoom": 0,
       "maxzoom": 24,
@@ -59,7 +68,7 @@
     {
       "id": "land",
       "type": "fill",
-      "source": "osm",
+      "source": "osm_land",
       "source-layer": "land",
       "minzoom": 0,
       "maxzoom": 24,
@@ -536,12 +545,8 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        [
-          "in",
-          ["get", "type"],
-          ["literal", ["funicular", "monorail", "tram"]]
-        ],
-        ["!",["in", ["get", "service"], ["literal", ["siding", "yard"]]]]
+        ["in", ["get", "type"], ["literal", ["funicular", "monorail", "tram"]]],
+        ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -571,7 +576,7 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["miniature", "narrow_gauge"]]],
-        ["!",["in", ["get", "service"], ["literal", ["siding", "yard"]]]]
+        ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]]
       ],
       "layout": {"visibility": "none"},
       "paint": {
@@ -619,9 +624,11 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["in",
+        [
+          "in",
           ["get", "type"],
-          ["literal", ["abandoned", "dismantled", "disused", "razed"]]],
+          ["literal", ["abandoned", "dismantled", "disused", "razed"]]
+        ],
         ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]]
       ],
       "layout": {"visibility": "none"},
@@ -1156,11 +1163,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        [
-          "in",
-          ["get", "type"],
-          ["literal", ["motorway_link", "trunk_link"]]
-        ],
+        ["in", ["get", "type"], ["literal", ["motorway_link", "trunk_link"]]],
         ["!=", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -1500,11 +1503,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        [
-          "in",
-          ["get", "type"],
-          ["literal", ["motorway_link", "trunk_link"]]
-        ],
+        ["in", ["get", "type"], ["literal", ["motorway_link", "trunk_link"]]],
         ["!=", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -2095,19 +2094,22 @@
         [
           "in",
           ["get", "type"],
-          ["literal", [
-            "camp_site",
-            "garden",
-            "grass",
-            "grassland",
-            "park",
-            "picnic_site",
-            "playground",
-            "recreation_ground",
-            "sports_centre",
-            "stadium",
-            "village_green"
-          ]]
+          [
+            "literal",
+            [
+              "camp_site",
+              "garden",
+              "grass",
+              "grassland",
+              "park",
+              "picnic_site",
+              "playground",
+              "recreation_ground",
+              "sports_centre",
+              "stadium",
+              "village_green"
+            ]
+          ]
         ],
         [">", ["get", "area"], 12000]
       ],
