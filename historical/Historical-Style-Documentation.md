@@ -1,11 +1,11 @@
-# Documentation of Cartography of Main Style
+# Documentation of Cartography of Historical Style
 ## OpenHistoricalMap Design Principles
 GreenInfo Network and OpenHistoricalMap's cartographic journey for the main historical style began many years ago with cataloging, reviewing, and analyzing some historical styles as inspiration. There were many considerations when reviewing old maps and how they could and would be applied to a brand new style for an OHM base map. In particular, we considered the below heavily:<br>
 
 **1. Design for time, geography, and zoom level:** First and foremost, we needed to consider that the OpenHistoricalMap's main style would require a well thought out design that worked across all of time, and all geographies, across history. The cartographic choices would not simply be an attempt to style 1930’s America or 1700’s Japan, for example. While the map would be depicting history, the map style ultimately needed to work as a modern interactive map that had to _globally_  have a style that also worked across all zoom levels. From city streets to states to continents, a basic style would need to work for all of these scenarios <br><Br>
 **2. An ever-expanding data landscape:** Similar to OpenStreetMap, the amount and variety of types of data is _massive_. the cartographic choices made for the main style would also need to coherently work across different types of data (... across time, across geographies, across zoom levels). Most maps - historical or modern - have a single purpose and are designed thoughtfully to support that particular purpose. With OpenHistorical map's purpose effectively being "design for all-things", it also meant that limiting the amount of data - the number of types of information displayed - would also need to be a consistent conversation in the beginning of the design work for the style, but also alongside the growth of the main style, as ever changing data additions would mean that OHM would need to have some kind of flexibility as well as rigidity to not have TOO many data layers shown in the single main style. <br>
 <br>
-## OHM Main Style History and Context
+## OHM Historical Style History and Context
 After some time, we settled on an aesthetic inspiration coming from Alexander Gross's 1950 Highway Map.<br>
 <br>
 

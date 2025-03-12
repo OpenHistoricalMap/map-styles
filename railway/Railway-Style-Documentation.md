@@ -1,8 +1,8 @@
-# Documentation of Rail Style: Where it is today
+# Documentation of Railway Style: Where it is today
 The below documents the original considerations for the rail style. This style, however, is one that requires some design updates, and I would say is not at all a "final design" because of the likelihood of more data attributes to exist in the future. This style is historical but also must be practical, and unlike the other two style variants, this style requires more data, and also has more need for multi-variant styling of some elements (specifically rail). <br>
 <br>
 
-## Original Rail Style Inspiration (And references for the future?)
+## Original Railway Style Inspiration (And references for the future?)
 
 ### Main line routes
 ![image](https://github.com/OpenHistoricalMap/issues/assets/7087091/b6315c49-b06a-4290-a00d-b51e37f7fc24)
