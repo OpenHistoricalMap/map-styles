@@ -28,6 +28,15 @@ ohmVectorStyles = {
         "tiles": [
           "https://vtiles.staging.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
         ]
+      },
+      "osm_land": {
+        "type": "vector",
+        "tiles": [
+          "https://vtiles.openhistoricalmap.org/maps/osm_land/{z}/{x}/{y}.pbf"
+        ],
+        "minzoom": 0,
+        "maxzoom": 22,
+        "scheme": "xyz"
       }
     },
     "sprite": "https://www.openhistoricalmap.org/map-styles/historical/historical_spritesheet",
@@ -63,7 +72,7 @@ ohmVectorStyles = {
       {
         "id": "land",
         "type": "fill",
-        "source": "osm",
+        "source": "osm_land",
         "source-layer": "land",
         "minzoom": 0,
         "maxzoom": 24,
@@ -446,8 +455,6 @@ ohmVectorStyles = {
               "rgba(238, 229, 178, 1)",
               "basin",
               "rgba(144, 204, 203, 1)",
-              "wetland",
-              "rgba(227, 233, 226, 1)",
               "salt_pond",
               "rgba(236, 240, 241, 1)",
               "mud",
@@ -529,120 +536,6 @@ ohmVectorStyles = {
               "rgba(199, 222, 194, 1)",
               "transparent"
             ]
-          ]
-        }
-      },
-      {
-        "id": "landuse_areas_z12_watercover",
-        "type": "fill",
-        "source": "osm",
-        "source-layer": "landuse_areas",
-        "minzoom": 11,
-        "maxzoom": 24,
-        "layout": {
-          "visibility": "visible"
-        },
-        "paint": {
-          "fill-color": [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            12,
-            [
-              "match",
-              [
-                "get",
-                "type"
-              ],
-              "salt_pond",
-              "rgba(236, 240, 241, 1)",
-              "glacier",
-              "rgba(219, 244, 249, 1)",
-              "reservoir",
-              "rgba(144, 204, 203, 1)",
-              "swimming_pool",
-              "rgba(144, 204, 203, 1)",
-              "wetland",
-              "rgba(228, 242, 227, 1)",
-              "transparent"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "wetlands_z11-pattern",
-        "type": "fill",
-        "source": "osm",
-        "source-layer": "landuse_areas",
-        "minzoom": 11,
-        "maxzoom": 24,
-        "filter": [
-          "==",
-          [
-            "get",
-            "type"
-          ],
-          "wetland"
-        ],
-        "layout": {
-          "visibility": "visible"
-        },
-        "paint": {
-          "fill-color": "rgba(255, 255, 255, 1)",
-          "fill-pattern": {
-            "stops": [
-              [
-                12,
-                "cattails_space_60px"
-              ],
-              [
-                14,
-                "cattails_space_70px"
-              ]
-            ]
-          }
-        }
-      },
-      {
-        "id": "landuse_areas_z12_glacier-outline",
-        "type": "line",
-        "source": "osm",
-        "source-layer": "landuse_areas",
-        "minzoom": 9,
-        "maxzoom": 24,
-        "filter": [
-          "==",
-          [
-            "get",
-            "type"
-          ],
-          "glacier"
-        ],
-        "layout": {
-          "visibility": "visible"
-        },
-        "paint": {
-          "line-color": "rgba(180, 211, 218, 1)",
-          "line-dasharray": [
-            2,
-            2
-          ],
-          "line-width": [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            9,
-            1,
-            14,
-            1.5
           ]
         }
       },
@@ -996,6 +889,120 @@ ohmVectorStyles = {
             "rgba(185, 228, 228, 1)",
             10,
             "rgba(126, 218, 218, 1)"
+          ]
+        }
+      },
+      {
+        "id": "landuse_areas_z12_watercover",
+        "type": "fill",
+        "source": "osm",
+        "source-layer": "landuse_areas",
+        "minzoom": 11,
+        "maxzoom": 24,
+        "layout": {
+          "visibility": "visible"
+        },
+        "paint": {
+          "fill-color": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            12,
+            [
+              "match",
+              [
+                "get",
+                "type"
+              ],
+              "salt_pond",
+              "rgba(236, 240, 241, 1)",
+              "glacier",
+              "rgba(219, 244, 249, 1)",
+              "reservoir",
+              "rgba(144, 204, 203, 1)",
+              "swimming_pool",
+              "rgba(144, 204, 203, 1)",
+              "wetland",
+              "rgba(228, 242, 227, 1)",
+              "transparent"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "wetlands_z11-pattern",
+        "type": "fill",
+        "source": "osm",
+        "source-layer": "landuse_areas",
+        "minzoom": 11,
+        "maxzoom": 24,
+        "filter": [
+          "==",
+          [
+            "get",
+            "type"
+          ],
+          "wetland"
+        ],
+        "layout": {
+          "visibility": "visible"
+        },
+        "paint": {
+          "fill-color": "rgba(255, 255, 255, 1)",
+          "fill-pattern": {
+            "stops": [
+              [
+                12,
+                "cattails_space_60px"
+              ],
+              [
+                14,
+                "cattails_space_70px"
+              ]
+            ]
+          }
+        }
+      },
+      {
+        "id": "landuse_areas_z12_glacier-outline",
+        "type": "line",
+        "source": "osm",
+        "source-layer": "landuse_areas",
+        "minzoom": 9,
+        "maxzoom": 24,
+        "filter": [
+          "==",
+          [
+            "get",
+            "type"
+          ],
+          "glacier"
+        ],
+        "layout": {
+          "visibility": "visible"
+        },
+        "paint": {
+          "line-color": "rgba(180, 211, 218, 1)",
+          "line-dasharray": [
+            2,
+            2
+          ],
+          "line-width": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            9,
+            1,
+            14,
+            1.5
           ]
         }
       },
@@ -1816,7 +1823,7 @@ ohmVectorStyles = {
         "type": "fill",
         "source": "osm",
         "source-layer": "transport_areas",
-        "minzoom": 14,
+        "minzoom": 12,
         "maxzoom": 24,
         "filter": [
           "==",
@@ -1839,7 +1846,7 @@ ohmVectorStyles = {
         "type": "fill",
         "source": "osm",
         "source-layer": "transport_areas",
-        "minzoom": 14,
+        "minzoom": 12,
         "maxzoom": 24,
         "filter": [
           "==",
@@ -4944,7 +4951,7 @@ ohmVectorStyles = {
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 14,
+        "minzoom": 12,
         "filter": [
           "==",
           [
@@ -4967,7 +4974,7 @@ ohmVectorStyles = {
               "zoom"
             ],
             12,
-            1,
+            0.8,
             13,
             1,
             14,
@@ -5714,6 +5721,60 @@ ohmVectorStyles = {
         }
       },
       {
+        "id": "roads_servicecase_z13",
+        "type": "line",
+        "source": "osm",
+        "source-layer": "transport_lines",
+        "minzoom": 13,
+        "maxzoom": 24,
+        "filter": [
+          "all",
+          [
+            "in",
+            [
+              "get",
+              "type"
+            ],
+            [
+              "literal",
+              [
+                "service"
+              ]
+            ]
+          ],
+          [
+            "!=",
+            [
+              "get",
+              "bridge"
+            ],
+            1
+          ]
+        ],
+        "layout": {
+          "visibility": "visible",
+          "line-cap": "round",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": "#D2D2D5",
+          "line-width": [
+            "interpolate",
+            [
+              "exponential",
+              1.5
+            ],
+            [
+              "zoom"
+            ],
+            13,
+            2,
+            18,
+            12
+          ]
+        }
+      },
+      {
         "id": "roads_residentialcase_z13",
         "type": "line",
         "source": "osm",
@@ -5732,7 +5793,6 @@ ohmVectorStyles = {
               "literal",
               [
                 "residential",
-                "service",
                 "unclassified"
               ]
             ]
@@ -6360,6 +6420,49 @@ ohmVectorStyles = {
         }
       },
       {
+        "id": "roads_service",
+        "type": "line",
+        "source": "osm",
+        "source-layer": "transport_lines",
+        "minzoom": 12,
+        "maxzoom": 24,
+        "filter": [
+          "in",
+          [
+            "get",
+            "type"
+          ],
+          [
+            "literal",
+            [
+              "service"
+            ]
+          ]
+        ],
+        "layout": {
+          "visibility": "visible",
+          "line-cap": "round",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": "#ffffff",
+          "line-width": [
+            "interpolate",
+            [
+              "exponential",
+              1.5
+            ],
+            [
+              "zoom"
+            ],
+            12,
+            1.6,
+            18,
+            7
+          ]
+        }
+      },
+      {
         "id": "roads_residential",
         "type": "line",
         "source": "osm",
@@ -6376,7 +6479,6 @@ ohmVectorStyles = {
             "literal",
             [
               "residential",
-              "service",
               "unclassified"
             ]
           ]
@@ -10373,7 +10475,12 @@ ohmVectorStyles = {
         "source-layer": "buildings_centroids",
         "minzoom": 16,
         "filter": [
-          "all"
+          "!=",
+          [
+            "get",
+            "type"
+          ],
+          "parking"
         ],
         "layout": {
           "icon-image": "{tourism}-18",
@@ -11072,7 +11179,7 @@ ohmVectorStyles = {
         "source": "osm",
         "source-layer": "transport_areas",
         "minzoom": 10,
-        "maxzoom": 16,
+        "maxzoom": 14,
         "filter": [
           "==",
           [
