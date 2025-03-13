@@ -35,11 +35,17 @@ This is a new feature, with three known issues/milestones:
  * the OpenHistoricalMap `timeslider` is not yet incorporated; it, too, is being readied for npm packaging
  * it would be better if the local port were configurable by individual users. This is complicated slightly as our staging and production deployment process searches-and-replaces `http://localhost:8888/` with urls suitable for those environments.
 
+## Versioning and publishing to npm
+
+ * increment the version in `package.json`, e.g., `0.9.3`
+ * [create a corresponding release on GitHub](https://github.com/OpenHistoricalMap/map-styles/releases/new), e.g., `v0.9.3`
+ * publish to npm `npm publish`
+
 ## Review styles while they are in staging
-To review the styles with the latest updates to the map-styles repo before they are live, use the below links. These are pulled from the `staging` branch. The `staging` branch will reflect 1) recently made updates before they are merged into `main` and occassionally 2) iterative cartography testing. 
+To review the styles with the latest updates to the map-styles repo before they are live, use the below links. These are pulled from the `staging` branch. The `staging` branch will reflect 1) recently made updates before they are merged into `main` and occasionally 2) iterative cartography testing. 
 
 To see a specific year in history, change the target year in the URL:
 - Main/Historical: https://embed.openhistoricalmap.org/#map=16/40.70486/-74.01313&date=1700&layer=O_staging
 - Rail style: https://embed.openhistoricalmap.org/#map=16/40.70486/-74.01313&date=1700&layer=R_staging
 - Woodblock: https://embed.openhistoricalmap.org/#map=16/40.70486/-74.01313&date=1700&layer=W_staging
-- Japanese scroll: https://embed.openhistoricalmap.org/#map=16/40.70486/-74.01313&date=1700&layer=J_staging
+- Japanese Scroll: https://embed.openhistoricalmap.org/#map=16/40.70486/-74.01313&date=1700&layer=J_staging
