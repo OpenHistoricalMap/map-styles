@@ -25,7 +25,7 @@
     "osm_land": {
       "type": "vector",
       "tiles": [
-        "https://vtiles.openhistoricalmap.org/maps/osm_land/{z}/{x}/{y}.pbf"
+        "https://vtiles.staging.openhistoricalmap.org/maps/osm_land/{z}/{x}/{y}.pbf"
       ],
       "minzoom": 0,
       "maxzoom": 22,
