@@ -19,13 +19,20 @@ if (!fs.existsSync(distDir)) {
 
 try {
   const assets = ['glyphs', 'sprite'];
+  let ohmVectorStyle;
   styles.forEach((style) => {
     // Load each development style from disk, replace the scheme/domain/port, & make it the value of an ohm-website key,
     // e.g., japanese_scroll => ohmVectorStyles.JapaneseScroll
     const ohmWebsiteKey = camelCase(style, { pascalCase: true });
     ohmVectorStyles[ohmWebsiteKey] = JSON.parse(fs.readFileSync(path.join(baseDir.path, style, `${style}.json`)));
+    ohmVectorStyle = ohmVectorStyles[ohmWebsiteKey];
+    for (const source in ohmVectorStyle.sources) {
+      ohmVectorStyle.sources[source].tiles[0] = ohmVectorStyle.sources[source].tiles[0].replace('vtiles.staging.openhistoricalmap.org', 'vtiles.openhistoricalmap.org')
+    }
     assets.forEach((asset) => {
-      ohmVectorStyles[ohmWebsiteKey][asset] = ohmVectorStyles[ohmWebsiteKey][asset].replace('http://localhost:8888', 'https://www.openhistoricalmap.org/map-styles')
+      ohmVectorStyle[asset] = ohmVectorStyle[asset]
+        .replace('http://localhost:8888', 'https://www.openhistoricalmap.org/map-styles')
+        .replace('https://openhistoricalmap.github.io', 'https://www.openhistoricalmap.org')
     })
   })
   fs.writeFileSync(

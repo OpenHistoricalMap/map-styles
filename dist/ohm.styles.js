@@ -26,7 +26,7 @@ ohmVectorStyles = {
       "ne": {
         "type": "vector",
         "tiles": [
-          "https://vtiles.staging.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
+          "https://vtiles.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
         ]
       },
       "osm_land": {
@@ -12334,14 +12334,23 @@ ohmVectorStyles = {
       "osm": {
         "type": "vector",
         "tiles": [
-          "https://vtiles.staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
+          "https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
         ]
       },
       "ne": {
         "type": "vector",
         "tiles": [
-          "https://vtiles.staging.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
+          "https://vtiles.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
         ]
+      },
+      "osm_land": {
+        "type": "vector",
+        "tiles": [
+          "https://vtiles.openhistoricalmap.org/maps/osm_land/{z}/{x}/{y}.pbf"
+        ],
+        "minzoom": 0,
+        "maxzoom": 22,
+        "scheme": "xyz"
       }
     },
     "sprite": "https://www.openhistoricalmap.org/map-styles/japanese_scroll/japanese_scroll_spritesheet_template",
@@ -12381,7 +12390,7 @@ ohmVectorStyles = {
       {
         "id": "land",
         "type": "fill",
-        "source": "osm",
+        "source": "osm_land",
         "source-layer": "land",
         "minzoom": 0,
         "maxzoom": 24,
@@ -12395,7 +12404,7 @@ ohmVectorStyles = {
       {
         "id": "land-pattern",
         "type": "fill",
-        "source": "osm",
+        "source": "osm_land",
         "source-layer": "land",
         "minzoom": 0,
         "maxzoom": 24,
@@ -16388,7 +16397,7 @@ ohmVectorStyles = {
       "osm": {
         "type": "vector",
         "tiles": [
-          "https://vtiles.staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
+          "https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
         ]
       },
       "ohm_landcover_hillshade": {
@@ -16403,8 +16412,17 @@ ohmVectorStyles = {
       "ne": {
         "type": "vector",
         "tiles": [
-          "https://vtiles.staging.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
+          "https://vtiles.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
         ]
+      },
+      "osm_land": {
+        "type": "vector",
+        "tiles": [
+          "https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
+        ],
+        "minzoom": 0,
+        "maxzoom": 22,
+        "scheme": "xyz"
       }
     },
     "sprite": "https://www.openhistoricalmap.org/map-styles/railway/railway_spritesheet",
@@ -16428,7 +16446,7 @@ ohmVectorStyles = {
       {
         "id": "land",
         "type": "fill",
-        "source": "osm",
+        "source": "osm_land",
         "source-layer": "land",
         "minzoom": 0,
         "maxzoom": 24,
@@ -30135,14 +30153,23 @@ ohmVectorStyles = {
       "osm": {
         "type": "vector",
         "tiles": [
-          "https://vtiles.staging.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
+          "https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
         ]
       },
       "ne": {
         "type": "vector",
         "tiles": [
-          "https://vtiles.staging.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
+          "https://vtiles.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
         ]
+      },
+      "osm_land": {
+        "type": "vector",
+        "tiles": [
+          "https://vtiles.openhistoricalmap.org/maps/osm_land/{z}/{x}/{y}.pbf"
+        ],
+        "minzoom": 0,
+        "maxzoom": 22,
+        "scheme": "xyz"
       }
     },
     "sprite": "https://www.openhistoricalmap.org/map-styles/woodblock/woodblock_spritesheet",
@@ -30183,7 +30210,7 @@ ohmVectorStyles = {
       {
         "id": "land-pattern",
         "type": "fill",
-        "source": "osm",
+        "source": "osm_land",
         "source-layer": "land",
         "minzoom": 0,
         "maxzoom": 24,
@@ -30198,7 +30225,7 @@ ohmVectorStyles = {
       {
         "id": "land",
         "type": "fill",
-        "source": "osm",
+        "source": "osm_land",
         "source-layer": "land",
         "minzoom": 0,
         "maxzoom": 24,
