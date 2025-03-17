@@ -18,22 +18,20 @@
     },
     "ne": {
       "type": "vector",
-      "tiles": [
-        "https://vtiles.staging.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"
-      ]
+      "tiles": ["https://vtiles.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"]
     },
     "osm_land": {
       "type": "vector",
       "tiles": [
-        "https://vtiles.staging.openhistoricalmap.org/maps/osm_land/{z}/{x}/{y}.pbf"
+        "https://vtiles.openhistoricalmap.org/maps/osm_land/{z}/{x}/{y}.pbf"
       ],
       "minzoom": 0,
       "maxzoom": 22,
       "scheme": "xyz"
     }
   },
-  "sprite": "http://localhost:8888/historical/historical_spritesheet",
-  "glyphs": "http://localhost:8888/fonts/{fontstack}/{range}.pbf",
+  "sprite": "https://www.openhistoricalmap.org/map-styles/historical/historical_spritesheet",
+  "glyphs": "https://www.openhistoricalmap.org/map-styles/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
