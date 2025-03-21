@@ -6571,6 +6571,7 @@
         ["==", ["get", "admin_level"], 2]
       ],
       "layout": {
+        "symbol-sort-key": ["get", "area_km2"],
         "text-line-height": 1,
         "text-size": [
           "interpolate",
@@ -6649,7 +6650,7 @@
         "text-font": ["OpenHistorical Bold"],
         "symbol-placement": "point",
         "text-justify": "center",
-        "visibility": "visible",
+        "visibility": "none",
         "text-field": ["get", "name"],
         "text-max-width": 7
       },
