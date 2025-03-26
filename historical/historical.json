@@ -6650,7 +6650,7 @@
         "text-font": ["OpenHistorical Bold"],
         "symbol-placement": "point",
         "text-justify": "center",
-        "visibility": "none",
+        "visibility": "visible",
         "text-field": ["get", "name"],
         "text-max-width": 7
       },
