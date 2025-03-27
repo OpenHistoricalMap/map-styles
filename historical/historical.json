@@ -6590,6 +6590,16 @@
         "text-font": ["OpenHistorical Bold"],
         "symbol-placement": "point",
         "text-justify": "center",
+        "text-variable-anchor-offset": [
+          "top",
+          [0, 1],
+          "bottom",
+          [0, -2],
+          "left",
+          [1, 0],
+          "right",
+          [-2, 0]
+        ],
         "visibility": "visible",
         "text-field": ["get", "name"],
         "text-max-width": 7
@@ -6650,6 +6660,16 @@
         "text-font": ["OpenHistorical Bold"],
         "symbol-placement": "point",
         "text-justify": "center",
+        "text-variable-anchor-offset": [
+          "top",
+          [0, 1],
+          "bottom",
+          [0, -2],
+          "left",
+          [1, 0],
+          "right",
+          [-2, 0]
+        ],
         "visibility": "visible",
         "text-field": ["get", "name"],
         "text-max-width": 7
