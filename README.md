@@ -32,7 +32,7 @@ Use `control-c` to end the browser session.
 
 This is a new feature, with two known issues/milestones:
  * the OpenHistoricalMap `timeslider` is not yet incorporated; it, too, is being readied for npm packaging
- * it would be better if the local port were configurable by individual users. This is complicated slightly as our staging and production deployment process searches-and-replaces `http://localhost:8888/` with urls suitable for those environments.
+ * it would be better if the local port were configurable by individual users. This is complicated slightly as our staging and production deployment process searches-and-replaces `https://localhost:8888/` with urls suitable for those environments.
 
 ## Versioning and publishing to npm
 

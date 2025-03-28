@@ -31,7 +31,7 @@ try {
     }
     assets.forEach((asset) => {
       ohmVectorStyle[asset] = ohmVectorStyle[asset]
-        .replace('http://localhost:8888', 'https://www.openhistoricalmap.org/map-styles')
+        .replace('https://localhost:8888', 'https://www.openhistoricalmap.org/map-styles')
         .replace('https://openhistoricalmap.github.io', 'https://www.openhistoricalmap.org')
     })
   })
