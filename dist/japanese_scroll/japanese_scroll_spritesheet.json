@@ -1,0 +1,39 @@
+{
+  "jp-paper": {
+    "height":261,
+    "pixelRatio":1,
+    "width":261,
+    "x":0,
+    "y":0
+  },
+  "jp-water": {
+    "height":182,
+    "pixelRatio":1,
+    "width":250,
+    "x":274,
+    "y":0
+  },
+  "adminbound": {
+    "height":6,
+    "pixelRatio":1,
+    "width":405,
+    "x":0,
+    "y":283
+  },
+  
+  "jproad": {
+    "height":6,
+    "pixelRatio":1,
+    "width":370,
+    "x":0,
+    "y":270
+  },
+  
+  "mountain": {
+    "height":54,
+    "pixelRatio":1,
+    "width":100,
+    "x":274,
+    "y":199
+  }
+}

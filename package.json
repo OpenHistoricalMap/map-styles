@@ -24,6 +24,7 @@
   "homepage": "https://github.com/OpenHistoricalMap/map-styles#readme",
   "dependencies": {
     "camelcase": "^8.0.0",
+    "fs-extra": "^11.3.0",
     "http-server": "^14.1.1",
     "maplibre-gl": "^5.1.0",
     "maplibre-gl-style-flipper": "^1.0.7"
