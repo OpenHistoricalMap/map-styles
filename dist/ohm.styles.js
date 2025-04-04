@@ -11799,73 +11799,6 @@ ohmVectorStyles = {
         }
       },
       {
-        "id": "city_capital_labels_z6",
-        "type": "symbol",
-        "source": "osm",
-        "source-layer": "place_points",
-        "minzoom": 6,
-        "maxzoom": 11,
-        "filter": [
-          "all",
-          [
-            "==",
-            [
-              "get",
-              "type"
-            ],
-            "city"
-          ],
-          [
-            "==",
-            [
-              "get",
-              "capital"
-            ],
-            "yes"
-          ]
-        ],
-        "layout": {
-          "text-size": [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            6,
-            12,
-            10,
-            15
-          ],
-          "icon-offset": [
-            0,
-            0
-          ],
-          "icon-image": "capital-18",
-          "text-font": [
-            "OpenHistorical"
-          ],
-          "visibility": "visible",
-          "text-offset": [
-            0,
-            0.25
-          ],
-          "icon-size": 1,
-          "text-anchor": "top",
-          "text-field": [
-            "get",
-            "name"
-          ]
-        },
-        "paint": {
-          "text-color": "rgba(34, 34, 34, 1)",
-          "text-halo-color": "rgba(255, 255, 255, 1)",
-          "text-halo-blur": 2,
-          "text-halo-width": 1
-        }
-      },
-      {
         "id": "city_labels_z6",
         "type": "symbol",
         "source": "osm",
@@ -11910,6 +11843,73 @@ ohmVectorStyles = {
             0
           ],
           "icon-image": "city-18",
+          "text-font": [
+            "OpenHistorical"
+          ],
+          "visibility": "visible",
+          "text-offset": [
+            0,
+            0.25
+          ],
+          "icon-size": 1,
+          "text-anchor": "top",
+          "text-field": [
+            "get",
+            "name"
+          ]
+        },
+        "paint": {
+          "text-color": "rgba(34, 34, 34, 1)",
+          "text-halo-color": "rgba(255, 255, 255, 1)",
+          "text-halo-blur": 2,
+          "text-halo-width": 1
+        }
+      },
+      {
+        "id": "city_capital_labels_z6",
+        "type": "symbol",
+        "source": "osm",
+        "source-layer": "place_points",
+        "minzoom": 6,
+        "maxzoom": 11,
+        "filter": [
+          "all",
+          [
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "city"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "capital"
+            ],
+            "yes"
+          ]
+        ],
+        "layout": {
+          "text-size": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            6,
+            12,
+            10,
+            15
+          ],
+          "icon-offset": [
+            0,
+            0
+          ],
+          "icon-image": "capital-18",
           "text-font": [
             "OpenHistorical"
           ],
@@ -12169,6 +12169,10 @@ ohmVectorStyles = {
           ]
         ],
         "layout": {
+          "symbol-sort-key": [
+            "get",
+            "area_km2"
+          ],
           "text-line-height": 1,
           "text-size": [
             "interpolate",
@@ -12193,6 +12197,28 @@ ohmVectorStyles = {
           ],
           "symbol-placement": "point",
           "text-justify": "center",
+          "text-variable-anchor-offset": [
+            "top",
+            [
+              0,
+              1
+            ],
+            "bottom",
+            [
+              0,
+              -2
+            ],
+            "left",
+            [
+              1,
+              0
+            ],
+            "right",
+            [
+              -2,
+              0
+            ]
+          ],
           "visibility": "visible",
           "text-field": [
             "get",
@@ -12277,6 +12303,28 @@ ohmVectorStyles = {
           ],
           "symbol-placement": "point",
           "text-justify": "center",
+          "text-variable-anchor-offset": [
+            "top",
+            [
+              0,
+              1
+            ],
+            "bottom",
+            [
+              0,
+              -2
+            ],
+            "left",
+            [
+              1,
+              0
+            ],
+            "right",
+            [
+              -2,
+              0
+            ]
+          ],
           "visibility": "visible",
           "text-field": [
             "get",
@@ -12353,7 +12401,7 @@ ohmVectorStyles = {
         "scheme": "xyz"
       }
     },
-    "sprite": "https://www.openhistoricalmap.org/map-styles/japanese_scroll/japanese_scroll_spritesheet_template",
+    "sprite": "https://www.openhistoricalmap.org/map-styles/japanese_scroll/japanese_scroll_spritesheet",
     "glyphs": "https://www.openhistoricalmap.org/map-styles/fonts/{fontstack}/{range}.pbf",
     "layers": [
       {
@@ -16418,7 +16466,7 @@ ohmVectorStyles = {
       "osm_land": {
         "type": "vector",
         "tiles": [
-          "https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
+          "https://vtiles.openhistoricalmap.org/maps/osm_land/{z}/{x}/{y}.pbf"
         ],
         "minzoom": 0,
         "maxzoom": 22,
