@@ -1,46 +1,83 @@
-# Open Historical Map Styles
-This repository contains vector map styles that can be applied to OHM vector tiles. 
+## OpenHistoricalMap styles
 
-The tile source is https://vtiles.openhistoricalmap.org/.
+This repository contains vector map styles that can be applied to OpenHistoricalMap vector tiles. There are a number of uses for these styles but common to them is the OpenHistoricalMap vector tile source: https://vtiles.openhistoricalmap.org/.
 
-Here, you can save your worries about tile servers and data updates and instead just load a JSON file into https://maputnik.github.io/ and make some updates!
+### CDN usage with MapLibre GL JS
+The [MapLibre GL JS quickstart](https://maplibre.org/maplibre-gl-js/docs/) has you create an html file containing:
 
-Style file to load in Maputnik:
+```html
+<html>
+<head>
+  <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
+  <link href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css" rel="stylesheet" />
+</head>
+<body>
+<div id="map" style="width:100%;height:100%"></div>
+<script>
+  var map = new maplibregl.Map({
+    container: 'map', // container id
+    style: 'https://demotiles.maplibre.org/style.json', // style URL
+    center: [0, 0], // starting position [lng, lat]
+    zoom: 1 // starting zoom
+  });
+</script>
 
-- OHM style: https://openhistoricalmap.github.io/map-styles/historical/historical.json
+</body>
+</html>
+```
 
-- Woodblock style:  [https://github.com/OpenHistoricalMap/map-styles/blob/staging/woodblock/woodblock.json](https://raw.githubusercontent.com/OpenHistoricalMap/map-styles/staging/woodblock/woodblock.json)
+To use one of the OpenHistoricalMap styles simply replace the style URL, `https://demotiles.maplibre.org/style.json` with one of ours:
 
-Note that we may disable these Github.io links in the future, so do not reference them in external applications.
+| Style | URL |
+| --- | --- |
+| historical | https://unpkg.com/@openhistoricalmap/map-styles@latest/dist/historical/historical.json |
+| japanese_scroll | https://unpkg.com/@openhistoricalmap/map-styles@latest/dist/japanese_scroll/japanese_scroll.json |
+| railway | https://unpkg.com/@openhistoricalmap/map-styles@latest/dist/railway/railway.json |
+| woodblock | https://unpkg.com/@openhistoricalmap/map-styles@latest/dist/woodblock/woodblock.json |
 
-Copy the vector-based style to your Mapbox account [here](https://api.mapbox.com/styles/v1/vanessa-gin/ckz5r3zdy001215ofoeq1k7wm.html?title=copy&access_token=pk.eyJ1IjoidmFuZXNzYS1naW4iLCJhIjoiY2t3d2dzYXhxMDNtZDJ1bGFsY2c5dXV3ciJ9.jJ1Ujxks-kpcwSiiNdemfA&zoomwheel=true&fresh=true#12.63/40.68942/-74.02352). Note: the data layers are a little different because Mapbox uses Streets v8 now, and OHM styles are on Streets v7, but the style elements are all there.
+Instead of specifying `latest` you can also pin your style to a particular version, e.g., `0.9.6`
 
-If you make changes you want to commit back here:
-1. Clone the repo locally.
-2. Load the style file.
-3. Use Export to write a new JSON over the top of the old one on your local copy (or save a new style).
-4. Commit and push the changes, which will then be available at a GH Pages URL similar to the one above.
 
-If you make a new style, just change the URL for the style file with the new one you made.
+### Style development using Maputnik
 
-Note that changes here do not publish automagically to the OHM website. The styles are published via an NPM module, which is then consumed by the website.
+We use the hosted version of the [Maputnik visual editor](https://maputnik.github.io/editor/) for style development although a local installation should work equally well. The recommended way to work with Maputnik is to:
 
-## Review styles locally
-With the move to npm packaging it's now possible to view and switch between map styles locally. The first time you `git clone` this repository be sure to run `nvm use` (install Node version if needed) and then run `npm install`. Afterward, running `npm test` will start the lightweight `http-server` and launch a new browser window on port 8888.
+1. clone this repo to your computer or [download the latest release](https://github.com/OpenHistoricalMap/map-styles/releases).
+   `git clone git@github.com:OpenHistoricalMap/map-styles.git`
+2. run `npm install` from the root directory.
+3. run `npm run start` in the root directory; this will start the lightweight Node `http-server` and open a new tab or window in your browser. Everything except for the OHM vector tile sources (style files, glyphs, sprites) will be running locally on port 8888.
+4. open the style file you wish to work on in Maputnik.; it will be `historical/historical.json` or an equivalent path for a different style.
+5. if you're submitting changes to OpenHistoricalMap please begin by creating an issue that describes them at our [issues repository](https://github.com/OpenHistoricalMap/issues/), which is different from [where you'd submit your pull request](https://github.com/OpenHistoricalMap/map-styles).
+6. when you're satisfied with your local changes, repopulate the `dist` directory by running `npm run build`; the build step replaces references to `localhost` with the production values of the OpenHistoricalMap servers for `glyph` and `sprite` serving; you may need to edit these for your own custom use.
+7. use `control-c` to end the browser session you started with `npm run start`.
 
-Use `control-c` to end the browser session.
 
-This is a new feature, with two known issues/milestones:
- * the OpenHistoricalMap `timeslider` is not yet incorporated; it, too, is being readied for npm packaging
- * it would be better if the local port were configurable by individual users. This is complicated slightly as our staging and production deployment process searches-and-replaces `https://localhost:8888/` with urls suitable for those environments.
+Miscellaneous notes:
+
+* we use [`nvm`](https://github.com/nvm-sh/nvm) and provide an `.nvmrc` file. If you use it, remember to begin your development with `nvm use`.
+* although this repository contains glyphs for many fonts, the `build` step only packages the styles in use across all styles.
+* If you're creating a new style, please follow our naming conventions where, for a _new_style_, the expected file hierarchy is:
+  ```
+  /new_style/new_style.json
+  /new_style/new_style_spritesheet.json
+  /new_style/new_style_spritesheet.png
+  /new_style/new_style_spritesheet@2x.json
+  /new_style/new_style_spritesheet@2x.png
+  ```
+* the OpenHistoricalMap `timeslider` is not yet incorporated; it, too, is being readied for npm packaging.
+* we recognize that it would be better if the local port number were configurable at the command line.
+
 
 ## Versioning and publishing to npm
 
- * increment the version in `package.json`, e.g., `0.9.3`
- * [create a corresponding release on GitHub](https://github.com/OpenHistoricalMap/map-styles/releases/new), e.g., `v0.9.3`
- * publish to npm `npm publish`
+* increment the version in `package.json`, e.g., `0.9.3`
+* [create a corresponding release on GitHub](https://github.com/OpenHistoricalMap/map-styles/releases/new), e.g., `v0.9.3`
+* publish to npm using `npm publish`
+* rebuild the OHM properties that depend on `map-styles` making sure the latest version of the module has been pulled.
+
 
 ## Review styles while they are in staging
+
 To review the styles with the latest updates to the map-styles repo before they are live, use the below links. These are pulled from the `staging` branch. The `staging` branch will reflect 1) recently made updates before they are merged into `main` and occasionally 2) iterative cartography testing. 
 
 To see a specific year in history, change the target year in the URL:
