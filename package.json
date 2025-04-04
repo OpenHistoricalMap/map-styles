@@ -5,7 +5,7 @@
   "main": "''",
   "type": "module",
   "scripts": {
-    "prepare": "scripts/prepare.js",
+    "build": "scripts/prepare.js",
     "start": "http-server -a localhost --port 8888 --ssl --cert ssl/cert.pem --key ssl/key.pem --cors -o '#7.33/40.487/-73.554'"
   },
   "repository": {

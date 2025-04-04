@@ -12401,7 +12401,7 @@ ohmVectorStyles = {
         "scheme": "xyz"
       }
     },
-    "sprite": "https://www.openhistoricalmap.org/map-styles/japanese_scroll/japanese_scroll_spritesheet_template",
+    "sprite": "https://www.openhistoricalmap.org/map-styles/japanese_scroll/japanese_scroll_spritesheet",
     "glyphs": "https://www.openhistoricalmap.org/map-styles/fonts/{fontstack}/{range}.pbf",
     "layers": [
       {
