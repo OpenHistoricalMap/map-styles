@@ -1,4 +1,4 @@
-# Documentation of Japanese Scrool Map Style
+# Documentation of Japanese Scroll Map Style
 This style was created after the Woodblock style, and is inspired by the long-form Japanese scroll maps from ~1500/1600/1700s. In some ways, the longform map emulates the modern mapping scale so much more, because the scrolls gave so much more space for information and data. Of course, the amount of paper isn't the same as global or multiple zoom levels, but the premise of showing more information, and having a different visualization connection to what one sees in real life, on the ground, is why I wanted to make this style.
 <br>
 Obviously, the map style is limited to a rectangular screen size, and also doesn't have the same capacity to make you feel like you are strolling along a river, the coast, or a trail, but hopefully some of the core aesthetic elements bring this style into clearly being rooted in historical Japanese maps.
