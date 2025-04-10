@@ -80,7 +80,7 @@ Miscellaneous notes:
 * ensure your local `staging` branch of `ohm-website` is current using `git pull`
 * create a release branch from `staging`, e.g., `git checkout -b map-styles-0.9.7`
 * log in to the Docker container and start a bash shell
-* run `yarn upgrade` and verify, using the output, that the correct version has been installed
+* run `yarn upgrade` and verify, using the output, that the correct version has been installed. Note that the `map-styles` version is specified with the `^` operator so that our `package.json` will need to be updated for a **major version release**, e.g., to `1.x` from `0.9.x`
   ```
   Rebuilding all packages...
   success Saved lockfile.
@@ -94,7 +94,7 @@ Miscellaneous notes:
 * from your IDE/host computer, commit `yarn.lock` and push your branch to GitHub
 * open a pull request against `OpenHistoricalMap/ohm-website`'s `staging` branch
 * confirm that the only changed file is `yarn.lock` & merge to staging
-* pull the updated `staging branch` to get the merge commit
+* pull the updated `staging` branch to get the merge commit
 * ensure your local `staging` branch of `ohm-deploy` is current using `git pull`
 * create a release branch from `staging`, e.g., `git checkout -b map-styles-0.9.7`
 * in `images/web/Dockerfile` update `OPENHISTORICALMAP_WEBSITE_GITSHA` & the reason string in the subsequent `RUN echo`
