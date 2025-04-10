@@ -11648,6 +11648,58 @@ ohmVectorStyles = {
         }
       },
       {
+        "id": "city_locality_labels_other_z11",
+        "type": "symbol",
+        "source": "osm",
+        "source-layer": "place_points",
+        "minzoom": 15,
+        "maxzoom": 20,
+        "filter": [
+          "in",
+          [
+            "get",
+            "type"
+          ],
+          [
+            "literal",
+            [
+              "locality"
+            ]
+          ]
+        ],
+        "layout": {
+          "text-field": [
+            "get",
+            "name"
+          ],
+          "text-font": [
+            "OpenHistorical"
+          ],
+          "text-size": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            6,
+            4,
+            10,
+            10,
+            16,
+            12
+          ],
+          "visibility": "visible"
+        },
+        "paint": {
+          "text-color": "rgba(34, 34, 34, 1)",
+          "text-halo-color": "rgba(255, 255, 255, 1)",
+          "text-halo-blur": 2,
+          "text-halo-width": 1
+        }
+      },
+      {
         "id": "city_labels_other_z11",
         "type": "symbol",
         "source": "osm",
@@ -11665,7 +11717,6 @@ ohmVectorStyles = {
             [
               "hamlet",
               "islet",
-              "locality",
               "neighborhood",
               "suburb",
               "village"
@@ -12197,28 +12248,6 @@ ohmVectorStyles = {
           ],
           "symbol-placement": "point",
           "text-justify": "center",
-          "text-variable-anchor-offset": [
-            "top",
-            [
-              0,
-              1
-            ],
-            "bottom",
-            [
-              0,
-              -2
-            ],
-            "left",
-            [
-              1,
-              0
-            ],
-            "right",
-            [
-              -2,
-              0
-            ]
-          ],
           "visibility": "visible",
           "text-field": [
             "get",
@@ -12303,28 +12332,6 @@ ohmVectorStyles = {
           ],
           "symbol-placement": "point",
           "text-justify": "center",
-          "text-variable-anchor-offset": [
-            "top",
-            [
-              0,
-              1
-            ],
-            "bottom",
-            [
-              0,
-              -2
-            ],
-            "left",
-            [
-              1,
-              0
-            ],
-            "right",
-            [
-              -2,
-              0
-            ]
-          ],
           "visibility": "visible",
           "text-field": [
             "get",
