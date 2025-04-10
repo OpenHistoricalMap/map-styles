@@ -70,10 +70,38 @@ Miscellaneous notes:
 
 ## Versioning and publishing to npm
 
-* increment the version in `package.json`, e.g., `0.9.3`
-* [create a corresponding release on GitHub](https://github.com/OpenHistoricalMap/map-styles/releases/new), e.g., `v0.9.3`
+* increment the version in `package.json`, e.g., `0.9.7`
+* [create a corresponding release on GitHub](https://github.com/OpenHistoricalMap/map-styles/releases/new), e.g., `v0.9.7`
 * publish to npm using `npm publish`
-* rebuild the OHM properties that depend on `map-styles` making sure the latest version of the module has been pulled.
+* rebuild the OHM properties that depend on `map-styles`, making sure the latest version of the module has been pulled.
+
+### ohm-website
+
+* ensure your local `staging` branch of `ohm-website` is current using `git pull`
+* create a release branch from `staging`, e.g., `git checkout -b map-styles-0.9.7`
+* log in to the Docker container and start a bash shell
+* run `yarn upgrade` and verify, using the output, that the correct version has been installed
+  ```
+  Rebuilding all packages...
+  success Saved lockfile.
+  success Saved 159 new dependencies.
+  info Direct dependencies
+  ├─ @mapbox/mapbox-gl-rtl-text@0.2.3
+  ├─ @maplibre/maplibre-gl-leaflet@0.0.20
+  ├─ @openhistoricalmap/map-styles@0.9.7
+  …
+  ```
+* from your IDE/host computer, commit `yarn.lock` and push your branch to GitHub
+* open a pull request against `OpenHistoricalMap/ohm-website`'s `staging` branch
+* confirm that the only changed file is `yarn.lock` & merge to staging
+* pull the updated `staging branch` to get the merge commit
+* ensure your local `staging` branch of `ohm-deploy` is current using `git pull`
+* create a release branch from `staging`, e.g., `git checkout -b map-styles-0.9.7`
+* in `images/web/Dockerfile` update `OPENHISTORICALMAP_WEBSITE_GITSHA` & the reason string in the subsequent `RUN echo`
+* commit the `Dockerfile` and push your branch to GitHub
+* open a pull request against `OpenHistoricalMap/ohm-deploy`'s `staging` branch
+* confirm your changed files & merge to staging
+* monitor the build output
 
 
 ## Review styles while they are in staging
