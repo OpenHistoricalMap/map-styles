@@ -48,7 +48,7 @@ We use the hosted version of the [Maputnik visual editor](https://maputnik.githu
 3. run `npm run start` in the root directory; this will start the lightweight Node `http-server` and open a new tab or window in your browser. Everything except for the OHM vector tile sources (style files, glyphs, sprites) will be running locally on port 8888.
 4. open the style file you wish to work on in Maputnik.; it will be `historical/historical.json` or an equivalent path for a different style.
 5. if you're submitting changes to OpenHistoricalMap please begin by creating an issue that describes them at our [issues repository](https://github.com/OpenHistoricalMap/issues/), which is different from [where you'd submit your pull request](https://github.com/OpenHistoricalMap/map-styles).
-6. when you're satisfied with your local changes, repopulate the `dist` directory by running `npm run build`; the build step replaces references to `localhost` with the production values of the OpenHistoricalMap servers for `glyph` and `sprite` serving; you may need to edit these for your own custom use.
+6. when you're satisfied with your local changes, repopulate the `dist` directory by running `npm run build`; the build step replaces references to `localhost` with the production values of the OpenHistoricalMap servers for `glyph` and `sprite` serving; this is required prior to deploying to OHM's staging and production servers. If you're hosting your own fonts or icons you'll need to edit these for your custom use.
 7. use `control-c` to end the browser session you started with `npm run start`.
 
 
@@ -70,17 +70,17 @@ Miscellaneous notes:
 
 ## Versioning and publishing to npm
 
-* increment the version in `package.json`, e.g., `0.9.7`
-* [create a corresponding release on GitHub](https://github.com/OpenHistoricalMap/map-styles/releases/new), e.g., `v0.9.7`
-* publish to npm using `npm publish`
-* rebuild the OHM properties that depend on `map-styles`, making sure the latest version of the module has been pulled.
+1. increment the version in `package.json`, e.g., `0.9.7`
+1. commit your style changes, including `/dist/*` & `package.json`, push to GitHub, and [create a corresponding release](https://github.com/OpenHistoricalMap/map-styles/releases/new), e.g., `v0.9.7`
+1. publish to npm using `npm publish`
+1. rebuild the OHM properties that depend on `map-styles`, making sure the latest version of the module has been pulled.
 
 ### ohm-website
 
-* ensure your local `staging` branch of `ohm-website` is current using `git pull`
-* create a release branch from `staging`, e.g., `git checkout -b map-styles-0.9.7`
-* log in to the Docker container and start a bash shell
-* run `yarn upgrade` and verify, using the output, that the correct version has been installed. Note that the `map-styles` version is specified with the `^` operator so that our `package.json` will need to be updated for a **major version release**, e.g., to `1.x` from `0.9.x`
+1. ensure your local `staging` branch of `ohm-website` is current using `git pull`
+1. create a release branch from `staging`, e.g., `git checkout -b map-styles-0.9.7`
+1. log in to the Docker container and start a bash shell
+1. run `yarn upgrade` and verify, using the output, that the correct version has been installed. Note that the `map-styles` version is specified with the `^` operator so that our `package.json` will need to be updated for a **major version release**, e.g., to `1.x` from `0.9.x`
   ```
   Rebuilding all packages...
   success Saved lockfile.
@@ -91,17 +91,17 @@ Miscellaneous notes:
   ├─ @openhistoricalmap/map-styles@0.9.7
   …
   ```
-* from your IDE/host computer, commit `yarn.lock` and push your branch to GitHub
-* open a pull request against `OpenHistoricalMap/ohm-website`'s `staging` branch
-* confirm that the only changed file is `yarn.lock` & merge to staging
-* pull the updated `staging` branch to get the merge commit
-* ensure your local `staging` branch of `ohm-deploy` is current using `git pull`
-* create a release branch from `staging`, e.g., `git checkout -b map-styles-0.9.7`
-* in `images/web/Dockerfile` update `OPENHISTORICALMAP_WEBSITE_GITSHA` & the reason string in the subsequent `RUN echo`
-* commit the `Dockerfile` and push your branch to GitHub
-* open a pull request against `OpenHistoricalMap/ohm-deploy`'s `staging` branch
-* confirm your changed files & merge to staging
-* monitor the build output
+1. from your IDE/host computer, commit `yarn.lock` and push your branch to GitHub
+1. open a pull request against `OpenHistoricalMap/ohm-website`'s `staging` branch
+1. confirm that the only changed file is `yarn.lock` & merge to staging
+1. pull the updated `staging` branch to get the merge commit
+1. ensure your local `staging` branch of `ohm-deploy` is current using `git pull`
+1. create a release branch from `staging`, e.g., `git checkout -b map-styles-0.9.7`
+1. in `images/web/Dockerfile` update `OPENHISTORICALMAP_WEBSITE_GITSHA` & the reason string in the subsequent `RUN echo`
+1. commit the `Dockerfile` and push your branch to GitHub
+1. open a pull request against `OpenHistoricalMap/ohm-deploy`'s `staging` branch
+1. confirm your changed files & merge to staging
+1. monitor the build output
 
 
 ## Review styles while they are in staging
