@@ -81,16 +81,16 @@ Miscellaneous notes:
 1. create a release branch from `staging`, e.g., `git checkout -b map-styles-0.9.7`
 1. log in to the Docker container and start a bash shell
 1. run `yarn upgrade` and verify, using the output, that the correct version has been installed. Note that the `map-styles` version is specified with the `^` operator so that our `package.json` will need to be updated for a **major version release**, e.g., to `1.x` from `0.9.x`
-  ```
-  Rebuilding all packages...
-  success Saved lockfile.
-  success Saved 159 new dependencies.
-  info Direct dependencies
-  ├─ @mapbox/mapbox-gl-rtl-text@0.2.3
-  ├─ @maplibre/maplibre-gl-leaflet@0.0.20
-  ├─ @openhistoricalmap/map-styles@0.9.7
-  …
-  ```
+    ```
+    Rebuilding all packages...
+    success Saved lockfile.
+    success Saved 159 new dependencies.
+    info Direct dependencies
+    ├─ @mapbox/mapbox-gl-rtl-text@0.2.3
+    ├─ @maplibre/maplibre-gl-leaflet@0.0.20
+    ├─ @openhistoricalmap/map-styles@0.9.7
+    …
+    ```
 1. from your IDE/host computer, commit `yarn.lock` and push your branch to GitHub
 1. open a pull request against `OpenHistoricalMap/ohm-website`'s `staging` branch
 1. confirm that the only changed file is `yarn.lock` & merge to staging
