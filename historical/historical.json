@@ -266,7 +266,7 @@
             "construction",
             "rgba(242, 242, 235, 1)",
             "railway",
-            "rgba(224, 224, 224, 1)",
+            "rgba(214, 214, 214, 1)",
             "college",
             "rgba(226, 214, 205, 1)",
             "school",
@@ -1053,6 +1053,63 @@
       "paint": {
         "fill-color": "rgba(220, 215, 215, 1)",
         "fill-outline-color": "rgba(195, 188, 188, 1)"
+      }
+    },
+    {
+      "id": "transport_traverser",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "transport_areas",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": ["==", ["get", "type"], "traverser"],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(189, 141, 125, 0.15)",
+        "fill-opacity": 1,
+        "fill-outline-color": "rgba(208, 200, 200, 1)"
+      }
+    },
+    {
+      "id": "transport_turntable",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "transport_areas",
+      "minzoom": 14,
+      "filter": ["==", ["get", "type"], "turntable"],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(189, 141, 125, 0.15)",
+        "fill-opacity": 1,
+        "fill-outline-color": "rgba(208, 200, 200, 1)"
+      }
+    },
+    {
+      "id": "transport_passenger_platform",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "transport_areas",
+      "minzoom": 14,
+      "filter": ["==", ["get", "type"], "platform"],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(117, 101, 101, 0.15)",
+        "fill-opacity": 1,
+        "fill-outline-color": "rgba(208, 200, 200, 1)"
+      }
+    },
+    {
+      "id": "transport_freight_platform",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "transport_areas",
+      "minzoom": 14,
+      "filter": ["==", ["get", "type"], "loading_ramp"],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(117, 101, 101, 0.15)",
+        "fill-opacity": 1,
+        "fill-outline-color": "rgba(208, 200, 200, 1)"
       }
     },
     {
