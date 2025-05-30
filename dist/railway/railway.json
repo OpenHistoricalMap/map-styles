@@ -1737,6 +1737,90 @@
       }
     },
     {
+      "id": "transport_passenger_platform",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "transport_areas",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "platform"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(0, 0, 0, 0.5)"
+      }
+    },
+    {
+      "id": "transport_turntable",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "transport_areas",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "turntable"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(193, 193, 193, 1)"
+      }
+    },
+    {
+      "id": "transport_traverser",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "transport_areas",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "traverser"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(193, 193, 193, 1)"
+      }
+    },
+    {
+      "id": "transport_freight_platform",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "transport_areas",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "loading_ramp"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(0, 0, 0, 0.5)"
+      }
+    },
+    {
       "id": "aero_taxiway_lines",
       "type": "line",
       "source": "osm",
