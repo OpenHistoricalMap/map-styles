@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "ohm-woodblock-map",
+  "name": "ohm-woodblock",
   "metadata": {"maputnik:renderer": "mbgljs"},
   "sources": {
     "osm": {
@@ -2159,7 +2159,7 @@
       "id": "city_labels_z6",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 6,
       "maxzoom": 15,
       "filter": [
@@ -2198,7 +2198,7 @@
       "id": "city_capital_labels",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 4,
       "maxzoom": 15,
       "filter": [
@@ -2268,7 +2268,7 @@
       "id": "state_points_labels",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 4,
       "maxzoom": 20,
       "filter": ["in", ["get", "type"], ["literal", ["state", "territory"]]],
@@ -2339,7 +2339,7 @@
       "id": "country_points_labels",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 0,
       "maxzoom": 14,
       "filter": ["==", ["get", "type"], "country"],
@@ -2379,7 +2379,7 @@
       "id": "map dragon",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "filter": ["==", ["get", "name"], "Pacific Ocean"],
       "layout": {
         "icon-image": "woodblock-waterdragon2",
@@ -2401,7 +2401,7 @@
       "id": "mermonster",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "filter": ["==", ["get", "name"], "Atlantic Ocean"],
       "layout": {
         "icon-image": "woodblock-mapmonster-smaller",

@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "ohm-woodblock-map",
+  "name": "ohm-woodblock",
   "metadata": {
     "maputnik:renderer": "mbgljs"
   },
@@ -3758,7 +3758,7 @@
       "id": "city_labels_z6",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 6,
       "maxzoom": 15,
       "filter": [
@@ -3847,7 +3847,7 @@
       "id": "city_capital_labels",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 4,
       "maxzoom": 15,
       "filter": [
@@ -4001,7 +4001,7 @@
       "id": "state_points_labels",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 4,
       "maxzoom": 20,
       "filter": [
@@ -4131,7 +4131,7 @@
       "id": "country_points_labels",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 0,
       "maxzoom": 14,
       "filter": [
@@ -4190,7 +4190,7 @@
       "id": "map dragon",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "filter": [
         "==",
         [
@@ -4225,7 +4225,7 @@
       "id": "mermonster",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "filter": [
         "==",
         [

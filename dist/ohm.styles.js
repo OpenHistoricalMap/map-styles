@@ -3,7 +3,7 @@
 ohmVectorStyles = {
   "Historical": {
     "version": 8,
-    "name": "ohmbasemap",
+    "name": "ohm-historical",
     "metadata": {
       "maputnik:renderer": "mbgljs"
     },
@@ -217,6 +217,52 @@ ohmVectorStyles = {
         },
         "paint": {
           "fill-color": "rgba(244, 244, 235, 1)"
+        }
+      },
+      {
+        "id": "aero_aerodrome_area",
+        "type": "fill",
+        "source": "osm",
+        "source-layer": "transport_areas",
+        "minzoom": 12,
+        "maxzoom": 24,
+        "filter": [
+          "==",
+          [
+            "get",
+            "type"
+          ],
+          "aerodrome"
+        ],
+        "layout": {
+          "visibility": "visible"
+        },
+        "paint": {
+          "fill-color": "rgba(245, 245, 245, 1)",
+          "fill-outline-color": "rgba(214, 212, 212, 1)"
+        }
+      },
+      {
+        "id": "aero_heliport_area",
+        "type": "fill",
+        "source": "osm",
+        "source-layer": "transport_areas",
+        "minzoom": 12,
+        "maxzoom": 24,
+        "filter": [
+          "==",
+          [
+            "get",
+            "type"
+          ],
+          "helipad"
+        ],
+        "layout": {
+          "visibility": "visible"
+        },
+        "paint": {
+          "fill-color": "rgba(240, 240, 240, 1)",
+          "fill-outline-color": "rgba(214, 212, 212, 1)"
         }
       },
       {
@@ -1816,52 +1862,6 @@ ohmVectorStyles = {
         "paint": {
           "fill-color": "rgba(220, 215, 215, 1)",
           "fill-outline-color": "rgba(195, 188, 188, 1)"
-        }
-      },
-      {
-        "id": "aero_aerodrome_area",
-        "type": "fill",
-        "source": "osm",
-        "source-layer": "transport_areas",
-        "minzoom": 12,
-        "maxzoom": 24,
-        "filter": [
-          "==",
-          [
-            "get",
-            "type"
-          ],
-          "aerodrome"
-        ],
-        "layout": {
-          "visibility": "visible"
-        },
-        "paint": {
-          "fill-color": "rgba(245, 245, 245, 1)",
-          "fill-outline-color": "rgba(214, 212, 212, 1)"
-        }
-      },
-      {
-        "id": "aero_heliport_area",
-        "type": "fill",
-        "source": "osm",
-        "source-layer": "transport_areas",
-        "minzoom": 12,
-        "maxzoom": 24,
-        "filter": [
-          "==",
-          [
-            "get",
-            "type"
-          ],
-          "helipad"
-        ],
-        "layout": {
-          "visibility": "visible"
-        },
-        "paint": {
-          "fill-color": "rgba(240, 240, 240, 1)",
-          "fill-outline-color": "rgba(214, 212, 212, 1)"
         }
       },
       {
@@ -7220,6 +7220,14 @@ ohmVectorStyles = {
                 ]
               ]
             ]
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ]
         ],
         "layout": {
@@ -7458,6 +7466,14 @@ ohmVectorStyles = {
                 ]
               ]
             ]
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ]
         ],
         "layout": {
@@ -7642,6 +7658,14 @@ ohmVectorStyles = {
               "usage"
             ],
             "main"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ]
         ],
         "layout": {
@@ -7669,7 +7693,7 @@ ohmVectorStyles = {
         }
       },
       {
-        "id": "roads_rail-main-dash",
+        "id": "roads_rail-tunnel",
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
@@ -7693,50 +7717,21 @@ ohmVectorStyles = {
             ]
           ],
           [
-            "!",
-            [
-              "in",
-              [
-                "get",
-                "service"
-              ],
-              [
-                "literal",
-                [
-                  "siding",
-                  "yard"
-                ]
-              ]
-            ]
-          ],
-          [
             "==",
             [
               "get",
-              "usage"
+              "tunnel"
             ],
-            "main"
+            1
           ]
         ],
         "layout": {
           "visibility": "visible",
-          "line-cap": "square",
+          "line-cap": "round",
           "line-join": "round"
         },
         "paint": {
-          "line-color": [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            6,
-            "rgba(223, 223, 223, 1)",
-            15,
-            "rgba(255, 255, 255, 1)"
-          ],
+          "line-color": "rgba(201, 211, 218, 1)",
           "line-width": [
             "interpolate",
             [
@@ -7746,40 +7741,68 @@ ohmVectorStyles = {
               "zoom"
             ],
             7,
-            1.5,
+            3,
             12,
-            2,
+            4,
             20,
-            3
+            5
+          ]
+        }
+      },
+      {
+        "id": "roads_rail-bridge",
+        "type": "line",
+        "source": "osm",
+        "source-layer": "transport_lines",
+        "minzoom": 7,
+        "maxzoom": 24,
+        "filter": [
+          "all",
+          [
+            "in",
+            [
+              "get",
+              "type"
+            ],
+            [
+              "literal",
+              [
+                "light_rail",
+                "preserved",
+                "rail"
+              ]
+            ]
           ],
-          "line-dasharray": [
-            "step",
+          [
+            "==",
+            [
+              "get",
+              "bridge"
+            ],
+            1
+          ]
+        ],
+        "layout": {
+          "visibility": "visible",
+          "line-cap": "round",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": "rgba(148, 159, 168, 1)",
+          "line-width": [
+            "interpolate",
+            [
+              "linear"
+            ],
             [
               "zoom"
             ],
-            [
-              "literal",
-              [
-                7,
-                7
-              ]
-            ],
+            7,
+            4,
             12,
-            [
-              "literal",
-              [
-                5,
-                5
-              ]
-            ],
-            15,
-            [
-              "literal",
-              [
-                4,
-                4
-              ]
-            ]
+            7,
+            20,
+            10
           ]
         }
       },
@@ -7952,6 +7975,14 @@ ohmVectorStyles = {
               "usage"
             ],
             "main"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ]
         ],
         "layout": {
@@ -7987,6 +8018,227 @@ ohmVectorStyles = {
             4,
             20,
             5
+          ]
+        }
+      },
+      {
+        "id": "roads_rail-main-dash",
+        "type": "line",
+        "source": "osm",
+        "source-layer": "transport_lines",
+        "minzoom": 7,
+        "maxzoom": 24,
+        "filter": [
+          "all",
+          [
+            "in",
+            [
+              "get",
+              "type"
+            ],
+            [
+              "literal",
+              [
+                "light_rail",
+                "preserved",
+                "rail"
+              ]
+            ]
+          ],
+          [
+            "!",
+            [
+              "in",
+              [
+                "get",
+                "service"
+              ],
+              [
+                "literal",
+                [
+                  "siding",
+                  "yard"
+                ]
+              ]
+            ]
+          ],
+          [
+            "==",
+            [
+              "get",
+              "usage"
+            ],
+            "main"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
+          ]
+        ],
+        "layout": {
+          "visibility": "visible",
+          "line-cap": "square",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            6,
+            "rgba(223, 223, 223, 1)",
+            15,
+            "rgba(255, 255, 255, 1)"
+          ],
+          "line-width": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            7,
+            1.5,
+            12,
+            2,
+            20,
+            3
+          ],
+          "line-dasharray": [
+            "step",
+            [
+              "zoom"
+            ],
+            [
+              "literal",
+              [
+                7,
+                7
+              ]
+            ],
+            12,
+            [
+              "literal",
+              [
+                5,
+                5
+              ]
+            ],
+            15,
+            [
+              "literal",
+              [
+                4,
+                4
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "id": "roads_rail-dash-tunnel",
+        "type": "line",
+        "source": "osm",
+        "source-layer": "transport_lines",
+        "minzoom": 7,
+        "maxzoom": 24,
+        "filter": [
+          "all",
+          [
+            "in",
+            [
+              "get",
+              "type"
+            ],
+            [
+              "literal",
+              [
+                "light_rail",
+                "preserved",
+                "rail"
+              ]
+            ]
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            1
+          ]
+        ],
+        "layout": {
+          "visibility": "visible",
+          "line-cap": "round",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            6,
+            "rgba(223, 223, 223, 1)",
+            15,
+            "rgba(255, 255, 255, 1)"
+          ],
+          "line-width": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            7,
+            1,
+            12,
+            1.5,
+            20,
+            2
+          ],
+          "line-dasharray": [
+            "step",
+            [
+              "zoom"
+            ],
+            [
+              "literal",
+              [
+                5,
+                5
+              ]
+            ],
+            12,
+            [
+              "literal",
+              [
+                3,
+                3
+              ]
+            ],
+            15,
+            [
+              "literal",
+              [
+                2,
+                2
+              ]
+            ]
           ]
         }
       },
@@ -8038,6 +8290,14 @@ ohmVectorStyles = {
               "usage"
             ],
             "main"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ]
         ],
         "layout": {
@@ -9899,7 +10159,7 @@ ohmVectorStyles = {
         "id": "water_pointlabels_ocean_sea",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 0,
         "maxzoom": 24,
         "filter": [
@@ -10153,7 +10413,7 @@ ohmVectorStyles = {
         "id": "landuse_areaslabels_park",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "landuse_areas_centroids",
+        "source-layer": "landuse_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
@@ -10227,7 +10487,7 @@ ohmVectorStyles = {
         "id": "landuse_areaslabels_farming",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "landuse_areas_centroids",
+        "source-layer": "landuse_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
@@ -10269,7 +10529,7 @@ ohmVectorStyles = {
         "id": "landuse_areaslabels_forest",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "landuse_areas_centroids",
+        "source-layer": "landuse_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
@@ -10307,7 +10567,7 @@ ohmVectorStyles = {
         "id": "landuse_areaslabels_school",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "landuse_areas_centroids",
+        "source-layer": "landuse_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
@@ -10347,7 +10607,7 @@ ohmVectorStyles = {
         "id": "landuse_areaslabels_z8glacier",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "landuse_areas_centroids",
+        "source-layer": "landuse_points_centroids",
         "minzoom": 10,
         "maxzoom": 22,
         "filter": [
@@ -10394,7 +10654,7 @@ ohmVectorStyles = {
         "id": "placearea_label",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_areas",
+        "source-layer": "place_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
@@ -10472,7 +10732,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_frombuildings",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "buildings_centroids",
+        "source-layer": "buildings_points_centroids",
         "minzoom": 16,
         "filter": [
           "!=",
@@ -10536,7 +10796,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_fromareasz14-centroids",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "amenity_areas_centroids",
+        "source-layer": "amenity_points_centroids",
         "minzoom": 14,
         "maxzoom": 16,
         "filter": [
@@ -10591,7 +10851,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_fromareasz14",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "amenity_areas",
+        "source-layer": "amenity_points_centroids",
         "minzoom": 14,
         "maxzoom": 16,
         "filter": [
@@ -10646,7 +10906,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_fromareas",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "amenity_areas_centroids",
+        "source-layer": "amenity_points_centroids",
         "minzoom": 16,
         "maxzoom": 24,
         "filter": [
@@ -10795,7 +11055,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_other",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "other_points",
+        "source-layer": "other_points_centroids",
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
@@ -10924,7 +11184,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_amenity",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "amenity_points",
+        "source-layer": "amenity_points_centroids",
         "minzoom": 15,
         "maxzoom": 24,
         "layout": {
@@ -10996,7 +11256,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_other_archaeology",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "other_points",
+        "source-layer": "other_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
@@ -11075,7 +11335,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_other_artwork",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "other_points",
+        "source-layer": "other_points_centroids",
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
@@ -11154,7 +11414,7 @@ ohmVectorStyles = {
         "id": "points_powertower",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "other_points",
+        "source-layer": "other_points_centroids",
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
@@ -11177,7 +11437,7 @@ ohmVectorStyles = {
         "id": "points_airport",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "transport_areas",
+        "source-layer": "transport_points_centroids",
         "minzoom": 10,
         "maxzoom": 14,
         "filter": [
@@ -11196,10 +11456,10 @@ ohmVectorStyles = {
         }
       },
       {
-        "id": "transport_points",
+        "id": "transport_points_centroids",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "transport_points",
+        "source-layer": "transport_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
@@ -11272,7 +11532,7 @@ ohmVectorStyles = {
         "id": "points_placeofworshipother",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "buildings",
+        "source-layer": "buildings_points_centroids",
         "filter": [
           "all",
           [
@@ -11314,7 +11574,7 @@ ohmVectorStyles = {
         "id": "points_religion",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "buildings",
+        "source-layer": "buildings_points_centroids",
         "filter": [
           "all"
         ],
@@ -11330,7 +11590,7 @@ ohmVectorStyles = {
         "id": "points_fromlanduse-z14",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "landuse_points",
+        "source-layer": "landuse_points_centroids",
         "minzoom": 14,
         "filter": [
           "==",
@@ -11367,7 +11627,7 @@ ohmVectorStyles = {
         "id": "points_fromlanduse",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "landuse_points",
+        "source-layer": "landuse_points_centroids",
         "minzoom": 16,
         "layout": {
           "icon-image": "{type}-18",
@@ -11423,7 +11683,7 @@ ohmVectorStyles = {
         "id": "points_fromlanduseareas",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "landuse_areas",
+        "source-layer": "landuse_points_centroids",
         "minzoom": 16,
         "filter": [
           "!",
@@ -11455,7 +11715,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_shop",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "buildings",
+        "source-layer": "buildings_points_centroids",
         "minzoom": 16,
         "maxzoom": 24,
         "filter": [
@@ -11601,7 +11861,7 @@ ohmVectorStyles = {
         "id": "county_labels_z11",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 8,
         "maxzoom": 20,
         "filter": [
@@ -11651,7 +11911,7 @@ ohmVectorStyles = {
         "id": "city_locality_labels_other_z11",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 15,
         "maxzoom": 20,
         "filter": [
@@ -11703,7 +11963,7 @@ ohmVectorStyles = {
         "id": "city_labels_other_z11",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 11,
         "maxzoom": 20,
         "filter": [
@@ -11759,7 +12019,7 @@ ohmVectorStyles = {
         "id": "city_labels_town_z8",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 8,
         "maxzoom": 20,
         "filter": [
@@ -11806,7 +12066,7 @@ ohmVectorStyles = {
         "id": "city_labels_z11",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 11,
         "maxzoom": 20,
         "filter": [
@@ -11853,7 +12113,7 @@ ohmVectorStyles = {
         "id": "city_labels_z6",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 6,
         "maxzoom": 11,
         "filter": [
@@ -11920,7 +12180,7 @@ ohmVectorStyles = {
         "id": "city_capital_labels_z6",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 6,
         "maxzoom": 11,
         "filter": [
@@ -12078,7 +12338,7 @@ ohmVectorStyles = {
         "id": "state_points_labels",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 5,
         "maxzoom": 20,
         "filter": [
@@ -12296,7 +12556,7 @@ ohmVectorStyles = {
         "id": "country_points_labels",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 0,
         "maxzoom": 12,
         "filter": [
@@ -12381,7 +12641,7 @@ ohmVectorStyles = {
   },
   "JapaneseScroll": {
     "version": 8,
-    "name": "ohm-japanese-scroll-map",
+    "name": "ohm-japanese-scroll",
     "metadata": {
       "maputnik:renderer": "mbgljs"
     },
@@ -15999,7 +16259,7 @@ ohmVectorStyles = {
         "id": "city_labels_z6",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 6,
         "maxzoom": 15,
         "filter": [
@@ -16089,7 +16349,7 @@ ohmVectorStyles = {
         "id": "city_capital_labels",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 4,
         "maxzoom": 15,
         "filter": [
@@ -16246,7 +16506,7 @@ ohmVectorStyles = {
         "id": "state_points_labels",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 5,
         "maxzoom": 20,
         "filter": [
@@ -16375,7 +16635,7 @@ ohmVectorStyles = {
         "id": "country_points_labels",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 0,
         "maxzoom": 10,
         "filter": [
@@ -16432,8 +16692,22 @@ ohmVectorStyles = {
         "id": "mountains",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "landuse_points",
+        "source-layer": "landuse_points_centroids",
         "minzoom": 7,
+        "filter": [
+          "in",
+          [
+            "get",
+            "type"
+          ],
+          [
+            "literal",
+            [
+              "peak",
+              "mountain_range"
+            ]
+          ]
+        ],
         "layout": {
           "visibility": "visible",
           "icon-image": "mountain"
@@ -16444,7 +16718,7 @@ ohmVectorStyles = {
   },
   "Railway": {
     "version": 8,
-    "name": "ohmbasemap",
+    "name": "ohm-railway",
     "metadata": {
       "maputnik:renderer": "mbgljs"
     },
@@ -27804,7 +28078,7 @@ ohmVectorStyles = {
         "id": "water_pointlabels_ocean_sea",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 0,
         "maxzoom": 24,
         "filter": [
@@ -28291,7 +28565,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_place_areas",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_areas",
+        "source-layer": "amenity_points_centroids",
         "minzoom": 16,
         "filter": [
           "!",
@@ -28341,10 +28615,15 @@ ohmVectorStyles = {
         "id": "points_of_interest_frombuildings",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "buildings",
+        "source-layer": "buildings_points_centroids",
         "minzoom": 16,
         "filter": [
-          "all"
+          "!=",
+          [
+            "get",
+            "type"
+          ],
+          "parking"
         ],
         "layout": {
           "icon-image": [
@@ -28410,7 +28689,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_fromareasz14",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "amenity_areas",
+        "source-layer": "amenity_points_centroids",
         "minzoom": 14,
         "maxzoom": 16,
         "filter": [
@@ -28475,7 +28754,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_fromareas",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "amenity_areas",
+        "source-layer": "amenity_points_centroids",
         "minzoom": 16,
         "maxzoom": 24,
         "filter": [
@@ -28559,7 +28838,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_amenity_14",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "amenity_points",
+        "source-layer": "amenity_points_centroids",
         "minzoom": 14,
         "maxzoom": 16,
         "filter": [
@@ -28604,7 +28883,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_amenity",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "amenity_points",
+        "source-layer": "amenity_points_centroids",
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
@@ -28689,7 +28968,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_other",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "other_points",
+        "source-layer": "other_points_centroids",
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
@@ -28794,7 +29073,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_other_archaeology",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "other_points",
+        "source-layer": "other_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
@@ -28883,7 +29162,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_other_artwork",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "other_points",
+        "source-layer": "other_points_centroids",
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
@@ -28972,7 +29251,7 @@ ohmVectorStyles = {
         "id": "points_powertower",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "other_points",
+        "source-layer": "other_points_centroids",
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
@@ -28995,7 +29274,7 @@ ohmVectorStyles = {
         "id": "points_airport",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "transport_areas",
+        "source-layer": "transport_points_centroids",
         "minzoom": 10,
         "maxzoom": 14,
         "filter": [
@@ -29017,7 +29296,7 @@ ohmVectorStyles = {
         "id": "transport_railstation_points",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "transport_points",
+        "source-layer": "transport_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
@@ -29096,10 +29375,10 @@ ohmVectorStyles = {
         }
       },
       {
-        "id": "transport_points",
+        "id": "transport_points_centroids",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "transport_points",
+        "source-layer": "transport_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
@@ -29200,7 +29479,7 @@ ohmVectorStyles = {
         "id": "points_placeofworshipother",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "buildings",
+        "source-layer": "buildings_points_centroids",
         "filter": [
           "all",
           [
@@ -29242,7 +29521,7 @@ ohmVectorStyles = {
         "id": "points_religion",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "buildings",
+        "source-layer": "buildings_points_centroids",
         "filter": [
           "all"
         ],
@@ -29265,7 +29544,7 @@ ohmVectorStyles = {
         "id": "points_fromlanduse-z14",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "landuse_points",
+        "source-layer": "landuse_points_centroids",
         "minzoom": 14,
         "filter": [
           "in",
@@ -29317,7 +29596,7 @@ ohmVectorStyles = {
         "id": "points_fromlanduse",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "landuse_points",
+        "source-layer": "landuse_points_centroids",
         "minzoom": 16,
         "layout": {
           "icon-image": [
@@ -29383,7 +29662,7 @@ ohmVectorStyles = {
         "id": "points_fromlanduseareas",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "landuse_areas",
+        "source-layer": "landuse_points_centroids",
         "minzoom": 16,
         "filter": [
           "!",
@@ -29422,7 +29701,7 @@ ohmVectorStyles = {
         "id": "points_of_interest_shop",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "buildings",
+        "source-layer": "buildings_points_centroids",
         "minzoom": 16,
         "maxzoom": 24,
         "filter": [
@@ -29534,7 +29813,7 @@ ohmVectorStyles = {
         "id": "county_labels_z11",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 9,
         "maxzoom": 20,
         "filter": [
@@ -29592,7 +29871,7 @@ ohmVectorStyles = {
         "id": "city_labels_other_z11",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 11,
         "maxzoom": 20,
         "filter": [
@@ -29652,7 +29931,7 @@ ohmVectorStyles = {
         "id": "city_labels_town_z8",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 8,
         "maxzoom": 20,
         "filter": [
@@ -29707,7 +29986,7 @@ ohmVectorStyles = {
         "id": "city_labels_z11",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 11,
         "maxzoom": 20,
         "filter": [
@@ -29762,7 +30041,7 @@ ohmVectorStyles = {
         "id": "city_capital_labels_z6",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 6,
         "maxzoom": 11,
         "filter": [
@@ -29832,7 +30111,7 @@ ohmVectorStyles = {
         "id": "city_labels_z6",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 6,
         "maxzoom": 11,
         "filter": [
@@ -29970,7 +30249,7 @@ ohmVectorStyles = {
         "id": "state_points_labels",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 5,
         "maxzoom": 20,
         "filter": [
@@ -30140,7 +30419,7 @@ ohmVectorStyles = {
         "id": "country_points_labels",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 0,
         "maxzoom": 12,
         "filter": [
@@ -30200,7 +30479,7 @@ ohmVectorStyles = {
   },
   "Woodblock": {
     "version": 8,
-    "name": "ohm-woodblock-map",
+    "name": "ohm-woodblock",
     "metadata": {
       "maputnik:renderer": "mbgljs"
     },
@@ -33958,7 +34237,7 @@ ohmVectorStyles = {
         "id": "city_labels_z6",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 6,
         "maxzoom": 15,
         "filter": [
@@ -34047,7 +34326,7 @@ ohmVectorStyles = {
         "id": "city_capital_labels",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 4,
         "maxzoom": 15,
         "filter": [
@@ -34201,7 +34480,7 @@ ohmVectorStyles = {
         "id": "state_points_labels",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 4,
         "maxzoom": 20,
         "filter": [
@@ -34331,7 +34610,7 @@ ohmVectorStyles = {
         "id": "country_points_labels",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "minzoom": 0,
         "maxzoom": 14,
         "filter": [
@@ -34390,7 +34669,7 @@ ohmVectorStyles = {
         "id": "map dragon",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "filter": [
           "==",
           [
@@ -34425,7 +34704,7 @@ ohmVectorStyles = {
         "id": "mermonster",
         "type": "symbol",
         "source": "osm",
-        "source-layer": "place_points",
+        "source-layer": "place_points_centroids",
         "filter": [
           "==",
           [

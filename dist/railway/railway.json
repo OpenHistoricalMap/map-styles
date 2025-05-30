@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "ohmbasemap",
+  "name": "ohm-railway",
   "metadata": {
     "maputnik:renderer": "mbgljs"
   },
@@ -11360,7 +11360,7 @@
       "id": "water_pointlabels_ocean_sea",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 0,
       "maxzoom": 24,
       "filter": [
@@ -11847,7 +11847,7 @@
       "id": "points_of_interest_place_areas",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_areas",
+      "source-layer": "amenity_points_centroids",
       "minzoom": 16,
       "filter": [
         "!",
@@ -11897,10 +11897,15 @@
       "id": "points_of_interest_frombuildings",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "buildings",
+      "source-layer": "buildings_points_centroids",
       "minzoom": 16,
       "filter": [
-        "all"
+        "!=",
+        [
+          "get",
+          "type"
+        ],
+        "parking"
       ],
       "layout": {
         "icon-image": [
@@ -11966,7 +11971,7 @@
       "id": "points_of_interest_fromareasz14",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "amenity_areas",
+      "source-layer": "amenity_points_centroids",
       "minzoom": 14,
       "maxzoom": 16,
       "filter": [
@@ -12031,7 +12036,7 @@
       "id": "points_of_interest_fromareas",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "amenity_areas",
+      "source-layer": "amenity_points_centroids",
       "minzoom": 16,
       "maxzoom": 24,
       "filter": [
@@ -12115,7 +12120,7 @@
       "id": "points_of_interest_amenity_14",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "amenity_points",
+      "source-layer": "amenity_points_centroids",
       "minzoom": 14,
       "maxzoom": 16,
       "filter": [
@@ -12160,7 +12165,7 @@
       "id": "points_of_interest_amenity",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "amenity_points",
+      "source-layer": "amenity_points_centroids",
       "minzoom": 15,
       "maxzoom": 24,
       "filter": [
@@ -12245,7 +12250,7 @@
       "id": "points_of_interest_other",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "other_points",
+      "source-layer": "other_points_centroids",
       "minzoom": 15,
       "maxzoom": 24,
       "filter": [
@@ -12350,7 +12355,7 @@
       "id": "points_of_interest_other_archaeology",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "other_points",
+      "source-layer": "other_points_centroids",
       "minzoom": 14,
       "maxzoom": 24,
       "filter": [
@@ -12439,7 +12444,7 @@
       "id": "points_of_interest_other_artwork",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "other_points",
+      "source-layer": "other_points_centroids",
       "minzoom": 15,
       "maxzoom": 24,
       "filter": [
@@ -12528,7 +12533,7 @@
       "id": "points_powertower",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "other_points",
+      "source-layer": "other_points_centroids",
       "minzoom": 15,
       "maxzoom": 24,
       "filter": [
@@ -12551,7 +12556,7 @@
       "id": "points_airport",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "transport_areas",
+      "source-layer": "transport_points_centroids",
       "minzoom": 10,
       "maxzoom": 14,
       "filter": [
@@ -12573,7 +12578,7 @@
       "id": "transport_railstation_points",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "transport_points",
+      "source-layer": "transport_points_centroids",
       "minzoom": 14,
       "maxzoom": 24,
       "filter": [
@@ -12652,10 +12657,10 @@
       }
     },
     {
-      "id": "transport_points",
+      "id": "transport_points_centroids",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "transport_points",
+      "source-layer": "transport_points_centroids",
       "minzoom": 14,
       "maxzoom": 24,
       "filter": [
@@ -12756,7 +12761,7 @@
       "id": "points_placeofworshipother",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "buildings",
+      "source-layer": "buildings_points_centroids",
       "filter": [
         "all",
         [
@@ -12798,7 +12803,7 @@
       "id": "points_religion",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "buildings",
+      "source-layer": "buildings_points_centroids",
       "filter": [
         "all"
       ],
@@ -12821,7 +12826,7 @@
       "id": "points_fromlanduse-z14",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "landuse_points",
+      "source-layer": "landuse_points_centroids",
       "minzoom": 14,
       "filter": [
         "in",
@@ -12873,7 +12878,7 @@
       "id": "points_fromlanduse",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "landuse_points",
+      "source-layer": "landuse_points_centroids",
       "minzoom": 16,
       "layout": {
         "icon-image": [
@@ -12939,7 +12944,7 @@
       "id": "points_fromlanduseareas",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "landuse_areas",
+      "source-layer": "landuse_points_centroids",
       "minzoom": 16,
       "filter": [
         "!",
@@ -12978,7 +12983,7 @@
       "id": "points_of_interest_shop",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "buildings",
+      "source-layer": "buildings_points_centroids",
       "minzoom": 16,
       "maxzoom": 24,
       "filter": [
@@ -13090,7 +13095,7 @@
       "id": "county_labels_z11",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 9,
       "maxzoom": 20,
       "filter": [
@@ -13148,7 +13153,7 @@
       "id": "city_labels_other_z11",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 11,
       "maxzoom": 20,
       "filter": [
@@ -13208,7 +13213,7 @@
       "id": "city_labels_town_z8",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 8,
       "maxzoom": 20,
       "filter": [
@@ -13263,7 +13268,7 @@
       "id": "city_labels_z11",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 11,
       "maxzoom": 20,
       "filter": [
@@ -13318,7 +13323,7 @@
       "id": "city_capital_labels_z6",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 6,
       "maxzoom": 11,
       "filter": [
@@ -13388,7 +13393,7 @@
       "id": "city_labels_z6",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 6,
       "maxzoom": 11,
       "filter": [
@@ -13526,7 +13531,7 @@
       "id": "state_points_labels",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 5,
       "maxzoom": 20,
       "filter": [
@@ -13696,7 +13701,7 @@
       "id": "country_points_labels",
       "type": "symbol",
       "source": "osm",
-      "source-layer": "place_points",
+      "source-layer": "place_points_centroids",
       "minzoom": 0,
       "maxzoom": 12,
       "filter": [
