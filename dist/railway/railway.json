@@ -8985,6 +8985,14 @@
               "rail"
             ]
           ]
+        ],
+        [
+          "==",
+          [
+            "get",
+            "tunnel"
+          ],
+          0
         ]
       ],
       "layout": {
@@ -9027,6 +9035,14 @@
             "usage"
           ],
           "main"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "tunnel"
+          ],
+          0
         ],
         [
           "in",
@@ -9357,6 +9373,14 @@
             "service"
           ],
           "spur"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "tunnel"
+          ],
+          0
         ]
       ],
       "layout": {
@@ -9462,6 +9486,14 @@
             "usage"
           ],
           "tourism"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "tunnel"
+          ],
+          0
         ]
       ],
       "layout": {
@@ -9536,6 +9568,14 @@
             "usage"
           ],
           "tourism"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "tunnel"
+          ],
+          0
         ]
       ],
       "layout": {
@@ -9639,6 +9679,14 @@
             "usage"
           ],
           "military"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "tunnel"
+          ],
+          0
         ]
       ],
       "layout": {
@@ -9713,6 +9761,14 @@
             "usage"
           ],
           "military"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "tunnel"
+          ],
+          0
         ]
       ],
       "layout": {
@@ -9816,6 +9872,14 @@
             "usage"
           ],
           "branch"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "tunnel"
+          ],
+          0
         ]
       ],
       "layout": {
@@ -9890,6 +9954,14 @@
             "usage"
           ],
           "branch"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "tunnel"
+          ],
+          0
         ]
       ],
       "layout": {
@@ -9993,6 +10065,14 @@
             "usage"
           ],
           "industrial"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "tunnel"
+          ],
+          0
         ]
       ],
       "layout": {
@@ -10067,6 +10147,14 @@
             "usage"
           ],
           "industrial"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "tunnel"
+          ],
+          0
         ]
       ],
       "layout": {

@@ -25796,6 +25796,14 @@ ohmVectorStyles = {
                 "rail"
               ]
             ]
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ]
         ],
         "layout": {
@@ -25838,6 +25846,14 @@ ohmVectorStyles = {
               "usage"
             ],
             "main"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           [
             "in",
@@ -26168,6 +26184,14 @@ ohmVectorStyles = {
               "service"
             ],
             "spur"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ]
         ],
         "layout": {
@@ -26273,6 +26297,14 @@ ohmVectorStyles = {
               "usage"
             ],
             "tourism"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ]
         ],
         "layout": {
@@ -26347,6 +26379,14 @@ ohmVectorStyles = {
               "usage"
             ],
             "tourism"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ]
         ],
         "layout": {
@@ -26450,6 +26490,14 @@ ohmVectorStyles = {
               "usage"
             ],
             "military"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ]
         ],
         "layout": {
@@ -26524,6 +26572,14 @@ ohmVectorStyles = {
               "usage"
             ],
             "military"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ]
         ],
         "layout": {
@@ -26627,6 +26683,14 @@ ohmVectorStyles = {
               "usage"
             ],
             "branch"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ]
         ],
         "layout": {
@@ -26701,6 +26765,14 @@ ohmVectorStyles = {
               "usage"
             ],
             "branch"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ]
         ],
         "layout": {
@@ -26804,6 +26876,14 @@ ohmVectorStyles = {
               "usage"
             ],
             "industrial"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ]
         ],
         "layout": {
@@ -26878,6 +26958,14 @@ ohmVectorStyles = {
               "usage"
             ],
             "industrial"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ]
         ],
         "layout": {
