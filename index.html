@@ -1,54 +1,116 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <script src="./node_modules/maplibre-gl/dist/maplibre-gl.js"></script>
-  <link href="./node_modules/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
+  <meta charset="utf-8" />
+  <title>MapLibre — layer & copy</title>
+  <script src="https://unpkg.com/maplibre-gl@3.5.2/dist/maplibre-gl.js"></script>
+  <link href="https://unpkg.com/maplibre-gl@3.5.2/dist/maplibre-gl.css" rel="stylesheet"/>
+  <style>
+    html,body,#map{height:100%;margin:0}
+    #popup{position:absolute;display:none;background:#fff;padding:10px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.2);z-index:10;max-width:420px;font-family:monospace;font-size:12px}
+    pre{background:#f6f6f6;padding:6px;border-radius:4px;overflow:auto;max-height:140px}
+    .copy-btn{margin-left:8px;border:0;background:#eee;padding:2px 6px;border-radius:4px;cursor:pointer;font-size:12px}
+    .layer-title{display:flex;align-items:center;justify-content:space-between;font-weight:600;margin-bottom:6px}
+    .layer-left{display:flex;align-items:center;gap:8px}
+    button.close{margin-top:8px}
+  </style>
 </head>
 <body>
-<div id="map" style="width:100%;height:100%"></div>
+  <div id="map"></div>
+  <div id="popup">
+    <div><strong>Style:</strong> <span id="s-name"></span></div>
+    <div><strong>Style URL:</strong> <span id="s-url"></span></div>
+    <hr/>
+    <div id="layers"></div>
+    <button id="close" class="close">Close</button>
+  </div>
 
-<script type="module">
-  import StyleFlipperControl from "./node_modules/maplibre-gl-style-flipper/index.js";
-  const mapStyles = {
-    "historical": {
-      code: "historical",
-      image: "./img/historical.png",
-      url: "./historical/historical.json"
-    },
-    "japanese_scroll": {
-      code: "japanese_scroll",
-      image: "./img/japanese_scroll.png",
-      url: "./japanese_scroll/japanese_scroll.json"
-    },
-    "railway": {
-      code: "railway",
-      image: "./img/railway.png",
-      url: "./railway/railway.json"
-    },
-    "woodblock": {
-      code: "woodblock",
-      image: "./img/woodblock.png",
-      url: "./woodblock/woodblock.json"
-    },
-  };
+  <script type="module">
+    import StyleFlipperControl from "./node_modules/maplibre-gl-style-flipper/index.js";
 
-  var map = new maplibregl.Map({
-    container: 'map',
-    style: mapStyles["historical"].url,
-    center: [-74.033, 40.6259],
-    zoom: 11.73,
-    hash: true
-  })
+    const styles = { historical:{url:"./historical/historical.json"} /* add others if needed */ };
 
-  // Create an instance of StyleFlipperControl
-  const styleFlipperControl = new StyleFlipperControl(mapStyles);
+    const map = new maplibregl.Map({container:"map", style:styles.historical.url, center:[-74.033,40.6259], zoom:11.73, hash:true});
+    const flipper = new StyleFlipperControl(styles);
+    flipper.setCurrentStyleCode("historical");
+    map.addControl(flipper,"bottom-right");
 
-  // Set the initial style code
-  styleFlipperControl.setCurrentStyleCode("historical");
+    const p=document.getElementById("popup"), sName=document.getElementById("s-name"), sUrl=document.getElementById("s-url"), layersEl=document.getElementById("layers"), closeBtn=document.getElementById("close");
 
-  // Add the control to the map
-  map.addControl(styleFlipperControl, "bottom-right");
+    map.on("load", ()=> {
+      map.on("click",(e)=> {
+        e.originalEvent.stopPropagation();
+        const cur = flipper.currentStyleCode || "historical";
+        sName.textContent = cur;
+        sUrl.textContent = styles[cur].url||"";
 
-</script>
+        layersEl.innerHTML = "";
+        const tol=2;
+        const bbox=[[e.point.x-tol,e.point.y-tol],[e.point.x+tol,e.point.y+tol]];
+        const features = map.queryRenderedFeatures(bbox);
 
+        if(!features || features.length===0){
+          layersEl.textContent = "No rendered features at this point.";
+        } else {
+          const byLayer = {};
+          features.forEach(f=>{ const id=(f.layer&&f.layer.id)?f.layer.id:"(no-layer)"; (byLayer[id]||(byLayer[id]=[])).push(f); });
+          for(const lid of Object.keys(byLayer)){
+            const wrapper = document.createElement("div");
+            const title = document.createElement("div");
+            title.className = "layer-title";
+
+            const left = document.createElement("div"); left.className = "layer-left";
+            const nameSpan = document.createElement("span"); nameSpan.textContent = `${lid} — ${byLayer[lid].length} feature(s)`;
+            left.appendChild(nameSpan);
+
+            const copyBtn = document.createElement("button");
+            copyBtn.className = "copy-btn";
+            copyBtn.type = "button";
+            copyBtn.innerText = "📋";
+            copyBtn.title = "Copy layer id";
+            copyBtn.dataset.layer = lid;
+
+            // copy handler
+            copyBtn.addEventListener("click", async (ev)=>{
+              ev.stopPropagation(); // avoid closing popup
+              try{
+                await navigator.clipboard.writeText(lid);
+                const prev = copyBtn.innerText;
+                copyBtn.innerText = "Copied!";
+                setTimeout(()=> copyBtn.innerText = prev, 1200);
+              }catch(err){
+                copyBtn.innerText = "Err";
+                setTimeout(()=> copyBtn.innerText = "📋", 1200);
+              }
+            });
+
+            left.appendChild(copyBtn);
+            title.appendChild(left);
+
+            // append features props (only properties) below
+            const propsDiv = document.createElement("div");
+            byLayer[lid].forEach((feat,i)=>{
+              const pre = document.createElement("pre");
+              pre.textContent = `feature ${i} id:${feat.id??"n/a"}\n` + JSON.stringify(feat.properties||{},null,2);
+              propsDiv.appendChild(pre);
+            });
+
+            title.style.marginBottom = "6px";
+            wrapper.appendChild(title);
+            wrapper.appendChild(propsDiv);
+            layersEl.appendChild(wrapper);
+          }
+        }
+
+        p.style.left = (e.originalEvent.clientX+10)+"px";
+        p.style.top = (e.originalEvent.clientY+10)+"px";
+        p.style.display = "block";
+      });
+    });
+
+    // close handling: ignore clicks inside popup
+    document.addEventListener("click", (ev)=> { if(!p.contains(ev.target)) p.style.display="none"; });
+    closeBtn.addEventListener("click", ()=> p.style.display="none");
+  </script>
 </body>
 </html>
