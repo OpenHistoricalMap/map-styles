@@ -45,7 +45,7 @@ We use the hosted version of the [Maputnik visual editor](https://maputnik.githu
 1. clone this repo to your computer or [download the latest release](https://github.com/OpenHistoricalMap/map-styles/releases).
    `git clone git@github.com:OpenHistoricalMap/map-styles.git`
 2. run `npm install` from the root directory.
-3. run `npm run start` in the root directory; this will start the lightweight Node `http-server` and open a new tab or window in your browser. Everything except for the OHM vector tile sources (style files, glyphs, sprites) will be running locally on port 8888.
+3. run `npm run start` in the root directory; this will start the lightweight Node `http-server` and open a new tab or window in your browser. Everything except for the OHM vector tile sources (style files, glyphs, sprites) will be running locally on port 8888. Or use docker continaer to start the service running `docker compose up`
 4. open the style file you wish to work on in Maputnik.; it will be `historical/historical.json` or an equivalent path for a different style.
 5. if you're submitting changes to OpenHistoricalMap please begin by creating an issue that describes them at our [issues repository](https://github.com/OpenHistoricalMap/issues/), which is different from [where you'd submit your pull request](https://github.com/OpenHistoricalMap/map-styles).
 6. when you're satisfied with your local changes, repopulate the `dist` directory by running `npm run build`; the build step replaces references to `localhost` with the production values of the OpenHistoricalMap servers for `glyph` and `sprite` serving; this is required prior to deploying to OHM's staging and production servers. If you're hosting your own fonts or icons you'll need to edit these for your custom use.
@@ -113,3 +113,5 @@ To see a specific year in history, change the target year in the URL:
 - Rail style: https://embed.openhistoricalmap.org/#map=16/40.70486/-74.01313&date=1700&layer=R_staging
 - Woodblock: https://embed.openhistoricalmap.org/#map=16/40.70486/-74.01313&date=1700&layer=W_staging
 - Japanese Scroll: https://embed.openhistoricalmap.org/#map=16/40.70486/-74.01313&date=1700&layer=J_staging
+
+

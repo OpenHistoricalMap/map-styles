@@ -1,0 +1,17 @@
+services:
+  map_styles:
+    image: node:22.13.0
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - node_modules:/app/node_modules
+    environment:
+      - NODE_ENV=development
+      - HOST=0.0.0.0
+    ports:
+      - "8888:8888"
+    command: sh -c "npm install && npm run start "
+    restart: unless-stopped
+
+volumes:
+  node_modules:
