@@ -184,7 +184,7 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
-      "minzoom": 0,
+      "minzoom": 6,
       "maxzoom": 24,
       "filter": [
         "in",
