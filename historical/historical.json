@@ -528,7 +528,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "landuse_areas",
-      "minzoom": 10,
+      "minzoom": 6,
       "maxzoom": 24,
       "filter": ["==", ["get", "type"], "nature_reserve"],
       "layout": {"visibility": "visible"},
