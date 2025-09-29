@@ -258,8 +258,6 @@
             "rgba(208, 220, 174, 1)",
             "nature_reserve",
             "rgba(212, 225, 211, 0.3)",
-            "pitch",
-            "rgba(69, 150, 7, 0.39)",
             "golf_course",
             "rgba(236, 240, 198, 1)",
             "transparent"
@@ -500,6 +498,10 @@
             "rgba(208, 220, 174, 1)",
             "playground",
             "rgba(208, 220, 174, 1)",
+            "pitch",
+            "rgba(69, 150, 7, 0.39)",
+            "track",
+            "rgba(202, 184, 180, 1)",
             "bleachers",
             "rgba(220, 215, 215, 1)",
             "transparent"
