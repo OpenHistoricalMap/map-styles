@@ -3276,10 +3276,10 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          13,
-          4,
-          18,
-          17
+          14,
+          2,
+          24,
+          6
         ]
       }
     },
@@ -3644,12 +3644,12 @@
         "line-color": "#ffffff",
         "line-width": [
           "interpolate",
-          ["exponential", 1.5],
+          ["exponential", 2],
           ["zoom"],
-          12,
-          2,
+          14,
+          1.5,
           18,
-          12
+          14
         ]
       }
     },
