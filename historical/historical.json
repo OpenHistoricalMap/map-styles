@@ -138,7 +138,20 @@
       "source-layer": "other_areas",
       "filter": ["==", ["get", "class"], "military"],
       "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(244, 244, 235, 1)"}
+      "paint": {
+        "fill-color": "rgba(255, 0, 0, 0.03)"
+      }
+    },
+    {
+      "id": "military-pattern",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "other_areas",
+      "filter": ["==", ["get", "class"], "military"],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-pattern": "military-fill"
+      }
     },
     {
       "id": "aero_aerodrome_area",
@@ -5745,6 +5758,25 @@
       "paint": {
         "text-color": "rgba(176, 130, 130, 1)",
         "text-halo-color": "rgba(245, 239, 239, 1)",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "other_areaslabels_military",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "other_points_centroids",
+      "minzoom": 12,
+      "maxzoom": 24,
+      "filter": ["==", ["get", "class"], "military"],
+      "layout": {
+        "text-field": ["get", "name"],
+        "text-size": 13,
+        "text-font": ["OpenHistorical"]
+      },
+      "paint": {
+        "text-color": "rgba(180, 50, 50, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 1
       }
     },
