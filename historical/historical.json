@@ -2,7 +2,6 @@
   "version": 8,
   "name": "ohm-historical",
   "metadata": {"maputnik:renderer": "mbgljs"},
-  "attribution": "<a href=\"https://www.openhistoricalmap.org/\">OpenHistoricalMap</a>",
   "sources": {
     "osm": {
       "type": "vector",
@@ -186,11 +185,7 @@
       "source-layer": "landuse_areas",
       "minzoom": 6,
       "maxzoom": 24,
-      "filter": [
-        "in",
-        ["get", "type"],
-        ["literal", ["nature_reserve"]]
-      ],
+      "filter": ["in", ["get", "type"], ["literal", ["nature_reserve"]]],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
@@ -412,7 +407,7 @@
             "forest",
             "rgba(193, 208, 158, 1)",
             "wood",
-            "#C1D09E",
+            "rgba(220, 232, 194, 1)",
             "scrub",
             "rgba(199, 222, 194, 1)",
             "transparent"
@@ -5737,11 +5732,7 @@
       "source-layer": "landuse_points_centroids",
       "minzoom": 14,
       "maxzoom": 24,
-      "filter": [
-        "in",
-        ["get", "type"],
-        ["literal", ["forest", "wood"]]
-      ],
+      "filter": ["in", ["get", "type"], ["literal", ["forest", "wood"]]],
       "layout": {
         "text-field": ["get", "name"],
         "text-size": 11,
@@ -5760,15 +5751,10 @@
       "source-layer": "landuse_points_centroids",
       "minzoom": 6,
       "maxzoom": 12,
-      "filter": [
-        "in",
-        ["get", "type"],
-        ["literal", ["nature_reserve"]]
-      ],
+      "filter": ["in", ["get", "type"], ["literal", ["nature_reserve"]]],
       "layout": {
-        "text-size": ["interpolate", ["linear"], ["zoom"], 6, 12, 7, 16, 10, 24],
-        "text-field": ["get", "name"],
         "text-size": 24,
+        "text-field": ["get", "name"],
         "text-font": ["OpenHistorical"]
       },
       "paint": {
@@ -6933,5 +6919,6 @@
       }
     }
   ],
+  "attribution": "<a href=\"https://www.openhistoricalmap.org/\">OpenHistoricalMap</a>",
   "id": "ab271ed3-6fe4-403a-b5ae-07113f8c57ab"
 }
