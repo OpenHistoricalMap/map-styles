@@ -2,7 +2,6 @@
   "version": 8,
   "name": "ohm-historical",
   "metadata": {"maputnik:renderer": "mbgljs"},
-  "attribution": "<a href=\"https://www.openhistoricalmap.org/\">OpenHistoricalMap</a>",
   "sources": {
     "osm": {
       "type": "vector",
@@ -547,6 +546,23 @@
       "paint": {
         "fill-color": "rgba(238, 236, 230, 1)",
         "fill-outline-color": "rgba(226, 223, 215, 1)"
+      }
+    },
+    {
+      "id": "pedestrian_area",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "transport_areas",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", ["get", "type"], ["literal", ["footway", "pedestrian"]]]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(246, 246, 246, 1)",
+        "fill-outline-color": "rgba(230,230,230, 1)"
       }
     },
     {
@@ -3614,23 +3630,6 @@
           18,
           12
         ]
-      }
-    },
-    {
-      "id": "pedestrian_area",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "transport_areas",
-      "minzoom": 14,
-      "maxzoom": 24,
-      "layout": {"visibility": "visible"},
-      "filter": [
-        "all",
-        ["in", ["get", "type"], ["literal", ["footway", "pedestrian"]]]
-      ],
-      "paint": {
-        "fill-color": "rgba(255,255,255, 1)",
-        "fill-outline-color": "rgba(230,230,230, 1)"
       }
     },
     {
@@ -6883,5 +6882,6 @@
       }
     }
   ],
+  "attribution": "<a href=\"https://www.openhistoricalmap.org/\">OpenHistoricalMap</a>",
   "id": "ab271ed3-6fe4-403a-b5ae-07113f8c57ab"
 }
