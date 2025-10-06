@@ -1,2 +1,5 @@
 .idea
 /fonts/
+
+# Don't package docker-compose
+/docker-compose.yaml
