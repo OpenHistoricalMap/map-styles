@@ -144,12 +144,12 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "transport_areas",
-      "minzoom": 12,
+      "minzoom": 10,
       "maxzoom": 24,
       "filter": ["==", ["get", "type"], "aerodrome"],
       "layout": {"visibility": "visible"},
       "paint": {
-        "fill-color": "rgba(245, 245, 245, 1)",
+        "fill-color": "rgba(245, 245, 240, 1)",
         "fill-outline-color": "rgba(214, 212, 212, 1)"
       }
     },
@@ -172,11 +172,11 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "transport_areas",
-      "minzoom": 12,
+      "minzoom": 11,
       "maxzoom": 24,
       "filter": ["==", ["get", "type"], "apron"],
       "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(221, 221, 221, 1)"}
+      "paint": {"fill-color": "rgba(235, 235, 225, 1)"}
     },
     {
       "id": "nature_reserve_fill",
@@ -339,7 +339,7 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
-      "minzoom": 12,
+      "minzoom": 10,
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
       "paint": {
@@ -1208,16 +1208,30 @@
       }
     },
     {
+      "id": "terminals",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "transport_areas",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": ["==", ["get", "type"], "terminal"],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(230, 230, 233, 1)",
+        "fill-outline-color": "rgba(32, 32, 32, .7)"
+      }
+    },
+    {
       "id": "aero_taxiway_lines",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 12,
+      "minzoom": 11,
       "maxzoom": 24,
       "filter": ["==", ["get", "type"], "taxiway"],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(220, 220, 220, 1)",
+        "line-color": "rgba(200, 200, 200, 1)",
         "line-width": [
           "interpolate",
           ["linear"],
@@ -1227,7 +1241,7 @@
           13,
           1.5,
           18,
-          4
+          8
         ]
       }
     },
@@ -1236,13 +1250,13 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 12,
+      "minzoom": 10,
       "maxzoom": 24,
       "filter": ["==", ["get", "type"], "runway"],
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(220, 220, 220, 1)",
-        "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1.5, 18, 25]
+        "line-color": "rgba(200, 200, 200, 1)",
+        "line-width": ["interpolate", ["exponential", 1.8], ["zoom"], 12, 1.5, 14, 15]
       }
     },
     {
