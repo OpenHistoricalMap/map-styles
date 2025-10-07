@@ -216,7 +216,27 @@ ohmVectorStyles = {
           "visibility": "visible"
         },
         "paint": {
-          "fill-color": "rgba(244, 244, 235, 1)"
+          "fill-color": "rgba(255, 0, 0, 0.03)"
+        }
+      },
+      {
+        "id": "military-pattern",
+        "type": "fill",
+        "source": "osm",
+        "source-layer": "other_areas",
+        "filter": [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "military"
+        ],
+        "layout": {
+          "visibility": "visible"
+        },
+        "paint": {
+          "fill-pattern": "military-fill"
         }
       },
       {
@@ -224,7 +244,7 @@ ohmVectorStyles = {
         "type": "fill",
         "source": "osm",
         "source-layer": "transport_areas",
-        "minzoom": 12,
+        "minzoom": 10,
         "maxzoom": 24,
         "filter": [
           "==",
@@ -238,7 +258,7 @@ ohmVectorStyles = {
           "visibility": "visible"
         },
         "paint": {
-          "fill-color": "rgba(245, 245, 245, 1)",
+          "fill-color": "rgba(245, 245, 240, 1)",
           "fill-outline-color": "rgba(214, 212, 212, 1)"
         }
       },
@@ -270,7 +290,7 @@ ohmVectorStyles = {
         "type": "fill",
         "source": "osm",
         "source-layer": "transport_areas",
-        "minzoom": 12,
+        "minzoom": 11,
         "maxzoom": 24,
         "filter": [
           "==",
@@ -284,7 +304,51 @@ ohmVectorStyles = {
           "visibility": "visible"
         },
         "paint": {
-          "fill-color": "rgba(221, 221, 221, 1)"
+          "fill-color": "rgba(235, 235, 225, 1)"
+        }
+      },
+      {
+        "id": "nature_reserve_fill",
+        "type": "fill",
+        "source": "osm",
+        "source-layer": "landuse_areas",
+        "minzoom": 6,
+        "maxzoom": 24,
+        "filter": [
+          "in",
+          [
+            "get",
+            "type"
+          ],
+          [
+            "literal",
+            [
+              "nature_reserve"
+            ]
+          ]
+        ],
+        "layout": {
+          "visibility": "visible"
+        },
+        "paint": {
+          "fill-color": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            0,
+            "rgba(172, 221, 153, .3)",
+            4,
+            "rgba(168, 213, 159, .3)",
+            5,
+            "rgba(183, 234, 163, .3)",
+            7,
+            "rgba(180, 252, 174, .3)"
+          ],
+          "fill-opacity": 1
         }
       },
       {
@@ -292,7 +356,7 @@ ohmVectorStyles = {
         "type": "fill",
         "source": "osm",
         "source-layer": "landuse_areas",
-        "minzoom": 0,
+        "minzoom": 6,
         "maxzoom": 24,
         "filter": [
           "in",
@@ -304,7 +368,6 @@ ohmVectorStyles = {
             "literal",
             [
               "forest",
-              "nature_reserve",
               "park",
               "wood"
             ]
@@ -399,10 +462,10 @@ ohmVectorStyles = {
               ],
               "park",
               "rgba(208, 220, 174, 1)",
-              "nature_reserve",
-              "rgba(212, 225, 211, 0.3)",
               "pitch",
               "rgba(69, 150, 7, 0.39)",
+              "nature_reserve",
+              "rgba(212, 225, 211, 0.3)",
               "golf_course",
               "rgba(236, 240, 198, 1)",
               "transparent"
@@ -466,7 +529,7 @@ ohmVectorStyles = {
         "type": "fill",
         "source": "osm",
         "source-layer": "landuse_areas",
-        "minzoom": 12,
+        "minzoom": 10,
         "maxzoom": 24,
         "layout": {
           "visibility": "visible"
@@ -577,7 +640,7 @@ ohmVectorStyles = {
               "forest",
               "rgba(193, 208, 158, 1)",
               "wood",
-              "#C1D09E",
+              "rgba(220, 232, 194, 1)",
               "scrub",
               "rgba(199, 222, 194, 1)",
               "transparent"
@@ -631,7 +694,7 @@ ohmVectorStyles = {
         }
       },
       {
-        "id": "landuse_areas_z12_developed_open_space",
+        "id": "landuse_areas_z12_developed_open_space_larger",
         "type": "fill",
         "source": "osm",
         "source-layer": "landuse_areas",
@@ -660,20 +723,77 @@ ohmVectorStyles = {
               "rgba(208, 220, 174, 1)",
               "cemetery",
               "rgba(214, 222, 210, 1)",
-              "grave_yard",
-              "rgba(214, 222, 210, 1)",
               "sports_centre",
               "rgba(208, 220, 174, 1)",
               "stadium",
               "rgba(208, 220, 174, 1)",
               "recreation_ground",
               "rgba(208, 220, 174, 1)",
+              "transparent"
+            ]
+          ],
+          "fill-outline-color": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            0,
+            [
+              "match",
+              [
+                "get",
+                "type"
+              ],
+              "bleachers",
+              "rgba(195, 188, 188, 1)",
+              "playground",
+              "rgba(208, 220, 174, 1)",
+              "transparent"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "landuse_areas_z12_developed_open_space_smaller",
+        "type": "fill",
+        "source": "osm",
+        "source-layer": "landuse_areas",
+        "minzoom": 12,
+        "maxzoom": 24,
+        "layout": {
+          "visibility": "visible"
+        },
+        "paint": {
+          "fill-color": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            0,
+            [
+              "match",
+              [
+                "get",
+                "type"
+              ],
+              "grave_yard",
+              "rgba(214, 222, 210, 1)",
               "picnic_site",
               "rgba(208, 220, 174, 1)",
               "camp_site",
               "rgba(208, 220, 174, 1)",
               "playground",
               "rgba(208, 220, 174, 1)",
+              "pitch",
+              "rgba(156, 193, 103, 1)",
+              "track",
+              "rgba(202, 184, 180, 1)",
               "bleachers",
               "rgba(220, 215, 215, 1)",
               "transparent"
@@ -718,7 +838,7 @@ ohmVectorStyles = {
         "type": "line",
         "source": "osm",
         "source-layer": "landuse_areas",
-        "minzoom": 10,
+        "minzoom": 6,
         "maxzoom": 24,
         "filter": [
           "==",
@@ -830,6 +950,8 @@ ohmVectorStyles = {
         "type": "fill",
         "source": "osm",
         "source-layer": "transport_areas",
+        "minzoom": 14,
+        "maxzoom": 24,
         "filter": [
           "all",
           [
@@ -845,18 +967,13 @@ ohmVectorStyles = {
                 "pedestrian"
               ]
             ]
-          ],
-          [
-            "==",
-            [
-              "get",
-              "area"
-            ],
-            "yes"
           ]
         ],
+        "layout": {
+          "visibility": "visible"
+        },
         "paint": {
-          "fill-color": "rgba(234,234,234, 1)",
+          "fill-color": "rgba(246, 246, 246, 1)",
           "fill-outline-color": "rgba(230,230,230, 1)"
         }
       },
@@ -1958,11 +2075,34 @@ ohmVectorStyles = {
         }
       },
       {
+        "id": "terminals",
+        "type": "fill",
+        "source": "osm",
+        "source-layer": "transport_areas",
+        "minzoom": 11,
+        "maxzoom": 24,
+        "filter": [
+          "==",
+          [
+            "get",
+            "type"
+          ],
+          "terminal"
+        ],
+        "layout": {
+          "visibility": "visible"
+        },
+        "paint": {
+          "fill-color": "rgba(230, 230, 233, 1)",
+          "fill-outline-color": "rgba(32, 32, 32, .7)"
+        }
+      },
+      {
         "id": "aero_taxiway_lines",
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 12,
+        "minzoom": 11,
         "maxzoom": 24,
         "filter": [
           "==",
@@ -1976,7 +2116,7 @@ ohmVectorStyles = {
           "visibility": "visible"
         },
         "paint": {
-          "line-color": "rgba(220, 220, 220, 1)",
+          "line-color": "rgba(200, 200, 200, 1)",
           "line-width": [
             "interpolate",
             [
@@ -1990,7 +2130,7 @@ ohmVectorStyles = {
             13,
             1.5,
             18,
-            4
+            8
           ]
         }
       },
@@ -1999,7 +2139,7 @@ ohmVectorStyles = {
         "type": "line",
         "source": "osm",
         "source-layer": "transport_lines",
-        "minzoom": 12,
+        "minzoom": 10,
         "maxzoom": 24,
         "filter": [
           "==",
@@ -2013,19 +2153,20 @@ ohmVectorStyles = {
           "visibility": "visible"
         },
         "paint": {
-          "line-color": "rgba(220, 220, 220, 1)",
+          "line-color": "rgba(200, 200, 200, 1)",
           "line-width": [
             "interpolate",
             [
-              "linear"
+              "exponential",
+              1.8
             ],
             [
               "zoom"
             ],
             12,
             1.5,
-            18,
-            25
+            14,
+            15
           ]
         }
       },
@@ -5951,10 +6092,10 @@ ohmVectorStyles = {
             [
               "zoom"
             ],
-            13,
-            4,
-            18,
-            17
+            14,
+            2,
+            24,
+            6
           ]
         }
       },
@@ -6623,15 +6764,15 @@ ohmVectorStyles = {
             "interpolate",
             [
               "exponential",
-              1.5
+              2
             ],
             [
               "zoom"
             ],
-            12,
-            2,
+            14,
+            1.5,
             18,
-            12
+            14
           ]
         }
       },
@@ -10635,7 +10776,6 @@ ohmVectorStyles = {
             "literal",
             [
               "forest",
-              "nature_reserve",
               "wood"
             ]
           ]
@@ -10646,6 +10786,42 @@ ohmVectorStyles = {
             "name"
           ],
           "text-size": 11,
+          "text-font": [
+            "OpenHistorical"
+          ]
+        },
+        "paint": {
+          "text-color": "rgba(95, 107, 71, 1)",
+          "text-halo-color": "rgba(201, 213, 190, 1)",
+          "text-halo-width": 1
+        }
+      },
+      {
+        "id": "landuse_areaslabels_nature_reserve",
+        "type": "symbol",
+        "source": "osm",
+        "source-layer": "landuse_points_centroids",
+        "minzoom": 6,
+        "maxzoom": 12,
+        "filter": [
+          "in",
+          [
+            "get",
+            "type"
+          ],
+          [
+            "literal",
+            [
+              "nature_reserve"
+            ]
+          ]
+        ],
+        "layout": {
+          "text-size": 24,
+          "text-field": [
+            "get",
+            "name"
+          ],
           "text-font": [
             "OpenHistorical"
           ]
@@ -10693,6 +10869,37 @@ ohmVectorStyles = {
         "paint": {
           "text-color": "rgba(176, 130, 130, 1)",
           "text-halo-color": "rgba(245, 239, 239, 1)",
+          "text-halo-width": 1
+        }
+      },
+      {
+        "id": "other_areaslabels_military",
+        "type": "symbol",
+        "source": "osm",
+        "source-layer": "other_points_centroids",
+        "minzoom": 12,
+        "maxzoom": 24,
+        "filter": [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "military"
+        ],
+        "layout": {
+          "text-field": [
+            "get",
+            "name"
+          ],
+          "text-size": 13,
+          "text-font": [
+            "OpenHistorical"
+          ]
+        },
+        "paint": {
+          "text-color": "rgba(180, 50, 50, 1)",
+          "text-halo-color": "rgba(255, 255, 255, 1)",
           "text-halo-width": 1
         }
       },
@@ -12730,6 +12937,7 @@ ohmVectorStyles = {
         }
       }
     ],
+    "attribution": "<a href=\"https://www.openhistoricalmap.org/\">OpenHistoricalMap</a>",
     "id": "ab271ed3-6fe4-403a-b5ae-07113f8c57ab"
   },
   "JapaneseScroll": {
@@ -12738,6 +12946,7 @@ ohmVectorStyles = {
     "metadata": {
       "maputnik:renderer": "mbgljs"
     },
+    "attribution": "<a href=\"https://www.openhistoricalmap.org/\">OpenHistoricalMap</a>",
     "sources": {
       "osm": {
         "type": "vector",
@@ -16815,6 +17024,7 @@ ohmVectorStyles = {
     "metadata": {
       "maputnik:renderer": "mbgljs"
     },
+    "attribution": "<a href=\"https://www.openhistoricalmap.org/\">OpenHistoricalMap</a>",
     "sources": {
       "osm": {
         "type": "vector",
@@ -30748,6 +30958,7 @@ ohmVectorStyles = {
     "metadata": {
       "maputnik:renderer": "mbgljs"
     },
+    "attribution": "<a href=\"https://www.openhistoricalmap.org/\">OpenHistoricalMap</a>",
     "sources": {
       "osm": {
         "type": "vector",
