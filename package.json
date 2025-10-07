@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "scripts/prepare.js",
-    "start": "http-server -a localhost --port 8888 --ssl --cert ssl/cert.pem --key ssl/key.pem --cors -o #7.33/40.487/-73.554"
+    "start": "browser-sync start --server --port 8888 --https --startPath '#7.33/40.487/-73.554' --files ['historical/*', 'railway/*', 'japanese_scroll/*', 'woodblock/*']"
   },
   "repository": {
     "type": "git",
@@ -25,8 +25,10 @@
   "dependencies": {
     "camelcase": "^8.0.0",
     "fs-extra": "^11.3.0",
-    "http-server": "^14.1.1",
     "maplibre-gl": "^5.1.0",
     "maplibre-gl-style-flipper": "^1.0.7"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4"
   }
 }
