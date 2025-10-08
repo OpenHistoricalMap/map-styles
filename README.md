@@ -97,7 +97,7 @@ Miscellaneous notes:
 1. pull the updated `staging` branch to get the merge commit
 1. ensure your local `staging` branch of `ohm-deploy` is current using `git pull`
 1. create a release branch from `staging`, e.g., `git checkout -b map-styles-0.9.7`
-1. in `images/web/Dockerfile` update `OPENHISTORICALMAP_WEBSITE_GITSHA` & the reason string in the subsequent `RUN echo`
+1. in `images/web/Dockerfile` update `OPENHISTORICALMAP_WEBSITE_GITSHA`
 1. commit the `Dockerfile` and push your branch to GitHub
 1. open a pull request against `OpenHistoricalMap/ohm-deploy`'s `staging` branch
 1. confirm your changed files & merge to staging
