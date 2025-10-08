@@ -4,6 +4,7 @@
   "metadata": {
     "maputnik:renderer": "mbgljs"
   },
+  "attribution": "<a href=\"https://www.openhistoricalmap.org/\">OpenHistoricalMap</a>",
   "sources": {
     "osm": {
       "type": "vector",
