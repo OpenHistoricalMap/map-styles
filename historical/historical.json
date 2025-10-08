@@ -633,13 +633,15 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "transport_areas",
+      "minzoom": 14,
+      "maxzoom": 24,
       "filter": [
         "all",
-        ["in", ["get", "type"], ["literal", ["footway", "pedestrian"]]],
-        ["==", ["get", "area"], "yes"]
+        ["in", ["get", "type"], ["literal", ["footway", "pedestrian"]]]
       ],
+      "layout": {"visibility": "visible"},
       "paint": {
-        "fill-color": "rgba(234,234,234, 1)",
+        "fill-color": "rgba(246, 246, 246, 1)",
         "fill-outline-color": "rgba(230,230,230, 1)"
       }
     },
@@ -3369,10 +3371,10 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          13,
-          4,
-          18,
-          17
+          14,
+          2,
+          24,
+          6
         ]
       }
     },
@@ -3737,12 +3739,12 @@
         "line-color": "#ffffff",
         "line-width": [
           "interpolate",
-          ["exponential", 1.5],
+          ["exponential", 2],
           ["zoom"],
-          12,
-          2,
+          14,
+          1.5,
           18,
-          12
+          14
         ]
       }
     },
