@@ -1,6 +1,6 @@
 {
   "name": "@openhistoricalmap/map-styles",
-  "version": "0.9.9",
+  "version": "0.9.8",
   "description": "A collection of map styles for OpenHistoricalMap",
   "main": "''",
   "type": "module",
