@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "scripts/prepare.js",
-    "start": "browser-sync start --server --port 8888 --https --startPath #7.33/40.487/-73.554 --files ['historical/*', 'railway/*', 'japanese_scroll/*', 'woodblock/*']"
+    "start": "browser-sync start --server --port 8888 --https --startPath #7.33/40.487/-73.554 --files ['index.html', 'index.css', 'historical/*', 'railway/*', 'japanese_scroll/*', 'woodblock/*']"
   },
   "repository": {
     "type": "git",
