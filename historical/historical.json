@@ -1077,6 +1077,18 @@
       }
     },
     {
+      "id": "man_made_bridge_area",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "other_areas",
+      "filter": [
+        "all",
+        ["==", ["get", "class"], "man_made"],
+        ["==", ["get", "type"], "bridge"]
+      ],
+      "paint": {"fill-color": "rgba(255, 255, 255, 1)"}
+    },
+    {
       "id": "pier",
       "type": "fill",
       "source": "osm",
@@ -1273,18 +1285,6 @@
         "line-color": "rgba(200, 200, 200, 1)",
         "line-width": ["interpolate", ["exponential", 1.8], ["zoom"], 12, 1.5, 14, 15]
       }
-    },
-    {
-      "id": "man_made_bridge_area",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "other_areas",
-      "filter": [
-        "all",
-        ["==", ["get", "class"], "man_made"],
-        ["==", ["get", "type"], "bridge"]
-      ],
-      "paint": {"fill-color": "rgba(255, 255, 255, 1)"}
     },
     {
       "id": "man_made_bridge_line",
