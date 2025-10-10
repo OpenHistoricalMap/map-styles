@@ -1284,7 +1284,7 @@
         ["==", ["get", "class"], "man_made"],
         ["==", ["get", "type"], "bridge"]
       ],
-      "paint": {"fill-color": "rgba(254, 255, 255, 1)"}
+      "paint": {"fill-color": "rgba(255, 255, 255, 1)"}
     },
     {
       "id": "man_made_bridge_line",
