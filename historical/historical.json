@@ -617,6 +617,35 @@
       }
     },
     {
+      "id": "place_areas_square",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "place_areas",
+      "filter": ["==", ["get", "type"], "square"],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(238, 236, 230, 1)",
+        "fill-outline-color": "rgba(226, 223, 215, 1)"
+      }
+    },
+    {
+      "id": "pedestrian_area",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "transport_areas",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        ["in", ["get", "type"], ["literal", ["footway", "pedestrian"]]]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(246, 246, 246, 1)",
+        "fill-outline-color": "rgba(230,230,230, 1)"
+      }
+    },
+    {
       "id": "amenity_areas",
       "type": "fill",
       "source": "osm",
@@ -1048,47 +1077,6 @@
       }
     },
     {
-      "id": "man_made_bridge_area",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "other_areas",
-      "filter": [
-        "all",
-        ["==", ["get", "class"], "man_made"],
-        ["==", ["get", "type"], "bridge"]
-      ],
-      "paint": {
-        "fill-color": "rgba(255, 255, 255, 1)"}
-    },
-    {
-      "id": "place_areas_square",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "place_areas",
-      "filter": ["==", ["get", "type"], "square"],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "fill-color": "rgba(238, 236, 230, 1)",
-        "fill-outline-color": "rgba(226, 223, 215, 1)"
-      }
-    },
-    {
-      "id": "pedestrian_area",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "transport_areas",
-      "minzoom": 14,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        ["in", ["get", "type"], ["literal", ["footway", "pedestrian"]]]
-      ],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "fill-color": "rgba(246, 246, 246, 1)"
-      }
-    },
-    {
       "id": "pier",
       "type": "fill",
       "source": "osm",
@@ -1285,6 +1273,18 @@
         "line-color": "rgba(200, 200, 200, 1)",
         "line-width": ["interpolate", ["exponential", 1.8], ["zoom"], 12, 1.5, 14, 15]
       }
+    },
+    {
+      "id": "man_made_bridge_area",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "other_areas",
+      "filter": [
+        "all",
+        ["==", ["get", "class"], "man_made"],
+        ["==", ["get", "type"], "bridge"]
+      ],
+      "paint": {"fill-color": "rgba(254, 255, 255, 1)"}
     },
     {
       "id": "man_made_bridge_line",
