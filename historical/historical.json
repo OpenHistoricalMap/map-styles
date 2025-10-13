@@ -5717,11 +5717,65 @@
       }
     },
     {
-      "id": "landuse_areaslabels_park",
+      "id": "points_fromlanduse-z14",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
       "minzoom": 14,
+      "filter": ["==", ["get", "type"], "peak"],
+      "layout": {
+        "icon-image": "{type}-12",
+        "text-font": ["OpenHistorical"],
+        "text-field": ["get", "name"],
+        "text-size": 8,
+        "text-anchor": "top",
+        "text-offset": [0, 0.8]
+      },
+      "paint": {
+        "text-color": "rgba(80, 80, 80, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5,
+        "text-opacity": 1
+      }
+    },
+    {
+      "id": "points_fromlanduse",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_points_centroids",
+      "minzoom": 16,
+      "layout": {
+        "icon-image": "{type}-18",
+        "text-font": ["OpenHistorical"],
+        "text-field": ["get", "name"],
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          6,
+          8,
+          16,
+          10,
+          20,
+          12
+        ],
+        "text-anchor": "top",
+        "text-offset": [0, 1],
+        "visibility": "visible",
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 15, 0.7, 20, 1.4]
+      },
+      "paint": {
+        "text-color": "rgba(80, 80, 80, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5
+      }
+    },
+    {
+      "id": "landuse_areaslabels_park",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_points_centroids",
+      "minzoom": 15,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -5745,7 +5799,7 @@
             ]
           ]
         ],
-        [">", ["get", "area"], 12000]
+        ["<", ["get", "area"], 1000000]
       ],
       "layout": {
         "text-field": ["get", "name"],
@@ -5757,7 +5811,7 @@
         "text-font": ["OpenHistorical"]
       },
       "paint": {
-        "text-color": "rgba(85, 104, 42, 1)",
+        "text-color": "rgba(255, 104, 42, 1)",
         "text-halo-color": "rgba(228, 235, 209, 1)",
         "text-halo-width": 1,
         "icon-translate-anchor": "map"
@@ -6109,7 +6163,7 @@
         "text-font": ["OpenHistorical"],
         "visibility": "visible",
         "text-offset": [0, 1],
-        "icon-size": ["interpolate", ["linear"], ["zoom"], 15, 0.7, 20, 1.4],
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 15, 1, 20, 1.4],
         "text-anchor": "top",
         "text-field": ["get", "name"]
       },
@@ -6163,30 +6217,6 @@
         "text-translate-anchor": "viewport",
         "icon-translate-anchor": "viewport",
         "text-opacity": ["interpolate", ["linear"], ["zoom"], 16.99, 0, 17, 1]
-      }
-    },
-    {
-      "id": "points_of_interest_amenity_14",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "amenity_points_centroids",
-      "minzoom": 14,
-      "maxzoom": 16,
-      "filter": ["all"],
-      "layout": {
-        "icon-image": "{type}-18",
-        "visibility": "visible",
-        "text-field": ["get", "name"],
-        "text-size": 8,
-        "text-anchor": "top",
-        "text-offset": [0, 1],
-        "text-font": ["OpenHistorical"]
-      },
-      "paint": {
-        "text-color": "rgba(80, 80, 80, 1)",
-        "text-halo-color": "rgba(255, 255, 255, 1)",
-        "text-halo-width": 0.5,
-        "text-halo-blur": 1
       }
     },
     {
@@ -6349,6 +6379,48 @@
       }
     },
     {
+      "id": "landuse_areaslabels_park_large",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_points_centroids",
+      "minzoom": 12,
+      "maxzoom": 15,
+      "filter": [
+        "all",
+        [
+          "in",
+          ["get", "type"],
+          [
+            "literal",
+            [
+              "camp_site",
+              "recreation_ground",
+              "sports_centre",
+              "stadium",
+              "village_green"
+            ]
+          ]
+        ],
+        [">=", ["get", "area_m2"], 1000000]
+      ],
+      "layout": {
+        "text-field": ["get", "name"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 12, 14, 13, 20, 16, 16],
+        "visibility": "visible",
+        "icon-text-fit": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false,
+        "text-font": ["OpenHistorical"]
+      },
+      "paint": {
+        "text-color": "rgba(85, 104, 42, 1)",
+        "text-halo-color": "rgba(228, 235, 209, 1)",
+        "text-opacity": ["interpolate", ["linear"], ["zoom"], 13.99, 1, 15, 0],
+        "text-halo-width": 1,
+        "icon-translate-anchor": "map"
+      }
+    },
+    {
       "id": "points_placeofworshipother",
       "type": "symbol",
       "source": "osm",
@@ -6381,60 +6453,6 @@
         "icon-image": "{religion}-18",
         "text-font": ["OpenHistorical"],
         "visibility": "visible"
-      }
-    },
-    {
-      "id": "points_fromlanduse-z14",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "landuse_points_centroids",
-      "minzoom": 14,
-      "filter": ["==", ["get", "type"], "peak"],
-      "layout": {
-        "icon-image": "{type}-12",
-        "text-font": ["OpenHistorical"],
-        "text-field": ["get", "name"],
-        "text-size": 8,
-        "text-anchor": "top",
-        "text-offset": [0, 0.8]
-      },
-      "paint": {
-        "text-color": "rgba(80, 80, 80, 1)",
-        "text-halo-color": "rgba(255, 255, 255, 1)",
-        "text-halo-width": 0.5,
-        "text-opacity": 1
-      }
-    },
-    {
-      "id": "points_fromlanduse",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "landuse_points_centroids",
-      "minzoom": 16,
-      "layout": {
-        "icon-image": "{type}-18",
-        "text-font": ["OpenHistorical"],
-        "text-field": ["get", "name"],
-        "text-size": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          6,
-          8,
-          16,
-          10,
-          20,
-          12
-        ],
-        "text-anchor": "top",
-        "text-offset": [0, 1],
-        "visibility": "visible",
-        "icon-size": ["interpolate", ["linear"], ["zoom"], 15, 0.7, 20, 1.4]
-      },
-      "paint": {
-        "text-color": "rgba(80, 80, 80, 1)",
-        "text-halo-color": "rgba(255, 255, 255, 1)",
-        "text-halo-width": 0.5
       }
     },
     {
