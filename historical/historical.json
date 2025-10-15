@@ -6312,32 +6312,22 @@
       }
     },
     {
-      "id": "points_airport",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "transport_points_centroids",
-      "minzoom": 10,
-      "maxzoom": 14,
-      "filter": ["==", ["get", "type"], "aerodrome"],
-      "layout": {"icon-image": "airport-18", "text-font": ["OpenHistorical"]}
-    },
-    {
       "id": "transport_points_centroids",
       "type": "symbol",
       "source": "osm",
       "source-layer": "transport_points_centroids",
-      "minzoom": 14,
+      "minzoom": 12,
       "maxzoom": 24,
       "filter": ["all"],
       "layout": {
         "icon-image": "{type}-18",
         "visibility": "visible",
         "text-field": ["get", "name"],
-        "text-size": ["interpolate", ["linear"], ["zoom"], 14, 8, 18, 10],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 10, 14, 18, 14],
         "text-anchor": "top",
         "text-offset": [0, 0.75],
         "text-font": ["OpenHistorical"],
-        "icon-size": ["interpolate", ["linear"], ["zoom"], 14, 0.75, 20, 1.4]
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 10, 0.4, 20, 1.4]
       },
       "paint": {
         "icon-color": "#000000",
@@ -6345,7 +6335,68 @@
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 0.5,
         "text-halo-blur": 1,
-        "text-opacity": ["interpolate", ["linear"], ["zoom"], 13.99, 0, 14, 1]
+        "text-opacity": ["interpolate", ["linear"], ["zoom"], 12.99, 0, 13, 1]
+      }
+    },
+    {
+      "id": "points_airport",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "transport_points_centroids",
+      "minzoom": 10,
+      "maxzoom": 14,
+      "filter": ["==", ["get", "type"], "aerodrome"],
+      "layout": {
+        "icon-image": "airport-18",
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 10, 1.2, 14, 1.5],
+        "text-font": ["OpenHistorical"]}
+    },
+    {
+      "id": "med_transport_points_centroids",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "transport_points_centroids",
+      "minzoom": 13,
+      "maxzoom": 16,
+      "filter": [">", ["get", "area_m2"], 1000000],
+      "layout": {
+        "icon-image": "{type}-18",
+        "visibility": "visible",
+        "text-field": ["get", "name"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 13, 20, 18, 14],
+        "text-font": ["OpenHistorical"],
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 14, 0.75, 20, 1.4]
+      },
+      "paint": {
+        "icon-color": "#000000",
+        "text-color": "rgba(80, 80, 80, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 2,
+        "text-halo-blur": 1
+      }
+    },
+    {
+      "id": "large_transport_points_centroids",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "transport_points_centroids",
+      "minzoom": 13,
+      "maxzoom": 16,
+      "filter": [">", ["get", "area_m2"], 10000000],
+      "layout": {
+        "icon-image": "{type}-18",
+        "visibility": "visible",
+        "text-field": ["get", "name"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 12, 24, 18, 28],
+        "text-font": ["OpenHistorical"],
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 14, 0.75, 20, 1.4]
+      },
+      "paint": {
+        "icon-color": "#000000",
+        "text-color": "rgba(80, 80, 80, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 2,
+        "text-halo-blur": 1
       }
     },
     {
