@@ -655,6 +655,58 @@
       "paint": {"fill-color": "rgba(226, 214, 205, 1)"}
     },
     {
+      "id": "water_lines_canal-casing",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "water_lines",
+      "minzoom": 12,
+      "maxzoom": 24,
+      "filter": ["==", ["get", "type"], "canal"],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(111, 145, 160, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          13,
+          0.5,
+          14,
+          2,
+          20,
+          3
+        ],
+        "line-gap-width": 4,
+        "line-dasharray": [1, 1]
+      }
+    },
+    {
+      "id": "water_lines_canal",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "water_lines",
+      "minzoom": 8,
+      "maxzoom": 24,
+      "filter": ["==", ["get", "type"], "canal"],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(153, 201, 222, 1)",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          8,
+          1,
+          13,
+          2,
+          14,
+          3,
+          20,
+          4
+        ]
+      }
+    },
+    {
       "id": "water_areas",
       "type": "fill",
       "source": "osm",
@@ -923,58 +975,6 @@
       "paint": {
         "line-color": "rgba(144, 204, 203, 1)",
         "line-width": ["interpolate", ["linear"], ["zoom"], 15, 0.2, 20, 1.5]
-      }
-    },
-    {
-      "id": "water_lines_canal-casing",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "water_lines",
-      "minzoom": 12,
-      "maxzoom": 24,
-      "filter": ["==", ["get", "type"], "canal"],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "line-color": "rgba(111, 145, 160, 1)",
-        "line-width": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          13,
-          0.5,
-          14,
-          2,
-          20,
-          3
-        ],
-        "line-gap-width": 4,
-        "line-dasharray": [1, 1]
-      }
-    },
-    {
-      "id": "water_lines_canal",
-      "type": "line",
-      "source": "osm",
-      "source-layer": "water_lines",
-      "minzoom": 8,
-      "maxzoom": 24,
-      "filter": ["==", ["get", "type"], "canal"],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "line-color": "rgba(153, 201, 222, 1)",
-        "line-width": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          8,
-          1,
-          13,
-          2,
-          14,
-          3,
-          20,
-          4
-        ]
       }
     },
     {
