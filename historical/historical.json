@@ -6444,10 +6444,10 @@
         "text-font": ["OpenHistorical"]
       },
       "paint": {
-        "text-color": "rgba(85, 104, 42, 1)",
+        "text-color": "rgba(65, 84, 22, 1)",
         "text-halo-color": "rgba(228, 235, 209, 1)",
         "text-opacity": ["interpolate", ["linear"], ["zoom"], 14.99, 0, 15, 1, 17, 1, 19, 0.1],
-        "text-halo-width": 1,
+        "text-halo-width": 2,
         "icon-translate-anchor": "map"
       }
     },
