@@ -6381,6 +6381,7 @@
           [
             "literal",
             [
+              "park",
               "camp_site",
               "recreation_ground",
               "sports_centre",
@@ -6389,11 +6390,11 @@
             ]
           ]
         ],
-        [">=", ["get", "area_m2"], 1000000]
+        [">=", ["get", "area_m2"], 3000000]
       ],
       "layout": {
         "text-field": ["get", "name"],
-        "text-size": ["interpolate", ["linear"], ["zoom"], 12, 14, 13, 20, 16, 16],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 12, 12, 13, 18, 16, 16],
         "visibility": "visible",
         "icon-text-fit": "none",
         "text-allow-overlap": false,
@@ -6404,7 +6405,7 @@
         "text-color": "rgba(85, 104, 42, 1)",
         "text-halo-color": "rgba(228, 235, 209, 1)",
         "text-opacity": ["interpolate", ["linear"], ["zoom"], 13.99, 1, 15, 0],
-        "text-halo-width": 1,
+        "text-halo-width": 2,
         "icon-translate-anchor": "map"
       }
     },
@@ -6423,6 +6424,7 @@
           [
             "literal",
             [
+              "park",
               "camp_site",
               "recreation_ground",
               "sports_centre",
@@ -6432,7 +6434,7 @@
           ]
         ],
         [">=", ["get", "area_m2"], 40000],
-        ["<", ["get", "area_m2"], 1000000]
+        ["<", ["get", "area_m2"], 3000000]
       ],
       "layout": {
         "text-field": ["get", "name"],
@@ -6444,7 +6446,7 @@
         "text-font": ["OpenHistorical"]
       },
       "paint": {
-        "text-color": "rgba(65, 84, 22, 1)",
+        "text-color": "rgba(64, 64, 64, 1)",
         "text-halo-color": "rgba(228, 235, 209, 1)",
         "text-opacity": ["interpolate", ["linear"], ["zoom"], 14.99, 0, 15, 1, 17, 1, 19, 0.1],
         "text-halo-width": 2,
