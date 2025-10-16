@@ -5717,7 +5717,7 @@
       }
     },
     {
-      "id": "points_fromlanduse-z14",
+      "id": "points_peaks-z14",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -5739,7 +5739,7 @@
       }
     },
     {
-      "id": "points_fromlanduse",
+      "id": "points_from_landuse",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -5752,12 +5752,10 @@
           "interpolate",
           ["linear"],
           ["zoom"],
-          6,
-          8,
           16,
-          10,
+          12,
           20,
-          12
+          14
         ],
         "text-anchor": "top",
         "text-offset": [0, 1],
@@ -5771,7 +5769,7 @@
       }
     },
     {
-      "id": "landuse_areaslabels_park",
+      "id": "landuse_areaslabels_park_not_large",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -6139,43 +6137,6 @@
       }
     },
     {
-      "id": "points_of_interest_amenity-centroids",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "amenity_points_centroids",
-      "minzoom": 15,
-      "maxzoom": 24,
-      "filter": ["all"],
-      "layout": {
-        "text-line-height": 1.2,
-        "text-size": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          15.99,
-          0,
-          16,
-          10,
-          20,
-          12
-        ],
-        "icon-image": "{type}-18",
-        "text-font": ["OpenHistorical"],
-        "visibility": "visible",
-        "text-offset": [0, 1],
-        "icon-size": ["interpolate", ["linear"], ["zoom"], 15, 1, 20, 1.4],
-        "text-anchor": "top",
-        "text-field": ["get", "name"]
-      },
-      "paint": {
-        "text-color": "rgba(80, 80, 80, 1)",
-        "text-halo-color": "rgba(255, 255, 255, 1)",
-        "text-halo-width": 0.5,
-        "text-halo-blur": 1,
-        "text-opacity": ["interpolate", ["linear"], ["zoom"], 16.9, 0, 17, 1]
-      }
-    },
-    {
       "id": "points_of_interest_other",
       "type": "symbol",
       "source": "osm",
@@ -6224,7 +6185,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "amenity_points_centroids",
-      "minzoom": 15,
+      "minzoom": 14,
       "maxzoom": 24,
       "layout": {
         "text-line-height": 1.2,
@@ -6243,7 +6204,7 @@
         "text-font": ["OpenHistorical"],
         "visibility": "visible",
         "text-offset": [0, 1],
-        "icon-size": ["interpolate", ["linear"], ["zoom"], 15, 0.7, 20, 1.4],
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 15.7, 0, 15.8, 0.5, 16, 0.7, 20, 1.4],
         "text-anchor": "top",
         "text-field": ["get", "name"]
       },
@@ -6352,13 +6313,40 @@
       "layout": {"icon-image": "airport-18", "text-font": ["OpenHistorical"]}
     },
     {
-      "id": "transport_points_centroids",
+      "id": "transport_points_centroids_medium",
       "type": "symbol",
       "source": "osm",
       "source-layer": "transport_points_centroids",
       "minzoom": 14,
       "maxzoom": 24,
-      "filter": ["all"],
+      "filter": [">=", ["get", "area_m2"], 20000],
+      "layout": {
+        "icon-image": "{type}-18",
+        "visibility": "visible",
+        "text-field": ["get", "name"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 14, 10, 18, 12],
+        "text-anchor": "top",
+        "text-offset": [0, 0.75],
+        "text-font": ["OpenHistorical"],
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 14, 0.75, 20, 1.4]
+      },
+      "paint": {
+        "icon-color": "#000000",
+        "text-color": "rgba(80, 80, 80, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5,
+        "text-halo-blur": 1,
+        "text-opacity": ["interpolate", ["linear"], ["zoom"], 13.99, 0, 14, 1]
+      }
+    },
+    {
+      "id": "transport_points_centroids",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "transport_points_centroids",
+      "minzoom": 16,
+      "maxzoom": 24,
+      "filter": ["<", ["get", "area_m2"], 20000],
       "layout": {
         "icon-image": "{type}-18",
         "visibility": "visible",
@@ -6421,6 +6409,49 @@
       }
     },
     {
+      "id": "landuse_areaslabels_park_medium",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_points_centroids",
+      "minzoom": 15,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "in",
+          ["get", "type"],
+          [
+            "literal",
+            [
+              "camp_site",
+              "recreation_ground",
+              "sports_centre",
+              "stadium",
+              "village_green"
+            ]
+          ]
+        ],
+        [">=", ["get", "area_m2"], 40000],
+        ["<", ["get", "area_m2"], 1000000]
+      ],
+      "layout": {
+        "text-field": ["get", "name"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 12, 14, 13, 20, 16, 16],
+        "visibility": "visible",
+        "icon-text-fit": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false,
+        "text-font": ["OpenHistorical"]
+      },
+      "paint": {
+        "text-color": "rgba(85, 104, 42, 1)",
+        "text-halo-color": "rgba(228, 235, 209, 1)",
+        "text-opacity": ["interpolate", ["linear"], ["zoom"], 14.99, 0, 15, 1, 17, 1, 19, 0.1],
+        "text-halo-width": 1,
+        "icon-translate-anchor": "map"
+      }
+    },
+    {
       "id": "points_placeofworshipother",
       "type": "symbol",
       "source": "osm",
@@ -6456,7 +6487,7 @@
       }
     },
     {
-      "id": "points_fromlanduseareas",
+      "id": "points_from_landuse_areas",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
