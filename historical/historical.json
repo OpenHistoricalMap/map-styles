@@ -6462,7 +6462,7 @@
       }
     },
     {
-      "id": "points_fromlanduse-z14",
+      "id": "points_from_landuse_peaks",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
