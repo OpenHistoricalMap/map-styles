@@ -192,7 +192,7 @@
       "paint": {"fill-color": "rgba(235, 235, 225, 1)"}
     },
     {
-      "id": "nature_reserve_fill",
+      "id": "nature_reserve_fill_6-24",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
@@ -218,12 +218,12 @@
       }
     },
     {
-      "id": "landuse_areas_allz",
+      "id": "landuse_areas_allz_6-12",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
       "minzoom": 6,
-      "maxzoom": 24,
+      "maxzoom": 12,
       "filter": [
         "in",
         ["get", "type"],
@@ -254,6 +254,11 @@
       "source-layer": "landuse_areas",
       "minzoom": 12,
       "maxzoom": 24,
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["residential", "retail", "industrial"]]
+      ],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
@@ -276,13 +281,18 @@
       }
     },
     {
-      "id": "landuse_areas_z12_underlying_land_designation",
+      "id": "landuse_areas_z12-24_underlying_land_designation",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
       "minzoom": 12,
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["park", "pitch", "golf_course"]]
+      ],
       "paint": {
         "fill-color": [
           "interpolate",
@@ -312,6 +322,11 @@
       "source-layer": "landuse_areas",
       "minzoom": 12,
       "maxzoom": 24,
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["quarry", "landfill", "brownfield", "commercial", "construction", "railway", "college", "school", "education", "university"]]
+      ],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
@@ -354,6 +369,11 @@
       "source-layer": "landuse_areas",
       "minzoom": 10,
       "maxzoom": 24,
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["heath", "meadow", "grass", "grassland", "beach", "desert", "basin", "salt_pond", "mud"]]
+      ],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
@@ -408,7 +428,11 @@
       "source-layer": "landuse_areas",
       "minzoom": 12,
       "maxzoom": 24,
-      "filter": ["all"],
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["forest", "wood", "scrub"]]
+      ],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
@@ -437,6 +461,11 @@
       "source-layer": "landuse_areas",
       "minzoom": 12,
       "maxzoom": 24,
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["farmland", "farmyard", "farm", "orchard", "vineyard", "allotments", "garden"]]
+      ],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
@@ -474,6 +503,11 @@
       "minzoom": 12,
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["village_green", "cemetary", "sports_centre", "stadium", "recreation_ground"]]
+      ],
       "paint": {
         "fill-color": [
           "interpolate",
@@ -520,6 +554,11 @@
       "source-layer": "landuse_areas",
       "minzoom": 12,
       "maxzoom": 24,
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["grave_yard", "picnic_site", "camp_site", "playground", "paitch", "track", "bleachers"]]
+      ],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
@@ -753,6 +792,11 @@
       "source-layer": "landuse_areas",
       "minzoom": 11,
       "maxzoom": 24,
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["salt_pond", "glacier", "reservoir", "swimming_pool", "wetland"]]
+      ],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
