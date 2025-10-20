@@ -6484,7 +6484,7 @@
       }
     },
     {
-      "id": "points_fromlanduse",
+      "id": "points_from_landuse",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -6516,7 +6516,7 @@
       }
     },
     {
-      "id": "points_fromlanduseareas",
+      "id": "points_from_landuse_areas",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
