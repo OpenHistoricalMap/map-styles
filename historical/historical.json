@@ -614,13 +614,15 @@
       }
     },
     {
-      "id": "landuse_naturereserveoutline",
+      "id": "landuse_nature_reserve_outline",
       "type": "line",
       "source": "osm",
       "source-layer": "landuse_areas",
       "minzoom": 6,
       "maxzoom": 24,
-      "filter": ["==", ["get", "type"], "nature_reserve"],
+      "filter": ["all",
+        ["==", ["get", "type"], "nature_reserve"],
+        [">=", ["get", "area"], 100000000]],
       "layout": {"visibility": "visible"},
       "paint": {
         "line-width": ["interpolate", ["linear"], ["zoom"], 10, 2, 20, 3],
@@ -5870,10 +5872,34 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["nature_reserve"]]],
-        ["<", ["get", "area_m2"], 10000000]
+        ["<", ["get", "area_m2"], 30000000]
       ],
       "layout": {
-        "text-size": 14,
+        "text-size": 12,
+        "text-field": ["get", "name"],
+        "text-font": ["OpenHistorical"]
+      },
+      "paint": {
+        "text-color": "rgba(95, 107, 71, 1)",
+        "text-halo-color": "rgba(201, 213, 190, 1)",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "landuse_areas_labels_nature_reserve_med_10-14",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_points_centroids",
+      "minzoom": 10,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        ["in", ["get", "type"], ["literal", ["nature_reserve"]]],
+        [">=", ["get", "area_m2"], 30000000],
+        ["<", ["get", "area_m2"], 100000000]
+      ],
+      "layout": {
+        "text-size": 12,
         "text-field": ["get", "name"],
         "text-font": ["OpenHistorical"]
       },
@@ -5893,7 +5919,7 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["nature_reserve"]]],
-        [">=", ["get", "area_m2"], 10000000]
+        [">=", ["get", "area_m2"], 100000000]
       ],
       "layout": {
         "text-size": 24,
