@@ -727,7 +727,7 @@
       }
     },
     {
-      "id": "water_areas-ne",
+      "id": "water_areas_ne",
       "type": "fill",
       "source": "ne",
       "source-layer": "water_areas",
@@ -779,7 +779,7 @@
       }
     },
     {
-      "id": "wetlands_z11-pattern",
+      "id": "wetlands_z11_pattern",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
@@ -5539,7 +5539,7 @@
       }
     },
     {
-      "id": "water_areaslabels_z15",
+      "id": "water_areas_labels_z15",
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_areas_centroids",
@@ -5560,7 +5560,7 @@
       }
     },
     {
-      "id": "water_areaslabels_z12",
+      "id": "water_areas_labels_z12",
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_areas_centroids",
@@ -5582,7 +5582,7 @@
       }
     },
     {
-      "id": "water_pointlabels_ocean_sea",
+      "id": "water_point_labels_ocean_sea",
       "type": "symbol",
       "source": "osm",
       "source-layer": "place_points_centroids",
@@ -5614,7 +5614,7 @@
       }
     },
     {
-      "id": "water_areaslabels_z8",
+      "id": "water_areas_labels_z8",
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_areas_centroids",
@@ -5645,7 +5645,7 @@
       }
     },
     {
-      "id": "water_lineslabels-cliff",
+      "id": "water_lines_labels_cliff",
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_lines",
@@ -5668,7 +5668,7 @@
       }
     },
     {
-      "id": "water_lineslabels-dam",
+      "id": "water_lines_labels_dam",
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_lines",
@@ -5691,7 +5691,7 @@
       }
     },
     {
-      "id": "water_lineslabels",
+      "id": "water_lines_labels",
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_lines",
@@ -5717,7 +5717,7 @@
       }
     },
     {
-      "id": "landuse_areaslabels_park",
+      "id": "landuse_areas_labels_park",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -5764,7 +5764,7 @@
       }
     },
     {
-      "id": "landuse_areaslabels_farming",
+      "id": "landuse_areas_labels_farming",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -5798,7 +5798,7 @@
       }
     },
     {
-      "id": "landuse_areaslabels_forest",
+      "id": "landuse_areas_labels_forest",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -5817,7 +5817,7 @@
       }
     },
     {
-      "id": "landuse_areaslabels_nature_reserve",
+      "id": "landuse_areas_labels_nature_reserve",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -5836,7 +5836,7 @@
       }
     },
     {
-      "id": "landuse_areaslabels_school",
+      "id": "landuse_areas_labels_school",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -5859,7 +5859,7 @@
       }
     },
     {
-      "id": "other_areaslabels_military",
+      "id": "other_areas_labels_military",
       "type": "symbol",
       "source": "osm",
       "source-layer": "other_points_centroids",
@@ -5878,7 +5878,7 @@
       }
     },
     {
-      "id": "landuse_areaslabels_z8glacier",
+      "id": "landuse_areas_labels_z8glacier",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -5961,7 +5961,7 @@
       }
     },
     {
-      "id": "points_of_interest_fromareasz14-centroids",
+      "id": "points_of_interest_fromareasz14_centroids",
       "type": "symbol",
       "source": "osm",
       "source-layer": "amenity_points_centroids",
@@ -6085,7 +6085,7 @@
       }
     },
     {
-      "id": "points_of_interest_amenity-centroids",
+      "id": "points_of_interest_amenity_centroids",
       "type": "symbol",
       "source": "osm",
       "source-layer": "amenity_points_centroids",
@@ -6529,7 +6529,7 @@
       }
     },
     {
-      "id": "county_labels_z11-admin7_8-centroids",
+      "id": "county_labels_z11_admin7_8_centroids",
       "type": "symbol",
       "source": "osm",
       "source-layer": "land_ohm_centroids",
@@ -6563,7 +6563,7 @@
       }
     },
     {
-      "id": "county_labels_z11-admin6-centroids",
+      "id": "county_labels_z11_admin6_centroids",
       "type": "symbol",
       "source": "osm",
       "source-layer": "land_ohm_centroids",
@@ -6937,7 +6937,7 @@
       }
     },
     {
-      "id": "country_points_labels-cen",
+      "id": "country_points_labels_cen",
       "type": "symbol",
       "source": "osm",
       "source-layer": "land_ohm_centroids",
