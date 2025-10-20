@@ -5901,7 +5901,17 @@
         ["<", ["get", "area_m2"], 100000000]
       ],
       "layout": {
-        "text-size": 12,
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          10,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
         "text-field": ["get", "name"],
         "text-font": ["OpenHistorical"]
       },
@@ -6417,7 +6427,7 @@
       "source-layer": "transport_points_centroids",
       "minzoom": 12,
       "maxzoom": 24,
-      "filter": ["all"],
+      "filter": ["!=", ["get", "type"], "traffic_signals"],
       "layout": {
         "icon-image": "{type}-18",
         "visibility": "visible",
@@ -6435,6 +6445,31 @@
         "text-halo-width": 0.5,
         "text-halo-blur": 1,
         "text-opacity": ["interpolate", ["linear"], ["zoom"], 12.99, 0, 13, 1]
+      }
+    },
+    {
+      "id": "transport_points_centroids_traffic_signals",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "transport_points_centroids",
+      "minzoom": 17,
+      "maxzoom": 24,
+      "filter": ["==", ["get", "type"], "traffic_signals"],
+      "layout": {
+        "icon-image": "{type}-18",
+        "visibility": "visible",
+        "text-field": ["get", "name"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 10, 14, 18, 14],
+        "text-anchor": "top",
+        "text-offset": [0, 0.75],
+        "text-font": ["OpenHistorical"]
+      },
+      "paint": {
+        "icon-color": "#000000",
+        "text-color": "rgba(80, 80, 80, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5,
+        "text-halo-blur": 1
       }
     },
     {
