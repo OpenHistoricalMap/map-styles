@@ -5926,7 +5926,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
-      "minzoom": 6,
+      "minzoom": 7,
       "maxzoom": 12,
       "filter": [
         "all",
@@ -5934,7 +5934,7 @@
         [">=", ["get", "area_m2"], 100000000]
       ],
       "layout": {
-        "text-size": 24,
+        "text-size": [["interpolate", "linear"], ["zoom"], 7, 12, 8, 16, 9, 24, 12, 16],
         "text-field": ["get", "name"],
         "text-font": ["OpenHistorical"]
       },
