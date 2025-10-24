@@ -192,7 +192,7 @@
       "paint": {"fill-color": "rgba(235, 235, 225, 1)"}
     },
     {
-      "id": "nature_reserve_fill",
+      "id": "nature_reserve_fill_6-24",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
@@ -210,20 +210,22 @@
           4,
           "rgba(168, 213, 159, .3)",
           5,
-          "rgba(183, 234, 163, .3)",
+         "rgba(228, 232, 224, .4)",
           7,
-          "rgba(180, 252, 174, .3)"
+          "rgba(228, 232, 224, .4)",
+          9,
+         "rgba(216, 227, 198, .5)"
         ],
         "fill-opacity": 1
       }
     },
     {
-      "id": "landuse_areas_allz",
+      "id": "landuse_areas_allz_6-12",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
       "minzoom": 6,
-      "maxzoom": 24,
+      "maxzoom": 12,
       "filter": [
         "in",
         ["get", "type"],
@@ -254,6 +256,11 @@
       "source-layer": "landuse_areas",
       "minzoom": 12,
       "maxzoom": 24,
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["residential", "retail", "industrial"]]
+      ],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
@@ -276,13 +283,18 @@
       }
     },
     {
-      "id": "landuse_areas_z12_underlying_land_designation",
+      "id": "landuse_areas_z12-24_underlying_land_designation",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
       "minzoom": 12,
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["park", "pitch", "golf_course"]]
+      ],
       "paint": {
         "fill-color": [
           "interpolate",
@@ -312,6 +324,11 @@
       "source-layer": "landuse_areas",
       "minzoom": 12,
       "maxzoom": 24,
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["quarry", "landfill", "brownfield", "commercial", "construction", "railway", "college", "school", "education", "university"]]
+      ],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
@@ -354,6 +371,11 @@
       "source-layer": "landuse_areas",
       "minzoom": 10,
       "maxzoom": 24,
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["heath", "meadow", "grass", "grassland", "beach", "desert", "basin", "salt_pond", "mud"]]
+      ],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
@@ -408,7 +430,11 @@
       "source-layer": "landuse_areas",
       "minzoom": 12,
       "maxzoom": 24,
-      "filter": ["all"],
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["forest", "wood", "scrub"]]
+      ],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
@@ -437,6 +463,11 @@
       "source-layer": "landuse_areas",
       "minzoom": 12,
       "maxzoom": 24,
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["farmland", "farmyard", "farm", "orchard", "vineyard", "allotments", "garden"]]
+      ],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
@@ -474,6 +505,11 @@
       "minzoom": 12,
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["village_green", "cemetary", "sports_centre", "stadium", "recreation_ground"]]
+      ],
       "paint": {
         "fill-color": [
           "interpolate",
@@ -520,6 +556,11 @@
       "source-layer": "landuse_areas",
       "minzoom": 12,
       "maxzoom": 24,
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["grave_yard", "picnic_site", "camp_site", "playground", "paitch", "track", "bleachers"]]
+      ],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
@@ -575,13 +616,15 @@
       }
     },
     {
-      "id": "landuse_naturereserveoutline",
+      "id": "landuse_nature_reserve_outline",
       "type": "line",
       "source": "osm",
       "source-layer": "landuse_areas",
       "minzoom": 6,
       "maxzoom": 24,
-      "filter": ["==", ["get", "type"], "nature_reserve"],
+      "filter": ["all",
+        ["==", ["get", "type"], "nature_reserve"],
+        [">=", ["get", "area"], 100000000]],
       "layout": {"visibility": "visible"},
       "paint": {
         "line-width": ["interpolate", ["linear"], ["zoom"], 10, 2, 20, 3],
@@ -727,7 +770,7 @@
       }
     },
     {
-      "id": "water_areas-ne",
+      "id": "water_areas_ne",
       "type": "fill",
       "source": "ne",
       "source-layer": "water_areas",
@@ -753,6 +796,11 @@
       "source-layer": "landuse_areas",
       "minzoom": 11,
       "maxzoom": 24,
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["salt_pond", "glacier", "reservoir", "swimming_pool", "wetland"]]
+      ],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
@@ -779,7 +827,7 @@
       }
     },
     {
-      "id": "wetlands_z11-pattern",
+      "id": "wetlands_z11_pattern",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
@@ -5539,7 +5587,7 @@
       }
     },
     {
-      "id": "water_areaslabels_z15",
+      "id": "water_areas_labels_z15",
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_areas_centroids",
@@ -5560,7 +5608,7 @@
       }
     },
     {
-      "id": "water_areaslabels_z12",
+      "id": "water_areas_labels_z12",
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_areas_centroids",
@@ -5582,7 +5630,7 @@
       }
     },
     {
-      "id": "water_pointlabels_ocean_sea",
+      "id": "water_point_labels_ocean_sea",
       "type": "symbol",
       "source": "osm",
       "source-layer": "place_points_centroids",
@@ -5614,7 +5662,7 @@
       }
     },
     {
-      "id": "water_areaslabels_z8",
+      "id": "water_areas_labels_z8",
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_areas_centroids",
@@ -5645,7 +5693,7 @@
       }
     },
     {
-      "id": "water_lineslabels-cliff",
+      "id": "water_lines_labels_cliff",
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_lines",
@@ -5668,7 +5716,7 @@
       }
     },
     {
-      "id": "water_lineslabels-dam",
+      "id": "water_lines_labels_dam",
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_lines",
@@ -5691,7 +5739,7 @@
       }
     },
     {
-      "id": "water_lineslabels",
+      "id": "water_lines_labels",
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_lines",
@@ -5717,7 +5765,7 @@
       }
     },
     {
-      "id": "landuse_areaslabels_park",
+      "id": "landuse_areas_labels_park",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -5764,7 +5812,7 @@
       }
     },
     {
-      "id": "landuse_areaslabels_farming",
+      "id": "landuse_areas_labels_farming",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -5798,7 +5846,7 @@
       }
     },
     {
-      "id": "landuse_areaslabels_forest",
+      "id": "landuse_areas_labels_forest",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -5817,13 +5865,74 @@
       }
     },
     {
-      "id": "landuse_areaslabels_nature_reserve",
+      "id": "landuse_areas_labels_nature_reserve",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_points_centroids",
+      "minzoom": 12,
+      "maxzoom": 16,
+      "filter": [
+        "all",
+        ["in", ["get", "type"], ["literal", ["nature_reserve"]]],
+        ["<", ["get", "area_m2"], 30000000]
+      ],
+      "layout": {
+        "text-size": 12,
+        "text-field": ["get", "name"],
+        "text-font": ["OpenHistorical"]
+      },
+      "paint": {
+        "text-color": "rgba(95, 107, 71, 1)",
+        "text-halo-color": "rgba(201, 213, 190, 1)",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "landuse_areas_labels_nature_reserve_med_10-14",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_points_centroids",
+      "minzoom": 10,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        ["in", ["get", "type"], ["literal", ["nature_reserve"]]],
+        [">=", ["get", "area_m2"], 30000000],
+        ["<", ["get", "area_m2"], 100000000]
+      ],
+      "layout": {
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          10,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "text-field": ["get", "name"],
+        "text-font": ["OpenHistorical"]
+      },
+      "paint": {
+        "text-color": "rgba(95, 107, 71, 1)",
+        "text-halo-color": "rgba(201, 213, 190, 1)",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "landuse_areas_labels_nature_reserve_xl",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
       "minzoom": 6,
       "maxzoom": 12,
-      "filter": ["in", ["get", "type"], ["literal", ["nature_reserve"]]],
+      "filter": [
+        "all",
+        ["in", ["get", "type"], ["literal", ["nature_reserve"]]],
+        [">=", ["get", "area_m2"], 100000000]
+      ],
       "layout": {
         "text-size": 24,
         "text-field": ["get", "name"],
@@ -5836,7 +5945,7 @@
       }
     },
     {
-      "id": "landuse_areaslabels_school",
+      "id": "landuse_areas_labels_school",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -5859,7 +5968,7 @@
       }
     },
     {
-      "id": "other_areaslabels_military",
+      "id": "other_areas_labels_military",
       "type": "symbol",
       "source": "osm",
       "source-layer": "other_points_centroids",
@@ -5878,7 +5987,7 @@
       }
     },
     {
-      "id": "landuse_areaslabels_z8glacier",
+      "id": "landuse_areas_labels_z8glacier",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -5961,7 +6070,7 @@
       }
     },
     {
-      "id": "points_of_interest_fromareasz14-centroids",
+      "id": "points_of_interest_fromareasz14_centroids",
       "type": "symbol",
       "source": "osm",
       "source-layer": "amenity_points_centroids",
@@ -6085,7 +6194,7 @@
       }
     },
     {
-      "id": "points_of_interest_amenity-centroids",
+      "id": "points_of_interest_amenity_centroids",
       "type": "symbol",
       "source": "osm",
       "source-layer": "amenity_points_centroids",
@@ -6318,7 +6427,7 @@
       "source-layer": "transport_points_centroids",
       "minzoom": 12,
       "maxzoom": 24,
-      "filter": ["all"],
+      "filter": ["!=", ["get", "type"], "traffic_signals"],
       "layout": {
         "icon-image": "{type}-18",
         "visibility": "visible",
@@ -6336,6 +6445,31 @@
         "text-halo-width": 0.5,
         "text-halo-blur": 1,
         "text-opacity": ["interpolate", ["linear"], ["zoom"], 12.99, 0, 13, 1]
+      }
+    },
+    {
+      "id": "transport_points_centroids_traffic_signals",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "transport_points_centroids",
+      "minzoom": 17,
+      "maxzoom": 24,
+      "filter": ["==", ["get", "type"], "traffic_signals"],
+      "layout": {
+        "icon-image": "{type}-18",
+        "visibility": "visible",
+        "text-field": ["get", "name"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 10, 14, 18, 14],
+        "text-anchor": "top",
+        "text-offset": [0, 0.75],
+        "text-font": ["OpenHistorical"]
+      },
+      "paint": {
+        "icon-color": "#000000",
+        "text-color": "rgba(80, 80, 80, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5,
+        "text-halo-blur": 1
       }
     },
     {
@@ -6435,7 +6569,7 @@
       }
     },
     {
-      "id": "points_fromlanduse-z14",
+      "id": "points_from_landuse_peaks",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -6457,11 +6591,15 @@
       }
     },
     {
-      "id": "points_fromlanduse",
+      "id": "points_from_landuse",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
       "minzoom": 16,
+       "filter": [
+        "!",
+        ["in", ["get", "type"], ["literal", ["nature_reserve", "forest", "wood", "coastline"]]]
+      ],     
       "layout": {
         "icon-image": "{type}-18",
         "text-font": ["OpenHistorical"],
@@ -6489,7 +6627,7 @@
       }
     },
     {
-      "id": "points_fromlanduseareas",
+      "id": "points_from_landuse_areas",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -6529,7 +6667,7 @@
       }
     },
     {
-      "id": "county_labels_z11-admin7_8-centroids",
+      "id": "county_labels_z11_admin7_8_centroids",
       "type": "symbol",
       "source": "osm",
       "source-layer": "land_ohm_centroids",
@@ -6563,7 +6701,7 @@
       }
     },
     {
-      "id": "county_labels_z11-admin6-centroids",
+      "id": "county_labels_z11_admin6_centroids",
       "type": "symbol",
       "source": "osm",
       "source-layer": "land_ohm_centroids",
@@ -6671,7 +6809,7 @@
       "filter": [
         "in",
         ["get", "type"],
-        ["literal", ["hamlet", "islet", "neighborhood", "suburb", "village"]]
+        ["literal", ["hamlet", "neighborhood", "suburb", "village"]]
       ],
       "layout": {
         "text-field": ["get", "name"],
@@ -6937,7 +7075,7 @@
       }
     },
     {
-      "id": "country_points_labels-cen",
+      "id": "country_points_labels_cen",
       "type": "symbol",
       "source": "osm",
       "source-layer": "land_ohm_centroids",
