@@ -5765,7 +5765,7 @@
       }
     },
     {
-      "id": "landuse_areas_labels_park",
+      "id": "landuse_areas_labels_park_small",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_points_centroids",
@@ -5793,7 +5793,7 @@
             ]
           ]
         ],
-        [">", ["get", "area"], 12000]
+        ["<", ["get", "area_m2"], 40000]
       ],
       "layout": {
         "text-field": ["get", "name"],
@@ -5808,6 +5808,93 @@
         "text-color": "rgba(85, 104, 42, 1)",
         "text-halo-color": "rgba(228, 235, 209, 1)",
         "text-halo-width": 1,
+        "icon-translate-anchor": "map"
+      }
+    },
+    {
+      "id": "landuse_areas_labels_park_medium",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_points_centroids",
+      "minzoom": 15,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "in",
+          ["get", "type"],
+          [
+            "literal",
+            [
+              "park",
+              "camp_site",
+              "recreation_ground",
+              "sports_centre",
+              "stadium",
+              "village_green"
+            ]
+          ]
+        ],
+        [">=", ["get", "area_m2"], 40000],
+        ["<", ["get", "area_m2"], 3000000]
+      ],
+      "layout": {
+        "text-field": ["get", "name"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 12, 14, 13, 20, 16, 16],
+        "visibility": "visible",
+        "icon-text-fit": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false,
+        "text-font": ["OpenHistorical"]
+      },
+      "paint": {
+        "text-color": "rgba(64, 64, 64, 1)",
+        "text-halo-color": "rgba(228, 235, 209, 1)",
+        "text-opacity": ["interpolate", ["linear"], ["zoom"], 14.99, 0, 15, 1, 17, 1, 19, 0.1],
+        "text-halo-width": 2,
+        "icon-translate-anchor": "map"
+      }
+    },
+    {
+      "id": "landuse_areas_labels_park_large",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_points_centroids",
+      "minzoom": 12,
+      "maxzoom": 15,
+      "filter": [
+        "all",
+        [
+          "in",
+          ["get", "type"],
+          [
+            "literal",
+            [
+              "park",
+              "camp_site",
+              "recreation_ground",
+              "sports_centre",
+              "stadium",
+              "village_green"
+            ]
+          ]
+        ],
+        [">=", ["get", "area_m2"], 3000000]
+      ],
+      "layout": {
+        "text-field": ["get", "name"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 12, 12, 13, 18, 16, 16],
+        "visibility": "visible",
+        "icon-text-fit": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false,
+        "text-font": ["OpenHistorical"]
+      },
+      "paint": {
+        "text-color": "rgba(85, 104, 42, 1)",
+        "text-halo-color": "rgba(228, 235, 209, 1)",
+        "text-opacity": ["interpolate", ["linear"], ["zoom"], 13.99, 1, 15, 0],
+        "text-halo-width": 2,
         "icon-translate-anchor": "map"
       }
     },
@@ -5934,7 +6021,7 @@
         [">=", ["get", "area_m2"], 100000000]
       ],
       "layout": {
-        "text-size": [["interpolate", "linear"], ["zoom"], 7, 12, 8, 16, 9, 24, 12, 16],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 7, 12, 8, 16, 9, 24, 12, 14],
         "text-field": ["get", "name"],
         "text-font": ["OpenHistorical"]
       },
