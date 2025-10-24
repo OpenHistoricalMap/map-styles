@@ -5329,7 +5329,7 @@
       }
     },
     {
-      "id": "city_county_lines_admin7_8",
+      "id": "city_county_lines_admin_7-8",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
@@ -5348,7 +5348,7 @@
       }
     },
     {
-      "id": "admin_admin5_6",
+      "id": "admin_admin_5-6",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
@@ -5375,7 +5375,7 @@
       }
     },
     {
-      "id": "state_lines_admin4-case",
+      "id": "state_lines_admin_4-case",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
@@ -5405,7 +5405,7 @@
       }
     },
     {
-      "id": "state_lines_admin4",
+      "id": "state_lines_admin_4",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
@@ -5463,7 +5463,7 @@
       }
     },
     {
-      "id": "admin_countrylines_z10_case",
+      "id": "admin_country_lines_z10_case",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
@@ -5491,7 +5491,7 @@
       }
     },
     {
-      "id": "admin_countrylines_z10",
+      "id": "admin_country_lines_z10",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
@@ -5537,7 +5537,7 @@
       }
     },
     {
-      "id": "roadlabels_z14",
+      "id": "road_labels_z14",
       "type": "symbol",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -5562,7 +5562,7 @@
       }
     },
     {
-      "id": "roadlabels_z11",
+      "id": "road_labels_z11",
       "type": "symbol",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -6148,7 +6148,7 @@
       }
     },
     {
-      "id": "points_of_interest_frombuildings",
+      "id": "points_of_interest_from_buildings",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buildings_points_centroids",
@@ -6173,7 +6173,7 @@
       }
     },
     {
-      "id": "points_of_interest_fromareasz14_centroids",
+      "id": "points_of_interest_from_areas_z14_centroids",
       "type": "symbol",
       "source": "osm",
       "source-layer": "amenity_points_centroids",
@@ -6217,7 +6217,7 @@
       }
     },
     {
-      "id": "points_of_interest_fromareasz14",
+      "id": "points_of_interest_from_areas_z14",
       "type": "symbol",
       "source": "osm",
       "source-layer": "amenity_points_centroids",
@@ -6261,7 +6261,7 @@
       }
     },
     {
-      "id": "points_of_interest_fromareas",
+      "id": "points_of_interest_from_areas",
       "type": "symbol",
       "source": "osm",
       "source-layer": "amenity_points_centroids",
@@ -6718,7 +6718,7 @@
       }
     },
     {
-      "id": "county_labels_z11_admin7_8_centroids",
+      "id": "county_labels_z11_admin_7-8_centroids",
       "type": "symbol",
       "source": "osm",
       "source-layer": "land_ohm_centroids",
@@ -6752,7 +6752,7 @@
       }
     },
     {
-      "id": "county_labels_z11_admin6_centroids",
+      "id": "county_labels_z11_admin_6_centroids",
       "type": "symbol",
       "source": "osm",
       "source-layer": "land_ohm_centroids",
