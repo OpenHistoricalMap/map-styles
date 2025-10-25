@@ -6158,7 +6158,7 @@
         "icon-image": "{tourism}-18",
         "visibility": "visible",
         "text-field": ["get", "name"],
-        "text-size": ["interpolate", ["linear"], ["zoom"], 16, 10, 20, 12],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 16, 12, 17, 14, 20, 16],
         "text-anchor": "center",
         "text-offset": [0, 0],
         "text-font": ["OpenHistorical"],
@@ -6524,13 +6524,13 @@
       }
     },
     {
-      "id": "transport_points_centroids",
+      "id": "transport_points_labels",
       "type": "symbol",
       "source": "osm",
       "source-layer": "transport_points_centroids",
       "minzoom": 12,
       "maxzoom": 24,
-      "filter": ["!=", ["get", "type"], "traffic_signals"],
+      "filter": ["!", ["in", ["get", "type"], ["literal", ["traffic_signals", "pedestrian"]]]],
       "layout": {
         "icon-image": "{type}-18",
         "visibility": "visible",
@@ -6551,7 +6551,7 @@
       }
     },
     {
-      "id": "transport_points_centroids_traffic_signals",
+      "id": "transport_points_labels_traffic_signals",
       "type": "symbol",
       "source": "osm",
       "source-layer": "transport_points_centroids",
@@ -6576,7 +6576,32 @@
       }
     },
     {
-      "id": "points_airport",
+      "id": "transport_points_labels_pedestrian",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "transport_points_centroids",
+      "minzoom": 17,
+      "maxzoom": 24,
+      "filter": ["==", ["get", "type"], "pedestrian"],
+      "layout": {
+        "icon-image": "{type}-18",
+        "visibility": "visible",
+        "text-field": ["get", "name"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 10, 14, 18, 14],
+        "text-anchor": "top",
+        "text-offset": [0, 0.75],
+        "text-font": ["OpenHistorical"]
+      },
+      "paint": {
+        "icon-color": "#000000",
+        "text-color": "rgba(80, 80, 80, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5,
+        "text-halo-blur": 1
+      }
+    },
+    {
+      "id": "transport_points_labels_airports",
       "type": "symbol",
       "source": "osm",
       "source-layer": "transport_points_centroids",
@@ -6589,7 +6614,7 @@
         "text-font": ["OpenHistorical"]}
     },
     {
-      "id": "med_transport_points_centroids",
+      "id": "transport_points_labels_medium",
       "type": "symbol",
       "source": "osm",
       "source-layer": "transport_points_centroids",
@@ -6613,7 +6638,7 @@
       }
     },
     {
-      "id": "large_transport_points_centroids",
+      "id": "transport_area_labels_large",
       "type": "symbol",
       "source": "osm",
       "source-layer": "transport_points_centroids",
@@ -6637,7 +6662,7 @@
       }
     },
     {
-      "id": "points_placeofworshipother",
+      "id": "points_place_of_worship_other",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buildings_points_centroids",
