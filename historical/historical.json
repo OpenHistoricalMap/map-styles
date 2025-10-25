@@ -220,7 +220,7 @@
       }
     },
     {
-      "id": "landuse_areas_allz_6-12",
+      "id": "landuse_areas_all_z6-12",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
@@ -365,11 +365,11 @@
       }
     },
     {
-      "id": "landuse_areas_z12_landcover_short",
+      "id": "landuse_areas_landcover_short",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
-      "minzoom": 10,
+      "minzoom": 6,
       "maxzoom": 24,
       "filter": [
         "in",
@@ -498,11 +498,11 @@
       }
     },
     {
-      "id": "landuse_areas_z12_developed_open_space_larger",
+      "id": "landuse_areas_developed_open_space_larger",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
-      "minzoom": 12,
+      "minzoom": 6,
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
       "filter": [
@@ -5877,7 +5877,7 @@
       "source": "osm",
       "source-layer": "landuse_points_centroids",
       "minzoom": 12,
-      "maxzoom": 15,
+      "maxzoom": 16,
       "filter": [
         "all",
         [
@@ -5899,7 +5899,7 @@
       ],
       "layout": {
         "text-field": ["get", "name"],
-        "text-size": ["interpolate", ["linear"], ["zoom"], 12, 12, 13, 18, 16, 16],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 12, 12, 16, 24],
         "visibility": "visible",
         "icon-text-fit": "none",
         "text-allow-overlap": false,
@@ -5909,7 +5909,7 @@
       "paint": {
         "text-color": "rgba(85, 104, 42, 1)",
         "text-halo-color": "rgba(228, 235, 209, 1)",
-        "text-opacity": ["interpolate", ["linear"], ["zoom"], 13.99, 1, 15, 0],
+        "text-opacity": ["interpolate", ["linear"], ["zoom"], 15.5, 1, 15.99, 0],
         "text-halo-width": 2,
         "icon-translate-anchor": "map"
       }
@@ -6148,7 +6148,7 @@
       }
     },
     {
-      "id": "points_of_interest_from_buildings",
+      "id": "points_of_interest_buildings",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buildings_points_centroids",
@@ -6375,30 +6375,6 @@
         "text-translate-anchor": "viewport",
         "icon-translate-anchor": "viewport",
         "text-opacity": ["interpolate", ["linear"], ["zoom"], 16.99, 0, 17, 1]
-      }
-    },
-    {
-      "id": "points_of_interest_amenity_14",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "amenity_points_centroids",
-      "minzoom": 14,
-      "maxzoom": 16,
-      "filter": ["all"],
-      "layout": {
-        "icon-image": "{type}-18",
-        "visibility": "visible",
-        "text-field": ["get", "name"],
-        "text-size": 8,
-        "text-anchor": "top",
-        "text-offset": [0, 1],
-        "text-font": ["OpenHistorical"]
-      },
-      "paint": {
-        "text-color": "rgba(80, 80, 80, 1)",
-        "text-halo-color": "rgba(255, 255, 255, 1)",
-        "text-halo-width": 0.5,
-        "text-halo-blur": 1
       }
     },
     {
