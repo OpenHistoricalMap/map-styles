@@ -283,7 +283,7 @@
       }
     },
     {
-      "id": "landuse_areas_z12-24_underlying_land_designation",
+      "id": "landuse_areas_underlying_land_designation",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
@@ -550,7 +550,7 @@
       }
     },
     {
-      "id": "landuse_areas_z12_developed_open_space_smaller",
+      "id": "landuse_areas_developed_open_space_smaller",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
@@ -6345,7 +6345,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "amenity_points_centroids",
-      "minzoom": 15,
+      "minzoom": 16,
       "maxzoom": 24,
       "layout": {
         "text-line-height": 1.2,
