@@ -2077,7 +2077,7 @@
         ["!=", ["get", "capital"], "yes"]
       ],
       "layout": {
-        "text-field": ["to-string", ["get", "name"]],
+        "text-field": ["get", "name"],
         "text-font": ["BernerBasisschrift"],
         "text-transform": "uppercase",
         "text-size": ["interpolate", ["linear"], ["zoom"], 6, 13, 10, 15],
@@ -2117,7 +2117,7 @@
         ["==", ["get", "capital"], "yes"]
       ],
       "layout": {
-        "text-field": ["to-string", ["get", "name"]],
+        "text-field": ["get", "name"],
         "text-font": ["BernerBasisschrift"],
         "text-transform": "uppercase",
         "text-size": ["interpolate", ["linear"], ["zoom"], 6, 16, 10, 20],
@@ -2159,7 +2159,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "text-field": ["to-string", ["get", "name"]],
+        "text-field": ["get", "name"],
         "text-font": ["BernerBasisschrift"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 6, 15, 10, 18],
         "text-line-height": 0.8,
@@ -2187,7 +2187,7 @@
       "filter": ["in", ["get", "type"], ["literal", ["state", "territory"]]],
       "layout": {
         "visibility": "visible",
-        "text-field": ["to-string", ["get", "name"]],
+        "text-field": ["get", "name"],
         "text-font": ["BernerBasisschrift"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 6, 15, 10, 18],
         "text-line-height": 0.8,
@@ -2219,7 +2219,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "text-field": ["to-string", ["get", "name"]],
+        "text-field": ["get", "name"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 4, 16, 6, 15],
         "text-font": ["BernerBasisschrift"],
         "symbol-placement": "point",
@@ -2249,7 +2249,7 @@
       "filter": ["==", ["get", "type"], "country"],
       "layout": {
         "visibility": "visible",
-        "text-field": ["to-string", ["get", "name"]],
+        "text-field": ["get", "name"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 4, 16, 6, 15],
         "text-font": ["BernerBasisschrift"],
         "symbol-placement": "point",
