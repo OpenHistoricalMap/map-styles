@@ -79,8 +79,8 @@ Miscellaneous notes:
 
 1. ensure your local `staging` branch of `ohm-website` is current using `git pull`
 1. create a release branch from `staging`, e.g., `git checkout -b map-styles-0.9.7`
-1. log in to the Docker container and start a bash shell
-1. run `yarn upgrade` and verify, using the output, that the correct version has been installed. Note that the `map-styles` version is specified with the `^` operator so that our `package.json` will need to be updated for a **major version release**, e.g., to `1.x` from `0.9.x`
+1. log in to the `ohm-website-web-1` Docker container and start a bash shell
+1. run `yarn upgrade @openhistoricalmap/map-styles` and verify, using the output, that the correct version has been installed. Note that the `map-styles` version is specified with the `^` operator so that our `package.json` will need to be updated for a **major version release**, e.g., to `1.x` from `0.9.x`
     ```
     Rebuilding all packages...
     success Saved lockfile.
