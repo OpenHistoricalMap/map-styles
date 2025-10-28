@@ -3643,11 +3643,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "BernerBasisschrift"
@@ -3733,11 +3730,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "BernerBasisschrift"
@@ -3825,11 +3819,8 @@
       "layout": {
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "BernerBasisschrift"
@@ -3886,11 +3877,8 @@
       "layout": {
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "BernerBasisschrift"
@@ -3952,11 +3940,8 @@
       "layout": {
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": [
           "interpolate",
@@ -4009,11 +3994,8 @@
       "layout": {
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": [
           "interpolate",

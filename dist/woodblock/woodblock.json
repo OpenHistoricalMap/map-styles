@@ -3783,11 +3783,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "Eadui"
@@ -3872,11 +3869,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "Eadui"
@@ -3962,11 +3956,8 @@
       "layout": {
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "Eadui"
@@ -4022,11 +4013,8 @@
       "layout": {
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "Eadui"
@@ -4087,11 +4075,8 @@
       "layout": {
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": [
           "interpolate",
@@ -4146,11 +4131,8 @@
       "layout": {
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": [
           "interpolate",

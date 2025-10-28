@@ -11306,11 +11306,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "symbol-placement": "line",
         "symbol-spacing": 250,
@@ -11353,11 +11350,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "symbol-placement": "line",
         "symbol-spacing": 250,
@@ -11394,11 +11388,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "symbol-placement": "line",
         "symbol-spacing": 250,
@@ -11449,11 +11440,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical Italic"
@@ -11497,11 +11485,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical Italic"
@@ -11552,11 +11537,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical Italic"
@@ -11603,11 +11585,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical Italic"
@@ -11656,11 +11635,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical Italic"
@@ -11711,11 +11687,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical Italic"
@@ -11772,11 +11745,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical Italic"
@@ -11851,11 +11821,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": [
           "interpolate",
@@ -11913,11 +11880,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": 11,
         "text-font": [
@@ -11955,11 +11919,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": 11,
         "text-font": [
@@ -11999,11 +11960,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": 11,
         "text-font": [
@@ -12043,11 +12001,8 @@
       "layout": {
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": 9,
         "text-anchor": "center",
@@ -12091,11 +12046,8 @@
         ],
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": [
           "interpolate",
@@ -12181,11 +12133,8 @@
         ],
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": 8,
         "text-anchor": "top",
@@ -12226,11 +12175,8 @@
         ],
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": [
           "interpolate",
@@ -12310,11 +12256,8 @@
         ],
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": 8,
         "text-anchor": "top",
@@ -12355,11 +12298,8 @@
         ],
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": [
           "interpolate",
@@ -12453,11 +12393,8 @@
         ],
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": [
           "interpolate",
@@ -12550,11 +12487,8 @@
         ],
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": [
           "interpolate",
@@ -12639,11 +12573,8 @@
         ],
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": [
           "interpolate",
@@ -12777,11 +12708,8 @@
         "icon-image": "railstation-18",
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": [
           "interpolate",
@@ -12866,11 +12794,8 @@
         ],
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": [
           "interpolate",
@@ -13027,11 +12952,8 @@
           "OpenHistorical"
         ],
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": 8,
         "text-anchor": "top",
@@ -13066,11 +12988,8 @@
           "OpenHistorical"
         ],
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": [
           "interpolate",
@@ -13177,11 +13096,8 @@
         ],
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": 8,
         "text-anchor": "top",
@@ -13228,11 +13144,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical"
@@ -13286,11 +13199,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical"
@@ -13349,11 +13259,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical"
@@ -13404,11 +13311,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical"
@@ -13459,11 +13363,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical"
@@ -13520,11 +13421,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical"
@@ -13590,11 +13488,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical"
@@ -13661,11 +13556,8 @@
       "layout": {
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical"
@@ -13724,11 +13616,8 @@
       "layout": {
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical"
@@ -13780,11 +13669,8 @@
       ],
       "layout": {
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-font": [
           "OpenHistorical Bold"
@@ -13829,11 +13715,8 @@
       "layout": {
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": [
           "interpolate",
@@ -13888,11 +13771,8 @@
       "layout": {
         "visibility": "visible",
         "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
+          "get",
+          "name"
         ],
         "text-size": [
           "interpolate",
