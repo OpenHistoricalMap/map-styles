@@ -4693,11 +4693,11 @@
       }
     },
     {
-      "id": "roads_rail-spur",
+      "id": "roads_rail_spur",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 0,
+      "minzoom": 10,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -4728,21 +4728,21 @@
           "interpolate",
           ["linear"],
           ["zoom"],
-          12,
-          0.5,
+          10,
+          2,
           14,
-          0.75,
+          3,
           20,
-          2
+          4
         ]
       }
     },
     {
-      "id": "roads_rail-spur-tick",
+      "id": "roads_rail_spur_tick",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 13,
+      "minzoom": 10,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -4766,17 +4766,17 @@
           ["linear"],
           ["zoom"],
           13,
-          "#DBDBDB",
+          "rgba(168, 168, 168, 1)",
           14,
-          "#949599"
+          "rgba(148, 149, 153, 1)"
         ],
-        "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1, 20, 6],
+        "line-width": ["interpolate", ["linear"], ["zoom"], 10, 6, 20, 8],
         "line-dasharray": [
           "step",
           ["zoom"],
-          ["literal", [0.15, 3]],
+          ["literal", [0, 0.3, 0.2, 0.3]],
           16,
-          ["literal", [0.15, 2]]
+          ["literal", [0.8, 14]]
         ]
       }
     },
