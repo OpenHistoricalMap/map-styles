@@ -1119,7 +1119,7 @@
       "paint": {"line-color": "rgba(255, 255, 255, 1)", "line-width": 3}
     },
     {
-      "id": "roads_tertiarytunnel_case_construction",
+      "id": "roads_tertiary_tunnel_case_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -1131,7 +1131,7 @@
         ["==", ["get", "construction"], "tertiary"]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1150,7 +1150,7 @@
       }
     },
     {
-      "id": "roads_secondarytunnel_case_construction",
+      "id": "roads_secondary_tunnel_case_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -1162,7 +1162,7 @@
         ["==", ["get", "construction"], "secondary"]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1181,7 +1181,7 @@
       }
     },
     {
-      "id": "roads_primarytunnel_case_construction",
+      "id": "roads_primary_tunnel_case_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -1194,7 +1194,7 @@
         ["==", ["get", "construction"], "primary"]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1213,7 +1213,7 @@
       }
     },
     {
-      "id": "roads_motorwaytunnel_case_construction",
+      "id": "roads_motorway_tunnel_case_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -1230,7 +1230,7 @@
         ]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1249,7 +1249,7 @@
       }
     },
     {
-      "id": "roads_tertiarytunnel_construction",
+      "id": "roads_tertiary_tunnel_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -1261,7 +1261,7 @@
         ["==", ["get", "construction"], "tertiary"]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1279,7 +1279,7 @@
       }
     },
     {
-      "id": "roads_secondarytunnel_construction",
+      "id": "roads_secondary_tunnel_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -1291,7 +1291,7 @@
         ["==", ["get", "construction"], "secondary"]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1309,7 +1309,7 @@
       }
     },
     {
-      "id": "roads_primarytunnel_construction",
+      "id": "roads_primary_tunnel_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -1321,7 +1321,7 @@
         ["==", ["get", "construction"], "primary"]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1339,7 +1339,7 @@
       }
     },
     {
-      "id": "roads_motorwaytunnel_construction",
+      "id": "roads_motorway_tunnel_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -1356,7 +1356,7 @@
         ]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1385,7 +1385,7 @@
         ["in", ["get", "type"], ["literal", ["construction"]]],
         ["==", ["get", "construction"], "raceway"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "line-color": "rgba(255, 249, 241, 1)",
         "line-width": [
@@ -1401,7 +1401,7 @@
       }
     },
     {
-      "id": "roads_trackfillcase_construction",
+      "id": "roads_track_fillcase_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -1412,7 +1412,7 @@
         ["==", ["get", "type"], "construction"],
         ["==", ["get", "construction"], "track"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "line-color": "#b3b3b3",
         "line-width": [
@@ -1427,7 +1427,7 @@
       }
     },
     {
-      "id": "roads_trackfill_construction",
+      "id": "roads_track_fill_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -1438,7 +1438,7 @@
         ["==", ["get", "type"], "construction"],
         ["==", ["get", "construction"], "track"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "line-color": "rgba(251, 247, 245, 1)",
         "line-width": [
@@ -1464,7 +1464,7 @@
         ["==", ["get", "type"], "construction"],
         ["==", ["get", "construction"], "track"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "line-color": "#b3b3b3",
         "line-dasharray": [0.3, 1],
@@ -1491,7 +1491,7 @@
         ["in", ["get", "type"], ["literal", ["construction"]]],
         ["in", ["get", "construction"], ["literal", ["living_street"]]]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-width": [
@@ -1517,7 +1517,7 @@
         ["in", ["get", "type"], ["literal", ["construction"]]],
         ["==", ["get", "construction"], "pedestrian"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "line-color": "#ffffff",
         "line-width": [
@@ -1548,7 +1548,7 @@
         ]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "square",
         "line-join": "round"
       },
@@ -1578,7 +1578,7 @@
         ["==", ["get", "type"], "construction"],
         ["==", ["get", "construction"], "pier"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "line-color": "#ffffff",
         "line-width": [
@@ -1604,7 +1604,7 @@
         ["in", ["get", "type"], ["literal", ["construction"]]],
         ["in", ["get", "construction"], ["literal", ["steps"]]]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "line-color": "#b3b3b3",
         "line-width": [
@@ -1620,7 +1620,7 @@
       }
     },
     {
-      "id": "roads_roadscase_z13_construction",
+      "id": "roads_case_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -1633,7 +1633,7 @@
         ["in", ["get", "construction"], ["literal", ["road"]]]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1651,7 +1651,7 @@
       }
     },
     {
-      "id": "roads_residentialcase_z13_construction",
+      "id": "roads_residential_case_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -1668,7 +1668,7 @@
         ]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1686,7 +1686,7 @@
       }
     },
     {
-      "id": "roads_tertiary-case_construction",
+      "id": "roads_tertiary_case_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -1700,7 +1700,7 @@
         ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1718,7 +1718,7 @@
       }
     },
     {
-      "id": "roads_secondary-case_construction",
+      "id": "roads_secondary_case_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -1731,7 +1731,7 @@
         ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1749,7 +1749,7 @@
       }
     },
     {
-      "id": "roads_primarylink-case_construction",
+      "id": "roads_primary_link_case_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -1762,7 +1762,7 @@
         ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1794,7 +1794,7 @@
         ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1830,7 +1830,7 @@
         ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1862,7 +1862,7 @@
         ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1892,7 +1892,7 @@
         ["in", ["get", "construction"], ["literal", ["road"]]]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1911,7 +1911,7 @@
       }
     },
     {
-      "id": "roads_residential_construction-copy",
+      "id": "roads_residential_construction_copy",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -1927,7 +1927,7 @@
         ]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1962,7 +1962,7 @@
         ]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -1994,7 +1994,7 @@
         ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2021,7 +2021,7 @@
       }
     },
     {
-      "id": "roads_primarylink_construction",
+      "id": "roads_primary_link_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -2034,7 +2034,7 @@
         ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2071,7 +2071,7 @@
         ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2104,7 +2104,7 @@
         ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2144,7 +2144,7 @@
         ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2185,7 +2185,7 @@
         ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2218,7 +2218,7 @@
         ["!=", ["get", "bridge"], 1]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2243,7 +2243,7 @@
       "source-layer": "transport_lines",
       "minzoom": 9,
       "filter": ["==", ["get", "ford"], "yes"],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "line-color": "#ffffff",
         "line-width": [
@@ -2259,7 +2259,7 @@
       }
     },
     {
-      "id": "roads_residential_bridge_z13-copy_construction",
+      "id": "roads_residential_bridge_construction_copy",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -2276,7 +2276,7 @@
         ]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "butt",
         "line-join": "round"
       },
@@ -2294,7 +2294,7 @@
       }
     },
     {
-      "id": "roads_tertiarybridge_construction",
+      "id": "roads_tertiary_bridge_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -2306,7 +2306,7 @@
         ["==", ["get", "construction"], "tertiary"]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2324,7 +2324,7 @@
       }
     },
     {
-      "id": "roads_secondarybridge_construction",
+      "id": "roads_secondary_bridge_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -2336,7 +2336,7 @@
         ["==", ["get", "construction"], "secondary"]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "butt",
         "line-join": "round"
       },
@@ -2354,7 +2354,7 @@
       }
     },
     {
-      "id": "roads_primarybridge_construction",
+      "id": "roads_primary_bridge_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -2372,7 +2372,7 @@
       ],
       "layout": {
         "line-cap": "round",
-        "visibility": "visible",
+        "visibility": "none",
         "line-join": "round"
       },
       "paint": {
@@ -2389,7 +2389,7 @@
       }
     },
     {
-      "id": "roads_motorwaybridge_construction",
+      "id": "roads_motorway_bridge_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -2406,7 +2406,7 @@
         ]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2424,7 +2424,7 @@
       }
     },
     {
-      "id": "roads_residential_bridgetop_z13_construction",
+      "id": "roads_residential_bridge_top_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -2441,7 +2441,7 @@
         ]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2460,7 +2460,7 @@
       }
     },
     {
-      "id": "roads_tertiarybridgetop_construction",
+      "id": "roads_tertiary_bridge_top_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -2473,7 +2473,7 @@
         ["==", ["get", "construction"], "tertiary"]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2500,7 +2500,7 @@
       }
     },
     {
-      "id": "roads_secondarybridgetop_construction",
+      "id": "roads_secondary_bridge_top_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -2512,7 +2512,7 @@
         ["==", ["get", "construction"], "secondary"]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2539,7 +2539,7 @@
       }
     },
     {
-      "id": "roads_primarybridgetop_construction",
+      "id": "roads_primary_bridge_top_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -2551,7 +2551,7 @@
         ["in", ["get", "construction"], ["literal", ["primary"]]]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -2570,7 +2570,7 @@
       }
     },
     {
-      "id": "roads_motorwaybridgetop_construction",
+      "id": "roads_motorway_bridge_top_construction",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -2587,7 +2587,7 @@
         ]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
