@@ -453,11 +453,11 @@
       }
     },
     {
-      "id": "landuse_areas_z12_food_and_farming",
+      "id": "landuse_areas_ood_and_farming",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
-      "minzoom": 12,
+      "minzoom": 6,
       "maxzoom": 24,
       "filter": [
         "in",
@@ -494,7 +494,7 @@
       }
     },
     {
-      "id": "landuse_areas_developed_open_space_larger",
+      "id": "landuse_areas_developed_open_space_larger_types",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
@@ -546,7 +546,7 @@
       }
     },
     {
-      "id": "landuse_areas_developed_open_space_smaller",
+      "id": "landuse_areas_developed_open_space_smaller_types",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
