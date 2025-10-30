@@ -4373,7 +4373,7 @@
       }
     },
     {
-      "id": "roads_motorwaybridgetop",
+      "id": "roads_motorway_bridgetop",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -4601,7 +4601,14 @@
       },
       "paint": {
         "line-color": "rgba(90, 96, 100, 1)",
-        "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1.5, 6, 1.8, 7, 5, 8, 7, 20, 12]
+        "line-width": ["interpolate", ["linear"], ["zoom"], 5, 1.5, 6, 1.8, 7, 5, 8, 6, 14, 3, 16, 3, 19.99, 5, 20, 2],
+        "line-gap-width": [
+          "step",
+          ["zoom"],
+          0,
+          20,
+          12
+        ]
       }
     },
     {
@@ -4626,8 +4633,13 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(255, 255, 255, 1)",
-        "line-width": ["interpolate", ["linear"], ["zoom"], 5, 0.5, 6, 0.8, 7, 2.5, 8, 4, 20, 9],
+        "line-color": [
+          "step",
+          ["zoom"],
+          "rgba(255, 255, 255, 1)",
+          20,
+          "rgba(0, 0, 0, 1)"],
+        "line-width": ["interpolate", ["linear"], ["zoom"], 5, 0.5, 6, 0.8, 7, 2.5, 8, 3, 14, 1, 16, 1, 19.99, 3, 20, 24],
         "line-dasharray": [
           "step",
           ["zoom"],
@@ -4635,16 +4647,18 @@
           11,
           ["literal", [0.75, 2.5]],
           14,
-          ["literal", [0.75, 3]]
+          ["literal", [0.75, 3]],
+          20,
+          ["literal", [0.1, 0.1]]
         ]
       }
     },
     {
-      "id": "roads_rail-yard-siding",
+      "id": "roads_rail_yard_siding",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 7,
+      "minzoom": 10,
       "maxzoom": 24,
       "filter": ["in", ["get", "service"], ["literal", ["siding", "yard"]]],
       "layout": {
@@ -4653,7 +4667,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(168, 168, 168, 1)",
+        "line-color": "rgba(128, 128, 128, 1)",
         "line-width": [
           "interpolate",
           ["linear"],
@@ -4661,18 +4675,18 @@
           12,
           0.5,
           14,
-          0.75,
-          20,
+          0.5,
+          18,
           2
         ]
       }
     },
     {
-      "id": "roads_rail-yard-siding-tick",
+      "id": "roads_rail_yard_siding_tick",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 13,
+      "minzoom": 21,
       "maxzoom": 24,
       "filter": ["in", ["get", "service"], ["literal", ["siding", "yard"]]],
       "layout": {
@@ -4682,7 +4696,7 @@
       },
       "paint": {
         "line-color": "rgba(174, 175, 176, 1)",
-        "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1, 20, 6],
+        "line-width": ["interpolate", ["linear"], ["zoom"], 18, 6, 20, 8],
         "line-dasharray": [
           "step",
           ["zoom"],
@@ -4697,17 +4711,17 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 10,
+      "minzoom": 11,
       "maxzoom": 24,
       "filter": [
         "all",
+        ["==", ["get", "service"], "spur"],
         [
           "in",
           ["get", "type"],
           ["literal", ["light_rail", "preserved", "rail"]]
         ],
-        ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]],
-        ["==", ["get", "service"], "spur"]
+        ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]]
       ],
       "layout": {
         "visibility": "visible",
@@ -4719,21 +4733,19 @@
           "interpolate",
           ["linear"],
           ["zoom"],
-          13,
-          "rgba(168, 168, 168, 1)",
-          14,
+          11,
+          "rgba(168, 168, 168, .5)",
+          16,
           "rgba(148, 149, 153, 1)"
         ],
         "line-width": [
           "interpolate",
           ["linear"],
           ["zoom"],
-          10,
-          2,
-          14,
-          3,
+          11,
+          0.5,
           20,
-          4
+          2
         ]
       }
     },
@@ -4742,7 +4754,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
-      "minzoom": 10,
+      "minzoom": 21,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -5111,7 +5123,7 @@
         ["in", ["get", "type"], ["literal", ["preserved", "rail"]]],
         [
           "!",
-          ["in", ["get", "service"], ["literal", ["siding", "spur", "yard"]]]
+          ["in", ["get", "service"], ["literal", ["siding", "spur", "yard", "crossover"]]]
         ],
         ["!=", ["get", "usage"], "main"],
         ["!=", ["get", "usage"], "industrial"],
@@ -5145,7 +5157,7 @@
         ["in", ["get", "type"], ["literal", ["preserved", "rail"]]],
         [
           "!",
-          ["in", ["get", "service"], ["literal", ["siding", "spur", "yard", ""]]]
+          ["in", ["get", "service"], ["literal", ["siding", "spur", "yard", "crossover"]]]
         ],
         ["!=", ["get", "usage"], "main"],
         ["!=", ["get", "usage"], "industrial"],
