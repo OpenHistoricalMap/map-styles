@@ -131,18 +131,28 @@
       }
     },
     {
-      "id": "airports",
+      "id": "airports_apron",
       "type": "fill",
       "source": "osm",
       "source-layer": "transport_areas",
-      "minzoom": 12,
+      "minzoom": 10,
       "maxzoom": 24,
       "filter": ["==", ["get", "type"], "apron"],
       "layout": {"visibility": "none"},
       "paint": {"fill-color": "rgba(221, 221, 221, 1)"}
     },
     {
-      "id": "landuse_areas_z12_generalized_land_use",
+      "id": "railyard",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(192, 191, 234, .3)"}
+    },
+    {
+      "id": "landuse_areas_generalized_land_use",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
@@ -170,7 +180,7 @@
       }
     },
     {
-      "id": "landuse_areas_z12_underlying_land_designation",
+      "id": "landuse_areas_underlying_land_designation",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
@@ -5795,7 +5805,7 @@
       }
     },
     {
-      "id": "water_lineslabels",
+      "id": "water_lines_labels",
       "type": "symbol",
       "source": "osm",
       "source-layer": "water_lines",
@@ -5821,7 +5831,7 @@
       }
     },
     {
-      "id": "landuse_areaslabels_park",
+      "id": "landuse_areas_labels_park",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_areas",
