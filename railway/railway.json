@@ -149,7 +149,7 @@
       "minzoom": 10,
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(192, 191, 234, .3)"}
+      "paint": {"fill-color": "rgba(226, 227, 215, 1)"}
     },
     {
       "id": "landuse_areas_generalized_land_use",
@@ -959,7 +959,7 @@
       "filter": ["all"],
       "layout": {"visibility": "visible"},
       "paint": {
-        "fill-color": "rgba(241, 241, 241, 1)",
+        "fill-color": "rgba(177, 151, 187, 1)",
         "fill-outline-color": "rgba(206, 206, 206, 1)"
       }
     },
@@ -2722,7 +2722,7 @@
       }
     },
     {
-      "id": "roads_tertiarytunnel_case",
+      "id": "roads_tertiarytunnel_case_START",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -3267,7 +3267,7 @@
       }
     },
     {
-      "id": "roads_residentialcase_z13",
+      "id": "roads_residential_case",
       "type": "line",
       "source": "osm",
       "source-layer": "transport_lines",
@@ -3288,7 +3288,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#D2D2D5",
+        "line-color": "rgba(210, 210, 210, .5)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3505,7 +3505,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(176, 175, 173, 1)",
+        "line-color": "rgba(176, 175, 173, .5)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3596,7 +3596,7 @@
         ["!", ["in", ["get", "class"], ["literal", ["railway"]]]]
       ],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round"
       },
@@ -3632,7 +3632,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": "rgba(255, 255, 255, .5)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3754,7 +3754,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(240, 239, 238, 1)",
+        "line-color": "rgba(240, 239, 238, .5)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3823,9 +3823,9 @@
           ["linear"],
           ["zoom"],
           10,
-          "rgba(240, 240, 240, 1)",
+          "rgba(240, 240, 240, .5)",
           12,
-          "#ffffff"
+          "rgba(255, 255, 255, .5)"
         ],
         "line-width": [
           "interpolate",
@@ -3858,7 +3858,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": "rgba(255, 255, 255, .5)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3889,7 +3889,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(240, 239, 238, 1)",
+        "line-color": "rgba(240, 239, 238, .5)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
@@ -3922,7 +3922,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(211, 211, 211, 1)",
+        "line-color": "rgba(211, 211, 211, .5)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
