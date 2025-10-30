@@ -283,7 +283,7 @@
       }
     },
     {
-      "id": "landuse_areas_underlying_land_designation",
+      "id": "landuse_areas_large_area_typically",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
@@ -293,7 +293,7 @@
       "filter": [
         "in",
         ["get", "type"],
-        ["literal", ["park", "pitch", "golf_course"]]
+        ["literal", ["park", "golf_course"]]
       ],
       "paint": {
         "fill-color": [
@@ -306,10 +306,6 @@
             ["get", "type"],
             "park",
             "rgba(208, 220, 174, 1)",
-            "pitch",
-            "rgba(69, 150, 7, 0.39)",
-            "nature_reserve",
-            "rgba(212, 225, 211, 0.3)",
             "golf_course",
             "rgba(236, 240, 198, 1)",
             "transparent"
@@ -318,7 +314,7 @@
       }
     },
     {
-      "id": "landuse_areas_z12_localized_land_use",
+      "id": "landuse_areas_localized_land_use",
       "type": "fill",
       "source": "osm",
       "source-layer": "landuse_areas",
