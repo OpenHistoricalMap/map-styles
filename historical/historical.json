@@ -473,7 +473,7 @@
       "filter": [
         "in",
         ["get", "type"],
-        ["literal", ["park", "golf_course", "village_green", "cemetary", "sports_centre", "stadium", "recreation_ground"]]
+        ["literal", ["park", "golf_course", "village_green", "cemetery", "sports_centre", "stadium", "recreation_ground"]]
       ],
       "paint": {
         "fill-color": [
