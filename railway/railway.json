@@ -5456,7 +5456,7 @@
       }
     },
     {
-      "id": "state_lines_admin4-case",
+      "id": "admin_4_state_lines__case",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
@@ -5486,7 +5486,7 @@
       }
     },
     {
-      "id": "state_lines_admin4",
+      "id": "admin_4_state_lines",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
@@ -5508,9 +5508,9 @@
           ["linear"],
           ["zoom"],
           4,
-          "rgba(154, 160, 166, 1)",
+          "rgba(180, 180, 180, 1)",
           7,
-          "rgba(189, 190, 191, 1)"
+          "rgba(170, 170, 170, 1)"
         ],
         "line-dasharray": [14, 6, 5, 6, 14],
         "line-width": [
@@ -5547,7 +5547,7 @@
       }
     },
     {
-      "id": "admin_country_lines_case",
+      "id": "admin_1-2_country_lines_case",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
@@ -5575,7 +5575,7 @@
       }
     },
     {
-      "id": "admin_country_lines",
+      "id": "admin_1-2_country_lines",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
@@ -5593,11 +5593,11 @@
           ["linear"],
           ["zoom"],
           0,
-          "rgba(170, 180, 180, 1)",
+          "rgba(200, 200, 200, 1)",
           8,
-          "rgba(170, 180, 180, .5)",
+          "rgba(190, 190, 190, 1)",
           15,
-          "rgba(131, 150, 150, 1)"
+          "rgba(180, 180, 180, 1)"
         ],
         "line-width": [
           "interpolate",
