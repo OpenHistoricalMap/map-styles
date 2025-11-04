@@ -5391,7 +5391,7 @@
       "maxzoom": 20,
       "filter": ["in", ["get", "admin_level"], ["literal", [5, 6]]],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "round",
         "line-join": "round",
         "line-miter-limit": 2
@@ -5403,11 +5403,11 @@
       }
     },
     {
-      "id": "admin4_state_lines__case",
+      "id": "admin_4_state_lines__case",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
-      "minzoom": 7,
+      "minzoom": 5,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -5429,15 +5429,15 @@
           7,
           "rgba(234, 235, 236, 0.1)"
         ],
-        "line-width": ["interpolate", ["linear"], ["zoom"], 6, 0, 12, 8, 15, 7]
+        "line-width": ["interpolate", ["linear"], ["zoom"], 4, 0, 12, 8, 15, 7]
       }
     },
     {
-      "id": "admin4_state_lines",
+      "id": "admin_4_state_lines",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
-      "minzoom": 7,
+      "minzoom": 4,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -5455,16 +5455,19 @@
           ["linear"],
           ["zoom"],
           4,
-          "rgba(154, 160, 166, 1)",
+          "rgba(180, 180, 180, 1)",
           7,
-          "rgba(189, 190, 191, 1)"
+          "rgba(170, 170, 170, 1)"
         ],
+        "line-dasharray": [14, 6, 5, 6, 14],
         "line-width": [
           "interpolate",
           ["linear"],
           ["zoom"],
-          2,
-          0.4,
+          4,
+          0.5,
+          8,
+          0.5,
           12,
           2,
           15,
@@ -5491,7 +5494,7 @@
       }
     },
     {
-      "id": "admin12_country_lines_case",
+      "id": "admin_1-2_country_lines_case",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
@@ -5499,7 +5502,7 @@
       "maxzoom": 20,
       "filter": ["in", ["get", "admin_level"], ["literal", [1, 2]]],
       "layout": {
-        "visibility": "visible",
+        "visibility": "none",
         "line-cap": "square",
         "line-join": "round"
       },
@@ -5510,14 +5513,16 @@
           ["zoom"],
           4,
           "rgba(242, 242, 242, 0.28)",
-          7,
-          "rgba(255, 255, 255, 0.24)"
+          5,
+          "rgba(255, 255, 255, 0.15)",
+          8,
+          "rgba(255, 255, 255, 0.15)"
         ],
-        "line-width": ["interpolate", ["linear"], ["zoom"], 6, 0, 12, 10, 15, 8]
+        "line-width": ["interpolate", ["linear"], ["zoom"], 6, 0, 8, 1, 18, 4]
       }
     },
     {
-      "id": "admin12_countrylines",
+      "id": "admin_1-2_country_lines",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
@@ -5531,15 +5536,15 @@
       },
       "paint": {
         "line-color": [
-          "interpolate",
+          "interpolate-lab",
           ["linear"],
           ["zoom"],
           0,
-          "rgba(180, 191, 191, 1)",
-          14,
-          "rgba(174, 185, 185, 1)",
+          "rgba(200, 200, 200, 1)",
+          8,
+          "rgba(190, 190, 190, 1)",
           15,
-          "rgba(131, 150, 150, 1)"
+          "rgba(180, 180, 180, 1)"
         ],
         "line-width": [
           "interpolate",
@@ -5547,14 +5552,14 @@
           ["zoom"],
           0,
           0.25,
-          5,
-          0.5,
-          10,
-          1,
+          4,
+          0.75,
+          6,
+          1.5,
           13,
           2.5,
           17,
-          1.5
+          3
         ]
       }
     },
