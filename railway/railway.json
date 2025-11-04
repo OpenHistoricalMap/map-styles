@@ -5387,7 +5387,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
-      "minzoom": 7,
+      "minzoom": 8,
       "maxzoom": 20,
       "filter": ["in", ["get", "admin_level"], ["literal", [5, 6]]],
       "layout": {
@@ -5403,11 +5403,11 @@
       }
     },
     {
-      "id": "state_lines_admin4-case",
+      "id": "admin4_state_lines__case",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
-      "minzoom": 3,
+      "minzoom": 7,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -5433,11 +5433,11 @@
       }
     },
     {
-      "id": "state_lines_admin4",
+      "id": "admin4_state_lines",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
-      "minzoom": 5,
+      "minzoom": 7,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -5491,7 +5491,7 @@
       }
     },
     {
-      "id": "admin_countrylines_z10_case",
+      "id": "admin12_country_lines_case",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
@@ -5517,7 +5517,7 @@
       }
     },
     {
-      "id": "admin_countrylines_z10",
+      "id": "admin12_countrylines",
       "type": "line",
       "source": "osm",
       "source-layer": "land_ohm_lines",
@@ -5547,8 +5547,8 @@
           ["zoom"],
           0,
           0.25,
-          2,
-          0.75,
+          5,
+          0.5,
           10,
           1,
           13,
