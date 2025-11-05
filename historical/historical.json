@@ -6272,7 +6272,10 @@
       "source-layer": "other_points_centroids",
       "minzoom": 15,
       "maxzoom": 24,
-      "filter": ["!", ["in", ["get", "type"], ["literal", ["artwork"]]]],
+      "filter": ["all",
+        ["!", ["in", ["get", "type"], ["literal", ["artwork", "tower", "archaeological_site"]]]],
+        ["!", ["in", ["get", "class"], ["literal", ["military"]]]]
+      ],
       "layout": {
         "text-size": [
           "interpolate",
