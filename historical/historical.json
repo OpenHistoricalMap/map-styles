@@ -6040,7 +6040,7 @@
       }
     },
     {
-      "id": "other_areas_labels_military",
+      "id": "other_points_labels_military_noicon",
       "type": "symbol",
       "source": "osm",
       "source-layer": "other_points_centroids",
@@ -6266,7 +6266,7 @@
       }
     },
     {
-      "id": "points_of_interest_other",
+      "id": "other_points_catchall",
       "type": "symbol",
       "source": "osm",
       "source-layer": "other_points_centroids",
@@ -6346,7 +6346,7 @@
       }
     },
     {
-      "id": "points_of_interest_other_archaeology",
+      "id": "other_points_archaeology",
       "type": "symbol",
       "source": "osm",
       "source-layer": "other_points_centroids",
@@ -6382,7 +6382,7 @@
       }
     },
     {
-      "id": "points_of_interest_other_artwork",
+      "id": "other_points_artwork",
       "type": "symbol",
       "source": "osm",
       "source-layer": "other_points_centroids",
@@ -6418,7 +6418,7 @@
       }
     },
     {
-      "id": "points_powertower",
+      "id": "otther_points_power_tower",
       "type": "symbol",
       "source": "osm",
       "source-layer": "other_points_centroids",
