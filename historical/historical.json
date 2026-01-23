@@ -6548,8 +6548,21 @@
       "filter": ["==", ["get", "type"], "aerodrome"],
       "layout": {
         "icon-image": "airport-18",
-        "icon-size": ["interpolate", ["linear"], ["zoom"], 10, 1.2, 14, 1.5],
-        "text-font": ["OpenHistorical"]}
+        "icon-offset": [-1.0, 0],
+        "text-font": ["OpenHistorical"],
+        "text-field": ["coalesce", ["get", "iata"], ["get", "icao"]],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 11.99, 12, 13, 14, 14, 14, 14.01, 0],
+        "text-anchor": "left",
+        "text-offset": [1, 0],
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(80, 80, 80, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 0.5,
+        "text-halo-blur": 1,
+        "text-opacity": ["interpolate", ["linear"], ["zoom"], 11.99, 0, 12, 0.8, 14, 0.8, 14.01, 0]
+      }
     },
     {
       "id": "transport_points_labels_medium",
