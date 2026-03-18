@@ -8,10 +8,10 @@ ohmVectorStyles = {
       "maputnik:renderer": "mbgljs"
     },
     "sources": {
-      "osm": {
+      "ohm": {
         "type": "vector",
         "tiles": [
-          "https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
+          "https://vtiles.openhistoricalmap.org/maps/ohm/{z}/{x}/{y}.pbf"
         ]
       },
       "ohm_landcover_hillshade": {
@@ -86,7 +86,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_earth",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 0,
         "maxzoom": 24,
@@ -134,7 +134,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_military_overlay",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 10,
         "maxzoom": 24,
@@ -158,7 +158,7 @@ ohmVectorStyles = {
       {
         "id": "military_landuselow",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 4,
         "maxzoom": 10,
@@ -180,7 +180,7 @@ ohmVectorStyles = {
       {
         "id": "military-landusehigh",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 10,
         "maxzoom": 24,
@@ -202,7 +202,7 @@ ohmVectorStyles = {
       {
         "id": "military",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "filter": [
           "==",
@@ -222,7 +222,7 @@ ohmVectorStyles = {
       {
         "id": "military-pattern",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "filter": [
           "==",
@@ -242,7 +242,7 @@ ohmVectorStyles = {
       {
         "id": "aero_aerodrome_area",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_areas",
         "minzoom": 10,
         "maxzoom": 24,
@@ -265,7 +265,7 @@ ohmVectorStyles = {
       {
         "id": "aero_heliport_area",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -288,7 +288,7 @@ ohmVectorStyles = {
       {
         "id": "airports",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_areas",
         "minzoom": 11,
         "maxzoom": 24,
@@ -310,7 +310,7 @@ ohmVectorStyles = {
       {
         "id": "nature_reserve_fill_6-24",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 6,
         "maxzoom": 24,
@@ -356,7 +356,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_all_z6-12",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 6,
         "maxzoom": 12,
@@ -402,7 +402,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z12_generalized_land_use",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -452,63 +452,9 @@ ohmVectorStyles = {
         }
       },
       {
-        "id": "landuse_areas_underlying_land_designation",
+        "id": "landuse_areas_localized_land_use",
         "type": "fill",
-        "source": "osm",
-        "source-layer": "landuse_areas",
-        "minzoom": 12,
-        "maxzoom": 24,
-        "layout": {
-          "visibility": "visible"
-        },
-        "filter": [
-          "in",
-          [
-            "get",
-            "type"
-          ],
-          [
-            "literal",
-            [
-              "park",
-              "pitch",
-              "golf_course"
-            ]
-          ]
-        ],
-        "paint": {
-          "fill-color": [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            0,
-            [
-              "match",
-              [
-                "get",
-                "type"
-              ],
-              "park",
-              "rgba(208, 220, 174, 1)",
-              "pitch",
-              "rgba(69, 150, 7, 0.39)",
-              "nature_reserve",
-              "rgba(212, 225, 211, 0.3)",
-              "golf_course",
-              "rgba(236, 240, 198, 1)",
-              "transparent"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "landuse_areas_z12_localized_land_use",
-        "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -581,7 +527,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_landcover_short",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 6,
         "maxzoom": 24,
@@ -651,7 +597,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z12_park_outlines",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -686,7 +632,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z12_landcover_tall",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -736,11 +682,11 @@ ohmVectorStyles = {
         }
       },
       {
-        "id": "landuse_areas_z12_food_and_farming",
+        "id": "landuse_areas_ood_and_farming",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
-        "minzoom": 12,
+        "minzoom": 6,
         "maxzoom": 24,
         "filter": [
           "in",
@@ -800,9 +746,9 @@ ohmVectorStyles = {
         }
       },
       {
-        "id": "landuse_areas_developed_open_space_larger",
+        "id": "landuse_areas_developed_open_space_larger_types",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 6,
         "maxzoom": 24,
@@ -818,8 +764,10 @@ ohmVectorStyles = {
           [
             "literal",
             [
+              "park",
+              "golf_course",
               "village_green",
-              "cemetary",
+              "cemetery",
               "sports_centre",
               "stadium",
               "recreation_ground"
@@ -842,6 +790,10 @@ ohmVectorStyles = {
                 "get",
                 "type"
               ],
+              "park",
+              "rgba(208, 220, 174, 1)",
+              "golf_course",
+              "rgba(236, 240, 198, 1)",
               "village_green",
               "rgba(208, 220, 174, 1)",
               "cemetery",
@@ -880,9 +832,9 @@ ohmVectorStyles = {
         }
       },
       {
-        "id": "landuse_areas_developed_open_space_smaller",
+        "id": "landuse_areas_developed_open_space_smaller_types",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -899,7 +851,7 @@ ohmVectorStyles = {
               "picnic_site",
               "camp_site",
               "playground",
-              "paitch",
+              "pitch",
               "track",
               "bleachers"
             ]
@@ -968,7 +920,7 @@ ohmVectorStyles = {
       {
         "id": "parking_lots",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "amenity_areas",
         "paint": {
           "fill-color": "rgba(236, 231, 231, 1)",
@@ -978,7 +930,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_nature_reserve_outline",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 6,
         "maxzoom": 24,
@@ -1028,7 +980,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z12_natural",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -1059,7 +1011,7 @@ ohmVectorStyles = {
       {
         "id": "place_areas_plot",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_areas",
         "filter": [
           "==",
@@ -1080,7 +1032,7 @@ ohmVectorStyles = {
       {
         "id": "place_areas_square",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_areas",
         "filter": [
           "==",
@@ -1101,7 +1053,7 @@ ohmVectorStyles = {
       {
         "id": "pedestrian_area",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_areas",
         "minzoom": 14,
         "maxzoom": 24,
@@ -1133,7 +1085,7 @@ ohmVectorStyles = {
       {
         "id": "amenity_areas",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "amenity_areas",
         "filter": [
           "in",
@@ -1159,7 +1111,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_canal-casing",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -1201,7 +1153,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_canal",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 8,
         "maxzoom": 24,
@@ -1240,7 +1192,7 @@ ohmVectorStyles = {
       {
         "id": "water_areas",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_areas",
         "minzoom": 0,
         "maxzoom": 24,
@@ -1292,7 +1244,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z12_watercover",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 11,
         "maxzoom": 24,
@@ -1350,7 +1302,7 @@ ohmVectorStyles = {
       {
         "id": "wetlands_z11_pattern",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 11,
         "maxzoom": 24,
@@ -1384,7 +1336,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z12_glacier-outline",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 9,
         "maxzoom": 24,
@@ -1423,7 +1375,7 @@ ohmVectorStyles = {
       {
         "id": "ferry_lines",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "filter": [
           "==",
@@ -1498,7 +1450,7 @@ ohmVectorStyles = {
       {
         "id": "place_areas_islet",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_areas",
         "filter": [
           "==",
@@ -1519,7 +1471,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_stream_no_name",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -1569,7 +1521,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_stream_name",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -1616,7 +1568,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_cliff_line",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 15,
         "maxzoom": 24,
@@ -1658,7 +1610,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_cliff_line_triangles",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 15,
         "maxzoom": 24,
@@ -1702,7 +1654,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_waterfall_triangle",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 15,
         "maxzoom": 24,
@@ -1751,7 +1703,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_ditch",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 15,
         "maxzoom": 24,
@@ -1789,7 +1741,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_aqueduct",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 8,
         "maxzoom": 24,
@@ -1840,7 +1792,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_river",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 8,
         "maxzoom": 24,
@@ -1888,7 +1840,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_breakwater",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_lines",
         "minzoom": 10,
         "maxzoom": 24,
@@ -1926,7 +1878,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_dam",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -1960,7 +1912,7 @@ ohmVectorStyles = {
       {
         "id": "pier",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "filter": [
           "==",
@@ -1980,7 +1932,7 @@ ohmVectorStyles = {
       {
         "id": "pier_line",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_lines",
         "minzoom": 12,
         "filter": [
@@ -2014,7 +1966,7 @@ ohmVectorStyles = {
       {
         "id": "buildings_flat",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "buildings",
         "minzoom": 14,
         "maxzoom": 24,
@@ -2032,7 +1984,7 @@ ohmVectorStyles = {
       {
         "id": "buildings_flat_ruins",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "minzoom": 14,
         "maxzoom": 24,
@@ -2065,7 +2017,7 @@ ohmVectorStyles = {
       {
         "id": "buildings_ruins_outlines",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "filter": [
           "==",
@@ -2120,7 +2072,7 @@ ohmVectorStyles = {
       {
         "id": "historic_fort",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "minzoom": 14,
         "maxzoom": 24,
@@ -2154,7 +2106,7 @@ ohmVectorStyles = {
       {
         "id": "transport_traverser",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_areas",
         "minzoom": 14,
         "maxzoom": 24,
@@ -2178,7 +2130,7 @@ ohmVectorStyles = {
       {
         "id": "transport_turntable",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_areas",
         "minzoom": 14,
         "filter": [
@@ -2201,7 +2153,7 @@ ohmVectorStyles = {
       {
         "id": "transport_passenger_platform",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_areas",
         "minzoom": 14,
         "filter": [
@@ -2224,7 +2176,7 @@ ohmVectorStyles = {
       {
         "id": "transport_freight_platform",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_areas",
         "minzoom": 14,
         "filter": [
@@ -2247,7 +2199,7 @@ ohmVectorStyles = {
       {
         "id": "terminals",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_areas",
         "minzoom": 11,
         "maxzoom": 24,
@@ -2270,7 +2222,7 @@ ohmVectorStyles = {
       {
         "id": "aero_taxiway_lines",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 11,
         "maxzoom": 24,
@@ -2307,7 +2259,7 @@ ohmVectorStyles = {
       {
         "id": "aero_runway_lines",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10,
         "maxzoom": 24,
@@ -2343,7 +2295,7 @@ ohmVectorStyles = {
       {
         "id": "man_made_bridge_area",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "filter": [
           "all",
@@ -2371,7 +2323,7 @@ ohmVectorStyles = {
       {
         "id": "man_made_bridge_line",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_lines",
         "filter": [
           "all",
@@ -2400,7 +2352,7 @@ ohmVectorStyles = {
       {
         "id": "roads_subways_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "filter": [
@@ -2450,7 +2402,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarytunnel_case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -2510,7 +2462,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarytunnel_case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -2570,7 +2522,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarytunnel_case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 20,
@@ -2631,7 +2583,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaytunnel_case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -2700,7 +2652,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarytunnel_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -2756,7 +2708,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarytunnel_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -2812,7 +2764,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarytunnel_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -2868,7 +2820,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaytunnel_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -2933,7 +2885,7 @@ ohmVectorStyles = {
       {
         "id": "roads_raceways_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -2984,7 +2936,7 @@ ohmVectorStyles = {
       {
         "id": "roads_trackfillcase_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -3031,7 +2983,7 @@ ohmVectorStyles = {
       {
         "id": "roads_trackfill_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -3078,7 +3030,7 @@ ohmVectorStyles = {
       {
         "id": "roads_track_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -3129,7 +3081,7 @@ ohmVectorStyles = {
       {
         "id": "roads_living_street_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -3176,7 +3128,7 @@ ohmVectorStyles = {
       {
         "id": "roads_pedestrian_street_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -3223,7 +3175,7 @@ ohmVectorStyles = {
       {
         "id": "roads_footway_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -3283,7 +3235,7 @@ ohmVectorStyles = {
       {
         "id": "roads_pier_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -3330,7 +3282,7 @@ ohmVectorStyles = {
       {
         "id": "roads_steps_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -3381,7 +3333,7 @@ ohmVectorStyles = {
       {
         "id": "roads_roadscase_z13_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -3438,7 +3390,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residentialcase_z13_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -3502,7 +3454,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiary-case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "maxzoom": 24,
@@ -3567,7 +3519,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondary-case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10,
         "filter": [
@@ -3631,7 +3583,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarylink-case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "filter": [
@@ -3695,7 +3647,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primary-case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10,
         "filter": [
@@ -3767,7 +3719,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaylink-case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 20,
@@ -3838,7 +3790,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorway-case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 20,
@@ -3909,7 +3861,7 @@ ohmVectorStyles = {
       {
         "id": "roads_roads_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -3962,7 +3914,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -4022,7 +3974,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarylink_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -4102,7 +4054,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarylink_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -4170,7 +4122,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaylink_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -4245,7 +4197,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiary_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 24,
@@ -4326,7 +4278,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondary_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -4406,7 +4358,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primary_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -4494,7 +4446,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorway_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 20,
@@ -4577,7 +4529,7 @@ ohmVectorStyles = {
       {
         "id": "roads_ford_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -4616,7 +4568,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential_bridge_z13-copy_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -4680,7 +4632,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarybridge_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -4736,7 +4688,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarybridge_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -4792,7 +4744,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarybridge_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10,
         "maxzoom": 20,
@@ -4855,7 +4807,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaybridge_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 20,
@@ -4920,7 +4872,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential_bridgetop_z13_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -4988,7 +4940,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarybridgetop_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 24,
@@ -5061,7 +5013,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarybridgetop_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -5133,7 +5085,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarybridgetop_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -5205,7 +5157,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaybridgetop_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 20,
@@ -5282,7 +5234,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_tram_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 11,
         "maxzoom": 24,
@@ -5353,7 +5305,7 @@ ohmVectorStyles = {
       {
         "id": "roads_subways",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "filter": [
@@ -5395,7 +5347,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarytunnel_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -5447,7 +5399,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarytunnel_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -5499,7 +5451,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarytunnel_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 20,
@@ -5552,7 +5504,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaytunnel_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 20,
@@ -5613,7 +5565,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarytunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -5661,7 +5613,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarytunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -5709,7 +5661,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarytunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -5757,7 +5709,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaytunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -5814,7 +5766,7 @@ ohmVectorStyles = {
       {
         "id": "roads_raceways",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -5854,7 +5806,7 @@ ohmVectorStyles = {
       {
         "id": "roads_trackfillcase",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -5890,7 +5842,7 @@ ohmVectorStyles = {
       {
         "id": "roads_trackfill",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -5926,7 +5878,7 @@ ohmVectorStyles = {
       {
         "id": "roads_track",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -5966,7 +5918,7 @@ ohmVectorStyles = {
       {
         "id": "roads_living_street",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -6002,7 +5954,7 @@ ohmVectorStyles = {
       {
         "id": "roads_footway",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -6051,7 +6003,7 @@ ohmVectorStyles = {
       {
         "id": "roads_pier",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -6087,7 +6039,7 @@ ohmVectorStyles = {
       {
         "id": "roads_steps",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -6127,7 +6079,7 @@ ohmVectorStyles = {
       {
         "id": "roads_servicecase_z13",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -6181,7 +6133,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residentialcase_z13",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -6236,7 +6188,7 @@ ohmVectorStyles = {
       {
         "id": "roads_pedestrian_street-casing",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -6272,7 +6224,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarylink-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "maxzoom": 24,
@@ -6333,7 +6285,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiary-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "maxzoom": 24,
@@ -6394,7 +6346,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondary-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10,
         "filter": [
@@ -6452,7 +6404,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarylink-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -6510,7 +6462,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarylink-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "filter": [
@@ -6566,7 +6518,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primary-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -6634,7 +6586,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaylink-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 20,
@@ -6697,7 +6649,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorway-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 24,
@@ -6760,7 +6712,7 @@ ohmVectorStyles = {
       {
         "id": "roads_proposed",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -6826,7 +6778,7 @@ ohmVectorStyles = {
       {
         "id": "roads_service",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -6869,7 +6821,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -6913,7 +6865,7 @@ ohmVectorStyles = {
       {
         "id": "roads_pedestrian_street",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -6949,7 +6901,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarylink",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -7005,7 +6957,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarylink",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -7075,7 +7027,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarylink",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -7131,7 +7083,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaylink",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 20,
@@ -7206,7 +7158,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiary",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 24,
@@ -7277,7 +7229,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondary",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -7333,7 +7285,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primary",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -7411,7 +7363,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorway",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 24,
@@ -7486,7 +7438,7 @@ ohmVectorStyles = {
       {
         "id": "roads_ford",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -7525,7 +7477,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_mini",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -7588,7 +7540,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_mini-dash",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -7680,7 +7632,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_mini_cross",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -7765,7 +7717,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_old",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -7832,7 +7784,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_old-dash",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -7911,7 +7863,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_old_cross",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -8017,7 +7969,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-main",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -8099,7 +8051,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-tunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -8156,7 +8108,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-bridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -8213,7 +8165,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-yard-siding",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -8256,7 +8208,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-yard-siding-dash",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -8334,7 +8286,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -8428,7 +8380,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-main-dash",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -8551,7 +8503,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-dash-tunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -8649,7 +8601,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-dash",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -8760,7 +8712,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_cross-main",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -8874,7 +8826,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_cross",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -8988,7 +8940,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -9046,7 +8998,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_construction-dash",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -9108,7 +9060,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_construction_cross",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -9203,7 +9155,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential_bridge_z13-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -9259,7 +9211,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarybridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -9307,7 +9259,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarybridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10,
         "filter": [
@@ -9355,7 +9307,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarybridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10,
         "maxzoom": 20,
@@ -9410,7 +9362,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaybridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 20,
@@ -9467,7 +9419,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential_bridgetop_z13",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -9523,7 +9475,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarybridgetop",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 24,
@@ -9584,7 +9536,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarybridgetop",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -9644,7 +9596,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarybridgetop",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -9704,7 +9656,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaybridgetop",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 20,
@@ -9769,7 +9721,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_tram",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 11,
         "maxzoom": 24,
@@ -9837,7 +9789,7 @@ ohmVectorStyles = {
       {
         "id": "barriers-dotted",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_lines",
         "filter": [
           "==",
@@ -9859,7 +9811,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_lines",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_lines",
         "filter": [
           "all"
@@ -9891,7 +9843,7 @@ ohmVectorStyles = {
       {
         "id": "barriers",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_lines",
         "filter": [
           "all"
@@ -9935,7 +9887,7 @@ ohmVectorStyles = {
       {
         "id": "power_lines",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_lines",
         "filter": [
           "all",
@@ -9966,7 +9918,7 @@ ohmVectorStyles = {
       {
         "id": "city_county_lines_admin_9",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
         "minzoom": 11,
         "maxzoom": 20,
@@ -10009,7 +9961,7 @@ ohmVectorStyles = {
       {
         "id": "city_county_lines_admin_7-8",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
         "minzoom": 10,
         "maxzoom": 20,
@@ -10053,7 +10005,7 @@ ohmVectorStyles = {
       {
         "id": "admin_admin_5-6",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
         "minzoom": 8,
         "maxzoom": 20,
@@ -10109,7 +10061,7 @@ ohmVectorStyles = {
       {
         "id": "state_lines_admin_4-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
         "minzoom": 3,
         "maxzoom": 20,
@@ -10171,7 +10123,7 @@ ohmVectorStyles = {
       {
         "id": "state_lines_admin_4",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
         "minzoom": 3,
         "maxzoom": 20,
@@ -10233,7 +10185,7 @@ ohmVectorStyles = {
       {
         "id": "admin_admin3",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -10270,7 +10222,7 @@ ohmVectorStyles = {
       {
         "id": "admin_country_lines_z10_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
         "minzoom": 0,
         "maxzoom": 20,
@@ -10329,7 +10281,7 @@ ohmVectorStyles = {
       {
         "id": "admin_country_lines_z10",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
         "minzoom": 0,
         "maxzoom": 20,
@@ -10396,7 +10348,7 @@ ohmVectorStyles = {
       {
         "id": "road_labels_z14",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "filter": [
@@ -10428,7 +10380,7 @@ ohmVectorStyles = {
       {
         "id": "road_labels_z11",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 11,
         "filter": [
@@ -10471,7 +10423,7 @@ ohmVectorStyles = {
       {
         "id": "water_areas_labels_z15",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_areas_centroids",
         "minzoom": 15,
         "maxzoom": 24,
@@ -10516,7 +10468,7 @@ ohmVectorStyles = {
       {
         "id": "water_areas_labels_z12",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_areas_centroids",
         "minzoom": 12,
         "maxzoom": 15,
@@ -10562,7 +10514,7 @@ ohmVectorStyles = {
       {
         "id": "water_point_labels_ocean_sea",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 0,
         "maxzoom": 24,
@@ -10616,7 +10568,7 @@ ohmVectorStyles = {
       {
         "id": "water_areas_labels_z8",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_areas_centroids",
         "minzoom": 8,
         "maxzoom": 12,
@@ -10663,7 +10615,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_labels_cliff",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "filter": [
           "==",
@@ -10710,7 +10662,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_labels_dam",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "filter": [
           "==",
@@ -10757,7 +10709,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_labels",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -10816,7 +10768,7 @@ ohmVectorStyles = {
       {
         "id": "points_from_landuse_areas",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_points_centroids",
         "minzoom": 16,
         "filter": [
@@ -10848,7 +10800,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_labels_park_small",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_points_centroids",
         "minzoom": 16,
         "maxzoom": 24,
@@ -10922,7 +10874,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_labels_park_medium",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_points_centroids",
         "minzoom": 15,
         "maxzoom": 20,
@@ -11018,7 +10970,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_labels_park_large",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_points_centroids",
         "minzoom": 12,
         "maxzoom": 16,
@@ -11100,7 +11052,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_labels_farming",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
@@ -11142,7 +11094,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_labels_forest",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
@@ -11179,7 +11131,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_labels_nature_reserve",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_points_centroids",
         "minzoom": 12,
         "maxzoom": 16,
@@ -11226,7 +11178,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_labels_nature_reserve_med_10-14",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_points_centroids",
         "minzoom": 10,
         "maxzoom": 14,
@@ -11295,7 +11247,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_labels_nature_reserve_xl",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_points_centroids",
         "minzoom": 7,
         "maxzoom": 12,
@@ -11358,7 +11310,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_labels_school",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
@@ -11398,7 +11350,7 @@ ohmVectorStyles = {
       {
         "id": "other_areas_labels_military",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_points_centroids",
         "minzoom": 12,
         "maxzoom": 24,
@@ -11429,7 +11381,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_labels_z8glacier",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_points_centroids",
         "minzoom": 10,
         "maxzoom": 22,
@@ -11476,7 +11428,7 @@ ohmVectorStyles = {
       {
         "id": "placearea_label",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
@@ -11554,7 +11506,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_buildings",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "buildings_points_centroids",
         "minzoom": 16,
         "filter": [
@@ -11620,7 +11572,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_from_areas_z14_centroids",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "amenity_points_centroids",
         "minzoom": 14,
         "maxzoom": 16,
@@ -11675,7 +11627,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_from_areas_z14",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "amenity_points_centroids",
         "minzoom": 14,
         "maxzoom": 16,
@@ -11730,7 +11682,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_from_areas",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "amenity_points_centroids",
         "minzoom": 16,
         "maxzoom": 24,
@@ -11804,7 +11756,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_other",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_points_centroids",
         "minzoom": 15,
         "maxzoom": 24,
@@ -11899,7 +11851,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_amenity",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "amenity_points_centroids",
         "minzoom": 16,
         "maxzoom": 24,
@@ -11971,7 +11923,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_other_archaeology",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
@@ -12050,7 +12002,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_other_artwork",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_points_centroids",
         "minzoom": 15,
         "maxzoom": 24,
@@ -12129,7 +12081,7 @@ ohmVectorStyles = {
       {
         "id": "points_powertower",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_points_centroids",
         "minzoom": 15,
         "maxzoom": 24,
@@ -12152,24 +12104,43 @@ ohmVectorStyles = {
       {
         "id": "transport_points_labels",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_points_centroids",
         "minzoom": 12,
         "maxzoom": 24,
         "filter": [
-          "!",
+          "all",
           [
-            "in",
+            "!",
             [
-              "get",
-              "type"
-            ],
-            [
-              "literal",
+              "in",
               [
-                "traffic_signals",
-                "pedestrian",
-                "raceway"
+                "get",
+                "type"
+              ],
+              [
+                "literal",
+                [
+                  "traffic_signals",
+                  "pedestrian",
+                  "raceway"
+                ]
+              ]
+            ]
+          ],
+          [
+            "!",
+            [
+              "in",
+              [
+                "get",
+                "class"
+              ],
+              [
+                "literal",
+                [
+                  "highway"
+                ]
               ]
             ]
           ]
@@ -12240,25 +12211,20 @@ ohmVectorStyles = {
       {
         "id": "transport_points_raceway",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_points_centroids",
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
-          "!",
+          "in",
           [
-            "in",
+            "get",
+            "type"
+          ],
+          [
+            "literal",
             [
-              "get",
-              "type"
-            ],
-            [
-              "literal",
-              [
-                "traffic_signals",
-                "pedestrian",
-                "raceway"
-              ]
+              "raceway"
             ]
           ]
         ],
@@ -12328,7 +12294,7 @@ ohmVectorStyles = {
       {
         "id": "transport_points_labels_traffic_signals",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_points_centroids",
         "minzoom": 17,
         "maxzoom": 24,
@@ -12380,7 +12346,7 @@ ohmVectorStyles = {
       {
         "id": "transport_points_labels_pedestrian",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_points_centroids",
         "minzoom": 17,
         "maxzoom": 24,
@@ -12432,7 +12398,7 @@ ohmVectorStyles = {
       {
         "id": "transport_points_labels_airports",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_points_centroids",
         "minzoom": 10,
         "maxzoom": 14,
@@ -12467,7 +12433,7 @@ ohmVectorStyles = {
       {
         "id": "transport_points_labels_medium",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_points_centroids",
         "minzoom": 13,
         "maxzoom": 16,
@@ -12527,7 +12493,7 @@ ohmVectorStyles = {
       {
         "id": "transport_area_labels_large",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_points_centroids",
         "minzoom": 13,
         "maxzoom": 16,
@@ -12587,7 +12553,7 @@ ohmVectorStyles = {
       {
         "id": "points_place_of_worship_other",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "buildings_points_centroids",
         "filter": [
           "all",
@@ -12629,7 +12595,7 @@ ohmVectorStyles = {
       {
         "id": "points_religion",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "buildings_points_centroids",
         "filter": [
           "all"
@@ -12645,7 +12611,7 @@ ohmVectorStyles = {
       {
         "id": "points_from_landuse_peaks",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_points_centroids",
         "minzoom": 14,
         "filter": [
@@ -12682,7 +12648,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_shop",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "buildings_points_centroids",
         "minzoom": 16,
         "maxzoom": 24,
@@ -12717,7 +12683,7 @@ ohmVectorStyles = {
       {
         "id": "county_labels_z11_admin_7-8_centroids",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_centroids",
         "minzoom": 10,
         "maxzoom": 20,
@@ -12773,7 +12739,7 @@ ohmVectorStyles = {
       {
         "id": "county_labels_z11_admin_6_centroids",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_centroids",
         "minzoom": 8,
         "maxzoom": 20,
@@ -12828,7 +12794,7 @@ ohmVectorStyles = {
       {
         "id": "county_labels_z11",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 8,
         "maxzoom": 20,
@@ -12878,7 +12844,7 @@ ohmVectorStyles = {
       {
         "id": "city_locality_labels_other_z11",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 15,
         "maxzoom": 20,
@@ -12930,7 +12896,7 @@ ohmVectorStyles = {
       {
         "id": "city_labels_other_z11",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 11,
         "maxzoom": 20,
@@ -12985,7 +12951,7 @@ ohmVectorStyles = {
       {
         "id": "city_labels_town_z8",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 8,
         "maxzoom": 20,
@@ -13032,7 +12998,7 @@ ohmVectorStyles = {
       {
         "id": "city_labels_z11",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 11,
         "maxzoom": 20,
@@ -13079,7 +13045,7 @@ ohmVectorStyles = {
       {
         "id": "city_labels_z6",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 6,
         "maxzoom": 11,
@@ -13146,7 +13112,7 @@ ohmVectorStyles = {
       {
         "id": "city_capital_labels_z6",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 6,
         "maxzoom": 11,
@@ -13213,7 +13179,7 @@ ohmVectorStyles = {
       {
         "id": "state_points_labels_centroids",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_centroids",
         "minzoom": 5,
         "maxzoom": 20,
@@ -13304,7 +13270,7 @@ ohmVectorStyles = {
       {
         "id": "state_points_labels",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 5,
         "maxzoom": 20,
@@ -13390,7 +13356,7 @@ ohmVectorStyles = {
       {
         "id": "statecapital_labels_z10",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "populated_places",
         "minzoom": 10,
         "maxzoom": 20,
@@ -13424,7 +13390,7 @@ ohmVectorStyles = {
       {
         "id": "country_points_labels_cen",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_centroids",
         "maxzoom": 12,
         "filter": [
@@ -13522,7 +13488,7 @@ ohmVectorStyles = {
       {
         "id": "country_points_labels",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 0,
         "maxzoom": 12,
@@ -13615,10 +13581,10 @@ ohmVectorStyles = {
     },
     "attribution": "<a href=\"https://www.openhistoricalmap.org/\">OpenHistoricalMap</a>",
     "sources": {
-      "osm": {
+      "ohm": {
         "type": "vector",
         "tiles": [
-          "https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
+          "https://vtiles.openhistoricalmap.org/maps/ohm/{z}/{x}/{y}.pbf"
         ]
       },
       "ne": {
@@ -13703,7 +13669,7 @@ ohmVectorStyles = {
       {
         "id": "water_areas",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_areas",
         "minzoom": 8,
         "maxzoom": 24,
@@ -13733,7 +13699,7 @@ ohmVectorStyles = {
       {
         "id": "water_areas-pattern",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_areas",
         "minzoom": 8,
         "maxzoom": 24,
@@ -13765,7 +13731,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_stream",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -13800,7 +13766,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_ditch",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 15,
         "maxzoom": 24,
@@ -13839,7 +13805,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_canal",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 8,
         "maxzoom": 24,
@@ -13876,7 +13842,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_river",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 8,
         "maxzoom": 24,
@@ -13918,7 +13884,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_dam",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -13953,7 +13919,7 @@ ohmVectorStyles = {
       {
         "id": "state_lines_admin4",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -13988,7 +13954,7 @@ ohmVectorStyles = {
       {
         "id": "admin_countrylines_z10",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
         "minzoom": 0,
         "maxzoom": 20,
@@ -14031,7 +13997,7 @@ ohmVectorStyles = {
       {
         "id": "roads_subways",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "filter": [
@@ -14075,7 +14041,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarytunnel_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -14127,7 +14093,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarytunnel_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -14179,7 +14145,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarytunnel_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 20,
@@ -14237,7 +14203,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaytunnel_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -14298,7 +14264,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarytunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -14346,7 +14312,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarytunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -14394,7 +14360,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarytunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -14440,7 +14406,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaytunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 11,
         "maxzoom": 20,
@@ -14497,7 +14463,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_tram",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -14563,7 +14529,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_mini",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -14628,7 +14594,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_mini_cross",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -14681,7 +14647,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_old",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -14748,7 +14714,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_old_cross",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -14803,7 +14769,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -14869,7 +14835,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_cross",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -14941,7 +14907,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 24,
@@ -15002,7 +14968,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_construction_cross",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 24,
@@ -15051,7 +15017,7 @@ ohmVectorStyles = {
       {
         "id": "roads_raceways",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -15096,7 +15062,7 @@ ohmVectorStyles = {
       {
         "id": "roads_trackfillcase",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -15132,7 +15098,7 @@ ohmVectorStyles = {
       {
         "id": "roads_trackfill",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -15168,7 +15134,7 @@ ohmVectorStyles = {
       {
         "id": "roads_track",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -15208,7 +15174,7 @@ ohmVectorStyles = {
       {
         "id": "roads_pedestrian_street",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -15249,7 +15215,7 @@ ohmVectorStyles = {
       {
         "id": "roads_footway",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -15296,7 +15262,7 @@ ohmVectorStyles = {
       {
         "id": "roads_pier",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -15332,7 +15298,7 @@ ohmVectorStyles = {
       {
         "id": "roads_steps",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -15377,7 +15343,7 @@ ohmVectorStyles = {
       {
         "id": "roads_other",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -15419,7 +15385,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residentialcase_z13",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -15475,7 +15441,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiary-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "maxzoom": 24,
@@ -15524,7 +15490,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondary-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "filter": [
@@ -15572,7 +15538,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarylink-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "filter": [
@@ -15625,7 +15591,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primary-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "filter": [
@@ -15698,7 +15664,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaylink-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "maxzoom": 20,
@@ -15765,7 +15731,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorway-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "maxzoom": 20,
@@ -15832,7 +15798,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential_bridge_z13-copy",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -15888,7 +15854,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarybridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -15943,7 +15909,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarybridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -15998,7 +15964,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarybridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 20,
@@ -16060,7 +16026,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaybridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -16124,7 +16090,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarylink",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -16179,7 +16145,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarylink",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -16251,7 +16217,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaylink",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -16325,7 +16291,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -16377,7 +16343,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiary",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 24,
@@ -16445,7 +16411,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondary",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -16512,7 +16478,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primary",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -16592,7 +16558,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorway",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -16666,7 +16632,7 @@ ohmVectorStyles = {
       {
         "id": "roads_ford",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -16705,7 +16671,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential_bridgetop_z13",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -16759,7 +16725,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarybridgetop",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 24,
@@ -16818,7 +16784,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarybridgetop",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -16876,7 +16842,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarybridgetop",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -16939,7 +16905,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaybridgetop",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -17008,7 +16974,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondary_z8",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "maxzoom": 9,
@@ -17061,7 +17027,7 @@ ohmVectorStyles = {
       {
         "id": "roads_trunk_z7",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 9,
@@ -17115,7 +17081,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorway_z7",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 9,
@@ -17164,7 +17130,7 @@ ohmVectorStyles = {
       {
         "id": "man_made_bridge_area",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "filter": [
           "all",
@@ -17195,7 +17161,7 @@ ohmVectorStyles = {
       {
         "id": "man_made_bridge_line",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_lines",
         "filter": [
           "all",
@@ -17227,7 +17193,7 @@ ohmVectorStyles = {
       {
         "id": "city_labels_z6",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 6,
         "maxzoom": 15,
@@ -17314,7 +17280,7 @@ ohmVectorStyles = {
       {
         "id": "city_capital_labels",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 4,
         "maxzoom": 15,
@@ -17402,7 +17368,7 @@ ohmVectorStyles = {
       {
         "id": "state_points_labels-centroids",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_centroids",
         "minzoom": 5,
         "maxzoom": 20,
@@ -17465,7 +17431,7 @@ ohmVectorStyles = {
       {
         "id": "state_points_labels",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 5,
         "maxzoom": 20,
@@ -17523,7 +17489,7 @@ ohmVectorStyles = {
       {
         "id": "country_points_labels-centroids",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_centroids",
         "minzoom": 0,
         "maxzoom": 10,
@@ -17588,7 +17554,7 @@ ohmVectorStyles = {
       {
         "id": "country_points_labels",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 0,
         "maxzoom": 10,
@@ -17642,7 +17608,7 @@ ohmVectorStyles = {
       {
         "id": "mountains",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_points_centroids",
         "minzoom": 7,
         "filter": [
@@ -17675,10 +17641,10 @@ ohmVectorStyles = {
     },
     "attribution": "<a href=\"https://www.openhistoricalmap.org/\">OpenHistoricalMap</a>",
     "sources": {
-      "osm": {
+      "ohm": {
         "type": "vector",
         "tiles": [
-          "https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
+          "https://vtiles.openhistoricalmap.org/maps/ohm/{z}/{x}/{y}.pbf"
         ]
       },
       "ohm_landcover_hillshade": {
@@ -17741,7 +17707,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_earth",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 0,
         "maxzoom": 24,
@@ -17789,7 +17755,7 @@ ohmVectorStyles = {
       {
         "id": "military_landuselow",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 4,
         "maxzoom": 10,
@@ -17811,7 +17777,7 @@ ohmVectorStyles = {
       {
         "id": "military-landusehigh",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 10,
         "maxzoom": 24,
@@ -17833,7 +17799,7 @@ ohmVectorStyles = {
       {
         "id": "military",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "filter": [
           "==",
@@ -17853,7 +17819,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_military_overlay",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 10,
         "maxzoom": 24,
@@ -17877,7 +17843,7 @@ ohmVectorStyles = {
       {
         "id": "airports",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -17899,7 +17865,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z12_generalized_land_use",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -17936,7 +17902,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z12_underlying_land_designation",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -17973,7 +17939,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z12_localized_land_use",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -18024,7 +17990,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z12_landcover_short",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -18075,7 +18041,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z12_park_outlines",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -18110,7 +18076,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z12_landcover_tall",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -18150,7 +18116,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z12_watercover",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 9,
         "maxzoom": 24,
@@ -18189,7 +18155,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z12_food_and_farming",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -18234,7 +18200,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z12_developed_open_space",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -18307,7 +18273,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z10",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 10,
         "maxzoom": 12,
@@ -18348,7 +18314,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z7",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 7,
         "maxzoom": 10,
@@ -18390,7 +18356,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z5",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 5,
         "maxzoom": 7,
@@ -18429,7 +18395,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z3",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 3,
         "maxzoom": 5,
@@ -18468,7 +18434,7 @@ ohmVectorStyles = {
       {
         "id": "parking_lots",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "amenity_areas",
         "paint": {
           "fill-color": "rgba(229, 230, 226, 1)",
@@ -18478,7 +18444,7 @@ ohmVectorStyles = {
       {
         "id": "wetlands_z12",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -18501,7 +18467,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_naturereserveoutline",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 10,
         "maxzoom": 24,
@@ -18540,7 +18506,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areas_z12_natural",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -18571,7 +18537,7 @@ ohmVectorStyles = {
       {
         "id": "place_areas_plot",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_areas",
         "filter": [
           "==",
@@ -18592,7 +18558,7 @@ ohmVectorStyles = {
       {
         "id": "place_areas_square",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_areas",
         "filter": [
           "==",
@@ -18613,7 +18579,7 @@ ohmVectorStyles = {
       {
         "id": "pedestrian_area",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_areas",
         "filter": [
           "all",
@@ -18651,7 +18617,7 @@ ohmVectorStyles = {
       {
         "id": "amenity_areas",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "amenity_areas",
         "filter": [
           "in",
@@ -18677,7 +18643,7 @@ ohmVectorStyles = {
       {
         "id": "water_areas",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_areas",
         "minzoom": 8,
         "maxzoom": 24,
@@ -18705,7 +18671,7 @@ ohmVectorStyles = {
       {
         "id": "place_areas_islet",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_areas",
         "filter": [
           "==",
@@ -18726,7 +18692,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_stream_no_name",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -18776,7 +18742,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_stream_name",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -18831,7 +18797,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_cliff_line",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 15,
         "maxzoom": 24,
@@ -18881,7 +18847,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_cliff_line_triangles",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 15,
         "maxzoom": 24,
@@ -18933,7 +18899,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_waterfall_triangle",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 15,
         "maxzoom": 24,
@@ -18982,7 +18948,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_ditch",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 15,
         "maxzoom": 24,
@@ -19020,7 +18986,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_canal",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 8,
         "maxzoom": 24,
@@ -19056,7 +19022,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_aqueduct",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 8,
         "maxzoom": 24,
@@ -19107,7 +19073,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_river",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 8,
         "maxzoom": 24,
@@ -19143,7 +19109,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_breakwater",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_lines",
         "minzoom": 10,
         "maxzoom": 24,
@@ -19181,7 +19147,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_dam",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -19215,7 +19181,7 @@ ohmVectorStyles = {
       {
         "id": "pier",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "filter": [
           "==",
@@ -19235,7 +19201,7 @@ ohmVectorStyles = {
       {
         "id": "pier_line",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_lines",
         "minzoom": 12,
         "filter": [
@@ -19269,7 +19235,7 @@ ohmVectorStyles = {
       {
         "id": "buildings_flat",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "buildings",
         "minzoom": 14,
         "maxzoom": 24,
@@ -19287,7 +19253,7 @@ ohmVectorStyles = {
       {
         "id": "buildings_flat_ruins",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "minzoom": 14,
         "maxzoom": 24,
@@ -19320,7 +19286,7 @@ ohmVectorStyles = {
       {
         "id": "buildings_ruins_outlines",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "filter": [
           "==",
@@ -19375,7 +19341,7 @@ ohmVectorStyles = {
       {
         "id": "historic_fort",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "minzoom": 14,
         "maxzoom": 24,
@@ -19409,7 +19375,7 @@ ohmVectorStyles = {
       {
         "id": "transport_passenger_platform",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_areas",
         "minzoom": 14,
         "filter": [
@@ -19430,7 +19396,7 @@ ohmVectorStyles = {
       {
         "id": "transport_turntable",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_areas",
         "minzoom": 14,
         "filter": [
@@ -19451,7 +19417,7 @@ ohmVectorStyles = {
       {
         "id": "transport_traverser",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_areas",
         "minzoom": 14,
         "filter": [
@@ -19472,7 +19438,7 @@ ohmVectorStyles = {
       {
         "id": "transport_freight_platform",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_areas",
         "minzoom": 14,
         "filter": [
@@ -19493,7 +19459,7 @@ ohmVectorStyles = {
       {
         "id": "aero_taxiway_lines",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -19530,7 +19496,7 @@ ohmVectorStyles = {
       {
         "id": "aero_runway_lines",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -19565,7 +19531,7 @@ ohmVectorStyles = {
       {
         "id": "man_made_bridge_area",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "filter": [
           "all",
@@ -19593,7 +19559,7 @@ ohmVectorStyles = {
       {
         "id": "man_made_bridge_line",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_lines",
         "filter": [
           "all",
@@ -19622,7 +19588,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarytunnel_case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -19682,7 +19648,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarytunnel_case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -19742,7 +19708,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarytunnel_case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 20,
@@ -19808,7 +19774,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaytunnel_case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -19882,7 +19848,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarytunnel_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -19938,7 +19904,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarytunnel_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -19994,7 +19960,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarytunnel_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -20050,7 +20016,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaytunnel_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -20120,7 +20086,7 @@ ohmVectorStyles = {
       {
         "id": "roads_raceways_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -20176,7 +20142,7 @@ ohmVectorStyles = {
       {
         "id": "roads_trackfillcase_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -20223,7 +20189,7 @@ ohmVectorStyles = {
       {
         "id": "roads_trackfill_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -20270,7 +20236,7 @@ ohmVectorStyles = {
       {
         "id": "roads_track_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -20321,7 +20287,7 @@ ohmVectorStyles = {
       {
         "id": "roads_living_street_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -20378,7 +20344,7 @@ ohmVectorStyles = {
       {
         "id": "roads_pedestrian_street_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -20430,7 +20396,7 @@ ohmVectorStyles = {
       {
         "id": "roads_footway_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -20495,7 +20461,7 @@ ohmVectorStyles = {
       {
         "id": "roads_pier_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -20542,7 +20508,7 @@ ohmVectorStyles = {
       {
         "id": "roads_steps_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -20603,7 +20569,7 @@ ohmVectorStyles = {
       {
         "id": "roads_roadscase_z13_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -20670,7 +20636,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residentialcase_z13_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -20739,7 +20705,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiary-case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "maxzoom": 24,
@@ -20804,7 +20770,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondary-case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10,
         "filter": [
@@ -20868,7 +20834,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarylink-case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "filter": [
@@ -20937,7 +20903,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primary-case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10,
         "filter": [
@@ -21019,7 +20985,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaylink-case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 20,
@@ -21095,7 +21061,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorway-case_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 20,
@@ -21171,7 +21137,7 @@ ohmVectorStyles = {
       {
         "id": "roads_roads_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -21234,7 +21200,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential_construction-copy",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -21299,7 +21265,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -21364,7 +21330,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarylink_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -21444,7 +21410,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarylink_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -21517,7 +21483,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaylink_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -21597,7 +21563,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiary_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 24,
@@ -21678,7 +21644,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondary_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -21758,7 +21724,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primary_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -21839,7 +21805,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorway_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 20,
@@ -21919,7 +21885,7 @@ ohmVectorStyles = {
       {
         "id": "roads_ford_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -21958,7 +21924,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential_bridge_z13-copy_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -22027,7 +21993,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarybridge_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -22083,7 +22049,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarybridge_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -22139,7 +22105,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarybridge_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10,
         "maxzoom": 20,
@@ -22207,7 +22173,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaybridge_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 20,
@@ -22277,7 +22243,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential_bridgetop_z13_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -22350,7 +22316,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarybridgetop_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 24,
@@ -22423,7 +22389,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarybridgetop_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -22495,7 +22461,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarybridgetop_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -22565,7 +22531,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaybridgetop_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 20,
@@ -22639,7 +22605,7 @@ ohmVectorStyles = {
       {
         "id": "roads_subway-tunnels-halo",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "filter": [
@@ -22691,7 +22657,7 @@ ohmVectorStyles = {
       {
         "id": "roads_subways-tunnel-tick",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10,
         "filter": [
@@ -22762,7 +22728,7 @@ ohmVectorStyles = {
       {
         "id": "roads_subway-tunnels",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "filter": [
@@ -22816,7 +22782,7 @@ ohmVectorStyles = {
       {
         "id": "roads_light_rail-tunnel-halo",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "filter": [
@@ -22876,7 +22842,7 @@ ohmVectorStyles = {
       {
         "id": "roads_light_rail-tunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "filter": [
@@ -22938,7 +22904,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarytunnel_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -22990,7 +22956,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarytunnel_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -23042,7 +23008,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarytunnel_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 20,
@@ -23100,7 +23066,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaytunnel_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 20,
@@ -23161,7 +23127,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarytunnel-copy",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -23209,7 +23175,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarytunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -23257,7 +23223,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarytunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -23305,7 +23271,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarytunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -23353,7 +23319,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaytunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -23410,7 +23376,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-tunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 11,
         "maxzoom": 24,
@@ -23478,7 +23444,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-tunnel-dash",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 11,
         "maxzoom": 24,
@@ -23577,7 +23543,7 @@ ohmVectorStyles = {
       {
         "id": "roads_raceways",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -23622,7 +23588,7 @@ ohmVectorStyles = {
       {
         "id": "roads_trackfillcase",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -23658,7 +23624,7 @@ ohmVectorStyles = {
       {
         "id": "roads_trackfill",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -23694,7 +23660,7 @@ ohmVectorStyles = {
       {
         "id": "roads_track",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -23734,7 +23700,7 @@ ohmVectorStyles = {
       {
         "id": "roads_living_street",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -23775,7 +23741,7 @@ ohmVectorStyles = {
       {
         "id": "roads_footway",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -23824,7 +23790,7 @@ ohmVectorStyles = {
       {
         "id": "roads_pier",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -23860,7 +23826,7 @@ ohmVectorStyles = {
       {
         "id": "roads_steps",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -23905,7 +23871,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residentialcase_z13",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -23961,7 +23927,7 @@ ohmVectorStyles = {
       {
         "id": "roads_pedestrian_street-casing",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -24002,7 +23968,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarylink-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "maxzoom": 24,
@@ -24063,7 +24029,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiary-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "maxzoom": 24,
@@ -24124,7 +24090,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondary-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10,
         "filter": [
@@ -24182,7 +24148,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarylink-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -24240,7 +24206,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarylink-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "filter": [
@@ -24301,7 +24267,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primary-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -24374,7 +24340,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaylink-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 20,
@@ -24437,7 +24403,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorway-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 24,
@@ -24500,7 +24466,7 @@ ohmVectorStyles = {
       {
         "id": "roads_proposed",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -24566,7 +24532,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -24611,7 +24577,7 @@ ohmVectorStyles = {
       {
         "id": "roads_pedestrian_street",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -24652,7 +24618,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarylink",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -24708,7 +24674,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarylink",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -24783,7 +24749,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarylink",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -24844,7 +24810,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaylink",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 20,
@@ -24909,7 +24875,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiary",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 24,
@@ -24980,7 +24946,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondary",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -25036,7 +25002,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primary",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -25107,7 +25073,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorway",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 24,
@@ -25174,7 +25140,7 @@ ohmVectorStyles = {
       {
         "id": "roads_ford",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -25213,7 +25179,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-subway-bridge-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 11,
         "maxzoom": 24,
@@ -25267,7 +25233,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-bridge-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 11,
         "maxzoom": 24,
@@ -25323,7 +25289,7 @@ ohmVectorStyles = {
       {
         "id": "roads_subways_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "filter": [
@@ -25383,7 +25349,7 @@ ohmVectorStyles = {
       {
         "id": "roads_subways-bridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "filter": [
@@ -25445,7 +25411,7 @@ ohmVectorStyles = {
       {
         "id": "roads_light-rail-bridge-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "filter": [
@@ -25504,7 +25470,7 @@ ohmVectorStyles = {
       {
         "id": "roads_light-rail-bridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "filter": [
@@ -25566,7 +25532,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential_bridge_z13-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -25622,7 +25588,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarybridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -25670,7 +25636,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarybridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10,
         "filter": [
@@ -25718,7 +25684,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarybridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10,
         "maxzoom": 20,
@@ -25773,7 +25739,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaybridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 20,
@@ -25830,7 +25796,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential_bridgetop_z13",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -25886,7 +25852,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarybridgetop",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 24,
@@ -25947,7 +25913,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarybridgetop",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -26007,7 +25973,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarybridgetop",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -26060,7 +26026,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaybridgetop",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 20,
@@ -26117,7 +26083,7 @@ ohmVectorStyles = {
       {
         "id": "roads_subways-tick",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10,
         "filter": [
@@ -26190,7 +26156,7 @@ ohmVectorStyles = {
       {
         "id": "roads_light_rail",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "filter": [
@@ -26252,7 +26218,7 @@ ohmVectorStyles = {
       {
         "id": "roads_subways",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "filter": [
@@ -26314,7 +26280,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_mini",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -26378,7 +26344,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_mini-dash",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -26461,7 +26427,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_old",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -26526,7 +26492,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_old-dash",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -26610,7 +26576,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-main",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 0,
         "maxzoom": 24,
@@ -26692,7 +26658,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-main-dash",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 0,
         "maxzoom": 24,
@@ -26803,7 +26769,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-yard-siding",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -26848,7 +26814,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-yard-siding-tick",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -26912,7 +26878,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-spur",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 0,
         "maxzoom": 24,
@@ -26998,7 +26964,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-spur-tick",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -27111,7 +27077,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-tourism",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 0,
         "maxzoom": 24,
@@ -27193,7 +27159,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-tourism-dash",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 0,
         "maxzoom": 24,
@@ -27304,7 +27270,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-military",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 0,
         "maxzoom": 24,
@@ -27386,7 +27352,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-military-dash",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 0,
         "maxzoom": 24,
@@ -27497,7 +27463,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-branch",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 0,
         "maxzoom": 24,
@@ -27579,7 +27545,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-branch-dash",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 0,
         "maxzoom": 24,
@@ -27690,7 +27656,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-industrial",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 0,
         "maxzoom": 24,
@@ -27772,7 +27738,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-industrial-dash",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 0,
         "maxzoom": 24,
@@ -27883,7 +27849,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 0,
         "maxzoom": 24,
@@ -28021,7 +27987,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-bridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 0,
         "maxzoom": 24,
@@ -28159,7 +28125,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail-dash",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 0,
         "maxzoom": 24,
@@ -28318,7 +28284,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -28410,7 +28376,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_tram",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -28498,7 +28464,7 @@ ohmVectorStyles = {
       {
         "id": "barriers-dotted",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_lines",
         "filter": [
           "==",
@@ -28520,7 +28486,7 @@ ohmVectorStyles = {
       {
         "id": "barriers",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_lines",
         "filter": [
           "all"
@@ -28564,7 +28530,7 @@ ohmVectorStyles = {
       {
         "id": "power_lines",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_lines",
         "filter": [
           "all",
@@ -28595,7 +28561,7 @@ ohmVectorStyles = {
       {
         "id": "city_county_lines_admin7_8",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
         "minzoom": 10,
         "maxzoom": 20,
@@ -28641,9 +28607,9 @@ ohmVectorStyles = {
       {
         "id": "admin_admin5_6",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
-        "minzoom": 7,
+        "minzoom": 8,
         "maxzoom": 20,
         "filter": [
           "in",
@@ -28660,7 +28626,7 @@ ohmVectorStyles = {
           ]
         ],
         "layout": {
-          "visibility": "visible",
+          "visibility": "none",
           "line-cap": "round",
           "line-join": "round",
           "line-miter-limit": 2
@@ -28684,11 +28650,11 @@ ohmVectorStyles = {
         }
       },
       {
-        "id": "state_lines_admin4-case",
+        "id": "admin_4_state_lines__case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
-        "minzoom": 3,
+        "minzoom": 5,
         "maxzoom": 20,
         "filter": [
           "all",
@@ -28736,7 +28702,7 @@ ohmVectorStyles = {
             [
               "zoom"
             ],
-            6,
+            4,
             0,
             12,
             8,
@@ -28746,11 +28712,11 @@ ohmVectorStyles = {
         }
       },
       {
-        "id": "state_lines_admin4",
+        "id": "admin_4_state_lines",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
-        "minzoom": 5,
+        "minzoom": 4,
         "maxzoom": 20,
         "filter": [
           "all",
@@ -28786,9 +28752,16 @@ ohmVectorStyles = {
               "zoom"
             ],
             4,
-            "rgba(154, 160, 166, 1)",
+            "rgba(180, 180, 180, 1)",
             7,
-            "rgba(189, 190, 191, 1)"
+            "rgba(170, 170, 170, 1)"
+          ],
+          "line-dasharray": [
+            14,
+            6,
+            5,
+            6,
+            14
           ],
           "line-width": [
             "interpolate",
@@ -28798,8 +28771,10 @@ ohmVectorStyles = {
             [
               "zoom"
             ],
-            2,
-            0.4,
+            4,
+            0.5,
+            8,
+            0.5,
             12,
             2,
             15,
@@ -28810,7 +28785,7 @@ ohmVectorStyles = {
       {
         "id": "admin_admin3",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
         "minzoom": 3,
         "maxzoom": 20,
@@ -28845,9 +28820,9 @@ ohmVectorStyles = {
         }
       },
       {
-        "id": "admin_countrylines_z10_case",
+        "id": "admin_1-2_country_lines_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
         "minzoom": 0,
         "maxzoom": 20,
@@ -28866,7 +28841,7 @@ ohmVectorStyles = {
           ]
         ],
         "layout": {
-          "visibility": "visible",
+          "visibility": "none",
           "line-cap": "square",
           "line-join": "round"
         },
@@ -28881,8 +28856,10 @@ ohmVectorStyles = {
             ],
             4,
             "rgba(242, 242, 242, 0.28)",
-            7,
-            "rgba(255, 255, 255, 0.24)"
+            5,
+            "rgba(255, 255, 255, 0.15)",
+            8,
+            "rgba(255, 255, 255, 0.15)"
           ],
           "line-width": [
             "interpolate",
@@ -28894,17 +28871,17 @@ ohmVectorStyles = {
             ],
             6,
             0,
-            12,
-            10,
-            15,
-            8
+            8,
+            1,
+            18,
+            4
           ]
         }
       },
       {
-        "id": "admin_countrylines_z10",
+        "id": "admin_1-2_country_lines",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
         "minzoom": 0,
         "maxzoom": 20,
@@ -28929,7 +28906,7 @@ ohmVectorStyles = {
         },
         "paint": {
           "line-color": [
-            "interpolate",
+            "interpolate-lab",
             [
               "linear"
             ],
@@ -28937,11 +28914,11 @@ ohmVectorStyles = {
               "zoom"
             ],
             0,
-            "rgba(180, 191, 191, 1)",
-            14,
-            "rgba(174, 185, 185, 1)",
+            "rgba(200, 200, 200, 1)",
+            8,
+            "rgba(190, 190, 190, 1)",
             15,
-            "rgba(131, 150, 150, 1)"
+            "rgba(180, 180, 180, 1)"
           ],
           "line-width": [
             "interpolate",
@@ -28953,21 +28930,21 @@ ohmVectorStyles = {
             ],
             0,
             0.25,
-            2,
+            4,
             0.75,
-            10,
-            1,
+            6,
+            1.5,
             13,
             2.5,
             17,
-            1.5
+            3
           ]
         }
       },
       {
         "id": "roadlabels_z14",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "filter": [
@@ -29000,7 +28977,7 @@ ohmVectorStyles = {
       {
         "id": "roadlabels_z11",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 11,
         "filter": [
@@ -29044,7 +29021,7 @@ ohmVectorStyles = {
       {
         "id": "raillabels_z14",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -29095,7 +29072,7 @@ ohmVectorStyles = {
       {
         "id": "water_areaslabels_z15",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_areas",
         "minzoom": 15,
         "maxzoom": 24,
@@ -29140,7 +29117,7 @@ ohmVectorStyles = {
       {
         "id": "water_areaslabels_z12",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_areas",
         "minzoom": 12,
         "maxzoom": 15,
@@ -29186,7 +29163,7 @@ ohmVectorStyles = {
       {
         "id": "water_pointlabels_ocean_sea",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 0,
         "maxzoom": 24,
@@ -29240,7 +29217,7 @@ ohmVectorStyles = {
       {
         "id": "water_areaslabels_z8",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_areas",
         "minzoom": 8,
         "maxzoom": 12,
@@ -29287,7 +29264,7 @@ ohmVectorStyles = {
       {
         "id": "water_lineslabels-cliff",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "filter": [
           "in",
@@ -29339,7 +29316,7 @@ ohmVectorStyles = {
       {
         "id": "water_lineslabels-dam",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "filter": [
           "in",
@@ -29391,7 +29368,7 @@ ohmVectorStyles = {
       {
         "id": "water_lineslabels",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -29450,7 +29427,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areaslabels_park",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 14,
         "maxzoom": 24,
@@ -29524,7 +29501,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areaslabels_farming",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 14,
         "maxzoom": 24,
@@ -29567,7 +29544,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areaslabels_forest",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 14,
         "maxzoom": 24,
@@ -29606,7 +29583,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areaslabels_school",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 14,
         "maxzoom": 24,
@@ -29646,7 +29623,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_place_areas",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "amenity_points_centroids",
         "minzoom": 16,
         "filter": [
@@ -29693,7 +29670,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_frombuildings",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "buildings_points_centroids",
         "minzoom": 16,
         "filter": [
@@ -29764,7 +29741,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_fromareasz14",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "amenity_points_centroids",
         "minzoom": 14,
         "maxzoom": 16,
@@ -29826,7 +29803,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_fromareas",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "amenity_points_centroids",
         "minzoom": 16,
         "maxzoom": 24,
@@ -29907,7 +29884,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_amenity_14",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "amenity_points_centroids",
         "minzoom": 14,
         "maxzoom": 16,
@@ -29949,7 +29926,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_amenity",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "amenity_points_centroids",
         "minzoom": 15,
         "maxzoom": 24,
@@ -30031,7 +30008,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_other",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_points_centroids",
         "minzoom": 15,
         "maxzoom": 24,
@@ -30133,7 +30110,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_other_archaeology",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
@@ -30219,7 +30196,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_other_artwork",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_points_centroids",
         "minzoom": 15,
         "maxzoom": 24,
@@ -30305,7 +30282,7 @@ ohmVectorStyles = {
       {
         "id": "points_powertower",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_points_centroids",
         "minzoom": 15,
         "maxzoom": 24,
@@ -30328,7 +30305,7 @@ ohmVectorStyles = {
       {
         "id": "points_airport",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_points_centroids",
         "minzoom": 10,
         "maxzoom": 14,
@@ -30350,7 +30327,7 @@ ohmVectorStyles = {
       {
         "id": "transport_railstation_points",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
@@ -30429,7 +30406,7 @@ ohmVectorStyles = {
       {
         "id": "transport_points_centroids",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_points_centroids",
         "minzoom": 14,
         "maxzoom": 24,
@@ -30527,7 +30504,7 @@ ohmVectorStyles = {
       {
         "id": "points_placeofworshipother",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "buildings_points_centroids",
         "filter": [
           "all",
@@ -30569,7 +30546,7 @@ ohmVectorStyles = {
       {
         "id": "points_religion",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "buildings_points_centroids",
         "filter": [
           "all"
@@ -30592,7 +30569,7 @@ ohmVectorStyles = {
       {
         "id": "points_fromlanduse-z14",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_points_centroids",
         "minzoom": 14,
         "filter": [
@@ -30641,7 +30618,7 @@ ohmVectorStyles = {
       {
         "id": "points_fromlanduse",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_points_centroids",
         "minzoom": 16,
         "layout": {
@@ -30704,7 +30681,7 @@ ohmVectorStyles = {
       {
         "id": "points_fromlanduseareas",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_points_centroids",
         "minzoom": 16,
         "filter": [
@@ -30743,7 +30720,7 @@ ohmVectorStyles = {
       {
         "id": "points_of_interest_shop",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "buildings_points_centroids",
         "minzoom": 16,
         "maxzoom": 24,
@@ -30788,7 +30765,7 @@ ohmVectorStyles = {
       {
         "id": "county_labels_z11-centroids",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_centroids",
         "minzoom": 9,
         "maxzoom": 20,
@@ -30849,7 +30826,7 @@ ohmVectorStyles = {
       {
         "id": "county_labels_z11",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 9,
         "maxzoom": 20,
@@ -30904,7 +30881,7 @@ ohmVectorStyles = {
       {
         "id": "city_labels_other_z11",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 11,
         "maxzoom": 20,
@@ -30961,7 +30938,7 @@ ohmVectorStyles = {
       {
         "id": "city_labels_town_z8",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 8,
         "maxzoom": 20,
@@ -31013,7 +30990,7 @@ ohmVectorStyles = {
       {
         "id": "city_labels_z11",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 11,
         "maxzoom": 20,
@@ -31065,7 +31042,7 @@ ohmVectorStyles = {
       {
         "id": "city_capital_labels_z6",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 6,
         "maxzoom": 11,
@@ -31132,7 +31109,7 @@ ohmVectorStyles = {
       {
         "id": "city_labels_z6",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 6,
         "maxzoom": 11,
@@ -31199,7 +31176,7 @@ ohmVectorStyles = {
       {
         "id": "state_points_labels-centroids",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_centroids",
         "minzoom": 5,
         "maxzoom": 20,
@@ -31264,7 +31241,7 @@ ohmVectorStyles = {
       {
         "id": "state_points_labels",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 5,
         "maxzoom": 20,
@@ -31324,7 +31301,7 @@ ohmVectorStyles = {
       {
         "id": "statecapital_labels_z10",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "populated_places",
         "minzoom": 10,
         "maxzoom": 20,
@@ -31358,7 +31335,7 @@ ohmVectorStyles = {
       {
         "id": "country_points_labels-centroids",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_centroids",
         "minzoom": 0,
         "maxzoom": 12,
@@ -31425,7 +31402,7 @@ ohmVectorStyles = {
       {
         "id": "country_points_labels",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 0,
         "maxzoom": 12,
@@ -31489,10 +31466,10 @@ ohmVectorStyles = {
     },
     "attribution": "<a href=\"https://www.openhistoricalmap.org/\">OpenHistoricalMap</a>",
     "sources": {
-      "osm": {
+      "ohm": {
         "type": "vector",
         "tiles": [
-          "https://vtiles.openhistoricalmap.org/maps/osm/{z}/{x}/{y}.pbf"
+          "https://vtiles.openhistoricalmap.org/maps/ohm/{z}/{x}/{y}.pbf"
         ]
       },
       "ne": {
@@ -31579,7 +31556,7 @@ ohmVectorStyles = {
       {
         "id": "water_areas",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_areas",
         "minzoom": 8,
         "maxzoom": 24,
@@ -31609,7 +31586,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_stream",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -31644,7 +31621,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_ditch",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 15,
         "maxzoom": 24,
@@ -31683,7 +31660,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_canal",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 8,
         "maxzoom": 24,
@@ -31720,7 +31697,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_river",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 8,
         "maxzoom": 24,
@@ -31762,7 +31739,7 @@ ohmVectorStyles = {
       {
         "id": "water_lines_dam",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "water_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -31797,7 +31774,7 @@ ohmVectorStyles = {
       {
         "id": "buildings_flat",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "buildings",
         "minzoom": 14,
         "maxzoom": 24,
@@ -31815,7 +31792,7 @@ ohmVectorStyles = {
       {
         "id": "buildings_flat_ruins",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "minzoom": 14,
         "maxzoom": 24,
@@ -31838,7 +31815,7 @@ ohmVectorStyles = {
       {
         "id": "t_outlines",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "filter": [
           "==",
@@ -31861,7 +31838,7 @@ ohmVectorStyles = {
       {
         "id": "buildings_flat_outlines",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "buildings",
         "minzoom": 14,
         "filter": [
@@ -31893,7 +31870,7 @@ ohmVectorStyles = {
       {
         "id": "roads_subways",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "filter": [
@@ -31937,7 +31914,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarytunnel_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -31989,7 +31966,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarytunnel_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -32041,7 +32018,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarytunnel_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 20,
@@ -32099,7 +32076,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaytunnel_case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -32160,7 +32137,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarytunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -32208,7 +32185,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarytunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -32256,7 +32233,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarytunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -32302,7 +32279,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaytunnel",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 11,
         "maxzoom": 20,
@@ -32359,7 +32336,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_tram",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -32425,7 +32402,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_mini",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -32490,7 +32467,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_mini_cross",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -32543,7 +32520,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_old",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -32610,7 +32587,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_old_cross",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -32665,7 +32642,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -32731,7 +32708,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_cross",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 24,
@@ -32803,7 +32780,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_construction",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 24,
@@ -32864,7 +32841,7 @@ ohmVectorStyles = {
       {
         "id": "roads_rail_construction_cross",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 24,
@@ -32913,7 +32890,7 @@ ohmVectorStyles = {
       {
         "id": "roads_raceways",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -32958,7 +32935,7 @@ ohmVectorStyles = {
       {
         "id": "roads_trackfillcase",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -32994,7 +32971,7 @@ ohmVectorStyles = {
       {
         "id": "roads_trackfill",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -33030,7 +33007,7 @@ ohmVectorStyles = {
       {
         "id": "roads_track",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -33070,7 +33047,7 @@ ohmVectorStyles = {
       {
         "id": "roads_pedestrian_street",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -33111,7 +33088,7 @@ ohmVectorStyles = {
       {
         "id": "roads_footway",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -33158,7 +33135,7 @@ ohmVectorStyles = {
       {
         "id": "roads_pier",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -33194,7 +33171,7 @@ ohmVectorStyles = {
       {
         "id": "roads_steps",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -33239,7 +33216,7 @@ ohmVectorStyles = {
       {
         "id": "roads_other",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 14,
         "maxzoom": 24,
@@ -33281,7 +33258,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residentialcase_z13",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -33337,7 +33314,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiary-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "maxzoom": 24,
@@ -33386,7 +33363,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondary-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "filter": [
@@ -33434,7 +33411,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarylink-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "filter": [
@@ -33487,7 +33464,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primary-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "filter": [
@@ -33560,7 +33537,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaylink-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "maxzoom": 20,
@@ -33627,7 +33604,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorway-case",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 10.01,
         "maxzoom": 20,
@@ -33694,7 +33671,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential_bridge_z13-copy",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 13,
         "maxzoom": 24,
@@ -33750,7 +33727,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarybridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -33805,7 +33782,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarybridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -33860,7 +33837,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarybridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 20,
@@ -33922,7 +33899,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaybridge",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -33986,7 +33963,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarylink",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -34041,7 +34018,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarylink",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -34113,7 +34090,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaylink",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -34187,7 +34164,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -34239,7 +34216,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiary",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 24,
@@ -34307,7 +34284,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondary",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -34374,7 +34351,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primary",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -34454,7 +34431,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorway",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -34528,7 +34505,7 @@ ohmVectorStyles = {
       {
         "id": "roads_ford",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "filter": [
@@ -34567,7 +34544,7 @@ ohmVectorStyles = {
       {
         "id": "roads_residential_bridgetop_z13",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 12,
         "maxzoom": 24,
@@ -34621,7 +34598,7 @@ ohmVectorStyles = {
       {
         "id": "roads_tertiarybridgetop",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 9,
         "maxzoom": 24,
@@ -34680,7 +34657,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondarybridgetop",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "filter": [
@@ -34738,7 +34715,7 @@ ohmVectorStyles = {
       {
         "id": "roads_primarybridgetop",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "filter": [
@@ -34801,7 +34778,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorwaybridgetop",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 5,
         "maxzoom": 20,
@@ -34870,7 +34847,7 @@ ohmVectorStyles = {
       {
         "id": "roads_secondary_z8",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 8,
         "maxzoom": 9,
@@ -34923,7 +34900,7 @@ ohmVectorStyles = {
       {
         "id": "roads_trunk_z7",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 7,
         "maxzoom": 9,
@@ -34977,7 +34954,7 @@ ohmVectorStyles = {
       {
         "id": "roads_motorway_z7",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "transport_lines",
         "minzoom": 6,
         "maxzoom": 9,
@@ -35026,7 +35003,7 @@ ohmVectorStyles = {
       {
         "id": "admin_countrylines_z10",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_lines",
         "minzoom": 0,
         "maxzoom": 20,
@@ -35069,7 +35046,7 @@ ohmVectorStyles = {
       {
         "id": "man_made_bridge_area",
         "type": "fill",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_areas",
         "filter": [
           "all",
@@ -35100,7 +35077,7 @@ ohmVectorStyles = {
       {
         "id": "man_made_bridge_line",
         "type": "line",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "other_lines",
         "filter": [
           "all",
@@ -35132,7 +35109,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areaslabels_park",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 12,
         "maxzoom": 24,
@@ -35204,7 +35181,7 @@ ohmVectorStyles = {
       {
         "id": "landuse_areaslabels_forest",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "landuse_areas",
         "minzoom": 7,
         "maxzoom": 24,
@@ -35241,7 +35218,7 @@ ohmVectorStyles = {
       {
         "id": "city_labels_z6",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 6,
         "maxzoom": 15,
@@ -35327,7 +35304,7 @@ ohmVectorStyles = {
       {
         "id": "city_capital_labels",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 4,
         "maxzoom": 15,
@@ -35413,7 +35390,7 @@ ohmVectorStyles = {
       {
         "id": "state_points_labels-centroids",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_centroids",
         "minzoom": 4,
         "maxzoom": 20,
@@ -35475,7 +35452,7 @@ ohmVectorStyles = {
       {
         "id": "state_points_labels",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 4,
         "maxzoom": 20,
@@ -35532,7 +35509,7 @@ ohmVectorStyles = {
       {
         "id": "country_points_labels-centroids",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "land_ohm_centroids",
         "minzoom": 0,
         "maxzoom": 14,
@@ -35599,7 +35576,7 @@ ohmVectorStyles = {
       {
         "id": "country_points_labels",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "minzoom": 0,
         "maxzoom": 14,
@@ -35655,7 +35632,7 @@ ohmVectorStyles = {
       {
         "id": "map dragon",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "filter": [
           "==",
@@ -35690,7 +35667,7 @@ ohmVectorStyles = {
       {
         "id": "mermonster",
         "type": "symbol",
-        "source": "osm",
+        "source": "ohm",
         "source-layer": "place_points_centroids",
         "filter": [
           "==",
