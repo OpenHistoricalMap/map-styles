@@ -1,6 +1,6 @@
 {
   "name": "@openhistoricalmap/map-styles",
-  "version": "0.9.12",
+  "version": "0.9.13",
   "description": "A collection of map styles for OpenHistoricalMap",
   "main": "''",
   "type": "module",
@@ -23,10 +23,10 @@
   },
   "homepage": "https://github.com/OpenHistoricalMap/map-styles#readme",
   "dependencies": {
-    "camelcase": "^8.0.0",
-    "fs-extra": "^11.3.0",
-    "maplibre-gl": "^5.1.0",
-    "maplibre-gl-style-flipper": "^1.0.7"
+    "camelcase": "^9.0.0",
+    "fs-extra": "^11.3.4",
+    "maplibre-gl": "^5.20.2",
+    "maplibre-gl-style-flipper": "^1.0.9"
   },
   "devDependencies": {
     "browser-sync": "^3.0.4"
