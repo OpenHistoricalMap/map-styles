@@ -1440,7 +1440,7 @@
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
-      "minzoom": 5,
+      "minzoom": 6,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -1566,7 +1566,7 @@
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
-      "minzoom": 5,
+      "minzoom": 6,
       "maxzoom": 20,
       "filter": [
         "all",
@@ -3096,7 +3096,7 @@
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
-      "minzoom": 5,
+      "minzoom": 6,
       "maxzoom": 20,
       "filter": [
         "all",
