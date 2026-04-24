@@ -1034,7 +1034,7 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "tertiary"],
-        ["!=", ["get", "tunnel"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "none",
@@ -1063,7 +1063,7 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "secondary"],
-        ["!=", ["get", "tunnel"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "none",
@@ -1092,7 +1092,7 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["primary_link"]]],
-        ["!=", ["get", "tunnel"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "none",
@@ -1121,7 +1121,7 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["primary"]]],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["get", "ford"], "yes"]
       ],
       "layout": {
@@ -1164,7 +1164,7 @@
           ["get", "type"],
           ["literal", ["motorway_link", "trunk_link"]]
         ],
-        ["!=", ["get", "tunnel"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "none",
@@ -1202,7 +1202,7 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["motorway", "trunk"]]],
-        ["!=", ["get", "tunnel"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "none",
@@ -1423,7 +1423,7 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "secondary_link"],
-        ["!=", ["get", "tunnel"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1459,7 +1459,7 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["primary_link"]]],
-        ["!=", ["get", "tunnel"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1508,7 +1508,7 @@
           ["get", "type"],
           ["literal", ["motorway_link", "trunk_link"]]
         ],
-        ["!=", ["get", "tunnel"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1590,7 +1590,7 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "tertiary"],
-        ["!=", ["get", "tunnel"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1634,7 +1634,7 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "secondary"],
-        ["!=", ["get", "tunnel"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1678,7 +1678,7 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["primary"]]],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["get", "ford"], "yes"]
       ],
       "layout": {
@@ -1724,7 +1724,7 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["motorway", "trunk"]]],
-        ["!=", ["get", "tunnel"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",

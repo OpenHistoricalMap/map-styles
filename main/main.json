@@ -1752,9 +1752,9 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["==", ["get", "construction"], "tertiary"],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1783,9 +1783,9 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["==", ["get", "construction"], "secondary"],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1814,9 +1814,9 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["==", ["get", "construction"], "primary_link"],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1845,10 +1845,10 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["get", "ford"], "yes"],
         ["==", ["get", "construction"], "primary"],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1878,13 +1878,13 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         [
           "in",
           ["get", "construction"],
           ["literal", ["motorway_link", "trunk_link"]]
         ],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -1914,9 +1914,9 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["in", ["get", "construction"], ["literal", ["motorway", "trunk"]]],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -2011,9 +2011,9 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["==", ["get", "construction"], "secondary_link"],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -2051,9 +2051,9 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["==", ["get", "construction"], "primary_link"],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -2084,13 +2084,13 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         [
           "in",
           ["get", "construction"],
           ["literal", ["motorway_link", "trunk_link"]]
         ],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -2121,9 +2121,9 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["==", ["get", "construction"], "tertiary"],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -2161,9 +2161,9 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["==", ["get", "construction"], "secondary"],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -2201,10 +2201,10 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["get", "ford"], "yes"],
         ["==", ["get", "construction"], "primary"],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -2243,9 +2243,9 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["in", ["get", "construction"], ["literal", ["motorway", "trunk"]]],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3161,7 +3161,7 @@
           ["get", "type"],
           ["literal", ["residential", "service", "unclassified"]]
         ],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3213,8 +3213,8 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "tertiary_link"],
-        ["!=", ["get", "tunnel"], 1],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3248,8 +3248,8 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "tertiary"],
-        ["!=", ["get", "tunnel"], 1],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3282,8 +3282,8 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "secondary"],
-        ["!=", ["get", "tunnel"], 1],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3314,8 +3314,8 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "secondary_link"],
-        ["!=", ["get", "tunnel"], 1],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3346,8 +3346,8 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "primary_link"],
-        ["!=", ["get", "tunnel"], 1],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3376,9 +3376,9 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "primary"],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["get", "ford"], "yes"],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3412,8 +3412,8 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["motorway_link", "trunk_link"]]],
-        ["!=", ["get", "tunnel"], 1],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3443,8 +3443,8 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["motorway", "trunk"]]],
-        ["!=", ["get", "tunnel"], 1],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3556,8 +3556,8 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "secondary_link"],
-        ["!=", ["get", "tunnel"], 1],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3586,8 +3586,8 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "tertiary_link"],
-        ["!=", ["get", "tunnel"], 1],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3626,8 +3626,8 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "primary_link"],
-        ["!=", ["get", "tunnel"], 1],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3657,8 +3657,8 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["motorway_link", "trunk_link"]]],
-        ["!=", ["get", "tunnel"], 1],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3698,8 +3698,8 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "tertiary"],
-        ["!=", ["get", "tunnel"], 1],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3738,8 +3738,8 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "secondary"],
-        ["!=", ["get", "tunnel"], 1],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3768,9 +3768,9 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "primary"],
-        ["!=", ["get", "tunnel"], 1],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["get", "ford"], "yes"],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -3810,8 +3810,8 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["motorway", "trunk"]]],
-        ["!=", ["get", "tunnel"], 1],
-        ["!=", ["get", "bridge"], 1]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
