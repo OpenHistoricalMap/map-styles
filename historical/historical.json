@@ -528,7 +528,7 @@
       "filter": [
         "in",
         ["get", "type"],
-        ["literal", ["grave_yard", "picnic_site", "camp_site", "playground", "pitch", "track", "bleachers"]]
+        ["literal", ["picnic_site", "camp_site", "playground", "pitch", "track", "bleachers"]]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -540,8 +540,6 @@
           [
             "match",
             ["get", "type"],
-            "grave_yard",
-            "rgba(214, 222, 210, 1)",
             "picnic_site",
             "rgba(208, 220, 174, 1)",
             "camp_site",
@@ -572,6 +570,24 @@
             "transparent"
           ]
         ]
+      }
+    },
+    {
+      "id": "landuse_areas_cemetery_pattern",
+      "type": "fill",
+      "source": "ohm",
+      "source-layer": "landuse_areas",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "in",
+        ["get", "type"],
+        ["literal", ["cemetery"]]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-pattern": "cross_space_18px",
+        "fill-opacity": 0.3
       }
     },
     {
@@ -662,9 +678,31 @@
       "type": "fill",
       "source": "ohm",
       "source-layer": "amenity_areas",
-      "filter": ["in", ["get", "type"], ["literal", ["school", "university"]]],
+      "filter": ["in", ["get", "type"], ["literal", ["school", "university", "grave_yard"]]],
       "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(226, 214, 205, 1)"}
+      "paint": {
+        "fill-color": [
+          "match",
+          ["get", "type"],
+          "grave_yard",
+          "rgba(214, 222, 210, 1)",
+          "rgba(226, 214, 205, 1)"
+        ]
+      }
+    },
+    {
+      "id": "amenity_areas_grave_yard_pattern",
+      "type": "fill",
+      "source": "ohm",
+      "source-layer": "amenity_areas",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": ["==", ["get", "type"], "grave_yard"],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-pattern": "grave_yard_space_18px",
+        "fill-opacity": 0.3
+      }
     },
     {
       "id": "water_lines_canal-casing",

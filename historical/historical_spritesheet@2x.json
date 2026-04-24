@@ -377,6 +377,13 @@
     "x": 48,
     "y": 166
   },
+  "cross_space_18px": {
+    "height": 18,
+    "pixelRatio": 1,
+    "width": 18,
+    "x": 0,
+    "y": 256
+  },
   "dentist-18": {
     "height": 17,
     "pixelRatio": 1,
@@ -558,6 +565,13 @@
     "width": 18,
     "x": 33,
     "y": 130
+  },
+  "grave_yard_space_18px": {
+    "height": 18,
+    "pixelRatio": 1,
+    "width": 18,
+    "x": 18,
+    "y": 256
   },
   "grocery-18": {
     "height": 15,

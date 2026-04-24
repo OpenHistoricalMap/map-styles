@@ -847,7 +847,6 @@ ohmVectorStyles = {
           [
             "literal",
             [
-              "grave_yard",
               "picnic_site",
               "camp_site",
               "playground",
@@ -876,8 +875,6 @@ ohmVectorStyles = {
                 "get",
                 "type"
               ],
-              "grave_yard",
-              "rgba(214, 222, 210, 1)",
               "picnic_site",
               "rgba(208, 220, 174, 1)",
               "camp_site",
@@ -915,6 +912,34 @@ ohmVectorStyles = {
               "transparent"
             ]
           ]
+        }
+      },
+      {
+        "id": "landuse_areas_cemetery_pattern",
+        "type": "fill",
+        "source": "ohm",
+        "source-layer": "landuse_areas",
+        "minzoom": 11,
+        "maxzoom": 24,
+        "filter": [
+          "in",
+          [
+            "get",
+            "type"
+          ],
+          [
+            "literal",
+            [
+              "cemetery"
+            ]
+          ]
+        ],
+        "layout": {
+          "visibility": "visible"
+        },
+        "paint": {
+          "fill-pattern": "cross_space_18px",
+          "fill-opacity": 0.3
         }
       },
       {
@@ -1097,7 +1122,8 @@ ohmVectorStyles = {
             "literal",
             [
               "school",
-              "university"
+              "university",
+              "grave_yard"
             ]
           ]
         ],
@@ -1105,7 +1131,39 @@ ohmVectorStyles = {
           "visibility": "visible"
         },
         "paint": {
-          "fill-color": "rgba(226, 214, 205, 1)"
+          "fill-color": [
+            "match",
+            [
+              "get",
+              "type"
+            ],
+            "grave_yard",
+            "rgba(214, 222, 210, 1)",
+            "rgba(226, 214, 205, 1)"
+          ]
+        }
+      },
+      {
+        "id": "amenity_areas_grave_yard_pattern",
+        "type": "fill",
+        "source": "ohm",
+        "source-layer": "amenity_areas",
+        "minzoom": 11,
+        "maxzoom": 24,
+        "filter": [
+          "==",
+          [
+            "get",
+            "type"
+          ],
+          "grave_yard"
+        ],
+        "layout": {
+          "visibility": "visible"
+        },
+        "paint": {
+          "fill-pattern": "grave_yard_space_18px",
+          "fill-opacity": 0.3
         }
       },
       {
@@ -12684,7 +12742,25 @@ ohmVectorStyles = {
         ],
         "layout": {
           "icon-image": "airport-18",
-          "icon-size": [
+          "icon-offset": [
+            -1,
+            0
+          ],
+          "text-font": [
+            "OpenHistorical"
+          ],
+          "text-field": [
+            "coalesce",
+            [
+              "get",
+              "iata"
+            ],
+            [
+              "get",
+              "icao"
+            ]
+          ],
+          "text-size": [
             "interpolate",
             [
               "linear"
@@ -12692,13 +12768,43 @@ ohmVectorStyles = {
             [
               "zoom"
             ],
-            10,
-            1.2,
+            11.99,
+            12,
+            13,
             14,
-            1.5
+            14,
+            14,
+            14.01,
+            0
           ],
-          "text-font": [
-            "OpenHistorical"
+          "text-anchor": "left",
+          "text-offset": [
+            1,
+            0
+          ],
+          "visibility": "visible"
+        },
+        "paint": {
+          "text-color": "rgba(80, 80, 80, 1)",
+          "text-halo-color": "rgba(255, 255, 255, 1)",
+          "text-halo-width": 0.5,
+          "text-halo-blur": 1,
+          "text-opacity": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            11.99,
+            0,
+            12,
+            0.8,
+            14,
+            0.8,
+            14.01,
+            0
           ]
         }
       },
