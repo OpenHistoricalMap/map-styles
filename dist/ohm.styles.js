@@ -3471,8 +3471,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -3487,8 +3491,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -3535,8 +3543,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -3551,8 +3563,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -3599,8 +3615,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -3615,8 +3635,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -3663,8 +3687,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -3687,8 +3715,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -3736,8 +3768,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -3758,8 +3794,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -3807,8 +3847,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -3829,8 +3873,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -3990,8 +4038,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -4006,8 +4058,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -4070,8 +4126,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -4086,8 +4146,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -4139,8 +4203,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -4161,8 +4229,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -4214,8 +4286,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -4230,8 +4306,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -4294,8 +4374,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -4310,8 +4394,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -4374,8 +4462,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -4398,8 +4490,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -4463,8 +4559,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -4485,8 +4585,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -6101,8 +6205,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -6156,8 +6264,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -6241,16 +6353,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -6302,16 +6422,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -6362,16 +6490,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -6420,16 +6556,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -6478,16 +6622,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -6534,8 +6686,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -6550,8 +6706,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -6609,16 +6769,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -6672,16 +6840,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -6917,16 +7093,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -6973,16 +7157,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -7043,16 +7235,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -7106,16 +7306,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -7175,16 +7383,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -7245,16 +7461,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -7301,8 +7525,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -7317,8 +7545,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -7386,16 +7618,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -15458,8 +15698,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -15506,8 +15750,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -15559,8 +15807,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -15612,8 +15864,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -15687,8 +15943,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -15754,8 +16014,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -16106,8 +16370,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -16166,8 +16434,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -16240,8 +16512,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -16360,8 +16636,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -16427,8 +16707,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -16499,8 +16783,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -16581,8 +16869,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -20722,8 +21014,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -20738,8 +21034,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -20786,8 +21086,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -20802,8 +21106,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -20855,8 +21163,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -20871,8 +21183,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -20924,8 +21240,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -20953,8 +21273,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -21007,8 +21331,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -21029,8 +21357,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -21083,8 +21415,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -21105,8 +21441,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -21346,8 +21686,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -21362,8 +21706,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -21431,8 +21779,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -21447,8 +21799,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -21505,8 +21861,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -21527,8 +21887,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -21580,8 +21944,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -21596,8 +21964,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -21660,8 +22032,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -21676,8 +22052,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -21745,8 +22125,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -21769,8 +22153,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -21827,8 +22215,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -21849,8 +22241,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -22811,8 +23207,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -22871,8 +23271,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -23895,8 +24299,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -23985,16 +24393,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -24046,16 +24462,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -24106,16 +24530,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -24164,16 +24596,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -24227,16 +24667,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -24288,8 +24736,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -24304,8 +24756,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -24363,16 +24819,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -24426,16 +24890,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -24634,16 +25106,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -24695,16 +25175,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -24770,16 +25258,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -24833,16 +25329,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -24892,16 +25396,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -24962,16 +25474,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -25023,8 +25543,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -25039,8 +25563,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -25096,16 +25624,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -25370,8 +25906,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -25432,8 +25972,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -25491,8 +26035,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -26104,8 +26652,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -26177,16 +26729,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -26239,16 +26799,24 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -27938,8 +28506,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -27954,8 +28526,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "bridge"
+              "coalesce",
+              [
+                "get",
+                "bridge"
+              ],
+              0
             ],
             1
           ]
@@ -28076,8 +28652,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -28214,8 +28794,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -33331,8 +33915,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -33379,8 +33967,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -33432,8 +34024,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -33485,8 +34081,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -33560,8 +34160,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -33627,8 +34231,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -33979,8 +34587,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -34039,8 +34651,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -34113,8 +34729,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -34233,8 +34853,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -34300,8 +34924,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]
@@ -34372,8 +35000,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ],
@@ -34454,8 +35086,12 @@ ohmVectorStyles = {
           [
             "!=",
             [
-              "get",
-              "tunnel"
+              "coalesce",
+              [
+                "get",
+                "tunnel"
+              ],
+              0
             ],
             1
           ]

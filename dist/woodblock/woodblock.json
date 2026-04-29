@@ -1871,8 +1871,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ]
@@ -1919,8 +1923,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ]
@@ -1972,8 +1980,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ]
@@ -2025,8 +2037,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -2100,8 +2116,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ]
@@ -2167,8 +2187,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ]
@@ -2519,8 +2543,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ]
@@ -2579,8 +2607,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ]
@@ -2653,8 +2685,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ]
@@ -2773,8 +2809,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ]
@@ -2840,8 +2880,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ]
@@ -2912,8 +2956,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -2994,8 +3042,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ]

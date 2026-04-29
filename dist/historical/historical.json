@@ -3468,8 +3468,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -3484,8 +3488,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -3532,8 +3540,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -3548,8 +3560,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -3596,8 +3612,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -3612,8 +3632,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -3660,8 +3684,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -3684,8 +3712,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -3733,8 +3765,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -3755,8 +3791,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -3804,8 +3844,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -3826,8 +3870,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -3987,8 +4035,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -4003,8 +4055,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -4067,8 +4123,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -4083,8 +4143,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -4136,8 +4200,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -4158,8 +4226,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -4211,8 +4283,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -4227,8 +4303,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -4291,8 +4371,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -4307,8 +4391,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -4371,8 +4459,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -4395,8 +4487,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -4460,8 +4556,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -4482,8 +4582,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -6098,8 +6202,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -6153,8 +6261,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -6238,16 +6350,24 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -6299,16 +6419,24 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -6359,16 +6487,24 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -6417,16 +6553,24 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -6475,16 +6619,24 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -6531,8 +6683,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -6547,8 +6703,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -6606,16 +6766,24 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -6669,16 +6837,24 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -6914,16 +7090,24 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -6970,16 +7154,24 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -7040,16 +7232,24 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -7103,16 +7303,24 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -7172,16 +7380,24 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -7242,16 +7458,24 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -7298,8 +7522,12 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
@@ -7314,8 +7542,12 @@
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
@@ -7383,16 +7615,24 @@
         [
           "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
           1
         ],
         [
           "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
           1
         ]
