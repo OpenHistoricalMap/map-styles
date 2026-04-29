@@ -5,7 +5,7 @@
   "sources": {
     "ohm": {
       "type": "vector",
-      "tiles": ["https://vtiles.ohmstaging.org/maps/ohm/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://vtiles.openhistoricalmap.org/maps/ohm/{z}/{x}/{y}.pbf"]
     },
     "ohm_landcover_hillshade": {
       "type": "raster",
@@ -18,12 +18,12 @@
     },
     "ne": {
       "type": "vector",
-      "tiles": ["https://vtiles.ohmstaging.org/maps/ne/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://vtiles.openhistoricalmap.org/maps/ne/{z}/{x}/{y}.pbf"]
     },
     "osm_land": {
       "type": "vector",
       "tiles": [
-        "https://vtiles.ohmstaging.org/maps/osm_land/{z}/{x}/{y}.pbf"
+        "https://vtiles.openhistoricalmap.org/maps/osm_land/{z}/{x}/{y}.pbf"
       ],
       "minzoom": 0,
       "maxzoom": 22,
