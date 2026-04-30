@@ -70,7 +70,26 @@ Miscellaneous notes:
 
 ## Versioning and publishing to npm
 
-> Releases can be automated via [Actions → "Release to npm"](https://github.com/OpenHistoricalMap/map-styles/actions/workflows/release.yml) — click **Run workflow**, choose `patch` / `minor` / `major`, and it builds `/dist`, commits, tags, and publishes with provenance via npm Trusted Publishers (no token required). Manual steps below remain as a fallback.
+Releases are **manually triggered** via the [Release to npm](https://github.com/OpenHistoricalMap/map-styles/actions/workflows/release.yml) GitHub Action. Authentication uses npm [Trusted Publishers](https://docs.npmjs.com/trusted-publishers) (OIDC) — no tokens required.
+
+### How to release
+
+1. Make sure your changes are merged into `staging` (PRs are validated automatically by [`validate.yml`](.github/workflows/validate.yml) on every push).
+2. Go to [Actions → "Release to npm" → Run workflow](https://github.com/OpenHistoricalMap/map-styles/actions/workflows/release.yml).
+3. Pick the branch `staging` and the bump type (`patch` / `minor` / `major`), then click **Run workflow**.
+4. The workflow rebuilds `/dist`, creates a single commit `Packaging X.Y.Z with rebuilt /dist`, tags it `vX.Y.Z`, pushes to `staging`, and publishes to npm with verified provenance.
+5. Update the OHM properties that depend on `map-styles`. For `ohm-website`, [Dependabot](https://docs.github.com/en/code-security/dependabot) runs daily and will automatically open a PR bumping the `yarn.lock` within ~24 hours of the publish — just review and merge it. The manual fallback steps are documented in the [ohm-website](#ohm-website) section below.
+
+### Why manual?
+
+Manual triggering lets us:
+- Batch multiple PRs into a single release (no version churn).
+- Choose `patch` / `minor` / `major` per release.
+- Avoid publishing on irrelevant changes (README edits, refactors, etc.).
+
+### Manual fallback (without the workflow)
+
+If the GitHub Action is unavailable, the release can be done locally:
 
 1. increment the version in `package.json`, e.g., `0.9.7`
 1. commit your style changes, including `/dist/*` & `package.json`, push to GitHub, and [create a corresponding release](https://github.com/OpenHistoricalMap/map-styles/releases/new), e.g., `v0.9.7`
