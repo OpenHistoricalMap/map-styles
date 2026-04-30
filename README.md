@@ -87,20 +87,6 @@ Manual triggering lets us:
 - Choose `patch` / `minor` / `major` per release.
 - Avoid publishing on irrelevant changes (README edits, refactors, etc.).
 
-### Switching to automatic releases
-
-If the team prefers, the workflow can be set to publish automatically on every merge to `staging` by adding a `push` trigger in [`.github/workflows/release.yml`](.github/workflows/release.yml):
-
-```yaml
-on:
-  push:
-    branches: [staging]
-  workflow_dispatch:
-    inputs: ...
-```
-
-A middle ground is to trigger releases only when a PR is merged with a `release` label. See the [GitHub Actions docs](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows) for other trigger options.
-
 ### Manual fallback (without the workflow)
 
 If the GitHub Action is unavailable, the release can be done locally:
