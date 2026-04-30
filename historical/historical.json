@@ -1852,7 +1852,7 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
-        ["==", ["get", "bridge"], 0],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1],
         ["==", ["get", "construction"], "road"]
       ],
       "layout": {
@@ -1883,7 +1883,7 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
-        ["==", ["get", "bridge"], 0],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1],
         [
           "in",
           ["get", "construction"],
@@ -4110,7 +4110,7 @@
         "all",
         ["in", ["get", "type"], ["literal", ["miniature", "narrow_gauge"]]],
         ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]],
-        ["==", ["get", "tunnel"], 0]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -4219,7 +4219,7 @@
           ["literal", ["abandoned", "dismantled", "disused", "razed"]]
         ],
         ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]],
-        ["==", ["get", "tunnel"], 0]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -4303,7 +4303,7 @@
         ],
         ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]],
         ["==", ["get", "usage"], "main"],
-        ["==", ["get", "tunnel"], 0]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -4436,7 +4436,7 @@
         ],
         ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]],
         ["!=", ["get", "usage"], "main"],
-        ["==", ["get", "tunnel"], 0]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -4472,7 +4472,7 @@
         ],
         ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]],
         ["==", ["get", "usage"], "main"],
-        ["==", ["get", "tunnel"], 0]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -4580,7 +4580,7 @@
         ],
         ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]],
         ["!=", ["get", "usage"], "main"],
-        ["==", ["get", "tunnel"], 0]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",

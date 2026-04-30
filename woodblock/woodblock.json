@@ -1007,7 +1007,7 @@
           ["get", "type"],
           ["literal", ["residential", "service", "unclassified"]]
         ],
-        ["==", ["get", "bridge"], 0]
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
         "visibility": "none",
