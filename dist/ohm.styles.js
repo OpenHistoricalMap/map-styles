@@ -3348,16 +3348,12 @@ ohmVectorStyles = {
             "construction"
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "bridge"
-              ],
-              0
+              "get",
+              "bridge"
             ],
-            1
+            0
           ],
           [
             "==",
@@ -3409,16 +3405,12 @@ ohmVectorStyles = {
             "construction"
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "bridge"
-              ],
-              0
+              "get",
+              "bridge"
             ],
-            1
+            0
           ],
           [
             "in",
@@ -7826,16 +7818,12 @@ ohmVectorStyles = {
             ]
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -8076,16 +8064,12 @@ ohmVectorStyles = {
             ]
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -8272,16 +8256,12 @@ ohmVectorStyles = {
             "main"
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -8593,16 +8573,12 @@ ohmVectorStyles = {
             "main"
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -8691,16 +8667,12 @@ ohmVectorStyles = {
             "main"
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -8916,16 +8888,12 @@ ohmVectorStyles = {
             "main"
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -15679,16 +15647,12 @@ ohmVectorStyles = {
             ]
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "bridge"
-              ],
-              0
+              "get",
+              "bridge"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -20917,16 +20881,12 @@ ohmVectorStyles = {
             ]
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "bridge"
-              ],
-              0
+              "get",
+              "bridge"
             ],
-            1
+            0
           ],
           [
             "in",
@@ -20988,16 +20948,12 @@ ohmVectorStyles = {
             ]
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "bridge"
-              ],
-              0
+              "get",
+              "bridge"
             ],
-            1
+            0
           ],
           [
             "in",
@@ -27235,16 +27191,12 @@ ohmVectorStyles = {
             ]
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -27289,16 +27241,12 @@ ohmVectorStyles = {
             "main"
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ],
           [
             "in",
@@ -27631,16 +27579,12 @@ ohmVectorStyles = {
             "spur"
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -27748,16 +27692,12 @@ ohmVectorStyles = {
             "tourism"
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -27834,16 +27774,12 @@ ohmVectorStyles = {
             "tourism"
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -27949,16 +27885,12 @@ ohmVectorStyles = {
             "military"
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -28035,16 +27967,12 @@ ohmVectorStyles = {
             "military"
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -28150,16 +28078,12 @@ ohmVectorStyles = {
             "branch"
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -28236,16 +28160,12 @@ ohmVectorStyles = {
             "branch"
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -28351,16 +28271,12 @@ ohmVectorStyles = {
             "industrial"
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -28437,16 +28353,12 @@ ohmVectorStyles = {
             "industrial"
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "tunnel"
-              ],
-              0
+              "get",
+              "tunnel"
             ],
-            1
+            0
           ]
         ],
         "layout": {
@@ -33952,16 +33864,12 @@ ohmVectorStyles = {
             ]
           ],
           [
-            "!=",
+            "==",
             [
-              "coalesce",
-              [
-                "get",
-                "bridge"
-              ],
-              0
+              "get",
+              "bridge"
             ],
-            1
+            0
           ]
         ],
         "layout": {
