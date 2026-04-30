@@ -3345,12 +3345,16 @@
           "construction"
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
-          0
+          1
         ],
         [
           "==",
@@ -3402,12 +3406,16 @@
           "construction"
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
-          0
+          1
         ],
         [
           "in",
@@ -7815,12 +7823,16 @@
           ]
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ]
       ],
       "layout": {
@@ -8061,12 +8073,16 @@
           ]
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ]
       ],
       "layout": {
@@ -8253,12 +8269,16 @@
           "main"
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ]
       ],
       "layout": {
@@ -8570,12 +8590,16 @@
           "main"
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ]
       ],
       "layout": {
@@ -8664,12 +8688,16 @@
           "main"
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ]
       ],
       "layout": {
@@ -8885,12 +8913,16 @@
           "main"
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ]
       ],
       "layout": {
