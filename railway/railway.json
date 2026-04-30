@@ -1619,7 +1619,7 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["construction"]]],
-        ["==", ["get", "bridge"], 0],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1],
         ["in", ["get", "construction"], ["literal", ["road"]]]
       ],
       "layout": {
@@ -1650,7 +1650,7 @@
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["construction"]]],
-        ["==", ["get", "bridge"], 0],
+        ["!=", ["coalesce", ["get", "bridge"], 0], 1],
         [
           "in",
           ["get", "construction"],
@@ -4593,7 +4593,7 @@
           ["in", ["get", "service"], ["literal", ["siding", "spur", "yard"]]]
         ],
         ["in", ["get", "type"], ["literal", ["preserved", "rail"]]],
-        ["==", ["get", "tunnel"], 0]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -4615,7 +4615,7 @@
       "filter": [
         "all",
         ["==", ["get", "usage"], "main"],
-        ["==", ["get", "tunnel"], 0],
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["in", ["get", "type"], ["literal", ["preserved", "rail"]]],
         [
           "!",
@@ -4755,7 +4755,7 @@
         ],
         ["!", ["in", ["get", "service"], ["literal", ["siding", "yard"]]]],
         ["==", ["get", "service"], "spur"],
-        ["==", ["get", "tunnel"], 0]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -4797,7 +4797,7 @@
           ["in", ["get", "service"], ["literal", ["siding", "spur", "yard"]]]
         ],
         ["==", ["get", "usage"], "tourism"],
-        ["==", ["get", "tunnel"], 0]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -4834,7 +4834,7 @@
           ["in", ["get", "service"], ["literal", ["siding", "spur", "yard"]]]
         ],
         ["==", ["get", "usage"], "tourism"],
-        ["==", ["get", "tunnel"], 0]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -4880,7 +4880,7 @@
           ["in", ["get", "service"], ["literal", ["siding", "spur", "yard"]]]
         ],
         ["==", ["get", "usage"], "military"],
-        ["==", ["get", "tunnel"], 0]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -4917,7 +4917,7 @@
           ["in", ["get", "service"], ["literal", ["siding", "spur", "yard"]]]
         ],
         ["==", ["get", "usage"], "military"],
-        ["==", ["get", "tunnel"], 0]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -4963,7 +4963,7 @@
           ["in", ["get", "service"], ["literal", ["siding", "spur", "yard"]]]
         ],
         ["==", ["get", "usage"], "branch"],
-        ["==", ["get", "tunnel"], 0]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -4990,7 +4990,7 @@
           ["in", ["get", "service"], ["literal", ["siding", "spur", "yard"]]]
         ],
         ["==", ["get", "usage"], "branch"],
-        ["==", ["get", "tunnel"], 0]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -5036,7 +5036,7 @@
           ["in", ["get", "service"], ["literal", ["siding", "spur", "yard"]]]
         ],
         ["==", ["get", "usage"], "industrial"],
-        ["==", ["get", "tunnel"], 0]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
@@ -5073,7 +5073,7 @@
           ["in", ["get", "service"], ["literal", ["siding", "spur", "yard"]]]
         ],
         ["==", ["get", "usage"], "industrial"],
-        ["==", ["get", "tunnel"], 0]
+        ["!=", ["coalesce", ["get", "tunnel"], 0], 1]
       ],
       "layout": {
         "visibility": "visible",
