@@ -58,10 +58,13 @@ jobs:
           npm run build
           git add package.json package-lock.json dist/
           git commit -m "Packaging ${NEW_VERSION} with rebuilt /dist"
-          git tag "v${NEW_VERSION}"
+          git tag -a "v${NEW_VERSION}" -m "v${NEW_VERSION}"
+          echo "NEW_VERSION=${NEW_VERSION}" >> "$GITHUB_ENV"
 
       - name: Push to GitHub
-        run: git push origin staging --follow-tags
+        run: |
+          git push origin staging
+          git push origin "v${NEW_VERSION}"
 
       - name: Publish to npm with provenance
         run: npm publish --provenance --access public
