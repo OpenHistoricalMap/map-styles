@@ -2954,12 +2954,16 @@
           ]
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
-          0
+          1
         ],
         [
           "in",
@@ -3021,12 +3025,16 @@
           ]
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "bridge"
+            "coalesce",
+            [
+              "get",
+              "bridge"
+            ],
+            0
           ],
-          0
+          1
         ],
         [
           "in",
@@ -9264,12 +9272,16 @@
           ]
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ]
       ],
       "layout": {
@@ -9314,12 +9326,16 @@
           "main"
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ],
         [
           "in",
@@ -9652,12 +9668,16 @@
           "spur"
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ]
       ],
       "layout": {
@@ -9765,12 +9785,16 @@
           "tourism"
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ]
       ],
       "layout": {
@@ -9847,12 +9871,16 @@
           "tourism"
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ]
       ],
       "layout": {
@@ -9958,12 +9986,16 @@
           "military"
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ]
       ],
       "layout": {
@@ -10040,12 +10072,16 @@
           "military"
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ]
       ],
       "layout": {
@@ -10151,12 +10187,16 @@
           "branch"
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ]
       ],
       "layout": {
@@ -10233,12 +10273,16 @@
           "branch"
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ]
       ],
       "layout": {
@@ -10344,12 +10388,16 @@
           "industrial"
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ]
       ],
       "layout": {
@@ -10426,12 +10474,16 @@
           "industrial"
         ],
         [
-          "==",
+          "!=",
           [
-            "get",
-            "tunnel"
+            "coalesce",
+            [
+              "get",
+              "tunnel"
+            ],
+            0
           ],
-          0
+          1
         ]
       ],
       "layout": {
