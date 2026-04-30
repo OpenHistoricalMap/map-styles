@@ -1,0 +1,25 @@
+name: Validate build
+
+on:
+  push:
+    branches-ignore:
+      - staging
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+
+      - run: npm ci
+
+      - name: Build /dist
+        run: npm run build
+
+      - name: Validate npm package (dry-run)
+        run: npm publish --dry-run

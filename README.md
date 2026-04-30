@@ -70,6 +70,8 @@ Miscellaneous notes:
 
 ## Versioning and publishing to npm
 
+> Releases can be automated via [Actions → "Release to npm"](https://github.com/OpenHistoricalMap/map-styles/actions/workflows/release.yml) — click **Run workflow**, choose `patch` / `minor` / `major`, and it builds `/dist`, commits, tags, and publishes with provenance via npm Trusted Publishers (no token required). Manual steps below remain as a fallback.
+
 1. increment the version in `package.json`, e.g., `0.9.7`
 1. commit your style changes, including `/dist/*` & `package.json`, push to GitHub, and [create a corresponding release](https://github.com/OpenHistoricalMap/map-styles/releases/new), e.g., `v0.9.7`
 1. publish to npm using `npm publish`
