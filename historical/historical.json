@@ -912,7 +912,7 @@
       "id": "water_lines_cliff_line",
       "type": "line",
       "source": "ohm",
-      "source-layer": "water_lines",
+      "source-layer": "natural_lines",
       "minzoom": 15,
       "maxzoom": 24,
       "filter": [
@@ -935,7 +935,7 @@
       "id": "water_lines_cliff_line_triangles",
       "type": "line",
       "source": "ohm",
-      "source-layer": "water_lines",
+      "source-layer": "natural_lines",
       "minzoom": 15,
       "maxzoom": 24,
       "filter": [
@@ -960,7 +960,7 @@
       "id": "water_lines_waterfall_triangle",
       "type": "line",
       "source": "ohm",
-      "source-layer": "water_lines",
+      "source-layer": "natural_lines",
       "minzoom": 15,
       "maxzoom": 24,
       "filter": [
@@ -5665,7 +5665,7 @@
       "id": "water_lines_labels_cliff",
       "type": "symbol",
       "source": "ohm",
-      "source-layer": "water_lines",
+      "source-layer": "natural_lines",
       "filter": ["==", ["get", "type"], "cliff"],
       "layout": {
         "text-size": ["interpolate", ["linear"], ["zoom"], 11, 9, 13, 11],
