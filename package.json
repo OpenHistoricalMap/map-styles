@@ -12,9 +12,10 @@
     "type": "git",
     "url": "git+ssh://git@github.com/OpenHistoricalMap/map-styles.git"
   },
-  "author": "tsinn <tim@greeninfo.org>",
+  "author": "OpenHistoricalMap <dev@openhistoricalmap.org>",
   "contributors": [
     "Vanessa Knoppke-Wetzel <run.for.funner@gmail.com>",
+    "Tim Sinnott <tim@greeninfo.org>",
     "Eric Theise <erictheise@gmail.com>"
   ],
   "license": "CC0 1.0 Universal",
