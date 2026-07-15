@@ -6588,7 +6588,7 @@
         "icon-image": "airport-18",
         "icon-offset": [-1.0, 0],
         "text-font": ["OpenHistorical"],
-        "text-field": ["coalesce", ["get", "iata"], ["get", "icao"]],
+        "text-field": ["get", "ref"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 11.99, 12, 13, 14, 14, 14, 14.01, 0],
         "text-anchor": "left",
         "text-offset": [1, 0],
