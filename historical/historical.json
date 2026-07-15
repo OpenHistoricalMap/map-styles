@@ -4003,7 +4003,15 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          10,
+          "rgba(240, 240, 240, 1)",
+          12,
+          "#ffffff"
+        ],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
