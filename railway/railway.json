@@ -6576,7 +6576,7 @@
         ["get", "type"],
         [
           "literal",
-          ["hamlet", "islet", "locality", "neighborhood", "suburb", "village"]
+          ["hamlet", "islet", "locality", "neighbourhood", "suburb", "village"]
         ]
       ],
       "layout": {
