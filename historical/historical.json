@@ -6823,7 +6823,7 @@
       "filter": [
         "in",
         ["get", "type"],
-        ["literal", ["hamlet", "neighborhood", "neighbourhood", "suburb", "village"]]
+        ["literal", ["hamlet", "neighbourhood", "suburb", "village"]]
       ],
       "layout": {
         "text-field": ["get", "name"],
