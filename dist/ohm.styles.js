@@ -1627,7 +1627,7 @@ ohmVectorStyles = {
         "id": "water_lines_cliff_line",
         "type": "line",
         "source": "ohm",
-        "source-layer": "water_lines",
+        "source-layer": "natural_lines",
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
@@ -1669,7 +1669,7 @@ ohmVectorStyles = {
         "id": "water_lines_cliff_line_triangles",
         "type": "line",
         "source": "ohm",
-        "source-layer": "water_lines",
+        "source-layer": "natural_lines",
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
@@ -1713,7 +1713,7 @@ ohmVectorStyles = {
         "id": "water_lines_waterfall_triangle",
         "type": "line",
         "source": "ohm",
-        "source-layer": "water_lines",
+        "source-layer": "natural_lines",
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
@@ -2643,7 +2643,7 @@ ohmVectorStyles = {
         "type": "line",
         "source": "ohm",
         "source-layer": "transport_lines",
-        "minzoom": 5,
+        "minzoom": 6,
         "maxzoom": 20,
         "filter": [
           "all",
@@ -2880,7 +2880,7 @@ ohmVectorStyles = {
         "type": "line",
         "source": "ohm",
         "source-layer": "transport_lines",
-        "minzoom": 5,
+        "minzoom": 6,
         "maxzoom": 20,
         "filter": [
           "all",
@@ -5676,7 +5676,7 @@ ohmVectorStyles = {
         "type": "line",
         "source": "ohm",
         "source-layer": "transport_lines",
-        "minzoom": 9,
+        "minzoom": 6,
         "maxzoom": 20,
         "filter": [
           "all",
@@ -5881,7 +5881,7 @@ ohmVectorStyles = {
         "type": "line",
         "source": "ohm",
         "source-layer": "transport_lines",
-        "minzoom": 5,
+        "minzoom": 6,
         "maxzoom": 20,
         "filter": [
           "all",
@@ -7555,7 +7555,19 @@ ohmVectorStyles = {
           "line-join": "round"
         },
         "paint": {
-          "line-color": "#ffffff",
+          "line-color": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            10,
+            "rgba(240, 240, 240, 1)",
+            12,
+            "#ffffff"
+          ],
           "line-width": [
             "interpolate",
             [
@@ -10946,7 +10958,7 @@ ohmVectorStyles = {
         "id": "water_lines_labels_cliff",
         "type": "symbol",
         "source": "ohm",
-        "source-layer": "water_lines",
+        "source-layer": "natural_lines",
         "filter": [
           "==",
           [
@@ -12750,15 +12762,8 @@ ohmVectorStyles = {
             "OpenHistorical"
           ],
           "text-field": [
-            "coalesce",
-            [
-              "get",
-              "iata"
-            ],
-            [
-              "get",
-              "icao"
-            ]
+            "get",
+            "ref"
           ],
           "text-size": [
             "interpolate",
@@ -13288,7 +13293,7 @@ ohmVectorStyles = {
             "literal",
             [
               "hamlet",
-              "neighborhood",
+              "neighbourhood",
               "suburb",
               "village"
             ]
@@ -19232,7 +19237,7 @@ ohmVectorStyles = {
         "id": "water_lines_cliff_line",
         "type": "line",
         "source": "ohm",
-        "source-layer": "water_lines",
+        "source-layer": "natural_lines",
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
@@ -19282,7 +19287,7 @@ ohmVectorStyles = {
         "id": "water_lines_cliff_line_triangles",
         "type": "line",
         "source": "ohm",
-        "source-layer": "water_lines",
+        "source-layer": "natural_lines",
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
@@ -19334,7 +19339,7 @@ ohmVectorStyles = {
         "id": "water_lines_waterfall_triangle",
         "type": "line",
         "source": "ohm",
-        "source-layer": "water_lines",
+        "source-layer": "natural_lines",
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
@@ -20210,7 +20215,7 @@ ohmVectorStyles = {
         "type": "line",
         "source": "ohm",
         "source-layer": "transport_lines",
-        "minzoom": 5,
+        "minzoom": 6,
         "maxzoom": 20,
         "filter": [
           "all",
@@ -20452,7 +20457,7 @@ ohmVectorStyles = {
         "type": "line",
         "source": "ohm",
         "source-layer": "transport_lines",
-        "minzoom": 5,
+        "minzoom": 6,
         "maxzoom": 20,
         "filter": [
           "all",
@@ -23622,7 +23627,7 @@ ohmVectorStyles = {
         "type": "line",
         "source": "ohm",
         "source-layer": "transport_lines",
-        "minzoom": 9,
+        "minzoom": 6,
         "maxzoom": 20,
         "filter": [
           "all",
@@ -23875,7 +23880,7 @@ ohmVectorStyles = {
         "type": "line",
         "source": "ohm",
         "source-layer": "transport_lines",
-        "minzoom": 5,
+        "minzoom": 6,
         "maxzoom": 20,
         "filter": [
           "all",
@@ -30043,7 +30048,7 @@ ohmVectorStyles = {
         "id": "water_lineslabels-cliff",
         "type": "symbol",
         "source": "ohm",
-        "source-layer": "water_lines",
+        "source-layer": "natural_lines",
         "filter": [
           "in",
           [
@@ -31675,7 +31680,7 @@ ohmVectorStyles = {
               "hamlet",
               "islet",
               "locality",
-              "neighborhood",
+              "neighbourhood",
               "suburb",
               "village"
             ]
