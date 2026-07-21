@@ -17,7 +17,7 @@ ohmVectorStyles = {
       "ohm_landcover_hillshade": {
         "type": "raster",
         "tiles": [
-          "https://static-tiles-lclu.s3.us-west-1.amazonaws.com/{z}/{x}/{y}.png"
+          "https://static-tiles.openhistoricalmap.org/{z}/{x}/{y}.png"
         ],
         "minzoom": 0,
         "maxzoom": 8,
@@ -18089,7 +18089,7 @@ ohmVectorStyles = {
       "ohm_landcover_hillshade": {
         "type": "raster",
         "tiles": [
-          "https://static-tiles-lclu.s3.us-west-1.amazonaws.com/{z}/{x}/{y}.png"
+          "https://static-tiles.openhistoricalmap.org/{z}/{x}/{y}.png"
         ],
         "minzoom": 0,
         "maxzoom": 8,
