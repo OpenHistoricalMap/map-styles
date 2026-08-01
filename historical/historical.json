@@ -6163,6 +6163,56 @@
       }
     },
     {
+      "id": "address_points_labels",
+      "type": "symbol",
+      "source": "ohm",
+      "source-layer": "address_points",
+      "minzoom": 16,
+      "filter": ["has", "addr_housenumber"],
+      "layout": {
+        "text-field": ["get", "addr_housenumber"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 16, 8, 17, 9, 20, 10],
+        "text-anchor": "top",
+        "text-offset": [0, 1],
+        "text-font": ["OpenHistorical"],
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(80, 80, 80, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5,
+        "text-opacity": ["interpolate", ["linear"], ["zoom"], 16.99, 0, 17, 1]
+      }
+    },
+    {
+      "id": "buildings_address_labels",
+      "type": "symbol",
+      "source": "ohm",
+      "source-layer": "buildings",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["has", "addr_housenumber"],
+        ["any", ["!", ["has", "name"]], ["==", ["get", "name"], ""]]
+      ],
+      "layout": {
+        "text-field": ["get", "addr_housenumber"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 16, 8, 17, 9, 20, 10],
+        "text-anchor": "top",
+        "text-offset": [0, 1],
+        "text-font": ["OpenHistorical"],
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(80, 80, 80, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5,
+        "text-opacity": ["interpolate", ["linear"], ["zoom"], 16.99, 0, 17, 1]
+      }
+    },
+    {
       "id": "points_of_interest_buildings",
       "type": "symbol",
       "source": "ohm",
@@ -6172,7 +6222,18 @@
       "layout": {
         "icon-image": "{tourism}-18",
         "visibility": "visible",
-        "text-field": ["get", "name"],
+        "text-field": [
+          "case",
+          ["all", ["has", "name"], ["has", "addr_housenumber"]],
+          [
+            "concat",
+            ["get", "name"],
+            " (",
+            ["get", "addr_housenumber"],
+            ")"
+          ],
+          ["get", "name"]
+        ],
         "text-size": ["interpolate", ["linear"], ["zoom"], 16, 12, 17, 14, 20, 16],
         "text-anchor": "center",
         "text-offset": [0, 0],
