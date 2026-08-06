@@ -6063,6 +6063,28 @@
       }
     },
     {
+      "id": "landuse_areas_labels_cemetery",
+      "type": "symbol",
+      "source": "ohm",
+      "source-layer": "landuse_points_centroids",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": ["==", ["get", "type"], "cemetery"],
+      "layout": {
+        "icon-image": "cross-18",
+        "text-field": ["get", "name"],
+        "text-size": 11,
+        "text-anchor": "top",
+        "text-offset": [0, 0.75],
+        "text-font": ["OpenHistorical"]
+      },
+      "paint": {
+        "text-color": "rgba(95, 107, 71, 1)",
+        "text-halo-color": "rgba(245, 239, 239, 1)",
+        "text-halo-width": 1
+      }
+    },
+    {
       "id": "landuse_areas_labels_school",
       "type": "symbol",
       "source": "ohm",
