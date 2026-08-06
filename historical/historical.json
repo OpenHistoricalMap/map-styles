@@ -6223,16 +6223,24 @@
         "icon-image": "{tourism}-18",
         "visibility": "visible",
         "text-field": [
-          "case",
-          ["all", ["has", "name"], ["has", "addr_housenumber"]],
+          "step",
+          ["zoom"],
+          ["get", "name"],
+          17,
           [
-            "concat",
-            ["get", "name"],
-            " (",
-            ["get", "addr_housenumber"],
-            ")"
-          ],
-          ["get", "name"]
+            "case",
+            ["all", ["has", "name"], ["has", "addr_housenumber"]],
+            [
+              "format",
+              ["get", "name"],
+              {},
+              "\n",
+              {},
+              ["get", "addr_housenumber"],
+              {"font-scale": 0.65}
+            ],
+            ["get", "name"]
+          ]
         ],
         "text-size": ["interpolate", ["linear"], ["zoom"], 16, 12, 17, 14, 20, 16],
         "text-anchor": "center",
