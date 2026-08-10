@@ -917,12 +917,41 @@ ohmVectorStyles = {
         "minzoom": 11,
         "maxzoom": 24,
         "filter": [
-          "==",
+          "all",
           [
-            "get",
-            "type"
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "cemetery"
           ],
-          "cemetery"
+          [
+            "==",
+            [
+              "get",
+              "religion"
+            ],
+            "christian"
+          ],
+          [
+            "!",
+            [
+              "in",
+              [
+                "get",
+                "denomination"
+              ],
+              [
+                "literal",
+                [
+                  "jehovahs_witness",
+                  "mormon",
+                  "iglesia_ni_cristo"
+                ]
+              ]
+            ]
+          ]
         ],
         "layout": {
           "visibility": "visible"
