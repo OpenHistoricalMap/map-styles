@@ -5832,7 +5832,7 @@
             ]
           ]
         ],
-        ["<", ["get", "area_m2"], 40000]
+        ["<", ["get", "area"], 40000]
       ],
       "layout": {
         "text-field": ["get", "name"],
@@ -5874,8 +5874,8 @@
             ]
           ]
         ],
-        [">=", ["get", "area_m2"], 40000],
-        ["<", ["get", "area_m2"], 3000000]
+        [">=", ["get", "area"], 40000],
+        ["<", ["get", "area"], 3000000]
       ],
       "layout": {
         "text-field": ["get", "name"],
@@ -5918,7 +5918,7 @@
             ]
           ]
         ],
-        [">=", ["get", "area_m2"], 3000000]
+        [">=", ["get", "area"], 3000000]
       ],
       "layout": {
         "text-field": ["get", "name"],
@@ -6000,7 +6000,7 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "nature_reserve"],
-        ["<", ["get", "area_m2"], 30000000]
+        ["<", ["get", "area"], 30000000]
       ],
       "layout": {
         "text-size": 12,
@@ -6023,8 +6023,8 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "nature_reserve"],
-        [">=", ["get", "area_m2"], 30000000],
-        ["<", ["get", "area_m2"], 100000000]
+        [">=", ["get", "area"], 30000000],
+        ["<", ["get", "area"], 100000000]
       ],
       "layout": {
         "text-size": [
@@ -6057,7 +6057,7 @@
       "filter": [
         "all",
         ["==", ["get", "type"], "nature_reserve"],
-        [">=", ["get", "area_m2"], 100000000]
+        [">=", ["get", "area"], 100000000]
       ],
       "layout": {
         "text-size": ["interpolate", ["linear"], ["zoom"], 7, 12, 8, 16, 9, 24, 12, 14],
@@ -6625,7 +6625,7 @@
       "source-layer": "transport_points_centroids",
       "minzoom": 13,
       "maxzoom": 16,
-      "filter": [">", ["get", "area_m2"], 1000000],
+      "filter": [">", ["get", "area"], 1000000],
       "layout": {
         "icon-image": "{type}-18",
         "visibility": "visible",
@@ -6649,7 +6649,7 @@
       "source-layer": "transport_points_centroids",
       "minzoom": 13,
       "maxzoom": 16,
-      "filter": [">", ["get", "area_m2"], 10000000],
+      "filter": [">", ["get", "area"], 10000000],
       "layout": {
         "icon-image": "{type}-18",
         "visibility": "visible",
@@ -7167,7 +7167,7 @@
         ["==", ["get", "admin_level"], 2]
       ],
       "layout": {
-        "symbol-sort-key": ["get", "area_km2"],
+        "symbol-sort-key": ["get", "area"],
         "text-line-height": 1,
         "text-size": [
           "interpolate",
