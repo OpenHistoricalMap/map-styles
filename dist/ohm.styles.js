@@ -11136,7 +11136,7 @@ ohmVectorStyles = {
             "<",
             [
               "get",
-              "area_m2"
+              "area"
             ],
             40000
           ]
@@ -11205,7 +11205,7 @@ ohmVectorStyles = {
             ">=",
             [
               "get",
-              "area_m2"
+              "area"
             ],
             40000
           ],
@@ -11213,7 +11213,7 @@ ohmVectorStyles = {
             "<",
             [
               "get",
-              "area_m2"
+              "area"
             ],
             3000000
           ]
@@ -11301,7 +11301,7 @@ ohmVectorStyles = {
             ">=",
             [
               "get",
-              "area_m2"
+              "area"
             ],
             3000000
           ]
@@ -11452,7 +11452,7 @@ ohmVectorStyles = {
             "<",
             [
               "get",
-              "area_m2"
+              "area"
             ],
             30000000
           ]
@@ -11494,7 +11494,7 @@ ohmVectorStyles = {
             ">=",
             [
               "get",
-              "area_m2"
+              "area"
             ],
             30000000
           ],
@@ -11502,7 +11502,7 @@ ohmVectorStyles = {
             "<",
             [
               "get",
-              "area_m2"
+              "area"
             ],
             100000000
           ]
@@ -11558,7 +11558,7 @@ ohmVectorStyles = {
             ">=",
             [
               "get",
-              "area_m2"
+              "area"
             ],
             100000000
           ]
@@ -12748,7 +12748,7 @@ ohmVectorStyles = {
           ">",
           [
             "get",
-            "area_m2"
+            "area"
           ],
           1000000
         ],
@@ -12808,7 +12808,7 @@ ohmVectorStyles = {
           ">",
           [
             "get",
-            "area_m2"
+            "area"
           ],
           10000000
         ],
@@ -13712,7 +13712,7 @@ ohmVectorStyles = {
         "layout": {
           "symbol-sort-key": [
             "get",
-            "area_km2"
+            "area"
           ],
           "text-line-height": 1,
           "text-size": [
