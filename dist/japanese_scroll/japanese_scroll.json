@@ -384,17 +384,28 @@
       "minzoom": 0,
       "maxzoom": 20,
       "filter": [
-        "in",
+        "all",
         [
-          "get",
-          "admin_level"
+          "in",
+          [
+            "get",
+            "admin_level"
+          ],
+          [
+            "literal",
+            [
+              1,
+              2
+            ]
+          ]
         ],
         [
-          "literal",
+          "==",
           [
-            1,
-            2
-          ]
+            "get",
+            "type"
+          ],
+          "administrative"
         ]
       ],
       "layout": {

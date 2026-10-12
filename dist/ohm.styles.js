@@ -10231,12 +10231,23 @@ ohmVectorStyles = {
         "minzoom": 11,
         "maxzoom": 20,
         "filter": [
-          "==",
+          "all",
           [
-            "get",
-            "admin_level"
+            "==",
+            [
+              "get",
+              "admin_level"
+            ],
+            9
           ],
-          9
+          [
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "administrative"
+          ]
         ],
         "layout": {
           "visibility": "visible",
@@ -10269,17 +10280,28 @@ ohmVectorStyles = {
         "minzoom": 10,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                7,
+                8
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              7,
-              8
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -10313,17 +10335,28 @@ ohmVectorStyles = {
         "minzoom": 8,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                5,
+                6
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              5,
-              6
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -10493,12 +10526,23 @@ ohmVectorStyles = {
         "minzoom": 5,
         "maxzoom": 20,
         "filter": [
-          "==",
+          "all",
           [
-            "get",
-            "admin_level"
+            "==",
+            [
+              "get",
+              "admin_level"
+            ],
+            3
           ],
-          3
+          [
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "administrative"
+          ]
         ],
         "layout": {
           "visibility": "visible",
@@ -10530,17 +10574,28 @@ ohmVectorStyles = {
         "minzoom": 0,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                1,
+                2
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              1,
-              2
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -10589,17 +10644,28 @@ ohmVectorStyles = {
         "minzoom": 0,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                1,
+                2
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              1,
-              2
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -14256,17 +14322,28 @@ ohmVectorStyles = {
         "minzoom": 0,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                1,
+                2
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              1,
-              2
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -28831,17 +28908,28 @@ ohmVectorStyles = {
         "minzoom": 10,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                7,
+                8
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              7,
-              8
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -28877,17 +28965,28 @@ ohmVectorStyles = {
         "minzoom": 8,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                5,
+                6
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              5,
-              6
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -29055,12 +29154,23 @@ ohmVectorStyles = {
         "minzoom": 3,
         "maxzoom": 20,
         "filter": [
-          "==",
+          "all",
           [
-            "get",
-            "admin_level"
+            "==",
+            [
+              "get",
+              "admin_level"
+            ],
+            3
           ],
-          3
+          [
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "administrative"
+          ]
         ],
         "layout": {
           "visibility": "visible",
@@ -29092,17 +29202,28 @@ ohmVectorStyles = {
         "minzoom": 0,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                1,
+                2
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              1,
-              2
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -29151,17 +29272,28 @@ ohmVectorStyles = {
         "minzoom": 0,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                1,
+                2
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              1,
-              2
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -35223,17 +35355,28 @@ ohmVectorStyles = {
         "minzoom": 0,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                1,
+                2
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              1,
-              2
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
