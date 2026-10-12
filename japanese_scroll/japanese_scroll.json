@@ -260,7 +260,11 @@
       "source-layer": "land_ohm_lines",
       "minzoom": 0,
       "maxzoom": 20,
-      "filter": ["in", ["get", "admin_level"], ["literal", [1, 2]]],
+      "filter": [
+        "all",
+        ["in", ["get", "admin_level"], ["literal", [1, 2]]],
+        ["==", ["get", "type"], "administrative"]
+      ],
       "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(157, 169, 174, 1)",

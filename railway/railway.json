@@ -5370,7 +5370,11 @@
       "source-layer": "land_ohm_lines",
       "minzoom": 10,
       "maxzoom": 20,
-      "filter": ["in", ["get", "admin_level"], ["literal", [7, 8]]],
+      "filter": [
+        "all",
+        ["in", ["get", "admin_level"], ["literal", [7, 8]]],
+        ["==", ["get", "type"], "administrative"]
+      ],
       "layout": {
         "visibility": "visible",
         "line-cap": "round",
@@ -5389,7 +5393,11 @@
       "source-layer": "land_ohm_lines",
       "minzoom": 8,
       "maxzoom": 20,
-      "filter": ["in", ["get", "admin_level"], ["literal", [5, 6]]],
+      "filter": [
+        "all",
+        ["in", ["get", "admin_level"], ["literal", [5, 6]]],
+        ["==", ["get", "type"], "administrative"]
+      ],
       "layout": {
         "visibility": "none",
         "line-cap": "round",
@@ -5482,7 +5490,11 @@
       "source-layer": "land_ohm_lines",
       "minzoom": 3,
       "maxzoom": 20,
-      "filter": ["==", ["get", "admin_level"], 3],
+      "filter": [
+        "all",
+        ["==", ["get", "admin_level"], 3],
+        ["==", ["get", "type"], "administrative"]
+      ],
       "layout": {
         "visibility": "visible",
         "line-cap": "square",
@@ -5500,7 +5512,11 @@
       "source-layer": "land_ohm_lines",
       "minzoom": 0,
       "maxzoom": 20,
-      "filter": ["in", ["get", "admin_level"], ["literal", [1, 2]]],
+      "filter": [
+        "all",
+        ["in", ["get", "admin_level"], ["literal", [1, 2]]],
+        ["==", ["get", "type"], "administrative"]
+      ],
       "layout": {
         "visibility": "none",
         "line-cap": "square",
@@ -5528,7 +5544,11 @@
       "source-layer": "land_ohm_lines",
       "minzoom": 0,
       "maxzoom": 20,
-      "filter": ["in", ["get", "admin_level"], ["literal", [1, 2]]],
+      "filter": [
+        "all",
+        ["in", ["get", "admin_level"], ["literal", [1, 2]]],
+        ["==", ["get", "type"], "administrative"]
+      ],
       "layout": {
         "visibility": "visible",
         "line-cap": "square",
