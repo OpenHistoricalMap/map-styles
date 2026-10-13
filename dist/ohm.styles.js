@@ -10567,6 +10567,54 @@ ohmVectorStyles = {
         }
       },
       {
+        "id": "indigenous_admin_2",
+        "type": "line",
+        "source": "ohm",
+        "source-layer": "land_ohm_lines",
+        "minzoom": 4,
+        "filter": [
+          "all",
+          [
+            "==",
+            [
+              "get",
+              "admin_level"
+            ],
+            2
+          ],
+          [
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "indigenous_administration"
+          ]
+        ],
+        "layout": {
+          "visibility": "visible",
+          "line-cap": "square",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-blur": 1,
+          "line-color": "#c99",
+          "line-width": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            6,
+            2,
+            12,
+            4
+          ]
+        }
+      },
+      {
         "id": "admin_country_lines_z10_case",
         "type": "line",
         "source": "ohm",
@@ -13748,6 +13796,114 @@ ohmVectorStyles = {
           "text-halo-color": "rgba(255, 255, 255, 1)",
           "text-halo-width": 1,
           "text-halo-blur": 1
+        }
+      },
+      {
+        "id": "indigenous_admin_centroids",
+        "type": "symbol",
+        "source": "ohm",
+        "source-layer": "land_ohm_centroids",
+        "minzoom": 4,
+        "maxzoom": 20,
+        "filter": [
+          "all",
+          [
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "indigenous_administration"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "admin_level"
+            ],
+            2
+          ],
+          [
+            ">",
+            [
+              "get",
+              "area"
+            ],
+            [
+              "interpolate",
+              [
+                "exponential",
+                -0.1
+              ],
+              [
+                "zoom"
+              ],
+              6,
+              10000000000,
+              12,
+              10000
+            ]
+          ]
+        ],
+        "layout": {
+          "symbol-sort-key": [
+            "get",
+            "area"
+          ],
+          "text-line-height": 1,
+          "text-size": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            0,
+            6,
+            3,
+            9,
+            6,
+            15,
+            10,
+            16
+          ],
+          "symbol-avoid-edges": false,
+          "text-font": [
+            "OpenHistorical Bold"
+          ],
+          "symbol-placement": "point",
+          "text-justify": "center",
+          "visibility": "visible",
+          "text-field": [
+            "get",
+            "name"
+          ],
+          "text-max-width": 7
+        },
+        "paint": {
+          "text-color": "#966",
+          "text-halo-width": 1.5,
+          "text-halo-color": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            0,
+            "rgba(252, 255, 254, 0.75)",
+            3,
+            "rgba(240, 244, 216, 1)",
+            5,
+            "rgba(246,247,227, 1)",
+            7,
+            "rgba(255, 255, 255, 1)"
+          ],
+          "text-halo-blur": 1,
+          "text-opacity": 1,
+          "text-translate-anchor": "map"
         }
       },
       {
