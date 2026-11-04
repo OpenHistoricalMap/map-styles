@@ -2468,12 +2468,18 @@
           1
         ],
         [
-          "==",
+          "in",
           [
             "get",
             "construction"
           ],
-          "tertiary"
+          [
+            "literal",
+            [
+              "tertiary",
+              "tertiary_link"
+            ]
+          ]
         ]
       ],
       "layout": {
@@ -2528,12 +2534,18 @@
           1
         ],
         [
-          "==",
+          "in",
           [
             "get",
             "construction"
           ],
-          "secondary"
+          [
+            "literal",
+            [
+              "secondary",
+              "secondary_link"
+            ]
+          ]
         ]
       ],
       "layout": {
@@ -2589,12 +2601,18 @@
           1
         ],
         [
-          "==",
+          "in",
           [
             "get",
             "construction"
           ],
-          "primary"
+          [
+            "literal",
+            [
+              "primary",
+              "primary_link"
+            ]
+          ]
         ]
       ],
       "layout": {
@@ -2718,12 +2736,18 @@
           1
         ],
         [
-          "==",
+          "in",
           [
             "get",
             "construction"
           ],
-          "tertiary"
+          [
+            "literal",
+            [
+              "tertiary",
+              "tertiary_link"
+            ]
+          ]
         ]
       ],
       "layout": {
@@ -2774,12 +2798,18 @@
           1
         ],
         [
-          "==",
+          "in",
           [
             "get",
             "construction"
           ],
-          "secondary"
+          [
+            "literal",
+            [
+              "secondary",
+              "secondary_link"
+            ]
+          ]
         ]
       ],
       "layout": {
@@ -2830,12 +2860,18 @@
           1
         ],
         [
-          "==",
+          "in",
           [
             "get",
             "construction"
           ],
-          "primary"
+          [
+            "literal",
+            [
+              "primary",
+              "primary_link"
+            ]
+          ]
         ]
       ],
       "layout": {
@@ -5509,12 +5545,18 @@
       "filter": [
         "all",
         [
-          "==",
+          "in",
           [
             "get",
             "type"
           ],
-          "tertiary"
+          [
+            "literal",
+            [
+              "tertiary",
+              "tertiary_link"
+            ]
+          ]
         ],
         [
           "==",
@@ -5561,12 +5603,18 @@
       "filter": [
         "all",
         [
-          "==",
+          "in",
           [
             "get",
             "type"
           ],
-          "secondary"
+          [
+            "literal",
+            [
+              "secondary",
+              "secondary_link"
+            ]
+          ]
         ],
         [
           "==",
@@ -5614,12 +5662,18 @@
       "filter": [
         "all",
         [
-          "==",
+          "in",
           [
             "get",
             "type"
           ],
-          "primary"
+          [
+            "literal",
+            [
+              "primary",
+              "primary_link"
+            ]
+          ]
         ],
         [
           "==",
@@ -5727,12 +5781,18 @@
       "filter": [
         "all",
         [
-          "==",
+          "in",
           [
             "get",
             "type"
           ],
-          "tertiary"
+          [
+            "literal",
+            [
+              "tertiary",
+              "tertiary_link"
+            ]
+          ]
         ],
         [
           "==",
@@ -5775,12 +5835,18 @@
       "filter": [
         "all",
         [
-          "==",
+          "in",
           [
             "get",
             "type"
           ],
-          "secondary"
+          [
+            "literal",
+            [
+              "secondary",
+              "secondary_link"
+            ]
+          ]
         ],
         [
           "==",
@@ -5823,12 +5889,18 @@
       "filter": [
         "all",
         [
-          "==",
+          "in",
           [
             "get",
             "type"
           ],
-          "primary"
+          [
+            "literal",
+            [
+              "primary",
+              "primary_link"
+            ]
+          ]
         ],
         [
           "==",
