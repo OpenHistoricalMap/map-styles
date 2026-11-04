@@ -303,7 +303,7 @@
       "minzoom": 9,
       "filter": [
         "all",
-        ["==", ["get", "type"], "tertiary"],
+        ["in", ["get", "type"], ["literal", ["tertiary", "tertiary_link"]]],
         ["==", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -333,7 +333,7 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", ["get", "type"], "secondary"],
+        ["in", ["get", "type"], ["literal", ["secondary", "secondary_link"]]],
         ["==", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -364,7 +364,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["==", ["get", "type"], "primary"],
+        ["in", ["get", "type"], ["literal", ["primary", "primary_link"]]],
         ["==", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -429,7 +429,7 @@
       "minzoom": 9,
       "filter": [
         "all",
-        ["==", ["get", "type"], "tertiary"],
+        ["in", ["get", "type"], ["literal", ["tertiary", "tertiary_link"]]],
         ["==", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -458,7 +458,7 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", ["get", "type"], "secondary"],
+        ["in", ["get", "type"], ["literal", ["secondary", "secondary_link"]]],
         ["==", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -487,7 +487,7 @@
       "minzoom": 6,
       "filter": [
         "all",
-        ["==", ["get", "type"], "primary"],
+        ["in", ["get", "type"], ["literal", ["primary", "primary_link"]]],
         ["==", ["get", "tunnel"], 1]
       ],
       "layout": {"visibility": "none"},

@@ -1118,7 +1118,7 @@
         "all",
         ["==", ["get", "type"], "construction"],
         ["==", ["get", "tunnel"], 1],
-        ["==", ["get", "construction"], "tertiary"]
+        ["in", ["get", "construction"], ["literal", ["tertiary", "tertiary_link"]]]
       ],
       "layout": {
         "visibility": "visible",
@@ -1149,7 +1149,7 @@
         "all",
         ["==", ["get", "type"], "construction"],
         ["==", ["get", "tunnel"], 1],
-        ["==", ["get", "construction"], "secondary"]
+        ["in", ["get", "construction"], ["literal", ["secondary", "secondary_link"]]]
       ],
       "layout": {
         "visibility": "visible",
@@ -1181,7 +1181,7 @@
         "all",
         ["==", ["get", "type"], "construction"],
         ["==", ["get", "tunnel"], 1],
-        ["==", ["get", "construction"], "primary"]
+        ["in", ["get", "construction"], ["literal", ["primary", "primary_link"]]]
       ],
       "layout": {
         "visibility": "visible",
@@ -1248,7 +1248,7 @@
         "all",
         ["==", ["get", "type"], "construction"],
         ["==", ["get", "tunnel"], 1],
-        ["==", ["get", "construction"], "tertiary"]
+        ["in", ["get", "construction"], ["literal", ["tertiary", "tertiary_link"]]]
       ],
       "layout": {
         "visibility": "visible",
@@ -1278,7 +1278,7 @@
         "all",
         ["==", ["get", "type"], "construction"],
         ["==", ["get", "tunnel"], 1],
-        ["==", ["get", "construction"], "secondary"]
+        ["in", ["get", "construction"], ["literal", ["secondary", "secondary_link"]]]
       ],
       "layout": {
         "visibility": "visible",
@@ -1308,7 +1308,7 @@
         "all",
         ["==", ["get", "type"], "construction"],
         ["==", ["get", "tunnel"], 1],
-        ["==", ["get", "construction"], "primary"]
+        ["in", ["get", "construction"], ["literal", ["primary", "primary_link"]]]
       ],
       "layout": {
         "visibility": "visible",
@@ -2719,7 +2719,7 @@
       "minzoom": 9,
       "filter": [
         "all",
-        ["==", ["get", "type"], "tertiary"],
+        ["in", ["get", "type"], ["literal", ["tertiary", "tertiary_link"]]],
         ["==", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -2749,7 +2749,7 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", ["get", "type"], "secondary"],
+        ["in", ["get", "type"], ["literal", ["secondary", "secondary_link"]]],
         ["==", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -2780,7 +2780,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["==", ["get", "type"], "primary"],
+        ["in", ["get", "type"], ["literal", ["primary", "primary_link"]]],
         ["==", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -2845,7 +2845,7 @@
       "minzoom": 9,
       "filter": [
         "all",
-        ["==", ["get", "type"], "tertiary"],
+        ["in", ["get", "type"], ["literal", ["tertiary", "tertiary_link"]]],
         ["==", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -2874,7 +2874,7 @@
       "minzoom": 9,
       "filter": [
         "all",
-        ["==", ["get", "type"], "tertiary"],
+        ["in", ["get", "type"], ["literal", ["tertiary", "tertiary_link"]]],
         ["==", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -2903,7 +2903,7 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", ["get", "type"], "secondary"],
+        ["in", ["get", "type"], ["literal", ["secondary", "secondary_link"]]],
         ["==", ["get", "tunnel"], 1]
       ],
       "layout": {
@@ -2932,7 +2932,7 @@
       "minzoom": 6,
       "filter": [
         "all",
-        ["==", ["get", "type"], "primary"],
+        ["in", ["get", "type"], ["literal", ["primary", "primary_link"]]],
         ["==", ["get", "tunnel"], 1]
       ],
       "layout": {
