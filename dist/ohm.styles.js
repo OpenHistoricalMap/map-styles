@@ -315,17 +315,12 @@ ohmVectorStyles = {
         "minzoom": 6,
         "maxzoom": 24,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "nature_reserve"
-            ]
-          ]
+          "nature_reserve"
         ],
         "layout": {
           "visibility": "visible"
@@ -922,15 +917,39 @@ ohmVectorStyles = {
         "minzoom": 11,
         "maxzoom": 24,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "type"
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "cemetery"
           ],
           [
-            "literal",
+            "==",
             [
-              "cemetery"
+              "get",
+              "religion"
+            ],
+            "christian"
+          ],
+          [
+            "!",
+            [
+              "in",
+              [
+                "get",
+                "denomination"
+              ],
+              [
+                "literal",
+                [
+                  "jehovahs_witness",
+                  "mormon",
+                  "iglesia_ni_cristo"
+                ]
+              ]
             ]
           ]
         ],
@@ -1544,16 +1563,10 @@ ohmVectorStyles = {
             "stream"
           ],
           [
-            "in",
+            "!",
             [
-              "get",
+              "has",
               "name"
-            ],
-            [
-              "literal",
-              [
-                ""
-              ]
             ]
           ]
         ],
@@ -1594,12 +1607,8 @@ ohmVectorStyles = {
             "stream"
           ],
           [
-            "!",
-            [
-              "in",
-              "name",
-              ""
-            ]
+            "has",
+            "name"
           ]
         ],
         "paint": {
@@ -1633,25 +1642,20 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "cliff"
-              ]
-            ]
+            "cliff"
           ],
           [
-            "!",
+            "!=",
             [
-              "in",
-              "surface",
-              "water"
-            ]
+              "get",
+              "surface"
+            ],
+            "water"
           ]
         ],
         "layout": {
@@ -1675,25 +1679,20 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "cliff"
-              ]
-            ]
+            "cliff"
           ],
           [
-            "!",
+            "!=",
             [
-              "in",
-              "surface",
-              "water"
-            ]
+              "get",
+              "surface"
+            ],
+            "water"
           ]
         ],
         "layout": {
@@ -1719,30 +1718,20 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "cliff"
-              ]
-            ]
+            "cliff"
           ],
           [
-            "in",
+            "==",
             [
               "get",
               "surface"
             ],
-            [
-              "literal",
-              [
-                "water"
-              ]
-            ]
+            "water"
           ]
         ],
         "layout": {
@@ -2482,12 +2471,18 @@ ohmVectorStyles = {
             1
           ],
           [
-            "==",
+            "in",
             [
               "get",
               "construction"
             ],
-            "tertiary"
+            [
+              "literal",
+              [
+                "tertiary",
+                "tertiary_link"
+              ]
+            ]
           ]
         ],
         "layout": {
@@ -2542,12 +2537,18 @@ ohmVectorStyles = {
             1
           ],
           [
-            "==",
+            "in",
             [
               "get",
               "construction"
             ],
-            "secondary"
+            [
+              "literal",
+              [
+                "secondary",
+                "secondary_link"
+              ]
+            ]
           ]
         ],
         "layout": {
@@ -2603,12 +2604,18 @@ ohmVectorStyles = {
             1
           ],
           [
-            "==",
+            "in",
             [
               "get",
               "construction"
             ],
-            "primary"
+            [
+              "literal",
+              [
+                "primary",
+                "primary_link"
+              ]
+            ]
           ]
         ],
         "layout": {
@@ -2732,12 +2739,18 @@ ohmVectorStyles = {
             1
           ],
           [
-            "==",
+            "in",
             [
               "get",
               "construction"
             ],
-            "tertiary"
+            [
+              "literal",
+              [
+                "tertiary",
+                "tertiary_link"
+              ]
+            ]
           ]
         ],
         "layout": {
@@ -2788,12 +2801,18 @@ ohmVectorStyles = {
             1
           ],
           [
-            "==",
+            "in",
             [
               "get",
               "construction"
             ],
-            "secondary"
+            [
+              "literal",
+              [
+                "secondary",
+                "secondary_link"
+              ]
+            ]
           ]
         ],
         "layout": {
@@ -2844,12 +2863,18 @@ ohmVectorStyles = {
             1
           ],
           [
-            "==",
+            "in",
             [
               "get",
               "construction"
             ],
-            "primary"
+            [
+              "literal",
+              [
+                "primary",
+                "primary_link"
+              ]
+            ]
           ]
         ],
         "layout": {
@@ -5523,12 +5548,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "tertiary"
+            [
+              "literal",
+              [
+                "tertiary",
+                "tertiary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -5575,12 +5606,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "secondary"
+            [
+              "literal",
+              [
+                "secondary",
+                "secondary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -5628,12 +5665,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "primary"
+            [
+              "literal",
+              [
+                "primary",
+                "primary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -5741,12 +5784,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "tertiary"
+            [
+              "literal",
+              [
+                "tertiary",
+                "tertiary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -5789,12 +5838,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "secondary"
+            [
+              "literal",
+              [
+                "secondary",
+                "secondary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -5837,12 +5892,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "primary"
+            [
+              "literal",
+              [
+                "primary",
+                "primary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -6256,17 +6317,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "service"
-              ]
-            ]
+            "service"
           ],
           [
             "!=",
@@ -6961,33 +7017,20 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "proposed"
-              ]
-            ]
+            "proposed"
           ],
           [
-            "!",
+            "!=",
             [
-              "in",
-              [
-                "get",
-                "class"
-              ],
-              [
-                "literal",
-                [
-                  "railway"
-                ]
-              ]
-            ]
+              "get",
+              "class"
+            ],
+            "railway"
           ]
         ],
         "layout": {
@@ -7025,17 +7068,12 @@ ohmVectorStyles = {
         "minzoom": 12,
         "maxzoom": 24,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "service"
-            ]
-          ]
+          "service"
         ],
         "layout": {
           "visibility": "visible",
@@ -9096,9 +9134,9 @@ ohmVectorStyles = {
             "==",
             [
               "get",
-              "name"
+              "usage"
             ],
-            "usage=main"
+            "main"
           ]
         ],
         "layout": {
@@ -9210,9 +9248,9 @@ ohmVectorStyles = {
             "!=",
             [
               "get",
-              "name"
+              "usage"
             ],
-            "usage=main"
+            "main"
           ]
         ],
         "layout": {
@@ -10265,16 +10303,22 @@ ohmVectorStyles = {
         "minzoom": 11,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "==",
+            [
+              "get",
+              "admin_level"
+            ],
+            9
           ],
           [
-            "literal",
+            "==",
             [
-              9
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -10308,17 +10352,28 @@ ohmVectorStyles = {
         "minzoom": 10,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                7,
+                8
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              7,
-              8
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -10352,17 +10407,28 @@ ohmVectorStyles = {
         "minzoom": 8,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                5,
+                6
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              5,
-              6
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -10532,12 +10598,23 @@ ohmVectorStyles = {
         "minzoom": 5,
         "maxzoom": 20,
         "filter": [
-          "==",
+          "all",
           [
-            "get",
-            "admin_level"
+            "==",
+            [
+              "get",
+              "admin_level"
+            ],
+            3
           ],
-          3
+          [
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "administrative"
+          ]
         ],
         "layout": {
           "visibility": "visible",
@@ -10562,6 +10639,54 @@ ohmVectorStyles = {
         }
       },
       {
+        "id": "indigenous_admin_2",
+        "type": "line",
+        "source": "ohm",
+        "source-layer": "land_ohm_lines",
+        "minzoom": 4,
+        "filter": [
+          "all",
+          [
+            "==",
+            [
+              "get",
+              "admin_level"
+            ],
+            2
+          ],
+          [
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "indigenous_administration"
+          ]
+        ],
+        "layout": {
+          "visibility": "visible",
+          "line-cap": "square",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-blur": 1,
+          "line-color": "#c99",
+          "line-width": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            6,
+            2,
+            12,
+            4
+          ]
+        }
+      },
+      {
         "id": "admin_country_lines_z10_case",
         "type": "line",
         "source": "ohm",
@@ -10569,17 +10694,28 @@ ohmVectorStyles = {
         "minzoom": 0,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                1,
+                2
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              1,
-              2
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -10628,17 +10764,28 @@ ohmVectorStyles = {
         "minzoom": 0,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                1,
+                2
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              1,
-              2
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -11175,7 +11322,7 @@ ohmVectorStyles = {
             "<",
             [
               "get",
-              "area_m2"
+              "area"
             ],
             40000
           ]
@@ -11244,7 +11391,7 @@ ohmVectorStyles = {
             ">=",
             [
               "get",
-              "area_m2"
+              "area"
             ],
             40000
           ],
@@ -11252,7 +11399,7 @@ ohmVectorStyles = {
             "<",
             [
               "get",
-              "area_m2"
+              "area"
             ],
             3000000
           ]
@@ -11340,7 +11487,7 @@ ohmVectorStyles = {
             ">=",
             [
               "get",
-              "area_m2"
+              "area"
             ],
             3000000
           ]
@@ -11480,23 +11627,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "nature_reserve"
-              ]
-            ]
+            "nature_reserve"
           ],
           [
             "<",
             [
               "get",
-              "area_m2"
+              "area"
             ],
             30000000
           ]
@@ -11527,23 +11669,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "nature_reserve"
-              ]
-            ]
+            "nature_reserve"
           ],
           [
             ">=",
             [
               "get",
-              "area_m2"
+              "area"
             ],
             30000000
           ],
@@ -11551,7 +11688,7 @@ ohmVectorStyles = {
             "<",
             [
               "get",
-              "area_m2"
+              "area"
             ],
             100000000
           ]
@@ -11596,23 +11733,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "nature_reserve"
-              ]
-            ]
+            "nature_reserve"
           ],
           [
             ">=",
             [
               "get",
-              "area_m2"
+              "area"
             ],
             100000000
           ]
@@ -11665,7 +11797,6 @@ ohmVectorStyles = {
           [
             "literal",
             [
-              "",
               "college",
               "education",
               "school",
@@ -12103,20 +12234,12 @@ ohmVectorStyles = {
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
-          "!",
+          "!=",
           [
-            "in",
-            [
-              "get",
-              "type"
-            ],
-            [
-              "literal",
-              [
-                "artwork"
-              ]
-            ]
-          ]
+            "get",
+            "type"
+          ],
+          "artwork"
         ],
         "layout": {
           "text-size": [
@@ -12471,20 +12594,12 @@ ohmVectorStyles = {
             ]
           ],
           [
-            "!",
+            "!=",
             [
-              "in",
-              [
-                "get",
-                "class"
-              ],
-              [
-                "literal",
-                [
-                  "highway"
-                ]
-              ]
-            ]
+              "get",
+              "class"
+            ],
+            "highway"
           ]
         ],
         "layout": {
@@ -12558,17 +12673,12 @@ ohmVectorStyles = {
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "raceway"
-            ]
-          ]
+          "raceway"
         ],
         "layout": {
           "icon-image": "{type}-18",
@@ -12824,7 +12934,7 @@ ohmVectorStyles = {
           ">",
           [
             "get",
-            "area_m2"
+            "area"
           ],
           1000000
         ],
@@ -12884,7 +12994,7 @@ ohmVectorStyles = {
           ">",
           [
             "get",
-            "area_m2"
+            "area"
           ],
           10000000
         ],
@@ -13127,17 +13237,12 @@ ohmVectorStyles = {
         "minzoom": 8,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "admin_level"
           ],
-          [
-            "literal",
-            [
-              6
-            ]
-          ]
+          6
         ],
         "layout": {
           "text-field": [
@@ -13232,17 +13337,12 @@ ohmVectorStyles = {
         "minzoom": 15,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "locality"
-            ]
-          ]
+          "locality"
         ],
         "layout": {
           "text-field": [
@@ -13771,6 +13871,114 @@ ohmVectorStyles = {
         }
       },
       {
+        "id": "indigenous_admin_centroids",
+        "type": "symbol",
+        "source": "ohm",
+        "source-layer": "land_ohm_centroids",
+        "minzoom": 4,
+        "maxzoom": 20,
+        "filter": [
+          "all",
+          [
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "indigenous_administration"
+          ],
+          [
+            "==",
+            [
+              "get",
+              "admin_level"
+            ],
+            2
+          ],
+          [
+            ">",
+            [
+              "get",
+              "area"
+            ],
+            [
+              "interpolate",
+              [
+                "exponential",
+                -0.1
+              ],
+              [
+                "zoom"
+              ],
+              6,
+              10000000000,
+              12,
+              10000
+            ]
+          ]
+        ],
+        "layout": {
+          "symbol-sort-key": [
+            "get",
+            "area"
+          ],
+          "text-line-height": 1,
+          "text-size": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            0,
+            6,
+            3,
+            9,
+            6,
+            15,
+            10,
+            16
+          ],
+          "symbol-avoid-edges": false,
+          "text-font": [
+            "OpenHistorical Bold"
+          ],
+          "symbol-placement": "point",
+          "text-justify": "center",
+          "visibility": "visible",
+          "text-field": [
+            "get",
+            "name"
+          ],
+          "text-max-width": 7
+        },
+        "paint": {
+          "text-color": "#966",
+          "text-halo-width": 1.5,
+          "text-halo-color": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            0,
+            "rgba(252, 255, 254, 0.75)",
+            3,
+            "rgba(240, 244, 216, 1)",
+            5,
+            "rgba(246,247,227, 1)",
+            7,
+            "rgba(255, 255, 255, 1)"
+          ],
+          "text-halo-blur": 1,
+          "text-opacity": 1,
+          "text-translate-anchor": "map"
+        }
+      },
+      {
         "id": "country_points_labels_cen",
         "type": "symbol",
         "source": "ohm",
@@ -13798,7 +14006,7 @@ ohmVectorStyles = {
         "layout": {
           "symbol-sort-key": [
             "get",
-            "area_km2"
+            "area"
           ],
           "text-line-height": 1,
           "text-size": [
@@ -14342,17 +14550,28 @@ ohmVectorStyles = {
         "minzoom": 0,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                1,
+                2
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              1,
-              2
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -14384,17 +14603,12 @@ ohmVectorStyles = {
         "source-layer": "transport_lines",
         "minzoom": 14,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "subway"
-            ]
-          ]
+          "subway"
         ],
         "layout": {
           "visibility": "none"
@@ -14430,12 +14644,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "tertiary"
+            [
+              "literal",
+              [
+                "tertiary",
+                "tertiary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -14482,12 +14702,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "secondary"
+            [
+              "literal",
+              [
+                "secondary",
+                "secondary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -14543,7 +14769,8 @@ ohmVectorStyles = {
             [
               "literal",
               [
-                "primary"
+                "primary",
+                "primary_link"
               ]
             ]
           ],
@@ -14653,12 +14880,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "tertiary"
+            [
+              "literal",
+              [
+                "tertiary",
+                "tertiary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -14701,12 +14934,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "secondary"
+            [
+              "literal",
+              [
+                "secondary",
+                "secondary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -14749,12 +14988,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "primary"
+            [
+              "literal",
+              [
+                "primary",
+                "primary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -15311,17 +15556,12 @@ ohmVectorStyles = {
             ]
           ],
           [
-            "in",
+            "==",
             [
               "get",
               "class"
             ],
-            [
-              "literal",
-              [
-                "railway"
-              ]
-            ]
+            "railway"
           ]
         ],
         "layout": {
@@ -15372,17 +15612,12 @@ ohmVectorStyles = {
             ]
           ],
           [
-            "in",
+            "==",
             [
               "get",
               "class"
             ],
-            [
-              "literal",
-              [
-                "railway"
-              ]
-            ]
+            "railway"
           ]
         ],
         "layout": {
@@ -15405,17 +15640,12 @@ ohmVectorStyles = {
         "minzoom": 12,
         "maxzoom": 24,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "raceway"
-            ]
-          ]
+          "raceway"
         ],
         "layout": {
           "visibility": "none"
@@ -15562,17 +15792,12 @@ ohmVectorStyles = {
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "pedestrian"
-            ]
-          ]
+          "pedestrian"
         ],
         "layout": {
           "visibility": "none"
@@ -15686,17 +15911,12 @@ ohmVectorStyles = {
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "steps"
-            ]
-          ]
+          "steps"
         ],
         "layout": {
           "visibility": "none"
@@ -15939,17 +16159,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "primary_link"
-              ]
-            ]
+            "primary_link"
           ],
           [
             "!=",
@@ -15996,17 +16211,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "primary"
-              ]
-            ]
+            "primary"
           ],
           [
             "!=",
@@ -16566,17 +16776,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "primary_link"
-              ]
-            ]
+            "primary_link"
           ],
           [
             "!=",
@@ -16915,17 +17120,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "primary"
-              ]
-            ]
+            "primary"
           ],
           [
             "!=",
@@ -17287,17 +17487,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "primary"
-              ]
-            ]
+            "primary"
           ],
           [
             "==",
@@ -17418,17 +17613,12 @@ ohmVectorStyles = {
         "minzoom": 8,
         "maxzoom": 9,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "secondary"
-            ]
-          ]
+          "secondary"
         ],
         "layout": {
           "visibility": "visible"
@@ -19146,16 +19336,10 @@ ohmVectorStyles = {
             "stream"
           ],
           [
-            "in",
+            "!",
             [
-              "get",
+              "has",
               "name"
-            ],
-            [
-              "literal",
-              [
-                ""
-              ]
             ]
           ]
         ],
@@ -19196,20 +19380,8 @@ ohmVectorStyles = {
             "stream"
           ],
           [
-            "!",
-            [
-              "in",
-              [
-                "get",
-                "name"
-              ],
-              [
-                "literal",
-                [
-                  ""
-                ]
-              ]
-            ]
+            "has",
+            "name"
           ]
         ],
         "paint": {
@@ -19243,33 +19415,20 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "cliff"
-              ]
-            ]
+            "cliff"
           ],
           [
-            "!",
+            "!=",
             [
-              "in",
-              [
-                "get",
-                "surface"
-              ],
-              [
-                "literal",
-                [
-                  "water"
-                ]
-              ]
-            ]
+              "get",
+              "surface"
+            ],
+            "water"
           ]
         ],
         "layout": {
@@ -19293,33 +19452,20 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "cliff"
-              ]
-            ]
+            "cliff"
           ],
           [
-            "!",
+            "!=",
             [
-              "in",
-              [
-                "get",
-                "surface"
-              ],
-              [
-                "literal",
-                [
-                  "water"
-                ]
-              ]
-            ]
+              "get",
+              "surface"
+            ],
+            "water"
           ]
         ],
         "layout": {
@@ -19345,30 +19491,20 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "cliff"
-              ]
-            ]
+            "cliff"
           ],
           [
-            "in",
+            "==",
             [
               "get",
               "surface"
             ],
-            [
-              "literal",
-              [
-                "water"
-              ]
-            ]
+            "water"
           ]
         ],
         "layout": {
@@ -20049,12 +20185,18 @@ ohmVectorStyles = {
             1
           ],
           [
-            "==",
+            "in",
             [
               "get",
               "construction"
             ],
-            "tertiary"
+            [
+              "literal",
+              [
+                "tertiary",
+                "tertiary_link"
+              ]
+            ]
           ]
         ],
         "layout": {
@@ -20109,12 +20251,18 @@ ohmVectorStyles = {
             1
           ],
           [
-            "==",
+            "in",
             [
               "get",
               "construction"
             ],
-            "secondary"
+            [
+              "literal",
+              [
+                "secondary",
+                "secondary_link"
+              ]
+            ]
           ]
         ],
         "layout": {
@@ -20154,17 +20302,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "==",
@@ -20175,12 +20318,18 @@ ohmVectorStyles = {
             1
           ],
           [
-            "==",
+            "in",
             [
               "get",
               "construction"
             ],
-            "primary"
+            [
+              "literal",
+              [
+                "primary",
+                "primary_link"
+              ]
+            ]
           ]
         ],
         "layout": {
@@ -20220,17 +20369,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "==",
@@ -20309,12 +20453,18 @@ ohmVectorStyles = {
             1
           ],
           [
-            "==",
+            "in",
             [
               "get",
               "construction"
             ],
-            "tertiary"
+            [
+              "literal",
+              [
+                "tertiary",
+                "tertiary_link"
+              ]
+            ]
           ]
         ],
         "layout": {
@@ -20365,12 +20515,18 @@ ohmVectorStyles = {
             1
           ],
           [
-            "==",
+            "in",
             [
               "get",
               "construction"
             ],
-            "secondary"
+            [
+              "literal",
+              [
+                "secondary",
+                "secondary_link"
+              ]
+            ]
           ]
         ],
         "layout": {
@@ -20421,12 +20577,18 @@ ohmVectorStyles = {
             1
           ],
           [
-            "==",
+            "in",
             [
               "get",
               "construction"
             ],
-            "primary"
+            [
+              "literal",
+              [
+                "primary",
+                "primary_link"
+              ]
+            ]
           ]
         ],
         "layout": {
@@ -20462,17 +20624,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "==",
@@ -20532,17 +20689,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "==",
@@ -20733,30 +20885,20 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
-            "in",
+            "==",
             [
               "get",
               "construction"
             ],
-            [
-              "literal",
-              [
-                "living_street"
-              ]
-            ]
+            "living_street"
           ]
         ],
         "layout": {
@@ -20790,17 +20932,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "==",
@@ -20842,17 +20979,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "in",
@@ -20954,30 +21086,20 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
-            "in",
+            "==",
             [
               "get",
               "construction"
             ],
-            [
-              "literal",
-              [
-                "steps"
-              ]
-            ]
+            "steps"
           ]
         ],
         "layout": {
@@ -21015,17 +21137,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "!=",
@@ -21040,17 +21157,12 @@ ohmVectorStyles = {
             1
           ],
           [
-            "in",
+            "==",
             [
               "get",
               "construction"
             ],
-            [
-              "literal",
-              [
-                "road"
-              ]
-            ]
+            "road"
           ]
         ],
         "layout": {
@@ -21086,17 +21198,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "!=",
@@ -21303,17 +21410,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "!=",
@@ -21380,17 +21482,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "!=",
@@ -21413,17 +21510,12 @@ ohmVectorStyles = {
             "yes"
           ],
           [
-            "in",
+            "==",
             [
               "get",
               "construction"
             ],
-            [
-              "literal",
-              [
-                "primary"
-              ]
-            ]
+            "primary"
           ],
           [
             "!=",
@@ -21471,17 +21563,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "!=",
@@ -21555,17 +21642,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "!=",
@@ -21639,30 +21721,20 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
-            "in",
+            "==",
             [
               "get",
               "construction"
             ],
-            [
-              "literal",
-              [
-                "road"
-              ]
-            ]
+            "road"
           ]
         ],
         "layout": {
@@ -21702,17 +21774,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "in",
@@ -21767,17 +21834,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "in",
@@ -21919,17 +21981,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "!=",
@@ -22001,17 +22058,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "!=",
@@ -22265,17 +22317,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "!=",
@@ -22355,17 +22402,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "!=",
@@ -22482,17 +22524,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "==",
@@ -22663,17 +22700,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "==",
@@ -22731,17 +22763,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "==",
@@ -22801,17 +22828,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "==",
@@ -23018,17 +23040,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "==",
@@ -23039,17 +23056,12 @@ ohmVectorStyles = {
             1
           ],
           [
-            "in",
+            "==",
             [
               "get",
               "construction"
             ],
-            [
-              "literal",
-              [
-                "primary"
-              ]
-            ]
+            "primary"
           ]
         ],
         "layout": {
@@ -23089,17 +23101,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
             "==",
@@ -23162,17 +23169,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "subway"
-              ]
-            ]
+            "subway"
           ],
           [
             "==",
@@ -23214,17 +23216,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "subway"
-              ]
-            ]
+            "subway"
           ],
           [
             "==",
@@ -23285,17 +23282,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "subway"
-              ]
-            ]
+            "subway"
           ],
           [
             "==",
@@ -23339,17 +23331,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "light_rail"
-              ]
-            ]
+            "light_rail"
           ],
           [
             "==",
@@ -23403,17 +23390,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "light_rail"
-              ]
-            ]
+            "light_rail"
           ],
           [
             "==",
@@ -23469,12 +23451,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "tertiary"
+            [
+              "literal",
+              [
+                "tertiary",
+                "tertiary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -23521,12 +23509,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "secondary"
+            [
+              "literal",
+              [
+                "secondary",
+                "secondary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -23582,7 +23576,8 @@ ohmVectorStyles = {
             [
               "literal",
               [
-                "primary"
+                "primary",
+                "primary_link"
               ]
             ]
           ],
@@ -23692,12 +23687,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "tertiary"
+            [
+              "literal",
+              [
+                "tertiary",
+                "tertiary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -23740,12 +23741,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "tertiary"
+            [
+              "literal",
+              [
+                "tertiary",
+                "tertiary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -23788,12 +23795,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "secondary"
+            [
+              "literal",
+              [
+                "secondary",
+                "secondary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -23836,12 +23849,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "primary"
+            [
+              "literal",
+              [
+                "primary",
+                "primary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -24107,17 +24126,12 @@ ohmVectorStyles = {
         "minzoom": 12,
         "maxzoom": 24,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "raceway"
-            ]
-          ]
+          "raceway"
         ],
         "layout": {
           "visibility": "visible"
@@ -24264,17 +24278,12 @@ ohmVectorStyles = {
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "living_street"
-            ]
-          ]
+          "living_street"
         ],
         "layout": {
           "visibility": "visible"
@@ -24390,17 +24399,12 @@ ohmVectorStyles = {
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "steps"
-            ]
-          ]
+          "steps"
         ],
         "layout": {
           "visibility": "visible"
@@ -24495,17 +24499,12 @@ ohmVectorStyles = {
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "pedestrian"
-            ]
-          ]
+          "pedestrian"
         ],
         "layout": {
           "visibility": "visible"
@@ -24807,17 +24806,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "primary_link"
-              ]
-            ]
+            "primary_link"
           ],
           [
             "!=",
@@ -24876,17 +24870,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "primary"
-              ]
-            ]
+            "primary"
           ],
           [
             "!=",
@@ -25100,33 +25089,20 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "proposed"
-              ]
-            ]
+            "proposed"
           ],
           [
-            "!",
+            "!=",
             [
-              "in",
-              [
-                "get",
-                "class"
-              ],
-              [
-                "literal",
-                [
-                  "railway"
-                ]
-              ]
-            ]
+              "get",
+              "class"
+            ],
+            "railway"
           ]
         ],
         "layout": {
@@ -25209,17 +25185,12 @@ ohmVectorStyles = {
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "pedestrian"
-            ]
-          ]
+          "pedestrian"
         ],
         "layout": {
           "visibility": "visible"
@@ -25315,17 +25286,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "tertiary_link"
-              ]
-            ]
+            "tertiary_link"
           ],
           [
             "!=",
@@ -25398,17 +25364,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "primary_link"
-              ]
-            ]
+            "primary_link"
           ],
           [
             "!=",
@@ -25683,17 +25644,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "primary"
-              ]
-            ]
+            "primary"
           ],
           [
             "!=",
@@ -25877,17 +25833,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "subway"
-              ]
-            ]
+            "subway"
           ],
           [
             "==",
@@ -25986,30 +25937,20 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "construction"
-              ]
-            ]
+            "construction"
           ],
           [
-            "in",
+            "==",
             [
               "get",
               "construction"
             ],
-            [
-              "literal",
-              [
-                "subway"
-              ]
-            ]
+            "subway"
           ]
         ],
         "layout": {
@@ -26046,17 +25987,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "subway"
-              ]
-            ]
+            "subway"
           ],
           [
             "!=",
@@ -26112,17 +26048,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "light_rail"
-              ]
-            ]
+            "light_rail"
           ],
           [
             "!=",
@@ -26175,17 +26106,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "light_rail"
-              ]
-            ]
+            "light_rail"
           ],
           [
             "!=",
@@ -26682,17 +26608,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "primary"
-              ]
-            ]
+            "primary"
           ],
           [
             "==",
@@ -26792,17 +26713,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "subway"
-              ]
-            ]
+            "subway"
           ],
           [
             "!=",
@@ -26869,17 +26785,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "light_rail"
-              ]
-            ]
+            "light_rail"
           ],
           [
             "!=",
@@ -26939,17 +26850,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "subway"
-              ]
-            ]
+            "subway"
           ],
           [
             "!=",
@@ -29088,17 +28994,12 @@ ohmVectorStyles = {
             ]
           ],
           [
-            "in",
+            "==",
             [
               "get",
               "class"
             ],
-            [
-              "literal",
-              [
-                "railway"
-              ]
-            ]
+            "railway"
           ]
         ],
         "layout": {
@@ -29349,17 +29250,28 @@ ohmVectorStyles = {
         "minzoom": 10,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                7,
+                8
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              7,
-              8
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -29395,17 +29307,28 @@ ohmVectorStyles = {
         "minzoom": 8,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                5,
+                6
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              5,
-              6
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -29573,12 +29496,23 @@ ohmVectorStyles = {
         "minzoom": 3,
         "maxzoom": 20,
         "filter": [
-          "==",
+          "all",
           [
-            "get",
-            "admin_level"
+            "==",
+            [
+              "get",
+              "admin_level"
+            ],
+            3
           ],
-          3
+          [
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "administrative"
+          ]
         ],
         "layout": {
           "visibility": "visible",
@@ -29610,17 +29544,28 @@ ohmVectorStyles = {
         "minzoom": 0,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                1,
+                2
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              1,
-              2
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -29669,17 +29614,28 @@ ohmVectorStyles = {
         "minzoom": 0,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                1,
+                2
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              1,
-              2
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
@@ -30050,17 +30006,12 @@ ohmVectorStyles = {
         "source": "ohm",
         "source-layer": "natural_lines",
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "cliff"
-            ]
-          ]
+          "cliff"
         ],
         "layout": {
           "text-field": [
@@ -30102,17 +30053,12 @@ ohmVectorStyles = {
         "source": "ohm",
         "source-layer": "water_lines",
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "dam"
-            ]
-          ]
+          "dam"
         ],
         "layout": {
           "text-field": [
@@ -30379,7 +30325,6 @@ ohmVectorStyles = {
           [
             "literal",
             [
-              "",
               "college",
               "education",
               "school",
@@ -30796,20 +30741,12 @@ ohmVectorStyles = {
         "minzoom": 15,
         "maxzoom": 24,
         "filter": [
-          "!",
+          "!=",
           [
-            "in",
-            [
-              "get",
-              "type"
-            ],
-            [
-              "literal",
-              [
-                "artwork"
-              ]
-            ]
-          ]
+            "get",
+            "type"
+          ],
+          "artwork"
         ],
         "layout": {
           "icon-image": [
@@ -31204,12 +31141,11 @@ ohmVectorStyles = {
             "railway"
           ],
           [
-            "==",
+            "!",
             [
-              "get",
+              "has",
               "name"
-            ],
-            ""
+            ]
           ]
         ],
         "layout": {
@@ -31356,17 +31292,12 @@ ohmVectorStyles = {
         "source-layer": "landuse_points_centroids",
         "minzoom": 14,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "peak"
-            ]
-          ]
+          "peak"
         ],
         "layout": {
           "icon-image": [
@@ -31614,17 +31545,12 @@ ohmVectorStyles = {
         "minzoom": 9,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "county"
-            ]
-          ]
+          "county"
         ],
         "layout": {
           "text-field": [
@@ -31726,17 +31652,12 @@ ohmVectorStyles = {
         "minzoom": 8,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "town"
-            ]
-          ]
+          "town"
         ],
         "layout": {
           "text-field": [
@@ -31778,17 +31699,12 @@ ohmVectorStyles = {
         "minzoom": 11,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "city"
-            ]
-          ]
+          "city"
         ],
         "layout": {
           "text-field": [
@@ -32580,12 +32496,11 @@ ohmVectorStyles = {
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
-          "==",
+          "!",
           [
-            "get",
+            "has",
             "type"
-          ],
-          ""
+          ]
         ],
         "layout": {
           "visibility": "none"
@@ -32657,17 +32572,12 @@ ohmVectorStyles = {
         "source-layer": "transport_lines",
         "minzoom": 14,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "subway"
-            ]
-          ]
+          "subway"
         ],
         "layout": {
           "visibility": "none"
@@ -32703,12 +32613,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "tertiary"
+            [
+              "literal",
+              [
+                "tertiary",
+                "tertiary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -32755,12 +32671,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "secondary"
+            [
+              "literal",
+              [
+                "secondary",
+                "secondary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -32816,7 +32738,8 @@ ohmVectorStyles = {
             [
               "literal",
               [
-                "primary"
+                "primary",
+                "primary_link"
               ]
             ]
           ],
@@ -32926,12 +32849,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "tertiary"
+            [
+              "literal",
+              [
+                "tertiary",
+                "tertiary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -32974,12 +32903,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "secondary"
+            [
+              "literal",
+              [
+                "secondary",
+                "secondary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -33022,12 +32957,18 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
             [
               "get",
               "type"
             ],
-            "primary"
+            [
+              "literal",
+              [
+                "primary",
+                "primary_link"
+              ]
+            ]
           ],
           [
             "==",
@@ -33584,17 +33525,12 @@ ohmVectorStyles = {
             ]
           ],
           [
-            "in",
+            "==",
             [
               "get",
               "class"
             ],
-            [
-              "literal",
-              [
-                "railway"
-              ]
-            ]
+            "railway"
           ]
         ],
         "layout": {
@@ -33645,17 +33581,12 @@ ohmVectorStyles = {
             ]
           ],
           [
-            "in",
+            "==",
             [
               "get",
               "class"
             ],
-            [
-              "literal",
-              [
-                "railway"
-              ]
-            ]
+            "railway"
           ]
         ],
         "layout": {
@@ -33678,17 +33609,12 @@ ohmVectorStyles = {
         "minzoom": 12,
         "maxzoom": 24,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "raceway"
-            ]
-          ]
+          "raceway"
         ],
         "layout": {
           "visibility": "none"
@@ -33835,17 +33761,12 @@ ohmVectorStyles = {
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "pedestrian"
-            ]
-          ]
+          "pedestrian"
         ],
         "layout": {
           "visibility": "none"
@@ -33959,17 +33880,12 @@ ohmVectorStyles = {
         "minzoom": 14,
         "maxzoom": 24,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "steps"
-            ]
-          ]
+          "steps"
         ],
         "layout": {
           "visibility": "none"
@@ -34212,17 +34128,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "primary_link"
-              ]
-            ]
+            "primary_link"
           ],
           [
             "!=",
@@ -34269,17 +34180,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "primary"
-              ]
-            ]
+            "primary"
           ],
           [
             "!=",
@@ -34839,17 +34745,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "primary_link"
-              ]
-            ]
+            "primary_link"
           ],
           [
             "!=",
@@ -35188,17 +35089,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "primary"
-              ]
-            ]
+            "primary"
           ],
           [
             "!=",
@@ -35560,17 +35456,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "in",
+            "==",
             [
               "get",
               "type"
             ],
-            [
-              "literal",
-              [
-                "primary"
-              ]
-            ]
+            "primary"
           ],
           [
             "==",
@@ -35691,17 +35582,12 @@ ohmVectorStyles = {
         "minzoom": 8,
         "maxzoom": 9,
         "filter": [
-          "in",
+          "==",
           [
             "get",
             "type"
           ],
-          [
-            "literal",
-            [
-              "secondary"
-            ]
-          ]
+          "secondary"
         ],
         "layout": {
           "visibility": "visible"
@@ -35847,17 +35733,28 @@ ohmVectorStyles = {
         "minzoom": 0,
         "maxzoom": 20,
         "filter": [
-          "in",
+          "all",
           [
-            "get",
-            "admin_level"
+            "in",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              "literal",
+              [
+                1,
+                2
+              ]
+            ]
           ],
           [
-            "literal",
+            "==",
             [
-              1,
-              2
-            ]
+              "get",
+              "type"
+            ],
+            "administrative"
           ]
         ],
         "layout": {
