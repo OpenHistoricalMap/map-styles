@@ -41,15 +41,15 @@ jobs:
       - name: Remove other files
         run: find site -type f ! -name '*.json' ! -name '*.png' -delete
 
-      # compare.html always comes from staging, never from the PR.
+      # demo.html always comes from staging, never from the PR.
       - uses: actions/checkout@v4
         with:
-          sparse-checkout: compare.html
+          sparse-checkout: demo.html
           sparse-checkout-cone-mode: false
           path: base
 
-      - name: Add compare page
-        run: cp base/compare.html site/
+      - name: Add demo page
+        run: cp base/demo.html site/
 
       - name: Point sprites to the preview and fonts to production
         run: |
@@ -68,6 +68,6 @@ jobs:
           number: ${{ steps.pr.outputs.number }}
           header: style-preview
           message: |
-            Style preview: ${{ steps.pr.outputs.url }}/compare.html
+            Style preview: ${{ steps.pr.outputs.url }}/demo.html
 
             Left side is production, right side is this PR. Drag the bar to compare.

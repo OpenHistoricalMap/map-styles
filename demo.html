@@ -1,79 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title>Style demo, no timeslider</title>
-		<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-		<script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
-		<link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
-		<style>
-			body { margin: 0; padding: 0; }
-			#map { height: 90vh; bottom: 0; width: calc(100% - 350px); float: left; }
-			#map canvas {
-				cursor: crosshair;
-				}
-			.intro {margin: 10px; font-family: sans-serif}
-			#features {
-				top: 0;
-				left: 0;
-				float: right;
-				bottom: 0;
-				width: 350px;
-				overflow-y: scroll;
-				height: 90vh;
-				background: rgba(255, 255, 255, 0.8);
-				}
-		</style>
-	</head>
-	<body>
-		<div class="intro">
-			<h1>Style demo, no timeslider</h1>
-			<p>This is the simplest demo of a map style. Unlike the demo in the <a href="https://github.com/OpenHistoricalMap/mbgl-timeslider">Mapbox GL timeslider</a> and <a href="https://github.com/OpenHistoricalMap/mbgltimeslider-leaflet-control">Leaflet timeslider</a> repos, this will show you everything on the map regardless of strt and end dates. It is useful for initial testing of cartography without worrying about the completeness of data data or proper functioning of filters.</p>
-		</div>
-		<pre id="features">Click the map to see a readout of rendered features</pre>
-		<div id="map"></div>
-		<script>
-			var map = new mapboxgl.Map({
-			container: 'map', // container id
-			style: 'main/main.json', // stylesheet location
-			center: [-42.3115,70.0012], // starting position [lng, lat]
-			zoom: 13 // starting zoom
-			});
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Style demo</title>
+  <script src="https://unpkg.com/maplibre-gl@5.20.2/dist/maplibre-gl.js"></script>
+  <link href="https://unpkg.com/maplibre-gl@5.20.2/dist/maplibre-gl.css" rel="stylesheet" />
+  <style>
+    body { margin: 0; font: 13px sans-serif; }
+    .map { position: absolute; inset: 0; }
+    #after { clip-path: inset(0 0 0 50%); }
+    #slider { position: absolute; top: 0; bottom: 0; left: 50%; width: 4px; margin-left: -2px; background: #333; cursor: ew-resize; z-index: 2; }
+    .tag { position: absolute; top: 10px; z-index: 2; background: #fff; padding: 4px 8px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,.3); }
+    #tag-before { left: 10px; }
+    #tag-after { right: 50px; }
+  </style>
+</head>
+<body>
+  <div id="before" class="map"></div>
+  <div id="after" class="map"></div>
+  <div id="slider"></div>
+  <div id="tag-before" class="tag">
+    Production ·
+    <select id="style">
+      <option value="historical">historical</option>
+      <option value="railway">railway</option>
+      <option value="woodblock">woodblock</option>
+      <option value="japanese_scroll">japanese_scroll</option>
+    </select>
+  </div>
+  <div id="tag-after" class="tag">This PR</div>
 
-			// Add zoom and rotation controls to the map.
-			map.addControl(new mapboxgl.NavigationControl());
+  <script>
+    // Left: style in production. Right: style from this branch.
+    const styles = {
+      historical: ['https://www.openhistoricalmap.org/map-styles/main/main.json', './historical/historical.json'],
+      railway: ['https://www.openhistoricalmap.org/map-styles/rail/rail.json', './railway/railway.json'],
+      woodblock: ['https://www.openhistoricalmap.org/map-styles/woodblock/woodblock.json', './woodblock/woodblock.json'],
+      japanese_scroll: ['https://www.openhistoricalmap.org/map-styles/japanese_scroll/ohm-japanese-scroll-map.json', './japanese_scroll/japanese_scroll.json']
+    };
 
-			//show features rendered on the map
-			map.on('click', function(e) {
-				var features = map.queryRenderedFeatures(e.point);
-				 
-				// Limit the number of properties we're displaying for
-				// legibility and performance
-				var displayProperties = [
-				'type',
-				'properties',
-				'id',
-				'layer',
-				'source',
-				'sourceLayer',
-				'state'
-				];
-				 
-				var displayFeatures = features.map(function(feat) {
-				var displayFeat = {};
-				displayProperties.forEach(function(prop) {
-				displayFeat[prop] = feat[prop];
-				});
-				return displayFeat;
-				});
-				 
-				document.getElementById('features').innerHTML = JSON.stringify(
-				displayFeatures,
-				null,
-				2
-				);
-				});
-		</script>
-	 
-	</body>
+    const params = new URLSearchParams(location.search);
+    const name = styles[params.get('style')] ? params.get('style') : 'historical';
+    const select = document.getElementById('style');
+    select.value = name;
+    select.onchange = () => {
+      params.set('style', select.value);
+      location.search = params.toString();
+    };
+
+    const view = { center: [-74.033, 40.6259], zoom: 11.73 };
+    const before = new maplibregl.Map({ container: 'before', style: styles[name][0], hash: true, ...view });
+    const after = new maplibregl.Map({ container: 'after', style: styles[name][1], ...view });
+    after.addControl(new maplibregl.NavigationControl());
+
+    // Keep both maps on the same view.
+    let syncing = false;
+    function sync(from, to) {
+      from.on('move', () => {
+        if (syncing) return;
+        syncing = true;
+        to.jumpTo({ center: from.getCenter(), zoom: from.getZoom(), bearing: from.getBearing(), pitch: from.getPitch() });
+        syncing = false;
+      });
+    }
+    sync(before, after);
+    sync(after, before);
+    before.once('load', () => after.jumpTo({ center: before.getCenter(), zoom: before.getZoom() }));
+
+    // Drag the slider to move the split.
+    const slider = document.getElementById('slider');
+    const afterEl = document.getElementById('after');
+    function setSplit(x) {
+      const pct = Math.min(100, Math.max(0, (x / window.innerWidth) * 100));
+      slider.style.left = pct + '%';
+      afterEl.style.clipPath = `inset(0 0 0 ${pct}%)`;
+    }
+    slider.addEventListener('pointerdown', (e) => {
+      slider.setPointerCapture(e.pointerId);
+      slider.onpointermove = (ev) => setSplit(ev.clientX);
+    });
+    slider.addEventListener('pointerup', () => { slider.onpointermove = null; });
+  </script>
+</body>
 </html>
