@@ -1,0 +1,65 @@
+name: Open ohm-website PR
+on:
+  workflow_run:
+    workflows: ["Release to npm"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'map-styles version (empty = version in package.json)'
+        required: false
+
+jobs:
+  website-pr:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: staging
+
+      - name: Get version
+        run: |
+          V="${{ inputs.version }}"
+          [ -z "$V" ] && V=$(node -p "require('./package.json').version")
+          echo "VERSION=$V" >> "$GITHUB_ENV"
+
+      # Token from the OHM GitHub App, so the PR is opened by the bot, not a person
+      - uses: actions/create-github-app-token@v1
+        id: app
+        with:
+          app-id: ${{ secrets.OHM_APP_ID }}
+          private-key: ${{ secrets.OHM_APP_PRIVATE_KEY }}
+          repositories: ohm-website
+
+      - name: Get bot user id
+        id: bot
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+        run: echo "id=$(gh api "/users/${{ steps.app.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        with:
+          repository: OpenHistoricalMap/ohm-website
+          ref: staging
+          token: ${{ steps.app.outputs.token }}
+          path: ohm-website
+
+      - name: Update map-styles
+        working-directory: ohm-website
+        run: |
+          for i in $(seq 1 30); do npm view "@openhistoricalmap/map-styles@${VERSION}" version && break; sleep 10; done
+          yarn add "@openhistoricalmap/map-styles@^${VERSION}" --ignore-scripts
+
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          path: ohm-website
+          token: ${{ steps.app.outputs.token }}
+          base: staging
+          author: ${{ steps.app.outputs.app-slug }}[bot] <${{ steps.bot.outputs.id }}+${{ steps.app.outputs.app-slug }}[bot]@users.noreply.github.com>
+          committer: ${{ steps.app.outputs.app-slug }}[bot] <${{ steps.bot.outputs.id }}+${{ steps.app.outputs.app-slug }}[bot]@users.noreply.github.com>
+          branch: map-styles-${{ env.VERSION }}
+          add-paths: package.json,yarn.lock
+          commit-message: Update map-styles to ${{ env.VERSION }}
+          title: Update map-styles to ${{ env.VERSION }}
+          body: After merge, update `OPENHISTORICALMAP_WEBSITE_GITSHA` in ohm-deploy.
