@@ -1,0 +1,73 @@
+name: Style preview deploy
+
+# Publishes the files from "Style preview build" to Cloudflare Pages
+# and comments the link on the PR. It never runs code from the PR.
+#
+# Needs:
+#   secrets.CLOUDFLARE_API_TOKEN  (Pages: Edit)
+#   secrets.CLOUDFLARE_ACCOUNT_ID
+#   vars.CLOUDFLARE_PROJECT       (Pages project name)
+on:
+  workflow_run:
+    workflows: ['Style preview build']
+    types: [completed]
+
+permissions:
+  actions: read
+  pull-requests: write
+
+jobs:
+  deploy:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: preview
+          path: site
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Read PR number
+        id: pr
+        run: |
+          PR=$(cat site/pr-number.txt)
+          [[ "$PR" =~ ^[0-9]+$ ]] || { echo "Bad PR number"; exit 1; }
+          echo "number=$PR" >> "$GITHUB_OUTPUT"
+          echo "url=https://pr-$PR.${{ vars.CLOUDFLARE_PROJECT }}.pages.dev" >> "$GITHUB_OUTPUT"
+          rm site/pr-number.txt
+
+      # Keep only style and sprite files from the PR (no HTML, SVG or JS).
+      - name: Remove other files
+        run: find site -type f ! -name '*.json' ! -name '*.png' -delete
+
+      # compare.html always comes from staging, never from the PR.
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: compare.html
+          sparse-checkout-cone-mode: false
+          path: base
+
+      - name: Add compare page
+        run: cp base/compare.html site/
+
+      - name: Point sprites to the preview and fonts to production
+        run: |
+          find site -name '*.json' -exec sed -i \
+            -e 's#https://localhost:8888/fonts#https://www.openhistoricalmap.org/map-styles/fonts#g' \
+            -e 's#https://localhost:8888#${{ steps.pr.outputs.url }}#g' {} +
+
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy site --project-name=${{ vars.CLOUDFLARE_PROJECT }} --branch=pr-${{ steps.pr.outputs.number }}
+
+      - uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          number: ${{ steps.pr.outputs.number }}
+          header: style-preview
+          message: |
+            Style preview: ${{ steps.pr.outputs.url }}/compare.html
+
+            Left side is production, right side is this PR. Drag the bar to compare.

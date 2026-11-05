@@ -1,0 +1,32 @@
+name: Style preview build
+
+# Runs on every PR, also from forks. No secrets here.
+# It only collects the static files; preview-deploy.yml publishes them.
+on:
+  pull_request:
+    paths:
+      - 'historical/**'
+      - 'railway/**'
+      - 'woodblock/**'
+      - 'japanese_scroll/**'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Collect files
+        run: |
+          mkdir site
+          cp -r historical railway woodblock japanese_scroll site/
+          echo "${{ github.event.pull_request.number }}" > site/pr-number.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: preview
+          path: site
+          retention-days: 3

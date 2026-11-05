@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Style compare</title>
+  <script src="https://unpkg.com/maplibre-gl@5.20.2/dist/maplibre-gl.js"></script>
+  <link href="https://unpkg.com/maplibre-gl@5.20.2/dist/maplibre-gl.css" rel="stylesheet" />
+  <style>
+    body { margin: 0; font: 13px sans-serif; }
+    .map { position: absolute; inset: 0; }
+    #after { clip-path: inset(0 0 0 50%); }
+    #slider { position: absolute; top: 0; bottom: 0; left: 50%; width: 4px; margin-left: -2px; background: #333; cursor: ew-resize; z-index: 2; }
+    .tag { position: absolute; top: 10px; z-index: 2; background: #fff; padding: 4px 8px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,.3); }
+    #tag-before { left: 10px; }
+    #tag-after { right: 50px; }
+  </style>
+</head>
+<body>
+  <div id="before" class="map"></div>
+  <div id="after" class="map"></div>
+  <div id="slider"></div>
+  <div id="tag-before" class="tag">
+    Production ·
+    <select id="style">
+      <option value="historical">historical</option>
+      <option value="railway">railway</option>
+      <option value="woodblock">woodblock</option>
+      <option value="japanese_scroll">japanese_scroll</option>
+    </select>
+  </div>
+  <div id="tag-after" class="tag">This PR</div>
+
+  <script>
+    // Left: style in production. Right: style from this branch.
+    const styles = {
+      historical: ['https://www.openhistoricalmap.org/map-styles/main/main.json', './historical/historical.json'],
+      railway: ['https://www.openhistoricalmap.org/map-styles/rail/rail.json', './railway/railway.json'],
+      woodblock: ['https://www.openhistoricalmap.org/map-styles/woodblock/woodblock.json', './woodblock/woodblock.json'],
+      japanese_scroll: ['https://www.openhistoricalmap.org/map-styles/japanese_scroll/ohm-japanese-scroll-map.json', './japanese_scroll/japanese_scroll.json']
+    };
+
+    const params = new URLSearchParams(location.search);
+    const name = styles[params.get('style')] ? params.get('style') : 'historical';
+    const select = document.getElementById('style');
+    select.value = name;
+    select.onchange = () => {
+      params.set('style', select.value);
+      location.search = params.toString();
+    };
+
+    const view = { center: [-74.033, 40.6259], zoom: 11.73 };
+    const before = new maplibregl.Map({ container: 'before', style: styles[name][0], hash: true, ...view });
+    const after = new maplibregl.Map({ container: 'after', style: styles[name][1], ...view });
+    after.addControl(new maplibregl.NavigationControl());
+
+    // Keep both maps on the same view.
+    let syncing = false;
+    function sync(from, to) {
+      from.on('move', () => {
+        if (syncing) return;
+        syncing = true;
+        to.jumpTo({ center: from.getCenter(), zoom: from.getZoom(), bearing: from.getBearing(), pitch: from.getPitch() });
+        syncing = false;
+      });
+    }
+    sync(before, after);
+    sync(after, before);
+    before.once('load', () => after.jumpTo({ center: before.getCenter(), zoom: before.getZoom() }));
+
+    // Drag the slider to move the split.
+    const slider = document.getElementById('slider');
+    const afterEl = document.getElementById('after');
+    function setSplit(x) {
+      const pct = Math.min(100, Math.max(0, (x / window.innerWidth) * 100));
+      slider.style.left = pct + '%';
+      afterEl.style.clipPath = `inset(0 0 0 ${pct}%)`;
+    }
+    slider.addEventListener('pointerdown', (e) => {
+      slider.setPointerCapture(e.pointerId);
+      slider.onpointermove = (ev) => setSplit(ev.clientX);
+    });
+    slider.addEventListener('pointerup', () => { slider.onpointermove = null; });
+  </script>
+</body>
+</html>
