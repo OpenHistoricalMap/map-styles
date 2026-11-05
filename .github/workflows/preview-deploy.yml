@@ -49,7 +49,16 @@ jobs:
           path: base
 
       - name: Add demo page
-        run: cp base/demo.html site/
+        run: cp base/demo.html site/ && cp base/demo.html site/index.html
+
+      # Branch name comes from the fork, so pass it as env, not inline.
+      - name: Add preview info
+        env:
+          PR: ${{ steps.pr.outputs.number }}
+          OWNER: ${{ github.event.workflow_run.head_repository.owner.login }}
+          BRANCH: ${{ github.event.workflow_run.head_branch }}
+        run: |
+          jq -n --arg pr "$PR" --arg branch "$OWNER:$BRANCH" '{pr: $pr, branch: $branch}' > site/preview.json
 
       - name: Point sprites to the preview and fonts to production
         run: |
@@ -68,6 +77,6 @@ jobs:
           number: ${{ steps.pr.outputs.number }}
           header: style-preview
           message: |
-            Style preview: ${{ steps.pr.outputs.url }}/demo.html
+            Style preview: ${{ steps.pr.outputs.url }}
 
             Left side is production, right side is this PR. Drag the bar to compare.
