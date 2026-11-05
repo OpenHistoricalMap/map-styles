@@ -13,7 +13,7 @@
     #slider { position: absolute; top: 0; bottom: 0; left: 50%; width: 4px; margin-left: -2px; background: #333; cursor: ew-resize; z-index: 2; }
     .tag { position: absolute; top: 10px; z-index: 2; background: #fff; padding: 4px 8px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,.3); }
     #tag-before { left: 10px; }
-    #tag-after { right: 50px; }
+    #tag-after { right: 50px; max-width: 40%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   </style>
 </head>
 <body>
@@ -29,7 +29,7 @@
       <option value="japanese_scroll">japanese_scroll</option>
     </select>
   </div>
-  <div id="tag-after" class="tag">This PR</div>
+  <div id="tag-after" class="tag">Local</div>
 
   <script>
     // Left: style in production. Right: style from this branch.
@@ -39,6 +39,19 @@
       woodblock: ['https://www.openhistoricalmap.org/map-styles/woodblock/woodblock.json', './woodblock/woodblock.json'],
       japanese_scroll: ['https://www.openhistoricalmap.org/map-styles/japanese_scroll/ohm-japanese-scroll-map.json', './japanese_scroll/japanese_scroll.json']
     };
+
+    // On a preview, preview.json has the PR number and branch name.
+    fetch('./preview.json')
+      .then((r) => r.ok ? r.json() : null)
+      .then((info) => {
+        if (!info) return;
+        const link = document.createElement('a');
+        link.href = `https://github.com/OpenHistoricalMap/map-styles/pull/${info.pr}`;
+        link.target = '_blank';
+        link.textContent = info.branch;
+        document.getElementById('tag-after').replaceChildren(link);
+      })
+      .catch(() => {});
 
     const params = new URLSearchParams(location.search);
     const name = styles[params.get('style')] ? params.get('style') : 'historical';
