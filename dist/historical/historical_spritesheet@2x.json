@@ -195,6 +195,13 @@
     "x": 173,
     "y": 245
   },
+  "cemetery-18": {
+    "height": 18,
+    "pixelRatio": 1,
+    "width": 18,
+    "x": 36,
+    "y": 256
+  },
   "car-18": {
     "height": 11,
     "pixelRatio": 1,
@@ -376,6 +383,13 @@
     "width": 12,
     "x": 48,
     "y": 166
+  },
+  "cross_space_12px": {
+    "height": 12,
+    "pixelRatio": 1,
+    "width": 12,
+    "x": 54,
+    "y": 256
   },
   "cross_space_18px": {
     "height": 18,
@@ -565,6 +579,13 @@
     "width": 18,
     "x": 33,
     "y": 130
+  },
+  "grave_yard_space_12px": {
+    "height": 12,
+    "pixelRatio": 1,
+    "width": 12,
+    "x": 66,
+    "y": 256
   },
   "grave_yard_space_18px": {
     "height": 18,

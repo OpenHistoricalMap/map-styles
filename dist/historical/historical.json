@@ -954,7 +954,18 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-pattern": "cross_space_18px",
+        "fill-pattern": {
+          "stops": [
+            [
+              11,
+              "cross_space_18px"
+            ],
+            [
+              15,
+              "cross_space_12px"
+            ]
+          ]
+        },
         "fill-opacity": 0.3
       }
     },
@@ -1178,7 +1189,18 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-pattern": "grave_yard_space_18px",
+        "fill-pattern": {
+          "stops": [
+            [
+              11,
+              "grave_yard_space_18px"
+            ],
+            [
+              15,
+              "grave_yard_space_12px"
+            ]
+          ]
+        },
         "fill-opacity": 0.3
       }
     },
@@ -11775,6 +11797,124 @@
       "paint": {
         "text-color": "rgba(95, 107, 71, 1)",
         "text-halo-color": "rgba(201, 213, 190, 1)",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "landuse_areas_labels_cemetery",
+      "type": "symbol",
+      "source": "ohm",
+      "source-layer": "landuse_points_centroids",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "==",
+        [
+          "get",
+          "type"
+        ],
+        "cemetery"
+      ],
+      "layout": {
+        "icon-image": [
+          "match",
+          [
+            "get",
+            "religion"
+          ],
+          "christian",
+          [
+            "match",
+            [
+              "get",
+              "denomination"
+            ],
+            [
+              "jehovahs_witness",
+              "mormon",
+              "iglesia_ni_cristo"
+            ],
+            "",
+            "cemetery-18"
+          ],
+          ""
+        ],
+        "text-field": [
+          "get",
+          "name"
+        ],
+        "text-size": 11,
+        "text-anchor": [
+          "match",
+          [
+            "get",
+            "religion"
+          ],
+          "christian",
+          [
+            "match",
+            [
+              "get",
+              "denomination"
+            ],
+            [
+              "jehovahs_witness",
+              "mormon",
+              "iglesia_ni_cristo"
+            ],
+            "center",
+            "top"
+          ],
+          "center"
+        ],
+        "text-offset": [
+          "match",
+          [
+            "get",
+            "religion"
+          ],
+          "christian",
+          [
+            "match",
+            [
+              "get",
+              "denomination"
+            ],
+            [
+              "jehovahs_witness",
+              "mormon",
+              "iglesia_ni_cristo"
+            ],
+            [
+              "literal",
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              "literal",
+              [
+                0,
+                0.75
+              ]
+            ]
+          ],
+          [
+            "literal",
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "text-font": [
+          "OpenHistorical"
+        ]
+      },
+      "paint": {
+        "text-color": "rgba(95, 107, 71, 1)",
+        "text-halo-color": "rgba(245, 239, 239, 1)",
         "text-halo-width": 1
       }
     },
