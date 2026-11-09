@@ -13174,6 +13174,133 @@ ohmVectorStyles = {
         }
       },
       {
+        "id": "islands_points_labels",
+        "type": "symbol",
+        "source": "ohm",
+        "source-layer": "place_points_centroids",
+        "minzoom": 8,
+        "maxzoom": 20,
+        "filter": [
+          "any",
+          [
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "island"
+          ],
+          [
+            "all",
+            [
+              "==",
+              [
+                "get",
+                "type"
+              ],
+              "islet"
+            ],
+            [
+              ">=",
+              [
+                "zoom"
+              ],
+              12
+            ]
+          ]
+        ],
+        "layout": {
+          "text-line-height": 1,
+          "text-size": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            3,
+            [
+              "match",
+              [
+                "get",
+                "type"
+              ],
+              "islet",
+              4,
+              5
+            ],
+            6,
+            [
+              "match",
+              [
+                "get",
+                "type"
+              ],
+              "islet",
+              7,
+              8
+            ],
+            10,
+            [
+              "match",
+              [
+                "get",
+                "type"
+              ],
+              "islet",
+              10,
+              12
+            ]
+          ],
+          "symbol-avoid-edges": true,
+          "symbol-spacing": 25,
+          "text-font": [
+            "OpenHistorical Italic"
+          ],
+          "symbol-placement": "point",
+          "visibility": "visible",
+          "text-field": [
+            "get",
+            "name"
+          ]
+        },
+        "paint": {
+          "text-color": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            6,
+            "rgba(90, 90, 90, 1)"
+          ],
+          "text-halo-width": 0.5,
+          "text-halo-blur": 0.5,
+          "text-halo-color": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            0,
+            "rgba(252, 255, 254, 0.75)",
+            3,
+            "rgba(240, 244, 216, 1)",
+            5,
+            "rgba(246,247,227, 1)",
+            7,
+            "rgba(255,255,255, 1)"
+          ],
+          "text-translate-anchor": "map",
+          "icon-translate-anchor": "map"
+        }
+      },
+      {
         "id": "county_labels_z11_admin_7-8_centroids",
         "type": "symbol",
         "source": "ohm",
