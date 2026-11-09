@@ -3660,49 +3660,6 @@
       }
     },
     {
-      "id": "roads_motorwaybridge-case",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 9,
-      "filter": [
-        "all",
-        [
-          "in",
-          ["get", "type"],
-          ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]
-        ],
-        ["==", ["get", "bridge"], 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "butt",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "rgba(182, 109, 93, 1)",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          5,
-          [
-            "match",
-            ["get", "type"],
-            ["motorway_link", "trunk_link"], 1.8,
-            3
-          ],
-          18,
-          [
-            "match",
-            ["get", "type"],
-            ["motorway_link", "trunk_link"], 28,
-            46
-          ]
-        ]
-      }
-    },
-    {
       "id": "roads_proposed",
       "type": "line",
       "source": "ohm",
@@ -4929,6 +4886,49 @@
           3.5,
           18,
           48
+        ]
+      }
+    },
+    {
+      "id": "roads_motorwaybridge-case",
+      "type": "line",
+      "source": "ohm",
+      "source-layer": "transport_lines",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        [
+          "in",
+          ["get", "type"],
+          ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]
+        ],
+        ["==", ["get", "bridge"], 1]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "butt",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(152, 79, 63, 1)",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.5],
+          ["zoom"],
+          5,
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 1.8,
+            3
+          ],
+          18,
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 28,
+            46
+          ]
         ]
       }
     },
