@@ -1,0 +1,82 @@
+name: Style preview deploy
+
+# Publishes the files from "Style preview build" to Cloudflare Pages
+# and comments the link on the PR. It never runs code from the PR.
+#
+# Needs:
+#   secrets.CLOUDFLARE_API_TOKEN  (Pages: Edit)
+#   secrets.CLOUDFLARE_ACCOUNT_ID
+#   vars.CLOUDFLARE_PROJECT       (Pages project name)
+on:
+  workflow_run:
+    workflows: ['Style preview build']
+    types: [completed]
+
+permissions:
+  actions: read
+  pull-requests: write
+
+jobs:
+  deploy:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: preview
+          path: site
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Read PR number
+        id: pr
+        run: |
+          PR=$(cat site/pr-number.txt)
+          [[ "$PR" =~ ^[0-9]+$ ]] || { echo "Bad PR number"; exit 1; }
+          echo "number=$PR" >> "$GITHUB_OUTPUT"
+          echo "url=https://pr-$PR.${{ vars.CLOUDFLARE_PROJECT }}.pages.dev" >> "$GITHUB_OUTPUT"
+          rm site/pr-number.txt
+
+      # Keep only style and sprite files from the PR (no HTML, SVG or JS).
+      - name: Remove other files
+        run: find site -type f ! -name '*.json' ! -name '*.png' -delete
+
+      # demo.html always comes from staging, never from the PR.
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: demo.html
+          sparse-checkout-cone-mode: false
+          path: base
+
+      - name: Add demo page
+        run: cp base/demo.html site/ && cp base/demo.html site/index.html
+
+      # Branch name comes from the fork, so pass it as env, not inline.
+      - name: Add preview info
+        env:
+          PR: ${{ steps.pr.outputs.number }}
+          OWNER: ${{ github.event.workflow_run.head_repository.owner.login }}
+          BRANCH: ${{ github.event.workflow_run.head_branch }}
+        run: |
+          jq -n --arg pr "$PR" --arg branch "$OWNER:$BRANCH" '{pr: $pr, branch: $branch}' > site/preview.json
+
+      - name: Point sprites to the preview and fonts to production
+        run: |
+          find site -name '*.json' -exec sed -i \
+            -e 's#https://localhost:8888/fonts#https://www.openhistoricalmap.org/map-styles/fonts#g' \
+            -e 's#https://localhost:8888#${{ steps.pr.outputs.url }}#g' {} +
+
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy site --project-name=${{ vars.CLOUDFLARE_PROJECT }} --branch=pr-${{ steps.pr.outputs.number }}
+
+      - uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          number: ${{ steps.pr.outputs.number }}
+          header: style-preview
+          message: |
+            Style preview: ${{ steps.pr.outputs.url }}
+
+            Left side is production, right side is this PR. Drag the bar to compare.
