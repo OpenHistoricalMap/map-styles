@@ -6217,6 +6217,64 @@
       }
     },
     {
+      "id": "landuse_areas_labels_urban",
+      "type": "symbol",
+      "source": "ohm",
+      "source-layer": "landuse_points_centroids",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          ["get", "type"],
+          ["literal", ["commercial", "construction", "industrial", "residential"]]
+        ],
+        [
+          ">",
+          ["get", "area"],
+          ["interpolate", ["linear"], ["zoom"], 14, 1e5, 16, 1e4, 18, 0]
+        ]
+      ],
+      "layout": {
+        "symbol-sort-key": ["-", ["get", "area"]],
+        "text-field": ["get", "name"],
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          14,
+          ["interpolate", ["linear"], ["get", "area"], 1e4, 11, 1e6, 13],
+          18,
+          ["interpolate", ["linear"], ["get", "area"], 1e4, 13, 1e6, 16]
+        ],
+        "text-font": ["OpenHistorical"],
+        "visibility": "visible",
+        "symbol-placement": "point"
+      },
+      "paint": {
+        "text-color": [
+          "match",
+          ["get", "type"],
+          "industrial",
+          "rgba(114, 101, 101, 1)",
+          "commercial",
+          "rgba(114, 111, 101, 1)",
+          "construction",
+          "rgba(139, 135, 105, 1)",
+          "rgba(114, 114, 101, 1)"
+        ],
+        "text-halo-color": [
+          "match",
+          ["get", "type"],
+          ["industrial", "commercial"],
+          "rgba(211, 211, 211, 0)",
+          "rgba(248, 248, 248, 0)"
+        ],
+        "text-halo-width": 1
+      }
+    },
+    {
       "id": "points_of_interest_buildings",
       "type": "symbol",
       "source": "ohm",
