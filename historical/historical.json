@@ -1499,14 +1499,14 @@
           5,
           [
             "match",
-            ["get", "type"],
-            "primary_link", 1.6,
-            2.7
+            ["get", "construction"],
+            "primary_link", 0.8,
+            1
           ],
           18,
           [
             "match",
-            ["get", "type"],
+            ["get", "construction"],
             "primary_link", 26,
             42
           ]
@@ -1544,14 +1544,14 @@
           5,
           [
             "match",
-            ["get", "type"],
-            ["motorway_link", "trunk_link"], 1.8,
-            3
+            ["get", "construction"],
+            ["motorway_link", "trunk_link"], 1.1,
+            1.3
           ],
           18,
           [
             "match",
-            ["get", "type"],
+            ["get", "construction"],
             ["motorway_link", "trunk_link"], 28,
             46
           ]
@@ -1709,9 +1709,9 @@
           5,
           [
             "match",
-            ["get", "type"],
-            ["motorway_link", "trunk_link"], 0.6,
-            1
+            ["get", "construction"],
+            ["motorway_link", "trunk_link"], 0.4,
+            0.65
           ],
           18,
           [
@@ -2020,16 +2020,16 @@
           12,
           [
             "match",
-            ["get", "type"],
-            "service", 0.4,
-            0.5
+            ["get", "construction"],
+            "service", 2,
+            2.6
           ],
           18,
           [
             "match",
-            ["get", "type"],
-            "service", 10,
-            12
+            ["get", "construction"],
+            "service", 15,
+            20
           ]
         ]
       }
@@ -2144,14 +2144,14 @@
           5,
           [
             "match",
-            ["get", "type"],
-            "primary_link", 1.6,
-            2.7
+            ["get", "construction"],
+            "primary_link", 0.8,
+            1
           ],
           18,
           [
             "match",
-            ["get", "type"],
+            ["get", "construction"],
             "primary_link", 26,
             42
           ]
@@ -2185,14 +2185,14 @@
           5,
           [
             "match",
-            ["get", "type"],
-            ["motorway_link", "trunk_link"], 1.8,
-            3
+            ["get", "construction"],
+            ["motorway_link", "trunk_link"], 1.1,
+            1.3
           ],
           18,
           [
             "match",
-            ["get", "type"],
+            ["get", "construction"],
             ["motorway_link", "trunk_link"], 28,
             46
           ]
@@ -2258,16 +2258,16 @@
           12,
           [
             "match",
-            ["get", "type"],
-            "service", 0.4,
-            0.5
+            ["get", "construction"],
+            "service", 0.8,
+            1
           ],
           18,
           [
             "match",
-            ["get", "type"],
+            ["get", "construction"],
             "service", 10,
-            12
+            14
           ]
         ],
         "line-dasharray": [3, 1.5]
@@ -2457,9 +2457,9 @@
           5,
           [
             "match",
-            ["get", "type"],
-            ["motorway_link", "trunk_link"], 0.6,
-            1
+            ["get", "construction"],
+            ["motorway_link", "trunk_link"], 0.4,
+            0.65
           ],
           18,
           [
@@ -2524,16 +2524,16 @@
           12,
           [
             "match",
-            ["get", "type"],
-            "service", 0.4,
-            0.5
+            ["get", "construction"],
+            "service", 2.4,
+            3.1
           ],
           18,
           [
             "match",
-            ["get", "type"],
-            "service", 10,
-            12
+            ["get", "construction"],
+            "service", 18,
+            22
           ]
         ]
       }
@@ -2648,16 +2648,16 @@
           5,
           [
             "match",
-            ["get", "type"],
-            "primary_link", 1.6,
-            2.7
+            ["get", "construction"],
+            "primary_link", 1,
+            1.2
           ],
           18,
           [
             "match",
-            ["get", "type"],
+            ["get", "construction"],
             "primary_link", 26,
-            42
+            44
           ]
         ]
       }
@@ -2692,16 +2692,16 @@
           5,
           [
             "match",
-            ["get", "type"],
-            ["motorway_link", "trunk_link"], 1.8,
-            3
+            ["get", "construction"],
+            ["motorway_link", "trunk_link"], 1.3,
+            1.5
           ],
           18,
           [
             "match",
-            ["get", "type"],
-            ["motorway_link", "trunk_link"], 28,
-            46
+            ["get", "construction"],
+            ["motorway_link", "trunk_link"], 30,
+            50
           ]
         ]
       }
@@ -2736,16 +2736,16 @@
           12,
           [
             "match",
-            ["get", "type"],
-            "service", 0.4,
-            0.5
+            ["get", "construction"],
+            "service", 1.1,
+            1.4
           ],
           18,
           [
             "match",
-            ["get", "type"],
-            "service", 10,
-            12
+            ["get", "construction"],
+            "service", 12,
+            16
           ]
         ],
         "line-dasharray": [3, 1.5]
@@ -2934,9 +2934,9 @@
           5,
           [
             "match",
-            ["get", "type"],
-            ["motorway_link", "trunk_link"], 0.6,
-            1
+            ["get", "construction"],
+            ["motorway_link", "trunk_link"], 0.45,
+            0.7
           ],
           18,
           [
@@ -3111,8 +3111,8 @@
           [
             "match",
             ["get", "type"],
-            "primary_link", 1.6,
-            2.7
+            "primary_link", 0.8,
+            1
           ],
           18,
           [
@@ -3155,8 +3155,8 @@
           [
             "match",
             ["get", "type"],
-            ["motorway_link", "trunk_link"], 1.8,
-            3
+            ["motorway_link", "trunk_link"], 1.1,
+            1.3
           ],
           18,
           [
@@ -3316,8 +3316,8 @@
           [
             "match",
             ["get", "type"],
-            ["motorway_link", "trunk_link"], 0.6,
-            1
+            ["motorway_link", "trunk_link"], 0.4,
+            0.65
           ],
           18,
           [
@@ -3535,15 +3535,15 @@
           [
             "match",
             ["get", "type"],
-            "service", 0.8,
-            1.0
+            "service", 2,
+            2.6
           ],
           18,
           [
             "match",
             ["get", "type"],
-            "service", 14,
-            16
+            "service", 15,
+            20
           ]
         ]
       }
@@ -3677,8 +3677,8 @@
           [
             "match",
             ["get", "type"],
-            "primary_link", 1.6,
-            2.7
+            "primary_link", 0.8,
+            1
           ],
           18,
           [
@@ -3717,8 +3717,8 @@
           [
             "match",
             ["get", "type"],
-            ["motorway_link", "trunk_link"], 1.8,
-            3
+            ["motorway_link", "trunk_link"], 1.1,
+            1.3
           ],
           18,
           [
@@ -3786,15 +3786,15 @@
           [
             "match",
             ["get", "type"],
-            "service", 0.4,
-            0.5
+            "service", 0.8,
+            1
           ],
           18,
           [
             "match",
             ["get", "type"],
             "service", 10,
-            12
+            14
           ]
         ]
       }
@@ -3998,8 +3998,8 @@
           [
             "match",
             ["get", "type"],
-            ["motorway_link", "trunk_link"], 0.6,
-            1
+            ["motorway_link", "trunk_link"], 0.4,
+            0.65
           ],
           18,
           [
@@ -4781,8 +4781,8 @@
           [
             "match",
             ["get", "type"],
-            "service", 1.2,
-            1.5
+            "service", 2.4,
+            3.1
           ],
           18,
           [
@@ -4898,8 +4898,8 @@
           [
             "match",
             ["get", "type"],
-            "primary_link", 1.8,
-            3
+            "primary_link", 1,
+            1.2
           ],
           18,
           [
@@ -4941,8 +4941,8 @@
           [
             "match",
             ["get", "type"],
-            ["motorway_link", "trunk_link"], 2.1,
-            3.5
+            ["motorway_link", "trunk_link"], 1.3,
+            1.5
           ],
           18,
           [
@@ -4984,15 +4984,15 @@
           [
             "match",
             ["get", "type"],
-            "service", 0.4,
-            0.5
+            "service", 1.1,
+            1.4
           ],
           18,
           [
             "match",
             ["get", "type"],
-            "service", 10,
-            12
+            "service", 12,
+            16
           ]
         ]
       }
@@ -5174,8 +5174,8 @@
           [
             "match",
             ["get", "type"],
-            ["motorway_link", "trunk_link"], 0.6,
-            1
+            ["motorway_link", "trunk_link"], 0.45,
+            0.7
           ],
           18,
           [
