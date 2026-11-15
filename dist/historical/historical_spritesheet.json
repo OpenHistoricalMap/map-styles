@@ -195,13 +195,6 @@
     "x": 173,
     "y": 245
   },
-  "cemetery-18": {
-    "height": 18,
-    "pixelRatio": 1,
-    "width": 18,
-    "x": 36,
-    "y": 256
-  },
   "car-18": {
     "height": 11,
     "pixelRatio": 1,
@@ -250,6 +243,13 @@
     "width": 70,
     "x": 0,
     "y": 0
+  },
+  "cemetery-18": {
+    "height": 18,
+    "pixelRatio": 1,
+    "width": 18,
+    "x": 36,
+    "y": 256
   },
   "christian-18": {
     "height": 17,
@@ -768,6 +768,13 @@
     "width": 18,
     "x": 0,
     "y": 217
+  },
+  "petroleum_well-18": {
+    "height": 18,
+    "pixelRatio": 1,
+    "width": 18,
+    "x": 78,
+    "y": 256
   },
   "pharmacy-18": {
     "height": 17,
