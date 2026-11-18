@@ -6228,7 +6228,7 @@
         [
           "in",
           ["get", "type"],
-          ["literal", ["commercial", "construction", "industrial", "residential"]]
+          ["literal", ["commercial", "construction", "industrial", "residential", "retail"]]
         ],
         [
           ">",
@@ -6258,7 +6258,7 @@
           ["get", "type"],
           "industrial",
           "rgba(114, 101, 101, 1)",
-          "commercial",
+          ["commercial", "retail"],
           "rgba(114, 111, 101, 1)",
           "construction",
           "rgba(139, 135, 105, 1)",
@@ -6267,7 +6267,7 @@
         "text-halo-color": [
           "match",
           ["get", "type"],
-          ["industrial", "commercial"],
+          ["industrial", "commercial", "retail"],
           "rgba(211, 211, 211, 0)",
           "rgba(248, 248, 248, 0)"
         ],
