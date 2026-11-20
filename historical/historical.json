@@ -1373,7 +1373,7 @@
       "minzoom": 14,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "construction"], "subway"]
       ],
       "layout": {"visibility": "visible"},
@@ -1399,7 +1399,7 @@
       "minzoom": 9,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "tunnel"], 1],
         ["in", ["get", "construction"], ["literal", ["tertiary", "tertiary_link"]]]
       ],
@@ -1430,7 +1430,7 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "tunnel"], 1],
         ["in", ["get", "construction"], ["literal", ["secondary", "secondary_link"]]]
       ],
@@ -1462,7 +1462,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "tunnel"], 1],
         ["in", ["get", "construction"], ["literal", ["primary", "primary_link"]]]
       ],
@@ -1494,7 +1494,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "tunnel"], 1],
         [
           "in",
@@ -1529,7 +1529,7 @@
       "minzoom": 9,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "tunnel"], 1],
         ["in", ["get", "construction"], ["literal", ["tertiary", "tertiary_link"]]]
       ],
@@ -1559,7 +1559,7 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "tunnel"], 1],
         ["in", ["get", "construction"], ["literal", ["secondary", "secondary_link"]]]
       ],
@@ -1589,7 +1589,7 @@
       "minzoom": 6,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "tunnel"], 1],
         ["in", ["get", "construction"], ["literal", ["primary", "primary_link"]]]
       ],
@@ -1620,7 +1620,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "tunnel"], 1],
         [
           "in",
@@ -1655,7 +1655,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "construction"], "raceway"]
       ],
       "layout": {"visibility": "visible"},
@@ -1682,7 +1682,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "construction"], "track"]
       ],
       "layout": {"visibility": "visible"},
@@ -1708,7 +1708,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "construction"], "track"]
       ],
       "layout": {"visibility": "visible"},
@@ -1734,7 +1734,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "construction"], "track"]
       ],
       "layout": {"visibility": "visible"},
@@ -1761,7 +1761,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "construction"], "living_street"]
       ],
       "layout": {"visibility": "visible"},
@@ -1787,7 +1787,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "construction"], "pedestrian"]
       ],
       "layout": {"visibility": "visible"},
@@ -1813,7 +1813,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         [
           "in",
           ["get", "construction"],
@@ -1848,7 +1848,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "construction"], "pier"]
       ],
       "layout": {"visibility": "visible"},
@@ -1874,7 +1874,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "construction"], "steps"]
       ],
       "layout": {"visibility": "visible"},
@@ -1901,7 +1901,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1],
         ["==", ["get", "construction"], "road"]
       ],
@@ -1932,7 +1932,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1],
         [
           "in",
@@ -1967,7 +1967,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["==", ["get", "construction"], "tertiary"],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
@@ -1998,7 +1998,7 @@
       "minzoom": 10,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["==", ["get", "construction"], "secondary"],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
@@ -2029,7 +2029,7 @@
       "minzoom": 7,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["==", ["get", "construction"], "primary_link"],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
@@ -2060,7 +2060,7 @@
       "minzoom": 10,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["get", "ford"], "yes"],
         ["==", ["get", "construction"], "primary"],
@@ -2093,7 +2093,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         [
           "in",
@@ -2129,7 +2129,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["in", ["get", "construction"], ["literal", ["motorway", "trunk"]]],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
@@ -2161,7 +2161,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "construction"], "road"]
       ],
       "layout": {
@@ -2192,7 +2192,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         [
           "in",
           ["get", "construction"],
@@ -2226,7 +2226,7 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["==", ["get", "construction"], "secondary_link"],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
@@ -2266,7 +2266,7 @@
       "minzoom": 6,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["==", ["get", "construction"], "primary_link"],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
@@ -2299,7 +2299,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         [
           "in",
@@ -2336,7 +2336,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["==", ["get", "construction"], "tertiary"],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
@@ -2376,7 +2376,7 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["==", ["get", "construction"], "secondary"],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
@@ -2416,7 +2416,7 @@
       "minzoom": 6,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["get", "ford"], "yes"],
         ["==", ["get", "construction"], "primary"],
@@ -2458,7 +2458,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["in", ["get", "construction"], ["literal", ["motorway", "trunk"]]],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
@@ -2519,7 +2519,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "bridge"], 1],
         [
           "in",
@@ -2553,7 +2553,7 @@
       "minzoom": 9,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "bridge"], 1],
         ["==", ["get", "construction"], "tertiary"]
       ],
@@ -2583,7 +2583,7 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "bridge"], 1],
         ["==", ["get", "construction"], "secondary"]
       ],
@@ -2614,7 +2614,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "bridge"], 1],
         [
           "in",
@@ -2649,7 +2649,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "bridge"], 1],
         [
           "in",
@@ -2684,7 +2684,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "bridge"], 1],
         [
           "in",
@@ -2720,7 +2720,7 @@
       "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "bridge"], 1],
         ["==", ["get", "construction"], "tertiary"]
       ],
@@ -2759,7 +2759,7 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "bridge"], 1],
         ["==", ["get", "construction"], "secondary"]
       ],
@@ -2798,7 +2798,7 @@
       "minzoom": 6,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "bridge"], 1],
         ["==", ["get", "construction"], "primary"]
       ],
@@ -2838,7 +2838,7 @@
       "maxzoom": 20,
       "filter": [
         "all",
-        ["==", ["get", "type"], "construction"],
+        ["in", "construction", ["get", "type"]],
         ["==", ["get", "bridge"], 1],
         [
           "in",
