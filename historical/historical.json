@@ -1392,7 +1392,7 @@
       }
     },
     {
-      "id": "roads_tertiarytunnel_case_construction",
+      "id": "roads_tertiarytunnel_construction-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
@@ -1415,15 +1415,25 @@
           ["exponential", 1.5],
           ["zoom"],
           9,
-          1,
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 0.5,
+            0.8
+          ],
           18,
-          36
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 22,
+            36
+          ]
         ],
         "line-dasharray": [0.5, 1.25]
       }
     },
     {
-      "id": "roads_secondarytunnel_case_construction",
+      "id": "roads_secondarytunnel_construction-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
@@ -1446,20 +1456,29 @@
           ["exponential", 1.5],
           ["zoom"],
           8,
-          1,
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 0.3,
+            0.5
+          ],
           18,
-          38
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 23,
+            39
+          ]
         ],
         "line-dasharray": [0.5, 1.25]
       }
     },
     {
-      "id": "roads_primarytunnel_case_construction",
+      "id": "roads_primarytunnel_construction-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 20,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -1477,21 +1496,30 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          7,
-          1,
+          5,
+          [
+            "match",
+            ["get", "construction"],
+            "primary_link", 0.8,
+            1
+          ],
           18,
-          42
+          [
+            "match",
+            ["get", "construction"],
+            "primary_link", 26,
+            42
+          ]
         ],
         "line-dasharray": [0.5, 1.25]
       }
     },
     {
-      "id": "roads_motorwaytunnel_case_construction",
+      "id": "roads_motorwaytunnel_construction-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 6,
-      "maxzoom": 20,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -1514,9 +1542,19 @@
           ["exponential", 1.5],
           ["zoom"],
           5,
-          1,
+          [
+            "match",
+            ["get", "construction"],
+            ["motorway_link", "trunk_link"], 1.1,
+            1.3
+          ],
           18,
-          46
+          [
+            "match",
+            ["get", "construction"],
+            ["motorway_link", "trunk_link"], 28,
+            46
+          ]
         ],
         "line-dasharray": [0.5, 1.25]
       }
@@ -1544,10 +1582,20 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          9,
-          0.8,
+          8,
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 0.3,
+            0.5
+          ],
           18,
-          24
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 17,
+            28
+          ]
         ]
       }
     },
@@ -1575,9 +1623,19 @@
           ["exponential", 1.5],
           ["zoom"],
           8,
-          0.5,
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 0.3,
+            0.5
+          ],
           18,
-          30
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 18,
+            30
+          ]
         ]
       }
     },
@@ -1604,10 +1662,20 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          6,
-          0.75,
+          5,
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 0.5,
+            0.9
+          ],
           18,
-          32
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 19,
+            32
+          ]
         ]
       }
     },
@@ -1617,7 +1685,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 6,
-      "maxzoom": 20,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -1640,9 +1707,19 @@
           ["exponential", 1.5],
           ["zoom"],
           5,
-          1,
+          [
+            "match",
+            ["get", "construction"],
+            ["motorway_link", "trunk_link"], 0.4,
+            0.65
+          ],
           18,
-          36
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 22,
+            36
+          ]
         ]
       }
     },
@@ -1652,7 +1729,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 12,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -1674,12 +1750,11 @@
       }
     },
     {
-      "id": "roads_trackfillcase_construction",
+      "id": "roads_trackfill_construction-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -1705,7 +1780,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -1731,7 +1805,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -1758,7 +1831,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -1784,7 +1856,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -1810,7 +1881,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -1845,7 +1915,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -1871,7 +1940,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -1893,12 +1961,11 @@
       }
     },
     {
-      "id": "roads_roadscase_z13_construction",
+      "id": "roads_roads_construction-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 13,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -1924,12 +1991,11 @@
       }
     },
     {
-      "id": "roads_residentialcase_z13_construction",
+      "id": "roads_residential_construction-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 13,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -1951,25 +2017,34 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          13,
-          4,
+          12,
+          [
+            "match",
+            ["get", "construction"],
+            "service", 2,
+            2.6
+          ],
           18,
-          18
+          [
+            "match",
+            ["get", "construction"],
+            "service", 15,
+            20
+          ]
         ]
       }
     },
     {
-      "id": "roads_tertiary-case_construction",
+      "id": "roads_tertiary_construction-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 10.01,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["==", ["get", "construction"], "tertiary"],
+        ["in", ["get", "construction"], ["literal", ["tertiary", "tertiary_link"]]],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
@@ -1983,15 +2058,25 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          10,
-          2.2,
+          9,
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 0.5,
+            0.8
+          ],
           18,
-          28
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 22,
+            36
+          ]
         ]
       }
     },
     {
-      "id": "roads_secondary-case_construction",
+      "id": "roads_secondary_construction-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
@@ -2000,7 +2085,7 @@
         "all",
         ["==", ["get", "type"], "construction"],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["==", ["get", "construction"], "secondary"],
+        ["in", ["get", "construction"], ["literal", ["secondary", "secondary_link"]]],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
@@ -2014,46 +2099,25 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          10,
-          2.4,
+          8,
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 0.3,
+            0.5
+          ],
           18,
-          35
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 23,
+            39
+          ]
         ]
       }
     },
     {
-      "id": "roads_primarylink-case_construction",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 7,
-      "filter": [
-        "all",
-        ["==", ["get", "type"], "construction"],
-        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["==", ["get", "construction"], "primary_link"],
-        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#ffffff",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          7,
-          2,
-          18,
-          40
-        ]
-      }
-    },
-    {
-      "id": "roads_primary-case_construction",
+      "id": "roads_primary_construction-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
@@ -2063,7 +2127,7 @@
         ["==", ["get", "type"], "construction"],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["get", "ford"], "yes"],
-        ["==", ["get", "construction"], "primary"],
+        ["in", ["get", "construction"], ["literal", ["primary", "primary_link"]]],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
@@ -2077,61 +2141,34 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          7,
-          2,
+          5,
+          [
+            "match",
+            ["get", "construction"],
+            "primary_link", 0.8,
+            1
+          ],
           18,
-          40
+          [
+            "match",
+            ["get", "construction"],
+            "primary_link", 26,
+            42
+          ]
         ]
       }
     },
     {
-      "id": "roads_motorwaylink-case_construction",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 6,
-      "maxzoom": 20,
-      "filter": [
-        "all",
-        ["==", ["get", "type"], "construction"],
-        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        [
-          "in",
-          ["get", "construction"],
-          ["literal", ["motorway_link", "trunk_link"]]
-        ],
-        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#ffffff",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          6,
-          2,
-          18,
-          46
-        ]
-      }
-    },
-    {
-      "id": "roads_motorway-case_construction",
+      "id": "roads_motorway_construction-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 9,
-      "maxzoom": 20,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["in", ["get", "construction"], ["literal", ["motorway", "trunk"]]],
+        ["in", ["get", "construction"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
@@ -2145,10 +2182,20 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          6,
-          2,
+          5,
+          [
+            "match",
+            ["get", "construction"],
+            ["motorway_link", "trunk_link"], 1.1,
+            1.3
+          ],
           18,
-          46
+          [
+            "match",
+            ["get", "construction"],
+            ["motorway_link", "trunk_link"], 28,
+            46
+          ]
         ]
       }
     },
@@ -2158,7 +2205,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 12,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -2189,7 +2235,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 12,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -2211,24 +2256,34 @@
           ["exponential", 1.5],
           ["zoom"],
           12,
-          1.5,
+          [
+            "match",
+            ["get", "construction"],
+            "service", 0.8,
+            1
+          ],
           18,
-          12
+          [
+            "match",
+            ["get", "construction"],
+            "service", 10,
+            14
+          ]
         ],
         "line-dasharray": [3, 1.5]
       }
     },
     {
-      "id": "roads_secondarylink_construction",
+      "id": "roads_tertiary_construction",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
-      "minzoom": 8,
+      "minzoom": 9,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["==", ["get", "construction"], "secondary_link"],
+        ["in", ["get", "construction"], ["literal", ["tertiary", "tertiary_link"]]],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
@@ -2251,119 +2306,19 @@
           ["exponential", 1.5],
           ["zoom"],
           8,
-          0.5,
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 0.3,
+            0.5
+          ],
           18,
-          30
-        ],
-        "line-dasharray": [3, 1.5]
-      }
-    },
-    {
-      "id": "roads_primarylink_construction",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 6,
-      "filter": [
-        "all",
-        ["==", ["get", "type"], "construction"],
-        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["==", ["get", "construction"], "primary_link"],
-        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "rgba(241, 218, 187, 1)",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          6,
-          0.75,
-          18,
-          32
-        ],
-        "line-dasharray": [3, 1.5]
-      }
-    },
-    {
-      "id": "roads_motorwaylink_construction",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 5,
-      "maxzoom": 20,
-      "filter": [
-        "all",
-        ["==", ["get", "type"], "construction"],
-        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        [
-          "in",
-          ["get", "construction"],
-          ["literal", ["motorway_link", "trunk_link"]]
-        ],
-        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "rgba(240, 197, 188, 1)",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          5,
-          1,
-          18,
-          36
-        ],
-        "line-dasharray": [3, 1.5]
-      }
-    },
-    {
-      "id": "roads_tertiary_construction",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 9,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        ["==", ["get", "type"], "construction"],
-        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["==", ["get", "construction"], "tertiary"],
-        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          10,
-          "rgba(240, 240, 240, 1)",
-          12,
-          "#ffffff"
-        ],
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          9,
-          0.8,
-          18,
-          24
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 17,
+            28
+          ]
         ],
         "line-dasharray": [3, 1.5]
       }
@@ -2378,7 +2333,7 @@
         "all",
         ["==", ["get", "type"], "construction"],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["==", ["get", "construction"], "secondary"],
+        ["in", ["get", "construction"], ["literal", ["secondary", "secondary_link"]]],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
@@ -2401,9 +2356,19 @@
           ["exponential", 1.5],
           ["zoom"],
           8,
-          0.5,
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 0.3,
+            0.5
+          ],
           18,
-          30
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 18,
+            30
+          ]
         ],
         "line-dasharray": [3, 1.5]
       }
@@ -2419,7 +2384,7 @@
         ["==", ["get", "type"], "construction"],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["get", "ford"], "yes"],
-        ["==", ["get", "construction"], "primary"],
+        ["in", ["get", "construction"], ["literal", ["primary", "primary_link"]]],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
@@ -2441,10 +2406,20 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          6,
-          0.75,
+          5,
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 0.5,
+            0.9
+          ],
           18,
-          32
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 19,
+            32
+          ]
         ],
         "line-dasharray": [3, 1.5]
       }
@@ -2455,12 +2430,11 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 6,
-      "maxzoom": 20,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["in", ["get", "construction"], ["literal", ["motorway", "trunk"]]],
+        ["in", ["get", "construction"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
@@ -2481,9 +2455,19 @@
           ["exponential", 1.5],
           ["zoom"],
           5,
-          1,
+          [
+            "match",
+            ["get", "construction"],
+            ["motorway_link", "trunk_link"], 0.4,
+            0.65
+          ],
           18,
-          36
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 22,
+            36
+          ]
         ],
         "line-dasharray": [3, 1.5]
       }
@@ -2511,12 +2495,11 @@
       }
     },
     {
-      "id": "roads_residential_bridge_z13-copy_construction",
+      "id": "roads_residential_bridge_construction-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 13,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -2538,15 +2521,25 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
-          2,
+          12,
+          [
+            "match",
+            ["get", "construction"],
+            "service", 2.4,
+            3.1
+          ],
           18,
-          30
+          [
+            "match",
+            ["get", "construction"],
+            "service", 18,
+            22
+          ]
         ]
       }
     },
     {
-      "id": "roads_tertiarybridge_construction",
+      "id": "roads_tertiarybridge_construction-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
@@ -2555,7 +2548,7 @@
         "all",
         ["==", ["get", "type"], "construction"],
         ["==", ["get", "bridge"], 1],
-        ["==", ["get", "construction"], "tertiary"]
+        ["in", ["get", "construction"], ["literal", ["tertiary", "tertiary_link"]]]
       ],
       "layout": {
         "visibility": "visible",
@@ -2568,15 +2561,25 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
-          4,
+          9,
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 0.5,
+            0.8
+          ],
           18,
-          38
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 22,
+            36
+          ]
         ]
       }
     },
     {
-      "id": "roads_secondarybridge_construction",
+      "id": "roads_secondarybridge_construction-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
@@ -2585,7 +2588,7 @@
         "all",
         ["==", ["get", "type"], "construction"],
         ["==", ["get", "bridge"], 1],
-        ["==", ["get", "construction"], "secondary"]
+        ["in", ["get", "construction"], ["literal", ["secondary", "secondary_link"]]]
       ],
       "layout": {
         "visibility": "visible",
@@ -2599,19 +2602,28 @@
           ["exponential", 1.5],
           ["zoom"],
           8,
-          3.2,
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 0.3,
+            0.5
+          ],
           18,
-          48
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 23,
+            39
+          ]
         ]
       }
     },
     {
-      "id": "roads_primarybridge_construction",
+      "id": "roads_primarybridge_construction-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 10,
-      "maxzoom": 20,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -2633,20 +2645,29 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          7,
-          3.5,
+          5,
+          [
+            "match",
+            ["get", "construction"],
+            "primary_link", 1,
+            1.2
+          ],
           18,
-          48
+          [
+            "match",
+            ["get", "construction"],
+            "primary_link", 26,
+            44
+          ]
         ]
       }
     },
     {
-      "id": "roads_motorwaybridge_construction",
+      "id": "roads_motorwaybridge_construction-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 9,
-      "maxzoom": 20,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -2663,25 +2684,34 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(232, 159, 143, 1)",
+        "line-color": "rgba(152, 79, 63, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
           5,
-          3,
+          [
+            "match",
+            ["get", "construction"],
+            ["motorway_link", "trunk_link"], 1.3,
+            1.5
+          ],
           18,
-          50
+          [
+            "match",
+            ["get", "construction"],
+            ["motorway_link", "trunk_link"], 30,
+            50
+          ]
         ]
       }
     },
     {
-      "id": "roads_residential_bridgetop_z13_construction",
+      "id": "roads_residential_bridge_construction",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 12,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -2704,64 +2734,34 @@
           ["exponential", 1.5],
           ["zoom"],
           12,
-          0.5,
+          [
+            "match",
+            ["get", "construction"],
+            "service", 1.1,
+            1.4
+          ],
           18,
-          12
+          [
+            "match",
+            ["get", "construction"],
+            "service", 12,
+            16
+          ]
         ],
         "line-dasharray": [3, 1.5]
       }
     },
     {
-      "id": "roads_tertiarybridgetop_construction",
+      "id": "roads_tertiarybridge_construction",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 6,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
         ["==", ["get", "bridge"], 1],
-        ["==", ["get", "construction"], "tertiary"]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          10,
-          "rgba(217, 217, 217, 1)",
-          11,
-          "#ffffff"
-        ],
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          9,
-          0.8,
-          18,
-          24
-        ],
-        "line-dasharray": [3, 1.5]
-      }
-    },
-    {
-      "id": "roads_secondarybridgetop_construction",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 8,
-      "filter": [
-        "all",
-        ["==", ["get", "type"], "construction"],
-        ["==", ["get", "bridge"], 1],
-        ["==", ["get", "construction"], "secondary"]
+        ["in", ["get", "construction"], ["literal", ["tertiary", "tertiary_link"]]]
       ],
       "layout": {
         "visibility": "visible",
@@ -2783,15 +2783,74 @@
           ["exponential", 1.5],
           ["zoom"],
           8,
-          0.5,
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 0.3,
+            0.5
+          ],
           18,
-          30
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 17,
+            28
+          ]
         ],
         "line-dasharray": [3, 1.5]
       }
     },
     {
-      "id": "roads_primarybridgetop_construction",
+      "id": "roads_secondarybridge_construction",
+      "type": "line",
+      "source": "ohm",
+      "source-layer": "transport_lines",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        ["==", ["get", "type"], "construction"],
+        ["==", ["get", "bridge"], 1],
+        ["in", ["get", "construction"], ["literal", ["secondary", "secondary_link"]]]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          10,
+          "rgba(217, 217, 217, 1)",
+          11,
+          "#ffffff"
+        ],
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.5],
+          ["zoom"],
+          8,
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 0.3,
+            0.5
+          ],
+          18,
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 18,
+            30
+          ]
+        ],
+        "line-dasharray": [3, 1.5]
+      }
+    },
+    {
+      "id": "roads_primarybridge_construction",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
@@ -2800,7 +2859,7 @@
         "all",
         ["==", ["get", "type"], "construction"],
         ["==", ["get", "bridge"], 1],
-        ["==", ["get", "construction"], "primary"]
+        ["in", ["get", "construction"], ["literal", ["primary", "primary_link"]]]
       ],
       "layout": {
         "visibility": "visible",
@@ -2821,21 +2880,30 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          6,
-          0.75,
+          5,
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 0.5,
+            0.9
+          ],
           18,
-          32
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 19,
+            32
+          ]
         ],
         "line-dasharray": [3, 1.5]
       }
     },
     {
-      "id": "roads_motorwaybridgetop_construction",
+      "id": "roads_motorwaybridge_construction",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 6,
-      "maxzoom": 20,
       "filter": [
         "all",
         ["==", ["get", "type"], "construction"],
@@ -2864,9 +2932,19 @@
           ["exponential", 1.5],
           ["zoom"],
           5,
-          1,
+          [
+            "match",
+            ["get", "construction"],
+            ["motorway_link", "trunk_link"], 0.45,
+            0.7
+          ],
           18,
-          36
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 22,
+            36
+          ]
         ],
         "line-dasharray": [3, 1.5]
       }
@@ -2877,7 +2955,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 11,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["funicular", "monorail", "tram"]]],
@@ -2929,7 +3006,7 @@
       }
     },
     {
-      "id": "roads_tertiarytunnel_case",
+      "id": "roads_tertiarytunnel-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
@@ -2951,15 +3028,25 @@
           ["exponential", 1.5],
           ["zoom"],
           9,
-          1,
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 0.5,
+            0.8
+          ],
           18,
-          36
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 22,
+            36
+          ]
         ],
         "line-dasharray": [0.5, 1.25]
       }
     },
     {
-      "id": "roads_secondarytunnel_case",
+      "id": "roads_secondarytunnel-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
@@ -2981,20 +3068,29 @@
           ["exponential", 1.5],
           ["zoom"],
           8,
-          1,
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 0.3,
+            0.5
+          ],
           18,
-          38
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 23,
+            39
+          ]
         ],
         "line-dasharray": [0.5, 1.25]
       }
     },
     {
-      "id": "roads_primarytunnel_case",
+      "id": "roads_primarytunnel-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 20,
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["primary", "primary_link"]]],
@@ -3011,21 +3107,30 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          7,
-          1,
+          5,
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 0.8,
+            1
+          ],
           18,
-          42
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 26,
+            42
+          ]
         ],
         "line-dasharray": [0.5, 1.25]
       }
     },
     {
-      "id": "roads_motorwaytunnel_case",
+      "id": "roads_motorwaytunnel-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 6,
-      "maxzoom": 20,
       "filter": [
         "all",
         [
@@ -3047,9 +3152,19 @@
           ["exponential", 1.5],
           ["zoom"],
           5,
-          1,
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 1.1,
+            1.3
+          ],
           18,
-          46
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 28,
+            46
+          ]
         ],
         "line-dasharray": [0.5, 1.25]
       }
@@ -3076,10 +3191,20 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          9,
-          0.8,
+          8,
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 0.3,
+            0.5
+          ],
           18,
-          24
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 17,
+            28
+          ]
         ]
       }
     },
@@ -3106,9 +3231,19 @@
           ["exponential", 1.5],
           ["zoom"],
           8,
-          0.5,
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 0.3,
+            0.5
+          ],
           18,
-          30
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 18,
+            30
+          ]
         ]
       }
     },
@@ -3134,10 +3269,20 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          6,
-          0.75,
+          5,
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 0.5,
+            0.9
+          ],
           18,
-          32
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 19,
+            32
+          ]
         ]
       }
     },
@@ -3147,7 +3292,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 6,
-      "maxzoom": 20,
       "filter": [
         "all",
         [
@@ -3169,9 +3313,19 @@
           ["exponential", 1.5],
           ["zoom"],
           5,
-          1,
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 0.4,
+            0.65
+          ],
           18,
-          36
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 18,
+            36
+          ]
         ]
       }
     },
@@ -3181,7 +3335,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 12,
-      "maxzoom": 24,
       "filter": ["==", ["get", "type"], "raceway"],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -3204,7 +3357,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": ["==", ["get", "type"], "track"],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -3226,7 +3378,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": ["==", ["get", "type"], "track"],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -3248,7 +3399,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": ["==", ["get", "type"], "track"],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -3271,7 +3421,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": ["==", ["get", "type"], "living_street"],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -3293,7 +3442,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": [
         "in",
         ["get", "type"],
@@ -3324,7 +3472,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": ["==", ["get", "type"], "pier"],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -3346,7 +3493,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": ["==", ["get", "type"], "steps"],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -3364,15 +3510,14 @@
       }
     },
     {
-      "id": "roads_servicecase_z13",
+      "id": "roads_residential-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
-      "minzoom": 13,
-      "maxzoom": 24,
+      "minzoom": 12,
       "filter": [
         "all",
-        ["==", ["get", "type"], "service"],
+        ["in", ["get", "type"], ["literal", ["residential", "unclassified", "service"]]],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
       "layout": {
@@ -3386,40 +3531,20 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          13,
-          2,
+          12,
+          [
+            "match",
+            ["get", "type"],
+            "service", 2,
+            2.6
+          ],
           18,
-          12
-        ]
-      }
-    },
-    {
-      "id": "roads_residentialcase_z13",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 13,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        ["in", ["get", "type"], ["literal", ["residential", "unclassified"]]],
-        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#D2D2D5",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          13,
-          4,
-          18,
-          18
+          [
+            "match",
+            ["get", "type"],
+            "service", 15,
+            20
+          ]
         ]
       }
     },
@@ -3429,7 +3554,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": ["==", ["get", "type"], "pedestrian"],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -3446,50 +3570,14 @@
       }
     },
     {
-      "id": "roads_tertiarylink-case",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 10.01,
-      "maxzoom": 24,
-      "filter": [
-        "all",
-        ["==", ["get", "type"], "tertiary_link"],
-        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#D2D2D5",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          10,
-          0.5,
-          11,
-          2.5,
-          16,
-          14,
-          18,
-          36
-        ]
-      }
-    },
-    {
       "id": "roads_tertiary-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 10.01,
-      "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "tertiary"],
+        ["in", ["get", "type"], ["literal", ["tertiary", "tertiary_link"]]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
@@ -3504,14 +3592,20 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          10,
-          0.5,
-          11,
-          2.5,
-          16,
-          14,
+          9,
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 0.5,
+            0.8
+          ],
           18,
-          36
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 22,
+            36
+          ]
         ]
       }
     },
@@ -3523,7 +3617,7 @@
       "minzoom": 10,
       "filter": [
         "all",
-        ["==", ["get", "type"], "secondary"],
+        ["in", ["get", "type"], ["literal", ["secondary", "secondary_link"]]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
@@ -3533,79 +3627,25 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#D2D2D5",
+        "line-color": "rgba(210, 210, 213, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          10,
-          0.5,
-          11,
-          3,
+          8,
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 0.3,
+            0.5
+          ],
           18,
-          39
-        ]
-      }
-    },
-    {
-      "id": "roads_secondarylink-case",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 8,
-      "filter": [
-        "all",
-        ["==", ["get", "type"], "secondary_link"],
-        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#D2D2D5",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          10,
-          0.5,
-          11,
-          3,
-          18,
-          39
-        ]
-      }
-    },
-    {
-      "id": "roads_primarylink-case",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 7,
-      "filter": [
-        "all",
-        ["==", ["get", "type"], "primary_link"],
-        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#ffffff",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          7,
-          2,
-          18,
-          40
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 23,
+            39
+          ]
         ]
       }
     },
@@ -3617,7 +3657,7 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", ["get", "type"], "primary"],
+        ["in", ["get", "type"], ["literal", ["primary", "primary_link"]]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["get", "ford"], "yes"],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
@@ -3633,45 +3673,20 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          8,
-          1,
-          9,
-          2,
-          11,
-          3.5,
+          5,
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 0.8,
+            1
+          ],
           18,
-          40
-        ]
-      }
-    },
-    {
-      "id": "roads_motorwaylink-case",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 9,
-      "maxzoom": 20,
-      "filter": [
-        "all",
-        ["in", ["get", "type"], ["literal", ["motorway_link", "trunk_link"]]],
-        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "rgba(230, 143, 124, 1)",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          10,
-          3,
-          18,
-          46
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 26,
+            42
+          ]
         ]
       }
     },
@@ -3681,10 +3696,9 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 9,
-      "maxzoom": 24,
       "filter": [
         "all",
-        ["in", ["get", "type"], ["literal", ["motorway", "trunk"]]],
+        ["in", ["get", "type"], ["literal", ["motorway", "trunk", "motorway_link", "trunk_link"]]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
@@ -3699,10 +3713,20 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          10,
-          3,
+          5,
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 1.1,
+            1.3
+          ],
           18,
-          46
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 28,
+            46
+          ]
         ]
       }
     },
@@ -3712,7 +3736,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 12,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["==", ["get", "type"], "proposed"],
@@ -3738,42 +3761,15 @@
       }
     },
     {
-      "id": "roads_service",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 12,
-      "maxzoom": 24,
-      "filter": ["==", ["get", "type"], "service"],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#ffffff",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          12,
-          1.6,
-          18,
-          7
-        ]
-      }
-    },
-    {
       "id": "roads_residential",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 12,
-      "maxzoom": 24,
       "filter": [
         "in",
         ["get", "type"],
-        ["literal", ["residential", "unclassified"]]
+        ["literal", ["residential", "unclassified", "service"]]
       ],
       "layout": {
         "visibility": "visible",
@@ -3787,9 +3783,19 @@
           ["exponential", 1.5],
           ["zoom"],
           12,
-          2,
+          [
+            "match",
+            ["get", "type"],
+            "service", 0.8,
+            1
+          ],
           18,
-          12
+          [
+            "match",
+            ["get", "type"],
+            "service", 10,
+            14
+          ]
         ]
       }
     },
@@ -3799,7 +3805,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 14,
-      "maxzoom": 24,
       "filter": ["==", ["get", "type"], "pedestrian"],
       "layout": {"visibility": "visible"},
       "paint": {
@@ -3816,156 +3821,14 @@
       }
     },
     {
-      "id": "roads_secondarylink",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 8,
-      "filter": [
-        "all",
-        ["==", ["get", "type"], "secondary_link"],
-        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "rgba(255, 255, 255, 1)",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          8,
-          0.5,
-          18,
-          30
-        ]
-      }
-    },
-    {
-      "id": "roads_tertiarylink",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 6,
-      "filter": [
-        "all",
-        ["==", ["get", "type"], "tertiary_link"],
-        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          8,
-          0.5,
-          16,
-          11,
-          18,
-          28
-        ],
-        "line-color": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          10,
-          "rgba(240, 240, 240, 1)",
-          12,
-          "#ffffff"
-        ]
-      }
-    },
-    {
-      "id": "roads_primarylink",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 6,
-      "filter": [
-        "all",
-        ["==", ["get", "type"], "primary_link"],
-        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "rgba(241, 218, 187, 1)",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          6,
-          0.75,
-          18,
-          32
-        ]
-      }
-    },
-    {
-      "id": "roads_motorwaylink",
-      "type": "line",
-      "source": "ohm",
-      "source-layer": "transport_lines",
-      "minzoom": 6,
-      "maxzoom": 20,
-      "filter": [
-        "all",
-        ["in", ["get", "type"], ["literal", ["motorway_link", "trunk_link"]]],
-        ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
-        ["!=", ["coalesce", ["get", "bridge"], 0], 1]
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": [
-          "step",
-          ["zoom"],
-          "rgba(254, 194, 182, 1)",
-          9,
-          "rgba(254, 224, 217, 1)"
-        ],
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.5],
-          ["zoom"],
-          6,
-          1,
-          9,
-          2,
-          10,
-          2.5,
-          18,
-          36
-        ]
-      }
-    },
-    {
       "id": "roads_tertiary",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 9,
-      "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "tertiary"],
+        ["in", ["get", "type"], ["literal", ["tertiary", "tertiary_link"]]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
@@ -3989,11 +3852,19 @@
           ["exponential", 1.5],
           ["zoom"],
           8,
-          0.5,
-          16,
-          11,
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 0.3,
+            0.5
+          ],
           18,
-          28
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 17,
+            28
+          ]
         ]
       }
     },
@@ -4005,7 +3876,7 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", ["get", "type"], "secondary"],
+        ["in", ["get", "type"], ["literal", ["secondary", "secondary_link"]]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
@@ -4029,9 +3900,19 @@
           ["exponential", 1.5],
           ["zoom"],
           8,
-          0.5,
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 0.3,
+            0.5
+          ],
           18,
-          30
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 18,
+            30
+          ]
         ]
       }
     },
@@ -4043,7 +3924,7 @@
       "minzoom": 6,
       "filter": [
         "all",
-        ["==", ["get", "type"], "primary"],
+        ["in", ["get", "type"], ["literal", ["primary", "primary_link"]]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["get", "ford"], "yes"],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
@@ -4067,12 +3948,20 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          6,
-          0.5,
-          8,
-          2,
+          5,
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 0.5,
+            0.9
+          ],
           18,
-          32
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 19,
+            32
+          ]
         ]
       }
     },
@@ -4082,10 +3971,9 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 6,
-      "maxzoom": 24,
       "filter": [
         "all",
-        ["in", ["get", "type"], ["literal", ["motorway", "trunk"]]],
+        ["in", ["get", "type"], ["literal", ["motorway", "trunk", "motorway_link", "trunk_link"]]],
         ["!=", ["coalesce", ["get", "tunnel"], 0], 1],
         ["!=", ["coalesce", ["get", "bridge"], 0], 1]
       ],
@@ -4106,14 +3994,20 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          6,
-          1,
-          9,
-          2,
-          10,
-          2.5,
+          5,
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 0.4,
+            0.65
+          ],
           18,
-          36
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 22,
+            36
+          ]
         ]
       }
     },
@@ -4145,7 +4039,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["miniature", "narrow_gauge"]]],
@@ -4163,7 +4056,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["miniature", "narrow_gauge"]]],
@@ -4199,7 +4091,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 12,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["miniature", "narrow_gauge"]]],
@@ -4234,7 +4125,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -4268,7 +4158,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -4304,7 +4193,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 12,
-      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -4351,7 +4239,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -4379,7 +4266,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -4405,7 +4291,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -4431,7 +4316,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
       "filter": ["in", ["get", "service"], ["literal", ["siding", "yard"]]],
       "layout": {
         "visibility": "visible",
@@ -4449,7 +4333,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
       "filter": ["in", ["get", "service"], ["literal", ["siding", "yard"]]],
       "layout": {
         "visibility": "visible",
@@ -4484,7 +4367,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -4520,7 +4402,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -4575,7 +4456,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -4628,7 +4508,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -4675,7 +4554,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -4723,7 +4601,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 12,
-      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -4771,7 +4648,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["construction", "proposed"]]],
@@ -4805,7 +4681,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 7,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["construction", "proposed"]]],
@@ -4840,7 +4715,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 12,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["construction", "proposed"]]],
@@ -4878,12 +4752,11 @@
       }
     },
     {
-      "id": "roads_residential_bridge_z13-case",
+      "id": "roads_residentialbridge-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
-      "minzoom": 13,
-      "maxzoom": 24,
+      "minzoom": 12,
       "filter": [
         "all",
         [
@@ -4899,27 +4772,37 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(210, 210, 213, 1)",
+        "line-color": "rgba(190, 190, 193, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
-          2,
+          12,
+          [
+            "match",
+            ["get", "type"],
+            "service", 2.4,
+            3.1
+          ],
           18,
-          30
+          [
+            "match",
+            ["get", "type"],
+            "service", 18,
+            22
+          ]
         ]
       }
     },
     {
-      "id": "roads_tertiarybridge",
+      "id": "roads_tertiarybridge-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 9,
       "filter": [
         "all",
-        ["==", ["get", "type"], "tertiary"],
+        ["in", ["get", "type"], ["literal", ["tertiary", "tertiary_link"]]],
         ["==", ["get", "bridge"], 1]
       ],
       "layout": {
@@ -4928,27 +4811,37 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(210, 210, 213, 1)",
+        "line-color": "rgba(190, 190, 193, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          11,
-          4,
+          9,
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 0.8,
+            1.2
+          ],
           18,
-          38
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 25,
+            39
+          ]
         ]
       }
     },
     {
-      "id": "roads_secondarybridge",
+      "id": "roads_secondarybridge-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 10,
       "filter": [
         "all",
-        ["==", ["get", "type"], "secondary"],
+        ["in", ["get", "type"], ["literal", ["secondary", "secondary_link"]]],
         ["==", ["get", "bridge"], 1]
       ],
       "layout": {
@@ -4957,25 +4850,34 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(210, 210, 213, 1)",
+        "line-color": "rgba(190, 190, 193, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
           8,
-          3.2,
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 1.9,
+            3.2
+          ],
           18,
-          44
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 26,
+            44
+          ]
         ]
       }
     },
     {
-      "id": "roads_primarybridge",
+      "id": "roads_primarybridge-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 10,
-      "maxzoom": 20,
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["primary", "primary_link"]]],
@@ -4987,25 +4889,34 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(248, 187, 127, 1)",
+        "line-color": "rgba(230, 158, 87, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          7,
-          3.5,
+          5,
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 1,
+            1.2
+          ],
           18,
-          48
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 26,
+            44
+          ]
         ]
       }
     },
     {
-      "id": "roads_motorwaybridge",
+      "id": "roads_motorwaybridge-case",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 9,
-      "maxzoom": 20,
       "filter": [
         "all",
         [
@@ -5021,25 +4932,34 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(232, 159, 143, 1)",
+        "line-color": "rgba(210, 123, 104, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
           5,
-          3,
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 1.3,
+            1.5
+          ],
           18,
-          50
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 30,
+            50
+          ]
         ]
       }
     },
     {
-      "id": "roads_residential_bridgetop_z13",
+      "id": "roads_residentialbridge",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 12,
-      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -5061,22 +4981,31 @@
           ["exponential", 1.5],
           ["zoom"],
           12,
-          0.5,
+          [
+            "match",
+            ["get", "type"],
+            "service", 1.1,
+            1.4
+          ],
           18,
-          12
+          [
+            "match",
+            ["get", "type"],
+            "service", 12,
+            16
+          ]
         ]
       }
     },
     {
-      "id": "roads_tertiarybridgetop",
+      "id": "roads_tertiarybridge",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 6,
-      "maxzoom": 24,
       "filter": [
         "all",
-        ["==", ["get", "type"], "tertiary"],
+        ["in", ["get", "type"], ["literal", ["tertiary", "tertiary_link"]]],
         ["==", ["get", "bridge"], 1]
       ],
       "layout": {
@@ -5098,22 +5027,32 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          9,
-          0.8,
+          8,
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 0.3,
+            0.5
+          ],
           18,
-          24
+          [
+            "match",
+            ["get", "type"],
+            "tertiary_link", 17,
+            28
+          ]
         ]
       }
     },
     {
-      "id": "roads_secondarybridgetop",
+      "id": "roads_secondarybridge",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 8,
       "filter": [
         "all",
-        ["==", ["get", "type"], "secondary"],
+        ["in", ["get", "type"], ["literal", ["secondary", "secondary_link"]]],
         ["==", ["get", "bridge"], 1]
       ],
       "layout": {
@@ -5136,21 +5075,31 @@
           ["exponential", 1.5],
           ["zoom"],
           8,
-          0.5,
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 0.3,
+            0.5
+          ],
           18,
-          30
+          [
+            "match",
+            ["get", "type"],
+            "secondary_link", 18,
+            30
+          ]
         ]
       }
     },
     {
-      "id": "roads_primarybridgetop",
+      "id": "roads_primarybridge",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 6,
       "filter": [
         "all",
-        ["==", ["get", "type"], "primary"],
+        ["in", ["get", "type"], ["literal", ["primary", "primary_link"]]],
         ["==", ["get", "bridge"], 1]
       ],
       "layout": {
@@ -5172,20 +5121,29 @@
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
-          6,
-          0.75,
+          5,
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 0.5,
+            0.9
+          ],
           18,
-          32
+          [
+            "match",
+            ["get", "type"],
+            "primary_link", 19,
+            32
+          ]
         ]
       }
     },
     {
-      "id": "roads_motorwaybridgetop",
+      "id": "roads_motorwaybridge",
       "type": "line",
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 6,
-      "maxzoom": 20,
       "filter": [
         "all",
         [
@@ -5213,9 +5171,19 @@
           ["exponential", 1.5],
           ["zoom"],
           5,
-          1,
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 0.45,
+            0.7
+          ],
           18,
-          36
+          [
+            "match",
+            ["get", "type"],
+            ["motorway_link", "trunk_link"], 22,
+            36
+          ]
         ]
       }
     },
@@ -5225,7 +5193,6 @@
       "source": "ohm",
       "source-layer": "transport_lines",
       "minzoom": 11,
-      "maxzoom": 24,
       "filter": [
         "all",
         ["in", ["get", "type"], ["literal", ["funicular", "monorail", "tram"]]],
