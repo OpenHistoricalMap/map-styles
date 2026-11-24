@@ -2427,12 +2427,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -2477,12 +2477,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -2543,12 +2543,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -2610,12 +2610,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -2677,12 +2677,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -2745,12 +2745,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -2807,12 +2807,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -2869,12 +2869,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -2932,12 +2932,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -2997,12 +2997,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -3048,12 +3048,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -3095,12 +3095,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -3142,12 +3142,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -3193,12 +3193,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -3240,12 +3240,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -3287,12 +3287,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "in",
@@ -3347,12 +3347,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -3394,12 +3394,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -3445,12 +3445,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "!=",
@@ -3506,12 +3506,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "!=",
@@ -3574,12 +3574,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "!=",
@@ -3646,12 +3646,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "!=",
@@ -3718,12 +3718,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "!=",
@@ -3790,12 +3790,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "!=",
@@ -3871,12 +3871,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "!=",
@@ -3950,12 +3950,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "!=",
@@ -4029,12 +4029,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -4082,12 +4082,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "in",
@@ -4141,12 +4141,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "!=",
@@ -4229,12 +4229,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "!=",
@@ -4306,12 +4306,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "!=",
@@ -4389,12 +4389,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "!=",
@@ -4477,12 +4477,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "!=",
@@ -4565,12 +4565,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "!=",
@@ -4662,12 +4662,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "!=",
@@ -4792,12 +4792,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -4855,12 +4855,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -4911,12 +4911,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -4968,12 +4968,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -5031,12 +5031,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -5096,12 +5096,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -5164,12 +5164,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -5236,12 +5236,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -5308,12 +5308,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -5381,12 +5381,12 @@ ohmVectorStyles = {
         "filter": [
           "all",
           [
-            "==",
+            "in",
+            "construction",
             [
               "get",
               "type"
-            ],
-            "construction"
+            ]
           ],
           [
             "==",
@@ -12114,6 +12114,147 @@ ohmVectorStyles = {
             14,
             1
           ]
+        }
+      },
+      {
+        "id": "landuse_areas_labels_urban",
+        "type": "symbol",
+        "source": "ohm",
+        "source-layer": "landuse_points_centroids",
+        "minzoom": 14,
+        "maxzoom": 24,
+        "filter": [
+          "all",
+          [
+            "in",
+            [
+              "get",
+              "type"
+            ],
+            [
+              "literal",
+              [
+                "commercial",
+                "construction",
+                "industrial",
+                "residential",
+                "retail"
+              ]
+            ]
+          ],
+          [
+            ">",
+            [
+              "get",
+              "area"
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              14,
+              100000,
+              16,
+              10000,
+              18,
+              0
+            ]
+          ]
+        ],
+        "layout": {
+          "symbol-sort-key": [
+            "-",
+            [
+              "get",
+              "area"
+            ]
+          ],
+          "text-field": [
+            "get",
+            "name"
+          ],
+          "text-size": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            14,
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "get",
+                "area"
+              ],
+              10000,
+              11,
+              1000000,
+              13
+            ],
+            18,
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "get",
+                "area"
+              ],
+              10000,
+              13,
+              1000000,
+              16
+            ]
+          ],
+          "text-font": [
+            "OpenHistorical"
+          ],
+          "visibility": "visible",
+          "symbol-placement": "point"
+        },
+        "paint": {
+          "text-color": [
+            "match",
+            [
+              "get",
+              "type"
+            ],
+            "industrial",
+            "rgba(114, 101, 101, 1)",
+            [
+              "commercial",
+              "retail"
+            ],
+            "rgba(114, 111, 101, 1)",
+            "construction",
+            "rgba(139, 135, 105, 1)",
+            "rgba(114, 114, 101, 1)"
+          ],
+          "text-halo-color": [
+            "match",
+            [
+              "get",
+              "type"
+            ],
+            [
+              "industrial",
+              "commercial",
+              "retail"
+            ],
+            "rgba(211, 211, 211, 0)",
+            "rgba(248, 248, 248, 0)"
+          ],
+          "text-halo-width": 1
         }
       },
       {
